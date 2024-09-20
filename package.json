@@ -1,0 +1,26 @@
+{
+    "name": "comms-web-hub",
+    "private": true,
+    "scripts": {
+        "build": "turbo build",
+        "dev": "turbo dev",
+        "lint": "turbo lint",
+        "lint:fix": "turbo run lint:fix",
+        "format": "prettier --write \"**/*.{json,js,jsx,ts,tsx,md,css,scss}\"",
+        "format:check": "prettier -c \"**/*.{json,js,jsx,ts,tsx,md,css,scss}\"",
+        "format-all": "prettier --write \".\"",
+        "typecheck": "turbo run typecheck",
+        "prepare": "husky"
+    },
+    "devDependencies": {
+        "husky": "^9.1.6",
+        "lint-staged": "^15.2.10",
+        "prettier": "^3.3.3",
+        "turbo": "^2.1.2",
+        "typescript": "^5.4.5"
+    },
+    "packageManager": "pnpm@9.10.0",
+    "engines": {
+        "node": ">=18"
+    }
+}
