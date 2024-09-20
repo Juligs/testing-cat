@@ -4,12 +4,9 @@ const extendsConfig = [
     'turbo',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/recommended',
-]
+];
 
-const reactExtends = [
-    ...extendsConfig,
-    'plugin:react/recommended',
-]
+const reactExtends = [...extendsConfig, 'plugin:react/recommended'];
 
 const toolingRules = {
     'no-case-declarations': 'off',
@@ -45,7 +42,7 @@ const toolingRules = {
 };
 
 const appsOverrides = {
-    files: ['apps/**/*'],
+    files: ['apps/**/*', 'ui-kit/**/*'],
     rules: {
         'import/no-duplicates': ['error'],
         'import/no-anonymous-default-export': 'off',
@@ -139,7 +136,7 @@ const appsOverrides = {
         'react/no-unstable-nested-components': 'error',
         'arrow-body-style': ['error', 'as-needed'],
     },
-}
+};
 
 const testOverrides = {
     files: ['*.test.*', '*.spec.*'],
