@@ -1,0 +1,23 @@
+name: Preview Deploy for the React UI Kit Storybook
+
+on:
+    workflow_dispatch:
+    pull_request:
+        types: [opened, synchronize, reopened, ready_for_review]
+        paths:
+            - 'ui-kit/react/**'
+            - '.github/workflows/ui-kit-react.storybook-preview-deploy.yml'
+
+jobs:
+    deploy-preview:
+        if: github.event.pull_request.draft == false
+        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
+        with:
+            WORKING_DIRECTORY: './ui-kit/react'
+            PRODUCTION: false
+        secrets:
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
+            VERCEL_PROJECT_NAME: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_NAME }}
+            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
