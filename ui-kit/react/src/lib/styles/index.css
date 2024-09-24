@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .text-display-lg,
+    .text-display-md,
+    .text-display-sm,
+    .text-headline-lg,
+    .text-headline-md,
+    .text-headline-sm {
+        @apply font-alliance-no2;
+    }
+    .text-title-lg,
+    .text-title-md,
+    .text-title-sm,
+    .text-body-lg,
+    .text-body-md,
+    .text-body-sm,
+    .text-label-lg,
+    .text-label-md,
+    .text-label-sm {
+        @apply font-inter;
+    }
+    .text-display-lg,
+    .text-display-md,
+    .text-display-sm,
+    .text-headline-lg,
+    .text-headline-md,
+    .text-headline-sm {
+        font-feature-settings: 'ss02' on;
+    }
+    .text-label-md {
+        font-feature-settings: 'ss01' on;
+    }
+}
