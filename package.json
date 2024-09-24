@@ -10,6 +10,7 @@
         "format:check": "prettier -c \"**/*.{json,js,jsx,ts,tsx,md,mdx,css,scss}\"",
         "format-all": "prettier --write \".\"",
         "typecheck": "turbo run typecheck",
+        "ui-kit-react": "pnpm --filter \"react-ui-kit\"",
         "prepare": "husky"
     },
     "devDependencies": {

@@ -41,7 +41,7 @@ function determineTextClassGroup(className: string): keyof GroupedTextClasses | 
 function initializeGroupedClasses(): GroupedTextClasses {
     const keys: Array<keyof GroupedTextClasses> = ['label', 'body', 'title', 'headline', 'display'];
     return keys.reduce((acc, key) => {
-        (acc as any)[key] = {};
+        acc[key] = {};
         return acc;
     }, {} as GroupedTextClasses);
 }
