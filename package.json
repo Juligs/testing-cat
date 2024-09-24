@@ -4,10 +4,10 @@
     "scripts": {
         "build": "turbo build",
         "dev": "turbo dev",
-        "lint": "turbo lint",
+        "lint": "turbo lint && pnpm format:check",
         "lint:fix": "turbo run lint:fix",
-        "format": "prettier --write \"**/*.{json,js,jsx,ts,tsx,md,css,scss}\"",
-        "format:check": "prettier -c \"**/*.{json,js,jsx,ts,tsx,md,css,scss}\"",
+        "format": "prettier --write \"**/*.{json,js,jsx,ts,tsx,md,mdx,css,scss}\"",
+        "format:check": "prettier -c \"**/*.{json,js,jsx,ts,tsx,md,mdx,css,scss}\"",
         "format-all": "prettier --write \".\"",
         "typecheck": "turbo run typecheck",
         "prepare": "husky"
