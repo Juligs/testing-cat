@@ -28,6 +28,7 @@
     "dependencies": {
         "cross-env": "^7.0.3",
         "@fontsource/inter": "^5.0.17",
+        "@repo/icons": "workspace:*",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
     },

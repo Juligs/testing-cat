@@ -1,0 +1,20 @@
+import type { SVGProps } from 'react';
+export default function SvgManipulatingSlot(props: SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            fill="none"
+            viewBox="0 0 48 48"
+            {...props}
+        >
+            <path
+                stroke="currentColor"
+                strokeWidth={2}
+                d="m34 17.5 3.919-2.52c1.33-.855 3.081.101 3.081 1.683v14.674c0 1.582-1.75 2.538-3.081 1.682L34 30.499M14 17.5l-3.918-2.52C8.75 14.126 7 15.082 7 16.664v14.674c0 1.582 1.75 2.538 3.082 1.682L14 30.499m10.49-5.568a2 2 0 0 1 0-1.863l5.74-10.905c.973-1.848 3.77-1.157 3.77.931v21.812c0 2.088-2.797 2.779-3.77.931zm-.98 0a2 2 0 0 0 0-1.863l-5.74-10.905c-.973-1.848-3.77-1.157-3.77.931v21.812c0 2.088 2.797 2.779 3.77.931z"
+            />
+            <path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="M24 8v32" />
+        </svg>
+    );
+}
