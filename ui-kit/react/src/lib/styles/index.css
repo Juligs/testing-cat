@@ -1,38 +1,33 @@
 @import './fonts.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import './base.css';
 
-@layer base {
-    .text-display-lg,
-    .text-display-md,
-    .text-display-sm,
-    .text-headline-lg,
-    .text-headline-md,
-    .text-headline-sm {
-        @apply font-alliance-no2;
-    }
-    .text-title-lg,
-    .text-title-md,
-    .text-title-sm,
-    .text-body-lg,
-    .text-body-md,
-    .text-body-sm,
-    .text-label-lg,
-    .text-label-md,
-    .text-label-sm {
-        @apply font-inter;
-    }
-    .text-display-lg,
-    .text-display-md,
-    .text-display-sm,
-    .text-headline-lg,
-    .text-headline-md,
-    .text-headline-sm {
-        font-feature-settings: 'ss02' on;
-    }
-    .text-label-md {
-        font-feature-settings: 'ss01' on;
-    }
+@import 'tailwindcss/components';
+@import './components.css';
+
+@import 'tailwindcss/utilities';
+@import './utilities.css';
+
+:root.network {
+    --btn-border-radius: theme('borderRadius.lg');
+}
+
+:root.labs {
+    /* COMPONENTS */
+    --btn-border-radius: theme('borderRadius.full');
+    --btn-bg-primary: theme('colors.labs-primary.40');
+    --btn-bg-secondary: theme('colors.labs-neutral.92');
+    --btn-bg-ghost: transparent;
+    --btn-text-color-default: theme('colors.labs-neutral.10');
+    --btn-text-color-inverted: theme('colors.labs-primary.100');
+
+    /* STATE LAYER */
+    --state-layer-hover: theme('colors.transparency-primary.8');
+    --state-layer-focus: theme('colors.transparency-primary.12');
+    --state-layer-active: theme('colors.transparency-primary.16');
+}
+
+:root.foundation {
+    --btn-border-radius: theme('borderRadius.lg');
 }

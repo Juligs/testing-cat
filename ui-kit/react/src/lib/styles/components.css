@@ -1,0 +1,25 @@
+@layer components {
+    .btn {
+        border-radius: var(--btn-border-radius);
+    }
+
+    .btn-primary {
+        background-color: var(--btn-bg-primary);
+    }
+
+    .btn-secondary {
+        background-color: var(--btn-bg-secondary);
+    }
+
+    .btn-ghost {
+        background-color: var(--btn-bg-ghost);
+    }
+
+    .btn-text-color-default {
+        color: var(--btn-text-color-default);
+    }
+
+    .btn-text-color-inverted {
+        color: var(--btn-text-color-inverted);
+    }
+}

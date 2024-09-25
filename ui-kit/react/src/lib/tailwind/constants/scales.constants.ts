@@ -14,7 +14,7 @@ export const SPACING: ThemeConfig['spacing'] = SPACING_VALUES_IN_PIXELS.reduce((
     return { ...acc, ...pxToSpacingScale(spacingPx) };
 }, {});
 
-export const BORDER_RADIUS: ThemeConfig['borderRadius'] = {
+export const BORDER_RADIUS = {
     none: '0px',
     sm: '2px',
     DEFAULT: '4px',
@@ -25,4 +25,4 @@ export const BORDER_RADIUS: ThemeConfig['borderRadius'] = {
     '3xl': '24px',
     '4xl': '32px',
     full: '400px',
-};
+} as const;

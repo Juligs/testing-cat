@@ -1,0 +1,49 @@
+@layer utilities {
+    .group-state-layer {
+        border-radius: inherit;
+    }
+
+    .group {
+        &:hover {
+            .group-state-layer {
+                background-color: var(--state-layer-hover);
+            }
+        }
+        &:focus-visible {
+            .group-state-layer {
+                background-color: var(--state-layer-focus);
+            }
+        }
+        &:active {
+            .group-state-layer {
+                background-color: var(--state-layer-active);
+            }
+        }
+    }
+
+    .state-layer:not(:disabled) {
+        @apply relative z-0 transition-colors duration-200;
+        &:before {
+            @apply absolute top-0 left-0 right-0 bottom-0;
+            content: '';
+            border-radius: inherit;
+            z-index: -1;
+        }
+
+        &:hover {
+            &:before {
+                background-color: var(--state-layer-hover);
+            }
+        }
+        &:focus-visible {
+            &:before {
+                background-color: var(--state-layer-focus);
+            }
+        }
+        &:active {
+            &:before {
+                background-color: var(--state-layer-active);
+            }
+        }
+    }
+}

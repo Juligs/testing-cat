@@ -9,7 +9,6 @@ import { IOTALABS_COLOR_PALETTE, transparencyColorPalette } from '../constants';
 
 export const BASE_CONFIG: Partial<Config> = {
     content: ['./src/**/*.{html,js,jsx,ts,tsx,md,mdx}'],
-    darkMode: 'class',
     plugins: [addTailwindCustomTextClasses],
     theme: {
         fontSize: {

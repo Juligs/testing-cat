@@ -1,7 +1,6 @@
 .eslintrc.cjs
+!.storybook
 storybook-static
 .turbo
 .vercel
 dist
-*.config.js
-*.config.ts

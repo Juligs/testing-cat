@@ -1,18 +1,27 @@
-import { type Preview } from '@storybook/react';
+import { Decorator, ReactRenderer } from '@storybook/react';
+import { withThemeByClassName } from '@storybook/addon-themes';
+
 import '../src/lib/styles/index.css';
 
-const preview: Preview = {
-    parameters: {
-        actions: { argTypesRegex: '^on[A-Z].*' },
-        controls: {
-            matchers: {
-                color: /(background|color)$/i,
-                date: /Date$/i,
-            },
-        },
-        darkMode: {
-            stylePreview: true,
+export const parameters = {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+        matchers: {
+            color: /(background|color)$/i,
+            date: /Date$/i,
         },
     },
 };
-export default preview;
+
+export const tags = ['autodocs'];
+
+export const decorators: Decorator[] = [
+    withThemeByClassName<ReactRenderer>({
+        themes: {
+            network: 'network',
+            labs: 'labs',
+            foundation: 'foundation',
+        },
+        defaultTheme: 'labs',
+    }),
+];

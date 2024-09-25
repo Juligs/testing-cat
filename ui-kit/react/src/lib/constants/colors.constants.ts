@@ -1,6 +1,4 @@
-import { ThemeConfig } from 'tailwindcss/types/config';
-
-export const IOTALABS_COLOR_PALETTE: ThemeConfig['colors'] = {
+export const IOTALABS_COLOR_PALETTE = {
     'labs-primary': {
         0: '#000000',
         5: '#005427',
@@ -62,7 +60,7 @@ export const IOTALABS_COLOR_PALETTE: ThemeConfig['colors'] = {
         98: '#fbfafc',
         100: '#ffffff',
     },
-};
+} as const;
 
 const TRANSPARENCY_COLORS = {
     'transparency-primary': {

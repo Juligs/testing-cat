@@ -18,7 +18,7 @@
         "./dist/style.css": "./dist/style.css"
     },
     "scripts": {
-        "lint": "eslint .",
+        "lint": "eslint . --max-warnings=0",
         "dev": "storybook dev -p 6006",
         "build": "storybook build",
         "build:package": "tsc -d && cross-env BUILDING_PACKAGE=true vite build",
@@ -26,9 +26,9 @@
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
-        "cross-env": "^7.0.3",
         "@fontsource/inter": "^5.0.17",
         "@repo/icons": "workspace:*",
+        "cross-env": "^7.0.3",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
     },
@@ -41,6 +41,7 @@
         "@storybook/addon-interactions": "^8.3.2",
         "@storybook/addon-links": "^8.3.2",
         "@storybook/addon-onboarding": "^8.3.2",
+        "@storybook/addon-themes": "^8.3.2",
         "@storybook/blocks": "^8.3.2",
         "@storybook/react": "^8.3.2",
         "@storybook/react-vite": "^8.3.2",
@@ -51,10 +52,13 @@
         "@vitejs/plugin-react": "^4.3.1",
         "@vitejs/plugin-react-swc": "^3.7.0",
         "autoprefixer": "^10.4.20",
+        "clsx": "^2.1.1",
         "eslint": "^8.57.1",
         "eslint-plugin-storybook": "^0.8.0",
         "globals": "^15.9.0",
         "postcss": "^8.4.47",
+        "postcss-import": "^16.1.0",
+        "postcss-nested": "^6.2.0",
         "storybook": "^8.3.2",
         "tailwindcss": "^3.4.12",
         "typescript": "^5.3.3",
