@@ -14,7 +14,11 @@
 }
 
 :root.labs {
-    /* COMPONENTS */
+    /* COLORS */
+    --color-darkest: theme('colors.labs-neutral.10');
+    --color-darkest-inverted: theme('colors.labs-neutral.100');
+
+    /* BUTTON */
     --btn-border-radius: theme('borderRadius.full');
     --btn-bg-primary: theme('colors.labs-primary.40');
     --btn-bg-secondary: theme('colors.labs-neutral.92');

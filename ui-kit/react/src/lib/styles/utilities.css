@@ -3,21 +3,21 @@
         border-radius: inherit;
     }
 
-    .group {
-        &:hover {
-            .group-state-layer {
-                background-color: var(--state-layer-hover);
-            }
+    &.group:hover {
+        .group-state-layer {
+            background-color: var(--state-layer-hover);
         }
-        &:focus-visible {
-            .group-state-layer {
-                background-color: var(--state-layer-focus);
-            }
+    }
+
+    &.group:focus-visible {
+        .group-state-layer {
+            background-color: var(--state-layer-focus);
         }
-        &:active {
-            .group-state-layer {
-                background-color: var(--state-layer-active);
-            }
+    }
+
+    &.group:active {
+        .group-state-layer {
+            background-color: var(--state-layer-active);
         }
     }
 

@@ -3,7 +3,10 @@ import {
     CUSTOM_FONT_SIZES,
     SPACING,
     BORDER_RADIUS,
+    SCREENS,
     addTailwindCustomTextClasses,
+    SCREEN_PADDINGS,
+    THEMED_CUSTOM_COLORS,
 } from './constants';
 import { IOTALABS_COLOR_PALETTE, transparencyColorPalette } from '../constants';
 
@@ -11,6 +14,7 @@ export const BASE_CONFIG: Partial<Config> = {
     content: ['./src/**/*.{html,js,jsx,ts,tsx,md,mdx}'],
     plugins: [addTailwindCustomTextClasses],
     theme: {
+        screens: SCREENS,
         fontSize: {
             ...CUSTOM_FONT_SIZES,
         },
@@ -19,6 +23,12 @@ export const BASE_CONFIG: Partial<Config> = {
         colors: {
             ...IOTALABS_COLOR_PALETTE,
             ...transparencyColorPalette,
+            ...THEMED_CUSTOM_COLORS,
+        },
+        container: {
+            screens: SCREENS,
+            center: true,
+            padding: SCREEN_PADDINGS,
         },
         extend: {
             fontFamily: {

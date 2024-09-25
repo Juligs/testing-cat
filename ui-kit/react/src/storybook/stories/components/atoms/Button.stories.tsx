@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, ButtonSize, ButtonVariant } from '@components/button';
+import { Button, ButtonSize, ButtonVariant } from '@components/atoms/button';
 import { ArrowTopRight } from '@repo/icons';
-import { getStoryEnumOptions } from '../../utils';
+import { getStoryEnumOptions } from 'src/storybook/utils';
 
 const meta: Meta<typeof Button> = {
     component: Button,
+    title: 'Atoms/Button',
     argTypes: {
         variant: getStoryEnumOptions(ButtonVariant),
         size: getStoryEnumOptions(ButtonSize),
