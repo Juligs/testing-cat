@@ -27,12 +27,12 @@ export const TYPESETS: TypeSetProps[] = [
         label: 'Headline',
         fontFamily: 'AllianceNo2',
         typeset: SANITIZED_CUSTOM_TEXT_CLASSES.headline,
-        fontWeight: 400,
+        fontWeight: 500,
     },
     {
         label: 'Display',
         fontFamily: 'AllianceNo2',
         typeset: SANITIZED_CUSTOM_TEXT_CLASSES.display,
-        fontWeight: 400,
+        fontWeight: 500,
     },
 ];

@@ -8,36 +8,38 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-label-sm': {
         fontSize: '14px',
         lineHeight: '160%',
-        letterSpacing: '-1%',
-        fontWeight: 'medium',
+        letterSpacing: '-0.14px',
+        fontWeight: '500',
     },
     '.text-label-md': {
         fontSize: '15px',
         lineHeight: '160%',
-        letterSpacing: '-1%',
-        fontWeight: 'medium',
+        letterSpacing: '-0.15px',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '16px',
+            letterSpacing: '-0.16px',
         },
     },
     '.text-label-lg': {
         fontSize: '16px',
         lineHeight: '160%',
-        letterSpacing: '-1%',
-        fontWeight: 'medium',
+        letterSpacing: '-0.16px',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '18px',
+            letterSpacing: '-0.18px',
         },
     },
     '.text-body-sm': {
         fontSize: '14px',
         lineHeight: '160%',
-        letterSpacing: '-1%',
+        letterSpacing: '-0.14px',
     },
     '.text-body-md': {
         fontSize: '15px',
         lineHeight: '160%',
-        letterSpacing: '-1%',
+        letterSpacing: '-0.15px',
         '@screen md': {
             fontSize: '16px',
         },
@@ -45,7 +47,7 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-body-lg': {
         fontSize: '16px',
         lineHeight: '160%',
-        letterSpacing: '-1%',
+        letterSpacing: '-0.16px',
         '@screen md': {
             fontSize: '18px',
         },
@@ -53,14 +55,14 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-title-sm': {
         fontSize: '20px',
         lineHeight: '140%',
-        letterSpacing: '-1%',
-        fontWeight: 'medium',
+        letterSpacing: '-0.20px',
+        fontWeight: '500',
     },
     '.text-title-md': {
         fontSize: '22px',
         lineHeight: '140%',
-        letterSpacing: '-1%',
-        fontWeight: 'medium',
+        letterSpacing: '-0.22px',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '24px',
         },
@@ -68,8 +70,8 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-title-lg': {
         fontSize: '26px',
         lineHeight: '140%',
-        letterSpacing: '-1%',
-        fontWeight: 'medium',
+        letterSpacing: '-0.26px',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '28px',
         },
@@ -77,7 +79,7 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-headline-sm': {
         fontSize: '30px',
         lineHeight: '140%',
-        fontWeight: 'medium',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '36px',
         },
@@ -85,7 +87,7 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-headline-md': {
         fontSize: '40px',
         lineHeight: '140%',
-        fontWeight: 'medium',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '48px',
         },
@@ -93,7 +95,7 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-headline-lg': {
         fontSize: '48px',
         lineHeight: '140%',
-        fontWeight: 'medium',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '60px',
         },
@@ -101,7 +103,7 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-display-sm': {
         fontSize: '56px',
         lineHeight: '120%',
-        fontWeight: 'medium',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '72px',
         },
@@ -109,7 +111,7 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-display-md': {
         fontSize: '64px',
         lineHeight: '120%',
-        fontWeight: 'medium',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '96px',
         },
@@ -117,7 +119,7 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-display-lg': {
         fontSize: '80px',
         lineHeight: '120%',
-        fontWeight: 'medium',
+        fontWeight: '500',
         '@screen md': {
             fontSize: '128px',
         },
