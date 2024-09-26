@@ -24,6 +24,7 @@ export const BASE_CONFIG: Partial<Config> = {
             ...IOTALABS_COLOR_PALETTE,
             ...transparencyColorPalette,
             ...THEMED_CUSTOM_COLORS,
+            transparent: 'transparent',
         },
         container: {
             screens: SCREENS,
