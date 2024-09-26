@@ -1,29 +1,31 @@
 import { Close, MenuColapsed } from '@repo/icons';
-import { useState } from 'react';
 import clsx from 'clsx';
 
-export function NavbarItemList({ children }: React.PropsWithChildren) {
-    const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
+interface NavbarItemListProps {
+    isMobileNavOpen: boolean;
+    onMobileNavToggle: () => void;
+}
 
-    function handleAsideOpen() {
-        setIsMobileNavOpen(!isMobileNavOpen);
-    }
-
+export function NavbarItemList({
+    children,
+    isMobileNavOpen,
+    onMobileNavToggle,
+}: React.PropsWithChildren<NavbarItemListProps>) {
     return (
         <>
-            <ul className="max-md:hidden flex flex-row">{children}</ul>
+            <ul className="hidden md:flex flex-row">{children}</ul>
 
             <button
                 type="button"
-                className="hidden max-md:block w-6 h-6 [&_svg]:w-full [&_svg]:h-full"
-                onClick={handleAsideOpen}
+                className="block md:hidden w-6 h-6 [&_svg]:w-full [&_svg]:h-full"
+                onClick={onMobileNavToggle}
             >
                 {isMobileNavOpen ? <Close /> : <MenuColapsed />}
             </button>
 
             <div
                 className={clsx(
-                    'w-full absolute top-full right-0 z-20 transition-[max-height] overflow-y-hidden',
+                    'md:hidden w-full absolute top-full right-0 z-20 transition-[max-height] overflow-y-hidden',
                     isMobileNavOpen ? 'max-h-screen' : 'max-h-0',
                 )}
             >

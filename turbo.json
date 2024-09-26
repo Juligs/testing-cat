@@ -3,24 +3,26 @@
     "ui": "tui",
     "tasks": {
         "build": {
-            "dependsOn": ["^build"],
+            "dependsOn": ["react-ui-kit#package", "^build"],
             "inputs": ["$TURBO_DEFAULT$", ".env*"],
             "outputs": [".next/**", "!.next/cache/**"],
             "env": ["BUILDING_PACKAGE"]
         },
         "lint": {
-            "dependsOn": ["^lint"]
+            "dependsOn": ["react-ui-kit#package", "^lint"]
         },
         "dev": {
             "cache": false,
-            "persistent": true
+            "persistent": true,
+            "dependsOn": ["react-ui-kit#package"]
         },
         "typecheck": {
-            "dependsOn": ["^typecheck"]
+            "dependsOn": ["react-ui-kit#package", "^typecheck"]
         },
         "format:check": {},
-        "build:package": {
+        "package": {
             "env": ["BUILDING_PACKAGE"]
-        }
+        },
+        "react-ui-kit#package": {}
     }
 }
