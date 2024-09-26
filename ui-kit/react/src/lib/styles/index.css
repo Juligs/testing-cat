@@ -17,6 +17,8 @@
     /* COLORS */
     --color-darkest: theme('colors.labs-neutral.10');
     --color-darkest-inverted: theme('colors.labs-neutral.100');
+    --color-dark: theme('colors.labs-neutral.30');
+    --color-dark-inverted: theme('colors.labs-neutral.80');
 
     /* BUTTON */
     --btn-border-radius: theme('borderRadius.full');
