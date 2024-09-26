@@ -1,12 +1,12 @@
-name: Production Deploy for the React UI Kit Storybook
+name: Production Deploy for the IOTALABS website
 
 on:
     push:
         branches:
             - main
         paths:
-            - 'ui-kit/react/**'
-            - '.github/workflows/ui-kit-react.storybook-production-deploy.yml'
+            - 'apps/iotalabs/**'
+            - '.github/workflows/iotalabs.production-deploy.yml'
             - '.github/workflows/monorepo-app-vercel-deploy.yml'
 
 jobs:
@@ -17,5 +17,5 @@ jobs:
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
             VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}

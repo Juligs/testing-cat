@@ -3,9 +3,6 @@ name: Monorepo App Vercel Deploy
 on:
     workflow_call:
         inputs:
-            WORKING_DIRECTORY:
-                type: string
-                required: true
             PRODUCTION:
                 type: boolean
                 required: true
@@ -16,13 +13,13 @@ on:
                 required: true
             VERCEL_PROJECT_ID:
                 required: true
-            VERCEL_PROJECT_NAME:
-                required: true
             VERCEL_SCOPE:
                 required: true
 
 env:
-    VERCEL_ENVIRONMENT: ${{ inputs.PRODUCTION == true && 'production' || 'preview' }}
+    VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+    VERCEL_ENVIRONMENT: ${{ inputs.PRODUCTION == 'true' && 'production' || 'preview' }}
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -51,15 +48,12 @@ jobs:
             - name: Setup Vercel Flags
               id: setup_vercel_flags
               run: |
-                  echo "VERCEL_FLAGS=--cwd ${{ inputs.WORKING_DIRECTORY }} --token=${{ secrets.VERCEL_TOKEN }} --scope=${{ secrets.VERCEL_SCOPE }}" >> $GITHUB_OUTPUT
+                  echo "VERCEL_FLAGS=--token=${{ secrets.VERCEL_TOKEN }} --scope=${{ secrets.VERCEL_SCOPE }}" >> $GITHUB_OUTPUT
                   if [[ "${{ inputs.PRODUCTION }}" == "true" ]]; then
-                    echo "PROD_FLAG=--prod" >> $GITHUB_OUTPUT
+                      echo "PROD_FLAG=--prod" >> $GITHUB_OUTPUT
                   else
-                    echo "PROD_FLAG=" >> $GITHUB_OUTPUT
+                      echo "PROD_FLAG=" >> $GITHUB_OUTPUT
                   fi
-
-            - name: Link Project to Vercel
-              run: vercel link ${{ steps.setup_vercel_flags.outputs.VERCEL_FLAGS }} --project=${{ secrets.VERCEL_PROJECT_NAME }} --yes
 
             - name: Pull Vercel Environment Information
               run: vercel pull ${{ steps.setup_vercel_flags.outputs.VERCEL_FLAGS }} --yes --environment=${{ env.VERCEL_ENVIRONMENT }}
@@ -75,6 +69,6 @@ jobs:
                   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
                   VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
                   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-                  WORKING_DIRECTORY: ${{ inputs.WORKING_DIRECTORY }}
-                  PREBUILT: true
                   PRODUCTION: ${{ inputs.PRODUCTION }}
+                  PREBUILT: true
+                  DELETE_EXISTING_COMMENT: false
