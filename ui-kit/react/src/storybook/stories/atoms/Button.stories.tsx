@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, ButtonSize, ButtonVariant } from '@components/atoms';
+import { Button, ButtonSize, ButtonVariant } from '@lib/server-components/atoms';
 import { ArrowTopRight } from '@repo/icons';
 import { getStoryEnumOptions } from 'src/storybook/utils';
 

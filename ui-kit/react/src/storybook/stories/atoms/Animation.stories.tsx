@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { RendererType, Animation as AnimationComponent } from '@components/atoms';
+import { RendererType, Animation as AnimationComponent } from '@lib/client-components/atoms';
 
 const meta: Meta<typeof AnimationComponent> = {
     component: AnimationComponent,

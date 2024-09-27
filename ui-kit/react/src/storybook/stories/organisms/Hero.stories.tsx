@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Hero, HeroBackground } from '@components/organisms';
+import { Hero, HeroBackground } from '@lib/server-components/organisms';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { Viewport } from 'src/storybook/enums';
-import { Button, ButtonVariant } from '@lib/components';
+import { Button, ButtonVariant } from '@lib/server-components';
 
 const meta: Meta<typeof Hero> = {
     component: Hero,

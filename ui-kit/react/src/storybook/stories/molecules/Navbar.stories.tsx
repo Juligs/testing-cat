@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { NavbarItem } from '@components/atoms';
-import { Navbar, NavbarItemList } from '@components/molecules';
+import { NavbarItem } from '@lib/server-components/atoms';
+import { Navbar, NavbarItemList } from '@lib/server-components/molecules';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { Viewport } from 'src/storybook/enums';
 import { IotaLogo } from '@repo/icons';

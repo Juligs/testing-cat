@@ -11,9 +11,14 @@
     ],
     "exports": {
         ".": {
-            "import": "./dist/index.es.js",
-            "require": "./dist/index.umd.js",
-            "types": "./dist/index.d.ts"
+            "import": "./dist/server.es.js",
+            "require": "./dist/server.umd.js",
+            "types": "./dist/server.d.ts"
+        },
+        "./client": {
+            "import": "./dist/client.es.js",
+            "require": "./dist/client.umd.js",
+            "types": "./dist/client.d.ts"
         },
         "./style.css": "./dist/style.css"
     },

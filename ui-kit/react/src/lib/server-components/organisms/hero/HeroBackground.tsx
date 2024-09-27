@@ -1,4 +1,4 @@
-import { Video } from '@components/molecules';
+import { Video } from '@lib/server-components/molecules';
 
 export function HeroBackground({ ...videoProps }: React.ComponentProps<typeof Video>) {
     return (

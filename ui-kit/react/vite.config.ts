@@ -9,9 +9,9 @@ const isPackageProduction = process.env.BUILDING_PACKAGE === 'true';
 
 const packageBuildConfig: UserConfig['build'] = {
     lib: {
-        entry: resolve(__dirname, './src/lib/index.ts'),
+        entry: [resolve(__dirname, 'src/lib/client.ts'), resolve(__dirname, 'src/lib/server.ts')],
         name: 'ui-kit-react',
-        fileName: (format) => `index.${format}.js`,
+        fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
         external: ['react', 'react-dom', 'tailwindcss'],
@@ -42,7 +42,7 @@ const plugins = isPackageProduction
       ];
 
 export default defineConfig({
-    build: isPackageProduction ? packageBuildConfig : {},
+    build: isPackageProduction ? packageBuildConfig : undefined,
     plugins,
     css: {
         postcss: {

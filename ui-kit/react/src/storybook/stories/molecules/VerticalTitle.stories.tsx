@@ -4,7 +4,7 @@ import {
     ButtonVariant,
     VerticalTitle,
     VerticalTitleTextSize,
-} from '@lib/components';
+} from '@lib/server-components';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof VerticalTitle> = {

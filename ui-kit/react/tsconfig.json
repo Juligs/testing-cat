@@ -4,7 +4,8 @@
         "baseUrl": "./",
         "paths": {
             "@lib/*": ["src/lib/*"],
-            "@components/*": ["src/lib/components/*"]
+            "@server-components/*": ["src/lib/server-components/*"],
+            "@client-components/*": ["src/lib/client-components/*"]
         }
     },
     "include": ["src", ".storybook/**/*", "*.config.js", "*.config.ts"],
