@@ -10,8 +10,8 @@
         "format:check": "prettier -c \"**/*.{json,js,jsx,ts,tsx,md,mdx,css,scss}\"",
         "format-all": "prettier --write \".\"",
         "typecheck": "turbo run typecheck",
-        "ui-kit-react": "turbo --filter \"react-ui-kit\" run",
-        "iotalabs": "turbo --filter \"iotalabs\" run",
+        "ui-kit-react": "turbo --filter \"react-ui-kit\"",
+        "iotalabs": "turbo --filter \"iotalabs\"",
         "prepare": "husky"
     },
     "devDependencies": {

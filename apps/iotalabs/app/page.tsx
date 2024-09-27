@@ -1,10 +1,9 @@
-import { Button } from 'react-ui-kit';
+import { Hero } from './components';
 
 export default function Home() {
     return (
-        <div className="flex items-center justify-center h-full w-full">
-            <main className="text-blue-600">IOTA Labs</main>
-            <Button>Hola</Button>
-        </div>
+        <>
+            <Hero />
+        </>
     );
 }
