@@ -11,11 +11,13 @@ export function Navbar({ inverted, children }: NavbarProps) {
     return (
         <nav
             className={clsx(
-                'container flex flex-row items-center justify-between w-full relative',
+                'w-full backdrop-blur bg-transparent',
                 inverted ? 'text-darkest-inverted' : 'text-darkest',
             )}
         >
-            {children}
+            <div className="container flex flex-col md:flex-row items-center justify-between w-full py-3 md:py-0">
+                {children}
+            </div>
         </nav>
     );
 }

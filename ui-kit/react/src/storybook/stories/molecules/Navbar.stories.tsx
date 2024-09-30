@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { NavbarItem } from '@lib/server-components/atoms';
-import { Navbar, NavbarItemList } from '@lib/server-components/molecules';
+import { Navbar, NavbarItems } from '@lib/server-components/molecules';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { Viewport } from 'src/storybook/enums';
 import { IotaLogo } from '@repo/icons';
@@ -39,17 +39,17 @@ function NavbarMock(args?: Story['args']) {
     ];
     return (
         <Navbar {...args}>
-            <IotaLogoMock />
-            <NavbarItemList
+            <NavbarItems
+                logo={<IotaLogoMock />}
                 isMobileNavOpen={isMobileNavOpen}
                 onMobileNavToggle={() => setIsMobileNavOpen((isOpen) => !isOpen)}
             >
                 {NAVBAR_ITEMS.map((item, index) => (
-                    <NavbarItem key={index} active={item.active} inverted={args?.inverted}>
+                    <NavbarItem key={index} active={item.active ?? false} inverted={args?.inverted}>
                         {item.label}
                     </NavbarItem>
                 ))}
-            </NavbarItemList>
+            </NavbarItems>
         </Navbar>
     );
 }

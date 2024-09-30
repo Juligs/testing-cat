@@ -4,7 +4,7 @@ interface NavbarItemProps extends React.PropsWithChildren {
     /**
      * Whether the item is active.
      */
-    active?: boolean;
+    active: boolean;
     /**
      * Whether the item is inverted.
      */
