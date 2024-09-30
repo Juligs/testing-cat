@@ -1,41 +1,13 @@
-import { TwoColumnsImageTemplate } from '@components';
-import { Hero, FirstSection } from './sections';
-import { VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import { Hero, FirstSection, SecondSection, ThirdSection, FourthSection } from './sections';
 
 export default function Home() {
     return (
         <>
             <Hero id="hero-inverted" />
             <FirstSection id="first-section" />
-            <section
-                id="first inverted"
-                className="flex items-center justify-center w-full h-screen bg-darkest text-labs-neutral-100"
-            >
-                <div className="container py-20">
-                    <TwoColumnsImageTemplate reverse image="/next.svg">
-                        <VerticalTitle
-                            inverted
-                            title="Title"
-                            size={VerticalTitleTextSize.Small}
-                            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-                        />
-                    </TwoColumnsImageTemplate>
-                </div>
-            </section>
-            <section
-                id="second"
-                className="flex items-center justify-center w-full bg-labs-neutral-100 h-screen"
-            >
-                <div className="container py-20">
-                    <TwoColumnsImageTemplate image="/next.svg">
-                        <VerticalTitle
-                            title="Title"
-                            size={VerticalTitleTextSize.Small}
-                            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-                        />
-                    </TwoColumnsImageTemplate>
-                </div>
-            </section>
+            <SecondSection id="second-section" />
+            <ThirdSection id="third-section-inverted" />
+            <FourthSection id="fourth-section" />
         </>
     );
 }

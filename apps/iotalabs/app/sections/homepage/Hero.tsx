@@ -5,9 +5,11 @@ import {
     VerticalTitleTextSize,
 } from 'react-ui-kit';
 
-const OVERLINE = 'Digital Alchemy';
-const TITLE = 'Power Up Your Builder Journey with iotalabs';
-const SUBTITLE = 'Catalyzing Growth of Value-Driven IOTA Ecosystems';
+const VERTICAL_TITLE_INFO = {
+    overline: 'Digital Alchemy',
+    title: 'Power Up Your Builder Journey with iotalabs',
+    subtitle: 'Catalyzing Growth of Value-Driven IOTA Ecosystems',
+};
 
 export function Hero({ id }: { id: string }) {
     return (
@@ -19,9 +21,9 @@ export function Hero({ id }: { id: string }) {
                         inverted
                         isCentered
                         size={VerticalTitleTextSize.Large}
-                        title={TITLE}
-                        overline={OVERLINE}
-                        subtitle={SUBTITLE}
+                        title={VERTICAL_TITLE_INFO.title}
+                        overline={VERTICAL_TITLE_INFO.overline}
+                        subtitle={VERTICAL_TITLE_INFO.subtitle}
                     />
                 </div>
             </HeroComponent>
