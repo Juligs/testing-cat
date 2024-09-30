@@ -8,3 +8,8 @@ body {
     overflow-x: hidden;
     height: 100%;
 }
+
+.decorated-corner-size {
+    width: clamp(112px, 12.7vw, 244px);
+    height: auto;
+}

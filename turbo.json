@@ -6,7 +6,7 @@
             "dependsOn": ["react-ui-kit#package", "^build"],
             "inputs": ["$TURBO_DEFAULT$", ".env*"],
             "outputs": [".next/**", "!.next/cache/**"],
-            "env": ["BUILDING_PACKAGE"]
+            "env": ["BUILDING_PACKAGE", "BUILD_MODE"]
         },
         "lint": {
             "dependsOn": ["react-ui-kit#package", "^lint"]
@@ -21,7 +21,7 @@
         },
         "format:check": {},
         "package": {
-            "env": ["BUILDING_PACKAGE"]
+            "env": ["BUILDING_PACKAGE", "BUILD_MODE"]
         },
         "react-ui-kit#package": {}
     }

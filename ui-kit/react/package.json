@@ -12,12 +12,12 @@
     "exports": {
         ".": {
             "import": "./dist/server.es.js",
-            "require": "./dist/server.umd.js",
+            "require": "./dist/server.cjs.js",
             "types": "./dist/server.d.ts"
         },
         "./client": {
             "import": "./dist/client.es.js",
-            "require": "./dist/client.umd.js",
+            "require": "./dist/client.cjs.js",
             "types": "./dist/client.d.ts"
         },
         "./style.css": "./dist/style.css"

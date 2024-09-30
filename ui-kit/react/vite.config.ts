@@ -11,7 +11,8 @@ const packageBuildConfig: UserConfig['build'] = {
     lib: {
         entry: [resolve(__dirname, 'src/lib/client.ts'), resolve(__dirname, 'src/lib/server.ts')],
         name: 'ui-kit-react',
-        fileName: (format, entryName) => `${entryName}.${format}.js`,
+        fileName: (format, name) => `${name}.${format}.js`,
+        formats: ['es', 'cjs'],
     },
     rollupOptions: {
         external: ['react', 'react-dom', 'tailwindcss'],
@@ -21,11 +22,18 @@ const packageBuildConfig: UserConfig['build'] = {
                 'react-dom': 'ReactDOM',
                 tailwindcss: 'tailwindcss',
             },
+            banner: (chunkInfo) => {
+                if (chunkInfo.name === 'client') {
+                    return "'use client';";
+                }
+                return '';
+            },
         },
     },
     sourcemap: true,
     emptyOutDir: true,
 };
+
 const plugins = isPackageProduction
     ? [
           tsconfigPaths({

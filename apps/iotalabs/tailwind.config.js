@@ -1,3 +1,5 @@
+import { BASE_CONFIG } from 'react-ui-kit';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -5,8 +7,14 @@ module.exports = {
         './pages/**/*.{js,ts,jsx,tsx,mdx}',
         './components/**/*.{js,ts,jsx,tsx,mdx}',
     ],
+    presets: [BASE_CONFIG],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                black: '#000',
+                white: '#fff',
+            },
+        },
     },
     plugins: [],
 };
