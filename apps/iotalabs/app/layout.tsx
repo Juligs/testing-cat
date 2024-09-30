@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import 'react-ui-kit/style.css';
 
 export const metadata: Metadata = {
     title: 'IOTA Labs',
