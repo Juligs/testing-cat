@@ -11,7 +11,6 @@ on:
 
 jobs:
     deploy-preview:
-        if: github.event.pull_request.draft == false
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
