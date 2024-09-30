@@ -1,10 +1,12 @@
+import { TwoColumnsImageTemplate } from '@components';
+import { Hero, FirstSection } from './sections';
 import { VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
-import { Hero, TwoColumnsImageTemplate } from './components';
 
 export default function Home() {
     return (
         <>
             <Hero id="hero-inverted" />
+            <FirstSection id="first-section" />
             <section
                 id="first inverted"
                 className="flex items-center justify-center w-full h-screen bg-darkest text-labs-neutral-100"

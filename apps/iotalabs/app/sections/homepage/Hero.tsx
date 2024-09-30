@@ -11,7 +11,7 @@ const SUBTITLE = 'Catalyzing Growth of Value-Driven IOTA Ecosystems';
 
 export function Hero({ id }: { id: string }) {
     return (
-        <section className="w-full h-screen" id={id}>
+        <section className="w-full h-full" id={id}>
             <HeroComponent>
                 <HeroBackground source="https://files.iota.org/media/binance_clubhouse_anaglyph.mp4" />
                 <div className="w-3/4">
