@@ -1,15 +1,15 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 interface SectionObserverProps {
     onSectionChange: (activeSectionId: string | null) => void;
 }
 
-export function SectionObserver({
-    children,
-    onSectionChange,
-}: React.PropsWithChildren<SectionObserverProps>) {
+export function SectionObserver({ onSectionChange }: SectionObserverProps) {
+    const currentPath = usePathname();
+
     useEffect(() => {
         const container = document.querySelector('body');
         const visible: string[] = [];
@@ -44,7 +44,7 @@ export function SectionObserver({
             observer.disconnect();
             onSectionChange(null);
         };
-    }, [onSectionChange]);
+    }, [onSectionChange, currentPath]); // Reobserve on path change
 
     return null;
 }

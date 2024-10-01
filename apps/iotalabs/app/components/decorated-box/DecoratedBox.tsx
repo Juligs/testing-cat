@@ -12,10 +12,13 @@ export function DecoratedBox({
     children,
 }: React.PropsWithChildren<DecoratedBoxProps>) {
     return (
-        <div className="relative">
+        <div className="relative overflow-hidden">
             {topCornerFill && (
                 <DecoratedCorner
-                    className={clsx('absolute top-0 right-0 decorated-corner-size', topCornerFill)}
+                    className={clsx(
+                        'absolute top-0 right-0 md:-right-0.5 decorated-corner-size',
+                        topCornerFill,
+                    )}
                 />
             )}
 
@@ -24,7 +27,7 @@ export function DecoratedBox({
             {bottomCornerFill && (
                 <DecoratedCorner
                     className={clsx(
-                        'absolute bottom-0 left-0 rotate-180 decorated-corner-size',
+                        'absolute -bottom-[1px] left-0 rotate-180 decorated-corner-size',
                         bottomCornerFill,
                     )}
                 />

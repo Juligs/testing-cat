@@ -1,10 +1,5 @@
-import { HERO_PROPS } from '@sections/data';
-import {
-    Hero as HeroComponent,
-    HeroBackground,
-    VerticalTitle,
-    VerticalTitleTextSize,
-} from 'react-ui-kit';
+import { HERO_PROPS } from '@sections/homepage/data';
+import { Hero as HeroComponent, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
 
 interface HeroProps {
     id: string;
@@ -12,9 +7,9 @@ interface HeroProps {
 
 export function Hero({ id }: HeroProps) {
     return (
-        <section className="w-full h-full hero-height" id={id}>
+        <section className="w-full h-full hero-height bg-labs-neutral-10" id={id}>
             <HeroComponent>
-                <HeroBackground source="https://files.iota.org/media/binance_clubhouse_anaglyph.mp4" />
+                {/* <HeroBackground source="https://files.iota.org/media/binance_clubhouse_anaglyph.mp4" /> */}
                 <div className="xl:w-3/4">
                     <VerticalTitle
                         inverted

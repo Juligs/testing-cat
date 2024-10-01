@@ -28,7 +28,7 @@
 
     /* BUTTON */
     --btn-border-radius: theme('borderRadius.full');
-    --btn-bg-primary: theme('colors.labs-primary.40');
+    --btn-bg-primary: theme('colors.labs-primary.70');
     --btn-bg-secondary: theme('colors.labs-neutral.92');
     --btn-bg-ghost: transparent;
     --btn-text-color-default: theme('colors.labs-neutral.10');
