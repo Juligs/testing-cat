@@ -1,3 +1,4 @@
+import { HERO_PROPS } from '@sections/data';
 import {
     Hero as HeroComponent,
     HeroBackground,
@@ -5,13 +6,11 @@ import {
     VerticalTitleTextSize,
 } from 'react-ui-kit';
 
-const VERTICAL_TITLE_INFO = {
-    overline: 'Digital Alchemy',
-    title: 'Power Up Your Builder Journey with iotalabs',
-    subtitle: 'Catalyzing Growth of Value-Driven IOTA Ecosystems',
-};
+interface HeroProps {
+    id: string;
+}
 
-export function Hero({ id }: { id: string }) {
+export function Hero({ id }: HeroProps) {
     return (
         <section className="w-full h-full" id={id}>
             <HeroComponent>
@@ -21,9 +20,7 @@ export function Hero({ id }: { id: string }) {
                         inverted
                         isCentered
                         size={VerticalTitleTextSize.Large}
-                        title={VERTICAL_TITLE_INFO.title}
-                        overline={VERTICAL_TITLE_INFO.overline}
-                        subtitle={VERTICAL_TITLE_INFO.subtitle}
+                        {...HERO_PROPS}
                     />
                 </div>
             </HeroComponent>
