@@ -23,7 +23,7 @@ export function TwoColumnsImageTemplate({
             >
                 {children}
             </div>
-            <div className="w-full md:w-1/2 aspect-video items-center flex">
+            <div className="w-full md:w-1/2 aspect-[4/3] items-center flex">
                 <Image src={image} alt="Image" width={708} height={531} />
             </div>
         </div>

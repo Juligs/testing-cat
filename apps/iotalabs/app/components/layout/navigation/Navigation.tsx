@@ -25,7 +25,11 @@ export function Navigation({ items }: NavigationProps) {
                     <NavbarItems
                         isMobileNavOpen={isMobileNavOpen}
                         logo={
-                            <Logo color={isInverted ? 'text-darkest-inverted' : 'text-darkest'} />
+                            <Link href="/">
+                                <Logo
+                                    color={isInverted ? 'text-darkest-inverted' : 'text-darkest'}
+                                />
+                            </Link>
                         }
                         onMobileNavToggle={() => setIsMobileNavOpen((isOpen) => !isOpen)}
                     >
