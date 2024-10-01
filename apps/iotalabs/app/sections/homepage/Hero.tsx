@@ -9,7 +9,7 @@ export function Hero({ id }: HeroProps) {
     return (
         <section className="w-full h-full hero-height bg-labs-neutral-10" id={id}>
             <HeroComponent>
-                {/* <HeroBackground source="https://files.iota.org/media/binance_clubhouse_anaglyph.mp4" /> */}
+                {/* <HeroBackgroundVideo source="https://files.iota.org/media/binance_clubhouse_anaglyph.mp4" /> */}
                 <div className="xl:w-3/4">
                     <VerticalTitle
                         inverted

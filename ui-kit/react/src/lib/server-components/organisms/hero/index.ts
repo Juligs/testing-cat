@@ -1,2 +1,3 @@
 export * from './Hero';
-export * from './HeroBackground';
+export * from './HeroBackgroundImage';
+export * from './HeroBackgroundVideo';

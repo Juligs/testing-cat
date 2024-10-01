@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Hero, HeroBackground } from '@lib/server-components/organisms';
+import { Hero, HeroBackgroundVideo } from '@lib/server-components/organisms';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { Viewport } from 'src/storybook/enums';
 import { Button, ButtonVariant } from '@lib/server-components';
@@ -17,7 +17,7 @@ function HeroExample(args: Story['args']) {
     return (
         <section className="min-h-screen h-full flex flex-col">
             <Hero {...args}>
-                <HeroBackground source="https://files.iota.org/media/binance_clubhouse_anaglyph.mp4" />
+                <HeroBackgroundVideo source="https://files.iota.org/media/binance_clubhouse_anaglyph.mp4" />
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="text-display-lg">Title</h1>
                     <p className=" text-headline-lg">Subtitle</p>

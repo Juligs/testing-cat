@@ -11,13 +11,6 @@ export const ROUTES: (Route & { metadata?: PageMetadata })[] = [
         hideFromNavbar: true,
     },
     {
-        title: 'IOTA Grants',
-        path: '/grants',
-        metadata: {
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        },
-    },
-    {
         title: 'Blog',
         path: '',
         isExternal: true,
