@@ -14,7 +14,18 @@ module.exports = {
                 black: '#000',
                 white: '#fff',
             },
+            typography: (theme) => ({
+                labs: {
+                    css: {
+                        '--tw-prose-body': 'var(--color-darkest)',
+                        '--tw-prose-headings': 'var(--color-darkest)',
+                        '--tw-prose-links': 'var(--color-darkest)',
+                        '--tw-prose-counters': 'var(--color-medium)',
+                        '--tw-prose-bullets': 'var(--color-medium)',
+                    },
+                },
+            }),
         },
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
 };

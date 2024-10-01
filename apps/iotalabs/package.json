@@ -10,6 +10,11 @@
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
+        "@mdx-js/loader": "^3.0.1",
+        "@mdx-js/react": "^3.0.1",
+        "@next/mdx": "^14.2.13",
+        "@tailwindcss/typography": "^0.5.15",
+        "@types/mdx": "^2.0.13",
         "next": "14.2.6",
         "react": "18.3.1",
         "react-dom": "18.3.1",

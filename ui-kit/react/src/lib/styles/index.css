@@ -19,6 +19,12 @@
     --color-darkest-inverted: theme('colors.labs-neutral.100');
     --color-dark: theme('colors.labs-neutral.30');
     --color-dark-inverted: theme('colors.labs-neutral.80');
+    --color-medium: theme('colors.labs-neutral.40');
+    --color-medium-inverted: theme('colors.labs-neutral.80');
+    --color-light: theme('colors.labs-neutral.50');
+    --color-light-inverted: theme('colors.labs-neutral.60');
+    --color-highlighted: theme('colors.labs-primary.40');
+    --color-highlighted-inverted: theme('colors.labs-primary.70');
 
     /* BUTTON */
     --btn-border-radius: theme('borderRadius.full');
