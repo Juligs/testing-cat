@@ -5,7 +5,7 @@
     .text-headline-lg,
     .text-headline-md,
     .text-headline-sm {
-        @apply font-alliance-no2;
+        font-family: var(--font-family);
     }
     .text-title-lg,
     .text-title-md,
@@ -25,6 +25,8 @@
     .text-headline-md,
     .text-headline-sm {
         font-feature-settings: 'ss02' on;
+        font-weight: var(--font-weight);
+        letter-spacing: var(--letter-spacing);
     }
     .text-label-md {
         font-feature-settings: 'ss01' on;

@@ -7,6 +7,7 @@ import {
     addTailwindCustomTextClasses,
     SCREEN_PADDINGS,
     THEMED_CUSTOM_COLORS,
+    FONT_FAMILIES,
 } from './constants';
 import { IOTALABS_COLOR_PALETTE, transparencyColorPalette } from '../constants';
 
@@ -32,10 +33,7 @@ export const BASE_CONFIG: Partial<Config> = {
             padding: SCREEN_PADDINGS,
         },
         extend: {
-            fontFamily: {
-                'alliance-no2': ['AllianceNo2', 'sans-serif'],
-                inter: ['Inter', 'sans-serif'],
-            },
+            fontFamily: FONT_FAMILIES,
         },
     },
 };

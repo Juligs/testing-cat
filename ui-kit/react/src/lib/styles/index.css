@@ -38,8 +38,21 @@
     --state-layer-hover: theme('colors.transparency-primary.8');
     --state-layer-focus: theme('colors.transparency-primary.12');
     --state-layer-active: theme('colors.transparency-primary.16');
+
+    --font-family: theme('fontFamily.red-hat-display');
+    --font-weight: 600;
+    --letter-spacing: -1px;
 }
 
 :root.foundation {
     --btn-border-radius: theme('borderRadius.lg');
+    --font-family: theme('fontFamily.alliance-no2');
+    --font-weight: 500;
+    --letter-spacing: 0;
+}
+
+:root.network {
+    --font-family: theme('fontFamily.alliance-no2');
+    --font-weight: 500;
+    --letter-spacing: 0;
 }

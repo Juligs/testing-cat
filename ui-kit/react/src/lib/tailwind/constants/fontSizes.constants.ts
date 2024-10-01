@@ -79,7 +79,6 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-headline-sm': {
         fontSize: '30px',
         lineHeight: '140%',
-        fontWeight: '500',
         '@screen md': {
             fontSize: '36px',
         },
@@ -87,7 +86,6 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-headline-md': {
         fontSize: '40px',
         lineHeight: '140%',
-        fontWeight: '500',
         '@screen md': {
             fontSize: '48px',
         },
@@ -95,7 +93,6 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-headline-lg': {
         fontSize: '48px',
         lineHeight: '140%',
-        fontWeight: '500',
         '@screen md': {
             fontSize: '60px',
         },
@@ -103,7 +100,6 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-display-sm': {
         fontSize: '56px',
         lineHeight: '120%',
-        fontWeight: '500',
         '@screen md': {
             fontSize: '72px',
         },
@@ -111,7 +107,6 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-display-md': {
         fontSize: '64px',
         lineHeight: '120%',
-        fontWeight: '500',
         '@screen md': {
             fontSize: '96px',
         },
@@ -119,7 +114,6 @@ const TAILWIND_TEXT_CLASSES = {
     '.text-display-lg': {
         fontSize: '80px',
         lineHeight: '120%',
-        fontWeight: '500',
         '@screen md': {
             fontSize: '128px',
         },
