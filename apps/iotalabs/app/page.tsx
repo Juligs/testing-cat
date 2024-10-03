@@ -1,5 +1,12 @@
 import type { Metadata } from 'next';
-import { Hero, FirstSection, SecondSection, ThirdSection, LastSection } from '@sections';
+import {
+    Hero,
+    FirstSection,
+    SecondSection,
+    ThirdSection,
+    FourthSection,
+    LastSection,
+} from '@sections';
 import { getPageMetadata } from '@lib/utils';
 import { HERO_PROPS } from '@sections/homepage/data';
 
@@ -17,6 +24,7 @@ export default function Home() {
             <FirstSection id="first-section" />
             <SecondSection id="second-section" />
             <ThirdSection id="third-section-inverted" />
+            <FourthSection id="fourth-section" />
             <LastSection id="last-section" />
         </>
     );
