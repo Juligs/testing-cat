@@ -1,6 +1,7 @@
 @layer components {
-    .btn {
-        border-radius: var(--btn-border-radius);
+    .btn,
+    .anchor-link {
+        border-radius: var(--action-border-radius);
     }
 
     .btn-primary {
@@ -21,5 +22,21 @@
 
     .btn-text-color-inverted {
         color: var(--btn-text-color-inverted);
+    }
+
+    .anchor-link-default {
+        color: var(--color-darkest);
+    }
+
+    .anchor-link-inverted {
+        color: var(--color-darkest-inverted);
+    }
+
+    .anchor-link-highlighted {
+        color: var(--color-highlighted);
+    }
+
+    .anchor-link-highlighted-inverted {
+        color: var(--color-highlighted-inverted);
     }
 }

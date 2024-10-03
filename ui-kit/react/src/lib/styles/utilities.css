@@ -45,5 +45,22 @@
                 background-color: var(--state-layer-active);
             }
         }
+        &.inverted {
+            &:hover {
+                &:before {
+                    background-color: var(--state-layer-hover-inverted);
+                }
+            }
+            &:focus-visible {
+                &:before {
+                    background-color: var(--state-layer-focus-inverted);
+                }
+            }
+            &:active {
+                &:before {
+                    background-color: var(--state-layer-focus-inverted);
+                }
+            }
+        }
     }
 }
