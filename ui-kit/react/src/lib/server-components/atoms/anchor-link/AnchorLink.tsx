@@ -56,7 +56,7 @@ export function AnchorLink({
                 >
                     {text}
                 </span>
-                <span className={clsx(textColor)}>
+                <span className={clsx('[&_svg]:h-6 [&_svg]:w-6', textColor)}>
                     {isExternal ? <OutboundLink /> : <LineArrowSmall />}
                 </span>
             </div>

@@ -29,7 +29,7 @@ export function FourthSection({ id }: { id: string }) {
                         </Actions>
                     </VerticalTitle>
                 </div>
-                <Image src="/homepage/fourth-section.png" alt="Image" width={1200} height={515} />
+                <Image src="/homepage/fourth-section.svg" alt="Image" width={1200} height={515} />
             </div>
         </section>
     );

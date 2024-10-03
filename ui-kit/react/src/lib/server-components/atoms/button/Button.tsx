@@ -53,7 +53,7 @@ export function Button({
             <div className={clsx(BUTTON_PADDINGS_MAP[size])}>
                 <div
                     className={clsx(
-                        'p-1 flex flex-row items-center justify-center gap-x-3 text-label-sm transition-colors',
+                        'p-1 flex flex-row items-center justify-center gap-x-3 text-label-md transition-colors',
                         textColor,
                     )}
                 >

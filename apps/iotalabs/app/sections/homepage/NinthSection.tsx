@@ -15,7 +15,7 @@ export function NinthSection({ id }: { id: string }) {
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
             <div className="container py-14 md:py-20 lg:py-30 flex flex-col justify-center text-center gap-y-14 md:gap-y-20 lg:gap-y-30">
-                <TwoColumnsImageTemplate reverse image="/homepage/ninth-section.png">
+                <TwoColumnsImageTemplate reverse image="/homepage/ninth-section.svg">
                     <VerticalTitle
                         title={VERTICAL_TITLE_INFO.title}
                         size={VerticalTitleTextSize.Small}

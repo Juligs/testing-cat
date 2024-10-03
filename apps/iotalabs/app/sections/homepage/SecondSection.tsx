@@ -12,7 +12,7 @@ export function SecondSection({ id }: { id: string }) {
         <DecoratedBox topCornerFill="text-labs-neutral-100">
             <section className="w-full bg-labs-primary-70" id={id}>
                 <div className="container py-14 md:py-20 lg:py-30 flex justify-center text-center">
-                    <TwoColumnsImageTemplate reverse image="/homepage/second-section.png">
+                    <TwoColumnsImageTemplate reverse image="/homepage/second-section.svg">
                         <div className="md:pl-[116px] lg:pl-[126px] xl:pl-[146px]">
                             <VerticalTitle
                                 title={VERTICAL_TITLE_INFO.title}
