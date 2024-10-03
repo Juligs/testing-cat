@@ -5,6 +5,7 @@ import {
     SecondSection,
     ThirdSection,
     FourthSection,
+    NinthSection,
     LastSection,
 } from '@sections';
 import { getPageMetadata } from '@lib/utils';
@@ -25,6 +26,7 @@ export default function Home() {
             <SecondSection id="second-section" />
             <ThirdSection id="third-section-inverted" />
             <FourthSection id="fourth-section" />
+            <NinthSection id="ninth-section" />
             <LastSection id="last-section" />
         </>
     );

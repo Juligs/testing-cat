@@ -13,13 +13,15 @@ export function SecondSection({ id }: { id: string }) {
             <section className="w-full bg-labs-primary-70" id={id}>
                 <div className="container py-14 md:py-20 lg:py-30 flex justify-center text-center">
                     <TwoColumnsImageTemplate reverse image="/homepage/second-section.png">
-                        <VerticalTitle
-                            title={VERTICAL_TITLE_INFO.title}
-                            overline={VERTICAL_TITLE_INFO.overline}
-                            size={VerticalTitleTextSize.Small}
-                            subtitle={VERTICAL_TITLE_INFO.subtitle}
-                            body={VERTICAL_TITLE_INFO.body}
-                        />
+                        <div className="md:pl-[116px] lg:pl-[126px] xl:pl-[146px]">
+                            <VerticalTitle
+                                title={VERTICAL_TITLE_INFO.title}
+                                overline={VERTICAL_TITLE_INFO.overline}
+                                size={VerticalTitleTextSize.Small}
+                                subtitle={VERTICAL_TITLE_INFO.subtitle}
+                                body={VERTICAL_TITLE_INFO.body}
+                            />
+                        </div>
                     </TwoColumnsImageTemplate>
                 </div>
             </section>
