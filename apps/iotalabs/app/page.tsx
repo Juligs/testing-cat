@@ -4,6 +4,7 @@ import {
     FirstSection,
     SecondSection,
     ThirdSection,
+    FifthSection,
     FourthSection,
     NinthSection,
     LastSection,
@@ -26,6 +27,7 @@ export default function Home() {
             <SecondSection id="second-section" />
             <ThirdSection id="third-section-inverted" />
             <FourthSection id="fourth-section" />
+            <FifthSection id="fifth-section" />
             <NinthSection id="ninth-section" />
             <LastSection id="last-section" />
         </>
