@@ -15,7 +15,7 @@ export function Navbar({ inverted, children }: NavbarProps) {
                 inverted ? 'text-darkest-inverted' : 'text-darkest',
             )}
         >
-            <div className="container flex flex-col md:flex-row items-center justify-between w-full py-3 md:py-0">
+            <div className="container flex flex-col xs:flex-row items-center justify-between w-full py-3 xs:py-0">
                 {children}
             </div>
         </nav>

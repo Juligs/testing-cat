@@ -13,7 +13,7 @@ export function FourthSection({ id }: { id: string }) {
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
             <div className="container py-30 flex flex-col gap-30 justify-center items-center">
-                <div className="max-w-80 md:max-w-2xl">
+                <div className="max-w-80 xs:max-w-2xl sm:max-w-xl xl:max-w-[708px]">
                     <VerticalTitle
                         isCentered
                         title={VERTICAL_TITLE_INFO.title}

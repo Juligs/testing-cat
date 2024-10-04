@@ -19,15 +19,15 @@ const EXTERNAL_LINKS = [
 export function FifthSection({ id }: { id: string }) {
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
-            <div className="container py-14 md:py-20 lg:py-30 flex flex-col md:flex-row justify-between text-center gap-14 md:items-baseline">
-                <div className="md:w-2/3 lg:w-1/2 shrink-0">
+            <div className="container py-14 xs:py-20 lg:py-30 flex flex-col xs:flex-row justify-between text-center gap-14 xs:items-baseline">
+                <div className="sm:w-1/2 xl:w-2/5 shrink-0">
                     <VerticalTitle
                         size={VerticalTitleTextSize.Medium}
                         title="Getting Started With IOTA"
                         subtitle="Streamlining innovation for developers"
                     />
                 </div>
-                <div className="flex flex-col gap-4 md:w-1/3 lg:w-1/2 lg:ml-[204px]">
+                <div className="flex flex-col gap-4 xs:w-1/2 sm:w-1/3 xl:w-2/5">
                     {EXTERNAL_LINKS.map(({ title, href }) => (
                         <Link key={title} href={href} target="_blank" rel="noopener noreferrer">
                             <AnchorLink isExternal text={title} />

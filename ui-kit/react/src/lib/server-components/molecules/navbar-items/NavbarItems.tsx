@@ -18,11 +18,11 @@ export function NavbarItems({
             <div className="flex flex-row w-full items-center justify-between">
                 {logo}
 
-                <ul className="hidden md:flex flex-row">{children}</ul>
+                <ul className="hidden xs:flex flex-row">{children}</ul>
 
                 <button
                     type="button"
-                    className="block md:hidden w-6 h-6 [&_svg]:w-full [&_svg]:h-full"
+                    className="block xs:hidden w-6 h-6 [&_svg]:w-full [&_svg]:h-full"
                     onClick={onMobileNavToggle}
                 >
                     {isMobileNavOpen ? <Close /> : <MenuColapsed />}
@@ -31,7 +31,7 @@ export function NavbarItems({
 
             <div
                 className={clsx(
-                    'md:hidden w-full transition-[max-height] overflow-y-hidden',
+                    'xs:hidden w-full transition-[max-height] overflow-y-hidden',
                     isMobileNavOpen ? 'max-h-screen' : 'max-h-0',
                 )}
             >

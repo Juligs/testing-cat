@@ -56,7 +56,12 @@ export function AnchorLink({
                 >
                     {text}
                 </span>
-                <span className={clsx('[&_svg]:h-6 [&_svg]:w-6', textColor)}>
+                <span
+                    className={clsx('[&_svg]:h-6 [&_svg]:w-6', textColor, {
+                        'group-hover:translate-x-2 group-hover:transition group-hover:duration-300':
+                            size === AnchorLinkSize.Default && !isExternal,
+                    })}
+                >
                     {isExternal ? <OutboundLink /> : <LineArrowSmall />}
                 </span>
             </div>

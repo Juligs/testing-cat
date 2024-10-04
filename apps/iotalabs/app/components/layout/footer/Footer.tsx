@@ -13,10 +13,10 @@ export function Footer() {
                 width={920}
                 height={489}
                 alt="footer-pattern"
-                className="hidden md:flex absolute top-0 -right-1/4 z-0"
+                className="hidden xs:flex absolute top-0 -right-1/4 z-0"
             />
             <div className="container py-20 z-1 relative">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-0">
+                <div className="grid grid-cols-1 xs:grid-cols-4 gap-8 xs:gap-0">
                     <div className="flex flex-col gap-y-4">
                         <span className="text-labs-neutral-100 text-label-lg">Pages</span>
                         <div className="flex flex-col gap-y-2">
@@ -48,14 +48,12 @@ export function Footer() {
                     <div className="flex flex-col gap-y-4">
                         <span className="text-labs-neutral-100">iotalabs</span>
                         <div className="flex flex-col text-body-sm">
+                            <span className="text-labs-neutral-60">Rising Phoenix 2 Ltd</span>
                             <span className="text-labs-neutral-60">
-                                Office 611, 6th Floor, Al Khatem Tower
+                                Trinity Chambers, PO Box 4301 Road Town
                             </span>
                             <span className="text-labs-neutral-60">
-                                Abu Dhabi Global Market Square, Al Maryah Island
-                            </span>
-                            <span className="text-labs-neutral-60">
-                                Abu Dhabi, United Arab Emirate
+                                Tortola, British Virgin Islands
                             </span>
                         </div>
                         <a
@@ -67,7 +65,7 @@ export function Footer() {
                     </div>
                 </div>
                 <hr className="my-6 text-transparency-white-16" />
-                <div className="flex flex-col-reverse md:flex-row w-full justify-between gap-y-8 md:gap-y-0">
+                <div className="flex flex-col-reverse xs:flex-row w-full justify-between gap-y-8 xs:gap-y-0">
                     <div className="flex flex-row gap-x-4 items-center">
                         <Logo color="text-labs-neutral-100" />
                         <span className="text-labs-neutral-60 text-body-sm">

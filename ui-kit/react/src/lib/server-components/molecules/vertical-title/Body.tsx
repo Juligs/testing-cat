@@ -6,17 +6,20 @@ interface BodyProps {
      * Whether the body should be inverted
      */
     inverted?: boolean;
+    /*
+     * The body content is centered
+     */
+    isCentered?: boolean;
 }
 
-export function Body({ children, inverted }: React.PropsWithChildren<BodyProps>) {
+export function Body({ children, inverted, isCentered }: React.PropsWithChildren<BodyProps>) {
     const textColor = inverted ? INVERTED_SECONDARY_TEXT_COLOR : SECONDARY_TEXT_COLOR;
 
     return (
         <div
-            className={clsx(
-                'text-body-lg pr-4 md:pr-16 lg:pr-18 xl:pr-20 body-text-padding',
-                textColor,
-            )}
+            className={clsx('text-body-lg body-text-padding', textColor, {
+                'pr-4 md:pr-16 lg:pr-18 xl:pr-20': !isCentered,
+            })}
         >
             {children}
         </div>

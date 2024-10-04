@@ -58,11 +58,15 @@ export function VerticalTitle({
                     {title}
                 </Title>
                 {subtitle && (
-                    <Subtitle inverted={inverted} size={size}>
+                    <Subtitle inverted={inverted} size={size} isCentered={isCentered}>
                         {subtitle}
                     </Subtitle>
                 )}
-                {body && <Body inverted={inverted}>{body}</Body>}
+                {body && (
+                    <Body inverted={inverted} isCentered={isCentered}>
+                        {body}
+                    </Body>
+                )}
             </div>
             {children}
         </div>

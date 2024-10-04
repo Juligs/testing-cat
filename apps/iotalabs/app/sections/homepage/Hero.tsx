@@ -10,7 +10,7 @@ export function Hero({ id }: HeroProps) {
         <section className="w-full h-full hero-height bg-labs-neutral-10" id={id}>
             <HeroComponent>
                 {/* <HeroBackgroundVideo source="https://files.iota.org/media/binance_clubhouse_anaglyph.mp4" /> */}
-                <div className="xl:w-3/4">
+                <div className="sm:max-w-3xl xl:max-w-5xl">
                     <VerticalTitle
                         inverted
                         isCentered

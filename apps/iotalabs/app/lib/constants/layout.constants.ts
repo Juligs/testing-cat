@@ -1,4 +1,4 @@
-import { Discord, Github, GoogleScholar, Linkedin, Twitter, Youtube } from '@components';
+import { Discord, Twitter } from '@components';
 import { PageMetadata, Route } from '@lib/interfaces';
 
 export const ROUTES: (Route & { metadata?: PageMetadata })[] = [
@@ -41,34 +41,14 @@ export const LEGAL_ROUTES: (Route & { metadata?: PageMetadata })[] = [
 
 export const SOCIAL_LINKS = [
     {
-        title: 'Github',
-        icon: Github,
-        url: '',
-    },
-    {
-        title: 'Google Scholar',
-        icon: GoogleScholar,
-        url: '',
-    },
-    {
-        title: 'Youtube',
-        icon: Youtube,
-        url: '',
-    },
-    {
         title: 'Twitter',
         icon: Twitter,
-        url: '',
-    },
-    {
-        title: 'LinkedIn',
-        icon: Linkedin,
-        url: '',
+        url: 'https://x.com/iotalabs_',
     },
     {
         title: 'Discord',
         icon: Discord,
-        url: '',
+        url: 'https://discord.iota.org',
     },
 ];
 

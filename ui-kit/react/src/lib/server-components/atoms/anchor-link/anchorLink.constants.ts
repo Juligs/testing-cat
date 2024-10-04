@@ -2,7 +2,7 @@ import { AnchorLinkSize } from './anchorLink.enums';
 
 export const ANCHOR_LINK_PADDING: Record<AnchorLinkSize, string> = {
     [AnchorLinkSize.Small]: 'px-4 py-3',
-    [AnchorLinkSize.Default]: 'pl-6 pr-4 py-4',
+    [AnchorLinkSize.Default]: 'px-6 py-4',
 };
 
 export const DEFAULT_TEXT_COLOR = 'anchor-link-default';
