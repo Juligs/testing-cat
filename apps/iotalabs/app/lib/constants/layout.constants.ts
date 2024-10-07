@@ -1,36 +1,27 @@
+import { Route } from '@lib/interfaces';
 import { Discord, Twitter } from '@components';
-import { PageMetadata, Route } from '@lib/interfaces';
 
-export const ROUTES: (Route & { metadata?: PageMetadata })[] = [
+export const ROUTES: Route[] = [
     {
         title: 'Homepage',
         path: '/',
-        metadata: {
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        },
         hideFromNavbar: true,
     },
     {
         title: 'Blog',
-        path: '',
+        path: 'https://blog.iotalabs.io/',
         isExternal: true,
     },
 ];
 
-export const LEGAL_ROUTES: (Route & { metadata?: PageMetadata })[] = [
+export const LEGAL_ROUTES: Route[] = [
     {
         title: 'Privacy Policy',
         path: '/privacy-policy',
-        metadata: {
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        },
     },
     {
         title: 'Cookie Policy',
         path: '/cookie-policy',
-        metadata: {
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        },
     },
     {
         title: 'Terms of Use',

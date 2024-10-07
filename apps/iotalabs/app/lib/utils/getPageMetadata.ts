@@ -1,38 +1,47 @@
-import { METADATA_IMAGE_FALLBACK, METADATA_SITE_NAME, METADATA_WEBSITE_URL } from '../constants';
+const BASE_URL = 'https://iotalabs.io';
+const METADATA_SITE_NAME = 'iotalabs';
+const METADATA_IMAGE_FALLBACK = `${BASE_URL}/meta-image.png`;
 
+interface PageMetadataProps {
+    title?: string;
+    description?: string;
+    image?: string;
+}
 export function getPageMetadata({
     title,
     description,
     image = METADATA_IMAGE_FALLBACK,
-}: {
-    title: string;
-    description: string;
-    image?: string;
-}) {
-    const pageTitle = `${title} | ${METADATA_SITE_NAME}`;
+}: PageMetadataProps) {
+    const pageTitle = title ? `${METADATA_SITE_NAME} – ${title}` : METADATA_SITE_NAME;
 
     return {
         title: pageTitle,
         description,
         alternates: {
-            canonical: METADATA_WEBSITE_URL,
+            canonical: '/',
         },
+        keywords: [
+            'IOTA',
+            'EVM',
+            'Smart Contracts',
+            'NFTs',
+            'IOTA Smart Contracts',
+            'DLT',
+            'dag',
+            'distributed ledger',
+            'blockchain',
+        ],
         openGraph: {
             type: 'website',
-            url: METADATA_WEBSITE_URL,
+            url: BASE_URL,
             title: pageTitle,
-            description,
             siteName: METADATA_SITE_NAME,
-            images: [
-                {
-                    url: image,
-                },
-            ],
+            images: image,
         },
         twitter: {
             card: 'summary_large_image',
-            creator: '@iota',
-            site: '@iota',
+            creator: '@iotalabs_',
+            site: '@iotalabs_',
             title: pageTitle,
             description,
             images: image,

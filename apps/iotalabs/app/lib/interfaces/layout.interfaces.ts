@@ -4,9 +4,3 @@ export interface Route {
     isExternal?: boolean;
     hideFromNavbar?: boolean;
 }
-
-export interface PageMetadata {
-    description?: string;
-    keywords?: string;
-    imageUrl?: string;
-}

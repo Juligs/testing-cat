@@ -1,5 +1,10 @@
+import { getPageMetadata } from '@lib/utils';
 import Link from 'next/link';
 import { Button } from 'react-ui-kit';
+
+export const metadata = getPageMetadata({
+    title: '404 Not Found',
+});
 
 export default function NotFound() {
     return (

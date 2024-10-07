@@ -1,9 +1,13 @@
-import { HERO_PROPS } from '@sections/homepage/data';
 import { Hero as HeroComponent, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
 
 interface HeroProps {
     id: string;
 }
+const HERO_INFO = {
+    title: 'Power Up Your Builder Journey with iotalabs',
+    overline: 'Digital Alchemy',
+    subtitle: 'Catalyzing Growth of Value-Driven IOTA Ecosystems',
+};
 
 export function Hero({ id }: HeroProps) {
     return (
@@ -15,7 +19,7 @@ export function Hero({ id }: HeroProps) {
                         inverted
                         isCentered
                         size={VerticalTitleTextSize.Large}
-                        {...HERO_PROPS}
+                        {...HERO_INFO}
                     />
                 </div>
             </HeroComponent>

@@ -10,12 +10,13 @@ import {
     LastSection,
 } from '@sections';
 import { getPageMetadata } from '@lib/utils';
-import { HERO_PROPS } from '@sections/homepage/data';
 
-const METADATA_DESCRIPTION = `${HERO_PROPS.title}. ${HERO_PROPS.subtitle}.`;
+const METADATA_TITLE = 'Power Up Your Builder Journey';
+const METADATA_DESCRIPTION =
+    'iotalabs propels the IOTA ecosystem through grants, growth initiatives, builder support, and strategic partnerships. Join us in shaping the future of IOTA—one breakthrough at a time.';
 
 export const metadata: Metadata = getPageMetadata({
-    title: 'Home',
+    title: METADATA_TITLE,
     description: METADATA_DESCRIPTION,
 });
 
