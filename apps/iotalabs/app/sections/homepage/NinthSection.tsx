@@ -1,16 +1,16 @@
 import { TwoColumnsImageTemplate } from '@components';
 import { Actions, Button, ButtonVariant, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
-import { Banner } from '@components/banner';
+// import { Banner } from '@components/banner';
 
 const VERTICAL_TITLE_INFO = {
     title: 'Build with IOTA Labs',
     body: 'Connecting innovate Web3 minds and builders with a prime support network for building your decentralized innovations.',
 };
-const BANNER_INFO = {
-    title: 'Are you building on IOTA?',
-    subtitle: 'Register your application and get featured on iotalabs and the official website',
-};
+// const BANNER_INFO = {
+//     title: 'Are you building on IOTA?',
+//     subtitle: 'Register your application and get featured on iotalabs and the official website',
+// };
 export function NinthSection({ id }: { id: string }) {
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
@@ -32,7 +32,7 @@ export function NinthSection({ id }: { id: string }) {
                         </VerticalTitle>
                     </div>
                 </TwoColumnsImageTemplate>
-                <Banner
+                {/* <Banner
                     title={BANNER_INFO.title}
                     subtitle={BANNER_INFO.subtitle}
                     actions={
@@ -42,7 +42,7 @@ export function NinthSection({ id }: { id: string }) {
                             icon={<ArrowTopRight />}
                         />
                     }
-                />
+                /> */}
             </div>
         </section>
     );

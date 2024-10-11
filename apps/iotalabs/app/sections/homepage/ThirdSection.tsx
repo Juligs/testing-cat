@@ -1,6 +1,6 @@
 import { DecoratedBox, TwoColumnsImageTemplate } from '@components';
 
-const TEXT = 'We’re not only building a network; we’re driving the success of it.';
+const TEXT = 'Empowering IOTA - Unleashing Ecosystem Growth';
 
 export function ThirdSection({ id }: { id: string }) {
     return (

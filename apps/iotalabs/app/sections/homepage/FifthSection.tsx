@@ -12,7 +12,7 @@ const EXTERNAL_LINKS = [
     },
     {
         title: 'IOTA EVM',
-        href: '',
+        href: 'https://evm.iota.org/',
     },
 ];
 

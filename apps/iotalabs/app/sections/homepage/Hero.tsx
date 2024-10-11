@@ -4,9 +4,8 @@ interface HeroProps {
     id: string;
 }
 const HERO_INFO = {
-    title: 'Power Up Your Builder Journey with iotalabs',
-    overline: 'Digital Alchemy',
-    subtitle: 'Catalyzing Growth of Value-Driven IOTA Ecosystems',
+    title: 'Accelerate Growth',
+    subtitle: 'Shaping value-driven IOTA ecosystems where innovation thrives',
 };
 
 export function Hero({ id }: HeroProps) {

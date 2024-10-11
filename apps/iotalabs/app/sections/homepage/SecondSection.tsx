@@ -5,7 +5,7 @@ const VERTICAL_TITLE_INFO = {
     title: 'The Engine Behind IOTA Adoption',
     overline: 'Discover iotalabs',
     subtitle: 'Join us as we shape the future of IOTA — one breakthrough at a time',
-    body: 'Through grants, growth initiatives, builders support and a relentless focus on innovation and strategic partnerships, iotalabs is the catalyst for transforming potential into reality.',
+    body: 'Through grants, growth initiatives, builders support and a relentless focus on innovation and strategic partnerships, iotalabs is the catalyst for transforming potential into reality. <a href="" class="underline">Read more</a>',
 };
 export function SecondSection({ id }: { id: string }) {
     return (
@@ -19,7 +19,13 @@ export function SecondSection({ id }: { id: string }) {
                                 overline={VERTICAL_TITLE_INFO.overline}
                                 size={VerticalTitleTextSize.Small}
                                 subtitle={VERTICAL_TITLE_INFO.subtitle}
-                                body={VERTICAL_TITLE_INFO.body}
+                                body={
+                                    <div
+                                        dangerouslySetInnerHTML={{
+                                            __html: VERTICAL_TITLE_INFO.body,
+                                        }}
+                                    />
+                                }
                             />
                         </div>
                     </TwoColumnsImageTemplate>
