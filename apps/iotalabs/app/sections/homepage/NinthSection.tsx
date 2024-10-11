@@ -23,10 +23,11 @@ export function NinthSection({ id }: { id: string }) {
                             body={VERTICAL_TITLE_INFO.body}
                         >
                             <Actions>
-                                <Button variant={ButtonVariant.Primary}>
-                                    Button
-                                    <ArrowTopRight className="h-[20px] w-[20px]" />
-                                </Button>
+                                <Button
+                                    variant={ButtonVariant.Primary}
+                                    text="Button"
+                                    icon={<ArrowTopRight />}
+                                />
                             </Actions>
                         </VerticalTitle>
                     </div>
@@ -35,10 +36,11 @@ export function NinthSection({ id }: { id: string }) {
                     title={BANNER_INFO.title}
                     subtitle={BANNER_INFO.subtitle}
                     actions={
-                        <Button variant={ButtonVariant.Primary}>
-                            Register Now
-                            <ArrowTopRight className="h-[20px] w-[20px]" />
-                        </Button>
+                        <Button
+                            variant={ButtonVariant.Primary}
+                            text="Register Now"
+                            icon={<ArrowTopRight />}
+                        />
                     }
                 />
             </div>

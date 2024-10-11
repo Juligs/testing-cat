@@ -33,8 +33,8 @@ export const SmallTitle: Story = {
     render: (args) => (
         <VerticalTitle {...args} size={VerticalTitleTextSize.Small}>
             <Actions>
-                <Button variant={ButtonVariant.Primary}>Primary</Button>
-                <Button variant={ButtonVariant.Secondary}>Secondary</Button>
+                <Button variant={ButtonVariant.Primary} text="Primary" />
+                <Button variant={ButtonVariant.Secondary} text="Secondary" />
             </Actions>
         </VerticalTitle>
     ),
@@ -50,8 +50,8 @@ export const MediumTitle: Story = {
     render: (args) => (
         <VerticalTitle {...args} size={VerticalTitleTextSize.Medium}>
             <Actions>
-                <Button variant={ButtonVariant.Primary}>Primary</Button>
-                <Button variant={ButtonVariant.Secondary}>Secondary</Button>
+                <Button variant={ButtonVariant.Primary} text="Primary" />
+                <Button variant={ButtonVariant.Secondary} text="Secondary" />
             </Actions>
         </VerticalTitle>
     ),
@@ -67,8 +67,8 @@ export const LargeTitle: Story = {
     render: (args) => (
         <VerticalTitle {...args} size={VerticalTitleTextSize.Large}>
             <Actions>
-                <Button variant={ButtonVariant.Primary}>Primary</Button>
-                <Button variant={ButtonVariant.Secondary}>Secondary</Button>
+                <Button variant={ButtonVariant.Primary} text="Primary" />
+                <Button variant={ButtonVariant.Secondary} text="Secondary" />
             </Actions>
         </VerticalTitle>
     ),

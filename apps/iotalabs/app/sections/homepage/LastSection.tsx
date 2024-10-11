@@ -19,10 +19,11 @@ export function LastSection({ id }: { id: string }) {
                             body={VERTICAL_TITLE_INFO.body}
                         >
                             <Actions>
-                                <Button variant={ButtonVariant.Primary}>
-                                    Button
-                                    <ArrowTopRight className="h-[20px] w-[20px]" />
-                                </Button>
+                                <Button
+                                    variant={ButtonVariant.Primary}
+                                    text="Button"
+                                    icon={<ArrowTopRight />}
+                                />
                             </Actions>
                         </VerticalTitle>
                     </div>

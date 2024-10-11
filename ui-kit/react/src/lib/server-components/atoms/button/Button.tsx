@@ -1,5 +1,8 @@
 import {
     BUTTON_PADDINGS_MAP,
+    BUTTON_PADDING_ONLY_ICON_MAP,
+    ICON_SIZE_MAP,
+    TEXT_SIZE_MAP,
     DEFAULT_TEXT_COLOR,
     INVERTED_TEXT_COLOR,
     INVERTED_TEXT_COLOR_VARIANTS,
@@ -7,7 +10,10 @@ import {
 import { ButtonSize, ButtonVariant } from './button.enums';
 import clsx from 'clsx';
 
-type HTMLButtonProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'className'>;
+type HTMLButtonProps = Omit<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    'className' | 'children'
+>;
 
 interface ButtonProps extends HTMLButtonProps {
     /**
@@ -26,21 +32,32 @@ interface ButtonProps extends HTMLButtonProps {
      * Are colors inverted
      */
     inverted?: boolean;
+    /**
+     * Text displayed on the button
+     */
+    text?: string;
+    /**
+     * Icon displayed on the button
+     */
+    icon?: React.ReactNode;
 }
 
 export function Button({
-    children,
     type = 'button',
     fullWidth,
     size = ButtonSize.Medium,
     variant = ButtonVariant.Primary,
     inverted,
+    text,
+    icon,
     ...buttonProps
 }: ButtonProps) {
     const textColor =
         INVERTED_TEXT_COLOR_VARIANTS.includes(variant) && inverted
             ? INVERTED_TEXT_COLOR
             : DEFAULT_TEXT_COLOR;
+    const isOnlyIcon = Boolean(!text && icon);
+    const isSmallButton = ButtonSize.Small === size;
     return (
         <button
             type={type}
@@ -50,14 +67,22 @@ export function Button({
                 'opacity-50': buttonProps.disabled,
             })}
         >
-            <div className={clsx(BUTTON_PADDINGS_MAP[size])}>
+            <div
+                className={clsx(
+                    isOnlyIcon ? BUTTON_PADDING_ONLY_ICON_MAP[size] : BUTTON_PADDINGS_MAP[size],
+                )}
+            >
                 <div
                     className={clsx(
-                        'p-1 flex flex-row items-center justify-center gap-x-3 text-label-md transition-colors',
+                        'flex flex-row items-center justify-center gap-x-3 transition-colors',
+                        TEXT_SIZE_MAP[size],
+                        ICON_SIZE_MAP[size],
+                        isOnlyIcon && isSmallButton ? 'p-0.5' : 'p-1',
                         textColor,
                     )}
                 >
-                    {children}
+                    {text && <span>{text}</span>}
+                    {icon}
                 </div>
             </div>
         </button>

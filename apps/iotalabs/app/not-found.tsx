@@ -14,7 +14,7 @@ export default function NotFound() {
                 <h2 className="text-title-lg">Not Found</h2>
             </div>
             <Link href="/">
-                <Button>Return Home</Button>
+                <Button text="Return Home" />
             </Link>
         </div>
     );

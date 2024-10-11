@@ -22,10 +22,11 @@ export function FourthSection({ id }: { id: string }) {
                         body={VERTICAL_TITLE_INFO.body}
                     >
                         <Actions>
-                            <Button variant={ButtonVariant.Primary}>
-                                Get Started
-                                <ArrowTopRight className="h-[20px] w-[20px]" />
-                            </Button>
+                            <Button
+                                variant={ButtonVariant.Primary}
+                                text="Get Started"
+                                icon={<ArrowTopRight />}
+                            />
                         </Actions>
                     </VerticalTitle>
                 </div>

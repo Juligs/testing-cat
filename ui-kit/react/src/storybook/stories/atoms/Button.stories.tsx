@@ -25,12 +25,17 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const ButtonWithText: Story = {
     args: {},
-    render: (args) => (
-        <Button {...args}>
-            Button
-            <ArrowTopRight className="h-[20px] w-[20px]" />
-        </Button>
-    ),
+    render: (args) => <Button {...args} text="Button" />,
+};
+
+export const ButtonWithTextAndIcon: Story = {
+    args: {},
+    render: (args) => <Button {...args} text="Button" icon={<ArrowTopRight />} />,
+};
+
+export const ButtonWithIcon: Story = {
+    args: {},
+    render: (args) => <Button {...args} icon={<ArrowTopRight />} />,
 };

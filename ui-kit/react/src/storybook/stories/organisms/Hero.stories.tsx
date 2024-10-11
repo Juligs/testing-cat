@@ -22,8 +22,8 @@ function HeroExample(args: Story['args']) {
                     <h1 className="text-display-lg">Title</h1>
                     <p className=" text-headline-lg">Subtitle</p>
                     <div className="flex flex-row gap-x-2">
-                        <Button>Button</Button>
-                        <Button variant={ButtonVariant.Secondary}>Button</Button>
+                        <Button text="Button" />
+                        <Button variant={ButtonVariant.Secondary} text="Button" />
                     </div>
                 </div>
             </Hero>
