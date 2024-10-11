@@ -22,6 +22,14 @@ module.exports = {
                         '--tw-prose-links': 'var(--color-darkest)',
                         '--tw-prose-counters': 'var(--color-medium)',
                         '--tw-prose-bullets': 'var(--color-medium)',
+                        p: {
+                            marginBottom: theme('spacing.2'),
+                            marginTop: theme('spacing.2'),
+                        },
+                        ul: {
+                            marginBottom: theme('spacing.2'),
+                            marginTop: theme('spacing.2'),
+                        },
                     },
                 },
             }),
