@@ -1,8 +1,9 @@
-import { Footer, Navigation } from '@components';
+import { Footer, Navigation, CookieDisclaimer } from '@components';
 import { ROUTES } from '@lib/constants';
-import './globals.css';
 import { getPageMetadata } from '@lib/utils';
 import { Metadata } from 'next';
+import { ContextProviders } from './providers';
+import './globals.css';
 
 export const metadata: Metadata = getPageMetadata({});
 
@@ -16,9 +17,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en" className="labs">
             <body>
-                <Navigation items={navbarItems} />
-                {children}
-                <Footer />
+                <ContextProviders>
+                    <Navigation items={navbarItems} />
+                    {children}
+                    <Footer />
+                    <CookieDisclaimer />
+                </ContextProviders>
             </body>
         </html>
     );
