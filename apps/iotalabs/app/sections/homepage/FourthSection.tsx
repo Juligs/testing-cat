@@ -1,6 +1,7 @@
 import { Actions, Button, ButtonVariant, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const VERTICAL_TITLE_INFO = {
     title: 'A New Era of Tokenization',
@@ -22,11 +23,17 @@ export function FourthSection({ id }: { id: string }) {
                         body={VERTICAL_TITLE_INFO.body}
                     >
                         <Actions>
-                            <Button
-                                variant={ButtonVariant.Primary}
-                                text="Get Started"
-                                icon={<ArrowTopRight />}
-                            />
+                            <Link
+                                href="https://evm.iota.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button
+                                    variant={ButtonVariant.Primary}
+                                    text="Get Started"
+                                    icon={<ArrowTopRight />}
+                                />
+                            </Link>
                         </Actions>
                     </VerticalTitle>
                 </div>

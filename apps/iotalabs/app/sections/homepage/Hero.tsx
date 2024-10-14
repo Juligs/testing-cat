@@ -1,4 +1,9 @@
-import { Hero as HeroComponent, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import {
+    HeroBackgroundVideo,
+    Hero as HeroComponent,
+    VerticalTitle,
+    VerticalTitleTextSize,
+} from 'react-ui-kit';
 
 interface HeroProps {
     id: string;
@@ -12,7 +17,10 @@ export function Hero({ id }: HeroProps) {
     return (
         <section className="w-full h-full hero-height bg-labs-neutral-10" id={id}>
             <HeroComponent>
-                {/* <HeroBackgroundVideo source="https://files.iota.org/media/binance_clubhouse_anaglyph.mp4" /> */}
+                <HeroBackgroundVideo
+                    source="https://files.iota.org/media/iotalabs/iotalabs_hero.mp4"
+                    poster="/iotalabs-hero-poster.jpg"
+                />
                 <div className="sm:max-w-3xl xl:max-w-5xl">
                     <VerticalTitle
                         inverted

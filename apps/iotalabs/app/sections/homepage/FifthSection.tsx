@@ -4,15 +4,15 @@ import Link from 'next/link';
 const EXTERNAL_LINKS = [
     {
         title: 'Developer Docs',
-        href: '',
+        href: 'https://wiki.iota.org/isc/introduction',
     },
     {
         title: 'Learning Resources',
-        href: '',
+        href: 'https://wiki.iota.org/isc/getting-started/quick-start',
     },
     {
         title: 'IOTA EVM',
-        href: 'https://evm.iota.org/',
+        href: 'https://evm.iota.org',
     },
 ];
 

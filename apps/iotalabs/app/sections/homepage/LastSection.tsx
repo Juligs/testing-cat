@@ -1,6 +1,7 @@
 import { TwoColumnsImageTemplate } from '@components';
 import { Actions, Button, ButtonVariant, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
+import Link from 'next/link';
 
 const VERTICAL_TITLE_INFO = {
     title: 'IOTA Labs News',
@@ -19,11 +20,17 @@ export function LastSection({ id }: { id: string }) {
                             body={VERTICAL_TITLE_INFO.body}
                         >
                             <Actions>
-                                <Button
-                                    variant={ButtonVariant.Primary}
-                                    text="Button"
-                                    icon={<ArrowTopRight />}
-                                />
+                                <Link
+                                    href="https://blog.iotalabs.io/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Button
+                                        variant={ButtonVariant.Primary}
+                                        text="Blog posts"
+                                        icon={<ArrowTopRight />}
+                                    />
+                                </Link>
                             </Actions>
                         </VerticalTitle>
                     </div>
