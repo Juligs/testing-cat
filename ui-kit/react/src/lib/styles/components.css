@@ -1,6 +1,7 @@
 @layer components {
     .btn,
-    .anchor-link {
+    .anchor-link,
+    .chip {
         border-radius: var(--action-border-radius);
     }
 
@@ -34,6 +35,19 @@
 
     .anchor-link-highlighted {
         color: var(--color-highlighted);
+    }
+
+    .chip-bg-color {
+        background-color: var(--chip-bg-color);
+    }
+    .chip-bg-color-inverted {
+        background-color: var(--chip-bg-color-inverted);
+    }
+    .chip-bg-color-selected {
+        background-color: var(--chip-bg-color-selected);
+    }
+    .chip-bg-color-selected-inverted {
+        background-color: var(--chip-bg-color-selected-inverted);
     }
 
     .anchor-link-highlighted-inverted {

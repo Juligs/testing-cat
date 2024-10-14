@@ -34,12 +34,23 @@
     --btn-text-color-default: theme('colors.labs-neutral.10');
     --btn-text-color-inverted: theme('colors.labs-primary.100');
 
+    /* CHIP */
+    --chip-bg-color: theme('colors.labs-neutral.92');
+    --chip-bg-color-inverted: theme('colors.labs-neutral.10');
+    --chip-bg-color-selected: theme('colors.labs-primary.20');
+    --chip-bg-color-selected-inverted: theme('colors.labs-primary.40');
+
     /* STATE LAYER */
     --state-layer-hover: theme('colors.transparency-primary.8');
     --state-layer-focus: theme('colors.transparency-primary.12');
     --state-layer-active: theme('colors.transparency-primary.16');
+
     --state-layer-focus-inverted: theme('colors.transparency-white.12');
     --state-layer-hover-inverted: theme('colors.transparency-white.8');
+
+    --state-layer-hover-neutral: theme('colors.transparency-black.8');
+    --state-layer-focus-neutral: theme('colors.transparency-black.12');
+    --state-layer-active-neutral: theme('colors.transparency-black.16');
 
     --font-family: theme('fontFamily.red-hat-display');
     --font-weight: 600;

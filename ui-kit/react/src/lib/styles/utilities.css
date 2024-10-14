@@ -62,5 +62,22 @@
                 }
             }
         }
+        &.neutral {
+            &:hover {
+                &:before {
+                    background-color: var(--state-layer-hover-neutral);
+                }
+            }
+            &:focus-visible {
+                &:before {
+                    background-color: var(--state-layer-focus-neutral);
+                }
+            }
+            &:active {
+                &:before {
+                    background-color: var(--state-layer-active-neutral);
+                }
+            }
+        }
     }
 }

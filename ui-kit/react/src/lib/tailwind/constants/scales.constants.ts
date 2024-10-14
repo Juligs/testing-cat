@@ -7,7 +7,7 @@ const pxToSpacingScale = (spacingPx: number, multiplier: number = SPACING_MULTIP
 });
 
 const SPACING_VALUES_IN_PIXELS: number[] = [
-    0, 2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 120, 240, 320,
+    0, 2, 4, 6, 8, 10, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 120, 240, 320,
 ];
 
 export const SPACING: ThemeConfig['spacing'] = SPACING_VALUES_IN_PIXELS.reduce((acc, spacingPx) => {
