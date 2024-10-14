@@ -19,7 +19,7 @@ export function Hero({ id }: HeroProps) {
             <HeroComponent>
                 <HeroBackgroundVideo
                     source="https://files.iota.org/media/iotalabs/iotalabs_hero.mp4"
-                    poster="/iotalabs-hero-poster.jpg"
+                    poster="https://files.iota.org/media/iotalabs/iotalabs_hero_poster.jpg"
                 />
                 <div className="sm:max-w-3xl xl:max-w-5xl">
                     <VerticalTitle
