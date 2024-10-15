@@ -24,7 +24,7 @@ export function Footer() {
                                 <Link
                                     key={index}
                                     href={path}
-                                    className="text-labs-neutral-80 text-label-md"
+                                    className="text-labs-neutral-80 text-label-md max-w-max"
                                 >
                                     {title}
                                 </Link>
@@ -38,7 +38,7 @@ export function Footer() {
                                 <Link
                                     key={index}
                                     href={path}
-                                    className="text-labs-neutral-80 text-label-sm"
+                                    className="text-labs-neutral-80 text-label-sm max-w-max"
                                 >
                                     {title}
                                 </Link>
@@ -58,7 +58,7 @@ export function Footer() {
                         </div>
                         <a
                             href={`mailto:${CONTACT_EMAIL}`}
-                            className="text-labs-neutral-80 text-label-md"
+                            className="text-labs-neutral-80 text-label-md max-w-max"
                         >
                             {CONTACT_EMAIL}
                         </a>
