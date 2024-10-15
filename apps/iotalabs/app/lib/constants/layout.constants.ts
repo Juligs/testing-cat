@@ -26,7 +26,6 @@ export const LEGAL_ROUTES: Route[] = [
     {
         title: 'Terms of Use',
         path: '/terms-of-use',
-        isExternal: true,
     },
 ];
 
@@ -43,4 +42,4 @@ export const SOCIAL_LINKS = [
     },
 ];
 
-export const CONTACT_EMAIL = 'contact@iota.labs';
+export const CONTACT_EMAIL = 'contact@iotalabs.io';
