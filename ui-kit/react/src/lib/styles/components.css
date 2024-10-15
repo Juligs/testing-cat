@@ -1,7 +1,8 @@
 @layer components {
     .btn,
     .anchor-link,
-    .chip {
+    .chip,
+    .card-image {
         border-radius: var(--action-border-radius);
     }
 
@@ -49,7 +50,33 @@
     .chip-bg-color-selected-inverted {
         background-color: var(--chip-bg-color-selected-inverted);
     }
-
+    .card-bg-color-elevated {
+        background-color: var(--card-bg-color-elevated);
+    }
+    .card-bg-color-elevated-inverted {
+        background-color: var(--card-bg-color-elevated-inverted);
+    }
+    .card-border-radius {
+        border-radius: var(--card-border-radius);
+    }
+    .card-text-color-medium {
+        color: var(--card-text-color-medium);
+    }
+    .card-text-color-medium-inverted {
+        color: var(--card-text-color-medium-inverted);
+    }
+    .card-text-color-darkest {
+        color: var(--card-text-color-darkest);
+    }
+    .card-text-color-darkest-inverted {
+        color: var(--card-text-color-darkest-inverted);
+    }
+    .card-container:hover .card-text-color-darkest {
+        color: var(--color-highlighted);
+    }
+    .card-container:hover .card-text-color-darkest-inverted {
+        color: var(--color-highlighted-inverted);
+    }
     .anchor-link-highlighted-inverted {
         color: var(--color-highlighted-inverted);
     }

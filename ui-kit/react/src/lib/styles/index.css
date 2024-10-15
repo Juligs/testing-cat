@@ -40,6 +40,15 @@
     --chip-bg-color-selected: theme('colors.labs-primary.20');
     --chip-bg-color-selected-inverted: theme('colors.labs-primary.40');
 
+    /* CARD IMAGE */
+    --card-bg-color-elevated: theme('colors.labs-neutral.96');
+    --card-bg-color-elevated-inverted: theme('colors.labs-neutral.6');
+    --card-border-radius: theme('borderRadius.3xl');
+    --card-text-color-medium: theme('colors.labs-neutral.40');
+    --card-text-color-medium-inverted: theme('colors.labs-neutral.80');
+    --card-text-color-darkest: theme('colors.labs-neutral.10');
+    --card-text-color-darkest-inverted: theme('colors.labs-neutral.100');
+
     /* STATE LAYER */
     --state-layer-hover: theme('colors.transparency-primary.8');
     --state-layer-focus: theme('colors.transparency-primary.12');
