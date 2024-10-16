@@ -36,9 +36,11 @@ export function Navigation({ items }: NavigationProps) {
                         {items.map((item, index) => {
                             const isActive = item.path === currentPath;
                             return (
-                                <NavbarItem key={index} active={isActive} inverted={isInverted}>
-                                    <Link href={item.path}>{item.title}</Link>
-                                </NavbarItem>
+                                <Link key={index} href={item.path}>
+                                    <NavbarItem active={isActive} inverted={isInverted}>
+                                        {item.title}
+                                    </NavbarItem>
+                                </Link>
                             );
                         })}
                     </NavbarItems>
