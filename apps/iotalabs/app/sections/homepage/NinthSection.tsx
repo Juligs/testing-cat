@@ -5,7 +5,7 @@ import Link from 'next/link';
 // import { Banner } from '@components/banner';
 
 const VERTICAL_TITLE_INFO = {
-    title: 'Build with IOTA Labs',
+    title: 'Build with iotalabs',
     body: 'Connecting innovate Web3 minds and builders with a prime support network for building your decentralized innovations.',
 };
 // const BANNER_INFO = {

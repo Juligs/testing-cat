@@ -4,7 +4,7 @@ import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';
 
 const VERTICAL_TITLE_INFO = {
-    title: 'IOTA Labs News',
+    title: 'iotalabs News',
     body: 'Discover the latest developments in our ecosystem, including new partnerships, funding opportunities, and collaborative projects',
 };
 
