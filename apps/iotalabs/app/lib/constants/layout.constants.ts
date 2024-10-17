@@ -34,11 +34,13 @@ export const SOCIAL_LINKS = [
         title: 'Twitter',
         icon: Twitter,
         url: 'https://x.com/iotalabs_',
+        isExternal: true,
     },
     {
         title: 'Discord',
         icon: Discord,
         url: 'https://discord.iota.org',
+        isExternal: true,
     },
 ];
 

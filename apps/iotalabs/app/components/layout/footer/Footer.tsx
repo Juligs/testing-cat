@@ -20,11 +20,13 @@ export function Footer() {
                     <div className="flex flex-col gap-y-4">
                         <span className="text-labs-neutral-100 text-label-lg">Pages</span>
                         <div className="flex flex-col gap-y-2">
-                            {ROUTES.map(({ path, title }, index) => (
+                            {ROUTES.map(({ path, title, isExternal }, index) => (
                                 <Link
                                     key={index}
                                     href={path}
                                     className="text-labs-neutral-80 text-label-md max-w-max"
+                                    target={isExternal ? '_blank' : undefined}
+                                    rel={isExternal ? 'noopener noreferrer' : undefined}
                                 >
                                     {title}
                                 </Link>

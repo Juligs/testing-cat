@@ -36,7 +36,12 @@ export function Navigation({ items }: NavigationProps) {
                         {items.map((item, index) => {
                             const isActive = item.path === currentPath;
                             return (
-                                <Link key={index} href={item.path}>
+                                <Link
+                                    key={index}
+                                    href={item.path}
+                                    target={item.isExternal ? '_blank' : undefined}
+                                    rel={item.isExternal ? 'noopener noreferrer' : undefined}
+                                >
                                     <NavbarItem active={isActive} inverted={isInverted}>
                                         {item.title}
                                     </NavbarItem>
