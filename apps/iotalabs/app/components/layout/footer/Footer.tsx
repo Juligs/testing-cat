@@ -49,7 +49,7 @@ export function Footer() {
                     </div>
                     <div className="flex flex-col gap-y-4">
                         <span className="text-labs-neutral-100">iotalabs</span>
-                        <div className="flex flex-col text-body-sm">
+                        {/* <div className="flex flex-col text-body-sm">
                             <span className="text-labs-neutral-60">Rising Phoenix 2 Ltd</span>
                             <span className="text-labs-neutral-60">
                                 Trinity Chambers, PO Box 4301 Road Town
@@ -57,7 +57,7 @@ export function Footer() {
                             <span className="text-labs-neutral-60">
                                 Tortola, British Virgin Islands
                             </span>
-                        </div>
+                        </div> */}
                         <a
                             href={`mailto:${CONTACT_EMAIL}`}
                             className="text-labs-neutral-80 text-label-md max-w-max"
