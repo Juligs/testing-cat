@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { ChipSize } from './chip.enums';
 import {
     DEFAULT_TEXT_COLOR,
     LIGHT_TEXT_COLOR,
@@ -6,6 +7,7 @@ import {
     INVERTED_BG_COLOR,
     SELECTED_BG_COLOR,
     SELECTED_BG_COLOR_AND_INVERTED,
+    LABEL_SIZE_CLASS,
 } from './chip.contants';
 import { Close } from '@repo/icons';
 
@@ -37,6 +39,10 @@ interface ChipProps {
     /**
      * The close click handler.
      */
+    size?: ChipSize;
+    /**
+     * Chip size
+     */
     onCloseClick?: () => void;
 }
 export function Chip({
@@ -46,8 +52,10 @@ export function Chip({
     onClick,
     disabled,
     label = 'Label',
+    size = ChipSize.Default,
     onCloseClick,
 }: ChipProps) {
+    const labelSize = LABEL_SIZE_CLASS[size];
     const bgColors = !selected
         ? inverted
             ? INVERTED_BG_COLOR
@@ -68,7 +76,8 @@ export function Chip({
         <div
             onClick={onClick}
             className={clsx(
-                'chip chip-bg-color state-layer inline-flex items-center justify-center gap-x-2 py-1.5 text-label-sm select-none',
+                'chip chip-bg-color state-layer inline-flex items-center justify-center gap-x-2 py-1.5 select-none',
+                labelSize,
                 showClosingIcon ? 'px-2' : 'px-3',
                 bgColors,
                 textColors,

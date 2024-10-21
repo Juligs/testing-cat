@@ -1,8 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Chip as ChipComponent } from '@lib/server-components/atoms';
+import { Chip as ChipComponent, ChipSize } from '@lib/server-components/atoms';
+import { getStoryEnumOptions } from 'src/storybook/utils';
 const meta: Meta<typeof ChipComponent> = {
     component: ChipComponent,
     title: 'Atoms/Chip',
+    argTypes: {
+        size: getStoryEnumOptions(ChipSize),
+    },
 };
 
 export default meta;
