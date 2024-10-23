@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+
 import {
     Hero,
     FirstSection,
@@ -6,6 +7,7 @@ import {
     ThirdSection,
     FifthSection,
     FourthSection,
+    EighthSection,
     NinthSection,
     LastSection,
 } from '@sections';
@@ -29,6 +31,7 @@ export default function Home() {
             <ThirdSection id="third-section-inverted" />
             <FourthSection id="fourth-section" />
             <FifthSection id="fifth-section" />
+            <EighthSection id="eighth-section" />
             <NinthSection id="ninth-section" />
             <LastSection id="last-section" />
         </>
