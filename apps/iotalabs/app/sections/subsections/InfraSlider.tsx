@@ -13,83 +13,27 @@ import { Chip, ChipSize } from 'react-ui-kit';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { Scrollbar, A11y } from 'swiper/modules';
-import { ComponentProps } from 'react';
 import { Left, Right } from '@repo/icons';
 import { SWIPER_BREAKPOINTS, SLIDES_IN_DESKTOP, SLIDES_IN_MOBILE } from '@lib/constants';
+import { CardShowcase } from '@lib/airtable';
 import 'swiper/css';
 
-type Card = Omit<ComponentProps<typeof ImageCard>, 'elevated' | 'inverted' | 'size'>;
-type CardShowcase = Card & { category: string };
-const MOCK_CARDS: CardShowcase[] = [
-    {
-        title: 'IOTA Streams',
-        image: 'https://placehold.co/328x160',
-        body: 'lorem ipsum',
-        category: 'wallet',
-    },
-    {
-        title: 'Explorers',
-        image: 'https://placehold.co/328x160',
-        body: 'lorem ipsum',
-        category: 'Explorers',
-    },
-    {
-        title: 'RPCs',
-        image: 'https://placehold.co/328x160',
-        body: 'lorem ipsum',
-        category: 'RPCs',
-    },
-    {
-        title: 'RPCs',
-        image: 'https://placehold.co/328x160',
-        body: 'lorem ipsum',
-        category: 'RPCs',
-    },
-    {
-        title: 'Oracles',
-        image: 'https://placehold.co/328x160',
-        body: 'lorem ipsum',
-        category: 'Oracles',
-    },
-    {
-        title: 'Bridges',
-        image: 'https://placehold.co/328x160',
-        body: 'lorem ipsum',
-        category: 'Bridges',
-    },
-    {
-        title: 'Bridges',
-        image: 'https://placehold.co/328x160',
-        body: 'lorem ipsum',
-        category: 'Bridges',
-    },
-    {
-        title: 'Bridges',
-        image: 'https://placehold.co/328x160',
-        body: 'lorem ipsum',
-        category: 'Bridges',
-    },
-    {
-        title: 'Bridges',
-        image: 'https://placehold.co/328x160',
-        body: 'lorem ipsum',
-        category: 'Bridges',
-    },
-];
-
-export function InfraSlider() {
+interface InfraSliderProps {
+    data: CardShowcase[];
+}
+export function InfraSlider({ data }: InfraSliderProps) {
     const swiperRef = useRef<SwiperCore | null>(null);
     const [selectedCategory, setSelectedCategory] = useState<string>(
-        MOCK_CARDS[0] ? MOCK_CARDS[0].category : '',
+        data[0] ? data[0].category : '',
     );
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [slidesPerView, setSlidesPerView] = useState(1);
 
     const filteredCards = selectedCategory
-        ? MOCK_CARDS.filter((card) => card.category === selectedCategory)
-        : MOCK_CARDS;
+        ? data.filter((card) => card.category === selectedCategory)
+        : data;
 
-    const uniqueCardCategories = Array.from(new Set(MOCK_CARDS.map((card) => card.category)));
+    const uniqueCardCategories = Array.from(new Set(data.map((card) => card.category)));
 
     function handleCategoryClick(category: string) {
         setSelectedCategory(category);

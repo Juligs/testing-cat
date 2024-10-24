@@ -1,9 +1,10 @@
 import { VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
-
 import { TwoColumnsImageTemplate } from '@components';
 import { InfraSlider } from '@sections/subsections';
+import { fetchDataInfraSlider } from '@lib/airtable';
 
-export function EighthSection({ id }: { id: string }) {
+export async function EighthSection({ id }: { id: string }) {
+    const dataInfraSlider = await fetchDataInfraSlider();
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
@@ -18,7 +19,7 @@ export function EighthSection({ id }: { id: string }) {
                     </div>
                 </TwoColumnsImageTemplate>
                 <div className="flex flex-col gap-12">
-                    <InfraSlider />
+                    <InfraSlider data={dataInfraSlider} />
                 </div>
             </div>
         </section>
