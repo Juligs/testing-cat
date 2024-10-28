@@ -17,27 +17,32 @@ import { Left, Right } from '@repo/icons';
 import { SWIPER_BREAKPOINTS, SLIDES_IN_DESKTOP, SLIDES_IN_MOBILE } from '@lib/constants';
 import { CardShowcase } from '@lib/airtable';
 import 'swiper/css';
+import Link from 'next/link';
 
 interface InfraSliderProps {
     data: CardShowcase[];
 }
+
 export function InfraSlider({ data }: InfraSliderProps) {
     const swiperRef = useRef<SwiperCore | null>(null);
-    const [selectedCategory, setSelectedCategory] = useState<string>(
-        data[0] ? data[0].category : '',
-    );
+    const [selectedCategory, setSelectedCategory] = useState<string>(data?.[0]?.category[0] || '');
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [slidesPerView, setSlidesPerView] = useState(1);
 
     const filteredCards = selectedCategory
-        ? data.filter((card) => card.category === selectedCategory)
+        ? data.filter((card) => card.category.includes(selectedCategory))
         : data;
 
-    const uniqueCardCategories = Array.from(new Set(data.map((card) => card.category)));
+    const uniqueCardCategories = Array.from(new Set(data.flatMap((card) => card.category)));
 
     function handleCategoryClick(category: string) {
         setSelectedCategory(category);
     }
+    const shouldShowNavigation = !(
+        (swiperRef.current?.currentBreakpoint === BREAKPOINTS[ScreenSize.Sm].toString() &&
+            filteredCards.length <= SLIDES_IN_DESKTOP) ||
+        filteredCards.length <= SLIDES_IN_MOBILE
+    );
     return (
         <>
             <div className="w-full flex flex-wrap gap-2">
@@ -66,16 +71,15 @@ export function InfraSlider({ data }: InfraSliderProps) {
                 {filteredCards.map((card, index) => (
                     <SwiperSlide key={index} className="!h-auto">
                         <div className="h-full">
-                            <ImageCard title={card.title} image={card.image} body={card.body} />
+                            <Link href={card.link} target="_blank" rel="noopener noreferrer">
+                                <ImageCard title={card.title} image={card.image} body={card.body} />
+                            </Link>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
-            {!(
-                (swiperRef.current?.currentBreakpoint === BREAKPOINTS[ScreenSize.Sm].toString() &&
-                    filteredCards.length <= SLIDES_IN_DESKTOP) ||
-                filteredCards.length <= SLIDES_IN_MOBILE
-            ) && (
+
+            {shouldShowNavigation && (
                 <div className="flex w-full gap-6 justify-center xs:justify-end">
                     <Button
                         onClick={() => swiperRef.current?.slidePrev()}
