@@ -1,10 +1,10 @@
 import { VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '@components';
-import { InfraSlider } from '@sections/subsections';
-import { fetchDataInfraSlider } from '@lib/airtable';
+import { FetchInfraSliderData } from '@sections/subsections';
+import { Suspense } from 'react';
+import { InfrastructureCarouselSkeleton } from '@sections/skeletons';
 
-export async function EighthSection({ id }: { id: string }) {
-    const dataInfraSlider = (await fetchDataInfraSlider()) || [];
+export function EighthSection({ id }: { id: string }) {
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
@@ -20,7 +20,9 @@ export async function EighthSection({ id }: { id: string }) {
                 </TwoColumnsImageTemplate>
 
                 <div className="flex flex-col gap-12">
-                    <InfraSlider data={dataInfraSlider} />
+                    <Suspense fallback={<InfrastructureCarouselSkeleton />}>
+                        <FetchInfraSliderData />
+                    </Suspense>
                 </div>
             </div>
         </section>

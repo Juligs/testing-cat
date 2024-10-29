@@ -12,8 +12,6 @@ import {
     LastSection,
 } from '@sections';
 import { getPageMetadata } from '@lib/utils';
-import { Suspense } from 'react';
-
 const METADATA_TITLE = 'Power Up Your Builder Journey';
 const METADATA_DESCRIPTION =
     'iotalabs propels the IOTA ecosystem through grants, growth initiatives, builder support, and strategic partnerships. Join us in shaping the future of IOTA—one breakthrough at a time.';
@@ -32,9 +30,7 @@ export default function Home() {
             <ThirdSection id="third-section-inverted" />
             <FourthSection id="fourth-section" />
             <FifthSection id="fifth-section" />
-            <Suspense fallback={<div className="container">Loading...</div>}>
-                <EighthSection id="eighth-section" />
-            </Suspense>
+            <EighthSection id="eighth-section" />
             <NinthSection id="ninth-section" />
             <LastSection id="last-section" />
         </>
