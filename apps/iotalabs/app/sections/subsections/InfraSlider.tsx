@@ -45,7 +45,7 @@ export function InfraSlider({ data }: InfraSliderProps) {
     );
     return (
         <>
-            <div className="w-full flex flex-wrap gap-2">
+            <div className="w-full flex flex-wrap gap-2 capitalize">
                 {uniqueCardCategories.map((category, index) => (
                     <Chip
                         key={index}

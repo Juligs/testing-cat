@@ -12,6 +12,7 @@ import {
     LastSection,
 } from '@sections';
 import { getPageMetadata } from '@lib/utils';
+import { Suspense } from 'react';
 
 const METADATA_TITLE = 'Power Up Your Builder Journey';
 const METADATA_DESCRIPTION =
@@ -31,7 +32,9 @@ export default function Home() {
             <ThirdSection id="third-section-inverted" />
             <FourthSection id="fourth-section" />
             <FifthSection id="fifth-section" />
-            <EighthSection id="eighth-section" />
+            <Suspense fallback={<div className="container">Loading...</div>}>
+                <EighthSection id="eighth-section" />
+            </Suspense>
             <NinthSection id="ninth-section" />
             <LastSection id="last-section" />
         </>
