@@ -1,1 +1,1 @@
-# IOTA Labs Website
+# iotalabs Website
