@@ -19,11 +19,9 @@ export function EighthSection({ id }: { id: string }) {
                     </div>
                 </TwoColumnsImageTemplate>
 
-                <div className="flex flex-col gap-12">
-                    <Suspense fallback={<InfrastructureCarouselSkeleton />}>
-                        <FetchInfraSliderData />
-                    </Suspense>
-                </div>
+                <Suspense fallback={<InfrastructureCarouselSkeleton />}>
+                    <FetchInfraSliderData />
+                </Suspense>
             </div>
         </section>
     );

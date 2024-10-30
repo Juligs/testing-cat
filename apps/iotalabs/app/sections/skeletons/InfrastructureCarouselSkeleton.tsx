@@ -2,14 +2,14 @@ import { Skeleton } from 'react-ui-kit';
 
 export function InfrastructureCarouselSkeleton() {
     return (
-        <>
+        <div className="flex flex-col gap-12">
             <div className="w-full ">
                 <ChipSkeleton />
             </div>
             <div className="h-full">
                 <CardSkeleton />
             </div>
-        </>
+        </div>
     );
 }
 
