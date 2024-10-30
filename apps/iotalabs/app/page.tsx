@@ -21,6 +21,8 @@ export const metadata: Metadata = getPageMetadata({
     description: METADATA_DESCRIPTION,
 });
 
+export const revalidate = 14400;
+
 export default function Home() {
     return (
         <>
