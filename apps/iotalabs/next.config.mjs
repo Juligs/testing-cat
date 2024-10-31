@@ -9,6 +9,12 @@ const nextConfig = {
         mdxRs: true,
         turbo: {
             resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
+            rules: {
+                '*.scss': {
+                    loaders: ['sass-loader'],
+                    as: '*.css',
+                },
+            },
         },
     },
 };
