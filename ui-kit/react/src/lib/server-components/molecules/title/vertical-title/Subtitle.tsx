@@ -2,8 +2,8 @@ import {
     INVERTED_SECONDARY_TEXT_COLOR,
     SECONDARY_TEXT_COLOR,
     SUBTITLE_SIZE,
-} from './verticalTitle.constants';
-import { VerticalTitleTextSize } from './verticalTitle.enums';
+} from '../title.constants';
+import { TitleTextSize } from '../titleSize.enums';
 import clsx from 'clsx';
 
 interface SubtitleProps {
@@ -14,7 +14,7 @@ interface SubtitleProps {
     /*
      * The size of the subtitle
      */
-    size: VerticalTitleTextSize;
+    size: TitleTextSize;
     /*
      * The subtitle content is centered
      */

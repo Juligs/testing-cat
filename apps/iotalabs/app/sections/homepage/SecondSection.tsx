@@ -1,5 +1,5 @@
 import { DecoratedBox, TwoColumnsImageTemplate } from '@components';
-import { VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
 
 const VERTICAL_TITLE_INFO = {
     title: 'The Engine Behind IOTA Adoption',
@@ -17,7 +17,7 @@ export function SecondSection({ id }: { id: string }) {
                             <VerticalTitle
                                 title={VERTICAL_TITLE_INFO.title}
                                 overline={VERTICAL_TITLE_INFO.overline}
-                                size={VerticalTitleTextSize.Small}
+                                size={TitleTextSize.Small}
                                 subtitle={VERTICAL_TITLE_INFO.subtitle}
                                 body={
                                     <div

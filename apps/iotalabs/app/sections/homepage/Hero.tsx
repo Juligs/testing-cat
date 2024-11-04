@@ -2,7 +2,7 @@ import {
     HeroBackgroundVideo,
     Hero as HeroComponent,
     VerticalTitle,
-    VerticalTitleTextSize,
+    TitleTextSize,
 } from 'react-ui-kit';
 
 interface HeroProps {
@@ -22,12 +22,7 @@ export function Hero({ id }: HeroProps) {
                     poster="https://files.iota.org/media/iotalabs/iotalabs_hero_poster.jpg"
                 />
                 <div className="sm:max-w-3xl xl:max-w-5xl">
-                    <VerticalTitle
-                        inverted
-                        isCentered
-                        size={VerticalTitleTextSize.Large}
-                        {...HERO_INFO}
-                    />
+                    <VerticalTitle inverted isCentered size={TitleTextSize.Large} {...HERO_INFO} />
                 </div>
             </HeroComponent>
         </section>

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
 
 interface BannerProps {
     title: string;
@@ -19,7 +19,7 @@ export function Banner({ title, subtitle, body, overline, actions }: BannerProps
                     body={body}
                     overline={overline}
                     isCentered
-                    size={VerticalTitleTextSize.Small}
+                    size={TitleTextSize.Small}
                     inverted
                 >
                     {actions}

@@ -1,4 +1,4 @@
-import { Actions, Button, ButtonVariant, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,7 +18,7 @@ export function FourthSection({ id }: { id: string }) {
                     <VerticalTitle
                         isCentered
                         title={VERTICAL_TITLE_INFO.title}
-                        size={VerticalTitleTextSize.Medium}
+                        size={TitleTextSize.Medium}
                         subtitle={VERTICAL_TITLE_INFO.subtitle}
                         body={VERTICAL_TITLE_INFO.body}
                     >

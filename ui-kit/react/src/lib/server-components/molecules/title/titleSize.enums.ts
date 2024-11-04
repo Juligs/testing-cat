@@ -1,4 +1,4 @@
-export enum VerticalTitleTextSize {
+export enum TitleTextSize {
     Small = 'small',
     Medium = 'medium',
     Large = 'large',

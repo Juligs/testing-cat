@@ -1,5 +1,5 @@
-import { INVERTED_TEXT_COLOR, DEFAULT_TEXT_COLOR, TITLE_SIZE } from './verticalTitle.constants';
-import { VerticalTitleTextSize } from './verticalTitle.enums';
+import { INVERTED_TEXT_COLOR, DEFAULT_TEXT_COLOR, TITLE_SIZE } from './title.constants';
+import { TitleTextSize } from './titleSize.enums';
 import { TitleTag } from './title.enums';
 import { HEADING_TO_SIZE, SIZE_TO_HEADING } from './title.maps';
 import clsx from 'clsx';
@@ -12,7 +12,7 @@ interface TitleProps {
     /*
      * The size of the title
      */
-    size?: VerticalTitleTextSize;
+    size?: TitleTextSize;
     /**
      * The tag of the Title
      */
@@ -22,10 +22,10 @@ interface TitleProps {
 export function Title({
     children,
     inverted,
-    size = VerticalTitleTextSize.Medium,
+    size = TitleTextSize.Medium,
     tag,
 }: React.PropsWithChildren<TitleProps>) {
-    const titleSize = size || (tag ? HEADING_TO_SIZE[tag] : VerticalTitleTextSize.Medium);
+    const titleSize = size || (tag ? HEADING_TO_SIZE[tag] : TitleTextSize.Medium);
     const titleTag = tag || (size ? SIZE_TO_HEADING[size] : TitleTag.H3);
     const TitleElement = titleTag;
 

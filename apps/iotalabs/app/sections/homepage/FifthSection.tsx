@@ -1,4 +1,4 @@
-import { AnchorLink, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import { AnchorLink, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import Link from 'next/link';
 
 const EXTERNAL_LINKS = [
@@ -22,7 +22,7 @@ export function FifthSection({ id }: { id: string }) {
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col xs:flex-row justify-between text-center gap-14 xs:items-baseline">
                 <div className="xs:w-1/2 xl:w-2/5 shrink-0">
                     <VerticalTitle
-                        size={VerticalTitleTextSize.Medium}
+                        size={TitleTextSize.Medium}
                         title="Getting Started With IOTA"
                         subtitle="Streamlining innovation for developers"
                     />
