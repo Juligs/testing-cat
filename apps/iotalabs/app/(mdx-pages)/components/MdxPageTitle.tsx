@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
 
 enum LegalRoutes {
     PrivacyPolicy = 'Privacy Policy',
@@ -18,5 +18,5 @@ const routeTitles: Record<string, string> = {
 export function MdxPageTitle(): React.JSX.Element {
     const currentPath = usePathname();
     const title = routeTitles[currentPath];
-    return <VerticalTitle inverted isCentered size={VerticalTitleTextSize.Large} title={title} />;
+    return <VerticalTitle inverted isCentered size={TitleTextSize.Large} title={title} />;
 }

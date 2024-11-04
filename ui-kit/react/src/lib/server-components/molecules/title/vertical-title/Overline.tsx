@@ -1,4 +1,4 @@
-import { INVERTED_SECONDARY_TEXT_COLOR, SECONDARY_TEXT_COLOR } from './verticalTitle.constants';
+import { INVERTED_SECONDARY_TEXT_COLOR, SECONDARY_TEXT_COLOR } from '../title.constants';
 import clsx from 'clsx';
 
 interface OverlineProps {

@@ -1,6 +1,7 @@
-import { VerticalTitleTextSize } from './verticalTitle.enums';
-import { Overline, Title, Subtitle, Body } from '.';
-import { TitleTag } from './title.enums';
+import { TitleTextSize } from '../titleSize.enums';
+import { Overline, Subtitle, Body } from '.';
+import { TitleTag } from '../title.enums';
+import { Title } from '../Title';
 import clsx from 'clsx';
 
 interface VerticalTitleProps {
@@ -11,7 +12,7 @@ interface VerticalTitleProps {
     /**
      * The size of the title
      */
-    size: VerticalTitleTextSize;
+    size: TitleTextSize;
     /**
      * Title content
      */

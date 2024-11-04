@@ -1,5 +1,5 @@
 import { TwoColumnsImageTemplate } from '@components';
-import { Actions, Button, ButtonVariant, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';
 // import { Banner } from '@components/banner';
@@ -20,7 +20,7 @@ export function NinthSection({ id }: { id: string }) {
                     <div className="sm:pl-[92px] lg:pl-[102px] xl:pl-[122px]">
                         <VerticalTitle
                             title={VERTICAL_TITLE_INFO.title}
-                            size={VerticalTitleTextSize.Small}
+                            size={TitleTextSize.Small}
                             body={VERTICAL_TITLE_INFO.body}
                         >
                             <Actions>

@@ -1,5 +1,5 @@
 import { TwoColumnsImageTemplate } from '@components';
-import { Actions, Button, ButtonVariant, VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';
 
@@ -16,7 +16,7 @@ export function LastSection({ id }: { id: string }) {
                     <div className="sm:pr-[116px] lg:pr-[126px] xl:max-w-xl">
                         <VerticalTitle
                             title={VERTICAL_TITLE_INFO.title}
-                            size={VerticalTitleTextSize.Small}
+                            size={TitleTextSize.Small}
                             body={VERTICAL_TITLE_INFO.body}
                         >
                             <Actions>

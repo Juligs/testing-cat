@@ -3,8 +3,9 @@ import {
     Button,
     ButtonVariant,
     VerticalTitle,
-    VerticalTitleTextSize,
+    TitleTextSize,
 } from '@lib/server-components';
+
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof VerticalTitle> = {
@@ -31,7 +32,7 @@ export const SmallTitle: Story = {
         },
     },
     render: (args) => (
-        <VerticalTitle {...args} size={VerticalTitleTextSize.Small}>
+        <VerticalTitle {...args} size={TitleTextSize.Small}>
             <Actions>
                 <Button variant={ButtonVariant.Primary} text="Primary" />
                 <Button variant={ButtonVariant.Secondary} text="Secondary" />
@@ -48,7 +49,7 @@ export const MediumTitle: Story = {
         },
     },
     render: (args) => (
-        <VerticalTitle {...args} size={VerticalTitleTextSize.Medium}>
+        <VerticalTitle {...args} size={TitleTextSize.Medium}>
             <Actions>
                 <Button variant={ButtonVariant.Primary} text="Primary" />
                 <Button variant={ButtonVariant.Secondary} text="Secondary" />
@@ -65,7 +66,7 @@ export const LargeTitle: Story = {
         },
     },
     render: (args) => (
-        <VerticalTitle {...args} size={VerticalTitleTextSize.Large}>
+        <VerticalTitle {...args} size={TitleTextSize.Large}>
             <Actions>
                 <Button variant={ButtonVariant.Primary} text="Primary" />
                 <Button variant={ButtonVariant.Secondary} text="Secondary" />
