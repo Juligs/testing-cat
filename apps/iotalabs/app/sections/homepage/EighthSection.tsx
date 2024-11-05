@@ -1,4 +1,4 @@
-import { VerticalTitle, VerticalTitleTextSize } from 'react-ui-kit';
+import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '@components';
 import { FetchInfraSliderData } from '@sections/subsections';
 import { Suspense } from 'react';
@@ -14,7 +14,7 @@ export function EighthSection({ id }: { id: string }) {
                             title="IOTA Infrastructure"
                             subtitle="Powering DeFi with trusted providers"
                             body="At IOTA, every tool and service provider plays a vital role in enabling a seamless experience for both builders and users. Our carefully selected third-party infrastructure providers act as the essential elements to enhance your IOTA experience."
-                            size={VerticalTitleTextSize.Small}
+                            size={TitleTextSize.Small}
                         />
                     </div>
                 </TwoColumnsImageTemplate>
