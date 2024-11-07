@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 
 import {
     Hero,
-    FirstSection,
-    SecondSection,
-    ThirdSection,
-    FifthSection,
-    FourthSection,
-    EighthSection,
-    NinthSection,
-    LastSection,
+    Section1,
+    Section2,
+    Section3,
+    Section4,
+    Section5,
+    Section8,
+    Section9,
+    Section11,
 } from '@sections';
 import { getPageMetadata } from '@lib/utils';
 const METADATA_TITLE = 'Power Up Your Builder Journey';
@@ -27,14 +27,14 @@ export default function Home() {
     return (
         <>
             <Hero id="hero-inverted" />
-            <FirstSection id="first-section" />
-            <SecondSection id="second-section" />
-            <ThirdSection id="third-section-inverted" />
-            <FourthSection id="fourth-section" />
-            <FifthSection id="fifth-section" />
-            <EighthSection id="eighth-section" />
-            <NinthSection id="ninth-section" />
-            <LastSection id="last-section" />
+            <Section1 id="section-1" />
+            <Section2 id="section-2" />
+            <Section3 id="section-3-inverted" />
+            <Section4 id="section-4" />
+            <Section5 id="section-5" />
+            <Section8 id="section-8" />
+            <Section9 id="section-9" />
+            <Section11 id="section-11" />
         </>
     );
 }

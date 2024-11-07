@@ -1,7 +1,7 @@
 const TEXT =
     'iotalabs is where the IOTA ecosystem meets strategic collaborations and growth opportunities come to life';
 
-export function FirstSection({ id }: { id: string }) {
+export function Section1({ id }: { id: string }) {
     return (
         <section className="w-full" id={id}>
             <div className="container py-10 xs:py-16 lg:py-20 flex justify-center text-center">

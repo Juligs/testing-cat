@@ -16,7 +16,7 @@ const EXTERNAL_LINKS = [
     },
 ];
 
-export function FifthSection({ id }: { id: string }) {
+export function Section5({ id }: { id: string }) {
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col xs:flex-row justify-between text-center gap-14 xs:items-baseline">

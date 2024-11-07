@@ -10,7 +10,7 @@ const VERTICAL_TITLE_INFO = {
     body: 'A fusion of the IOTA flexible and highly interoperable structure with an advanced EVM-compatible smart contract chain, ushering in a new era for seamlessly tokenizing real-world assets.',
 };
 
-export function FourthSection({ id }: { id: string }) {
+export function Section4({ id }: { id: string }) {
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
             <div className="container py-30 flex flex-col gap-30 justify-center items-center">
@@ -37,7 +37,7 @@ export function FourthSection({ id }: { id: string }) {
                         </Actions>
                     </VerticalTitle>
                 </div>
-                <Image src="/homepage/fourth-section.svg" alt="Image" width={1200} height={515} />
+                <Image src="/homepage/section4.svg" alt="Image" width={1200} height={515} />
             </div>
         </section>
     );
