@@ -1,23 +1,17 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import {
-    ImageCard,
-    Button,
-    ButtonVariant,
-    ButtonSize,
-    BREAKPOINTS,
-    ScreenSize,
-} from 'react-ui-kit';
+import { ImageCard, BREAKPOINTS, ScreenSize } from 'react-ui-kit';
 import { Chip, ChipSize } from 'react-ui-kit';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
-import { Scrollbar, A11y } from 'swiper/modules';
-import { Left, Right } from '@repo/icons';
+import { Scrollbar, A11y, Pagination } from 'swiper/modules';
+import { SliderNavigation } from '@components';
 import { SWIPER_BREAKPOINTS, SLIDES_IN_DESKTOP, SLIDES_IN_MOBILE } from '@lib/constants';
 import { CardShowcase } from '@lib/airtable';
-import 'swiper/css';
 import Link from 'next/link';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 interface InfraSliderProps {
     data: CardShowcase[];
@@ -58,7 +52,11 @@ export function InfraSlider({ data }: InfraSliderProps) {
             </div>
             <Swiper
                 className="w-full h-full [&>div]:items-stretch"
-                modules={[Scrollbar, A11y]}
+                modules={[Scrollbar, A11y, Pagination]}
+                pagination={{
+                    el: '#swiper-pagination-custom',
+                    clickable: true,
+                }}
                 spaceBetween={24}
                 scrollbar={{ draggable: true }}
                 onBeforeInit={(swiper) => {
@@ -80,22 +78,12 @@ export function InfraSlider({ data }: InfraSliderProps) {
             </Swiper>
 
             {shouldShowNavigation && (
-                <div className="flex w-full gap-6 justify-center xs:justify-end">
-                    <Button
-                        onClick={() => swiperRef.current?.slidePrev()}
-                        variant={ButtonVariant.Secondary}
-                        size={ButtonSize.Large}
-                        icon={<Left />}
-                        disabled={activeSlideIndex === 0}
-                    />
-                    <Button
-                        onClick={() => swiperRef.current?.slideNext()}
-                        icon={<Right />}
-                        variant={ButtonVariant.Secondary}
-                        size={ButtonSize.Large}
-                        disabled={activeSlideIndex >= filteredCards.length - slidesPerView}
-                    />
-                </div>
+                <SliderNavigation
+                    onPrev={() => swiperRef.current?.slidePrev()}
+                    onNext={() => swiperRef.current?.slideNext()}
+                    isPrevDisabled={activeSlideIndex === 0}
+                    isNextDisabled={activeSlideIndex >= data.length - slidesPerView}
+                />
             )}
         </>
     );
