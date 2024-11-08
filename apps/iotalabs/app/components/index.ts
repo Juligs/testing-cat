@@ -3,3 +3,4 @@ export * from './decorated-box';
 export * from './two-columns-template';
 export * from './banner';
 export * from './cookie-disclaimer';
+export * from './slider-navigation';
