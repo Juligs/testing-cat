@@ -1,8 +1,8 @@
-@import 'react-ui-kit/style.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'react-ui-kit/dist/style.css';
 
 html,
 body {
@@ -18,4 +18,14 @@ body {
 
 .hero-height {
     height: clamp(800px, 100%, 1000px);
+}
+
+#swiper-pagination-custom {
+    --swiper-pagination-color: theme('colors.labs-primary.20');
+    --swiper-pagination-bullet-inactive-color: theme('colors.transparency-black.24');
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-active-size: 8px;
+    --swiper-pagination-bullet-horizontal-gap: 12px;
+    --swiper-pagination-bottom: 0px;
 }

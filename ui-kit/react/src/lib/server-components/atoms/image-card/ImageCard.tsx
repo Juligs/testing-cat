@@ -10,6 +10,7 @@ import {
     ELEVATED_BG_COLOR,
     ELEVATED_BG_COLOR_INVERTED,
 } from './imageCard.contants';
+import { ReactNode } from 'react';
 
 interface ImageCardprops {
     /**
@@ -35,11 +36,11 @@ interface ImageCardprops {
     /**
      * subtitle text
      */
-    subtitle?: string;
+    subtitle?: ReactNode;
     /**
      * body text
      */
-    body?: string;
+    body?: ReactNode;
     /**
      * image url
      */
@@ -69,7 +70,8 @@ export function ImageCard({
     return (
         <div
             className={clsx(
-                'card-container w-full flex flex-col items-center card-border-radius overflow-hidden cursor-pointer',
+                'card-container w-full flex flex-col items-center card-border-radius cursor-pointer',
+                elevated ? 'hover:shadow-lg' : 'shadow-none',
                 bgColors,
             )}
         >
@@ -80,6 +82,7 @@ export function ImageCard({
                     'w-full h-auto object-cover',
                     imageClass,
                     elevated ? 'rounded-none' : 'card-border-radius',
+                    elevated ? 'hover:shadow-top-lg' : 'shadow-none',
                 )}
             />
             <div
