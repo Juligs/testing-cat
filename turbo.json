@@ -4,6 +4,12 @@
     "globalEnv": ["NEXT_PUBLIC_IOTALABS_COOKIE_ANALYTICS_ID", "IOTALABS_AIRTABLE_KEY"],
     "tasks": {
         "build": {
+            "dependsOn": ["^react-ui-kit#package"],
+            "inputs": ["$TURBO_DEFAULT$", ".env*"],
+            "outputs": [".next/**", "!.next/cache/**"],
+            "env": ["BUILDING_PACKAGE", "BUILD_MODE"]
+        },
+        "build:all": {
             "dependsOn": ["react-ui-kit#package", "^build"],
             "inputs": ["$TURBO_DEFAULT$", ".env*"],
             "outputs": [".next/**", "!.next/cache/**"],
