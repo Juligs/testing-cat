@@ -1,8 +1,6 @@
 import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '@components';
 import { FetchInfraSliderData } from '@sections/subsections';
-import { Suspense } from 'react';
-import { InfrastructureCarouselSkeleton } from '@sections/skeletons';
 
 export function Section8({ id }: { id: string }) {
     return (
@@ -18,10 +16,7 @@ export function Section8({ id }: { id: string }) {
                         />
                     </div>
                 </TwoColumnsImageTemplate>
-
-                <Suspense fallback={<InfrastructureCarouselSkeleton />}>
-                    <FetchInfraSliderData />
-                </Suspense>
+                <FetchInfraSliderData />
             </div>
         </section>
     );
