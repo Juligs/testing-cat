@@ -22,7 +22,8 @@ export const metadata: Metadata = getPageMetadata({
     description: METADATA_DESCRIPTION,
 });
 
-export const revalidate = 600;
+// export const dynamic = 'force-dynamic';
+// export const fetchCache = 'force-fetch-cache';
 
 export default function Home() {
     return (
