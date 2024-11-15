@@ -35,7 +35,7 @@ export async function fetchDataGrantsSlider(): Promise<GrantsCardData[]> {
                     ],
                 })
                 .all()
-        ).filter((record) => record.fields['Grant Name']);
+        ).filter((record) => record.fields['Grant Name'] && record.fields['websiteLink']);
         if (!grantViewPosts) {
             throw new Error('Error fetching from Airtable');
         }

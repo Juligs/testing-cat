@@ -7,7 +7,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { Scrollbar, A11y, Pagination } from 'swiper/modules';
 import { SliderNavigation } from '@components';
-import { SWIPER_BREAKPOINTS, SLIDES_IN_DESKTOP, SLIDES_IN_MOBILE } from '@lib/constants';
+import {
+    SWIPER_BREAKPOINTS,
+    SLIDES_IN_DESKTOP,
+    SLIDES_IN_MOBILE,
+    SPACE_BETWEEN_SLIDES,
+} from '@lib/constants';
 import { CardShowcase } from '@lib/airtable';
 import Link from 'next/link';
 import 'swiper/css';
@@ -16,6 +21,7 @@ import 'swiper/css/pagination';
 interface InfraSliderProps {
     data: CardShowcase[];
 }
+const INFRA_PAGINATION_BULLET_ID = 'infra-pagination-bullets';
 
 export function InfraSlider({ data }: InfraSliderProps) {
     const swiperRef = useRef<SwiperCore | null>(null);
@@ -37,6 +43,7 @@ export function InfraSlider({ data }: InfraSliderProps) {
             filteredCards.length <= SLIDES_IN_DESKTOP) ||
         filteredCards.length <= SLIDES_IN_MOBILE
     );
+
     return (
         <>
             <div className="w-full flex flex-wrap gap-2 capitalize">
@@ -54,10 +61,10 @@ export function InfraSlider({ data }: InfraSliderProps) {
                 className="w-full h-full [&>div]:items-stretch"
                 modules={[Scrollbar, A11y, Pagination]}
                 pagination={{
-                    el: '#swiper-pagination-custom',
+                    el: `#${INFRA_PAGINATION_BULLET_ID}`,
                     clickable: true,
                 }}
-                spaceBetween={24}
+                spaceBetween={SPACE_BETWEEN_SLIDES}
                 scrollbar={{ draggable: true }}
                 onBeforeInit={(swiper) => {
                     swiperRef.current = swiper;
@@ -83,6 +90,7 @@ export function InfraSlider({ data }: InfraSliderProps) {
                     onNext={() => swiperRef.current?.slideNext()}
                     isPrevDisabled={activeSlideIndex === 0}
                     isNextDisabled={activeSlideIndex >= data.length - slidesPerView}
+                    id={INFRA_PAGINATION_BULLET_ID}
                 />
             )}
         </>
