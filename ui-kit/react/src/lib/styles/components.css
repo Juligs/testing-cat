@@ -2,7 +2,8 @@
     .btn,
     .anchor-link,
     .chip,
-    .card-image {
+    .card-image,
+    .badge {
         border-radius: var(--action-border-radius);
     }
 
@@ -79,5 +80,17 @@
     }
     .anchor-link-highlighted-inverted {
         color: var(--color-highlighted-inverted);
+    }
+    .badge-bg-color-neutral {
+        background-color: var(--badge-bg-color-neutral);
+    }
+    .badge-bg-color-inverted {
+        background-color: var(--badge-bg-color-inverted);
+    }
+    .badge-bg-color-light {
+        background-color: var(--badge-bg-color-light);
+    }
+    .badge-bg-color-light-inverted {
+        background-color: var(--badge-bg-color-light-inverted);
     }
 }
