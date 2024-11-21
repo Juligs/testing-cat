@@ -7,7 +7,7 @@ import {
     Section3,
     Section4,
     Section5,
-    Section8,
+    // Section8,
     Section9,
     Section11,
 } from '@sections';
@@ -21,9 +21,6 @@ export const metadata: Metadata = getPageMetadata({
     description: METADATA_DESCRIPTION,
 });
 
-// export const dynamic = 'force-dynamic';
-// export const fetchCache = 'force-fetch-cache';
-
 export default function Home() {
     return (
         <>
@@ -33,7 +30,7 @@ export default function Home() {
             <Section3 id="section-3-inverted" />
             <Section4 id="section-4" />
             <Section5 id="section-5" />
-            <Section8 id="section-8" />
+            {/* <Section8 id="section-8" /> */}
             <Section9 id="section-9" />
             <Section11 id="section-11" />
         </>
