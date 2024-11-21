@@ -68,6 +68,13 @@
     --font-family: theme('fontFamily.red-hat-display');
     --font-weight: 600;
     --letter-spacing: -1px;
+
+    /* BADGE */
+    --badge-bg-color-neutral: theme('colors.labs-neutral.92');
+    --badge-bg-color-inverted: theme('colors.labs-neutral.10');
+    --badge-bg-color-light: theme('colors.labs-primary.20');
+    --badge-bg-color-light-inverted: theme('colors.labs-primary.40');
+    --badge-text-color: theme('colors.labs-neutral.10');
 }
 
 :root.foundation {
