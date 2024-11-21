@@ -13,7 +13,7 @@ export function TwoColumnsImageTemplate({
 }: React.PropsWithChildren<TwoColumnsImageTemplateProps>) {
     const REVERSED_CLASS = reverse
         ? 'flex-col-reverse xs:flex-row-reverse'
-        : 'flex-col xs:flex-row';
+        : 'flex-col-reverse xs:flex-row';
     return (
         <div className={clsx('flex gap-6 w-full items-center justify-between', REVERSED_CLASS)}>
             <div className="w-full xs:w-1/2">{children}</div>

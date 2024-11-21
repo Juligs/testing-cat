@@ -81,6 +81,12 @@
     .anchor-link-highlighted-inverted {
         color: var(--color-highlighted-inverted);
     }
+    .gradient-skeleton-color {
+        @apply from-[--gradient-skeleton-color];
+    }
+    .gradient-skeleton-color-inverted {
+        @apply from-[--gradient-skeleton-color-inverted];
+    }
     .badge-bg-color-neutral {
         background-color: var(--badge-bg-color-neutral);
     }
