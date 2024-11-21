@@ -9,7 +9,7 @@ const AIRTABLE_BASE_ID = 'appQqzg74YoTqK3Ht';
 const INFRA_AIRTABLE_BASE_NAME = 'Accounts';
 const INFRA_AIRTABLE_VIEW_NAME = 'iotalabs infra';
 
-export async function GET(request: Request) {
+export async function GET() {
     const data = await fetchData();
     return NextResponse.json(data);
 }

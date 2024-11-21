@@ -56,6 +56,9 @@ importers:
       next-sitemap:
         specifier: ^4.2.3
         version: 4.2.3(next@14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.4))
+      postcss-import:
+        specifier: ^16.1.0
+        version: 16.1.0(postcss@8.4.47)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -65,12 +68,12 @@ importers:
       react-ui-kit:
         specifier: workspace:*
         version: link:../../ui-kit/react
-      swiper:
-        specifier: ^11.1.14
-        version: 11.1.14
       sass-loader:
         specifier: ^16.0.2
         version: 16.0.2(sass@1.79.4)(webpack@5.95.0)
+      swiper:
+        specifier: ^11.1.14
+        version: 11.1.14
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*

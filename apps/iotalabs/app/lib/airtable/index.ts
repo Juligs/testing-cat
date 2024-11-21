@@ -1,3 +1,3 @@
+export * from './sanitizeGrantsData';
 export * from './sanitizeInfraData';
-export * from './checkIfInvalidImageUrls';
 export * from './revalidate';

@@ -6,6 +6,7 @@ interface SliderNavigationProps {
     onNext: () => void;
     isPrevDisabled: boolean;
     isNextDisabled: boolean;
+    id: string;
 }
 
 export function SliderNavigation({
@@ -13,6 +14,7 @@ export function SliderNavigation({
     onNext,
     isPrevDisabled,
     isNextDisabled,
+    id,
 }: SliderNavigationProps) {
     return (
         <div className="flex gap-8 items-center justify-center w-full px-8 overflow-hidden">
@@ -23,8 +25,8 @@ export function SliderNavigation({
                 disabled={isPrevDisabled}
             />
             <div
-                id="swiper-pagination-custom"
-                className="flex items-center justify-center cursor-pointer max-w-max"
+                id={id}
+                className="swiper-pagination-custom flex items-center justify-center cursor-pointer max-w-max"
             />
             <Button
                 onClick={onNext}

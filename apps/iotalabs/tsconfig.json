@@ -12,7 +12,8 @@
             "@components": ["app/components"],
             "@components/*": ["app/components/*"],
             "@sections": ["app/sections"],
-            "@sections/*": ["app/sections/*"]
+            "@sections/*": ["app/sections/*"],
+            "@shared/*": ["../../shared/*"]
         }
     },
     "include": [

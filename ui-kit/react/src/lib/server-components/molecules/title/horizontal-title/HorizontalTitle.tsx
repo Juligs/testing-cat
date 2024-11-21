@@ -51,9 +51,7 @@ export function HorizontalTitle({
             </div>
             <div className="w-full xs:w-1/2 flex flex-col gap-8">
                 {subtitle && (
-                    <SubtitleHorizontal inverted={inverted} size={size}>
-                        {subtitle}
-                    </SubtitleHorizontal>
+                    <SubtitleHorizontal inverted={inverted}>{subtitle}</SubtitleHorizontal>
                 )}
                 {body && <BodyHorizontal inverted={inverted}>{body}</BodyHorizontal>}
                 {children && children}
