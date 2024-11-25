@@ -1,12 +1,13 @@
 import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
 import {
     IOTALABS_COLOR_PALETTE,
-    transparencyColorPalette,
+    NETWORK_COLOR_PALETTE,
 } from '../../../lib/constants/colors.constants';
+import { transparencyColorPalette } from '../../utils';
 
 <Meta title="Design Tokens/Colors" />
 
-## Primitives
+## LABS
 
 <ColorPalette>
     {Object.entries(IOTALABS_COLOR_PALETTE).map(([color, values]) => {
@@ -14,7 +15,15 @@ import {
     })}
 </ColorPalette>
 
-## Transparency
+## NETWORK
+
+<ColorPalette>
+    {Object.entries(NETWORK_COLOR_PALETTE).map(([color, values]) => {
+        return <ColorItem key={color} title={color} colors={values} />;
+    })}
+</ColorPalette>
+
+## TRANSPARENCY
 
 <ColorPalette>
     {Object.entries(transparencyColorPalette).map(([color, values]) => {

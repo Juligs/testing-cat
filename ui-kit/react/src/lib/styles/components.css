@@ -51,6 +51,12 @@
     .chip-bg-color-selected-inverted {
         background-color: var(--chip-bg-color-selected-inverted);
     }
+    .chip-text-color-default {
+        color: var(--chip-text-color-default);
+    }
+    .chip-text-color-inverted {
+        color: var(--chip-text-color-inverted);
+    }
     .card-bg-color-elevated {
         background-color: var(--card-bg-color-elevated);
     }

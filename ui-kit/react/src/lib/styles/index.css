@@ -9,10 +9,6 @@
 @import 'tailwindcss/utilities';
 @import './utilities.css';
 
-:root.network {
-    --action-border-radius: theme('borderRadius.lg');
-}
-
 :root.labs {
     /* COLORS */
     --color-darkest: theme('colors.labs-neutral.10');
@@ -39,6 +35,8 @@
     --chip-bg-color-inverted: theme('colors.labs-neutral.10');
     --chip-bg-color-selected: theme('colors.labs-primary.20');
     --chip-bg-color-selected-inverted: theme('colors.labs-primary.40');
+    --chip-text-color-default: theme('colors.labs-neutral.10');
+    --chip-text-color-inverted: theme('colors.labs-primary.100');
 
     /* CARD IMAGE */
     --card-bg-color-elevated: theme('colors.labs-neutral.96');
@@ -50,13 +48,13 @@
     --card-text-color-darkest-inverted: theme('colors.labs-neutral.100');
 
     /*SKELETON */
-    --gradient-skeleton-color: theme('colors.transparency-primary.8');
-    --gradient-skeleton-color-inverted: theme('colors.transparency-primary.12');
+    --gradient-skeleton-color: theme('colors.transparency-primary-labs.8');
+    --gradient-skeleton-color-inverted: theme('colors.transparency-primary-labs.12');
 
     /* STATE LAYER */
-    --state-layer-hover: theme('colors.transparency-primary.8');
-    --state-layer-focus: theme('colors.transparency-primary.12');
-    --state-layer-active: theme('colors.transparency-primary.16');
+    --state-layer-hover: theme('colors.transparency-primary-labs.8');
+    --state-layer-focus: theme('colors.transparency-primary-labs.12');
+    --state-layer-active: theme('colors.transparency-primary-labs.16');
 
     --state-layer-focus-inverted: theme('colors.transparency-white.12');
     --state-layer-hover-inverted: theme('colors.transparency-white.8');
@@ -74,17 +72,74 @@
     --badge-bg-color-inverted: theme('colors.labs-neutral.10');
     --badge-bg-color-light: theme('colors.labs-primary.20');
     --badge-bg-color-light-inverted: theme('colors.labs-primary.40');
-    --badge-text-color: theme('colors.labs-neutral.10');
-}
-
-:root.foundation {
-    --action-border-radius: theme('borderRadius.lg');
-    --font-family: theme('fontFamily.alliance-no2');
-    --font-weight: 500;
-    --letter-spacing: 0;
 }
 
 :root.network {
+    --font-family: theme('fontFamily.alliance-no2');
+    --font-weight: 500;
+    --letter-spacing: 0;
+    --action-border-radius: theme('borderRadius.lg');
+
+    /* COLORS */
+    --color-darkest: theme('colors.network-neutral.10');
+    --color-darkest-inverted: theme('colors.network-neutral.100');
+    --color-dark: theme('colors.network-neutral.30');
+    --color-dark-inverted: theme('colors.network-neutral.80');
+    --color-medium: theme('colors.network-neutral.40');
+    --color-medium-inverted: theme('colors.network-neutral.80');
+    --color-light: theme('colors.network-neutral.50');
+    --color-light-inverted: theme('colors.network-neutral.60');
+    --color-highlighted: theme('colors.network-primary.20');
+    --color-highlighted-inverted: theme('colors.network-primary.40');
+
+    /* BUTTON */
+    --btn-bg-primary: theme('colors.network-primary.20');
+    --btn-bg-secondary: theme('colors.network-neutral.92');
+    --btn-bg-ghost: transparent;
+    --btn-text-color-default: theme('colors.network-neutral.100');
+    --btn-text-color-inverted: theme('colors.network-primary.10');
+
+    /* CHIP */
+    --chip-bg-color: theme('colors.network-neutral.92');
+    --chip-bg-color-inverted: theme('colors.network-neutral.10');
+    --chip-bg-color-selected: theme('colors.network-primary.20');
+    --chip-bg-color-selected-inverted: theme('colors.network-primary.40');
+    --chip-text-color-default: theme('colors.network-neutral.10');
+    --chip-text-color-inverted: theme('colors.network-primary.100');
+
+    /* CARD IMAGE */
+    --card-bg-color-elevated: theme('colors.network-neutral.96');
+    --card-bg-color-elevated-inverted: theme('colors.network-neutral.6');
+    --card-border-radius: theme('borderRadius.3xl');
+    --card-text-color-medium: theme('colors.network-neutral.40');
+    --card-text-color-medium-inverted: theme('colors.network-neutral.80');
+    --card-text-color-darkest: theme('colors.network-neutral.10');
+    --card-text-color-darkest-inverted: theme('colors.network-neutral.100');
+
+    /* BADGE */
+    --badge-bg-color-neutral: theme('colors.network-neutral.92');
+    --badge-bg-color-inverted: theme('colors.network-neutral.10');
+    --badge-bg-color-light: theme('colors.network-primary.20');
+    --badge-bg-color-light-inverted: theme('colors.network-primary.40');
+
+    /*SKELETON */
+    --gradient-skeleton-color: theme('colors.transparency-primary-network.8');
+    --gradient-skeleton-color-inverted: theme('colors.transparency-primary-network.12');
+
+    /* STATE LAYER */
+    --state-layer-hover: theme('colors.transparency-primary-network.8');
+    --state-layer-focus: theme('colors.transparency-primary-network.12');
+    --state-layer-active: theme('colors.transparency-primary-network.16');
+
+    --state-layer-focus-inverted: theme('colors.transparency-white.12');
+    --state-layer-hover-inverted: theme('colors.transparency-white.8');
+
+    --state-layer-hover-neutral: theme('colors.transparency-black.8');
+    --state-layer-focus-neutral: theme('colors.transparency-black.12');
+    --state-layer-active-neutral: theme('colors.transparency-black.16');
+}
+:root.foundation {
+    --action-border-radius: theme('borderRadius.lg');
     --font-family: theme('fontFamily.alliance-no2');
     --font-weight: 500;
     --letter-spacing: 0;

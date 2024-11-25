@@ -1,3 +1,20 @@
+export const SHARED_COLORS = {
+    error: {
+        0: '#000000',
+        5: '#720909',
+        10: '#a80b0b',
+        20: '#cf1919',
+        30: '#e73131',
+        40: '#ff5050',
+        50: '#ff8383',
+        60: '#ffb1b1',
+        70: '#ffd3d3',
+        80: '#ffe9e9',
+        90: '#fff8f8',
+        100: '#ffffff',
+    },
+} as const;
+
 export const IOTALABS_COLOR_PALETTE = {
     'labs-primary': {
         0: '#000000',
@@ -27,20 +44,7 @@ export const IOTALABS_COLOR_PALETTE = {
         90: '#ebdaff',
         100: '#ffffff',
     },
-    'labs-error': {
-        0: '#000000',
-        5: '#720909',
-        10: '#a80b0b',
-        20: '#cf1919',
-        30: '#e73131',
-        40: '#ff5050',
-        50: '#ff8383',
-        60: '#ffb1b1',
-        70: '#ffd3d3',
-        80: '#ffe9e9',
-        90: '#fff8f8',
-        100: '#ffffff',
-    },
+
     'labs-neutral': {
         0: '#000000',
         4: '#0e0d16',
@@ -60,20 +64,83 @@ export const IOTALABS_COLOR_PALETTE = {
         98: '#fbfafc',
         100: '#ffffff',
     },
+    ...SHARED_COLORS,
+} as const;
+export const NETWORK_COLOR_PALETTE = {
+    'network-primary': {
+        0: '#000000',
+        5: '#061244',
+        10: '#182B8A',
+        20: '#0101FF',
+        30: '#3131FF',
+        40: '#2563F5',
+        50: '#3F80F0',
+        60: '#5B9CFE',
+        70: '#85B5FB',
+        80: '#ADCEFF',
+        90: '#D5E8FF',
+        100: '#FFFFFF',
+    },
+    'network-secondary': {
+        0: '#000000',
+        5: '#071F22',
+        10: '#18393B',
+        20: '#064F55',
+        30: '#185B60',
+        40: '#317479',
+        50: '#498C91',
+        60: '#64A7AC',
+        70: '#7FC2C7',
+        80: '#9ADDE2',
+        90: '#C2F1F4',
+        100: '#FFFFFF',
+    },
+    'network-neutral': {
+        0: '#000000',
+        4: '#0A0F17',
+        6: '#0F141C',
+        10: '#171D26',
+        12: '#1C212B',
+        20: '#29313D',
+        30: '#3C4656',
+        40: '#586272',
+        50: '#717A8A',
+        60: '#8B95A4',
+        70: '#A5AFBD',
+        80: '#C0CBD9',
+        90: '#CBD5E1',
+        92: '#E3EAF6',
+        96: '#EFF4FA',
+        98: '#F8FAFC',
+        100: '#FFFFFF',
+    },
+    ...SHARED_COLORS,
 } as const;
 
-const TRANSPARENCY_COLORS = {
-    'transparency-primary': {
-        4: '#05c500',
-        8: '#05c500',
-        12: '#05c500',
-        16: '#05c500',
-        24: '#05c500',
-        32: '#05c500',
-        48: '#05c500',
-        56: '#05c500',
-        80: '#05c500',
+export const TRANSPARENCY_COLORS = {
+    'transparency-primary-labs': {
+        4: '#05C500',
+        8: '#05C500',
+        12: '#05C500',
+        16: '#05C500',
+        24: '#05C500',
+        32: '#05C500',
+        48: '#05C500',
+        56: '#05C500',
+        80: '#05C500',
         100: '#05C500',
+    },
+    'transparency-primary-network': {
+        4: '#1573FF',
+        8: '#1573FF',
+        12: '#1573FF',
+        16: '#1573FF',
+        24: '#1573FF',
+        32: '#1573FF',
+        48: '#1573FF',
+        56: '#1573FF',
+        80: '#1573FF',
+        100: '#1573FF',
     },
     'transparency-white': {
         4: '#ffffff',
@@ -100,27 +167,3 @@ const TRANSPARENCY_COLORS = {
         100: '#000000',
     },
 } as const;
-
-const addHexOpacity = (hex: string, opacity: number) => {
-    const opacityHex = Math.round(opacity * 255)
-        .toString(16)
-        .padStart(2, '0');
-    return `${hex}${opacityHex}`;
-};
-
-export const transparencyColorPalette: Partial<typeof TRANSPARENCY_COLORS> = Object.keys(
-    TRANSPARENCY_COLORS,
-).reduce((acc, color) => {
-    const colorShades = TRANSPARENCY_COLORS[color as keyof typeof TRANSPARENCY_COLORS];
-    const colorPalette = Object.entries(colorShades).reduce((acc, [shade, hex]) => {
-        const color = addHexOpacity(hex, Number(shade) / 100);
-        return {
-            ...acc,
-            [shade]: color,
-        };
-    }, {});
-    return {
-        ...acc,
-        [color]: colorPalette,
-    };
-}, {});
