@@ -72,6 +72,14 @@
     --badge-bg-color-inverted: theme('colors.labs-neutral.10');
     --badge-bg-color-light: theme('colors.labs-primary.20');
     --badge-bg-color-light-inverted: theme('colors.labs-primary.40');
+    --badge-text-color: theme('colors.labs-neutral.10');
+
+    /*HERO */
+    --hero-gradient-bg-color: linear-gradient(
+        to right,
+        theme('colors.transparency-primary-labs.12'),
+        theme('colors.transparency-primary-labs.32')
+    );
 }
 
 :root.network {
@@ -137,7 +145,15 @@
     --state-layer-hover-neutral: theme('colors.transparency-black.8');
     --state-layer-focus-neutral: theme('colors.transparency-black.12');
     --state-layer-active-neutral: theme('colors.transparency-black.16');
+
+    /*HERO */
+    --hero-gradient-bg-color: linear-gradient(
+        to right,
+        theme('colors.transparency-primary-network.12'),
+        theme('colors.transparency-primary-network.32')
+    );
 }
+
 :root.foundation {
     --action-border-radius: theme('borderRadius.lg');
     --font-family: theme('fontFamily.alliance-no2');

@@ -105,4 +105,7 @@
     .badge-bg-color-light-inverted {
         background-color: var(--badge-bg-color-light-inverted);
     }
+    .hero-gradient-bg-color {
+        background: var(--hero-gradient-bg-color);
+    }
 }
