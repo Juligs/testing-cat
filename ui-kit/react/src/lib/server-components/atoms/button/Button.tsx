@@ -3,9 +3,8 @@ import {
     BUTTON_PADDING_ONLY_ICON_MAP,
     ICON_SIZE_MAP,
     TEXT_SIZE_MAP,
-    DEFAULT_TEXT_COLOR,
-    INVERTED_TEXT_COLOR,
-    INVERTED_TEXT_COLOR_VARIANTS,
+    TEXT_COLOR,
+    TEXT_COLOR_INVERTED,
 } from './button.constants';
 import { ButtonSize, ButtonVariant } from './button.enums';
 import clsx from 'clsx';
@@ -52,10 +51,7 @@ export function Button({
     icon,
     ...buttonProps
 }: ButtonProps) {
-    const textColor =
-        INVERTED_TEXT_COLOR_VARIANTS.includes(variant) && inverted
-            ? INVERTED_TEXT_COLOR
-            : DEFAULT_TEXT_COLOR;
+    const textColor = inverted ? TEXT_COLOR_INVERTED[variant] : TEXT_COLOR[variant];
     const isOnlyIcon = Boolean(!text && icon);
     const isSmallButton = ButtonSize.Small === size;
     return (

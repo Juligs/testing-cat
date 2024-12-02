@@ -29,6 +29,7 @@
     --btn-bg-ghost: transparent;
     --btn-text-color-default: theme('colors.labs-neutral.10');
     --btn-text-color-inverted: theme('colors.labs-primary.100');
+    --btn-text-color-primary: theme('colors.labs-neutral.10');
 
     /* CHIP */
     --chip-bg-color: theme('colors.labs-neutral.92');
@@ -104,8 +105,9 @@
     --btn-bg-primary: theme('colors.network-primary.20');
     --btn-bg-secondary: theme('colors.network-neutral.92');
     --btn-bg-ghost: transparent;
-    --btn-text-color-default: theme('colors.network-neutral.100');
-    --btn-text-color-inverted: theme('colors.network-primary.10');
+    --btn-text-color-default: theme('colors.network-neutral.10');
+    --btn-text-color-inverted: theme('colors.network-primary.100');
+    --btn-text-color-primary: theme('colors.network-neutral.100');
 
     /* CHIP */
     --chip-bg-color: theme('colors.network-neutral.92');

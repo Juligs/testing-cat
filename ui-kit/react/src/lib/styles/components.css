@@ -11,6 +11,10 @@
         background-color: var(--btn-bg-primary);
     }
 
+    .btn-text-color-primary {
+        color: var(--btn-text-color-primary);
+    }
+
     .btn-secondary {
         background-color: var(--btn-bg-secondary);
     }
@@ -42,66 +46,87 @@
     .chip-bg-color {
         background-color: var(--chip-bg-color);
     }
+
     .chip-bg-color-inverted {
         background-color: var(--chip-bg-color-inverted);
     }
+
     .chip-bg-color-selected {
         background-color: var(--chip-bg-color-selected);
     }
+
     .chip-bg-color-selected-inverted {
         background-color: var(--chip-bg-color-selected-inverted);
     }
+
     .chip-text-color-default {
         color: var(--chip-text-color-default);
     }
+
     .chip-text-color-inverted {
         color: var(--chip-text-color-inverted);
     }
+
     .card-bg-color-elevated {
         background-color: var(--card-bg-color-elevated);
     }
+
     .card-bg-color-elevated-inverted {
         background-color: var(--card-bg-color-elevated-inverted);
     }
+
     .card-border-radius {
         border-radius: var(--card-border-radius);
     }
+
     .card-text-color-medium {
         color: var(--card-text-color-medium);
     }
+
     .card-text-color-medium-inverted {
         color: var(--card-text-color-medium-inverted);
     }
+
     .card-text-color-darkest {
         color: var(--card-text-color-darkest);
     }
+
     .card-text-color-darkest-inverted {
         color: var(--card-text-color-darkest-inverted);
     }
+
     .card-container:hover .card-text-color-darkest {
         color: var(--color-highlighted);
     }
+
     .card-container:hover .card-text-color-darkest-inverted {
         color: var(--color-highlighted-inverted);
     }
+
     .anchor-link-highlighted-inverted {
         color: var(--color-highlighted-inverted);
     }
+
     .gradient-skeleton-color {
         @apply from-[--gradient-skeleton-color];
     }
+
     .gradient-skeleton-color-inverted {
         @apply from-[--gradient-skeleton-color-inverted];
     }
+
     .badge-bg-color-neutral {
         background-color: var(--badge-bg-color-neutral);
     }
+
     .badge-bg-color-inverted {
         background-color: var(--badge-bg-color-inverted);
     }
+
     .badge-bg-color-light {
         background-color: var(--badge-bg-color-light);
     }
+
     .badge-bg-color-light-inverted {
         background-color: var(--badge-bg-color-light-inverted);
     }

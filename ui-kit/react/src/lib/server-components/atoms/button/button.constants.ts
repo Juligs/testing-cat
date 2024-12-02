@@ -24,6 +24,13 @@ export const TEXT_SIZE_MAP: Record<ButtonSize, string> = {
     [ButtonSize.Large]: 'text-label-lg',
 };
 
-export const INVERTED_TEXT_COLOR_VARIANTS = [ButtonVariant.Secondary, ButtonVariant.Ghost];
-export const DEFAULT_TEXT_COLOR = 'btn-text-color-default';
-export const INVERTED_TEXT_COLOR = 'btn-text-color-inverted';
+export const TEXT_COLOR: Record<ButtonVariant, string> = {
+    [ButtonVariant.Primary]: 'btn-text-color-primary',
+    [ButtonVariant.Secondary]: 'btn-text-color-default',
+    [ButtonVariant.Ghost]: 'btn-text-color-default',
+};
+export const TEXT_COLOR_INVERTED: Record<ButtonVariant, string> = {
+    [ButtonVariant.Primary]: 'btn-text-color-primary',
+    [ButtonVariant.Secondary]: 'btn-text-color-default',
+    [ButtonVariant.Ghost]: 'btn-text-color-inverted',
+};
