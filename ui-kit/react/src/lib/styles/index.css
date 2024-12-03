@@ -73,7 +73,12 @@
     --badge-bg-color-inverted: theme('colors.labs-neutral.10');
     --badge-bg-color-light: theme('colors.labs-primary.20');
     --badge-bg-color-light-inverted: theme('colors.labs-primary.40');
-    --badge-text-color: theme('colors.labs-neutral.10');
+
+    /*BLOGPOST CARD */
+    --blogpost-card-description-color: theme('colors.labs-neutral.50');
+    --blogpost-card-description-color-inverted: theme('colors.labs-neutral.60');
+    --blogpost-card-text-title-color: theme('colors.labs-neutral.10');
+    --blogpost-card-text-title-color-inverted: theme('colors.labs-neutral.100');
 
     /*HERO */
     --hero-gradient-bg-color: linear-gradient(
@@ -98,8 +103,8 @@
     --color-medium-inverted: theme('colors.network-neutral.80');
     --color-light: theme('colors.network-neutral.50');
     --color-light-inverted: theme('colors.network-neutral.60');
-    --color-highlighted: theme('colors.network-primary.20');
-    --color-highlighted-inverted: theme('colors.network-primary.40');
+    --color-highlighted: theme('colors.network-primary.40');
+    --color-highlighted-inverted: theme('colors.network-primary.60');
 
     /* BUTTON */
     --btn-bg-primary: theme('colors.network-primary.20');
@@ -147,6 +152,12 @@
     --state-layer-hover-neutral: theme('colors.transparency-black.8');
     --state-layer-focus-neutral: theme('colors.transparency-black.12');
     --state-layer-active-neutral: theme('colors.transparency-black.16');
+
+    /*BLOGPOST CARD */
+    --blogpost-card-description-color: theme('colors.network-neutral.50');
+    --blogpost-card-description-color-inverted: theme('colors.network-neutral.60');
+    --blogpost-card-text-title-color: theme('colors.network-neutral.10');
+    --blogpost-card-text-title-color-inverted: theme('colors.network-neutral.100');
 
     /*HERO */
     --hero-gradient-bg-color: linear-gradient(

@@ -19,7 +19,7 @@ export const ImageCardComplete: Story = {
         <div className="max-w-lg">
             <ImageCard
                 {...args}
-                image="https://via.placeholder.com/800x400"
+                image="https://res.cloudinary.com/dntpphebk/image/upload/v1732711830/Media_Element_jtfuq0.png"
                 overline="Overline"
                 title="Title"
                 subtitle="Subtitle"
@@ -35,7 +35,7 @@ export const ImageCardElevated: Story = {
         <div className="max-w-lg">
             <ImageCard
                 {...args}
-                image="https://via.placeholder.com/800x400"
+                image="https://res.cloudinary.com/dntpphebk/image/upload/v1732711830/Media_Element_jtfuq0.png"
                 overline="Overline"
                 title="Title"
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id diam vitae lectus lobortis vehicula eget nec neque. Nam nec ultricies neque, vel mattis diam. Integer commodo elit eu ornare tristique."

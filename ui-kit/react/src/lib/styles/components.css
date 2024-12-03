@@ -3,7 +3,8 @@
     .anchor-link,
     .chip,
     .card-image,
-    .badge {
+    .badge,
+    .blog-post-card {
         border-radius: var(--action-border-radius);
     }
 
@@ -130,6 +131,31 @@
     .badge-bg-color-light-inverted {
         background-color: var(--badge-bg-color-light-inverted);
     }
+
+    .blogpost-card-description-color {
+        color: var(--blogpost-card-description-color);
+    }
+
+    .blogpost-card-description-color-inverted {
+        color: var(--blogpost-card-description-color-inverted);
+    }
+
+    .blogpost-card-text-title-color {
+        color: var(--blogpost-card-text-title-color);
+    }
+
+    .blogpost-card-text-title-color-inverted {
+        color: var(--blogpost-card-text-title-color-inverted);
+    }
+
+    .blogpost-card:hover .blogpost-card-text-title-color {
+        color: var(--color-highlighted);
+    }
+
+    .blogpost-card:hover .blogpost-card-text-title-color-inverted {
+        color: var(--color-highlighted-inverted);
+    }
+
     .hero-gradient-bg-color {
         background: var(--hero-gradient-bg-color);
     }
