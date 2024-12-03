@@ -132,6 +132,30 @@
         background-color: var(--badge-bg-color-light-inverted);
     }
 
+    .display-bg-color-neutral {
+        background-color: var(--display-bg-color-neutral);
+    }
+
+    .display-bg-color-inverted {
+        background-color: var(--display-bg-color-inverted);
+    }
+
+    .display-bg-color-light {
+        background-color: var(--display-bg-color-light);
+    }
+
+    .display-color-text-default {
+        color: var(--display-color-text-default);
+    }
+
+    .display-color-text-inverted {
+        color: var(--display-color-text-inverted);
+    }
+
+    .display-color-text-light {
+        color: var(--display-color-text-light);
+    }
+
     .text-link:hover.text-network-neutral-40 {
         color: var(--color-text-links);
     }

@@ -76,6 +76,14 @@
     --badge-bg-color-light: theme('colors.labs-primary.20');
     --badge-bg-color-light-inverted: theme('colors.labs-primary.40');
 
+    /* DISPLAY STATS  */
+    --display-bg-color-neutral: theme('colors.labs-neutral.92');
+    --display-bg-color-inverted: theme('colors.labs-neutral.10');
+    --display-bg-color-light: theme('colors.labs-primary.70');
+    --display-color-text-default: theme('colors.labs-neutral.10');
+    --display-color-text-inverted: theme('colors.labs-primary.100');
+    --display-color-text-light: theme('colors.labs-neutral.10');
+
     /*BLOGPOST CARD */
     --blogpost-card-description-color: theme('colors.labs-neutral.50');
     --blogpost-card-description-color-inverted: theme('colors.labs-neutral.60');
@@ -156,6 +164,14 @@
     --state-layer-hover-neutral: theme('colors.transparency-black.8');
     --state-layer-focus-neutral: theme('colors.transparency-black.12');
     --state-layer-active-neutral: theme('colors.transparency-black.16');
+
+    /* DISPLAY STATS  */
+    --display-bg-color-neutral: theme('colors.network-neutral.92');
+    --display-bg-color-inverted: theme('colors.network-neutral.10');
+    --display-bg-color-light: theme('colors.network-primary.20');
+    --display-color-text-default: theme('colors.network-neutral.10');
+    --display-color-text-inverted: theme('colors.network-neutral.100');
+    --display-color-text-light: theme('colors.network-neutral.100');
 
     /*BLOGPOST CARD */
     --blogpost-card-description-color: theme('colors.network-neutral.50');

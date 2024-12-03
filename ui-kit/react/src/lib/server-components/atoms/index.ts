@@ -5,5 +5,6 @@ export * from './chip';
 export * from './image-card';
 export * from './skeleton';
 export * from './badge';
+export * from './display-stats';
 export * from './text-link';
 export * from './blogpost-card';
