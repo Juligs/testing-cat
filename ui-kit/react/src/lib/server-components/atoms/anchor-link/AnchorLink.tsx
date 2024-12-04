@@ -3,10 +3,18 @@ import { AnchorLinkSize } from './anchorLink.enums';
 import {
     INVERTED_TEXT_COLOR,
     DEFAULT_TEXT_COLOR,
+    HOVER_TEXT_COLOR,
+    HOVER_BG_COLOR,
+    DEFAULT_ICON_COLOR,
+    INVERTED_ICON_COLOR,
+    DEFAULT_ICON_EXTERNAL_COLOR,
+    INVERTED_ICON_EXTERNAL_COLOR,
     ANCHOR_LINK_PADDING,
     BACKGROUND_AND_BORDER_COLORS,
     ANCHOR_LINK_HIGHLIGHTED,
     ANCHOR_LINK_HIGHLIGHTED_INVERTED,
+    ANCHOR_LINK_ICON_IS_EXTERNAL,
+    ANCHOR_LINK_ICON_LEADING_ICON,
     TEXT_SIZE,
 } from './anchorLink.constants';
 import clsx from 'clsx';
@@ -17,6 +25,7 @@ interface AnchorLinkProps {
     text: string;
     size?: AnchorLinkSize;
     inverted?: boolean;
+    leadingIcon?: React.ReactNode;
 }
 
 export function AnchorLink({
@@ -24,47 +33,73 @@ export function AnchorLink({
     text,
     size = AnchorLinkSize.Default,
     inverted,
+    leadingIcon,
 }: AnchorLinkProps) {
     const textColor = inverted ? INVERTED_TEXT_COLOR : DEFAULT_TEXT_COLOR;
+    const leadingIconColor = inverted ? INVERTED_ICON_COLOR : DEFAULT_ICON_COLOR;
+    const hoverTextColor = leadingIcon || size === AnchorLinkSize.Small ? HOVER_TEXT_COLOR : '';
+    const hoverBgColor = leadingIcon && size === AnchorLinkSize.Default ? '' : HOVER_BG_COLOR;
+
+    const isExternalIconColor = inverted
+        ? INVERTED_ICON_EXTERNAL_COLOR
+        : DEFAULT_ICON_EXTERNAL_COLOR;
+
     const bgAndBorderColors = inverted
         ? BACKGROUND_AND_BORDER_COLORS[size].inverted
         : BACKGROUND_AND_BORDER_COLORS[size].default;
+
     const highlightedHoveredAndFocusedColor =
         size === AnchorLinkSize.Small
             ? inverted
                 ? ANCHOR_LINK_HIGHLIGHTED_INVERTED
                 : ANCHOR_LINK_HIGHLIGHTED
             : '';
+    const isLeadingIcon =
+        leadingIcon && size !== AnchorLinkSize.Small
+            ? inverted
+                ? ANCHOR_LINK_HIGHLIGHTED_INVERTED
+                : ANCHOR_LINK_HIGHLIGHTED
+            : '';
+
     return (
         <div
             className={clsx(
-                'group anchor-link state-layer hover:cursor-pointer',
+                'group anchor-link hover:cursor-pointer flex flex-row justify-between items-center w-full',
+                hoverBgColor,
+                hoverTextColor,
                 ANCHOR_LINK_PADDING[size],
+                highlightedHoveredAndFocusedColor,
                 bgAndBorderColors,
+                isLeadingIcon,
                 {
                     inverted: inverted && size === AnchorLinkSize.Small,
+                    'py-3': size === AnchorLinkSize.Default,
                 },
             )}
         >
-            <div
-                className={clsx('flex flex-row justify-between items-center w-full', {
-                    'py-3': size === AnchorLinkSize.Default,
+            <div className={clsx('flex gap-3 items-center', TEXT_SIZE[size])}>
+                {leadingIcon && (
+                    <div
+                        className={clsx(
+                            'flex items-center justify-center',
+                            leadingIconColor,
+                            ANCHOR_LINK_ICON_LEADING_ICON[size],
+                        )}
+                    >
+                        {leadingIcon}
+                    </div>
+                )}
+                <p className={clsx(textColor)}>{text}</p>
+            </div>
+
+            <span
+                className={clsx(isExternalIconColor, ANCHOR_LINK_ICON_IS_EXTERNAL[size], {
+                    'group-hover:translate-x-2 group-hover:transition group-hover:duration-300':
+                        size === AnchorLinkSize.Default && !isExternal,
                 })}
             >
-                <span
-                    className={clsx(TEXT_SIZE[size], textColor, highlightedHoveredAndFocusedColor)}
-                >
-                    {text}
-                </span>
-                <span
-                    className={clsx('[&_svg]:h-6 [&_svg]:w-6', textColor, {
-                        'group-hover:translate-x-2 group-hover:transition group-hover:duration-300':
-                            size === AnchorLinkSize.Default && !isExternal,
-                    })}
-                >
-                    {isExternal ? <OutboundLink /> : <LineArrowSmall />}
-                </span>
-            </div>
+                {isExternal ? <OutboundLink /> : <LineArrowSmall />}
+            </span>
         </div>
     );
 }

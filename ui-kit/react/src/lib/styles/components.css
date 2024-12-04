@@ -40,8 +40,40 @@
         color: var(--color-darkest-inverted);
     }
 
+    .anchor-link-external-icon-color {
+        color: var(--color-darkest);
+    }
+
+    .anchor-link-external-icon-color-inverted {
+        color: var(--color-darkest-inverted);
+    }
+
     .anchor-link-highlighted {
         color: var(--color-highlighted);
+    }
+
+    .anchor-link-highlighted-inverted {
+        color: var(--color-highlighted-inverted);
+    }
+
+    .anchor-link-icon-color {
+        color: var(--anchor-link-icon-color);
+    }
+
+    .anchor-link-icon-color-inverted {
+        color: var(--anchor-link-icon-color-inverted);
+    }
+
+    .anchor-link-hover:hover .anchor-link-default {
+        color: var(--color-highlighted);
+    }
+
+    .anchor-link-hover:hover .anchor-link-inverted {
+        color: var(--color-highlighted-inverted);
+    }
+
+    .anchor-link-bg-icon-color-inverted {
+        background-color: var(--anchor-link-bg-icon-color-inverted);
     }
 
     .chip-bg-color {
@@ -101,10 +133,6 @@
     }
 
     .card-container:hover .card-text-color-darkest-inverted {
-        color: var(--color-highlighted-inverted);
-    }
-
-    .anchor-link-highlighted-inverted {
         color: var(--color-highlighted-inverted);
     }
 
