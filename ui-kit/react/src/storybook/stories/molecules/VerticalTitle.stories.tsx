@@ -2,6 +2,7 @@ import {
     Actions,
     Button,
     ButtonVariant,
+    TextLink,
     VerticalTitle,
     TitleTextSize,
 } from '@lib/server-components';
@@ -22,6 +23,22 @@ const DEFAULT_ARGS = {
     subtitle: 'Subtitle text',
     overline: 'Overline',
     body: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id diam vitae lectus lobortis vehicula eget nec neque. Nam nec ultricies neque, vel mattis diam. Integer commodo elit eu ornare tristique. Aenean mollis est lectus, eget tempus neque semper vel. Praesent sodales lectus quis rutrum rutrum.',
+};
+
+export const ExtraSmallTitle: Story = {
+    args: DEFAULT_ARGS,
+    argTypes: {
+        isCentered: {
+            control: 'boolean',
+        },
+    },
+    render: (args) => (
+        <VerticalTitle {...args} size={TitleTextSize.ExtraSmall}>
+            <Actions>
+                <TextLink text="Learn More" showIcon />
+            </Actions>
+        </VerticalTitle>
+    ),
 };
 
 export const SmallTitle: Story = {

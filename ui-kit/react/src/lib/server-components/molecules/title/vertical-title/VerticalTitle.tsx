@@ -2,6 +2,7 @@ import { TitleTextSize } from '../titleSize.enums';
 import { Overline, Subtitle, Body } from '.';
 import { TitleTag } from '../title.enums';
 import { Title } from '../Title';
+import { TITLE_VERTICAL_GAP, GAP_CHILDREN } from '../title.constants';
 import clsx from 'clsx';
 
 interface VerticalTitleProps {
@@ -51,9 +52,10 @@ export function VerticalTitle({
     titleTag,
 }: React.PropsWithChildren<VerticalTitleProps>) {
     const alignmentClass = isCentered ? 'items-center text-center' : 'justify-start text-left';
+
     return (
-        <div className={clsx('flex flex-col gap-y-10', alignmentClass)}>
-            <div className="flex flex-col gap-y-6">
+        <div className={clsx('flex flex-col', alignmentClass, GAP_CHILDREN[size])}>
+            <div className={clsx('flex flex-col', TITLE_VERTICAL_GAP[size])}>
                 {overline && <Overline inverted={inverted}>{overline}</Overline>}
                 <Title size={size} inverted={inverted} tag={titleTag}>
                     {title}

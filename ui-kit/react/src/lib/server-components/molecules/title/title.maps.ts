@@ -14,4 +14,5 @@ export const SIZE_TO_HEADING: Record<TitleTextSize, TitleTag> = {
     [TitleTextSize.Large]: TitleTag.H1,
     [TitleTextSize.Medium]: TitleTag.H2,
     [TitleTextSize.Small]: TitleTag.H3,
+    [TitleTextSize.ExtraSmall]: TitleTag.H4,
 };

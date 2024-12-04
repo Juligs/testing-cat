@@ -3,6 +3,7 @@ import { TitleTextSize } from '../titleSize.enums';
 import { BodyHorizontal, SubtitleHorizontal } from '.';
 import { TitleTag } from '../title.enums';
 import { Title } from '../Title';
+import { TITLE_HORIZONTAL_GAP } from '../title.constants';
 interface HorizontalTitleProps {
     /**
      * Title content
@@ -49,7 +50,7 @@ export function HorizontalTitle({
                     {title}
                 </Title>
             </div>
-            <div className="w-full xs:w-1/2 flex flex-col gap-8">
+            <div className={clsx('w-full xs:w-1/2 flex flex-col', TITLE_HORIZONTAL_GAP[size])}>
                 {subtitle && (
                     <SubtitleHorizontal inverted={inverted}>{subtitle}</SubtitleHorizontal>
                 )}
