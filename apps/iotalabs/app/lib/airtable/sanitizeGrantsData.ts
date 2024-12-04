@@ -7,8 +7,9 @@ export type GrantsCardData = Card & {
     link: string;
     websiteTwitter?: string;
     websitePosition?: number;
+    subtitle?: string;
 };
-type Card = Omit<ComponentProps<typeof ImageCard>, 'inverted' | 'size'>;
+type Card = Omit<ComponentProps<typeof ImageCard>, 'inverted' | 'size' | 'subtitle'>;
 
 export async function sanitizeGrantsData(data: Records<FieldSet>): Promise<GrantsCardData[]> {
     const dataGrantSliderCards: GrantsCardData[] = data.map(({ fields }) => {
@@ -19,7 +20,6 @@ export async function sanitizeGrantsData(data: Records<FieldSet>): Promise<Grant
                 : '/homepage/placeholder-image.svg';
         return {
             title: fields['Grant Name'] as string,
-            subtitle: urlX.username,
             websiteTwitter: urlX.url,
             body:
                 typeof fields.websiteDescription === 'string'

@@ -42,13 +42,11 @@
     --chip-text-color-inverted: theme('colors.labs-primary.100');
 
     /* CARD IMAGE */
-    --card-bg-color-elevated: theme('colors.labs-neutral.96');
-    --card-bg-color-elevated-inverted: theme('colors.labs-neutral.6');
+    --card-bg-color-default: theme('colors.labs-neutral.100');
+    --card-bg-color-inverted: theme('colors.labs-neutral.6');
     --card-border-radius: theme('borderRadius.3xl');
     --card-text-color-medium: theme('colors.labs-neutral.40');
     --card-text-color-medium-inverted: theme('colors.labs-neutral.80');
-    --card-text-color-darkest: theme('colors.labs-neutral.10');
-    --card-text-color-darkest-inverted: theme('colors.labs-neutral.100');
 
     /*SKELETON */
     --gradient-skeleton-color: theme('colors.transparency-primary-labs.8');
@@ -140,13 +138,11 @@
     --chip-text-color-inverted: theme('colors.network-primary.100');
 
     /* CARD IMAGE */
-    --card-bg-color-elevated: theme('colors.network-neutral.96');
-    --card-bg-color-elevated-inverted: theme('colors.network-neutral.6');
+    --card-bg-color-default: theme('colors.network-neutral.100');
+    --card-bg-color-inverted: theme('colors.network-neutral.6');
     --card-border-radius: theme('borderRadius.3xl');
     --card-text-color-medium: theme('colors.network-neutral.40');
     --card-text-color-medium-inverted: theme('colors.network-neutral.80');
-    --card-text-color-darkest: theme('colors.network-neutral.10');
-    --card-text-color-darkest-inverted: theme('colors.network-neutral.100');
 
     /* BADGE */
     --badge-bg-color-neutral: theme('colors.network-neutral.92');

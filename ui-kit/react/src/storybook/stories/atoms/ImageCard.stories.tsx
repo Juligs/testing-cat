@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ImageCard } from '@lib/server-components/atoms';
+import { ImageCard, TextLink } from '@lib/server-components/atoms';
 import { getStoryEnumOptions } from 'src/storybook/utils';
 import { ImageCardSize } from '@lib/server-components/atoms/image-card/imageCard.enums';
 
@@ -8,6 +8,12 @@ const meta: Meta<typeof ImageCard> = {
     title: 'Atoms/ImageCard',
     argTypes: {
         size: getStoryEnumOptions(ImageCardSize),
+        children: {
+            control: { type: 'boolean' },
+        },
+        image: {
+            control: { type: 'boolean' },
+        },
     },
 };
 export default meta;
@@ -29,7 +35,7 @@ export const ImageCardComplete: Story = {
     ),
 };
 
-export const ImageCardElevated: Story = {
+export const ImageCardMultiLink: Story = {
     args: {},
     render: (args) => (
         <div className="max-w-lg">
@@ -39,8 +45,10 @@ export const ImageCardElevated: Story = {
                 overline="Overline"
                 title="Title"
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id diam vitae lectus lobortis vehicula eget nec neque. Nam nec ultricies neque, vel mattis diam. Integer commodo elit eu ornare tristique."
-                elevated
-            />
+            >
+                <TextLink text="Learn More" showIcon />
+                <TextLink text="Learn More" showIcon />
+            </ImageCard>
         </div>
     ),
 };

@@ -16,6 +16,7 @@ import {
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Link from 'next/link';
+import { TextLink } from 'react-ui-kit';
 
 interface GrantsSliderProps {
     data: GrantsCardData[];
@@ -27,9 +28,6 @@ export function GrantSlider({ data }: GrantsSliderProps) {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [slidesPerView, setSlidesPerView] = useState(1);
 
-    const handleClick = (url?: string) => {
-        url ? window.open(url, '_blank', 'noopener,noreferrer') : null;
-    };
     const sortedGrantsData = data
         .sort((a, b) => {
             if (a.websitePosition === undefined) return -1;
@@ -48,7 +46,7 @@ export function GrantSlider({ data }: GrantsSliderProps) {
     return (
         <div className="flex flex-col items-center gap-12 w-full">
             <Swiper
-                className="w-full h-full [&>div]:items-stretch !py-8 !-my-8"
+                className="w-full h-full [&>div]:items-stretch !p-6 !-m-6"
                 modules={[Scrollbar, A11y, Pagination]}
                 pagination={{
                     el: `#${GRANTS_PAGINATION_BULLET_ID}`,
@@ -64,25 +62,21 @@ export function GrantSlider({ data }: GrantsSliderProps) {
             >
                 {sortedGrantsData.map((card, index) => (
                     <SwiperSlide key={index} className="!h-auto">
-                        <div className="!h-full">
-                            <Link
-                                href={card.link}
-                                className="block h-full [&>div]:h-full"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <ImageCard
-                                    title={card.title}
-                                    image={card.image}
-                                    body={card.body}
-                                    elevated
-                                    subtitle={
-                                        <span onClick={() => handleClick(card.websiteTwitter)}>
-                                            {card.subtitle}
-                                        </span>
-                                    }
-                                />
-                            </Link>
+                        <div className="!h-full block [&>div]:h-full">
+                            <ImageCard title={card.title} image={card.image} body={card.body}>
+                                {card.websiteTwitter && (
+                                    <Link
+                                        href={card.websiteTwitter}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <TextLink text="X Account" showIcon />
+                                    </Link>
+                                )}
+                                <Link href={card.link} target="_blank" rel="noopener noreferrer">
+                                    <TextLink text="Website" showIcon />
+                                </Link>
+                            </ImageCard>
                         </div>
                     </SwiperSlide>
                 ))}

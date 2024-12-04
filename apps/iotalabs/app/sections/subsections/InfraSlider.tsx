@@ -58,7 +58,7 @@ export function InfraSlider({ data }: InfraSliderProps) {
                 ))}
             </div>
             <Swiper
-                className="w-full h-full [&>div]:items-stretch"
+                className="w-full h-full [&>div]:items-stretch !p-6 !-m-6"
                 modules={[Scrollbar, A11y, Pagination]}
                 pagination={{
                     el: `#${INFRA_PAGINATION_BULLET_ID}`,

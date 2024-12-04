@@ -100,16 +100,12 @@
         color: var(--chip-text-color-inverted);
     }
 
-    .card-bg-color-elevated {
-        background-color: var(--card-bg-color-elevated);
+    .card-bg-color-default {
+        background-color: var(--card-bg-color-default);
     }
 
-    .card-bg-color-elevated-inverted {
-        background-color: var(--card-bg-color-elevated-inverted);
-    }
-
-    .card-border-radius {
-        border-radius: var(--card-border-radius);
+    .card-bg-color-inverted {
+        background-color: var(--card-bg-color-inverted);
     }
 
     .card-text-color-medium {
@@ -119,21 +115,12 @@
     .card-text-color-medium-inverted {
         color: var(--card-text-color-medium-inverted);
     }
-
-    .card-text-color-darkest {
-        color: var(--card-text-color-darkest);
+    .card-container:hover .text-darkest {
+        color: var(--color-text-links);
     }
 
-    .card-text-color-darkest-inverted {
-        color: var(--card-text-color-darkest-inverted);
-    }
-
-    .card-container:hover .card-text-color-darkest {
-        color: var(--color-highlighted);
-    }
-
-    .card-container:hover .card-text-color-darkest-inverted {
-        color: var(--color-highlighted-inverted);
+    .card-container:hover .text-darkest-inverted {
+        color: var(--color-text-links-inverted);
     }
 
     .gradient-skeleton-color {
