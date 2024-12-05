@@ -203,7 +203,27 @@
         color: var(--color-highlighted-inverted);
     }
 
-    .hero-gradient-bg-color {
-        background: var(--hero-gradient-bg-color);
+    .cta-card-title-color {
+        color: var(--cta-card-title-color);
+    }
+
+    .cta-card-title-color-inverted {
+        color: var(--cta-card-title-color-inverted);
+    }
+
+    .cta-card-subtitle-color {
+        color: var(--cta-card-subtitle-color);
+    }
+
+    .cta-card-subtitle-color-inverted {
+        color: var(--cta-card-subtitle-color-inverted);
+    }
+
+    .cta-bg-color-default {
+        background-color: var(--cta-bg-color-default);
+    }
+
+    .bg-color-gradient {
+        background: var(--bg-color-gradient);
     }
 }

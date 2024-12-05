@@ -64,6 +64,12 @@ export const IOTALABS_COLOR_PALETTE = {
         98: '#fbfafc',
         100: '#ffffff',
     },
+
+    'labs-gradient': {
+        light: '#B0FDB5',
+        dark: '#5CF259',
+    },
+
     ...SHARED_COLORS,
 } as const;
 export const NETWORK_COLOR_PALETTE = {
@@ -114,6 +120,12 @@ export const NETWORK_COLOR_PALETTE = {
         98: '#F8FAFC',
         100: '#FFFFFF',
     },
+
+    'network-gradient': {
+        light: '#C6E6FB',
+        dark: '#A3BDFC',
+    },
+
     ...SHARED_COLORS,
 } as const;
 

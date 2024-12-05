@@ -23,6 +23,11 @@
     --color-highlighted-inverted: theme('colors.labs-primary.70');
     --color-text-links: theme('colors.network-primary.40');
     --color-text-links-inverted: theme('colors.network-primary.60');
+    --bg-color-gradient: linear-gradient(
+        to right,
+        theme('colors.labs-gradient.light'),
+        theme('colors.labs-gradient.dark')
+    );
 
     /* BUTTON */
     --action-border-radius: theme('borderRadius.full');
@@ -93,12 +98,12 @@
     --blogpost-card-text-title-color: theme('colors.labs-neutral.10');
     --blogpost-card-text-title-color-inverted: theme('colors.labs-neutral.100');
 
-    /*HERO */
-    --hero-gradient-bg-color: linear-gradient(
-        to right,
-        theme('colors.transparency-primary-labs.12'),
-        theme('colors.transparency-primary-labs.32')
-    );
+    /**CTA CARD */
+    --cta-card-title-color: theme('colors.labs-neutral.10');
+    --cta-card-title-color-inverted: theme('colors.labs-neutral.100');
+    --cta-card-subtitle-color: theme('colors.labs-neutral.30');
+    --cta-card-subtitle-color-inverted: theme('colors.labs-neutral.80');
+    --cta-bg-color-default: theme('colors.labs-neutral.96');
 }
 
 :root.network {
@@ -120,6 +125,11 @@
     --color-highlighted-inverted: theme('colors.network-primary.40');
     --color-text-links: theme('colors.network-primary.40');
     --color-text-links-inverted: theme('colors.network-primary.60');
+    --bg-color-gradient: linear-gradient(
+        to right,
+        theme('colors.network-gradient.light'),
+        theme('colors.network-gradient.dark')
+    );
 
     /* BUTTON */
     --btn-bg-primary: theme('colors.network-primary.20');
@@ -185,12 +195,12 @@
     --blogpost-card-text-title-color: theme('colors.network-neutral.10');
     --blogpost-card-text-title-color-inverted: theme('colors.network-neutral.100');
 
-    /*HERO */
-    --hero-gradient-bg-color: linear-gradient(
-        to right,
-        theme('colors.transparency-primary-network.12'),
-        theme('colors.transparency-primary-network.32')
-    );
+    /**CTA CARD */
+    --cta-card-title-color: theme('colors.labs-neutral.10');
+    --cta-card-title-color-inverted: theme('colors.labs-neutral.100');
+    --cta-card-subtitle-color: theme('colors.labs-neutral.30');
+    --cta-card-subtitle-color-inverted: theme('colors.labs-neutral.80');
+    --cta-bg-color-default: theme('colors.labs-neutral.96');
 }
 
 :root.foundation {
