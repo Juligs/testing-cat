@@ -203,6 +203,22 @@
         color: var(--color-highlighted-inverted);
     }
 
+    .color-icon-content {
+        color: var(--color-icon-content);
+    }
+
+    .color-icon-content-inverted {
+        color: var(--color-icon-content-inverted);
+    }
+
+    .bg-color-card {
+        background-color: var(--bg-color-card);
+    }
+
+    .bg-color-card-inverted {
+        background-color: var(--bg-color-card-inverted);
+    }
+
     .stack-container-bg-color {
         background-color: var(--stack-container-bg-color);
     }

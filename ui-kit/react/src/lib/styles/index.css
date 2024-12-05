@@ -23,6 +23,10 @@
     --color-highlighted-inverted: theme('colors.labs-primary.70');
     --color-text-links: theme('colors.network-primary.40');
     --color-text-links-inverted: theme('colors.network-primary.60');
+    --bg-color-card: theme('colors.labs-neutral.96');
+    --bg-color-card-inverted: theme('colors.labs-neutral.6');
+    --color-icon-content: theme('colors.labs-primary.30');
+    --color-icon-content-inverted: theme('colors.labs-primary.80');
     --bg-color-gradient: linear-gradient(
         to right,
         theme('colors.labs-gradient.light'),
@@ -136,6 +140,10 @@
     --color-highlighted-inverted: theme('colors.network-primary.40');
     --color-text-links: theme('colors.network-primary.40');
     --color-text-links-inverted: theme('colors.network-primary.60');
+    --bg-color-card: theme('colors.labs-neutral.96');
+    --bg-color-card-inverted: theme('colors.labs-neutral.6');
+    --color-icon-content: theme('colors.network-primary.30');
+    --color-icon-content-inverted: theme('colors.network-primary.80');
     --bg-color-gradient: linear-gradient(
         to right,
         theme('colors.network-gradient.light'),
