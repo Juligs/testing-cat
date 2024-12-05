@@ -203,6 +203,18 @@
         color: var(--color-highlighted-inverted);
     }
 
+    .stack-container-bg-color {
+        background-color: var(--stack-container-bg-color);
+    }
+
+    .stack-container-bg-color-inverted {
+        background-color: var(--stack-container-bg-color-inverted);
+    }
+
+    .hero-gradient-bg-color {
+        background: var(--hero-gradient-bg-color);
+    }
+
     .cta-card-title-color {
         color: var(--cta-card-title-color);
     }
