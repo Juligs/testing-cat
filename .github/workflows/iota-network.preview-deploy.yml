@@ -1,15 +1,14 @@
-name: Preview Deploy for the IOTALABS website
+name: Preview Deploy fot the IOTA Network website
 
 on:
     workflow_dispatch:
     pull_request:
         types: [opened, synchronize, reopened, ready_for_review]
         paths:
-            - 'apps/iotalabs/**'
+            - 'apps/iota-network/**'
             - 'ui-kit/react/**'
-            - '.github/workflows/iotalabs.preview-deploy.yml'
+            - '.github/workflows/iota-network.preview-deploy.yml'
             - '.github/workflows/monorepo-app-vercel-deploy.yml'
-
 jobs:
     deploy-preview:
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
@@ -18,5 +17,5 @@ jobs:
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.IOTA_NETWORK_VERCEL_PROJECT_ID }}
             VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}

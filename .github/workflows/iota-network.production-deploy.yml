@@ -1,13 +1,13 @@
-name: Production Deploy for the IOTALABS website
+name: Production Deploy for the IOTA Network website
 
 on:
     push:
         branches:
             - main
         paths:
-            - 'apps/iotalabs/**'
+            - 'apps/iota-network/**'
             - 'ui-kit/react/**'
-            - '.github/workflows/iotalabs.production-deploy.yml'
+            - '.github/workflows/iota-network.production-deploy.yml'
             - '.github/workflows/monorepo-app-vercel-deploy.yml'
 
 jobs:
@@ -18,5 +18,5 @@ jobs:
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.IOTA_NETWORK_VERCEL_PROJECT_ID }}
             VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}

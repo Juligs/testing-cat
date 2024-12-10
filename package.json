@@ -12,6 +12,7 @@
         "typecheck": "turbo run typecheck",
         "ui-kit-react": "turbo --filter \"react-ui-kit\"",
         "iotalabs": "turbo --filter \"iotalabs\"",
+        "iota-network": "turbo --filter \"iota-network\"",
         "prepare": "husky"
     },
     "devDependencies": {
