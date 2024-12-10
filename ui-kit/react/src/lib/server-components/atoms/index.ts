@@ -8,4 +8,5 @@ export * from './badge';
 export * from './display-stats';
 export * from './text-link';
 export * from './blogpost-card';
+export * from './testimonial-card';
 export * from './explore-card';
