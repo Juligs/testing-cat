@@ -6,6 +6,6 @@ export const COLOR_TITLE_INVERTED = 'cta-card-title-color-inverted';
 export const COLOR_SUBTILE = 'cta-card-subtitle-color';
 export const COLOR_SUBTITLE_INVERTED = 'cta-card-subtitle-color-inverted';
 
-export const BG_COLOR_DEFAULT = 'cta-bg-color-default';
+export const BG_COLOR_DEFAULT = 'bg-color-card';
 export const BG_COLOR_INVERTED = 'bg-labs-neutral-0';
 export const BG_COLOR_GRADIENT = 'bg-color-gradient';

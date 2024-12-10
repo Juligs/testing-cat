@@ -102,23 +102,11 @@
     --blogpost-card-text-title-color: theme('colors.labs-neutral.10');
     --blogpost-card-text-title-color-inverted: theme('colors.labs-neutral.100');
 
-    /*STACK CONTAINER */
-    --stack-container-bg-color: theme('colors.labs-neutral.96');
-    --stack-container-bg-color-inverted: theme('colors.labs-neutral.6');
-
-    /*HERO */
-    --hero-gradient-bg-color: linear-gradient(
-        to right,
-        theme('colors.transparency-primary-labs.12'),
-        theme('colors.transparency-primary-labs.32')
-    );
-
     /**CTA CARD */
     --cta-card-title-color: theme('colors.labs-neutral.10');
     --cta-card-title-color-inverted: theme('colors.labs-neutral.100');
     --cta-card-subtitle-color: theme('colors.labs-neutral.30');
     --cta-card-subtitle-color-inverted: theme('colors.labs-neutral.80');
-    --cta-bg-color-default: theme('colors.labs-neutral.96');
 }
 
 :root.network {
@@ -214,23 +202,11 @@
     --blogpost-card-text-title-color: theme('colors.network-neutral.10');
     --blogpost-card-text-title-color-inverted: theme('colors.network-neutral.100');
 
-    /*STACK CONTAINER */
-    --stack-container-bg-color: theme('colors.network-neutral.96');
-    --stack-container-bg-color-inverted: theme('colors.network-neutral.6');
-
-    /*HERO */
-    --hero-gradient-bg-color: linear-gradient(
-        to right,
-        theme('colors.transparency-primary-network.12'),
-        theme('colors.transparency-primary-network.32')
-    );
-
     /**CTA CARD */
     --cta-card-title-color: theme('colors.labs-neutral.10');
     --cta-card-title-color-inverted: theme('colors.labs-neutral.100');
     --cta-card-subtitle-color: theme('colors.labs-neutral.30');
     --cta-card-subtitle-color-inverted: theme('colors.labs-neutral.80');
-    --cta-bg-color-default: theme('colors.labs-neutral.96');
 }
 
 :root.foundation {
