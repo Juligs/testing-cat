@@ -9,6 +9,7 @@ import {
     Section5,
     // Section6,
     // Section8,
+    Section7,
     Section9,
     Section11,
 } from '@sections';
@@ -32,6 +33,7 @@ export default function Home() {
             <Section4 id="section-4" />
             <Section5 id="section-5" />
             {/* <Section6 id="section-6" /> */}
+            <Section7 id="section-7-inverted" />
             {/* <Section8 id="section-8" /> */}
             <Section9 id="section-9" />
             <Section11 id="section-11" />
