@@ -1,5 +1,5 @@
 import { Route } from '@lib/interfaces';
-import { Discord, Twitter } from '@components';
+import { Discord, Twitter, Telegram } from '@components';
 
 export const ROUTES: Route[] = [
     {
@@ -34,6 +34,12 @@ export const SOCIAL_LINKS = [
         title: 'Twitter',
         icon: Twitter,
         url: 'https://x.com/iotalabs_',
+        isExternal: true,
+    },
+    {
+        title: 'Telegram',
+        icon: Telegram,
+        url: 'https://t.me/IOTA_Official_Community',
         isExternal: true,
     },
     {

@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
-import { Logo } from '../logo';
 import { CONTACT_EMAIL, LEGAL_ROUTES, ROUTES, SOCIAL_LINKS } from '@lib/constants';
+import Image from 'next/image';
 import Link from 'next/link';
+import { Button, ButtonVariant } from 'react-ui-kit';
+import { Logo } from '../logo';
 
 export function Footer() {
     const COPYRIGHT_YEAR = new Date().getFullYear();
@@ -78,15 +78,18 @@ export function Footer() {
                         {SOCIAL_LINKS.map(({ url, icon }, index) => {
                             const Icon = icon;
                             return (
-                                <a
+                                <Link
                                     key={index}
                                     href={url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-labs-neutral-80 p-3"
                                 >
-                                    <Icon className="text-labs-neutral-100" />
-                                </a>
+                                    <Button
+                                        variant={ButtonVariant.Ghost}
+                                        inverted
+                                        icon={<Icon className="text-labs-neutral-100" />}
+                                    />
+                                </Link>
                             );
                         })}
                     </div>
