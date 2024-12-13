@@ -8,6 +8,10 @@ export const ROUTES: Route[] = [
         hideFromNavbar: true,
     },
     {
+        title: 'Grants',
+        path: '/grants',
+    },
+    {
         title: 'Blog',
         path: 'https://blog.iotalabs.io/',
         isExternal: true,

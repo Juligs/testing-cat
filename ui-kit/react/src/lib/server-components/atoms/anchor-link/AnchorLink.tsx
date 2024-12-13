@@ -26,6 +26,7 @@ interface AnchorLinkProps {
     size?: AnchorLinkSize;
     inverted?: boolean;
     leadingIcon?: React.ReactNode;
+    onClick?: () => void;
 }
 
 export function AnchorLink({
@@ -34,6 +35,7 @@ export function AnchorLink({
     size = AnchorLinkSize.Default,
     inverted,
     leadingIcon,
+    onClick,
 }: AnchorLinkProps) {
     const textColor = inverted ? INVERTED_TEXT_COLOR : DEFAULT_TEXT_COLOR;
     const leadingIconColor = inverted ? INVERTED_ICON_COLOR : DEFAULT_ICON_COLOR;
@@ -45,8 +47,8 @@ export function AnchorLink({
         : DEFAULT_ICON_EXTERNAL_COLOR;
 
     const bgAndBorderColors = inverted
-        ? BACKGROUND_AND_BORDER_COLORS[size].inverted
-        : BACKGROUND_AND_BORDER_COLORS[size].default;
+        ? BACKGROUND_AND_BORDER_COLORS.inverted
+        : BACKGROUND_AND_BORDER_COLORS.default;
 
     const highlightedHoveredAndFocusedColor =
         size === AnchorLinkSize.Small
@@ -76,6 +78,8 @@ export function AnchorLink({
                     'py-3': size === AnchorLinkSize.Default,
                 },
             )}
+            onClick={onClick}
+            {...(onClick && { tabIndex: 0, role: 'button' })}
         >
             <div className={clsx('flex gap-3 items-center', TEXT_SIZE[size])}>
                 {leadingIcon && (

@@ -24,15 +24,8 @@ export const HOVER_TEXT_COLOR = 'anchor-link-hover';
 export const HOVER_BG_COLOR = 'state-layer';
 
 export const BACKGROUND_AND_BORDER_COLORS = {
-    [AnchorLinkSize.Small]: {
-        inverted: 'bg-labs-neutral-6',
-        default: 'bg-labs-neutral-96',
-    },
-    [AnchorLinkSize.Default]: {
-        inverted:
-            'anchor-link-bg-icon-color-inverted backdrop-blur border border-transparency-white-8',
-        default: 'bg-transparency-white-4 backdrop-blur border border-transparency-black-8',
-    },
+    inverted: 'bg-transparency-white-4 backdrop-blur border border-transparency-white-8',
+    default: 'bg-transparency-white-4 backdrop-blur border border-transparency-black-8',
 } as const;
 
 export const ANCHOR_LINK_HIGHLIGHTED =
