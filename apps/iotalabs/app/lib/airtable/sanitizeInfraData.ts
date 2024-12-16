@@ -3,7 +3,10 @@ import { ImageCard } from 'react-ui-kit';
 import { FieldSet, Records } from 'airtable';
 
 export type CardShowcase = Card & { category: string[]; link: string };
-type Card = Omit<ComponentProps<typeof ImageCard>, 'elevated' | 'inverted' | 'size'>;
+type Card = Omit<
+    ComponentProps<typeof ImageCard>,
+    'elevated' | 'inverted' | 'size' | 'isHoverable'
+>;
 
 export async function sanitizeInfraData(data: Records<FieldSet>): Promise<CardShowcase[]> {
     const dataInfraSliderCards: CardShowcase[] = await Promise.all(

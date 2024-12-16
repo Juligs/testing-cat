@@ -1,6 +1,6 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { GrantsPageHero, GrantsPageSection1 } from '@sections/grants';
+import { GrantsPageHero, GrantsPageSection1, GrantsPageSection3 } from '@sections/grants';
 
 const METADATA_TITLE = 'Grants';
 const METADATA_DESCRIPTION =
@@ -16,6 +16,7 @@ export default function Home() {
         <>
             <GrantsPageHero id="hero-inverted" />
             <GrantsPageSection1 id="section-1" />
+            <GrantsPageSection3 id="section-3" />
         </>
     );
 }

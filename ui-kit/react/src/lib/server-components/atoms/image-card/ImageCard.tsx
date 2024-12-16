@@ -9,9 +9,10 @@ import {
     TEXT_COLOR_MEDIUM_INVERTED,
     BG_COLOR_DEFAULT,
     BG_COLOR_INVERTED,
-    CARD_BORDER_DEFAULT,
-    CARD_BORDER_INVERTED,
-    CARD_BORDER_RADIUS,
+    BORDER_DEFAULT,
+    BORDER_INVERTED,
+    BORDER_RADIUS,
+    HOVER_EFFECT,
 } from './imageCard.contants';
 
 interface ImageCardprops {
@@ -47,6 +48,10 @@ interface ImageCardprops {
      * multiple links
      */
     children?: React.ReactNode;
+    /**
+     * has a link
+     */
+    isHoverable?: boolean;
 }
 export function ImageCard({
     size = ImageCardSize.Large,
@@ -57,29 +62,27 @@ export function ImageCard({
     body,
     image,
     children,
+    isHoverable = true,
 }: ImageCardprops): JSX.Element {
     const imageClass = IMAGE_SIZE_CLASS[size];
     const gapClass = GAP_SIZE_CLASS[size];
     const texMedium = inverted ? TEXT_COLOR_MEDIUM_INVERTED : TEXT_COLOR_MEDIUM;
     const textDarkest = inverted ? TEXT_COLOR_DARKEST_INVERTED : TEXT_COLOR_DARKEST;
-
     const bgColor = inverted ? BG_COLOR_INVERTED : BG_COLOR_DEFAULT;
-    const border = inverted ? CARD_BORDER_INVERTED : CARD_BORDER_DEFAULT;
+    const border = inverted ? BORDER_INVERTED : BORDER_DEFAULT;
+    const linkHoverEffect = isHoverable ? HOVER_EFFECT : '';
 
     return (
         <div
             className={clsx(
-                'card-container w-full flex flex-col items-center cursor-pointer hover:shadow-lg overflow-hidden',
-                CARD_BORDER_RADIUS,
+                'w-full flex flex-col items-center overflow-hidden',
+                BORDER_RADIUS,
                 border,
                 bgColor,
+                linkHoverEffect,
             )}
         >
-            <img
-                src={image}
-                alt=""
-                className={clsx('w-full h-auto object-cover hover:shadow-top-lg', imageClass)}
-            />
+            <img src={image} alt="" className={clsx('w-full h-auto object-cover', imageClass)} />
             <div
                 className={clsx(
                     'flex flex-col justify-end items-start py-8 px-6 self-stretch gap-6',

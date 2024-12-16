@@ -9,7 +9,10 @@ export type GrantsCardData = Card & {
     websitePosition?: number;
     subtitle?: string;
 };
-type Card = Omit<ComponentProps<typeof ImageCard>, 'inverted' | 'size' | 'subtitle'>;
+type Card = Omit<
+    ComponentProps<typeof ImageCard>,
+    'inverted' | 'size' | 'subtitle' | 'isHoverable'
+>;
 
 export async function sanitizeGrantsData(data: Records<FieldSet>): Promise<GrantsCardData[]> {
     const dataGrantSliderCards: GrantsCardData[] = data.map(({ fields }) => {
