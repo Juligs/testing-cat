@@ -12,6 +12,10 @@ export const ROUTES: Route[] = [
         path: '/grants',
     },
     {
+        title: 'Projects',
+        path: '/projects',
+    },
+    {
         title: 'Blog',
         path: 'https://blog.iotalabs.io/',
         isExternal: true,
