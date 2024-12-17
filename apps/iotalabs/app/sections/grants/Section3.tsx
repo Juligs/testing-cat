@@ -18,7 +18,7 @@ export function Section3({ id }: { id: string }) {
                         <VerticalTitle
                             title="Supported Initiatives"
                             body="iotalabs Grants supports three key areas: open-source development, Web3 education, and community events like hackathons and workshops. Discover how you can receive support and bring your project to life."
-                            size={TitleTextSize.Small}
+                            size={TitleTextSize.Medium}
                         >
                             <Actions>
                                 <Button text="Learn more" icon={<ArrowTopRight />} />

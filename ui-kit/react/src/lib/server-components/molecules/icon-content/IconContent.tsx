@@ -53,7 +53,8 @@ export function IconContent({
     return (
         <div
             className={clsx('flex flex-col items-start gap-6 w-full rounded-3xl', bgColors, {
-                'min-h-[455px] justify-between px-6 pt-6 pb-8': filled,
+                'min-h-[455px] justify-between pl-4 pr-6 pt-6 pb-8': filled && children,
+                'pl-4 pr-6 pt-6 pb-8': filled && !children,
             })}
         >
             <div className="flex flex-col gap-4 ">
