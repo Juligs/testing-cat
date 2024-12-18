@@ -57,7 +57,6 @@ export function Section5({ id }: { id: string }) {
                         {APLICCATION_PROCESS_DATA.map((data, index) => (
                             <ImageCard
                                 title={data.title}
-                                subtitle={data.subtitle}
                                 body={data.body}
                                 inverted
                                 isHoverable={false}

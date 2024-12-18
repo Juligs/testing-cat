@@ -36,32 +36,26 @@ export const FUNDING_GUIDELINES_DATA = [
 export const APLICCATION_PROCESS_DATA = [
     {
         title: 'Expertise of Grantee',
-        subtitle: 'Score 3',
         body: 'Are you legit and trustworthy? Do you have the necessary qualifications and reliability to execute the project effectively?',
     },
     {
         title: 'Usefulness',
-        subtitle: 'Score 2',
         body: 'Will our ecosystem level up because of your project? Does the project offer substantial benefits to our builders, users, and partners?',
     },
     {
         title: 'Long-Term Viability',
-        subtitle: 'Score 1',
         body: 'Got plans beyond the grant period? Is there a clear vision for the project to continue beyond the initial funding period?',
     },
     {
         title: 'Funding Guidelines',
-        subtitle: 'Score 3',
         body: 'Does your project tick all our boxes? It is aligned with our funding guidelines and objectives?',
     },
     {
         title: 'Safety',
-        subtitle: 'Score 3',
         body: 'How safe is your project from potential pitfalls? Is it at low-to-no risk of bad results, legal headaches, and PR disasters?',
     },
     {
         title: 'Scale',
-        subtitle: 'Score 2',
         body: "Can your project grow big? What's the likelihood of this project scaling up effectively?",
     },
 ];

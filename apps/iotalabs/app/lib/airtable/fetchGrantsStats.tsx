@@ -2,7 +2,6 @@ import { getGrantsDataFromAirtable } from '@lib/airtable/getGrantsDataFromAirtab
 import { formatToFinancialNotation } from '@shared/utils';
 
 interface GrantsStats {
-    totalGranted?: number;
     totalApplications?: number;
     formattedTotalGranted?: string;
     totalApprovedApplications?: number;
@@ -12,6 +11,7 @@ export async function fetchGrantsStats(): Promise<GrantsStats | undefined> {
     try {
         const rawData = await getGrantsDataFromAirtable({
             fields: ['Sum Milestones (USD)', 'Grant Running'],
+            filtered: false,
         });
 
         const filteredData = rawData
@@ -30,21 +30,17 @@ export async function fetchGrantsStats(): Promise<GrantsStats | undefined> {
 }
 
 export async function sanitizeGrantsStats(
-    data: Array<{ [key: string]: unknown }>,
+    data: Array<{ [key: string]: unknown }> = [],
 ): Promise<GrantsStats> {
-    let totalApplications = 0;
-    let totalApprovedApplications = 0;
+    const approvedApplications = data.filter((fields) => fields['Grant Running'] === true) ?? [];
 
-    const totalGranted = calculateTotalGranted(data);
-    const formattedTotal = formatToFinancialNotation(totalGranted);
-    totalApplications = totalApplicationsCount(data);
-    totalApprovedApplications = totalApprovedApplicationsCount(data);
+    const totalGranted = calculateTotalGranted(approvedApplications);
+    const formattedTotalGranted = formatToFinancialNotation(totalGranted);
 
     return {
-        totalGranted,
-        formattedTotalGranted: formattedTotal,
-        totalApplications,
-        totalApprovedApplications,
+        formattedTotalGranted,
+        totalApplications: data.length,
+        totalApprovedApplications: approvedApplications.length,
     };
 }
 
@@ -62,12 +58,4 @@ function calculateTotalGranted(data: Array<{ [key: string]: unknown }>): number 
     totalGranted = Math.floor(totalGranted * 100) / 100;
 
     return totalGranted;
-}
-
-function totalApplicationsCount(data: Array<{ [key: string]: unknown }>): number {
-    return data.length;
-}
-
-function totalApprovedApplicationsCount(data: Array<{ [key: string]: unknown }>): number {
-    return data.filter((fields) => fields['Grant Running'] === true).length;
 }

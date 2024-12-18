@@ -7,10 +7,12 @@ const INFRA_AIRTABLE_VIEW_NAME = 'iotalabs applications';
 
 interface FetchAirtableDataProps {
     fields: string[];
+    filtered?: boolean;
 }
 
 export const getGrantsDataFromAirtable = async ({
     fields,
+    filtered = true,
 }: FetchAirtableDataProps): Promise<Airtable.Record<Airtable.FieldSet>[]> => {
     try {
         Airtable.configure({
@@ -20,12 +22,12 @@ export const getGrantsDataFromAirtable = async ({
 
         const airtableBase = Airtable.base(AIRTABLE_BASE_ID);
 
-        const records = await airtableBase(INFRA_AIRTABLE_BASE_NAME)
-            .select({
-                view: INFRA_AIRTABLE_VIEW_NAME,
-                fields,
-            })
-            .all();
+        const selectParams = {
+            fields,
+            // for unfiltered data we dont need to provide a view as it will be the default one
+            ...(filtered ? { view: INFRA_AIRTABLE_VIEW_NAME } : {}),
+        };
+        const records = await airtableBase(INFRA_AIRTABLE_BASE_NAME).select(selectParams).all();
 
         return Array.from(records);
     } catch (error) {
