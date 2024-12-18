@@ -44,11 +44,11 @@ export function FetchGrantsSliderData() {
         return (await res.json()) as GrantsCardData[];
     };
 
-    return isLoading ? (
+    return isLoading || !dataGrantsSlider?.length ? (
         <GrantsCarouselSkeleton />
-    ) : dataGrantsSlider?.length ? (
+    ) : (
         <div className="flex flex-col gap-12">
             <GrantSlider data={dataGrantsSlider} />
         </div>
-    ) : null;
+    );
 }

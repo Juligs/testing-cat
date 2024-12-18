@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import {
     GrantsPageHero,
     GrantsPageSection1,
+    GrantsPageSection2,
     GrantsPageSection3,
     GrantsPageSection4,
     GrantsPageSection5,
@@ -22,6 +23,7 @@ export default function Home() {
         <>
             <GrantsPageHero id="hero-inverted" />
             <GrantsPageSection1 id="section-1" />
+            <GrantsPageSection2 id="section-2" />
             <GrantsPageSection3 id="section-3" />
             <GrantsPageSection4 id="section-4" />
             <GrantsPageSection5 id="section-5-inverted" />
