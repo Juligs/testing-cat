@@ -5,6 +5,7 @@ import {
     GrantsPageSection1,
     GrantsPageSection3,
     GrantsPageSection4,
+    GrantsPageSection5,
 } from '@sections/grants';
 
 const METADATA_TITLE = 'Grants';
@@ -23,6 +24,7 @@ export default function Home() {
             <GrantsPageSection1 id="section-1" />
             <GrantsPageSection3 id="section-3" />
             <GrantsPageSection4 id="section-4" />
+            <GrantsPageSection5 id="section-5-inverted" />
         </>
     );
 }

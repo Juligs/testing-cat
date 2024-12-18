@@ -43,7 +43,7 @@ interface ImageCardprops {
     /**
      * image url
      */
-    image: string;
+    image?: string;
     /**
      * multiple links
      */
@@ -82,7 +82,13 @@ export function ImageCard({
                 linkHoverEffect,
             )}
         >
-            <img src={image} alt="" className={clsx('w-full h-auto object-cover', imageClass)} />
+            {image && (
+                <img
+                    src={image}
+                    alt=""
+                    className={clsx('w-full h-auto object-cover', imageClass)}
+                />
+            )}
             <div
                 className={clsx(
                     'flex flex-col justify-end items-start py-8 px-6 self-stretch gap-6',

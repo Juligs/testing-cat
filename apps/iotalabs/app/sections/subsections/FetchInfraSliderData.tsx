@@ -15,8 +15,11 @@ export function FetchInfraSliderData() {
             setIsLoading(true);
             try {
                 const data = await fetchInfraData();
+                const imageUrls = data
+                    .map(({ image }) => image)
+                    .filter((image): image is string => Boolean(image));
                 const result = await checkInvalidImageUrlsAndRevalidate(
-                    data.map(({ image }) => image),
+                    imageUrls,
                     fetchInfraData,
                     revalidateInfraAPI,
                 );
