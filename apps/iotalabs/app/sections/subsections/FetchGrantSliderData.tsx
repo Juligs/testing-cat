@@ -16,8 +16,11 @@ export function FetchGrantsSliderData() {
             setIsLoading(true);
             try {
                 const data = await fetchGrantsData();
+                const imageUrls = data
+                    .map(({ image }) => image)
+                    .filter((image): image is string => Boolean(image));
                 const result = await checkInvalidImageUrlsAndRevalidate(
-                    data.map(({ image }) => image),
+                    imageUrls,
                     fetchGrantsData,
                     revalidateGrantsAPI,
                 );
@@ -41,11 +44,11 @@ export function FetchGrantsSliderData() {
         return (await res.json()) as GrantsCardData[];
     };
 
-    return isLoading ? (
+    return isLoading || !dataGrantsSlider?.length ? (
         <GrantsCarouselSkeleton />
-    ) : dataGrantsSlider?.length ? (
+    ) : (
         <div className="flex flex-col gap-12">
             <GrantSlider data={dataGrantsSlider} />
         </div>
-    ) : null;
+    );
 }
