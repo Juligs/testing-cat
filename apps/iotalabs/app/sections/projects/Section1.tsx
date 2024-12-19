@@ -2,7 +2,7 @@ import { HiglitedHeroTextSection } from '@shared/components';
 
 export function Section1({ id }: { id: string }) {
     const TEXT =
-        'IOTA Grants range from funding innovative IOTA projects and initiatives to research grants and scholarships at the cutting-edge of DLT research. Discover how you can use their programs to turn your ideas into reality.';
+        'With our partners and community, IOTA builds an open infrastructure for a digital economy, enabling projects to bring the advancements of Web3 to the real world.';
 
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
