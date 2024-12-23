@@ -3,4 +3,5 @@ export interface Route {
     path: string;
     isExternal?: boolean;
     hideFromNavbar?: boolean;
+    hideFromFooter?: boolean;
 }
