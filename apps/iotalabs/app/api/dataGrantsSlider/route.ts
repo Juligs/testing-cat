@@ -1,49 +1,39 @@
-import { AIRTABLE_ENDPOINT_URL } from '../../lib/constants/airtable.constants';
-import Airtable from 'airtable';
 import { sanitizeGrantsData, type GrantsCardData } from '../../lib/airtable/sanitizeGrantsData';
+import { getGrantsDataFromAirtable } from '@lib/airtable/getGrantsDataFromAirtable';
 import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
-const AIRTABLE_BASE_ID = 'appQqzg74YoTqK3Ht';
-const INFRA_AIRTABLE_BASE_NAME = 'Applications';
-const INFRA_AIRTABLE_VIEW_NAME = 'iotalabs applications';
-
 export async function GET() {
-    const data = await fetchData();
+    const data = await fetchGrantsData();
     return NextResponse.json(data);
 }
 
-const fetchData: () => Promise<GrantsCardData[]> = async () => {
+const fetchGrantsData = async (): Promise<GrantsCardData[]> => {
     try {
-        Airtable.configure({
-            endpointUrl: AIRTABLE_ENDPOINT_URL,
-            apiKey: process.env.IOTALABS_AIRTABLE_KEY,
+        const rawData = await getGrantsDataFromAirtable({
+            fields: [
+                'Grant Name',
+                'websiteFeaturedPosition',
+                'websiteDescription',
+                'websiteLink',
+                'websiteTwitter',
+                'websiteCardBackground',
+            ],
         });
-        const airtableBase = Airtable.base(AIRTABLE_BASE_ID);
-        const grantViewPosts = (
-            await airtableBase(INFRA_AIRTABLE_BASE_NAME)
-                .select({
-                    view: INFRA_AIRTABLE_VIEW_NAME,
-                    fields: [
-                        'Grant Name',
-                        'websiteFeaturedPosition',
-                        'websiteDescription',
-                        'websiteLink',
-                        'websiteTwitter',
-                        'websiteCardBackground',
-                    ],
-                })
-                .all()
-        ).filter((record) => record.fields['Grant Name'] && record.fields['websiteLink']);
-        if (!grantViewPosts) {
-            throw new Error('No grants posts found');
+
+        const filteredData = rawData.filter(
+            (record) => record.fields['Grant Name'] && record.fields['websiteLink'],
+        );
+
+        if (!filteredData || filteredData.length === 0) {
+            console.warn('No records passed the filter for Grants');
+            return [];
         }
-        if (grantViewPosts !== undefined && Array.isArray(grantViewPosts)) {
-            return sanitizeGrantsData(grantViewPosts);
-        }
+
+        return sanitizeGrantsData(filteredData);
     } catch (error) {
-        console.error('Error fetching grants data from Airtable (fetchData):', error);
+        console.error('Error in fetchGrantsData:', error);
+        return [];
     }
-    return [];
 };

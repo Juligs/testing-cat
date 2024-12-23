@@ -4,7 +4,10 @@ import { FieldSet, Records } from 'airtable';
 import { INFRA_ALLOWED_CATEGORIES } from '../constants/airtable.constants';
 
 export type CardShowcase = Card & { category: string[]; link: string };
-type Card = Omit<ComponentProps<typeof ImageCard>, 'elevated' | 'inverted' | 'size'>;
+type Card = Omit<
+    ComponentProps<typeof ImageCard>,
+    'elevated' | 'inverted' | 'size' | 'isHoverable'
+>;
 
 export async function sanitizeInfraData(data: Records<FieldSet>): Promise<CardShowcase[]> {
     const dataInfraSliderCards: CardShowcase[] = await Promise.all(

@@ -6,6 +6,7 @@ import { Logo } from '../logo';
 
 export function Footer() {
     const COPYRIGHT_YEAR = new Date().getFullYear();
+    const footerRoutes = ROUTES.filter((route) => !route.hideFromFooter);
     return (
         <footer className="bg-darkest text-white relative overflow-hidden">
             <Image
@@ -20,7 +21,7 @@ export function Footer() {
                     <div className="flex flex-col gap-y-4">
                         <span className="text-labs-neutral-100 text-label-lg">Pages</span>
                         <div className="flex flex-col gap-y-2">
-                            {ROUTES.map(({ path, title, isExternal }, index) => (
+                            {footerRoutes.map(({ path, title, isExternal }, index) => (
                                 <Link
                                     key={index}
                                     href={path}

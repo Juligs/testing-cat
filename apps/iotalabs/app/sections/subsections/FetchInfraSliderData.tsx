@@ -15,8 +15,11 @@ export function FetchInfraSliderData() {
             setIsLoading(true);
             try {
                 const fetchedData = await fetchInfraData();
+                const imageUrls = fetchedData
+                    .map(({ image }) => image)
+                    .filter((image): image is string => Boolean(image));
                 const refreshedDataWithoutCache = await checkInvalidImageUrlsAndRevalidate(
-                    fetchedData.map(({ image }) => image),
+                    imageUrls,
                     fetchInfraData,
                     revalidateInfraAPI,
                 );
@@ -45,11 +48,11 @@ export function FetchInfraSliderData() {
         return (await res.json()) as CardShowcase[];
     };
 
-    return isLoading ? (
+    return isLoading || !dataInfraSlider?.length ? (
         <InfrastructureCarouselSkeleton />
-    ) : dataInfraSlider?.length ? (
+    ) : (
         <div className="flex flex-col gap-12">
             <InfraSlider data={dataInfraSlider} />
         </div>
-    ) : null;
+    );
 }
