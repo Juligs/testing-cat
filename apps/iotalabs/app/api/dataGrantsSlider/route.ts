@@ -2,7 +2,7 @@ import { sanitizeGrantsData, type GrantsCardData } from '../../lib/airtable/sani
 import { getGrantsDataFromAirtable } from '@lib/airtable/getGrantsDataFromAirtable';
 import { NextResponse } from 'next/server';
 
-export const revalidate = 14400;
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
     const data = await fetchGrantsData();

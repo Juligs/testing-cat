@@ -13,7 +13,10 @@ body {
 
 .decorated-corner-size {
     width: clamp(112px, 12.7vw, 244px);
+    @apply md:w-auto;
     height: auto;
+    backface-visibility: hidden;
+    --webkit-backface-visibility: hidden;
 }
 
 .hero-height {

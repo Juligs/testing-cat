@@ -10,6 +10,8 @@ export const ROUTES: Route[] = [
     {
         title: 'Grants',
         path: '/grants',
+        hideFromNavbar: true,
+        hideFromFooter: true,
     },
     {
         title: 'Projects',

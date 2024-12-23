@@ -16,7 +16,7 @@ export function DecoratedBox({
             {topCornerFill && (
                 <DecoratedCorner
                     className={clsx(
-                        'absolute top-0 right-0 md:-right-0.5 decorated-corner-size',
+                        'absolute -top-[2px] right-[-2px] xl:-top-[4px] decorated-corner-size',
                         topCornerFill,
                     )}
                 />
@@ -27,7 +27,7 @@ export function DecoratedBox({
             {bottomCornerFill && (
                 <DecoratedCorner
                     className={clsx(
-                        'absolute -bottom-[1px] left-0 rotate-180 decorated-corner-size',
+                        'absolute -bottom-[1px] xl:-bottom-[4px] left-0 rotate-180 decorated-corner-size',
                         bottomCornerFill,
                     )}
                 />
