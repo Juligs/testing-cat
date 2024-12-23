@@ -25,13 +25,13 @@ export function Section9({ id }: { id: string }) {
                         >
                             <Actions>
                                 <Link
-                                    href="https://airtable.com/appQqzg74YoTqK3Ht/pagSAWuqfqh3qIDg1/form"
+                                    href="https://iotadlt.foundation/grants"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     <Button
                                         variant={ButtonVariant.Primary}
-                                        text="Apply now"
+                                        text="Read more"
                                         icon={<ArrowTopRight />}
                                     />
                                 </Link>
@@ -43,11 +43,17 @@ export function Section9({ id }: { id: string }) {
                     title={BANNER_INFO.title}
                     subtitle={BANNER_INFO.subtitle}
                     actions={
-                        <Button
-                            variant={ButtonVariant.Primary}
-                            text="Register Now"
-                            icon={<ArrowTopRight />}
-                        />
+                        <Link
+                            href="https://airtable.com/appQqzg74YoTqK3Ht/pagSAWuqfqh3qIDg1/form"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button
+                                variant={ButtonVariant.Primary}
+                                text="Register Now"
+                                icon={<ArrowTopRight />}
+                            />
+                        </Link>
                     }
                 /> */}
             </div>

@@ -1,18 +1,13 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import { ImageCard, BREAKPOINTS, ScreenSize } from 'react-ui-kit';
+import { useRef, useState, useEffect } from 'react';
+import { ImageCard } from 'react-ui-kit';
 import { Chip, ChipSize } from 'react-ui-kit';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { Scrollbar, A11y, Pagination } from 'swiper/modules';
 import { SliderNavigation } from '@components';
-import {
-    SWIPER_BREAKPOINTS,
-    SLIDES_IN_DESKTOP,
-    SLIDES_IN_MOBILE,
-    SPACE_BETWEEN_SLIDES,
-} from '@lib/constants';
+import { SWIPER_BREAKPOINTS, SPACE_BETWEEN_SLIDES } from '@lib/constants';
 import { CardShowcase } from '@lib/airtable';
 import Link from 'next/link';
 import 'swiper/css';
@@ -34,19 +29,24 @@ export function InfraSlider({ data }: InfraSliderProps) {
         : data;
 
     const uniqueCardCategories = Array.from(new Set(data.flatMap((card) => card.category)));
+    const currentBreakpoint = swiperRef.current?.currentBreakpoint || '';
+    const swiperKey = `${filteredCards.map((card) => card.title).join('-')}-${currentBreakpoint}`;
 
-    function handleCategoryClick(category: string) {
+    const handleCategoryClick = (category: string) => {
         setSelectedCategory(category);
-    }
-    const shouldShowNavigation = !(
-        (swiperRef.current?.currentBreakpoint === BREAKPOINTS[ScreenSize.Sm].toString() &&
-            filteredCards.length <= SLIDES_IN_DESKTOP) ||
-        filteredCards.length <= SLIDES_IN_MOBILE
-    );
+        setActiveSlideIndex(0);
+        swiperRef.current?.slideTo(0);
+    };
+
+    useEffect(() => {
+        swiperRef.current?.update();
+    }, [filteredCards]);
+
+    const shouldShowNavigation = filteredCards.length > slidesPerView;
 
     return (
-        <>
-            <div className="w-full flex flex-wrap gap-2 capitalize">
+        <div className="flex flex-col w-full gap-12 items-center">
+            <div className="w-full flex flex-wrap gap-2">
                 {uniqueCardCategories.map((category, index) => (
                     <Chip
                         key={index}
@@ -58,6 +58,7 @@ export function InfraSlider({ data }: InfraSliderProps) {
                 ))}
             </div>
             <Swiper
+                key={swiperKey}
                 className="w-full h-full [&>div]:items-stretch !p-6 !-m-6"
                 modules={[Scrollbar, A11y, Pagination]}
                 pagination={{
@@ -73,10 +74,15 @@ export function InfraSlider({ data }: InfraSliderProps) {
                 onResize={(swiper) => setSlidesPerView(swiper.params.slidesPerView as number)}
                 breakpoints={SWIPER_BREAKPOINTS}
             >
-                {filteredCards.map((card, index) => (
-                    <SwiperSlide key={index} className="!h-auto">
-                        <div className="h-full">
-                            <Link href={card.link} target="_blank" rel="noopener noreferrer">
+                {filteredCards.map((card) => (
+                    <SwiperSlide key={card.title} className="!h-auto">
+                        <div className="!h-full block [&>div]:h-full">
+                            <Link
+                                href={card.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="!h-full block [&>div]:h-full"
+                            >
                                 <ImageCard title={card.title} image={card.image} body={card.body} />
                             </Link>
                         </div>
@@ -89,10 +95,10 @@ export function InfraSlider({ data }: InfraSliderProps) {
                     onPrev={() => swiperRef.current?.slidePrev()}
                     onNext={() => swiperRef.current?.slideNext()}
                     isPrevDisabled={activeSlideIndex === 0}
-                    isNextDisabled={activeSlideIndex >= data.length - slidesPerView}
+                    isNextDisabled={activeSlideIndex >= filteredCards.length - slidesPerView}
                     id={INFRA_PAGINATION_BULLET_ID}
                 />
             )}
-        </>
+        </div>
     );
 }

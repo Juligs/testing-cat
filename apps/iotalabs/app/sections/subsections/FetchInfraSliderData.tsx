@@ -14,20 +14,25 @@ export function FetchInfraSliderData() {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const data = await fetchInfraData();
-                const result = await checkInvalidImageUrlsAndRevalidate(
-                    data.map(({ image }) => image),
+                const fetchedData = await fetchInfraData();
+                const refreshedDataWithoutCache = await checkInvalidImageUrlsAndRevalidate(
+                    fetchedData.map(({ image }) => image),
                     fetchInfraData,
                     revalidateInfraAPI,
                 );
-
-                if (result) {
-                    setDataInfraSlider(result);
+                // If there was some error in the cached fetched data which then needed to be revalidated
+                // and the revalidated data is available, then set the revalidated data
+                // else set the original fetched data
+                if (refreshedDataWithoutCache) {
+                    setDataInfraSlider(refreshedDataWithoutCache);
                 } else {
-                    setDataInfraSlider(data);
+                    setDataInfraSlider(fetchedData);
                 }
             } catch (error) {
-                console.error('Error fetching data from Airtable:', error);
+                console.error(
+                    'Error fetching infra slider data from Airtable (FetchInfraSliderData):',
+                    error,
+                );
             } finally {
                 setIsLoading(false);
             }
