@@ -45,7 +45,7 @@ export function FetchGrantsSliderData() {
     }, []);
 
     const fetchGrantsData = async () => {
-        const res = await fetch('/api/dataGrantsSlider');
+        const res = await fetch('/api/grants');
         return (await res.json()) as GrantsCardData[];
     };
 
