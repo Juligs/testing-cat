@@ -60,8 +60,8 @@ export function GrantSlider({ data }: GrantsSliderProps) {
                 onResize={(swiper) => setSlidesPerView(swiper.params.slidesPerView as number)}
                 breakpoints={SWIPER_BREAKPOINTS}
             >
-                {sortedGrantsData.map((card, index) => (
-                    <SwiperSlide key={index} className="!h-auto">
+                {sortedGrantsData.map((card) => (
+                    <SwiperSlide key={card.title} className="!h-auto">
                         <div className="!h-full block [&>div]:h-full">
                             <ImageCard title={card.title} image={card.image} body={card.body}>
                                 {card.websiteTwitter && (
