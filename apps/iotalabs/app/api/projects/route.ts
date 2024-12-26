@@ -1,24 +1,23 @@
 import { sanitizeInfraData, type CardShowcase } from '../../lib/airtable/sanitizeInfraData';
 import { NextResponse } from 'next/server';
 import { getDataFromAirtable } from '@lib/airtable';
-import { INFRA_ALLOWED_CATEGORIES } from '../../lib/constants/airtable.constants';
+import { PROJECTS_ALLOWED_CATEGORIES } from '../../lib/constants/airtable.constants';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-    const data = await fetchData();
+    const data = await fetchProjects();
     return NextResponse.json(data);
 }
+const PROJECTS_AIRTABLE_BASE_NAME = 'Accounts';
+const PROJECTS_AIRTABLE_VIEW_NAME = 'iotalabs projects';
 
-const INFRA_AIRTABLE_VIEW_NAME = 'iotalabs infra';
-const INFRA_AIRTABLE_BASE_NAME = 'Accounts';
-
-const fetchData: () => Promise<CardShowcase[]> = async () => {
+const fetchProjects: () => Promise<CardShowcase[]> = async () => {
     try {
         const rawData = await getDataFromAirtable({
-            view: INFRA_AIRTABLE_VIEW_NAME,
+            view: PROJECTS_AIRTABLE_VIEW_NAME,
             fields: ['Name', 'Sub-Category', 'Website', 'websiteImage', 'websiteDescription'],
-            airtableName: INFRA_AIRTABLE_BASE_NAME,
+            airtableName: PROJECTS_AIRTABLE_BASE_NAME,
         });
 
         const filteredData = rawData.filter(
@@ -35,7 +34,7 @@ const fetchData: () => Promise<CardShowcase[]> = async () => {
             return [];
         }
 
-        return sanitizeInfraData(filteredData, { allowedCategories: INFRA_ALLOWED_CATEGORIES });
+        return sanitizeInfraData(filteredData, { allowedCategories: PROJECTS_ALLOWED_CATEGORIES });
     } catch (error) {
         console.error('Error in fetchInfraData:', error);
         return [];

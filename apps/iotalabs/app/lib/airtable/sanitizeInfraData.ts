@@ -1,27 +1,33 @@
 import { ComponentProps } from 'react';
 import { ImageCard } from 'react-ui-kit';
 import { FieldSet, Records } from 'airtable';
-import { INFRA_ALLOWED_CATEGORIES } from '../constants/airtable.constants';
 
 export type CardShowcase = Card & { category: string[]; link: string };
-type Card = Omit<
-    ComponentProps<typeof ImageCard>,
-    'elevated' | 'inverted' | 'size' | 'isHoverable'
->;
+type Card = Omit<ComponentProps<typeof ImageCard>, 'elevated' | 'inverted' | 'size'>;
 
-export async function sanitizeInfraData(data: Records<FieldSet>): Promise<CardShowcase[]> {
-    const dataInfraSliderCards: CardShowcase[] = await Promise.all(
+interface SanitizeInfraDataOptions {
+    allowedCategories: string[];
+    placeholderImageUrl?: string;
+}
+
+export async function sanitizeInfraData(
+    data: Records<FieldSet>,
+    options: SanitizeInfraDataOptions,
+): Promise<CardShowcase[]> {
+    const { allowedCategories, placeholderImageUrl = '/homepage/placeholder-image.svg' } = options;
+
+    const sanitizedCards: CardShowcase[] = await Promise.all(
         data.map(async ({ fields }) => {
             const imageUrl =
                 Array.isArray(fields.websiteImage) && fields.websiteImage.length > 0
                     ? `${fields.websiteImage[0].url}`
-                    : '/homepage/placeholder-image.svg';
+                    : placeholderImageUrl;
 
             const filteredCategories = Array.isArray(fields['Sub-Category'])
                 ? fields['Sub-Category'].filter((category) =>
-                      INFRA_ALLOWED_CATEGORIES.map((allowed) => allowed.toLowerCase()).includes(
-                          category.toLowerCase(),
-                      ),
+                      allowedCategories
+                          .map((allowed) => allowed.toLowerCase())
+                          .includes(category.toLowerCase()),
                   )
                 : [];
 
@@ -33,10 +39,10 @@ export async function sanitizeInfraData(data: Records<FieldSet>): Promise<CardSh
                         ? fields.websiteDescription
                         : undefined,
                 category: filteredCategories,
-                image: imageUrl ?? '/homepage/placeholder-image.svg',
+                image: imageUrl,
             };
         }),
     );
 
-    return dataInfraSliderCards;
+    return sanitizedCards;
 }

@@ -2,4 +2,4 @@ export * from './sanitizeGrantsData';
 export * from './sanitizeInfraData';
 export * from './revalidate';
 export * from './fetchGrantsStats';
-export * from './getGrantsDataFromAirtable';
+export * from './getDataFromAirtable';
