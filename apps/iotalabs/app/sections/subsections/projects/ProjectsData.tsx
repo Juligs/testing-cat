@@ -10,16 +10,21 @@ interface ProjectsProps {
 }
 
 export function ProjectsData({ data }: ProjectsProps) {
+    const sortedDataAlphabetically = [...data].sort((a, b) => a.title.localeCompare(b.title));
+
     const uniqueCardCategories = [
         'All',
-        ...Array.from(new Set(data.flatMap((card) => card.category))),
+        ...Array.from(new Set(sortedDataAlphabetically.flatMap((card) => card.category))).sort(
+            (a, b) => a.localeCompare(b),
+        ),
     ];
+
     const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
     const filteredCards =
         selectedCategory === 'All'
-            ? data
-            : data.filter((card) => card.category.includes(selectedCategory));
+            ? sortedDataAlphabetically
+            : sortedDataAlphabetically.filter((card) => card.category.includes(selectedCategory));
 
     function handleCategoryClick(category: string) {
         if (selectedCategory === category) {
