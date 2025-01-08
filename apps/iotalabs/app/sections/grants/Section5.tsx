@@ -13,6 +13,7 @@ import {
     FUNDING_GUIDELINES_DATA,
     APLICCATION_PROCESS_DATA,
 } from '@lib/constants/ourFundingGuidelinesData.contants';
+import Link from 'next/link';
 
 export function Section5({ id }: { id: string }) {
     return (
@@ -27,7 +28,13 @@ export function Section5({ id }: { id: string }) {
                             inverted
                         >
                             <Actions>
-                                <Button text="Apply for a Grant" icon={<ArrowTopRight />} />
+                                <Link
+                                    href="https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Button text="Apply for a Grant" icon={<ArrowTopRight />} />
+                                </Link>
                             </Actions>
                         </HorizontalTitle>
                     </div>

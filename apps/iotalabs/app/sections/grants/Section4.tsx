@@ -1,6 +1,5 @@
 import { TwoColumnsImageTemplate } from '@components';
-import { ArrowTopRight } from '@repo/icons';
-import { IconContent, Button, VerticalTitle, TitleTextSize, Actions } from 'react-ui-kit';
+import { IconContent, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { HOW_TO_APPLY_DATA } from '@lib/constants';
 
 export function Section4({ id }: { id: string }) {
@@ -13,11 +12,7 @@ export function Section4({ id }: { id: string }) {
                             title="How to Apply"
                             subtitle="Applying for a grant is simple. Here's what to expect"
                             size={TitleTextSize.Medium}
-                        >
-                            <Actions>
-                                <Button text="Apply for your project" icon={<ArrowTopRight />} />
-                            </Actions>
-                        </VerticalTitle>
+                        ></VerticalTitle>
                     </div>
                 </TwoColumnsImageTemplate>
                 <div className="flex flex-col xs:flex-row xs:flex-wrap sm:flex-nowrap gap-4 h-full justify-center xs:justify-start">

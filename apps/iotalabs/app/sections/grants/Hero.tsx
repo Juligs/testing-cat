@@ -41,7 +41,7 @@ export function Hero({ id }: HeroProps) {
                             >
                                 <Actions>
                                     <Link
-                                        href="https://airtable.com/appQqzg74YoTqK3Ht/pagSAWuqfqh3qIDg1/form"
+                                        href="https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >

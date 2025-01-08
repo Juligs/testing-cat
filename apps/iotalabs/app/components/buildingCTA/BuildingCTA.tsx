@@ -10,7 +10,7 @@ export function BuildingCTA() {
             inverted
         >
             <Link
-                href="https://airtable.com/appQqzg74YoTqK3Ht/pagSAWuqfqh3qIDg1/form"
+                href="https://airtable.com/appQqzg74YoTqK3Ht/pagAntotjuYq5XNlT/form"
                 target="_blank"
                 rel="noopener noreferrer"
             >

@@ -25,7 +25,11 @@ export function Hero({ id }: HeroProps) {
                 <div className="sm:max-w-3xl xl:max-w-5xl">
                     <VerticalTitle inverted isCentered size={TitleTextSize.Large} {...HERO_INFO}>
                         <Actions>
-                            <Link href="/" target="_blank" rel="noopener noreferrer">
+                            <Link
+                                href="https://airtable.com/appQqzg74YoTqK3Ht/pagAntotjuYq5XNlT/form"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <Button
                                     text="Register your Project"
                                     variant={ButtonVariant.Primary}
