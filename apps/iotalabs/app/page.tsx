@@ -11,7 +11,7 @@ import {
     Section7,
     // Section8,
     Section9,
-    Section11,
+    Section10,
 } from '@sections';
 import { getPageMetadata } from '@lib/utils';
 const METADATA_TITLE = 'Power Up Your Builder Journey';
@@ -36,7 +36,7 @@ export default function Home() {
             <Section7 id="section-7-inverted" />
             {/* <Section8 id="section-8" /> */}
             <Section9 id="section-9" />
-            <Section11 id="section-11" />
+            <Section10 id="section-10" />
         </>
     );
 }

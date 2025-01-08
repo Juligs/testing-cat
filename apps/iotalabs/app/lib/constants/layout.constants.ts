@@ -16,6 +16,8 @@ export const ROUTES: Route[] = [
     {
         title: 'Projects',
         path: '/projects',
+        hideFromNavbar: true,
+        hideFromFooter: true,
     },
     {
         title: 'Blog',

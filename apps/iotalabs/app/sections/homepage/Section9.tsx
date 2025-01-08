@@ -1,4 +1,7 @@
-import { BuildingCTA, TwoColumnsImageTemplate } from '@components';
+import {
+    // BuildingCTA,
+    TwoColumnsImageTemplate,
+} from '@components';
 import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';
@@ -35,7 +38,7 @@ export function Section9({ id }: { id: string }) {
                         </VerticalTitle>
                     </div>
                 </TwoColumnsImageTemplate>
-                <BuildingCTA />
+                {/* <BuildingCTA /> */}
             </div>
         </section>
     );
