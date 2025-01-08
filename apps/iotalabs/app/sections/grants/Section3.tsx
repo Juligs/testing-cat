@@ -1,12 +1,4 @@
-import {
-    VerticalTitle,
-    TitleTextSize,
-    Button,
-    Actions,
-    ImageCard,
-    ImageCardSize,
-} from 'react-ui-kit';
-import { ArrowTopRight } from '@repo/icons';
+import { VerticalTitle, TitleTextSize, ImageCard, ImageCardSize } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '@components';
 import { CARDS_DATA } from '@lib/constants';
 export function Section3({ id }: { id: string }) {
@@ -19,11 +11,7 @@ export function Section3({ id }: { id: string }) {
                             title="Supported Initiatives"
                             body="iotalabs Grants supports three key areas: open-source development, Web3 education, and community events like hackathons and workshops. Discover how you can receive support and bring your project to life."
                             size={TitleTextSize.Medium}
-                        >
-                            <Actions>
-                                <Button text="Learn more" icon={<ArrowTopRight />} />
-                            </Actions>
-                        </VerticalTitle>
+                        ></VerticalTitle>
                     </div>
                 </TwoColumnsImageTemplate>
                 <div className="flex flex-col xs:flex-row xs:flex-wrap sm:flex-nowrap  gap-4 h-full justify-center xs:justify-start">

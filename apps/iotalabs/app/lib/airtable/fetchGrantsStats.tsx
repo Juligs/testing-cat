@@ -1,4 +1,4 @@
-import { getGrantsDataFromAirtable } from '@lib/airtable/getGrantsDataFromAirtable';
+import { getDataFromAirtable } from '@lib/airtable/getDataFromAirtable';
 import { formatToFinancialNotation } from '@shared/utils';
 
 interface GrantsStats {
@@ -6,12 +6,16 @@ interface GrantsStats {
     formattedTotalGranted?: string;
     totalApprovedApplications?: number;
 }
+const GRANTS_AIRTABLE_VIEW_NAME = 'iotalabs applications';
+const AIRTABLE_BASE_NAME = 'Applications';
 
 export async function fetchGrantsStats(): Promise<GrantsStats | undefined> {
     try {
-        const rawData = await getGrantsDataFromAirtable({
+        const rawData = await getDataFromAirtable({
             fields: ['Sum Milestones (USD)', 'Grant Running'],
             filtered: false,
+            view: GRANTS_AIRTABLE_VIEW_NAME,
+            airtableName: AIRTABLE_BASE_NAME,
         });
 
         const filteredData = rawData

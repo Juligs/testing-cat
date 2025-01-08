@@ -12,7 +12,7 @@ export function Section6({ id }: { id: string }) {
                         title="IOTA Grants"
                         size={TitleTextSize.Medium}
                         subtitle="Dream big, innovate fearlessly, and let iotalabs help you transform your vision into the future"
-                        body="At IOTA Labs, we celebrate the transformative projects that have emerged from our Grants Program. "
+                        body="At iotalabs, we celebrate the transformative projects that have emerged from our Grants Program. "
                     />
                 </div>
                 <Suspense fallback={<GrantsCarouselSkeleton />}>

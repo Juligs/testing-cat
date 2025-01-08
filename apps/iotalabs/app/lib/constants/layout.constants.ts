@@ -14,6 +14,12 @@ export const ROUTES: Route[] = [
         hideFromFooter: true,
     },
     {
+        title: 'Projects',
+        path: '/projects',
+        hideFromNavbar: true,
+        hideFromFooter: true,
+    },
+    {
         title: 'Blog',
         path: 'https://blog.iotalabs.io/',
         isExternal: true,

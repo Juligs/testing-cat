@@ -17,6 +17,8 @@
         }
     },
     "include": [
+        "../../shared/**/*.ts",
+        "../../shared/**/*.tsx",
         "next-env.d.ts",
         "next.config.mjs",
         "**/*.ts",

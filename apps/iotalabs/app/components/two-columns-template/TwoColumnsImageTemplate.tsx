@@ -15,7 +15,12 @@ export function TwoColumnsImageTemplate({
         ? 'flex-col-reverse xs:flex-row-reverse'
         : 'flex-col-reverse xs:flex-row';
     return (
-        <div className={clsx('flex gap-6 w-full items-center justify-between', REVERSED_CLASS)}>
+        <div
+            className={clsx(
+                'flex gap-10 xs:gap-6 w-full items-center justify-between',
+                REVERSED_CLASS,
+            )}
+        >
             <div className="w-full xs:w-1/2">{children}</div>
             <div className="w-full xs:w-1/2 aspect-[4/3] items-center flex">
                 <Image src={image} alt="Image" width={708} height={531} />

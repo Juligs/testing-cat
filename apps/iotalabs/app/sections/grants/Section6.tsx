@@ -10,6 +10,7 @@ import {
 } from 'react-ui-kit';
 import { TIERED_CARDS, TIERED_STATS } from '@lib/constants';
 import { DisplayStats } from 'react-ui-kit';
+import Link from 'next/link';
 export function Section6({ id }: { id: string }) {
     return (
         <section className="bg-[#5FF45B]" id={id}>
@@ -23,11 +24,17 @@ export function Section6({ id }: { id: string }) {
                             size={TitleTextSize.Medium}
                         >
                             <Actions>
-                                <Button
-                                    text="Apply for your project"
-                                    icon={<ArrowTopRight />}
-                                    variant={ButtonVariant.Secondary}
-                                />
+                                <Link
+                                    href="https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Button
+                                        text="Apply for your project"
+                                        icon={<ArrowTopRight />}
+                                        variant={ButtonVariant.Secondary}
+                                    />
+                                </Link>
                             </Actions>
                         </VerticalTitle>
                     </div>

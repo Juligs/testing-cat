@@ -1,5 +1,5 @@
 import { sanitizeGrantsData, type GrantsCardData } from '../../lib/airtable/sanitizeGrantsData';
-import { getGrantsDataFromAirtable } from '@lib/airtable/getGrantsDataFromAirtable';
+import { getDataFromAirtable } from '@lib/airtable/getDataFromAirtable';
 import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
@@ -8,10 +8,14 @@ export async function GET() {
     const data = await fetchGrantsData();
     return NextResponse.json(data);
 }
+const GRANTS_AIRTABLE_VIEW_NAME = 'iotalabs applications';
+const AIRTABLE_BASE_NAME = 'Applications';
 
 const fetchGrantsData = async (): Promise<GrantsCardData[]> => {
     try {
-        const rawData = await getGrantsDataFromAirtable({
+        const rawData = await getDataFromAirtable({
+            airtableName: AIRTABLE_BASE_NAME,
+            view: GRANTS_AIRTABLE_VIEW_NAME,
             fields: [
                 'Grant Name',
                 'websiteFeaturedPosition',
