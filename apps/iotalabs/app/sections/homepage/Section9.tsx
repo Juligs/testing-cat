@@ -1,7 +1,4 @@
-import {
-    // BuildingCTA,
-    TwoColumnsImageTemplate,
-} from '@components';
+import { BuildingCTA, TwoColumnsImageTemplate } from '@components';
 import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';
@@ -23,11 +20,7 @@ export function Section9({ id }: { id: string }) {
                             body={VERTICAL_TITLE_INFO.body}
                         >
                             <Actions>
-                                <Link
-                                    href="https://iotadlt.foundation/grants"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                <Link href="/grants">
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Read more"
@@ -38,7 +31,7 @@ export function Section9({ id }: { id: string }) {
                         </VerticalTitle>
                     </div>
                 </TwoColumnsImageTemplate>
-                {/* <BuildingCTA /> */}
+                <BuildingCTA />
             </div>
         </section>
     );
