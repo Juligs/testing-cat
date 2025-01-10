@@ -18,6 +18,12 @@ export function Navigation({ items }: NavigationProps) {
     const currentPath = usePathname();
     const isInverted = activeSection?.includes('inverted');
 
+    const handleLinkClick = (path: string | undefined) => {
+        if (path) {
+            setIsMobileNavOpen(false);
+        }
+    };
+
     return (
         <>
             <div className="fixed top-0 left-0 right-0 z-50">
@@ -25,7 +31,7 @@ export function Navigation({ items }: NavigationProps) {
                     <NavbarItems
                         isMobileNavOpen={isMobileNavOpen}
                         logo={
-                            <Link href="/">
+                            <Link href="/" onClick={() => handleLinkClick('/')}>
                                 <Logo
                                     color={isInverted ? 'text-darkest-inverted' : 'text-darkest'}
                                 />
@@ -41,6 +47,7 @@ export function Navigation({ items }: NavigationProps) {
                                     href={item.path}
                                     target={item.isExternal ? '_blank' : undefined}
                                     rel={item.isExternal ? 'noopener noreferrer' : undefined}
+                                    onClick={() => handleLinkClick(item.path)}
                                 >
                                     <NavbarItem active={isActive} inverted={isInverted}>
                                         {item.title}
