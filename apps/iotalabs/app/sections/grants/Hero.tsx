@@ -80,15 +80,15 @@ export function Hero({ id }: HeroProps) {
 
             <div className="container flex flex-col sm:hidden gap-4 py-6 px-4 w-full">
                 <AnchorLink
-                    onClick={() => scrollToSection('#hero-inverted')}
+                    onClick={() => scrollToSection('#section-3')}
                     text="Supported Initiatives"
                 />
                 <AnchorLink
-                    onClick={() => scrollToSection('#hero-inverted')}
+                    onClick={() => scrollToSection('#section-4')}
                     text="Application Process"
                 />
                 <AnchorLink
-                    onClick={() => scrollToSection('#hero-inverted')}
+                    onClick={() => scrollToSection('#section-5-inverted')}
                     text="Funding Guidelines"
                 />
             </div>
