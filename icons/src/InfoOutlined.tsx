@@ -11,7 +11,7 @@ export default function SvgInfoOutlined(props: SVGProps<SVGSVGElement>) {
         >
             <path
                 fill="currentColor"
-                d="M13.2 15.6a1.2 1.2 0 0 1-2.4 0V12a1.2 1.2 0 0 1 2.4 0zm-2.4-7.8a1.2 1.2 0 1 1 2.4 0 1.2 1.2 0 0 1-2.4 0"
+                d="M13.2 15.6a1.2 1.2 0 0 1-2.4 0V12a1.2 1.2 0 0 1 2.4 0zM10.8 7.8a1.2 1.2 0 1 1 2.4 0 1.2 1.2 0 0 1-2.4 0"
             />
             <path
                 fill="currentColor"

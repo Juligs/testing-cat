@@ -15,11 +15,21 @@ module.exports = {
         '#3131FF': 'currentColor',
     },
     indexTemplate(filePaths) {
-        const exportEntries = filePaths.map((filePath) => {
-            const basename = path.basename(filePath, path.extname(filePath));
-            const exportName = /^\d/.test(basename) ? `Svg${basename}` : basename;
-            return `export { default as ${exportName} } from './${basename}'`;
+        const exportEntries = filePaths.map((file) => {
+            const originalPath = file.originalPath;
+            const basename = path.basename(originalPath, path.extname(originalPath));
+            const cleanBaseName = basename.replace(/[^\w\s]/g, '_');
+            const formattedBaseName = cleanBaseName
+                .replace(/_+([a-zA-Z])/g, (_, letter) => letter.toUpperCase())
+                .replace(/^([a-zA-Z])/, (_, letter) => letter.toUpperCase())
+                .replace(/[^a-zA-Z0-9]/g, '');
+            const exportName = /^\d/.test(formattedBaseName)
+                ? `Svg${formattedBaseName}`
+                : formattedBaseName;
+
+            return `export { default as ${exportName} } from './${exportName}';`;
         });
+
         return exportEntries.join('\n');
     },
     template(variables, { tpl }) {

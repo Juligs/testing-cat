@@ -1,6 +1,6 @@
 import { Decorator, ReactRenderer } from '@storybook/react';
 import { withThemeByClassName } from '@storybook/addon-themes';
-
+import '../src/lib/styles/storybook.css';
 import '../src/lib/styles/index.css';
 
 export const parameters = {

@@ -6,37 +6,22 @@ export default function SvgSmartContract(props: SVGProps<SVGSVGElement>) {
             width="1em"
             height="1em"
             fill="none"
-            viewBox="0 0 48 48"
+            viewBox="0 0 24 24"
             {...props}
         >
             <path
-                stroke="currentColor"
-                strokeWidth={2}
-                d="M36 30.5V8a2 2 0 0 0-2-2H14a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h8"
-            />
-            <rect
-                width={2}
-                height={14}
-                x={31}
-                y={12}
                 fill="currentColor"
-                rx={1}
-                transform="rotate(90 31 12)"
+                d="M9.75 8a.5.5 0 0 0 0 1h6.5a.5.5 0 1 0 0-1zM9.25 11a.5.5 0 0 1 .5-.5h6.5a.5.5 0 1 1 0 1h-6.5a.5.5 0 0 1-.5-.5M9.75 13a.5.5 0 0 0 0 1h6.5a.5.5 0 1 0 0-1z"
             />
-            <rect
-                width={2}
-                height={9}
-                x={26}
-                y={18}
-                fill="currentColor"
-                rx={1}
-                transform="rotate(90 26 18)"
-            />
-            <path fill="currentColor" d="M43 37a7 7 0 1 1-14 0 7 7 0 0 1 14 0" />
             <path
-                stroke="currentColor"
-                strokeWidth={2}
-                d="M31 32.715A5.8 5.8 0 0 0 26.882 31C23.634 31 21 33.686 21 37s2.634 6 5.882 6A5.8 5.8 0 0 0 31 41.285"
+                fill="currentColor"
+                fillRule="evenodd"
+                d="M6.75 5a2 2 0 0 1 2-2h7.072a2 2 0 0 1 1.409.58L18.659 5a2 2 0 0 1 .591 1.419V16a2 2 0 0 1-2 2h-8.5a2 2 0 0 1-2-2zm10.5 12h-8.5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7v2.5h2.5V16a1 1 0 0 1-1 1"
+                clipRule="evenodd"
+            />
+            <path
+                fill="currentColor"
+                d="M5.75 6a.5.5 0 0 0-1 0v10.5a3.5 3.5 0 0 0 3.5 3.5h8a.5.5 0 0 0 0-1h-8a2.5 2.5 0 0 1-2.5-2.5z"
             />
         </svg>
     );

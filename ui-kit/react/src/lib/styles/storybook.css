@@ -1,0 +1,6 @@
+.docblock-icongallery {
+    @apply grid grid-cols-4 gap-4;
+    @apply w-full;
+    @apply justify-start items-start;
+    @apply break-all;
+}

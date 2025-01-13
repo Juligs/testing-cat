@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
-  <path stroke="#3131FF" stroke-width="2" d="M34 29V9a2 2 0 0 0-2-2H12a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h8"/>
-  <rect width="2" height="14" x="29" y="13" fill="#3131FF" rx="1" transform="rotate(90 29 13)"/>
-  <rect width="2" height="9" x="24" y="19" fill="#3131FF" rx="1" transform="rotate(90 24 19)"/>
-  <path fill="#3131FF" fill-rule="evenodd" d="M19 29a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H21a2 2 0 0 1-2-2V29Zm4.293 5.293 3-3 1.414 1.414L25.414 35l2.293 2.293-1.414 1.414-3-3-.707-.707.707-.707Zm8.414-3 3 3 .707.707-.707.707-3 3-1.414-1.414L32.586 35l-2.293-2.293 1.414-1.414Z" clip-rule="evenodd"/>
-</svg>
