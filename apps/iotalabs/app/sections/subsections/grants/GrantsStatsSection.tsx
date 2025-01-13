@@ -1,12 +1,8 @@
-import { fetchGrantsStats } from '@lib/airtable';
+import { GrantsStats } from '@lib/airtable';
 import { ComponentProps } from 'react';
 import { DisplayStats } from 'react-ui-kit';
 
-export type Stats = Omit<ComponentProps<typeof DisplayStats>, 'inverted' | 'highlighted'>;
-
-export async function StatsSection() {
-    const stats = await fetchGrantsStats();
-
+export function GrantsStatsSection({ stats }: { stats: GrantsStats | undefined }) {
     const MISSING_VALUE = '-';
 
     const CARDS: ComponentProps<typeof DisplayStats>[] = [
