@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react';
 import { ImageCard } from 'react-ui-kit';
 import { FieldSet, Records } from 'airtable';
-import { sanitizeXData } from '@shared/utils/sanitizeXData';
+import { sanitizeXData } from '@repo/shared';
 
 export type GrantsCardData = Card & {
     link: string;

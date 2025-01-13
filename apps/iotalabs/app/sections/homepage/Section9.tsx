@@ -1,4 +1,5 @@
-import { BuildingCTA, TwoColumnsImageTemplate } from '@components';
+import { TwoColumnsImageTemplate } from '@repo/shared';
+import { BuildingCTA } from '@components';
 import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';

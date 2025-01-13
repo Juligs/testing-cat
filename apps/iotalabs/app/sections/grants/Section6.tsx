@@ -1,4 +1,4 @@
-import { TwoColumnsImageTemplate } from '@components';
+import { TwoColumnsImageTemplate } from '@repo/shared';
 import { ArrowTopRight } from '@repo/icons';
 import {
     Button,

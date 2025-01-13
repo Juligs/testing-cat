@@ -1,5 +1,5 @@
 import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
-import { TwoColumnsImageTemplate } from '@components';
+import { TwoColumnsImageTemplate } from '@repo/shared';
 import { FetchInfraSliderData } from '@sections/subsections';
 
 export function Section8({ id }: { id: string }) {

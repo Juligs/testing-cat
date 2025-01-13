@@ -1,18 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {
-    Hero,
-    HeroBackgroundVideo,
-    HeroSize,
-    HeroBackgroundImage,
-} from '@lib/server-components/organisms';
+import { HeroLayout, HeroSize, HeroBackground } from '@lib/server-components/organisms';
 import { ScreenSize } from '@lib/server';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { Viewport } from 'src/storybook/enums';
 import { Button, ButtonVariant } from '@lib/server-components';
 import { getStoryEnumOptions } from 'src/storybook/utils';
 
-const meta: Meta<typeof Hero> = {
-    component: Hero,
+const meta: Meta<typeof HeroLayout> = {
+    component: HeroLayout,
     parameters: {
         viewport: {
             viewports: INITIAL_VIEWPORTS,
@@ -26,8 +21,9 @@ const meta: Meta<typeof Hero> = {
 function HeroMediaImage(args: Story['args']) {
     return (
         <section className="min-h-screen h-full flex flex-col">
-            <Hero {...args}>
-                <HeroBackgroundImage
+            <HeroLayout {...args}>
+                <HeroBackground
+                    type="image"
                     sources={{
                         [ScreenSize.Xs]: {
                             src: 'https://fakeimg.pl/360x500?font=bebas&font_size=12',
@@ -47,15 +43,16 @@ function HeroMediaImage(args: Story['args']) {
                         <Button variant={ButtonVariant.Secondary} text="Button" />
                     </div>
                 </div>
-            </Hero>
+            </HeroLayout>
         </section>
     );
 }
 function HeroVideo(args: Story['args']) {
     return (
         <section className="min-h-screen h-full flex flex-col">
-            <Hero {...args}>
-                <HeroBackgroundVideo
+            <HeroLayout {...args}>
+                <HeroBackground
+                    type="video"
                     sourceSet={{
                         [ScreenSize.Xs]: {
                             src: 'https://files.iota.org/media/binance_clubhouse_anaglyph.mp4',
@@ -64,7 +61,7 @@ function HeroVideo(args: Story['args']) {
                             src: 'https://files.iota.org/media/iotalabs/iotalabs_hero.mp4',
                         },
                     }}
-                ></HeroBackgroundVideo>
+                />
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="text-display-lg">Title</h1>
                     <p className=" text-headline-lg">Subtitle</p>
@@ -73,7 +70,7 @@ function HeroVideo(args: Story['args']) {
                         <Button variant={ButtonVariant.Secondary} text="Button" />
                     </div>
                 </div>
-            </Hero>
+            </HeroLayout>
         </section>
     );
 }
@@ -81,7 +78,7 @@ function HeroVideo(args: Story['args']) {
 function HeroNoMedia(args: Story['args']) {
     return (
         <section className="min-h-screen h-full flex flex-col">
-            <Hero {...args} hasGradientBackground>
+            <HeroLayout {...args} hasGradientBackground>
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="text-display-lg">Title</h1>
                     <p className=" text-headline-lg">Subtitle</p>
@@ -90,13 +87,13 @@ function HeroNoMedia(args: Story['args']) {
                         <Button variant={ButtonVariant.Secondary} text="Button" />
                     </div>
                 </div>
-            </Hero>
+            </HeroLayout>
         </section>
     );
 }
 
 export default meta;
-type Story = StoryObj<typeof Hero>;
+type Story = StoryObj<typeof HeroLayout>;
 
 export const HeroWithImage: Story = {
     parameters: {

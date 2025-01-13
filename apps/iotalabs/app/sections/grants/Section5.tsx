@@ -1,4 +1,5 @@
-import { TwoColumnsImageTemplate, DecoratedBox } from '@components';
+import { TwoColumnsImageTemplate } from '@repo/shared';
+import { DecoratedBox } from '@components';
 import { ArrowTopRight } from '@repo/icons';
 import {
     HorizontalTitle,

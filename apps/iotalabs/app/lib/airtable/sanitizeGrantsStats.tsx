@@ -1,4 +1,4 @@
-import { formatToFinancialNotation } from '@shared/utils';
+import { formatToFinancialNotation } from '@repo/shared';
 
 export interface GrantsStats {
     totalApplications?: number;

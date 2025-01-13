@@ -6,6 +6,7 @@ module.exports = {
         './app/**/*.{js,ts,jsx,tsx,mdx}',
         './pages/**/*.{js,ts,jsx,tsx,mdx}',
         './components/**/*.{js,ts,jsx,tsx,mdx}',
+        '../../shared/components/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     presets: [BASE_CONFIG],
     theme: {

@@ -13,7 +13,8 @@
             "@components/*": ["app/components/*"],
             "@sections": ["app/sections"],
             "@sections/*": ["app/sections/*"],
-            "@shared/*": ["../../shared/*"]
+            "@repo/shared": ["../../shared"],
+            "@repo/shared/*": ["../../shared/*"]
         }
     },
     "include": [

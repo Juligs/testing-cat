@@ -1,30 +1,10 @@
-import {
-    HeroBackgroundVideo,
-    Hero as HeroComponent,
-    VerticalTitle,
-    TitleTextSize,
-} from 'react-ui-kit';
+import { Hero as HeroComponent } from '@repo/shared';
+import { HERO_HOMEPAGE_INFO, HERO_HOMEPAGE_BG } from '@lib/constants';
 
-interface HeroProps {
-    id: string;
-}
-const HERO_INFO = {
-    title: 'Accelerate Growth',
-    subtitle: 'Shaping value-driven IOTA ecosystems where innovation thrives',
-};
-
-export function Hero({ id }: HeroProps) {
+export function Hero({ id }: { id: string }) {
     return (
         <section className="w-full h-full hero-height bg-labs-neutral-10" id={id}>
-            <HeroComponent>
-                <HeroBackgroundVideo
-                    source="https://files.iota.org/media/iotalabs/iotalabs_hero.mp4"
-                    poster="https://files.iota.org/media/iotalabs/iotalabs_hero_poster.jpg"
-                />
-                <div className="sm:max-w-3xl xl:max-w-5xl">
-                    <VerticalTitle inverted isCentered size={TitleTextSize.Large} {...HERO_INFO} />
-                </div>
-            </HeroComponent>
+            <HeroComponent verticalTitle={HERO_HOMEPAGE_INFO} background={HERO_HOMEPAGE_BG} />
         </section>
     );
 }

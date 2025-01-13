@@ -1,10 +1,10 @@
 'use client';
+import { checkInvalidImageUrlsAndRevalidate } from '@repo/shared';
 import { useEffect, useState } from 'react';
 import { CardShowcase } from '@lib/airtable';
 import { ProjectsData } from './ProjectsData';
 import { ProjectsSkeleton } from '@sections/skeletons';
 import { revalidateInfraAPI } from '@lib/airtable/revalidate';
-import { checkInvalidImageUrlsAndRevalidate } from '@shared/utils';
 
 export function FetchProjectsData() {
     const [dataProjects, setDataProjects] = useState<CardShowcase[] | undefined>(undefined);

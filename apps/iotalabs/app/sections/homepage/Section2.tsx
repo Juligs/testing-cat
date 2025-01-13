@@ -1,4 +1,5 @@
-import { DecoratedBox, TwoColumnsImageTemplate } from '@components';
+import { TwoColumnsImageTemplate } from '@repo/shared';
+import { DecoratedBox } from '@components';
 import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
 
 const VERTICAL_TITLE_INFO = {

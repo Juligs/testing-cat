@@ -7,7 +7,7 @@ interface HeroProps {
     size?: HeroSize;
     hasGradientBackground?: boolean;
 }
-export function Hero({
+export function HeroLayout({
     children,
     size = HeroSize.Default,
     hasGradientBackground,

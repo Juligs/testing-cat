@@ -1,4 +1,4 @@
-import { TwoColumnsImageTemplate } from '@components';
+import { TwoColumnsImageTemplate } from '@repo/shared';
 import { IconContent, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { HOW_TO_APPLY_DATA } from '@lib/constants';
 

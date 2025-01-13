@@ -1,11 +1,16 @@
 import { BREAKPOINTS, SourceSets, sortMediaSourcesByBreakpoint } from '@lib/server';
 import { Fragment } from 'react/jsx-runtime';
-interface ImageProps {
-    sources: SourceSets;
+
+interface ImageBaseProps {
     alt?: string;
     className?: string;
 }
-export function Image({ sources, alt, className }: ImageProps) {
+
+interface ImageSourcesProps extends ImageBaseProps {
+    sources: SourceSets;
+}
+
+export function ImageSources({ sources, alt, className }: ImageSourcesProps) {
     const sourcedSorted = sortMediaSourcesByBreakpoint(sources);
     return (
         <picture>
@@ -24,4 +29,23 @@ export function Image({ sources, alt, className }: ImageProps) {
             })}
         </picture>
     );
+}
+
+interface ImageProps extends ImageBaseProps {
+    src: string;
+}
+
+export function Image({ src, alt, className }: ImageProps) {
+    return <img src={src} alt={alt} className={className} />;
+}
+
+export type ImageControllerType = ImageSourcesProps | ImageProps;
+
+export function ImageController(props: ImageControllerType) {
+    const { alt, className } = props;
+    if ('sources' in props) {
+        return <ImageSources sources={props.sources} alt={alt} className={className} />;
+    }
+
+    return <Image src={props.src} alt={alt} className={className} />;
 }

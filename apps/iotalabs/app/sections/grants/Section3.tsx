@@ -1,5 +1,5 @@
 import { VerticalTitle, TitleTextSize, ImageCard, ImageCardSize } from 'react-ui-kit';
-import { TwoColumnsImageTemplate } from '@components';
+import { TwoColumnsImageTemplate } from '@repo/shared';
 import { CARDS_DATA } from '@lib/constants';
 export function Section3({ id }: { id: string }) {
     return (

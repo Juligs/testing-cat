@@ -6,8 +6,8 @@ export function ProjectsSkeleton() {
             <div className="w-full ">
                 <div className="flex flex-wrap items-center justify-start gap-2">
                     {Array.from({ length: 6 }).map((_, index) => (
-                        <div className="chip overflow-hidden">
-                            <ChipSkeleton key={index} />
+                        <div key={index} className="chip overflow-hidden">
+                            <ChipSkeleton />
                         </div>
                     ))}
                 </div>

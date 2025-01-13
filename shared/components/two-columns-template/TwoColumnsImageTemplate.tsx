@@ -1,19 +1,21 @@
 import React from 'react';
-import Image from 'next/image';
 import clsx from 'clsx';
+import type { ImageProps } from 'next/image';
+
 interface TwoColumnsImageTemplateProps {
     reverse?: boolean;
     image: string;
+    imageComponent?: (props: ImageProps) => React.ReactNode;
 }
 
 export function TwoColumnsImageTemplate({
     reverse = false,
     image,
     children,
+    imageComponent,
 }: React.PropsWithChildren<TwoColumnsImageTemplateProps>) {
-    const REVERSED_CLASS = reverse
-        ? 'flex-col-reverse xs:flex-row-reverse'
-        : 'flex-col-reverse xs:flex-row';
+    const REVERSED_CLASS = reverse ? 'flex-col xs:flex-row' : 'flex-col-reverse xs:flex-row';
+    const Image = imageComponent || 'img';
     return (
         <div
             className={clsx(

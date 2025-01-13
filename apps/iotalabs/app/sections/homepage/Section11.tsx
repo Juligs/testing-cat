@@ -8,7 +8,7 @@ const VERTICAL_TITLE_INFO = {
     body: 'Discover the latest developments in our ecosystem, including new partnerships, funding opportunities, and collaborative projects',
 };
 
-export function Section10({ id }: { id: string }) {
+export function Section11({ id }: { id: string }) {
     return (
         <section className="w-full bg-labs-neutral-100" id={id}>
             <div className="container py-14 xs:py-20 lg:py-30 flex justify-center text-center">

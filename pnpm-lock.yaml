@@ -129,6 +129,9 @@ importers:
       '@repo/icons':
         specifier: workspace:*
         version: link:../../icons
+      '@repo/shared':
+        specifier: workspace:*
+        version: link:../../shared
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.12)
@@ -257,6 +260,37 @@ importers:
   packages/lint-staged-config: {}
 
   packages/typescript-config: {}
+
+  shared:
+    dependencies:
+      next:
+        specifier: 14.2.6
+        version: 14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.4)
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
+      react-ui-kit:
+        specifier: workspace:*
+        version: link:../ui-kit/react
+    devDependencies:
+      '@types/react':
+        specifier: ^18
+        version: 18.3.8
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.3.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      eslint:
+        specifier: ^8.57.1
+        version: 8.57.1
+      eslint-config-next:
+        specifier: 14.2.6
+        version: 14.2.6(eslint@8.57.1)(typescript@5.6.2)
 
   ui-kit/react:
     dependencies:

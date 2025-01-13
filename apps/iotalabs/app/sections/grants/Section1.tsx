@@ -1,4 +1,4 @@
-import { HiglitedHeroTextSection } from '@shared/components';
+import { HiglitedHeroTextSection } from '@repo/shared';
 
 export function Section1({ id }: { id: string }) {
     const TEXT =
