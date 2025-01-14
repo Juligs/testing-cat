@@ -19,7 +19,7 @@ export const FUNDING_GUIDELINES_DATA = [
     {
         icon: <Placeholder />,
         title: 'No Duplication of Funding',
-        body: "Bo double-dipping. Your project shouldn't have funding for the same work from another source.",
+        body: "No double-dipping. Your project shouldn't have funding for the same work from another source.",
     },
     {
         icon: <Placeholder />,
