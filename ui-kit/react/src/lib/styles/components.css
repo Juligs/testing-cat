@@ -116,10 +116,12 @@
         color: var(--card-text-color-medium-inverted);
     }
     .card-container:hover .text-darkest {
+        transition: 0.2s ease-in;
         color: var(--color-text-links);
     }
 
     .card-container:hover .text-darkest-inverted {
+        transition: 0.2s ease-in;
         color: var(--color-text-links-inverted);
     }
 

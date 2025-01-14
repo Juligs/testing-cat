@@ -44,7 +44,7 @@ export function BlogPostCard({
                     src={image}
                     alt=""
                     className={clsx(
-                        'w-full h-auto object-cover aspect-video transform transition-transform duration-500 group-hover:scale-110',
+                        'w-full h-auto object-cover aspect-video transform transition-transform ease-out duration-500 group-hover:scale-110',
                     )}
                 />
             </div>

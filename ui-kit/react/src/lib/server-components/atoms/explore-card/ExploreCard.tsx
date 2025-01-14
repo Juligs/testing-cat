@@ -57,7 +57,7 @@ export function ExploreCard({
                     isSmall && !subtitle ? 'justify-center' : '',
                 )}
             >
-                <ArrowTopRight className="absolute top-0 right-0 w-8 h-8 transform transition-transform duration-400 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <ArrowTopRight className="absolute top-0 right-0 w-8 h-8 transform transition-transform ease-in duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 <p className={clsx(TITLE_SIZE[size])}>{title}</p>
                 {subtitle && <p className={clsx('text-body-lg', subtitleColor)}>{subtitle}</p>}
             </div>

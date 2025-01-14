@@ -89,7 +89,7 @@ export function TextLink({
                     ></span>
                     <span
                         className={clsx(
-                            'absolute -bottom-0.5 left-0 w-0 h-[1px] transition-all duration-500 group-hover:w-full',
+                            'absolute -bottom-0.5 left-0 w-0 h-[1px] transition-all ease-in duration-500 group-hover:w-full',
                             underlineHoverColor,
                         )}
                     ></span>
@@ -97,13 +97,13 @@ export function TextLink({
             )}
 
             {showIcon && !underline && !icon && (
-                <span className="transform group-hover:translate-x-1 transition-transform duration-700">
+                <span className="transform group-hover:translate-x-1 transition-transform ease-in duration-300">
                     <LineArrowSmall />
                 </span>
             )}
 
             {icon && !underline && !showIcon && (
-                <span className="transform group-hover:translate-x-1 transition-transform duration-700">
+                <span className="transform group-hover:translate-x-1 transition-transform ease-in duration-300">
                     {icon}
                 </span>
             )}

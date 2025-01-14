@@ -22,9 +22,9 @@
     }
 
     .state-layer:not(:disabled) {
-        @apply relative z-0 transition-colors duration-200;
+        @apply relative z-0 transition-colors duration-300 ease-in;
         &:before {
-            @apply absolute top-0 left-0 right-0 bottom-0;
+            @apply absolute top-0 left-0 right-0 bottom-0 transition-colors duration-300 ease-in;
             content: '';
             border-radius: inherit;
             z-index: -1;
