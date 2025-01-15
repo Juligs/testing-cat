@@ -1,6 +1,5 @@
-import { AIRTABLE_ENDPOINT_URL } from '../constants/airtable.constants';
 import Airtable from 'airtable';
-
+import { AIRTABLE_ENDPOINT_URL } from '../../constants';
 const AIRTABLE_BASE_ID = 'appQqzg74YoTqK3Ht';
 
 interface FetchAirtableDataProps {

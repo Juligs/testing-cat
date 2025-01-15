@@ -266,6 +266,9 @@ importers:
 
   shared:
     dependencies:
+      airtable:
+        specifier: ^0.12.2
+        version: 0.12.2
       next:
         specifier: 14.2.6
         version: 14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.4)

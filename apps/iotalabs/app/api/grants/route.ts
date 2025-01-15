@@ -1,6 +1,6 @@
-import { sanitizeGrantsData, type GrantsCardData } from '../../lib/airtable/sanitizeGrantsData';
-import { getDataFromAirtable } from '@lib/airtable/getDataFromAirtable';
+import { getDataFromAirtable } from '@repo/shared/utils';
 import { NextResponse } from 'next/server';
+import { sanitizeGrantsData, type GrantsCardData } from '../../lib/airtable';
 
 export const dynamic = 'force-dynamic';
 

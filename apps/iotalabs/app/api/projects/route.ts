@@ -1,7 +1,7 @@
-import { sanitizeInfraData, type CardShowcase } from '../../lib/airtable/sanitizeInfraData';
+import { getDataFromAirtable } from '@repo/shared/utils';
 import { NextResponse } from 'next/server';
-import { getDataFromAirtable } from '@lib/airtable';
-import { PROJECTS_ALLOWED_CATEGORIES } from '../../lib/constants/airtable.constants';
+import { sanitizeInfraData, type CardShowcase } from '../../lib/airtable';
+import { PROJECTS_ALLOWED_CATEGORIES } from '../../lib/constants';
 
 export const dynamic = 'force-dynamic';
 

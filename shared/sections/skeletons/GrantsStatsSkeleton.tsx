@@ -1,4 +1,4 @@
-import { DisplayStatsSkeleton } from '@components';
+import { DisplayStatsSkeleton } from '../../components';
 
 export function GrantsStatsSkeleton() {
     return (

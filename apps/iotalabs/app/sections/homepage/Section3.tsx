@@ -1,4 +1,4 @@
-import { TwoColumnsImageTemplate } from '@repo/shared';
+import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { DecoratedBox } from '@components';
 
 const TEXT = 'Empowering IOTA - Unleashing Ecosystem Growth';

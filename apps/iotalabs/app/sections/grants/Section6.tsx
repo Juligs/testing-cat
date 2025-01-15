@@ -1,16 +1,17 @@
-import { TwoColumnsImageTemplate } from '@repo/shared';
-import { ArrowTopRight } from '@repo/icons';
-import {
-    Button,
-    VerticalTitle,
-    TitleTextSize,
-    Actions,
-    ButtonVariant,
-    ImageCard,
-} from 'react-ui-kit';
 import { TIERED_CARDS, TIERED_STATS } from '@lib/constants';
-import { DisplayStats } from 'react-ui-kit';
+import { ArrowTopRight } from '@repo/icons';
+import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
+import {
+    Actions,
+    Button,
+    ButtonVariant,
+    DisplayStats,
+    ImageCard,
+    TitleTextSize,
+    VerticalTitle,
+} from 'react-ui-kit';
+
 export function Section6({ id }: { id: string }) {
     return (
         <section className="bg-[#5FF45B]" id={id}>

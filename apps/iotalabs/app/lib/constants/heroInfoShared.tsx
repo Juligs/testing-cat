@@ -1,5 +1,5 @@
 import { ArrowTopRight } from '@repo/icons';
-import { scrollToSection } from '@repo/shared';
+import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant, HeroBackground } from 'react-ui-kit';
 
 export const HERO_HOMEPAGE_INFO = {

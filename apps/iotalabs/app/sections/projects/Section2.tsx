@@ -1,5 +1,5 @@
 import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
-import { TwoColumnsImageTemplate } from '@repo/shared';
+import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { FetchProjectsData } from '@sections/subsections/projects';
 export function Section2({ id }: { id: string }) {
     return (

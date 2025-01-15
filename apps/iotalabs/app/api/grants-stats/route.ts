@@ -1,7 +1,5 @@
-import { getDataFromAirtable } from '@lib/airtable/getDataFromAirtable';
 import { NextResponse } from 'next/server';
-import { sanitizeGrantsStats } from '@lib/airtable';
-import { GrantsStats } from '@lib/airtable';
+import { getDataFromAirtable, sanitizeGrantsStats, GrantsStats } from '@repo/shared/utils';
 
 export const revalidate = 14400;
 

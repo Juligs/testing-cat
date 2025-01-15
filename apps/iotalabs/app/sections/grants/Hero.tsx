@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Hero as HeroComponent } from '@repo/shared';
+import { Hero as HeroComponent } from '@repo/shared/components';
 import {
     HERO_GRANTS_ANCHORLINKS,
     HERO_GRANTS_INFO,

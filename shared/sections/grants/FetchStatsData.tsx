@@ -1,7 +1,7 @@
 'use client';
-import { GrantsStats } from '@lib/airtable';
 import { useEffect, useState } from 'react';
-import { GrantsStatsSkeleton } from '@sections/skeletons';
+import { GrantsStatsSkeleton } from '../../sections/skeletons/GrantsStatsSkeleton';
+import { GrantsStats } from '../../utils/airtable';
 import { GrantsStatsSection } from './GrantsStatsSection';
 
 export function FetchGrantsStatsData() {

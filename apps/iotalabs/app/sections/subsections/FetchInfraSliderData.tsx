@@ -4,7 +4,7 @@ import { CardShowcase } from '@lib/airtable';
 import { InfraSlider } from './InfraSlider';
 import { InfrastructureCarouselSkeleton } from '@sections/skeletons';
 import { revalidateInfraAPI } from '@lib/airtable/revalidate';
-import { checkInvalidImageUrlsAndRevalidate } from '@repo/shared';
+import { checkInvalidImageUrlsAndRevalidate } from '@repo/shared/utils';
 
 export function FetchInfraSliderData() {
     const [dataInfraSlider, setDataInfraSlider] = useState<CardShowcase[] | undefined>(undefined);

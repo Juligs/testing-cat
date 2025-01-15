@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Hero as HeroComponent } from '@repo/shared';
+import { Hero as HeroComponent } from '@repo/shared/components';
 import { HERO_PROJECTS_BUTTON, HERO_PROJECTS_INFO, HERO_PROJECTS_BG } from '@lib/constants';
 interface HeroProps {
     id: string;

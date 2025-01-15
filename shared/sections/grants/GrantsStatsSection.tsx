@@ -1,4 +1,4 @@
-import { GrantsStats } from '@lib/airtable';
+import { GrantsStats } from '../../utils/airtable/sanitizeGrantsStats';
 import { ComponentProps } from 'react';
 import { DisplayStats } from 'react-ui-kit';
 

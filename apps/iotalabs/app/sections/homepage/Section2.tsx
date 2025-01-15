@@ -1,4 +1,4 @@
-import { TwoColumnsImageTemplate } from '@repo/shared';
+import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { DecoratedBox } from '@components';
 import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
 

@@ -4,7 +4,7 @@ import { GrantsCardData } from '@lib/airtable';
 import { GrantSlider } from './GrantsSlider';
 import { GrantsCarouselSkeleton } from '@sections/skeletons';
 import { revalidateGrantsAPI } from '@lib/airtable';
-import { checkInvalidImageUrlsAndRevalidate } from '@repo/shared';
+import { checkInvalidImageUrlsAndRevalidate } from '@repo/shared/utils';
 
 export function FetchGrantsSliderData() {
     const [dataGrantsSlider, setDataGrantsSlider] = useState<GrantsCardData[] | undefined>(

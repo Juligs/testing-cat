@@ -1,4 +1,4 @@
-import { Hero as HeroComponent } from '@repo/shared';
+import { Hero as HeroComponent } from '@repo/shared/components';
 import { HERO_HOMEPAGE_INFO, HERO_HOMEPAGE_BG } from '@lib/constants';
 
 export function Hero({ id }: { id: string }) {

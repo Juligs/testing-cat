@@ -1,5 +1,5 @@
 'use client';
-import { checkInvalidImageUrlsAndRevalidate } from '@repo/shared';
+import { checkInvalidImageUrlsAndRevalidate } from '@repo/shared/utils';
 import { useEffect, useState } from 'react';
 import { CardShowcase } from '@lib/airtable';
 import { ProjectsData } from './ProjectsData';

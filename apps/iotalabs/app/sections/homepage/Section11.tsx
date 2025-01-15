@@ -1,4 +1,4 @@
-import { TwoColumnsImageTemplate } from '@repo/shared';
+import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';
