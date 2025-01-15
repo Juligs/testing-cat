@@ -1,5 +1,6 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
+import { Section2 } from '@sections';
 
 const METADATA_TITLE = 'We Bring the Real World to Web3';
 const METADATA_DESCRIPTION =
@@ -11,9 +12,5 @@ export const metadata: Metadata = getPageMetadata({
 });
 
 export default function Home() {
-    return (
-        <div className="flex items-center justify-center h-full w-full bg-color-gradient">
-            <main className="text-darkest text-display-md">IOTA Network</main>
-        </div>
-    );
+    return <Section2 id="section-2" />;
 }
