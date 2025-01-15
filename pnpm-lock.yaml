@@ -41,6 +41,9 @@ importers:
       '@repo/icons':
         specifier: workspace:*
         version: link:../../icons
+      '@repo/shared':
+        specifier: workspace:*
+        version: link:../../shared
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.12)

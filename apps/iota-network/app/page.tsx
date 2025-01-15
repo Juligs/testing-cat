@@ -1,6 +1,6 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { Section2 } from '@sections';
+import { Hero, Section2 } from '@sections';
 
 const METADATA_TITLE = 'We Bring the Real World to Web3';
 const METADATA_DESCRIPTION =
@@ -12,5 +12,10 @@ export const metadata: Metadata = getPageMetadata({
 });
 
 export default function Home() {
-    return <Section2 id="section-2" />;
+    return (
+        <>
+            <Hero id="hero" />
+            <Section2 id="section-2" />
+        </>
+    );
 }

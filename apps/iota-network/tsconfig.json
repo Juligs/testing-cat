@@ -8,15 +8,18 @@
         ],
         "baseUrl": "./",
         "paths": {
-            "@shared/*": ["../../shared/*"],
             "@lib/*": ["app/lib/*"],
             "@components": ["app/components"],
             "@components/*": ["app/components/*"],
             "@sections": ["app/sections"],
-            "@sections/*": ["app/sections/*"]
+            "@sections/*": ["app/sections/*"],
+            "@repo/shared": ["../../shared"],
+            "@repo/shared/*": ["../../shared/*"]
         }
     },
     "include": [
+        "../../shared/**/*.ts",
+        "../../shared/**/*.tsx",
         "next-env.d.ts",
         "next.config.mjs",
         "**/*.ts",
