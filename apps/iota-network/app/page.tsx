@@ -1,6 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import { Hero, Section2 } from '@sections';
+import { LighthouseProjects } from '@repo/shared/components';
 
 const METADATA_TITLE = 'We Bring the Real World to Web3';
 const METADATA_DESCRIPTION =
@@ -16,6 +17,7 @@ export default function Home() {
         <>
             <Hero id="hero" />
             <Section2 id="section-2" />
+            <LighthouseProjects id="lighthouse-projects" />
         </>
     );
 }
