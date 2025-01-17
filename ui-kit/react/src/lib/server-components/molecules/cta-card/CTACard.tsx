@@ -66,7 +66,7 @@ export function CtaCard({
     return (
         <div
             className={clsx(
-                'flex w-auto h-auto overflow-hidden rounded-4xl items-center justify-center text-center',
+                'flex w-full overflow-hidden rounded-4xl items-center text-center',
                 bgColor,
                 flexDirection,
             )}
@@ -75,15 +75,14 @@ export function CtaCard({
                 src={image}
                 alt={alt}
                 className={clsx(
-                    'w-full h-auto object-cover',
-                    isVertical ? 'sm:w-full sm:aspect-[21/9]' : 'sm:w-1/2 aspect-[4/3]',
-                    '!xs:aspect-video',
+                    'w-full h-auto object-cover aspect-[4/3] xs:aspect-video',
+                    isVertical ? 'sm:aspect-[21/9]' : 'sm:w-1/2 sm:aspect-[4/3]',
                 )}
             />
 
             <div
                 className={clsx(
-                    'sm:w-1/2 flex flex-col items-center justify-center text-center w-full gap-2 xs:gap-4',
+                    'sm:w-1/2 flex flex-col items-center justify-start text-center w-full gap-2 xs:gap-4 h-full',
                     { 'sm:w-full': isVertical },
                     PADDING_SIZE,
                 )}
