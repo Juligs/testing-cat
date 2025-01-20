@@ -1,10 +1,15 @@
+'use client';
+
 import { CONTACT_EMAIL, LEGAL_ROUTES, ROUTES, SOCIAL_LINKS } from '@lib/constants';
+import { useScreenSize } from '@repo/shared/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button, ButtonVariant } from 'react-ui-kit';
+import { Button, ButtonSize, ButtonVariant, ScreenSize } from 'react-ui-kit';
 import { Logo } from '../logo';
 
 export function Footer() {
+    const { size: screenSize } = useScreenSize();
+
     const COPYRIGHT_YEAR = new Date().getFullYear();
     const footerRoutes = ROUTES.filter((route) => !route.hideFromFooter);
     return (
@@ -75,8 +80,8 @@ export function Footer() {
                             © {COPYRIGHT_YEAR} iotalabs
                         </span>
                     </div>
-                    <div className="flex flex-wrap gap-6">
-                        {SOCIAL_LINKS.map(({ url, icon }, index) => {
+                    <div className="flex flex-wrap gap-4">
+                        {SOCIAL_LINKS.map(({ title, url, icon }, index) => {
                             const Icon = icon;
                             return (
                                 <Link
@@ -86,6 +91,12 @@ export function Footer() {
                                     rel="noopener noreferrer"
                                 >
                                     <Button
+                                        size={
+                                            [ScreenSize.Xs, ScreenSize.Sm].includes(screenSize)
+                                                ? ButtonSize.Small
+                                                : ButtonSize.Medium
+                                        }
+                                        text={title}
                                         variant={ButtonVariant.Ghost}
                                         inverted
                                         icon={<Icon className="text-labs-neutral-100" />}
