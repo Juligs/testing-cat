@@ -39,13 +39,14 @@ export const LEGAL_ROUTES: Route[] = [
 
 export const SOCIAL_LINKS = [
     {
-        title: 'Community',
+        title: 'Builder',
+
         icon: Discord,
         url: 'https://builders-discord.iota.org/',
         isExternal: true,
     },
     {
-        title: 'Builder',
+        title: 'Community',
         icon: Discord,
         url: 'https://discord.iota.org',
         isExternal: true,
