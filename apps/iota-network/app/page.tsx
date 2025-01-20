@@ -1,5 +1,5 @@
 import { getPageMetadata } from '@lib/utils';
-import { LighthouseProjects } from '@repo/shared/components';
+import { LighthouseProjects, RwaSection } from '@repo/shared/components';
 import { Hero, Section2, Section3, Section10, Section8 } from '@sections';
 import type { Metadata } from 'next';
 
@@ -18,8 +18,9 @@ export default function Home() {
             <Hero id="hero" />
             <Section2 id="section-2" />
             <Section3 id="section-3" />
-            <Section8 id="section-8" />
+            <RwaSection id="real-world-adoption" />
             <LighthouseProjects id="lighthouse-projects" />
+            <Section8 id="section-8" />
             <Section10 id="section-10" />
         </>
     );

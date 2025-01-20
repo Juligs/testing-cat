@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import { ImageCard, BREAKPOINTS, ScreenSize } from 'react-ui-kit';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
-import { SliderNavigation } from '@components';
+import { SliderNavigation } from '@repo/shared/components';
 import { Scrollbar, A11y, Pagination } from 'swiper/modules';
 import { GrantsCardData } from '@lib/airtable';
 import {
@@ -12,7 +12,7 @@ import {
     SPACE_BETWEEN_SLIDES,
     SLIDES_IN_DESKTOP,
     SLIDES_IN_MOBILE,
-} from '@lib/constants';
+} from '@repo/shared/constants';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Link from 'next/link';

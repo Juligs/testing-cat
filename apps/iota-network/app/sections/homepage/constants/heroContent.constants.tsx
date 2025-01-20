@@ -41,6 +41,6 @@ export const HERO_HOMEPAGE_ANCHORLINKS = [
 ];
 
 export const HERO_HOMEPAGE_BG: React.ComponentProps<typeof HeroBackground> = {
-    src: '/homepage/hero.svg',
+    src: '/homepage/hero.png',
     type: 'image',
 };
