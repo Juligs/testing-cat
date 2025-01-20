@@ -1,3 +1,5 @@
+import { Navigation } from '@components';
+import { ROUTES } from '@lib/constants';
 import { Metadata } from 'next';
 import { ContextProviders } from './providers';
 import { getPageMetadata } from '@lib/utils';
@@ -11,11 +13,15 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+    const navbarItems = ROUTES.filter((route) => !route.hideFromNavbar);
     return (
         <html lang="en">
             <body>
                 <FontLinks />
-                <ContextProviders>{children}</ContextProviders>
+                <ContextProviders>
+                    <Navigation items={navbarItems} />
+                    {children}
+                </ContextProviders>
             </body>
         </html>
     );

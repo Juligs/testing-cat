@@ -41,6 +41,6 @@ export const HERO_HOMEPAGE_ANCHORLINKS = [
 ];
 
 export const HERO_HOMEPAGE_BG: React.ComponentProps<typeof HeroBackground> = {
-    src: '/homepage/hero.png',
+    src: 'https://files.iota.org/media/iota-network/homepage_hero_poster.jpg',
     type: 'image',
 };
