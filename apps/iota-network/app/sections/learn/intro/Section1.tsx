@@ -1,0 +1,14 @@
+const TEXT =
+    'IOTA delivers permissionless public blockchain infrastructure to bring the advancements of Web3 into the real world. ';
+
+export function Section1({ id }: { id: string }) {
+    return (
+        <section className="w-full" id={id}>
+            <div className="container py-10 xs:py-16 lg:py-20 flex justify-center text-center">
+                <p className="text-headline-sm text-darkest max-w-sm xs:max-w-3xl sm:max-w-lg lg:max-w-xl xl:max-w-[708px] font-semibold">
+                    {TEXT}
+                </p>
+            </div>
+        </section>
+    );
+}
