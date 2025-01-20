@@ -1,7 +1,7 @@
 import { ArrowTopRight } from '@repo/icons';
 import { ButtonVariant } from 'react-ui-kit';
 
-export const SECTION7_VERTICAL_TITLE_CONTENT = {
+export const SECTION8_VERTICAL_TITLE_CONTENT = {
     title: 'Why Build on IOTA?',
     subtitle: [
         'A trust layer for the world: Cutting-edge technology',
@@ -10,7 +10,7 @@ export const SECTION7_VERTICAL_TITLE_CONTENT = {
     body: 'IOTA offers unmatched decentralization, permissionless access, energy efficiency, rapid transactions, equitable tokenomics, and robust censorship resistance, ensuring reliability for your business needs.',
 };
 
-export const SECTION7_BUTTONS = [
+export const SECTION8_BUTTONS = [
     {
         text: 'Get Started',
         link: 'https://docs.iota.org/developer/getting-started',
@@ -27,40 +27,41 @@ export const SECTION7_BUTTONS = [
     },
 ];
 
-export const SECTION7_IMAGE_CARD_CONTENT = [
+export const SECTION8_IMAGE_CARD_CONTENT = [
     {
         title: 'Move Base Layer 1 and EVM',
         subtitle: 'Define rich and composable on-chain assets',
-        image: '/homepage/section7/image-card-images/move-base.png',
+        image: '/homepage/section8/image-card-images/move-base.png',
         link: 'https://docs.iota.org/about-iota',
     },
     {
         title: 'Advanced Identity Features',
         subtitle: 'Verification of tokenized asset authenticity',
-        image: '/homepage/section7/image-card-images/advance-identity.png',
+        image: '/homepage/section8/image-card-images/advance-identity.png',
         link: 'https://docs.iota.org/iota-identity',
     },
     {
         title: 'Web Wallet Extension',
         subtitle: 'Frictionless onboarding with the IOTA wallet ',
-        image: '/homepage/section7/image-card-images/web-wallet.png',
+        image: '/homepage/section8/image-card-images/web-wallet.png',
         link: 'https://docs.iota.org/about-iota/iota-wallet/getting-started',
     },
     {
         title: 'Parallel TX Processing',
         subtitle: 'Unmatched scalability, instant settlement ',
-        image: '/homepage/section7/image-card-images/parallel-tx.png',
+        image: '/homepage/section8/image-card-images/parallel-tx.png',
         link: 'https://docs.iota.org/about-iota#consensus-on-iota',
     },
 ];
 
-export const SECTION7_CTA_CARD_CONTENT = {
+export const SECTION8_CTA_CARD_CONTENT = {
     title: 'A Versatile Ledger for the Future That Works Today',
     subtitle: 'Unmatched interoperability across Virtual Machines and chains',
-    image: '/homepage/section7/cta-card.svg',
+    image: '/homepage/section8/cta-card.png',
+    inverted: true,
 };
 
-export const SECTION7_TEXT_LINK = [
+export const SECTION8_TEXT_LINK = [
     {
         text: 'Get stated with Move',
         link: 'https://docs.iota.org/developer/iota-101/move-overview/',
