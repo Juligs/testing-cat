@@ -6,6 +6,7 @@ import {
     LearnPageSection2,
     LearnPageSection3,
     LearnPageSection4,
+    LearnPageSection5,
 } from '@sections';
 
 const METADATA_TITLE = 'Learn';
@@ -24,6 +25,7 @@ export default function Home() {
             <LearnPageSection2 id="section-2" />
             <LearnPageSection3 id="section-3" />
             <LearnPageSection4 id="section-4" />
+            <LearnPageSection5 id="section-5" />
         </>
     );
 }

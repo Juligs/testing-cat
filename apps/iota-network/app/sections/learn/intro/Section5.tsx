@@ -1,20 +1,20 @@
-import { VerticalTitle, Actions, Button, ButtonVariant } from 'react-ui-kit';
-import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import Link from 'next/link';
 import { ArrowTopRight } from '@repo/icons';
-import { SECTION2_VERTICAL_TITLE_CONTENT } from './constants';
+import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
+import Link from 'next/link';
+import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
+import { BUILDING_VERTICAL_TITLE_CONTENT } from './constants';
 
-export function Section2({ id, theme }: BaseSectionProps) {
+export function Section5({ id, theme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
+        <section className="w-full" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30">
-                <TwoColumnsImageTemplate image="/learn/intro/section2/what-is-iota.png">
+                <TwoColumnsImageTemplate image="/learn/intro/section5/building.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
-                        <VerticalTitle {...SECTION2_VERTICAL_TITLE_CONTENT}>
+                        <VerticalTitle {...BUILDING_VERTICAL_TITLE_CONTENT}>
                             <Actions>
                                 <Link
-                                    href="https://docs.iota.org/about-iota"
+                                    href="https://docs.iota.org/about-iota/iota-architecture/consensus"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
