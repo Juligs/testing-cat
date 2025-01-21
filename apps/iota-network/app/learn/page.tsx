@@ -1,6 +1,6 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { LearnPageHero, LearnPageSection1, LearnPageSection2 } from '@sections';
+import { LearnPageHero, LearnPageSection1, LearnPageSection2, LearnPageSection3 } from '@sections';
 
 const METADATA_TITLE = 'Learn';
 const METADATA_DESCRIPTION = 'We Build Cutting-Edge Technology';
@@ -16,6 +16,7 @@ export default function Home() {
             <LearnPageHero id="hero" theme="inverted" />
             <LearnPageSection1 id="section-1" />
             <LearnPageSection2 id="section-2" />
+            <LearnPageSection3 id="section-3" />
         </>
     );
 }
