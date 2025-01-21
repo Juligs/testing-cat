@@ -3,9 +3,11 @@ import {
     LIGHTHOUSE_IMAGE_CARD_CONTENT,
     LIGHTHOUSE_VERTICAL_TITLE_CONTENT,
 } from './lighthouseContent.constants';
-export function LighthouseProjects({ id }: { id: string }) {
+import { BaseSectionProps } from '@repo/shared/interfaces';
+
+export function LighthouseProjects({ id, theme }: BaseSectionProps) {
     return (
-        <section id={id} className="bg-white">
+        <section className="bg-white" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-10 sm:gap-20">
                 <VerticalTitle
                     title={LIGHTHOUSE_VERTICAL_TITLE_CONTENT.title}

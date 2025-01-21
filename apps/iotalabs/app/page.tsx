@@ -26,14 +26,14 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <Hero id="hero-inverted" />
+            <Hero id="hero" theme="inverted" />
             <Section1 id="section-1" />
             <Section2 id="section-2" />
-            <Section3 id="section-3-inverted" />
+            <Section3 id="section-3" theme="inverted" />
             <Section4 id="section-4" />
             <Section5 id="section-5" />
             <Section6 id="section-6" />
-            <Section7 id="section-7-inverted" />
+            <Section7 id="section-7" theme="inverted" />
             <Section8 id="section-8" />
             <Section9 id="section-9" />
             <Section10 id="section-10" />

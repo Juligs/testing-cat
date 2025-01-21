@@ -15,12 +15,12 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <Hero id="hero-inverted" />
-            <Section2 id="section-2-inverted" />
+            <Hero id="hero" theme="inverted" />
+            <Section2 id="section-2" theme="inverted" />
             <Section3 id="section-3" />
             <RwaSection id="real-world-adoption" />
             <LighthouseProjects id="lighthouse-projects" />
-            <Section8 id="section-8-inverted" />
+            <Section8 id="section-8" theme="inverted" />
             <Section10 id="section-10" />
         </>
     );

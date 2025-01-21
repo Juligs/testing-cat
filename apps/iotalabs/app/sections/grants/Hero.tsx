@@ -8,9 +8,11 @@ import {
     HERO_GRANTS_BUTTON,
     HERO_GRANTS_BG,
 } from '@lib/constants';
-export function Hero({ id }: { id: string }) {
+import { BaseSectionProps } from '@repo/shared/interfaces';
+
+export function Hero({ id, theme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id}>
+        <section className="w-full" id={id} data-theme={theme}>
             <HeroComponent
                 verticalTitle={HERO_GRANTS_INFO}
                 background={HERO_GRANTS_BG}

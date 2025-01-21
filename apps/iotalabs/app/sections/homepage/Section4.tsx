@@ -2,6 +2,7 @@ import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 're
 import { ArrowTopRight } from '@repo/icons';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const VERTICAL_TITLE_INFO = {
     title: 'A New Era of Tokenization',
@@ -10,9 +11,9 @@ const VERTICAL_TITLE_INFO = {
     body: 'A fusion of the IOTA flexible and highly interoperable structure with an advanced EVM-compatible smart contract chain, ushering in a new era for seamlessly tokenizing real-world assets.',
 };
 
-export function Section4({ id }: { id: string }) {
+export function Section4({ id, theme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id}>
+        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
             <div className="container py-30 flex flex-col gap-30 justify-center items-center">
                 <div className="max-w-80 xs:max-w-2xl sm:max-w-xl xl:max-w-[708px]">
                     <VerticalTitle

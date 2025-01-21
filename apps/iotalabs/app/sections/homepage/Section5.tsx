@@ -1,5 +1,6 @@
 import { AnchorLink, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import Link from 'next/link';
+import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const EXTERNAL_LINKS = [
     {
@@ -16,9 +17,9 @@ const EXTERNAL_LINKS = [
     },
 ];
 
-export function Section5({ id }: { id: string }) {
+export function Section5({ id, theme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id}>
+        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col xs:flex-row justify-between text-center gap-14 xs:items-baseline">
                 <div className="xs:w-1/2 xl:w-2/5 shrink-0">
                     <VerticalTitle

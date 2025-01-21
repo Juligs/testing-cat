@@ -2,15 +2,16 @@ import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';
+import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const VERTICAL_TITLE_INFO = {
     title: 'iotalabs News',
     body: 'Discover the latest developments in our ecosystem, including new partnerships, funding opportunities, and collaborative projects',
 };
 
-export function Section10({ id }: { id: string }) {
+export function Section10({ id, theme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id}>
+        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex justify-center text-center">
                 <TwoColumnsImageTemplate image="/homepage/section11.svg">
                     <div className="sm:pr-[116px] lg:pr-[126px] xl:max-w-xl">

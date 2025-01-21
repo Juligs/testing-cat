@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 interface SectionObserverProps {
-    onSectionChange: (activeSectionId: string | null) => void;
+    onSectionChange: (sectionId: string | null, theme: string | null) => void;
 }
 
 export function SectionObserver({ onSectionChange }: SectionObserverProps) {
@@ -17,6 +17,18 @@ export function SectionObserver({ onSectionChange }: SectionObserverProps) {
             container?.querySelectorAll('section') || [],
         ) as HTMLElement[];
         const sections = sectionElements.map((s) => s.id);
+
+        const updateActiveSection = (activeSection: string | null) => {
+            if (activeSection) {
+                const activeElement = sectionElements.find(
+                    (section) => section.id === activeSection,
+                );
+                const theme = activeElement?.getAttribute('data-theme') || null;
+                onSectionChange(activeSection, theme);
+            } else {
+                onSectionChange(null, null);
+            }
+        };
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -33,7 +45,8 @@ export function SectionObserver({ onSectionChange }: SectionObserverProps) {
                         if (visiblePosition > -1) visible.splice(visiblePosition, 1);
                     }
                 });
-                onSectionChange(visible[0] || null);
+
+                updateActiveSection(visible[0] || null);
             },
             { threshold: [0] },
         );
@@ -42,7 +55,7 @@ export function SectionObserver({ onSectionChange }: SectionObserverProps) {
 
         return () => {
             observer.disconnect();
-            onSectionChange(null);
+            onSectionChange(null, null);
         };
     }, [onSectionChange, currentPath]); // Reobserve on path change
 

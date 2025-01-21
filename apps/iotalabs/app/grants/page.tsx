@@ -22,12 +22,12 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <GrantsPageHero id="hero-inverted" />
+            <GrantsPageHero id="hero" theme="inverted" />
             <GrantsPageSection1 id="section-1" />
             <GrantsPageSection2 id="section-2" />
             <GrantsPageSection3 id="section-3" />
             <GrantsPageSection4 id="section-4" />
-            <GrantsPageSection5 id="section-5-inverted" />
+            <GrantsPageSection5 id="section-5" theme="inverted" />
             <GrantsPageSection6 id="section-6" />
         </>
     );

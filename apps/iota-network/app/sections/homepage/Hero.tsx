@@ -8,9 +8,11 @@ import {
     HERO_HOMEPAGE_BG,
     HERO_HOMEPAGE_BUTTON,
 } from './constants';
-export function Hero({ id }: { id: string }) {
+import { BaseSectionProps } from '@repo/shared/interfaces';
+
+export function Hero({ id, theme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id}>
+        <section className="w-full" id={id} data-theme={theme}>
             <HeroComponent
                 verticalTitle={HERO_HOMEPAGE_CONTENT}
                 background={HERO_HOMEPAGE_BG}

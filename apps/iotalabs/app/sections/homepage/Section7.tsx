@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { CtaCard, TextLink } from 'react-ui-kit';
+import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function Section7({ id }: { id: string }) {
+export function Section7({ id, theme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id}>
+        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
             <div className="container w-full py-14 xs:py-30">
                 <CtaCard
                     title="EVM Toolkit"

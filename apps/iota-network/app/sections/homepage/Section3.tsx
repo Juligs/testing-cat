@@ -1,11 +1,12 @@
 import { TitleTextSize, VerticalTitle, CtaCard, ImageCard } from 'react-ui-kit';
 import { CTA_CARD_CONTENT, IMAGE_CARD_CONTENT, VERTICAL_TITLE_CONTENT } from './constants';
+import { BaseSectionProps } from '@repo/shared/interfaces';
 
 import Link from 'next/link';
 
-export function Section3({ id }: { id: string }) {
+export function Section3({ id, theme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id}>
+        <section className="w-full" id={id} data-theme={theme}>
             <div className="container py-14 sm:py-20 lg:py-30 flex justify-center  items-center flex-col gap-14 xs:gap-20 w-full">
                 <div className="w-full xs:w-[650px] text-center">
                     <VerticalTitle

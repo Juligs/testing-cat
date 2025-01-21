@@ -13,7 +13,7 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <LearnPageHero id="hero-inverted" />
+            <LearnPageHero id="hero" theme="inverted" />
             <LearnPageSection1 id="section-1" />
         </>
     );

@@ -1,10 +1,11 @@
 import { Actions, CtaCard, TextLink } from 'react-ui-kit';
 import { MOVE_CTA_CONTENT } from './constants';
 import Link from 'next/link';
+import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function Section2({ id }: { id: string }) {
+export function Section2({ id, theme }: BaseSectionProps) {
     return (
-        <section id={id}>
+        <section id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex justify-center items-center w-full">
                 <CtaCard {...MOVE_CTA_CONTENT}>
                     <Actions>

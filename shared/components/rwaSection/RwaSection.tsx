@@ -1,9 +1,11 @@
 import { Actions, TextLink, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 import { RWA_VERTICAL_TITLE_CONTENT } from './rwaContent.constants';
 import { RwaCarousel } from './RwaCarousel';
-export function RwaSection({ id }: { id: string }) {
+import { BaseSectionProps } from '@repo/shared/interfaces';
+
+export function RwaSection({ id, theme }: BaseSectionProps) {
     return (
-        <section className="bg-white" id={id}>
+        <section className="bg-white" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-10 sm:gap-20">
                 <VerticalTitle
                     title={RWA_VERTICAL_TITLE_CONTENT.title}

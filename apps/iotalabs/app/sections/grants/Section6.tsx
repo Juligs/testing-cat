@@ -11,10 +11,11 @@ import {
     TitleTextSize,
     VerticalTitle,
 } from 'react-ui-kit';
+import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function Section6({ id }: { id: string }) {
+export function Section6({ id, theme }: BaseSectionProps) {
     return (
-        <section className="bg-[#5FF45B]" id={id}>
+        <section className="bg-[#5FF45B]" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
                 <TwoColumnsImageTemplate image="/grants/section6.svg">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">

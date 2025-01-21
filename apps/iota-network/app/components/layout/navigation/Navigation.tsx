@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Navbar, NavbarItem, NavbarItems } from 'react-ui-kit';
 import { Logo } from '../logo';
 import { Route } from '@lib/interfaces';
@@ -12,17 +12,27 @@ interface NavigationProps {
     items: Route[];
 }
 
+interface SectionInfo {
+    id: string | null;
+    theme: string | null;
+}
+
 export function Navigation({ items }: NavigationProps) {
-    const [activeSection, setActiveSection] = useState<string | null>(null);
+    const [activeSection, setActiveSection] = useState<SectionInfo>({ id: null, theme: null });
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
     const currentPath = usePathname();
-    const isInverted = activeSection?.includes('inverted');
+
+    const isInverted = activeSection.theme === 'inverted';
 
     const handleLinkClick = (path: string | undefined) => {
         if (path) {
             setIsMobileNavOpen(false);
         }
     };
+
+    const handleSectionChange = useCallback((sectionId: string | null, theme: string | null) => {
+        setActiveSection({ id: sectionId, theme: theme });
+    }, []);
 
     return (
         <>
@@ -58,7 +68,7 @@ export function Navigation({ items }: NavigationProps) {
                     </NavbarItems>
                 </Navbar>
             </div>
-            <IntersectionObserver onSectionChange={setActiveSection} />
+            <IntersectionObserver onSectionChange={handleSectionChange} />
         </>
     );
 }

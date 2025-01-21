@@ -43,7 +43,7 @@ export const HERO_GRANTS_ANCHORLINKS = [
     },
     {
         text: 'Funding Guidelines',
-        onClick: () => scrollToSection('#section-5-inverted'),
+        onClick: () => scrollToSection('#section-5'),
     },
 ];
 
