@@ -4,4 +4,5 @@ export { Section2 as LearnPageSection2 } from './Section2';
 export { Section3 as LearnPageSection3 } from './Section3';
 export { Section4 as LearnPageSection4 } from './Section4';
 export { Section5 as LearnPageSection5 } from './Section5';
+export { Section6 as LearnPageSection6 } from './Section6';
 export * from './components';
