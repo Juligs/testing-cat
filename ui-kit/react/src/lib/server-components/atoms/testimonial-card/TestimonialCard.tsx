@@ -52,14 +52,14 @@ export function TestimonialCard({
                 <div className="flex gap-6 items-start">
                     {image && (
                         <img
-                            className="w-16 h-full aspect-square rounded-full object-cover"
+                            className="w-16 aspect-square rounded-full object-cover"
                             src={image}
                             alt={name}
                         />
                     )}
                     <div
                         className={clsx(
-                            'flex flex-col items-start py-2 w-full',
+                            'flex flex-col items-start py-2 w-full flex-grow',
                             textColorSupporting,
                         )}
                     >
