@@ -25,7 +25,7 @@ export const HERO_GRANTS_INFO = {
 export const HERO_GRANTS_BUTTON = [
     {
         text: 'Apply for a grant',
-        link: 'https://airtable.com/appQqzg74YoTqK3Ht/pagSAWuqfqh3qIDg1/form',
+        link: 'https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form',
         variant: ButtonVariant.Primary,
         icon: <ArrowTopRight />,
         inverted: true,
