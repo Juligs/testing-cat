@@ -1,0 +1,29 @@
+import { ExploreCard } from 'react-ui-kit';
+import { VerticalTitle } from 'react-ui-kit';
+import { TitleTextSize } from 'react-ui-kit';
+interface moreToExploreProps {
+    text: string;
+    content: (React.ComponentProps<typeof ExploreCard> & {
+        link: string;
+    })[];
+}
+export function MoreToExplore({ text, content }: moreToExploreProps): JSX.Element {
+    return (
+        <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-12">
+            <VerticalTitle title={text} size={TitleTextSize.ExtraSmall} />
+            <div className="grid grid-cols-1 xs:grid-cols-2 gap-6">
+                {content.map((data, index) => (
+                    <a
+                        href={data.link}
+                        key={index}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="[&>div]:h-full"
+                    >
+                        <ExploreCard key={index} title={data.title} subtitle={data.subtitle} />
+                    </a>
+                ))}
+            </div>
+        </div>
+    );
+}
