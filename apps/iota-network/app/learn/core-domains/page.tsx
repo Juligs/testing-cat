@@ -1,6 +1,6 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { CorePageHero, CorePageSection1 } from '@sections';
+import { CorePageHero, CorePageSection1, CoreLastSection } from '@sections';
 import {
     RealWorldAssetTokenizationSection,
     TradeAndSupplyChainsSection,
@@ -28,6 +28,7 @@ export default function Home() {
             <DigitalIdentitySection id="digital-identity" />
             <CircularEconomy id="circular-economy" />
             <DecentralizedFinance id="decentralized-finance" />
+            <CoreLastSection id="lastSection" />
         </>
     );
 }

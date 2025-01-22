@@ -5,6 +5,7 @@ interface moreToExploreProps {
     text: string;
     content: (React.ComponentProps<typeof ExploreCard> & {
         link: string;
+        isExternal?: boolean;
     })[];
 }
 export function MoreToExplore({ text, content }: moreToExploreProps): JSX.Element {
@@ -16,8 +17,8 @@ export function MoreToExplore({ text, content }: moreToExploreProps): JSX.Elemen
                     <a
                         href={data.link}
                         key={index}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target={data.isExternal ? '_blank' : '_self'}
+                        rel={data.isExternal ? 'noopener noreferrer' : undefined}
                         className="[&>div]:h-full"
                     >
                         <ExploreCard key={index} title={data.title} subtitle={data.subtitle} />
