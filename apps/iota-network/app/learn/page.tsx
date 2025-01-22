@@ -9,6 +9,7 @@ import {
     LearnPageSection5,
     LearnPageSection6,
     LearnPageSection7,
+    LearnPageSection8,
     LearnPageSection10,
 } from '@sections';
 
@@ -31,6 +32,7 @@ export default function Home() {
             <LearnPageSection5 id="section-5" />
             <LearnPageSection6 id="section-6" />
             <LearnPageSection7 id="section-7" theme="inverted" />
+            <LearnPageSection8 id="section-8" />
             <LearnPageSection10 id="section-10" />
         </>
     );

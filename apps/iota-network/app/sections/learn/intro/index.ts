@@ -6,5 +6,6 @@ export { Section4 as LearnPageSection4 } from './Section4';
 export { Section5 as LearnPageSection5 } from './Section5';
 export { Section6 as LearnPageSection6 } from './Section6';
 export { Section7 as LearnPageSection7 } from './Section7';
+export { Section8 as LearnPageSection8 } from './Section8';
 export { Section10 as LearnPageSection10 } from './Section10';
 export * from './components';
