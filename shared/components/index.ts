@@ -7,3 +7,4 @@ export * from './intersection-observer';
 export * from './slider-navigation';
 export * from './rwaSection';
 export * from './moreToExplote';
+export * from './verticalTitleWithAnchorLinksSection';

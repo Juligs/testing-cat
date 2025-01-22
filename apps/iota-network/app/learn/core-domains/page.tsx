@@ -1,6 +1,6 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { CorePageHero } from '@sections';
+import { CorePageHero, CorePageSection1 } from '@sections';
 
 const METADATA_TITLE = 'Core Domains';
 const METADATA_DESCRIPTION =
@@ -15,6 +15,7 @@ export default function Home() {
     return (
         <>
             <CorePageHero id="hero" theme="inverted" />
+            <CorePageSection1 id="section1" />
         </>
     );
 }
