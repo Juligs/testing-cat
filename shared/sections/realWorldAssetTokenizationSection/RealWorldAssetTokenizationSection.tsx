@@ -1,25 +1,24 @@
 import { ArrowTopRight } from '@repo/icons';
-import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { BaseSectionProps } from '@repo/shared/interfaces';
-import Link from 'next/link';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
-import { VISION_VERTICAL_TITLE_CONTENT } from './constants';
+import { TwoColumnsImageTemplate } from '../../components';
+import { BaseSectionProps } from '../../interfaces';
+import { REAL_WORLD_VERTICAL_TITLE_CONTENT } from './realWorldContent.constants';
 
-export function Section8({ id, theme }: BaseSectionProps) {
+export function RealWorldAssetTokenizationSection({ id, theme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id} data-theme={theme}>
+        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30">
-                <TwoColumnsImageTemplate image="/shared/core-domains-sections/trade-&-supply.png">
+                <TwoColumnsImageTemplate image="/shared/core-domains-sections/real-world-section.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
-                        <VerticalTitle {...VISION_VERTICAL_TITLE_CONTENT}>
+                        <VerticalTitle {...REAL_WORLD_VERTICAL_TITLE_CONTENT}>
                             <Actions>
-                                <Link href="" target="_blank" rel="noopener noreferrer">
+                                <a href="/learn/showcases/multiknip">
                                     <Button
                                         variant={ButtonVariant.Primary}
-                                        text="IOTA Foundation"
+                                        text="See showcase"
                                         icon={<ArrowTopRight />}
                                     />
-                                </Link>
+                                </a>
                             </Actions>
                         </VerticalTitle>
                     </div>

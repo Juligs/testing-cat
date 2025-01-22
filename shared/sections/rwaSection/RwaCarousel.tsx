@@ -8,7 +8,7 @@ import { A11y, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { SPACE_BETWEEN_SLIDES } from '../../constants';
-import { SliderNavigation } from '../slider-navigation';
+import { SliderNavigation } from '../../components';
 import { CTA_CAROUSEL_CONTENT, LOGOS_CAROUSEL } from './rwaContent.constants';
 
 export function RwaCarousel() {

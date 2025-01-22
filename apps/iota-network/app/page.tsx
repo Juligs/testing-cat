@@ -1,5 +1,5 @@
 import { getPageMetadata } from '@lib/utils';
-import { LighthouseProjects, RwaSection } from '@repo/shared/components';
+import { LighthouseProjects, RwaSection } from '@repo/shared/sections';
 import { Hero, Section2, Section3, Section10, Section8 } from '@sections';
 import type { Metadata } from 'next';
 

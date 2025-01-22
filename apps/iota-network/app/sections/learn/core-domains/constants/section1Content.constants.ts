@@ -6,7 +6,7 @@ export const SECTION1_ANCHORLINKS = [
     },
     {
         text: 'Trade & Supply Chains',
-        onClick: () => scrollToSection('#trade-&-supply-chains'),
+        onClick: () => scrollToSection('#trade-and-supply-chains'),
     },
     {
         text: 'Circular Economy',
