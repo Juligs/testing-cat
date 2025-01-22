@@ -10,4 +10,8 @@ export const ROUTES: Route[] = [
         title: 'Learn',
         path: '/learn',
     },
+    {
+        title: 'Core Domains',
+        path: '/learn/core-domains',
+    },
 ];

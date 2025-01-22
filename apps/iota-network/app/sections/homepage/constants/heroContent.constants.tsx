@@ -18,7 +18,7 @@ export const HERO_HOMEPAGE_BUTTON = [
     },
     {
         text: 'What is IOTA',
-        link: '',
+        link: '/learn',
         variant: ButtonVariant.Secondary,
         icon: <ArrowTopRight />,
         inverted: true,
@@ -28,15 +28,15 @@ export const HERO_HOMEPAGE_BUTTON = [
 export const HERO_HOMEPAGE_ANCHORLINKS = [
     {
         text: 'Product Suite',
-        onClick: () => scrollToSection('#hero'),
+        onClick: () => scrollToSection('#section-3'),
     },
     {
         text: 'Why Build on IOTA?',
-        onClick: () => scrollToSection('#hero'),
+        onClick: () => scrollToSection('#section-8'),
     },
     {
         text: 'Real World Adoption',
-        onClick: () => scrollToSection('#hero'),
+        onClick: () => scrollToSection('#real-world-adoption'),
     },
 ];
 
