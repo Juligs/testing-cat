@@ -14,4 +14,8 @@ export const ROUTES: Route[] = [
         title: 'Core Domains',
         path: '/learn/core-domains',
     },
+    {
+        title: 'Showcases',
+        path: '/learn/showcases',
+    },
 ];

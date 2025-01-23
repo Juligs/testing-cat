@@ -14,6 +14,8 @@ export function HeroLayout({
 }: React.PropsWithChildren<HeroProps>) {
     const heroSizeLayout = HERO_SIZE[size];
     const backgroundGradient = hasGradientBackground ? HERO_GRADIENT_BG_COLOR : '';
+    const layoutExtraLarge =
+        size === HeroSize.ExtraLarge ? 'items-center xs:items-start ' : 'items-center';
     return (
         <div
             className={clsx(
@@ -22,7 +24,12 @@ export function HeroLayout({
                 heroSizeLayout,
             )}
         >
-            <div className="container flex-1 h-full flex flex-col items-center justify-center">
+            <div
+                className={clsx(
+                    'container flex-1 h-full flex flex-col justify-center',
+                    layoutExtraLarge,
+                )}
+            >
                 {children}
             </div>
         </div>

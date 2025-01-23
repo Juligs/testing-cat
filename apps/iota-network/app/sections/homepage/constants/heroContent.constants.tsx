@@ -1,6 +1,6 @@
 import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
-import { ButtonVariant, HeroBackground } from 'react-ui-kit';
+import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 
 export const HERO_HOMEPAGE_CONTENT = {
     title: 'We Bring the Real World to Web3',
@@ -39,8 +39,17 @@ export const HERO_HOMEPAGE_ANCHORLINKS = [
         onClick: () => scrollToSection('#real-world-adoption'),
     },
 ];
-
 export const HERO_HOMEPAGE_BG: React.ComponentProps<typeof HeroBackground> = {
-    src: 'https://files.iota.org/media/iota-network/homepage_hero_poster.jpg',
-    type: 'image',
+    type: 'video',
+    sourceSet: {
+        [ScreenSize.Xs]: {
+            src: 'https://files.iota.org/media/iota-network/homepage_hero_mobile.mp4',
+        },
+        [ScreenSize.Md]: {
+            src: 'https://files.iota.org/media/iota-network/homepage_hero.mp4',
+        },
+    },
+    videoProps: {
+        poster: 'https://files.iota.org/media/iota-network/homepage_hero_poster.jpg',
+    },
 };

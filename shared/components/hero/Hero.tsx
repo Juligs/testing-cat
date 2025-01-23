@@ -31,6 +31,7 @@ interface HeroProps {
     })[];
     background?: React.ComponentProps<typeof HeroBackground>;
     image?: string;
+    isCentered?: boolean;
 }
 
 export function Hero({
@@ -61,14 +62,17 @@ export function Hero({
     const isTwoColumns = image ? '' : 'sm:max-w-3xl xl:max-w-5xl';
     const textSize = image
         ? TitleTextSize.Medium
-        : size === HeroSize.Large
+        : size === HeroSize.Large || size === HeroSize.ExtraLarge
           ? TitleTextSize.Large
           : TitleTextSize.Medium;
+
+    const { isCentered = true, ...verticalTitleProps } = verticalTitle;
+    const verticalTitleWitdh = size === HeroSize.ExtraLarge ? 'w-full xs:max-w-[780px]' : 'w-full';
 
     return (
         <>
             <div className={clsx(mainContainer)}>
-                <HeroLayout hasGradientBackground={!background}>
+                <HeroLayout hasGradientBackground={!background} size={size}>
                     {background && <HeroBackground {...background} className={rounded} />}
                     <div className={clsx(isTwoColumns)}>
                         {image ? (
@@ -78,15 +82,25 @@ export function Hero({
                                 reverse
                             >
                                 <div className="w-full sm:pr-[92px] lg:pr-[102px] items-start">
-                                    <VerticalTitle {...verticalTitle} size={textSize}>
+                                    <VerticalTitle
+                                        {...verticalTitleProps}
+                                        size={textSize}
+                                        isCentered={isCentered}
+                                    >
                                         {buttons && <RenderButtons buttons={buttons} Link={Link} />}
                                     </VerticalTitle>
                                 </div>
                             </TwoColumnsImageTemplate>
                         ) : (
-                            <VerticalTitle {...verticalTitle} size={textSize} isCentered>
-                                {buttons && <RenderButtons buttons={buttons} Link={Link} />}
-                            </VerticalTitle>
+                            <div className={clsx(verticalTitleWitdh)}>
+                                <VerticalTitle
+                                    {...verticalTitleProps}
+                                    size={textSize}
+                                    isCentered={isCentered}
+                                >
+                                    {buttons && <RenderButtons buttons={buttons} Link={Link} />}
+                                </VerticalTitle>
+                            </div>
                         )}
                         {anchorLinks && (
                             <div className="hidden sm:flex absolute container bottom-0 left-1/2 -translate-x-1/2 ">
