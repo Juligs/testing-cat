@@ -1,8 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import { ShowcasesPageHero, ShowcasesLastSection } from '@sections';
-import { RwaSection, LighthouseProjects } from '@repo/shared/sections';
-
+import { RwaSection, LighthouseProjects, TeamContactCTA } from '@repo/shared/sections';
 const METADATA_TITLE = 'Showcases';
 const METADATA_DESCRIPTION = 'We Build Cutting-Edge Technology';
 
@@ -17,6 +16,7 @@ export default function Home() {
             <ShowcasesPageHero id="hero" theme="inverted" />
             <RwaSection id="rwa-section" />
             <LighthouseProjects id="lighthouse-projects" />
+            <TeamContactCTA id="team-contact-CTA" />
             <ShowcasesLastSection id="last-section" />
         </>
     );
