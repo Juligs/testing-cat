@@ -7,3 +7,4 @@ export * from './slider-navigation';
 export * from './moreToExplote';
 export * from './verticalTitleWithAnchorLinksSection';
 export * from './higlitedHeroTextSection';
+export * from './infiniteCarousel';

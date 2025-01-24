@@ -31,19 +31,13 @@ export const CTA_CAROUSEL_CONTENT = [
 
 export const LOGOS_CAROUSEL = {
     image1: [
-        '/shared/rwa-section/logo-carousel/global-alliance.png',
-        '/shared/rwa-section/logo-carousel/world-economic.png',
-        '/shared/rwa-section/logo-carousel/CIOIT.png',
-        '/shared/rwa-section/logo-carousel/trade-mark.png',
-        '/shared/rwa-section/logo-carousel/tony-blair.png',
-        '/shared/rwa-section/logo-carousel/TLIP.png',
+        '/shared/logos-carousel/global-alliance.png',
+        '/shared/logos-carousel/world-economic-forum.png',
+        '/shared/logos-carousel/CIOIT.png',
+        '/shared/logos-carousel/trade-mark-africa.png',
+        '/shared/logos-carousel/tony-blair.png',
+        '/shared/logos-carousel/TLIP.png',
     ],
-    image2: [
-        '/shared/rwa-section/logo-carousel/multiknip.png',
-        '/shared/rwa-section/logo-carousel/kpn-iot.png',
-    ],
-    image3: [
-        '/shared/rwa-section/logo-carousel/iota.png',
-        '/shared/rwa-section/logo-carousel/demia.png',
-    ],
+    image2: ['/shared/logos-carousel/multiknip.png', '/shared/logos-carousel/kpn-iot.png'],
+    image3: ['/shared/logos-carousel/iota.png', '/shared/logos-carousel/demia.png'],
 };
