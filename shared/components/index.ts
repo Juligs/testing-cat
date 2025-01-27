@@ -8,3 +8,4 @@ export * from './moreToExplote';
 export * from './verticalTitleWithAnchorLinksSection';
 export * from './higlitedHeroTextSection';
 export * from './infiniteCarousel';
+export * from './verticalTitleAndGrid';

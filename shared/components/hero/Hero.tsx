@@ -61,7 +61,9 @@ export function Hero({
 
     const isTwoColumns = image ? '' : 'sm:max-w-3xl xl:max-w-5xl';
     const textSize = image
-        ? TitleTextSize.Medium
+        ? TitleTextSize.Medium || size === HeroSize.ExtraLarge
+            ? TitleTextSize.Large
+            : TitleTextSize.Medium
         : size === HeroSize.Large || size === HeroSize.ExtraLarge
           ? TitleTextSize.Large
           : TitleTextSize.Medium;

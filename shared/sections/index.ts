@@ -7,4 +7,5 @@ export * from './trade&SupplyChainsSection';
 export * from './digitalIdentitySection';
 export * from './circularEconomy';
 export * from './decentralizedFinance';
-export * from './ourProductsCTA';
+export * from './teamContact';
+export * from './howItWorks';
