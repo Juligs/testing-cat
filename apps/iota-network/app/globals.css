@@ -15,4 +15,7 @@ body {
 .swiper-container-infinite-loop > .swiper-wrapper {
     transition-timing-function: linear !important;
     will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

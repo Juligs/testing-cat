@@ -1,7 +1,7 @@
 import { Placeholder } from '@repo/icons';
 import { TitleTextSize } from 'react-ui-kit';
 
-export const MOVING_PAPERLESS_VERTICAL_TITLE_CONTENT = {
+export const TWIN_SECTION_2_TITLE_CONTENT = {
     title: 'Moving Paperless Trade Across Borders',
     body: [
         'Traditional trade lacks data transparency and traceability, hindering efficiency and trust. The Trade Worldwide Information Pipeline (TWIN) is a digital platform built on IOTA that enables global supply chain participants to share and access data instantly and securely.',
@@ -10,7 +10,7 @@ export const MOVING_PAPERLESS_VERTICAL_TITLE_CONTENT = {
     size: TitleTextSize.Small,
 };
 
-export const HOW_IT_WORKS_ICON_CONTENT = [
+export const TWIN_SECTION_2_ICON_CONTENT = [
     {
         icon: <Placeholder />,
         title: 'Digitizing Trade Data',

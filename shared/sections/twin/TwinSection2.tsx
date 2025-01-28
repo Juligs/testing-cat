@@ -1,17 +1,17 @@
 import { BaseSectionProps } from '../../interfaces';
 import {
-    HOW_IT_WORKS_ICON_CONTENT,
-    MOVING_PAPERLESS_VERTICAL_TITLE_CONTENT,
-} from './howItWorksContent.constants';
+    TWIN_SECTION_2_ICON_CONTENT,
+    TWIN_SECTION_2_TITLE_CONTENT,
+} from './constants/twinSection2Content';
 import { VerticalTitleAndGrid } from '../../components';
 
-export function HowItWorks({ id, theme }: BaseSectionProps) {
+export function TwinSection2({ id, theme }: BaseSectionProps) {
     return (
         <section className="w-full" id={id} data-theme={theme}>
             <VerticalTitleAndGrid
                 image="/shared/core-domains-sections/trade-&-supply.png"
-                verticalTitle={MOVING_PAPERLESS_VERTICAL_TITLE_CONTENT}
-                iconContent={HOW_IT_WORKS_ICON_CONTENT}
+                verticalTitle={TWIN_SECTION_2_TITLE_CONTENT}
+                iconContent={TWIN_SECTION_2_ICON_CONTENT}
             />
         </section>
     );

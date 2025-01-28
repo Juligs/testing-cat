@@ -8,4 +8,5 @@ export * from './digitalIdentitySection';
 export * from './circularEconomy';
 export * from './decentralizedFinance';
 export * from './teamContact';
-export * from './howItWorks';
+export * from './twin';
+export * from './demia';

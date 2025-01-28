@@ -1,7 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { TwinPageHero, TwinPageSection1, TwinPageLastSection } from '@sections';
-import { HowItWorks } from '@repo/shared/sections';
+import { TwinHero } from '@sections';
+import { TwinLastSection, TwinSection2, TwinSection1 } from '@repo/shared/sections';
 
 const METADATA_TITLE = 'TWIN';
 const METADATA_DESCRIPTION = 'Seamless transfer of digital trade data across borders';
@@ -14,10 +14,10 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <TwinPageHero id="hero" />
-            <TwinPageSection1 id="section1" />
-            <HowItWorks id="how-it-works" />
-            <TwinPageLastSection id="last-section" />
+            <TwinHero id="hero" />
+            <TwinSection1 id="section1" />
+            <TwinSection2 id="section2" />
+            <TwinLastSection id="last-section" />
         </>
     );
 }

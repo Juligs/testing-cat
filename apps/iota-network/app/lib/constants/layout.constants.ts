@@ -22,4 +22,8 @@ export const ROUTES: Route[] = [
         title: 'Twin',
         path: '/learn/showcases/twin',
     },
+    {
+        title: 'Demia',
+        path: '/learn/showcases/demia',
+    },
 ];
