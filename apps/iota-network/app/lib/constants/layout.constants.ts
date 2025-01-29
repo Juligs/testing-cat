@@ -26,4 +26,8 @@ export const ROUTES: Route[] = [
         title: 'Demia',
         path: '/learn/showcases/demia',
     },
+    {
+        title: 'MultiKnip',
+        path: '/learn/showcases/multiknip',
+    },
 ];

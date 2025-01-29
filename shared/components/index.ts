@@ -9,3 +9,4 @@ export * from './verticalTitleWithAnchorLinksSection';
 export * from './higlitedHeroTextSection';
 export * from './infiniteCarousel';
 export * from './verticalTitleAndGrid';
+export * from './contactUsWithAnchorLinks';
