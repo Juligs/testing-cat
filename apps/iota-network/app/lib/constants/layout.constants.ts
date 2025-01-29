@@ -35,6 +35,10 @@ export const ROUTES: Route[] = [
         path: '/learn/showcases/ebsi',
     },
     {
+        title: 'KYC',
+        path: '/learn/showcases/tokenized-kyc',
+    },
+    {
         title: 'IPR Management',
         path: '/learn/showcases/ipr-management',
     },

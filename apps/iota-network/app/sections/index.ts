@@ -6,4 +6,5 @@ export * from './learn/showcases/twin';
 export * from './learn/showcases/demia';
 export * from './learn/showcases/multiknip';
 export * from './learn/showcases/ebsi';
+export * from './learn/showcases/tokenized-kyc';
 export * from './learn/showcases/ipr-management';
