@@ -13,13 +13,12 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
-    const navbarItems = ROUTES.filter((route) => !route.hideFromNavbar);
     return (
         <html lang="en">
             <body>
                 <FontLinks />
                 <ContextProviders>
-                    <Navigation items={navbarItems} />
+                    <Navigation items={ROUTES} />
                     {children}
                 </ContextProviders>
             </body>
