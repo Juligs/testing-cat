@@ -1,4 +1,5 @@
-import { ChipSkeleton, SliderImageCardSkeleton } from '@components';
+import { ChipSkeleton } from '@components';
+import { SliderImageCardSkeleton } from '@repo/shared/components';
 
 export function InfrastructureCarouselSkeleton() {
     return (

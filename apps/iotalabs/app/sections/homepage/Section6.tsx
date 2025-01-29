@@ -1,8 +1,8 @@
 import { ArrowTopRight } from '@repo/icons';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { FetchGrantsStatsData } from '@repo/shared/sections';
-import { GrantsCarouselSkeleton } from '@sections/skeletons';
-import { FetchGrantsSliderData } from '@sections/subsections';
+import { GrantsCarouselSkeleton } from '@repo/shared/components';
+import { FetchGrantsSliderData } from '@repo/shared/sections';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { Actions, Button, ButtonVariant, TitleTextSize, VerticalTitle } from 'react-ui-kit';
@@ -34,7 +34,7 @@ export function Section6({ id, theme }: BaseSectionProps) {
                 </TwoColumnsImageTemplate>
                 <FetchGrantsStatsData />
                 <Suspense fallback={<GrantsCarouselSkeleton />}>
-                    <FetchGrantsSliderData />
+                    <FetchGrantsSliderData itemsToShow={6} />
                 </Suspense>
             </div>
         </section>

@@ -1,4 +1,4 @@
-import { SliderImageCardSkeleton } from '@components';
+import { SliderImageCardSkeleton } from './SliderImageCardSkeleton';
 
 export function GrantsCarouselSkeleton() {
     return (

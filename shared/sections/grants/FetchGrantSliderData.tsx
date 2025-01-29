@@ -1,12 +1,18 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { GrantsCardData } from '@lib/airtable';
+import { GrantsCarouselSkeleton } from '../../components';
+import {
+    checkInvalidImageUrlsAndRevalidate,
+    GrantsCardData,
+    revalidateGrantsAPI,
+} from '../../utils';
 import { GrantSlider } from './GrantsSlider';
-import { GrantsCarouselSkeleton } from '@sections/skeletons';
-import { revalidateGrantsAPI } from '@lib/airtable';
-import { checkInvalidImageUrlsAndRevalidate } from '@repo/shared/utils';
 
-export function FetchGrantsSliderData() {
+interface FetchGrantsSlideProps {
+    itemsToShow?: number;
+}
+
+export function FetchGrantsSliderData({ itemsToShow = 6 }: FetchGrantsSlideProps) {
     const [dataGrantsSlider, setDataGrantsSlider] = useState<GrantsCardData[] | undefined>(
         undefined,
     );
@@ -53,7 +59,7 @@ export function FetchGrantsSliderData() {
         <GrantsCarouselSkeleton />
     ) : (
         <div className="flex flex-col gap-12">
-            <GrantSlider data={dataGrantsSlider} />
+            <GrantSlider data={dataGrantsSlider} itemsToShow={itemsToShow} />
         </div>
     );
 }

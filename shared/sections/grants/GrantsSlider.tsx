@@ -4,15 +4,15 @@ import { useState, useRef } from 'react';
 import { ImageCard, BREAKPOINTS, ScreenSize } from 'react-ui-kit';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
-import { SliderNavigation } from '@repo/shared/components';
+import { SliderNavigation } from '../../components';
 import { Scrollbar, A11y, Pagination } from 'swiper/modules';
-import { GrantsCardData } from '@lib/airtable';
+import { GrantsCardData } from '../../utils';
 import {
     SWIPER_BREAKPOINTS,
     SPACE_BETWEEN_SLIDES,
     SLIDES_IN_DESKTOP,
     SLIDES_IN_MOBILE,
-} from '@repo/shared/constants';
+} from '../../constants';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Link from 'next/link';
@@ -20,10 +20,11 @@ import { TextLink } from 'react-ui-kit';
 
 interface GrantsSliderProps {
     data: GrantsCardData[];
+    itemsToShow?: number;
 }
 const GRANTS_PAGINATION_BULLET_ID = 'grants-pagination-bullets';
 
-export function GrantSlider({ data }: GrantsSliderProps) {
+export function GrantSlider({ data, itemsToShow = 6 }: GrantsSliderProps) {
     const swiperRef = useRef<SwiperCore | null>(null);
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [slidesPerView, setSlidesPerView] = useState(1);
@@ -35,7 +36,7 @@ export function GrantSlider({ data }: GrantsSliderProps) {
 
             return a.websitePosition - b.websitePosition;
         })
-        .slice(0, 6);
+        .slice(0, itemsToShow);
 
     const shouldShowNavigation = !(
         (swiperRef.current?.currentBreakpoint === BREAKPOINTS[ScreenSize.Sm].toString() &&
