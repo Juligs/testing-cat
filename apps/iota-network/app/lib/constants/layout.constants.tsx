@@ -1,5 +1,15 @@
 import { Route } from '@lib/interfaces';
-import { Placeholder } from '@repo/icons';
+import {
+    Discord,
+    GitHub,
+    GoogleScholar,
+    LinkedIn,
+    Placeholder,
+    Reddit,
+    Telegram,
+    XSocialIcon,
+    Youtube,
+} from '@repo/icons';
 
 export const LEARN_FEATURED_CARDS: Route[] = [
     {
@@ -21,6 +31,10 @@ export const ROUTES: Route[] = [
         title: 'Learn',
         path: '/learn',
         children: [
+            {
+                title: 'Learn IOTA',
+                path: '/learn',
+            },
             {
                 title: 'Showcases',
                 path: '/learn/showcases',
@@ -126,5 +140,95 @@ export const ROUTES: Route[] = [
                 children: LEARN_FEATURED_CARDS,
             },
         ],
+    },
+];
+
+export const SOCIAL_LINKS = [
+    {
+        title: 'Builder',
+        icon: Discord,
+        url: 'https://builders-discord.iota.org/',
+        isExternal: true,
+    },
+    {
+        title: 'Community',
+        icon: Discord,
+        url: 'https://discord.iota.org',
+        isExternal: true,
+    },
+    {
+        icon: Telegram,
+        url: 'https://t.me/IOTA_Official_Community',
+        isExternal: true,
+    },
+    {
+        icon: Reddit,
+        url: 'https://www.reddit.com/r/Iota/',
+        isExternal: true,
+    },
+    {
+        icon: GitHub,
+        url: 'https://github.com/iotaledger',
+        isExternal: true,
+    },
+    {
+        icon: GoogleScholar,
+        url: 'https://scholar.google.com/citations?user=_ZIH81gAAAAJ&hl=en',
+        isExternal: true,
+        hideFromFooter: true,
+    },
+    {
+        icon: Youtube,
+        url: 'https://www.youtube.com/c/iotafoundation',
+        isExternal: true,
+    },
+    {
+        icon: XSocialIcon,
+        url: 'https://x.com/iotalabs_',
+        isExternal: true,
+    },
+    {
+        icon: LinkedIn,
+        url: 'https://www.linkedin.com/company/iotafoundation/',
+        isExternal: true,
+    },
+];
+
+export const LEGAL_ROUTES: Route[] = [
+    {
+        title: 'Privacy Policy',
+        path: '/privacy-policy',
+    },
+    {
+        title: 'Impressum',
+        path: '/privacy-policy',
+    },
+    {
+        title: 'Trademark Policy',
+        path: '/privacy-policy',
+    },
+    {
+        title: 'Terms of Use',
+        path: '/privacy-policy',
+    },
+];
+
+export const COMPANY_DATA = [
+    {
+        title: 'Registered Address',
+        address: ['IOTA Foundation', 'Pappelallee 78/79', '10437 Berlin', 'Germany'],
+    },
+    {
+        title: 'Company',
+        address: [
+            'ID/Company No.: 3416/1234/2',
+            'EU public ID number in the EU Transparency Register:',
+            '500027331119-04',
+            'VAT ID: DE329624902',
+        ],
+    },
+    {
+        title: 'Board of Directors',
+        address: ['Dominik Schiener,', 'Jan Misselwitz,', 'Luca Moser', 'Anja Raden'],
     },
 ];

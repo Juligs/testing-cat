@@ -1,4 +1,4 @@
-import { Navigation } from '@components';
+import { Navigation, Footer } from '@components';
 import { ROUTES } from '@lib/constants';
 import { Metadata } from 'next';
 import { ContextProviders } from './providers';
@@ -20,6 +20,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <ContextProviders>
                     <Navigation items={ROUTES} />
                     {children}
+                    <Footer />
                 </ContextProviders>
             </body>
         </html>

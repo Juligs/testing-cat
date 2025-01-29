@@ -106,6 +106,7 @@ export { default as ProofOfStake } from './ProofOfStake';
 export { default as ProtocolAgnosticDesign } from './ProtocolAgnosticDesign';
 export { default as Prototypes } from './Prototypes';
 export { default as Quotes } from './Quotes';
+export { default as Reddit } from './Reddit';
 export { default as RegulatedCoin } from './RegulatedCoin';
 export { default as RegulatoryAlignedDataCompartmentalization } from './RegulatoryAlignedDataCompartmentalization';
 export { default as RegulatoryAndTechnicalCompliance } from './RegulatoryAndTechnicalCompliance';
