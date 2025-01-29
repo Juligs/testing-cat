@@ -34,4 +34,8 @@ export const ROUTES: Route[] = [
         title: 'Ebsi',
         path: '/learn/showcases/ebsi',
     },
+    {
+        title: 'IPR Management',
+        path: '/learn/showcases/ipr-management',
+    },
 ];
