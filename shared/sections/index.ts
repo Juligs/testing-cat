@@ -11,3 +11,4 @@ export * from './teamContact';
 export * from './twin';
 export * from './demia';
 export * from './multiknip';
+export * from './ebsi';

@@ -15,7 +15,7 @@ import { LinkProps } from './RenderButtons';
 import { RenderAnchorLinks } from './RenderAnchorLinks';
 
 interface HeroProps {
-    verticalTitle: Omit<React.ComponentProps<typeof VerticalTitle>, 'size'>;
+    verticalTitle: React.ComponentProps<typeof VerticalTitle>;
     size?: HeroSize;
     anchorLinks?: {
         text: string;
@@ -55,21 +55,23 @@ export function Hero({
               </a>
           );
 
+    const { isCentered = true, size: verticalTitleSize, ...verticalTitleProps } = verticalTitle;
+    const verticalTitleWitdh = size === HeroSize.ExtraLarge ? 'w-full xs:max-w-[780px]' : 'w-full';
+
     const mainContainer = anchorLinks
         ? 'w-full h-screen flex flex-col justify-center items-center'
         : 'w-full h-full';
 
     const isTwoColumns = image ? '' : 'sm:max-w-3xl xl:max-w-5xl';
-    const textSize = image
-        ? TitleTextSize.Medium || size === HeroSize.ExtraLarge
+    const textSize = verticalTitleSize
+        ? verticalTitleSize
+        : image
+          ? TitleTextSize.Medium || size === HeroSize.ExtraLarge
+              ? TitleTextSize.Large
+              : TitleTextSize.Medium
+          : size === HeroSize.Large || size === HeroSize.ExtraLarge
             ? TitleTextSize.Large
-            : TitleTextSize.Medium
-        : size === HeroSize.Large || size === HeroSize.ExtraLarge
-          ? TitleTextSize.Large
-          : TitleTextSize.Medium;
-
-    const { isCentered = true, ...verticalTitleProps } = verticalTitle;
-    const verticalTitleWitdh = size === HeroSize.ExtraLarge ? 'w-full xs:max-w-[780px]' : 'w-full';
+            : TitleTextSize.Medium;
 
     return (
         <>

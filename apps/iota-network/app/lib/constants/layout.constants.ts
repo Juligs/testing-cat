@@ -30,4 +30,8 @@ export const ROUTES: Route[] = [
         title: 'MultiKnip',
         path: '/learn/showcases/multiknip',
     },
+    {
+        title: 'Ebsi',
+        path: '/learn/showcases/ebsi',
+    },
 ];

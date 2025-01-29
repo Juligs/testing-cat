@@ -13,7 +13,7 @@ interface VerticalTitleProps {
     /**
      * The size of the title
      */
-    size: TitleTextSize;
+    size?: TitleTextSize;
     /**
      * Title content
      */
@@ -43,7 +43,7 @@ interface VerticalTitleProps {
 export function VerticalTitle({
     children,
     isCentered,
-    size,
+    size = TitleTextSize.Medium,
     title,
     subtitle,
     overline,
