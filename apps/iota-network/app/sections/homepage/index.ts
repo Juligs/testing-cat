@@ -4,5 +4,6 @@ export * from './Section3';
 export * from './Section4';
 export * from './Section7';
 export * from './Section8';
+export * from './Section9';
 export * from './Section10';
 export * from './constants';
