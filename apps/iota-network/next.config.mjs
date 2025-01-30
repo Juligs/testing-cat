@@ -1,4 +1,5 @@
 import nextMDX from '@next/mdx';
+import { REDIRECTIONS } from './config/redirections.mjs';
 
 const withMDX = nextMDX({});
 
@@ -16,6 +17,9 @@ const nextConfig = {
                 },
             },
         },
+    },
+    async redirects() {
+        return REDIRECTIONS;
     },
 };
 
