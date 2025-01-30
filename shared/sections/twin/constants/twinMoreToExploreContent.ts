@@ -1,4 +1,4 @@
-export const TWIN_LAST_SECTION_LINKS = [
+export const TWIN_MORE_TO_EXPLORE_LINKS = [
     {
         title: 'Demia',
         subtitle: 'Enabling trust in carbon markets',

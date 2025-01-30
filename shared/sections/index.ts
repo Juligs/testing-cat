@@ -14,3 +14,4 @@ export * from './multiknip';
 export * from './ebsi';
 export * from './tokenized-kyc';
 export * from './iprManagement';
+export * from './dpp';

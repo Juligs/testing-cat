@@ -1,4 +1,4 @@
-export const DEMIA_LAST_SECTION_CONTENT = [
+export const DEMIA_MORE_TO_EXPLORE_CONTENT = [
     {
         title: 'TWIN',
         subtitle: 'Seamless transfer of digital trade data across borders',

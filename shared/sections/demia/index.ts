@@ -1,4 +1,4 @@
-export { DemiaSection1 } from './DemiaSection1';
-export { DemiaSection2 } from './DemiaSection2';
-export { DemiaLastSection } from './DemiaLastSection';
+export { DemiaPartners } from './DemiaPartners';
+export { DemiaCarbonEmissions } from './DemiaCarbonEmissions';
+export { DemiaMoreToExplore } from './DemiaMoreToExplore';
 export { DemiaContactUs } from './DemiaContactUs';

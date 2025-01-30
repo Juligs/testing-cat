@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import { DemiaHero } from '@sections';
 import {
     DemiaContactUs,
-    DemiaLastSection,
-    DemiaSection1,
-    DemiaSection2,
+    DemiaMoreToExplore,
+    DemiaCarbonEmissions,
+    DemiaPartners,
 } from '@repo/shared/sections';
 
 const METADATA_TITLE = 'Demia';
@@ -20,10 +20,10 @@ export default function Home() {
     return (
         <>
             <DemiaHero id="hero" />
-            <DemiaSection1 id="section1" />
-            <DemiaSection2 id="section2" />
+            <DemiaPartners id="partners" />
+            <DemiaCarbonEmissions id="emissions" />
             <DemiaContactUs id="contact-us" />
-            <DemiaLastSection id="last-section" />
+            <DemiaMoreToExplore id="explore" />
         </>
     );
 }

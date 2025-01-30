@@ -69,6 +69,11 @@ export const ROUTES: Route[] = [
                         path: '/learn/showcases/ipr-management',
                         hideFromFooter: true,
                     },
+                    {
+                        title: 'DPP',
+                        path: '/learn/showcases/dpp',
+                        hideFromFooter: true,
+                    },
                 ],
             },
             {

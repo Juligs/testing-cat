@@ -1,4 +1,4 @@
-export { TwinSection1 } from './TwinSection1';
-export { TwinSection2 } from './TwinSection2';
-export { TwinLastSection } from './TwinLastSection';
+export { TwinPartners } from './TwinPartners';
+export { TwinPaperless } from './TwinPaperless';
+export { TwinMoreToExplore } from './TwinMoreToExplore';
 export { TwinContactUs } from './TwinContactUs';
