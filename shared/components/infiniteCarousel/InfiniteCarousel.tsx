@@ -18,23 +18,20 @@ export function InfiniteCarousel({ logos, itemWidth = 190 }: InfiniteCarouselPro
     const [staticCarousel, setStaticCarousel] = useState(false);
     const [isLoop, setIsLoop] = useState(true);
 
-    // Calculate the width of the container and the number of items that fit in it
     useEffect(() => {
         const handleResize = () => {
             const totalItemsWidth = logos.length * itemWidth;
-            setSwiperWidth(window?.innerWidth);
+            const windowWidth = window.innerWidth;
 
-            // // If the content is larger than the container, the carousel is dynamic
-            setStaticCarousel(totalItemsWidth <= swiperWidth);
-
-            // If there are a few items, the loop is disabled
-            setIsLoop(totalItemsWidth > swiperWidth);
+            setSwiperWidth(windowWidth);
+            setStaticCarousel(totalItemsWidth <= windowWidth);
+            setIsLoop(totalItemsWidth > windowWidth);
         };
 
         handleResize();
-        window?.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleResize);
 
-        return () => window?.removeEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, [logos, itemWidth]);
 
     useEffect(() => {
@@ -58,7 +55,7 @@ export function InfiniteCarousel({ logos, itemWidth = 190 }: InfiniteCarouselPro
             }}
             speed={2000}
             allowTouchMove={!staticCarousel}
-            className="w-full h-full swiper-container-infinite-loop overflow-hidden"
+            className={`w-full h-full overflow-hidden ${isLoop ? 'swiper-container-infinite-loop' : ''} ${staticCarousel ? 'static-swiper' : ''}`}
             // Reminder: Add the following globals.css to ensure a continuous loop
             // .swiper-container-infinite-loop > .swiper-wrapper {
             //     transition-timing-function: linear !important; // Smooth and consistent transitions
