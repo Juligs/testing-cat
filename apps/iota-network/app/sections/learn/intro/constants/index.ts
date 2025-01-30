@@ -6,4 +6,5 @@ export * from './section5Content.constants';
 export * from './section6Content.constants';
 export * from './section7Content.constants';
 export * from './section8Content.contants';
+export * from './section9Content.constants';
 export * from './section10Content.constants';

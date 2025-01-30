@@ -2,7 +2,12 @@ import { GrantsStats } from '../../utils/airtable/sanitizeGrantsStats';
 import { ComponentProps } from 'react';
 import { DisplayStats } from 'react-ui-kit';
 
-export function GrantsStatsSection({ stats }: { stats: GrantsStats | undefined }) {
+export interface GrantsStatsSectionProps {
+    stats: GrantsStats | undefined;
+    inverted?: boolean;
+}
+
+export function GrantsStatsSection({ stats, inverted }: GrantsStatsSectionProps) {
     const MISSING_VALUE = '-';
 
     const CARDS: ComponentProps<typeof DisplayStats>[] = [
@@ -16,16 +21,19 @@ export function GrantsStatsSection({ stats }: { stats: GrantsStats | undefined }
         {
             label: 'Tier 3 Funding',
             value: '$50K+',
+            inverted: inverted,
         },
         {
             label: 'Total Applications',
             value: stats?.totalApplications ? `${stats.totalApplications}` : MISSING_VALUE,
+            inverted: inverted,
         },
         {
             label: 'Approved Applications',
             value: stats?.totalApprovedApplications
                 ? `${stats.totalApprovedApplications}`
                 : MISSING_VALUE,
+            inverted: inverted,
         },
     ];
 

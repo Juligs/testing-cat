@@ -4,7 +4,11 @@ import { GrantsStatsSkeleton } from '../../sections/skeletons/GrantsStatsSkeleto
 import { GrantsStats } from '../../utils/airtable';
 import { GrantsStatsSection } from './GrantsStatsSection';
 
-export function FetchGrantsStatsData() {
+interface FetchGrantsStatsDataProps {
+    inverted?: boolean;
+}
+
+export function FetchGrantsStatsData({ inverted }: FetchGrantsStatsDataProps) {
     const [stats, setStats] = useState<GrantsStats | undefined>(undefined);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -28,5 +32,9 @@ export function FetchGrantsStatsData() {
         return (await res.json()) as GrantsStats;
     };
 
-    return isLoading || !stats ? <GrantsStatsSkeleton /> : <GrantsStatsSection stats={stats} />;
+    return isLoading || !stats ? (
+        <GrantsStatsSkeleton />
+    ) : (
+        <GrantsStatsSection stats={stats} inverted={inverted} />
+    );
 }

@@ -82,8 +82,8 @@ export function CtaCard({
 
             <div
                 className={clsx(
-                    'sm:w-1/2 flex flex-col items-center justify-start text-center w-full gap-2 xs:gap-4 h-full',
-                    { 'sm:w-full': isVertical },
+                    ' flex flex-col items-center justify-start text-center w-full gap-2 xs:gap-4 h-full',
+                    isVertical ? 'sm:w-full' : 'sm:w-1/2',
                     PADDING_SIZE,
                 )}
             >

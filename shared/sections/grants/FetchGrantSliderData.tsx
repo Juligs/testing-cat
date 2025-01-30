@@ -10,9 +10,10 @@ import { GrantSlider } from './GrantsSlider';
 
 interface FetchGrantsSlideProps {
     itemsToShow?: number;
+    inverted?: boolean;
 }
 
-export function FetchGrantsSliderData({ itemsToShow = 6 }: FetchGrantsSlideProps) {
+export function FetchGrantsSliderData({ itemsToShow = 6, inverted }: FetchGrantsSlideProps) {
     const [dataGrantsSlider, setDataGrantsSlider] = useState<GrantsCardData[] | undefined>(
         undefined,
     );
@@ -59,7 +60,7 @@ export function FetchGrantsSliderData({ itemsToShow = 6 }: FetchGrantsSlideProps
         <GrantsCarouselSkeleton />
     ) : (
         <div className="flex flex-col gap-12">
-            <GrantSlider data={dataGrantsSlider} itemsToShow={itemsToShow} />
+            <GrantSlider data={dataGrantsSlider} itemsToShow={itemsToShow} inverted={inverted} />
         </div>
     );
 }

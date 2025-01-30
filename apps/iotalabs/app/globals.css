@@ -31,3 +31,8 @@ body {
     --swiper-pagination-bullet-active-size: 8px;
     --swiper-pagination-bullet-horizontal-gap: 4px;
 }
+
+.swiper-pagination-inverted {
+    --swiper-pagination-color: theme('colors.white');
+    --swiper-pagination-bullet-inactive-color: theme('colors.transparency-white.24');
+}

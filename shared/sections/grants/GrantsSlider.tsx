@@ -21,10 +21,11 @@ import { TextLink } from 'react-ui-kit';
 interface GrantsSliderProps {
     data: GrantsCardData[];
     itemsToShow?: number;
+    inverted?: boolean;
 }
 const GRANTS_PAGINATION_BULLET_ID = 'grants-pagination-bullets';
 
-export function GrantSlider({ data, itemsToShow = 6 }: GrantsSliderProps) {
+export function GrantSlider({ data, itemsToShow = 6, inverted }: GrantsSliderProps) {
     const swiperRef = useRef<SwiperCore | null>(null);
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [slidesPerView, setSlidesPerView] = useState(1);
@@ -47,7 +48,7 @@ export function GrantSlider({ data, itemsToShow = 6 }: GrantsSliderProps) {
     return (
         <div className="flex flex-col items-center gap-12 w-full">
             <Swiper
-                className="w-full h-full [&>div]:items-stretch !p-6 !-m-6"
+                className="w-full h-full [&>div]:items-stretch !p-4 !-m-4"
                 modules={[Scrollbar, A11y, Pagination]}
                 pagination={{
                     el: `#${GRANTS_PAGINATION_BULLET_ID}`,
@@ -64,18 +65,23 @@ export function GrantSlider({ data, itemsToShow = 6 }: GrantsSliderProps) {
                 {sortedGrantsData.map((card) => (
                     <SwiperSlide key={card.title} className="!h-auto">
                         <div className="!h-full block [&>div]:h-full">
-                            <ImageCard title={card.title} image={card.image} body={card.body}>
+                            <ImageCard
+                                title={card.title}
+                                image={card.image}
+                                body={card.body}
+                                inverted={inverted}
+                            >
                                 {card.websiteTwitter && (
                                     <Link
                                         href={card.websiteTwitter}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <TextLink text="X Account" showIcon />
+                                        <TextLink text="X Account" showIcon inverted={inverted} />
                                     </Link>
                                 )}
                                 <Link href={card.link} target="_blank" rel="noopener noreferrer">
-                                    <TextLink text="Website" showIcon />
+                                    <TextLink text="Website" showIcon inverted={inverted} />
                                 </Link>
                             </ImageCard>
                         </div>
@@ -89,6 +95,7 @@ export function GrantSlider({ data, itemsToShow = 6 }: GrantsSliderProps) {
                     isPrevDisabled={activeSlideIndex === 0}
                     isNextDisabled={activeSlideIndex >= sortedGrantsData.length - slidesPerView}
                     id={GRANTS_PAGINATION_BULLET_ID}
+                    inverted={inverted}
                 />
             )}
         </div>
