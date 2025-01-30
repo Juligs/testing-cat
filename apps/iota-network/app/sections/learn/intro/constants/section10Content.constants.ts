@@ -1,8 +1,8 @@
 export const LEARN_MORE_TO_EXPLORE_CONTENT = [
     {
-        title: 'Core Domains',
+        title: 'Focus Areas',
         subtitle: 'Explore our diverse focus areas leveraging DLT to address real business needs',
-        link: '/learn/core-domains',
+        link: '/learn/focus-areas',
     },
     {
         title: 'Showcases',

@@ -29,11 +29,11 @@ export const LEARN_FEATURED_CARDS: Route[] = [
 export const ROUTES: Route[] = [
     {
         title: 'Learn',
-        path: '/learn',
+        path: '/learn/intro',
         children: [
             {
                 title: 'Learn IOTA',
-                path: '/learn',
+                path: '/learn/intro',
             },
             {
                 title: 'Showcases',
@@ -77,8 +77,8 @@ export const ROUTES: Route[] = [
                 ],
             },
             {
-                title: 'Core Domains',
-                path: '/learn/core-domains',
+                title: 'Focus Areas',
+                path: '/learn/focus-areas',
             },
         ],
         navbarSections: [
@@ -89,7 +89,7 @@ export const ROUTES: Route[] = [
                     {
                         title: 'Intro to IOTA',
                         description: 'Blockchain infrastructure bridging Web3 and the real world',
-                        path: '/learn',
+                        path: '/learn/intro',
                     },
                 ],
             },
@@ -100,43 +100,43 @@ export const ROUTES: Route[] = [
                     {
                         title: 'Real-World Applications',
                         description: 'Showcasing practical use cases',
-                        path: '/learn/showcases#rwa-section',
+                        path: '/learn/showcases/#rwa-section',
                     },
                     {
                         title: 'Lighthouse Projects',
                         description: 'Highlights of pilot projects and Proofs of Concept',
-                        path: '/learn/showcases#lighthouse-projects',
+                        path: '/learn/showcases/#lighthouse-projects',
                     },
                 ],
             },
             {
-                title: 'Core Domains',
+                title: 'Focus Areas',
                 icon: <Placeholder />,
                 children: [
                     {
                         title: 'Real World Asset Tokenization',
                         description: 'Merging traditional finance with Web3 for peak efficiency',
-                        path: '/learn/core-domains#real-world-asset-tokenization',
+                        path: '/learn/focus-areas/#real-world-asset-tokenization',
                     },
                     {
                         title: 'Digital Identity',
                         description: 'A global trust layer between everyone and everything',
-                        path: '/learn/core-domains/#digital-identity',
+                        path: '/learn/focus-areas/#digital-identity',
                     },
                     {
                         title: 'Trade & Supply Chains',
                         description: 'Seamless transfer of digital trade data across borders',
-                        path: '/learn/core-domains/#trade-and-supply-chains',
+                        path: '/learn/focus-areas/#trade-and-supply-chains',
                     },
                     {
                         title: 'Decentralized Finance',
                         description: 'Unlock innovative DeFi opportunities with IOTA EVM',
-                        path: '/learn/core-domains/#decentralized-finance',
+                        path: '/learn/focus-areas/#decentralized-finance',
                     },
                     {
                         title: 'Circular Economy',
                         description: 'Sustainable innovation with circular economy solutions',
-                        path: '/learn/core-domains/#circular-economy',
+                        path: '/learn/focus-areas/#circular-economy',
                     },
                 ],
             },

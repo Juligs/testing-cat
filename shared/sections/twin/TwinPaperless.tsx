@@ -9,7 +9,7 @@ export function TwinPaperless({ id, theme }: BaseSectionProps) {
     return (
         <section className="w-full" id={id} data-theme={theme}>
             <VerticalTitleAndGrid
-                image="/shared/core-domains-sections/trade-&-supply.png"
+                image="/shared/focus-areas-sections/trade-&-supply.png"
                 verticalTitle={TWIN_PAPERLESS_TITLE_CONTENT}
                 iconContent={TWIN_PAPERLESS_ICON_CONTENT}
             />

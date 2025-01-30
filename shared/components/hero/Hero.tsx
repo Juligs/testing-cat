@@ -21,6 +21,7 @@ interface HeroProps {
         text: string;
         link?: string;
         onClick?: () => void;
+        isExternal?: boolean;
     }[];
     isAnchorLinksMobileInverted?: boolean;
     isAnchorLinksDesktopInverted?: boolean;
@@ -28,6 +29,7 @@ interface HeroProps {
     imageComponent?: (props: ImageProps) => React.ReactNode;
     buttons?: (React.ComponentProps<typeof Button> & {
         link: string;
+        isExternal?: boolean;
     })[];
     background?: React.ComponentProps<typeof HeroBackground>;
     image?: string;
@@ -49,8 +51,13 @@ export function Hero({
     const rounded = size === HeroSize.Large && anchorLinks ? 'rounded-b-4xl sm:rounded-b-none' : '';
     const Link = linkComponent
         ? linkComponent
-        : ({ href, target, rel, children, ...rest }: React.PropsWithChildren<LinkProps>) => (
-              <a href={href as string} target={target} rel={rel} {...rest}>
+        : ({ href, children, isExternal, ...rest }: React.PropsWithChildren<LinkProps>) => (
+              <a
+                  href={href as string}
+                  target={isExternal ? '_blank' : undefined}
+                  rel={isExternal ? 'noopener noreferrer' : undefined}
+                  {...rest}
+              >
                   {children}
               </a>
           );

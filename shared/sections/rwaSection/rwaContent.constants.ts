@@ -9,7 +9,7 @@ export const CTA_CAROUSEL_CONTENT = [
             'The Trade Worldwide Information Pipeline is a digital platform built on IOTA that enables global supply chain participants to share and access data instantly and securely.',
         image: '/shared/rwa-section/cta-carousel/twin.png',
         text: 'View Showcases',
-        link: '',
+        link: '/learn/showcases/twin',
     },
     {
         title: 'MultiKnip',
@@ -17,7 +17,7 @@ export const CTA_CAROUSEL_CONTENT = [
             'Using digital tokens and wallet to inceltivize and drive purpose, value and change',
         image: '/shared/rwa-section/cta-carousel/multiknip.png',
         text: 'View Showcases',
-        link: '',
+        link: '/learn/showcases/multiknip',
     },
     {
         title: 'Demia',
@@ -25,7 +25,7 @@ export const CTA_CAROUSEL_CONTENT = [
             'Enabling trust in carbon markets by securing data to track, manage, and mitigate carbon emissions',
         image: '/shared/rwa-section/cta-carousel/demia.png',
         text: 'View Showcases',
-        link: '',
+        link: '/learn/showcases/demia',
     },
 ];
 

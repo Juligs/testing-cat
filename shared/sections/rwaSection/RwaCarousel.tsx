@@ -64,12 +64,7 @@ export function RwaCarousel() {
                                 brand
                             >
                                 <Actions>
-                                    <a
-                                        href={text.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        key={index}
-                                    >
+                                    <a href={text.link} key={index}>
                                         <TextLink text={text.text} showIcon />
                                     </a>
                                 </Actions>

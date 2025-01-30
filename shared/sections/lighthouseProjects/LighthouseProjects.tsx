@@ -5,7 +5,11 @@ import {
 } from './lighthouseContent.constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function LighthouseProjects({ id, theme }: BaseSectionProps) {
+interface LighthouseProjectsProps extends BaseSectionProps {
+    showLink?: boolean;
+}
+
+export function LighthouseProjects({ id, theme, showLink = true }: LighthouseProjectsProps) {
     return (
         <section className="bg-white" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-10 sm:gap-20">
@@ -14,21 +18,24 @@ export function LighthouseProjects({ id, theme }: BaseSectionProps) {
                     size={TitleTextSize.Small}
                     isCentered
                 >
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <Actions>
-                            <TextLink text="Learn more" showIcon />
-                        </Actions>
-                    </a>
+                    {showLink && (
+                        <a href="/learn/showcases/#lighthouse-projects">
+                            <Actions>
+                                <TextLink text="Learn more" showIcon />
+                            </Actions>
+                        </a>
+                    )}
                 </VerticalTitle>
                 <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-6">
                     {LIGHTHOUSE_IMAGE_CARD_CONTENT.map((data, index) => (
-                        <ImageCard
-                            key={index}
-                            title={data.title}
-                            subtitle={data.subtitle}
-                            image={data.image}
-                            isHoverable={false}
-                        ></ImageCard>
+                        <a href={data.link} className="[&>div]:h-full">
+                            <ImageCard
+                                key={index}
+                                title={data.title}
+                                subtitle={data.subtitle}
+                                image={data.image}
+                            />
+                        </a>
                     ))}
                 </div>
             </div>

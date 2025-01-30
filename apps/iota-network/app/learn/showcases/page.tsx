@@ -15,8 +15,8 @@ export default function Home() {
         <>
             <ShowcasesPageHero id="hero" theme="inverted" />
             <ShowcasesPageSection1 id="section1" />
-            <RwaSection id="rwa-section" />
-            <LighthouseProjects id="lighthouse-projects" />
+            <RwaSection id="rwa" showLink={false} />
+            <LighthouseProjects id="lighthouse-projects" showLink={false} />
             <TeamContactCTA id="team-contact-CTA" />
             <ShowcasesLastSection id="last-section" />
         </>

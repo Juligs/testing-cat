@@ -1,12 +1,12 @@
 import { HeroBackground, ScreenSize } from 'react-ui-kit';
 
-export const HERO_CORE_HOMEPAGE_CONTENT = {
-    title: 'Core Domains',
+export const FOCUS_AREAS_HOMEPAGE_CONTENT = {
+    title: 'Focus Areas',
     subtitle: 'Explore our diverse focus areas leveraging DLT to address real business needs',
     inverted: true,
 };
 
-export const HERO_CORE_HOMEPAGE_BG_VIDEO: React.ComponentProps<typeof HeroBackground> = {
+export const FOCUS_AREAS_HOMEPAGE_BG_VIDEO: React.ComponentProps<typeof HeroBackground> = {
     type: 'video',
     sourceSet: {
         [ScreenSize.Xs]: {

@@ -9,7 +9,7 @@ import {
     DecentralizedFinance,
 } from '@repo/shared/sections';
 
-const METADATA_TITLE = 'Core Domains';
+const METADATA_TITLE = 'Focus Areas';
 const METADATA_DESCRIPTION =
     'Explore our diverse focus areas leveraging DLT to address real business needs';
 

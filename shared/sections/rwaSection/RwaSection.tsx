@@ -3,7 +3,11 @@ import { RWA_VERTICAL_TITLE_CONTENT } from './rwaContent.constants';
 import { RwaCarousel } from './RwaCarousel';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function RwaSection({ id, theme }: BaseSectionProps) {
+interface RwaSectionProps extends BaseSectionProps {
+    showLink?: boolean;
+}
+
+export function RwaSection({ id, theme, showLink = true }: RwaSectionProps) {
     return (
         <section className="bg-white" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-10 sm:gap-20">
@@ -12,11 +16,13 @@ export function RwaSection({ id, theme }: BaseSectionProps) {
                     size={TitleTextSize.Small}
                     isCentered
                 >
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <Actions>
-                            <TextLink text="See Showcases" showIcon />
-                        </Actions>
-                    </a>
+                    {showLink && (
+                        <a href="/learn/showcases" target="_blank" rel="noopener noreferrer">
+                            <Actions>
+                                <TextLink text="See Showcases" showIcon />
+                            </Actions>
+                        </a>
+                    )}
                 </VerticalTitle>
                 <RwaCarousel />
             </div>

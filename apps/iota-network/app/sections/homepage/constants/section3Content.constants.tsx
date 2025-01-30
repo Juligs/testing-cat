@@ -22,7 +22,7 @@ export const CTA_CARD_CONTENT = [
 export const IMAGE_CARD_CONTENT = [
     {
         title: 'IOTA Identity',
-        subtitle: 'The global trust layer between everyone and everything',
+        subtitle: 'Empowering Secure, Private, and Decentralized Digital Interactions',
         image: '/homepage/section3/image-card-images/iota-identity.png',
         link: 'https://docs.iota.org/iota-identity',
     },

@@ -1,5 +1,5 @@
 import { Hero as HeroComponent } from '@repo/shared/components';
-import { HERO_CORE_HOMEPAGE_CONTENT, HERO_CORE_HOMEPAGE_BG_VIDEO } from './constants';
+import { FOCUS_AREAS_HOMEPAGE_CONTENT, FOCUS_AREAS_HOMEPAGE_BG_VIDEO } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
 export function Hero({ id, theme }: BaseSectionProps) {
@@ -10,8 +10,8 @@ export function Hero({ id, theme }: BaseSectionProps) {
             data-theme={theme}
         >
             <HeroComponent
-                verticalTitle={HERO_CORE_HOMEPAGE_CONTENT}
-                background={HERO_CORE_HOMEPAGE_BG_VIDEO}
+                verticalTitle={FOCUS_AREAS_HOMEPAGE_CONTENT}
+                background={FOCUS_AREAS_HOMEPAGE_BG_VIDEO}
             />
         </section>
     );

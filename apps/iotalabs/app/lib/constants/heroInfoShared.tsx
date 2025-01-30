@@ -29,6 +29,7 @@ export const HERO_GRANTS_BUTTON = [
         variant: ButtonVariant.Primary,
         icon: <ArrowTopRight />,
         inverted: true,
+        isExternal: true,
     },
 ];
 
@@ -64,6 +65,7 @@ export const HERO_PROJECTS_BUTTON = [
         variant: ButtonVariant.Primary,
         icon: <ArrowTopRight />,
         inverted: true,
+        isExternal: true,
     },
 ];
 

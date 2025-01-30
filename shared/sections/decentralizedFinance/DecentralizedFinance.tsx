@@ -8,7 +8,7 @@ export function DecentralizedFinance({ id, theme }: BaseSectionProps) {
     return (
         <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
             <div className="container py-14 xs:py-20 lg:py-30">
-                <TwoColumnsImageTemplate image="/shared/core-domains-sections/decentralized-finance.png">
+                <TwoColumnsImageTemplate image="/shared/focus-areas-sections/decentralized-finance.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...DECENTRALIZED_FINANCE_VERTICAL_TITLE_CONTENT}>
                             <Actions>

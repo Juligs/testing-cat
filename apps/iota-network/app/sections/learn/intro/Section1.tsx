@@ -1,7 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const TEXT =
-    'IOTA delivers permissionless public blockchain infrastructure to bring the advancements of Web3 into the real world. ';
+    'IOTA delivers permissionless public blockchain infrastructure to bring the benefits of Web3 to the real world.';
 
 export function Section1({ id, theme }: BaseSectionProps) {
     return (

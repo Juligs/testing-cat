@@ -29,7 +29,7 @@ export const SECTION8_BUTTONS = [
 
 export const SECTION8_IMAGE_CARD_CONTENT = [
     {
-        title: 'Move Base Layer 1 and EVM',
+        title: 'Move-Based Mainnet and EVM',
         subtitle: 'Define rich and composable on-chain assets',
         image: '/homepage/section8/image-card-images/move-base.png',
         link: 'https://docs.iota.org/about-iota',
@@ -48,7 +48,7 @@ export const SECTION8_IMAGE_CARD_CONTENT = [
     },
     {
         title: 'Parallel TX Processing',
-        subtitle: 'Unmatched scalability, instant settlement ',
+        subtitle: 'Exceptional scalability, instant settlement',
         image: '/homepage/section8/image-card-images/parallel-tx.png',
         link: 'https://docs.iota.org/about-iota#consensus-on-iota',
     },
@@ -56,7 +56,7 @@ export const SECTION8_IMAGE_CARD_CONTENT = [
 
 export const SECTION8_CTA_CARD_CONTENT = {
     title: 'A Versatile Ledger for the Future That Works Today',
-    subtitle: 'Unmatched interoperability across Virtual Machines and chains',
+    subtitle: 'A mainnet built for flexibility and interoperability',
     image: '/homepage/section8/cta-card.png',
     inverted: true,
 };
