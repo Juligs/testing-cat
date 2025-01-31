@@ -1,14 +1,14 @@
 import { getPageMetadata } from '@lib/utils';
-import { LighthouseProjects, RwaSection } from '@repo/shared/sections';
+import { LighthouseProjects, Rwa } from '@repo/shared/sections';
 import {
     Hero,
-    Section2,
-    Section3,
-    Section4,
-    Section7,
-    Section8,
-    Section9,
-    Section10,
+    IOTAAndMoveCTA,
+    IntegrationStack,
+    BuildingSolutions,
+    EcosystemProjects,
+    WhyBuild,
+    BlogPosts,
+    GettingStarted,
 } from '@sections';
 import type { Metadata } from 'next';
 
@@ -25,15 +25,15 @@ export default function Home() {
     return (
         <>
             <Hero id="hero" theme="inverted" />
-            <Section2 id="section-2" theme="inverted" />
-            <Section3 id="section-3" />
-            <Section4 id="section-4" />
-            <RwaSection id="rwa" />
+            <IOTAAndMoveCTA id="iotamove-cta" theme="inverted" />
+            <IntegrationStack id="integration-stack" />
+            <BuildingSolutions id="building-solutions" />
+            <Rwa id="rwa" />
             <LighthouseProjects id="lighthouse-projects" />
-            <Section7 id="section-7" />
-            <Section8 id="section-8" theme="inverted" />
-            <Section9 id="section-9" />
-            <Section10 id="section-10" />
+            <EcosystemProjects id="ecosystem-projects" />
+            <WhyBuild id="why-build" theme="inverted" />
+            <BlogPosts id="blog-posts" />
+            <GettingStarted id="getting-started" />
         </>
     );
 }

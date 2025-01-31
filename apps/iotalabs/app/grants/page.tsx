@@ -2,12 +2,12 @@ import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import {
     GrantsPageHero,
-    GrantsPageSection1,
-    GrantsPageSection2,
-    GrantsPageSection3,
-    GrantsPageSection4,
-    GrantsPageSection5,
-    GrantsPageSection6,
+    IotaGrantsOverview,
+    GrantsStats,
+    SupportedInitiatives,
+    HowToApply,
+    Guidelines,
+    TieredAssessmentFramework,
 } from '@sections/grants';
 
 const METADATA_TITLE = 'Grants';
@@ -23,12 +23,12 @@ export default function Home() {
     return (
         <>
             <GrantsPageHero id="hero" theme="inverted" />
-            <GrantsPageSection1 id="section-1" />
-            <GrantsPageSection2 id="section-2" />
-            <GrantsPageSection3 id="section-3" />
-            <GrantsPageSection4 id="section-4" />
-            <GrantsPageSection5 id="section-5" theme="inverted" />
-            <GrantsPageSection6 id="section-6" />
+            <IotaGrantsOverview id="overview" />
+            <GrantsStats id="stats" />
+            <SupportedInitiatives id="initiatives" />
+            <HowToApply id="apply" />
+            <Guidelines id="guidelines" theme="inverted" />
+            <TieredAssessmentFramework id="tiered" />
         </>
     );
 }

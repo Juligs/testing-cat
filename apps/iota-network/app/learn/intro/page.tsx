@@ -2,16 +2,16 @@ import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import {
     LearnPageHero,
-    LearnPageSection1,
-    LearnPageSection2,
-    LearnPageSection3,
-    LearnPageSection4,
-    LearnPageSection5,
-    LearnPageSection6,
-    LearnPageSection7,
-    LearnPageSection8,
-    LearnPageSection9,
-    LearnPageSection10,
+    PermissionlessWeb3,
+    WhatIsIOTA,
+    OurFeatures,
+    ProvenInWild,
+    BetterDLT,
+    GreaterThanSumOfParts,
+    OurCoreDomains,
+    StreamliningInnovation,
+    MakeYourProjectReal,
+    IntroMoreToExplore,
 } from '@sections';
 
 const METADATA_TITLE = 'Learn';
@@ -26,16 +26,16 @@ export default function Home() {
     return (
         <>
             <LearnPageHero id="hero" theme="inverted" />
-            <LearnPageSection1 id="section-1" />
-            <LearnPageSection2 id="section-2" />
-            <LearnPageSection3 id="section-3" />
-            <LearnPageSection4 id="section-4" />
-            <LearnPageSection5 id="section-5" />
-            <LearnPageSection6 id="section-6" />
-            <LearnPageSection7 id="section-7" theme="inverted" />
-            <LearnPageSection8 id="section-8" />
-            <LearnPageSection9 id="section-9" theme="inverted" />
-            <LearnPageSection10 id="section-10" />
+            <PermissionlessWeb3 id="permissionless-web3" />
+            <WhatIsIOTA id="what-is-iota" />
+            <OurFeatures id="our-features" />
+            <ProvenInWild id="proven-in-wild" />
+            <BetterDLT id="better-dlt" />
+            <GreaterThanSumOfParts id="greater-than-sum-of-parts" />
+            <OurCoreDomains id="our-core-domains" theme="inverted" />
+            <StreamliningInnovation id="streamlining-innovation" />
+            <MakeYourProjectReal id="make-your-project-real" theme="inverted" />
+            <IntroMoreToExplore id="explore" />
         </>
     );
 }

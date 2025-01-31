@@ -1,3 +1,3 @@
 export * from './heroContent.constants';
-export * from './section1Content.constant';
-export * from './lastSectionContent.constants';
+export * from './partnersCarouselContent.constant';
+export * from './showcasesMoreToExploreContent.constants';

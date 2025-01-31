@@ -3,7 +3,7 @@ import { ROUTES } from '@lib/constants';
 import { Metadata } from 'next';
 import { ContextProviders } from './providers';
 import { getPageMetadata } from '@lib/utils';
-import { FontLinks } from './components/fontLinks';
+import { FontLinks } from './components/font-links';
 import './globals.css';
 
 export const metadata: Metadata = getPageMetadata({});

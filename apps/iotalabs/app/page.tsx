@@ -2,16 +2,16 @@ import type { Metadata } from 'next';
 
 import {
     Hero,
-    Section1,
-    Section2,
-    Section3,
-    Section4,
-    Section5,
-    Section6,
-    Section7,
-    Section8,
-    Section9,
-    Section10,
+    HomepageOverview,
+    EngineBehind,
+    Empowering,
+    NewEra,
+    GettingStarted,
+    IOTAGrants,
+    EVMToolkit,
+    Infrastructure,
+    BuildWith,
+    News,
 } from '@sections';
 import { getPageMetadata } from '@lib/utils';
 const METADATA_TITLE = 'Power Up Your Builder Journey';
@@ -27,16 +27,16 @@ export default function Home() {
     return (
         <>
             <Hero id="hero" theme="inverted" />
-            <Section1 id="section-1" />
-            <Section2 id="section-2" />
-            <Section3 id="section-3" theme="inverted" />
-            <Section4 id="section-4" />
-            <Section5 id="section-5" />
-            <Section6 id="section-6" />
-            <Section7 id="section-7" theme="inverted" />
-            <Section8 id="section-8" />
-            <Section9 id="section-9" />
-            <Section10 id="section-10" />
+            <HomepageOverview id="overview" />
+            <EngineBehind id="engine" />
+            <Empowering id="empowering" theme="inverted" />
+            <NewEra id="new-era" />
+            <GettingStarted id="getting-started" />
+            <IOTAGrants id="grants" />
+            <EVMToolkit id="evm-toolkit" theme="inverted" />
+            <Infrastructure id="infrastructure" />
+            <BuildWith id="build-with" />
+            <News id="news" />
         </>
     );
 }

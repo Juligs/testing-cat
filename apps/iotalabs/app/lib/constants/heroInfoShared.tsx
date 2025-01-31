@@ -36,15 +36,15 @@ export const HERO_GRANTS_BUTTON = [
 export const HERO_GRANTS_ANCHORLINKS = [
     {
         text: 'Supported Initiatives',
-        onClick: () => scrollToSection('#section-3'),
+        onClick: () => scrollToSection('#initiatives'),
     },
     {
         text: 'Application Process',
-        onClick: () => scrollToSection('#section-4'),
+        onClick: () => scrollToSection('#apply'),
     },
     {
         text: 'Funding Guidelines',
-        onClick: () => scrollToSection('#section-5'),
+        onClick: () => scrollToSection('#guidelines'),
     },
 ];
 

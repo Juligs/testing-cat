@@ -1,10 +1,15 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { CorePageHero, CorePageSection1, CoreLastSection, ContactUsSection } from '@sections';
 import {
-    RealWorldAssetTokenizationSection,
-    TradeAndSupplyChainsSection,
-    DigitalIdentitySection,
+    CorePageHero,
+    DrivingInnovationAdoption,
+    FocusAreasMoreToExplore,
+    ContactUs,
+} from '@sections';
+import {
+    RealWorldAssetTokenization,
+    TradeAndSupplyChains,
+    DigitalIdentity,
     CircularEconomy,
     DecentralizedFinance,
 } from '@repo/shared/sections';
@@ -22,14 +27,14 @@ export default function Home() {
     return (
         <>
             <CorePageHero id="hero" theme="inverted" />
-            <CorePageSection1 id="section1" />
-            <RealWorldAssetTokenizationSection id="real-world-asset-tokenization" />
-            <TradeAndSupplyChainsSection id="trade-and-supply-chains" />
-            <DigitalIdentitySection id="digital-identity" />
+            <DrivingInnovationAdoption id="driving-innovation-adoption" />
+            <RealWorldAssetTokenization id="real-world-asset-tokenization" />
+            <TradeAndSupplyChains id="trade-and-supply-chains" />
+            <DigitalIdentity id="digital-identity" />
             <CircularEconomy id="circular-economy" />
             <DecentralizedFinance id="decentralized-finance" />
-            <CoreLastSection id="lastSection" />
-            <ContactUsSection id="contact" />
+            <FocusAreasMoreToExplore id="explore" />
+            <ContactUs id="contact" />
         </>
     );
 }

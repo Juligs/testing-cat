@@ -1,3 +1,3 @@
 export * from './layout';
-export * from './fontLinks';
+export * from './font-links';
 export * from './navbar-items';

@@ -100,7 +100,7 @@ export const ROUTES: Route[] = [
                     {
                         title: 'Real-World Applications',
                         description: 'Showcasing practical use cases',
-                        path: '/learn/showcases/#rwa-section',
+                        path: '/learn/showcases/#rwa',
                     },
                     {
                         title: 'Lighthouse Projects',

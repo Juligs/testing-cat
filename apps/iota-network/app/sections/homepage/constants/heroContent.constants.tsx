@@ -29,17 +29,18 @@ export const HERO_HOMEPAGE_BUTTON = [
 export const HERO_HOMEPAGE_ANCHORLINKS = [
     {
         text: 'Product Suite',
-        onClick: () => scrollToSection('#section-3'),
+        onClick: () => scrollToSection('#integration-stack'),
     },
     {
         text: 'Why Build on IOTA?',
-        onClick: () => scrollToSection('#section-8'),
+        onClick: () => scrollToSection('#why-build'),
     },
     {
         text: 'Real World Adoption',
-        onClick: () => scrollToSection('#real-world-adoption'),
+        onClick: () => scrollToSection('#rwa'),
     },
 ];
+
 export const HERO_HOMEPAGE_BG: React.ComponentProps<typeof HeroBackground> = {
     type: 'video',
     sourceSet: {

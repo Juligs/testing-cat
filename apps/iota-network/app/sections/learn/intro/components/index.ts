@@ -1,1 +1,1 @@
-export * from './testimonial_carousel';
+export * from './testimonial-carousel';
