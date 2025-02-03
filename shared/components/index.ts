@@ -10,3 +10,4 @@ export * from './higlited-hero-text';
 export * from './infinite-carousel';
 export * from './vertical-title-and-grid';
 export * from './contact-us-with-anchor-links';
+export * from './(mdx-pages)';

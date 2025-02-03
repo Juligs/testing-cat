@@ -1,5 +1,5 @@
 import { HeroLayout, HeroBackground } from 'react-ui-kit';
-import { MdxPageTitle } from './MdxPageTitle';
+import { MdxPageTitle } from '@repo/shared/components';
 
 export function MdxPageHero(): React.JSX.Element {
     return (

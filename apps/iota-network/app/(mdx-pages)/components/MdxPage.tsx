@@ -1,10 +1,8 @@
-import { MdxPageHero } from './';
 import { MdxSection } from '@repo/shared/components';
 
 export function MdxPage({ children }: React.PropsWithChildren): React.JSX.Element {
     return (
         <>
-            <MdxPageHero />
             <MdxSection>{children}</MdxSection>
         </>
     );

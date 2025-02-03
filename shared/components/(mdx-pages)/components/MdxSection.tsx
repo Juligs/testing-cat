@@ -1,4 +1,4 @@
-import { BaseSectionProps } from '@repo/shared/interfaces';
+import { BaseSectionProps } from '../../../interfaces';
 
 export function MdxSection({
     children,
