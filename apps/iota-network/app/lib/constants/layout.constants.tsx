@@ -12,12 +12,12 @@ import {
 } from '@repo/icons';
 
 export const LEARN_FEATURED_CARDS: Route[] = [
-    {
-        title: 'IOTA Foundation',
-        image: '/navbar-foundation.png',
-        path: '/foundation',
-        isExternal: true,
-    },
+    // {
+    //     title: 'IOTA Foundation',
+    //     image: '/navbar-foundation.png',
+    //     path: '/foundation',
+    //     isExternal: true,
+    // },
     {
         title: 'iotalabs',
         image: '/navbar-iotalabs.png',
@@ -98,6 +98,11 @@ export const ROUTES: Route[] = [
                 icon: <Placeholder />,
                 children: [
                     {
+                        title: 'Showcases',
+                        description: 'Explorer all IOTA Technology Showcases',
+                        path: '/learn/showcases',
+                    },
+                    {
                         title: 'Real-World Applications',
                         description: 'Showcasing practical use cases',
                         path: '/learn/showcases/#rwa',
@@ -113,6 +118,11 @@ export const ROUTES: Route[] = [
                 title: 'Focus Areas',
                 icon: <Placeholder />,
                 children: [
+                    {
+                        title: 'All Areas',
+                        description: 'Explorer our diverse focus areas',
+                        path: '/learn/focus-areas',
+                    },
                     {
                         title: 'Real World Asset Tokenization',
                         description: 'Merging traditional finance with Web3 for peak efficiency',
