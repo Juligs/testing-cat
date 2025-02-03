@@ -1,7 +1,11 @@
 {
     "$schema": "https://turbo.build/schema.json",
     "ui": "tui",
-    "globalEnv": ["NEXT_PUBLIC_IOTALABS_COOKIE_ANALYTICS_ID", "IOTALABS_AIRTABLE_KEY"],
+    "globalEnv": [
+        "NEXT_PUBLIC_IOTALABS_GOOGLE_ANALYTICS_ID",
+        "IOTALABS_AIRTABLE_KEY",
+        "NEXT_PUBLIC_IOTANETWORK_GOOGLE_ANALYTICS_ID"
+    ],
     "tasks": {
         "build": {
             "dependsOn": ["^react-ui-kit#package"],

@@ -16,12 +16,12 @@ export function CookieDisclaimer(): React.JSX.Element {
     const configuration: SKCMConfiguration = {
         disclaimer: {
             title: undefined,
-            body: 'By using the iotalabs site, you agree with our use of cookies. ',
+            body: 'By using the IOTA Network site, you agree with our use of cookies.',
             policyText: 'Read our Cookie Policy',
             policyUrl: '/cookie-policy',
         },
         services: {
-            googleAnalytics4Id: process.env.NEXT_PUBLIC_IOTALABS_GOOGLE_ANALYTICS_ID,
+            googleAnalytics4Id: process.env.NEXT_PUBLIC_IOTANETWORK_GOOGLE_ANALYTICS_ID,
         },
     };
 

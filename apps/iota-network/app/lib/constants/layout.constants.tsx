@@ -226,6 +226,10 @@ export const LEGAL_ROUTES: Route[] = [
         title: 'Terms of Use',
         path: '/privacy-policy',
     },
+    {
+        title: 'Cookie Policy',
+        path: '/cookie-policy',
+    },
 ];
 
 export const COMPANY_DATA = [

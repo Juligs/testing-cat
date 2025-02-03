@@ -1,4 +1,4 @@
-import { Navigation, Footer } from '@components';
+import { Navigation, Footer, CookieDisclaimer } from '@components';
 import { ROUTES } from '@lib/constants';
 import { Metadata } from 'next';
 import { ContextProviders } from './providers';
@@ -21,6 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     <Navigation items={ROUTES} />
                     {children}
                     <Footer />
+                    <CookieDisclaimer />
                 </ContextProviders>
             </body>
         </html>
