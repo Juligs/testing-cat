@@ -2,6 +2,7 @@ import { getPageMetadata } from '@lib/utils';
 import { LighthouseProjects, Rwa } from '@repo/shared/sections';
 import {
     Hero,
+    // NetworkStats,
     IOTAAndMoveCTA,
     IntegrationStack,
     BuildingSolutions,
@@ -25,6 +26,7 @@ export default function Home() {
     return (
         <>
             <Hero id="hero" theme="inverted" />
+            {/* <NetworkStats id="network-stats" /> */}
             <IOTAAndMoveCTA id="iotamove-cta" theme="inverted" />
             <IntegrationStack id="integration-stack" />
             <BuildingSolutions id="building-solutions" />

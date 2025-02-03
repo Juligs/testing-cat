@@ -1,4 +1,5 @@
 export * from './Hero';
+export * from './NetworkStats';
 export * from './IOTAAndMoveCTA';
 export * from './IntegrationStack';
 export * from './BuildingSolutions';

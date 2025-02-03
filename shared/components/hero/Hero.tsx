@@ -51,13 +51,8 @@ export function Hero({
     const rounded = size === HeroSize.Large && anchorLinks ? 'rounded-b-4xl sm:rounded-b-none' : '';
     const Link = linkComponent
         ? linkComponent
-        : ({ href, children, isExternal, ...rest }: React.PropsWithChildren<LinkProps>) => (
-              <a
-                  href={href as string}
-                  target={isExternal ? '_blank' : undefined}
-                  rel={isExternal ? 'noopener noreferrer' : undefined}
-                  {...rest}
-              >
+        : ({ href, children, ...rest }: React.PropsWithChildren<LinkProps>) => (
+              <a href={href as string} {...rest}>
                   {children}
               </a>
           );
