@@ -49,7 +49,7 @@ export const HERO_GRANTS_ANCHORLINKS = [
 ];
 
 export const HERO_GRANTS_BG: React.ComponentProps<typeof HeroBackground> = {
-    src: '/grants/hero-bg.svg',
+    src: '/grants/hero_bg.svg',
     type: 'image',
 };
 

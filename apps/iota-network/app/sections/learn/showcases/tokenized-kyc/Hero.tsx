@@ -12,7 +12,7 @@ export function Hero({ id, theme }: BaseSectionProps) {
         >
             <HeroComponent
                 verticalTitle={KYC_HOMEPAGE_CONTENT}
-                image="/shared/showcases/tokenized-kyc.png"
+                image="/shared/showcases/tokenized_kyc.png"
                 size={HeroSize.ExtraLarge}
             />
         </section>

@@ -1,6 +1,6 @@
 const BASE_URL = 'https://iotalabs.io';
 const METADATA_SITE_NAME = 'iotalabs';
-const METADATA_IMAGE_FALLBACK = `${BASE_URL}/meta-image.png`;
+const METADATA_IMAGE_FALLBACK = `${BASE_URL}/meta_image.png`;
 
 interface PageMetadataProps {
     title?: string;

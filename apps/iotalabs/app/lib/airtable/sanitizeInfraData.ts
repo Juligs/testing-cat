@@ -20,7 +20,7 @@ interface SanitizeOptions {
 
 export async function sanitizeInfraData(
     data: Records<FieldSet>,
-    { allowedCategories, placeholderImageUrl = '/homepage/placeholder-image.svg' }: SanitizeOptions,
+    { allowedCategories, placeholderImageUrl = '/homepage/placeholder_image.svg' }: SanitizeOptions,
 ): Promise<CardShowcase[]> {
     const normalizedCategories = new Set(allowedCategories.map((c) => c.toLowerCase()));
 

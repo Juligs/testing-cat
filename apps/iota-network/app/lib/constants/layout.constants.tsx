@@ -14,13 +14,13 @@ import {
 export const LEARN_FEATURED_CARDS: Route[] = [
     // {
     //     title: 'IOTA Foundation',
-    //     image: '/navbar-foundation.png',
+    //     image: '/navbar_foundation.png',
     //     path: '/foundation',
     //     isExternal: true,
     // },
     {
         title: 'iotalabs',
-        image: '/navbar-iotalabs.png',
+        image: '/navbar_iotalabs.png',
         path: 'https://iotalabs.io/',
         isExternal: true,
     },

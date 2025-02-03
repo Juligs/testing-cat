@@ -31,25 +31,25 @@ export const WHY_BUILD_IMAGE_CARD_CONTENT = [
     {
         title: 'Move-Based Mainnet and EVM',
         subtitle: 'Define rich and composable on-chain assets',
-        image: '/homepage/section8/image-card-images/move-base.png',
+        image: '/homepage/why-build/image-card-images/move_base.png',
         link: 'https://docs.iota.org/about-iota',
     },
     {
         title: 'Advanced Identity Features',
         subtitle: 'Verification of tokenized asset authenticity',
-        image: '/homepage/section8/image-card-images/advance-identity.png',
+        image: '/homepage/why-build/image-card-images/advance_identity.png',
         link: 'https://docs.iota.org/iota-identity',
     },
     {
         title: 'Web Wallet Extension',
         subtitle: 'Frictionless onboarding with the IOTA wallet ',
-        image: '/homepage/section8/image-card-images/web-wallet.png',
+        image: '/homepage/why-build/image-card-images/web_wallet.png',
         link: 'https://docs.iota.org/about-iota/iota-wallet/getting-started',
     },
     {
         title: 'Parallel TX Processing',
         subtitle: 'Exceptional scalability, instant settlement',
-        image: '/homepage/section8/image-card-images/parallel-tx.png',
+        image: '/homepage/why-build/image-card-images/parallel_tx.png',
         link: 'https://docs.iota.org/about-iota#consensus-on-iota',
     },
 ];
@@ -57,7 +57,7 @@ export const WHY_BUILD_IMAGE_CARD_CONTENT = [
 export const WHY_BUILD_CTA_CARD_CONTENT = {
     title: 'A Versatile Ledger for the Future That Works Today',
     subtitle: 'A mainnet built for flexibility and interoperability',
-    image: '/homepage/section8/cta-card.png',
+    image: '/homepage/why-build/cta_card.png',
     inverted: true,
 };
 

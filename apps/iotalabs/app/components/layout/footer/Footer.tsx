@@ -15,7 +15,7 @@ export function Footer() {
     return (
         <footer className="bg-darkest text-white relative overflow-hidden">
             <Image
-                src="/footer-pattern.svg"
+                src="/footer_pattern.svg"
                 width={920}
                 height={489}
                 alt="footer-pattern"

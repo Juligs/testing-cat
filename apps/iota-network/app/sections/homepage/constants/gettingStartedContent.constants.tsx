@@ -6,16 +6,16 @@ export const GETTING_STARTED_IMAGE_CARD_CONTENT = [
     {
         title: 'Developer Documentation',
         link: 'https://docs.iota.org',
-        image: '/homepage/section10/developer-documentation.png',
+        image: '/homepage/getting-started/developer_documentation.png',
     },
     {
         title: 'Guides & Tutorials',
         link: 'https://docs.iota.org/developer/getting-started/coffee-example',
-        image: '/homepage/section10/guides-tutorial.png',
+        image: '/homepage/getting-started/guides_tutorial.png',
     },
     {
         title: 'Advanced Tooling',
         link: 'https://docs.iota.org/references',
-        image: '/homepage/section10/advance-tooling.png',
+        image: '/homepage/getting-started/advance_tooling.png',
     },
 ];

@@ -9,7 +9,7 @@ export function DemiaCarbonEmissions({ id, theme }: BaseSectionProps) {
     return (
         <section className="w-full" id={id} data-theme={theme}>
             <VerticalTitleAndGrid
-                image="/shared/focus-areas-sections/carbon-emissions.png"
+                image="/shared/focus-areas-sections/carbon_emissions.png"
                 verticalTitle={DEMIA_CARBON_EMISSIONS_VERTICAL_TITLE_CONTENT}
                 iconContent={DEMIA_CARBON_EMISSIONS_ICON_CONTENT}
             />

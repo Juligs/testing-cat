@@ -6,7 +6,7 @@ export function KYCDeFi({ id, theme }: BaseSectionProps) {
     return (
         <section className="w-full" id={id} data-theme={theme}>
             <VerticalTitleAndGrid
-                image="/shared/showcases/kyc-defi.png"
+                image="/shared/showcases/kyc_defi.png"
                 verticalTitle={KYC_SCALABLE_VERTICAL_TITLE_CONTENT}
                 iconContent={KYC_SCALABLE_ICON_CONTENT}
             />
