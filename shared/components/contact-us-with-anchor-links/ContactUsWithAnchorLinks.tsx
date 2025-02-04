@@ -4,13 +4,13 @@ import {
     CONTACT_US_TITLE_CONTENT,
 } from './contactUsWithAnchorLinksContent.constants';
 import Link from 'next/link';
-import { Placeholder } from '@repo/icons';
 
 interface ContactUsProps {
     anchorLinks?: {
         text: string;
         url: string;
         isExternal?: boolean;
+        leadingIcon?: React.ReactNode;
     }[];
 }
 
@@ -45,7 +45,7 @@ export function ContactUsWithAnchorLinks({ anchorLinks }: ContactUsProps) {
                     >
                         <AnchorLink
                             text={link.text}
-                            leadingIcon={<Placeholder />}
+                            leadingIcon={link.leadingIcon}
                             isExternal={link.isExternal}
                         />
                     </Link>

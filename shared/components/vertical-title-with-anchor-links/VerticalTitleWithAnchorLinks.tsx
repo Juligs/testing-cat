@@ -1,4 +1,3 @@
-import { Placeholder } from '@repo/icons';
 import { AnchorLink, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 interface VerticalTitleWithAnchorLinksProps {
     title?: string;
@@ -21,7 +20,7 @@ export function VerticalTitleWithAnchorLinks({
                         key={index}
                         text={data.text}
                         onClick={data.onClick}
-                        leadingIcon={<Placeholder />}
+                        leadingIcon={data.leadingIcon}
                     />
                 ))}
             </div>

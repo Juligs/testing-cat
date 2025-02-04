@@ -1,10 +1,12 @@
 import { Route } from '@lib/interfaces';
 import {
+    BalanceFinder,
+    ClientLibraries,
     Discord,
+    Flexibility,
     GitHub,
     GoogleScholar,
     LinkedIn,
-    Placeholder,
     Reddit,
     Telegram,
     XSocialIcon,
@@ -84,7 +86,7 @@ export const ROUTES: Route[] = [
         navbarSections: [
             {
                 title: 'Learn IOTA',
-                icon: <Placeholder />,
+                icon: <ClientLibraries />,
                 children: [
                     {
                         title: 'Intro to IOTA',
@@ -95,7 +97,7 @@ export const ROUTES: Route[] = [
             },
             {
                 title: 'Explore Use Cases',
-                icon: <Placeholder />,
+                icon: <Flexibility />,
                 children: [
                     {
                         title: 'Showcases',
@@ -116,7 +118,7 @@ export const ROUTES: Route[] = [
             },
             {
                 title: 'Focus Areas',
-                icon: <Placeholder />,
+                icon: <BalanceFinder />,
                 children: [
                     {
                         title: 'All Areas',
