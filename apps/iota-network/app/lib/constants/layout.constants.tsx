@@ -101,7 +101,7 @@ export const ROUTES: Route[] = [
                 children: [
                     {
                         title: 'Showcases',
-                        description: 'Explorer all IOTA Technology Showcases',
+                        description: 'Explore all IOTA Technology Showcases',
                         path: '/learn/showcases',
                     },
                     {
@@ -111,7 +111,7 @@ export const ROUTES: Route[] = [
                     },
                     {
                         title: 'Lighthouse Projects',
-                        description: 'Highlights of pilot projects and Proofs of Concept',
+                        description: 'Highlights of pilot projects and proofs of concept',
                         path: '/learn/showcases/#lighthouse-projects',
                     },
                 ],
@@ -132,7 +132,7 @@ export const ROUTES: Route[] = [
                     },
                     {
                         title: 'Digital Identity',
-                        description: 'A global trust layer between everyone and everything',
+                        description: 'A global trust layer for seamless verification',
                         path: '/learn/focus-areas/#digital-identity',
                     },
                     {
@@ -142,7 +142,7 @@ export const ROUTES: Route[] = [
                     },
                     {
                         title: 'Decentralized Finance',
-                        description: 'Unlock innovative DeFi opportunities with IOTA EVM',
+                        description: 'Empowering innovative DeFi products to build new economies',
                         path: '/learn/focus-areas/#decentralized-finance',
                     },
                     {
