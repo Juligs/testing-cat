@@ -6,11 +6,17 @@ import { useScreenSize } from '@repo/shared/hooks';
 import Link from 'next/link';
 import { Button, ButtonSize, ButtonVariant, ScreenSize } from 'react-ui-kit';
 import { Logo } from '../logo';
+import { useState, useEffect } from 'react';
 
 export function Footer() {
     const COPYRIGHT_YEAR = new Date().getFullYear();
 
     const { size: screenSize } = useScreenSize();
+    const [clientScreenSize, setClientScreenSize] = useState<ScreenSize | null>(null);
+
+    useEffect(() => {
+        setClientScreenSize(screenSize);
+    }, [screenSize]);
 
     function getFooterRoutes(routes: Route[]): Route[] {
         return routes
@@ -96,7 +102,10 @@ export function Footer() {
                                 >
                                     <Button
                                         size={
-                                            [ScreenSize.Xs, ScreenSize.Sm].includes(screenSize)
+                                            clientScreenSize &&
+                                            [ScreenSize.Xs, ScreenSize.Sm].includes(
+                                                clientScreenSize,
+                                            )
                                                 ? ButtonSize.Small
                                                 : ButtonSize.Medium
                                         }
