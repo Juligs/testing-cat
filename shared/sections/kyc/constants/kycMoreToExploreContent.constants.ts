@@ -1,4 +1,4 @@
-export const DPP_MORE_TO_EXPLORE_CONTENT = [
+export const KYC_MORE_TO_EXPLORE_CONTENT = [
     {
         title: 'Intellectual Property Rights Management',
         subtitle: 'Automated and transparent rights contracts and payments',

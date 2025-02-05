@@ -7,13 +7,22 @@ import {
     EbsiPartners,
     EbsiScalable,
 } from '@repo/shared/sections';
-
-const METADATA_TITLE = 'European Blockchain Pre-Commercial Procurement';
-const METADATA_DESCRIPTION = 'IOTA solutions for a pan-European blockchain';
+import {
+    EBSI_METADATA_TITLE,
+    EBSI_METADATA_DESCRIPTION_X,
+    EBSI_KEYWORDS,
+    EBSI_METADATA_DESCRIPTION,
+    EBSI_IMAGE,
+    EBSI_URL,
+} from '@lib/constants';
 
 export const metadata: Metadata = getPageMetadata({
-    title: METADATA_TITLE,
-    description: METADATA_DESCRIPTION,
+    title: EBSI_METADATA_TITLE,
+    description: EBSI_METADATA_DESCRIPTION,
+    descriptionX: EBSI_METADATA_DESCRIPTION_X,
+    keywords: EBSI_KEYWORDS,
+    image: EBSI_IMAGE,
+    url: EBSI_URL,
 });
 
 export default function Home() {

@@ -12,6 +12,6 @@ export * from './twin';
 export * from './demia';
 export * from './multiknip';
 export * from './ebsi';
-export * from './tokenized-kyc';
-export * from './ipr-management';
+export * from './kyc';
+export * from './iprm';
 export * from './dpp';

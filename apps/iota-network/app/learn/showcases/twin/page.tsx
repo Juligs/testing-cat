@@ -7,13 +7,22 @@ import {
     TwinPartners,
     TwinContactUs,
 } from '@repo/shared/sections';
-
-const METADATA_TITLE = 'TWIN';
-const METADATA_DESCRIPTION = 'Seamless transfer of digital trade data across borders';
+import {
+    TWIN_METADATA_TITLE,
+    TWIN_METADATA_DESCRIPTION_X,
+    TWIN_KEYWORDS,
+    TWIN_METADATA_DESCRIPTION,
+    TWIN_IMAGE,
+    TWIN_URL,
+} from '@lib/constants';
 
 export const metadata: Metadata = getPageMetadata({
-    title: METADATA_TITLE,
-    description: METADATA_DESCRIPTION,
+    title: TWIN_METADATA_TITLE,
+    description: TWIN_METADATA_DESCRIPTION,
+    descriptionX: TWIN_METADATA_DESCRIPTION_X,
+    keywords: TWIN_KEYWORDS,
+    image: TWIN_IMAGE,
+    url: TWIN_URL,
 });
 
 export default function Home() {

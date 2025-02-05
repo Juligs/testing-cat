@@ -14,12 +14,21 @@ import {
     IntroMoreToExplore,
 } from '@sections';
 
-const METADATA_TITLE = 'Learn';
-const METADATA_DESCRIPTION = 'We Build Cutting-Edge Technology';
-
+import {
+    INTRO_METADATA_TITLE,
+    INTRO_METADATA_DESCRIPTION_X,
+    INTRO_KEYWORDS,
+    INTRO_METADATA_DESCRIPTION,
+    INTRO_IMAGE,
+    INTRO_URL,
+} from '@lib/constants';
 export const metadata: Metadata = getPageMetadata({
-    title: METADATA_TITLE,
-    description: METADATA_DESCRIPTION,
+    title: INTRO_METADATA_TITLE,
+    description: INTRO_METADATA_DESCRIPTION,
+    descriptionX: INTRO_METADATA_DESCRIPTION_X,
+    keywords: INTRO_KEYWORDS,
+    image: INTRO_IMAGE,
+    url: INTRO_URL,
 });
 
 export default function Home() {

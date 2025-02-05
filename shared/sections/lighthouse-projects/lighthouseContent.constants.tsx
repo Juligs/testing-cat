@@ -1,4 +1,4 @@
-import { Animation, RendererType } from 'react-ui-kit/client';
+import { Animation } from 'react-ui-kit/client';
 export const LIGHTHOUSE_VERTICAL_TITLE_CONTENT = {
     title: 'Lighthouse Projects',
 };

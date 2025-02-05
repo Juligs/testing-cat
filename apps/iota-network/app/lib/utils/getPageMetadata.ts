@@ -1,18 +1,50 @@
-const BASE_URL = 'https://iota.org';
+import { BASE_URL } from '@lib/constants';
+
 const METADATA_SITE_NAME = 'IOTA Network';
-const METADATA_IMAGE_FALLBACK = `${BASE_URL}/meta-image.png`;
+const METADATA_IMAGE_FALLBACK = `${BASE_URL}/metadata/meta_image_home.png`;
+const KEYWORDS_FALLBACK = [
+    'IOTA',
+    'blockchain',
+    'Web3',
+    'distributed ledger technology',
+    'DLT',
+    'digital identity',
+    'supply chains',
+    'decentralized finance',
+    'sustainability',
+    'IOTA EVM',
+    'real-world blockchain applications',
+    'open-source blockchain',
+    'decentralized solutions',
+    'IOTA projects',
+    'IOTA ecosystem',
+    'IOTA tools',
+    'scalability',
+    'future of blockchain',
+];
 
 interface PageMetadataProps {
+    url?: string;
     title?: string;
     description?: string;
     image?: string;
+    descriptionX?: string;
+    keywords?: string[];
 }
 export function getPageMetadata({
+    url,
     title,
     description,
-    image = METADATA_IMAGE_FALLBACK,
+    descriptionX,
+    image,
+    keywords,
 }: PageMetadataProps) {
     const pageTitle = title ? `${METADATA_SITE_NAME} – ${title}` : METADATA_SITE_NAME;
+    const pageKeywords = keywords || KEYWORDS_FALLBACK;
+    const pageUrl = url || BASE_URL;
+    const pageImage = image
+        ? `${BASE_URL}${image.startsWith('/') ? image : `/${image}`}`
+        : METADATA_IMAGE_FALLBACK;
 
     return {
         title: pageTitle,
@@ -20,31 +52,21 @@ export function getPageMetadata({
         alternates: {
             canonical: '/',
         },
-        keywords: [
-            'IOTA',
-            'EVM',
-            'Smart Contracts',
-            'NFTs',
-            'IOTA Smart Contracts',
-            'DLT',
-            'dag',
-            'distributed ledger',
-            'blockchain',
-        ],
+        pageKeywords,
         openGraph: {
             type: 'website',
-            url: BASE_URL,
+            url: pageUrl,
             title: pageTitle,
             siteName: METADATA_SITE_NAME,
-            images: image,
+            images: pageImage,
         },
         twitter: {
             card: 'summary_large_image',
-            creator: '@iota_',
-            site: '@iota_',
+            creator: '@iota',
+            site: '@iota',
             title: pageTitle,
-            description,
-            images: image,
+            descriptionX,
+            image: pageImage,
         },
     };
 }

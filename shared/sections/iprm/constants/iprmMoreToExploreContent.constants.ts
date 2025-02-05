@@ -1,4 +1,4 @@
-export const EBSI_MORE_TO_EXPLORE_CONTENT = [
+export const IPRM_MORE_TO_EXPLORE_CONTENT = [
     {
         title: 'Tokenized KYC',
         subtitle: 'Privacy-preserving on-chain authentication',

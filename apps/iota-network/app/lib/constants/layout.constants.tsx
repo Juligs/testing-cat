@@ -63,12 +63,12 @@ export const ROUTES: Route[] = [
                     },
                     {
                         title: 'KYC',
-                        path: '/learn/showcases/tokenized-kyc',
+                        path: '/learn/showcases/kyc',
                         hideFromFooter: true,
                     },
                     {
                         title: 'IPR Management',
-                        path: '/learn/showcases/ipr-management',
+                        path: '/learn/showcases/iprm',
                         hideFromFooter: true,
                     },
                     {

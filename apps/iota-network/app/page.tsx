@@ -11,15 +11,23 @@ import {
     BlogPosts,
     GettingStarted,
 } from '@sections';
+import {
+    HOMEPAGE_METADATA_TITLE,
+    HOMEPAGE_METADATA_DESCRIPTION_X,
+    HOMEPAGE_KEYWORDS,
+    HOMEPAGE_METADATA_DESCRIPTION,
+    HOMEPAGE_IMAGE,
+    HOMEPAGE_URL,
+} from '@lib/constants';
 import type { Metadata } from 'next';
 
-const METADATA_TITLE = 'We Bring the Real World to Web3';
-const METADATA_DESCRIPTION =
-    'IOTA builds public blockchain infrastructure to integrate Web3 with the real world.';
-
 export const metadata: Metadata = getPageMetadata({
-    title: METADATA_TITLE,
-    description: METADATA_DESCRIPTION,
+    title: HOMEPAGE_METADATA_TITLE,
+    description: HOMEPAGE_METADATA_DESCRIPTION,
+    descriptionX: HOMEPAGE_METADATA_DESCRIPTION_X,
+    keywords: HOMEPAGE_KEYWORDS,
+    image: HOMEPAGE_IMAGE,
+    url: HOMEPAGE_URL,
 });
 
 export default function Home() {

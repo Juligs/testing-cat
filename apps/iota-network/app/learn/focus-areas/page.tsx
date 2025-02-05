@@ -1,5 +1,6 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
+
 import {
     CorePageHero,
     DrivingInnovationAdoption,
@@ -13,14 +14,21 @@ import {
     CircularEconomy,
     DecentralizedFinance,
 } from '@repo/shared/sections';
-
-const METADATA_TITLE = 'Focus Areas';
-const METADATA_DESCRIPTION =
-    'Explore our diverse focus areas leveraging DLT to address real business needs';
-
+import {
+    FOCUS_AREAS_METADATA_TITLE,
+    FOCUS_AREAS_METADATA_DESCRIPTION_X,
+    FOCUS_AREAS_KEYWORDS,
+    FOCUS_AREAS_METADATA_DESCRIPTION,
+    FOCUS_AREAS_IMAGE,
+    FOCUS_AREAS_URL,
+} from '@lib/constants';
 export const metadata: Metadata = getPageMetadata({
-    title: METADATA_TITLE,
-    description: METADATA_DESCRIPTION,
+    title: FOCUS_AREAS_METADATA_TITLE,
+    description: FOCUS_AREAS_METADATA_DESCRIPTION,
+    descriptionX: FOCUS_AREAS_METADATA_DESCRIPTION_X,
+    keywords: FOCUS_AREAS_KEYWORDS,
+    image: FOCUS_AREAS_IMAGE,
+    url: FOCUS_AREAS_URL,
 });
 
 export default function Home() {

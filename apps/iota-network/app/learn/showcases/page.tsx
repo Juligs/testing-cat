@@ -2,12 +2,22 @@ import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import { ShowcasesPageHero, PartnersCarousel, ShowcasesMoreToExplore } from '@sections';
 import { Rwa, LighthouseProjects, TeamContactCTA } from '@repo/shared/sections';
-const METADATA_TITLE = 'Showcases';
-const METADATA_DESCRIPTION = 'We Build Cutting-Edge Technology';
+import {
+    SHOWCASES_METADATA_TITLE,
+    SHOWCASES_METADATA_DESCRIPTION_X,
+    SHOWCASES_KEYWORDS,
+    SHOWCASES_METADATA_DESCRIPTION,
+    SHOWCASES_IMAGE,
+    SHOWCASES_URL,
+} from '@lib/constants';
 
 export const metadata: Metadata = getPageMetadata({
-    title: METADATA_TITLE,
-    description: METADATA_DESCRIPTION,
+    title: SHOWCASES_METADATA_TITLE,
+    description: SHOWCASES_METADATA_DESCRIPTION,
+    descriptionX: SHOWCASES_METADATA_DESCRIPTION_X,
+    keywords: SHOWCASES_KEYWORDS,
+    image: SHOWCASES_IMAGE,
+    url: SHOWCASES_URL,
 });
 
 export default function Home() {

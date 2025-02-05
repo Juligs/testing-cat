@@ -8,13 +8,22 @@ import {
     MultiKnipPartners,
     MultiKnipQuotes,
 } from '@repo/shared/sections';
-
-const METADATA_TITLE = 'MultiKnip';
-const METADATA_DESCRIPTION = 'Using digital tokens to drive purpose, value and change';
+import {
+    MULTIKNIP_METADATA_TITLE,
+    MULTIKNIP_METADATA_DESCRIPTION_X,
+    MULTIKNIP_KEYWORDS,
+    MULTIKNIP_METADATA_DESCRIPTION,
+    MULTIKNIP_IMAGE,
+    MULTIKNIP_URL,
+} from '@lib/constants';
 
 export const metadata: Metadata = getPageMetadata({
-    title: METADATA_TITLE,
-    description: METADATA_DESCRIPTION,
+    title: MULTIKNIP_METADATA_TITLE,
+    description: MULTIKNIP_METADATA_DESCRIPTION,
+    descriptionX: MULTIKNIP_METADATA_DESCRIPTION_X,
+    keywords: MULTIKNIP_KEYWORDS,
+    image: MULTIKNIP_IMAGE,
+    url: MULTIKNIP_URL,
 });
 
 export default function Home() {
