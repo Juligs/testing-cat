@@ -28,6 +28,7 @@ interface PageMetadataProps {
     title?: string;
     description?: string;
     image?: string;
+    path?: string;
     descriptionX?: string;
     keywords?: string[];
 }
@@ -38,6 +39,7 @@ export function getPageMetadata({
     descriptionX,
     image,
     keywords,
+    path = '',
 }: PageMetadataProps) {
     const pageTitle = title ? `${METADATA_SITE_NAME} – ${title}` : METADATA_SITE_NAME;
     const pageKeywords = keywords || KEYWORDS_FALLBACK;
@@ -45,12 +47,13 @@ export function getPageMetadata({
     const pageImage = image
         ? `${BASE_URL}${image.startsWith('/') ? image : `/${image}`}`
         : METADATA_IMAGE_FALLBACK;
+    const canonicalUrl = `${BASE_URL}${path}`;
 
     return {
         title: pageTitle,
         description,
         alternates: {
-            canonical: '/',
+            canonical: canonicalUrl,
         },
         pageKeywords,
         openGraph: {

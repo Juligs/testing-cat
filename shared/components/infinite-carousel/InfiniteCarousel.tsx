@@ -66,7 +66,7 @@ export function InfiniteCarousel({ logos, itemWidth = 190 }: InfiniteCarouselPro
             {logos.map((logo, index) => (
                 <SwiperSlide key={index} style={{ width: `${itemWidth}px` }}>
                     <div className="flex items-center justify-center gap-4">
-                        <img src={logo} className="w-auto max-h-[123px] w-max-full" />
+                        <img src={logo} className="w-auto max-h-[123px] w-max-full" alt={logo} />
                     </div>
                 </SwiperSlide>
             ))}

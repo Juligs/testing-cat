@@ -30,6 +30,7 @@ export const RenderAnchorLinks: React.FC<RenderAnchorLinksProps> = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full"
+                    aria-label={`Link to ${link.text}`}
                 >
                     <AnchorLink text={link.text} inverted={inverted} />
                 </Link>

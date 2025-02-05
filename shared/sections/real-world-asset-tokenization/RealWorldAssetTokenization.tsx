@@ -12,7 +12,7 @@ export function RealWorldAssetTokenization({ id, theme }: BaseSectionProps) {
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...REAL_WORLD_VERTICAL_TITLE_CONTENT}>
                             <Actions>
-                                <a href="/learn/showcases/multiknip">
+                                <a href="/learn/showcases/multiknip" aria-label="See showcase">
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="See showcase"

@@ -9,7 +9,7 @@ export function TeamContactCTA({ id, theme }: BaseSectionProps) {
             <div className="container py-14 xs:py-20 lg:py-30 flex justify-center items-center w-full">
                 <CtaCard {...TEAM_CONTACT_CTA_CONTENT}>
                     <Actions>
-                        <Link href="mailto:partnerships@iota.org">
+                        <Link href="mailto:partnerships@iota.org" aria-label="Link to Contact">
                             <TextLink text="Contact" showIcon />
                         </Link>
                     </Actions>

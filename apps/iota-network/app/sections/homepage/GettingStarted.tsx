@@ -23,6 +23,7 @@ export function GettingStarted({ id, theme }: BaseSectionProps) {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="[&>div]:h-full"
+                            aria-label={`Link to ${data.title}`}
                         >
                             <ImageCard title={data.title} animation={data.animation} />
                         </Link>

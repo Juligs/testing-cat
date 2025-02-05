@@ -54,6 +54,7 @@ export function WhyBuild({ id, theme }: BaseSectionProps) {
                                     href={data.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label={`Link to ${data.text}`}
                                 >
                                     <Button
                                         text={data.text}
@@ -74,6 +75,7 @@ export function WhyBuild({ id, theme }: BaseSectionProps) {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="[&>div]:h-full"
+                            aria-label={`Link to ${data.title}`}
                         >
                             <ImageCard
                                 title={data.title}
@@ -92,6 +94,7 @@ export function WhyBuild({ id, theme }: BaseSectionProps) {
                                 href={data.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label={`Link to ${data.text}`}
                             >
                                 <TextLink text={data.text} showIcon inverted />
                             </Link>

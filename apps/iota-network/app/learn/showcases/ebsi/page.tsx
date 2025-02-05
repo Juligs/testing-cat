@@ -23,6 +23,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: EBSI_KEYWORDS,
     image: EBSI_IMAGE,
     url: EBSI_URL,
+    path: '/learn/showcases/ebsi',
 });
 
 export default function Home() {

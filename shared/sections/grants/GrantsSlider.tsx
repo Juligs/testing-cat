@@ -76,11 +76,17 @@ export function GrantSlider({ data, itemsToShow = 6, inverted }: GrantsSliderPro
                                         href={card.websiteTwitter}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label={`Link to ${card.websiteTwitter}`}
                                     >
                                         <TextLink text="X Account" showIcon inverted={inverted} />
                                     </Link>
                                 )}
-                                <Link href={card.link} target="_blank" rel="noopener noreferrer">
+                                <Link
+                                    href={card.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Link to ${card.link}`}
+                                >
                                     <TextLink text="Website" showIcon inverted={inverted} />
                                 </Link>
                             </ImageCard>

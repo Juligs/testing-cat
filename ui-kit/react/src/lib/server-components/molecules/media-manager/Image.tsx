@@ -22,7 +22,11 @@ export function ImageSources({ sources, alt, className }: ImageSourcesProps) {
                     <Fragment key={breakpoint}>
                         <source media={`(max-width: ${breakpointWidth}px)`} srcSet={src} />
                         {isLastElement && (
-                            <img className={className} alt={alt || ''} src={lastElement[1].src} />
+                            <img
+                                className={className}
+                                alt={alt || lastElement[1].src}
+                                src={lastElement[1].src}
+                            />
                         )}
                     </Fragment>
                 );

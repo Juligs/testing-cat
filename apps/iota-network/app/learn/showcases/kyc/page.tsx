@@ -18,6 +18,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: KYC_KEYWORDS,
     image: KYC_IMAGE,
     url: KYC_URL,
+    path: '/learn/showcases/kyc',
 });
 
 export default function Home() {

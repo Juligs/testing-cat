@@ -15,6 +15,7 @@ export function BlogPosts({ id, theme }: BaseSectionProps) {
                                 href="https://blog.iota.org/"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Link to blog posts"
                             >
                                 <Button text="Blog Posts" icon={<ArrowTopRight />} />
                             </Link>

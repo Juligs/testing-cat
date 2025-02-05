@@ -7,6 +7,7 @@ const METADATA_TITLE = 'Privacy Policy';
 
 export const metadata: Metadata = getPageMetadata({
     title: METADATA_TITLE,
+    path: '/privacy-policy',
 });
 
 export default function Page() {

@@ -17,6 +17,7 @@ export function BetterDLT({ id, theme }: BaseSectionProps) {
                                     href="https://docs.iota.org/about-iota/iota-architecture/consensus"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="Link to learn more"
                                 >
                                     <Button
                                         variant={ButtonVariant.Primary}

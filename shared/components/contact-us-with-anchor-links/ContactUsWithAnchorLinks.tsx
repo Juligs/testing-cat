@@ -24,7 +24,7 @@ export function ContactUsWithAnchorLinks({ anchorLinks }: ContactUsProps) {
                     body={CONTACT_US_TITLE_CONTENT.body}
                 >
                     <Actions>
-                        <Link href={CONTACT_US_BUTTON.link}>
+                        <Link href={CONTACT_US_BUTTON.link} aria-label="Link to Contact Us">
                             <Button
                                 text={CONTACT_US_BUTTON.text}
                                 variant={CONTACT_US_BUTTON.variant}
@@ -42,6 +42,7 @@ export function ContactUsWithAnchorLinks({ anchorLinks }: ContactUsProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-white rounded-2xl"
+                        aria-label={`Link to ${link.text}`}
                     >
                         <AnchorLink
                             text={link.text}

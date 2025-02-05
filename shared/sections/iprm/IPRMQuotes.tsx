@@ -15,7 +15,7 @@ export function IPRMQuotes({ id, theme }: BaseSectionProps) {
                 <div className="flex items-center gap-x-6">
                     <img
                         src={IPRM_QUOTE_CONTENT.image}
-                        alt="Foto de Adri Wischmann"
+                        alt={IPRM_QUOTE_CONTENT.name}
                         className="w-16 h-16 rounded-full"
                     />
                     <div className="flex flex-col items-start">

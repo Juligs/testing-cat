@@ -13,6 +13,7 @@ export function EcosystemProjects({ id, theme }: BaseSectionProps) {
                         href="https://iotalabs.io/projects"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="See all projects"
                     >
                         <Actions>
                             <TextLink text="See All Projects" showIcon />

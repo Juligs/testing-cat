@@ -18,6 +18,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: SHOWCASES_KEYWORDS,
     image: SHOWCASES_IMAGE,
     url: SHOWCASES_URL,
+    path: '/learn/showcases',
 });
 
 export default function Home() {

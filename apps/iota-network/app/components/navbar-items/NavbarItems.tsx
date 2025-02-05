@@ -153,6 +153,7 @@ function NavItem({ item, handleLinkClick }: NavItemComponentProps) {
             rel={item.isExternal ? 'noopener noreferrer' : undefined}
             className="p-4 flex flex-col text-start items-start max-w-[328px]"
             onClick={() => handleLinkClick?.(item.path)}
+            aria-label={`Link to ${item.title}`}
         >
             <ImageCard {...imageCardProps} />
         </Link>
@@ -164,6 +165,7 @@ function NavItem({ item, handleLinkClick }: NavItemComponentProps) {
                 rel={item.isExternal ? 'noopener noreferrer' : undefined}
                 className="p-4 flex flex-col text-start items-start max-w-[328px] group"
                 onClick={() => handleLinkClick?.(item.path)}
+                aria-label={`Link to ${item.title}`}
             >
                 <p className="text-label-lg text-network-neutral-10 group-hover:text-network-primary-40 transition-colors">
                     {item.title}

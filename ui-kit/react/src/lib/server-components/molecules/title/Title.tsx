@@ -26,7 +26,7 @@ export function Title({
     tag,
 }: React.PropsWithChildren<TitleProps>) {
     const titleSize = size || (tag ? HEADING_TO_SIZE[tag] : TitleTextSize.Medium);
-    const titleTag = tag || (size ? SIZE_TO_HEADING[size] : TitleTag.H3);
+    const titleTag = tag || (size ? SIZE_TO_HEADING[size] : TitleTag.H6);
     const TitleElement = titleTag;
 
     const titleColor = inverted ? INVERTED_TEXT_COLOR : DEFAULT_TEXT_COLOR;

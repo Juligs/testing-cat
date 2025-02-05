@@ -8,7 +8,7 @@ import {
     ProvenInWild,
     BetterDLT,
     GreaterThanSumOfParts,
-    OurCoreDomains,
+    OurFocusAreas,
     StreamliningInnovation,
     MakeYourProjectReal,
     IntroMoreToExplore,
@@ -29,6 +29,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: INTRO_KEYWORDS,
     image: INTRO_IMAGE,
     url: INTRO_URL,
+    path: '/learn/intro',
 });
 
 export default function Home() {
@@ -41,7 +42,7 @@ export default function Home() {
             <ProvenInWild id="proven-in-wild" />
             <BetterDLT id="better-dlt" />
             <GreaterThanSumOfParts id="greater-than-sum-of-parts" />
-            <OurCoreDomains id="our-core-domains" theme="inverted" />
+            <OurFocusAreas id="our-focus-areas" theme="inverted" />
             <StreamliningInnovation id="streamlining-innovation" />
             <MakeYourProjectReal id="make-your-project-real" theme="inverted" />
             <IntroMoreToExplore id="explore" />

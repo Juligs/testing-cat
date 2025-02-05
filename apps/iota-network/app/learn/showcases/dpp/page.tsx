@@ -18,6 +18,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: DPP_KEYWORDS,
     image: DPP_IMAGE,
     url: DPP_URL,
+    path: '/learn/showcases/dpp',
 });
 
 export default function Home() {

@@ -21,6 +21,7 @@ export const RenderButtons: React.FC<RenderButtonsProps> = ({ buttons, Link }) =
                     href={link}
                     target={isExternal ? '_blank' : undefined}
                     rel={isExternal ? 'noopener noreferrer' : undefined}
+                    aria-label={`Link to ${buttonProps.text}`}
                 >
                     <Button {...buttonProps} />
                 </Link>

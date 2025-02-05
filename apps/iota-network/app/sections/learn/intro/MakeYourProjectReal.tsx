@@ -32,6 +32,7 @@ export function MakeYourProjectReal({ id, theme }: BaseSectionProps) {
                                 key={index}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label={`Link to ${button.text}`}
                             >
                                 <Actions>
                                     <Button {...button} />

@@ -101,7 +101,11 @@ export function Navigation({ items }: NavigationProps) {
                     <Navbar inverted={isInverted}>
                         <NavbarItems
                             logo={
-                                <Link href="/" onClick={() => handleLinkClick('/')}>
+                                <Link
+                                    href="/"
+                                    onClick={() => handleLinkClick('/')}
+                                    aria-label="Link to Home"
+                                >
                                     <Logo
                                         color={
                                             isInverted ? 'text-darkest-inverted' : 'text-darkest'

@@ -24,6 +24,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: MULTIKNIP_KEYWORDS,
     image: MULTIKNIP_IMAGE,
     url: MULTIKNIP_URL,
+    path: '/learn/showcases/multiknip',
 });
 
 export default function Home() {

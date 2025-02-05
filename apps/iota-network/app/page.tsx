@@ -28,6 +28,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: HOMEPAGE_KEYWORDS,
     image: HOMEPAGE_IMAGE,
     url: HOMEPAGE_URL,
+    path: '/',
 });
 
 export default function Home() {

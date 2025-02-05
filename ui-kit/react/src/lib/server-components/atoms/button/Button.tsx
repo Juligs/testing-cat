@@ -40,7 +40,6 @@ interface ButtonProps extends HTMLButtonProps {
      */
     icon?: React.ReactNode;
 }
-
 export function Button({
     type = 'button',
     fullWidth,
@@ -54,6 +53,7 @@ export function Button({
     const textColor = inverted ? TEXT_COLOR_INVERTED[variant] : TEXT_COLOR[variant];
     const isOnlyIcon = Boolean(!text && icon);
     const isSmallButton = ButtonSize.Small === size;
+
     return (
         <button
             type={type}
@@ -62,6 +62,9 @@ export function Button({
                 'w-full': fullWidth,
                 'opacity-50': buttonProps.disabled,
             })}
+            aria-label={!isOnlyIcon ? text : 'Icon button'}
+            title={!isOnlyIcon ? text : 'Icon button'}
+            aria-labelledby={!isOnlyIcon ? text : 'Icon button'}
         >
             <div
                 className={clsx(

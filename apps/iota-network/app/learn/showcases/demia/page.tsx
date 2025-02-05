@@ -23,6 +23,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: DEMIA_KEYWORDS,
     image: DEMIA_IMAGE,
     url: DEMIA_URL,
+    path: '/learn/showcases/demia',
 });
 
 export default function Home() {

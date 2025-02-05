@@ -12,7 +12,10 @@ export function CircularEconomy({ id, theme }: BaseSectionProps) {
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...CIRCULAR_ECONOMY_VERTICAL_TITLE_CONTENT}>
                             <Actions>
-                                <a href="/learn/showcases/digital-product-passports">
+                                <a
+                                    href="/learn/showcases/digital-product-passports"
+                                    aria-label="See showcase"
+                                >
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="See showcase"

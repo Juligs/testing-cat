@@ -64,7 +64,11 @@ export function RwaCarousel() {
                                 brand
                             >
                                 <Actions>
-                                    <a href={text.link} key={index}>
+                                    <a
+                                        href={text.link}
+                                        key={index}
+                                        aria-label={`Visit ${text.title}`}
+                                    >
                                         <TextLink text={text.text} showIcon />
                                     </a>
                                 </Actions>
@@ -105,6 +109,7 @@ export function RwaCarousel() {
                                     key={logo}
                                     src={logo}
                                     className="w-auto max-h-[123px] object-contain max-w-full"
+                                    alt={logo}
                                 />
                             ))}
                         </div>

@@ -5,7 +5,7 @@ export { OurFeatures } from './OurFeatures';
 export { ProvenInWild } from './ProvenInWild';
 export { BetterDLT } from './BetterDLT';
 export { GreaterThanSumOfParts } from './GreaterThanSumOfParts';
-export { OurCoreDomains } from './OurCoreDomains';
+export { OurFocusAreas } from './OurFocusAreas';
 export { StreamliningInnovation } from './StreamliningInnovation';
 export { MakeYourProjectReal } from './MakeYourProjectReal';
 export { IntroMoreToExplore } from './IntroMoreToExplore';

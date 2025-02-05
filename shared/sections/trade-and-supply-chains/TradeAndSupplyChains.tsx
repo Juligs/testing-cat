@@ -12,7 +12,7 @@ export function TradeAndSupplyChains({ id, theme }: BaseSectionProps) {
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...TRADE_AND_SUPPLY_VERTICAL_TITLE_CONTENT}>
                             <Actions>
-                                <a href="/learn/showcases/twin">
+                                <a href="/learn/showcases/twin" aria-label="See showcase">
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="See showcase"

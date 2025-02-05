@@ -20,7 +20,10 @@ export function LighthouseProjects({ id, theme, showLink = true }: LighthousePro
                     isCentered
                 >
                     {showLink && (
-                        <a href="/learn/showcases/#lighthouse-projects">
+                        <a
+                            href="/learn/showcases/#lighthouse-projects"
+                            aria-label="Learn more about lighthouse projects"
+                        >
                             <Actions>
                                 <TextLink text="Learn more" showIcon />
                             </Actions>
@@ -29,7 +32,12 @@ export function LighthouseProjects({ id, theme, showLink = true }: LighthousePro
                 </VerticalTitle>
                 <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-6">
                     {LIGHTHOUSE_IMAGE_CARD_CONTENT.map((data, index) => (
-                        <a key={index} href={data.link} className="[&>div]:h-full">
+                        <a
+                            key={index}
+                            href={data.link}
+                            className="[&>div]:h-full"
+                            aria-label="Link to Lighthouse Project"
+                        >
                             <ImageCard
                                 title={data.title}
                                 subtitle={data.subtitle}

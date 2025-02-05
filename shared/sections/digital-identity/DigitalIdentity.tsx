@@ -12,7 +12,7 @@ export function DigitalIdentity({ id, theme }: BaseSectionProps) {
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...DIGITAL_IDENTITY_VERTICAL_TITLE_CONTENT}>
                             <Actions>
-                                <a href="/learn/showcases/kyc">
+                                <a href="/learn/showcases/kyc" aria-label="See showcase">
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="See showcase"

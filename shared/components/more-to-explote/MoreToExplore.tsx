@@ -20,6 +20,7 @@ export function MoreToExplore({ text, content }: moreToExploreProps): JSX.Elemen
                         target={data.isExternal ? '_blank' : '_self'}
                         rel={data.isExternal ? 'noopener noreferrer' : undefined}
                         className="[&>div]:h-full"
+                        aria-label="Explore more"
                     >
                         <ExploreCard key={index} title={data.title} subtitle={data.subtitle} />
                     </a>

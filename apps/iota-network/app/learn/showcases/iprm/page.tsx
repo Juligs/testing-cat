@@ -24,6 +24,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: IPRM_KEYWORDS,
     image: IPRM_IMAGE,
     url: IPRM_URL,
+    path: '/learn/showcases/iprm',
 });
 
 export default function Home() {

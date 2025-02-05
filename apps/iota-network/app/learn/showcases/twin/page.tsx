@@ -23,6 +23,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: TWIN_KEYWORDS,
     image: TWIN_IMAGE,
     url: TWIN_URL,
+    path: '/learn/showcases/twin',
 });
 
 export default function Home() {

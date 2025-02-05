@@ -7,6 +7,7 @@ const METADATA_TITLE = 'Terms of Use Wallet';
 
 export const metadata: Metadata = getPageMetadata({
     title: METADATA_TITLE,
+    path: '/iota-wallet-tos',
 });
 
 export default function Page() {

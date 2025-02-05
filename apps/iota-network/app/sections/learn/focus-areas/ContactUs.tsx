@@ -10,7 +10,7 @@ export function ContactUs({ id, theme }: BaseSectionProps) {
                 <div className="w-1/2 text-center">
                     <VerticalTitle {...CONTACT_US_TITLE_CONTENT}>
                         <Actions>
-                            <Link href="mailto:info@iota.org">
+                            <Link href="mailto:info@iota.org" aria-label="email IOTA">
                                 <Button text="Contact" />
                             </Link>
                         </Actions>

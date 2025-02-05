@@ -59,6 +59,7 @@ export function Footer() {
                                             className="text-labs-neutral-80 text-label-md max-w-max"
                                             target={isExternal ? '_blank' : undefined}
                                             rel={isExternal ? 'noopener noreferrer' : undefined}
+                                            aria-label={`Link to ${title}`}
                                         >
                                             {title}
                                         </Link>
@@ -83,6 +84,7 @@ export function Footer() {
                                     key={index}
                                     href={path}
                                     className="text-labs-neutral-80 text-label-sm w-full text-center whitespace-nowrap max-w-max"
+                                    aria-label={`Link to ${title}`}
                                 >
                                     {title}
                                 </Link>
@@ -99,6 +101,7 @@ export function Footer() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="max-w-max"
+                                    aria-label={`Link to ${url}`}
                                 >
                                     <Button
                                         size={

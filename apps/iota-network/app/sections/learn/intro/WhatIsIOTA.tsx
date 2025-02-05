@@ -17,6 +17,7 @@ export function WhatIsIOTA({ id, theme }: BaseSectionProps) {
                                     href="https://docs.iota.org/about-iota"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="Link to Learn more"
                                 >
                                     <Button
                                         variant={ButtonVariant.Primary}

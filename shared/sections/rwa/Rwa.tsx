@@ -17,7 +17,12 @@ export function Rwa({ id, theme, showLink = true }: RwaProps) {
                     isCentered
                 >
                     {showLink && (
-                        <a href="/learn/showcases" target="_blank" rel="noopener noreferrer">
+                        <a
+                            href="/learn/showcases"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="See Showcases"
+                        >
                             <Actions>
                                 <TextLink text="See Showcases" showIcon />
                             </Actions>

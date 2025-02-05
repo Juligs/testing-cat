@@ -87,7 +87,7 @@ export function CtaCard({
                 {animation ? (
                     <div className="[&_>div]:aspect-[inherit] aspect-[inherit]">{animation}</div>
                 ) : image ? (
-                    <img src={image} alt={alt} className="w-full h-auto object-cover" />
+                    <img src={image} alt={alt || image} className="w-full h-auto object-cover" />
                 ) : null}
             </div>
 

@@ -1,8 +1,6 @@
-import { ArrowTopRight } from '@repo/icons';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import Link from 'next/link';
-import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
+import { VerticalTitle } from 'react-ui-kit';
 import { STREAMLINING_INNOVATION_VERTICAL_TITLE_CONTENT } from './constants';
 
 export function StreamliningInnovation({ id, theme }: BaseSectionProps) {
@@ -12,7 +10,7 @@ export function StreamliningInnovation({ id, theme }: BaseSectionProps) {
                 <TwoColumnsImageTemplate image="/shared/focus-areas-sections/trade_&_supply.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...STREAMLINING_INNOVATION_VERTICAL_TITLE_CONTENT}>
-                            <Actions>
+                            {/* <Actions>
                                 <Link href="">
                                     <Button
                                         variant={ButtonVariant.Primary}
@@ -20,7 +18,7 @@ export function StreamliningInnovation({ id, theme }: BaseSectionProps) {
                                         icon={<ArrowTopRight />}
                                     />
                                 </Link>
-                            </Actions>
+                            </Actions> */}
                         </VerticalTitle>
                     </div>
                 </TwoColumnsImageTemplate>

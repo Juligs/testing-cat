@@ -63,7 +63,7 @@ export const WHY_BUILD_CTA_CARD_CONTENT = {
 
 export const WHY_BUILD_TEXT_LINK = [
     {
-        text: 'Get stated with Move',
+        text: 'Get started with Move',
         link: 'https://docs.iota.org/developer/iota-101/move-overview/',
     },
     {

@@ -13,6 +13,7 @@ export function IOTAAndMoveCTA({ id, theme }: BaseSectionProps) {
                             href="https://docs.iota.org/about-iota/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Learn more about IOTA on the official documentation"
                         >
                             <TextLink text="Learn More" showIcon inverted />
                         </Link>

@@ -19,13 +19,13 @@ export const LIGHTHOUSE_IMAGE_CARD_CONTENT = [
         animation: (
             <Animation keepAspectRatio src="/shared/lighthouse-projects/tokenized_kyc.json" />
         ),
-        link: '/learn/showcases/tokenized-kyc',
+        link: '/learn/showcases/kyc',
     },
     {
         title: 'Intellectual Property Rights Management',
         subtitle: 'Automated and transparent rights contracts and payments',
         animation: <Animation keepAspectRatio src="/shared/lighthouse-projects/ipr.json" />,
-        link: '/learn/showcases/ipr-management',
+        link: '/learn/showcases/iprm',
     },
     {
         title: 'Digital Product Passports',

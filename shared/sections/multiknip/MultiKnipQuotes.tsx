@@ -15,7 +15,7 @@ export function MultiKnipQuotes({ id, theme }: BaseSectionProps) {
                 <div className="flex items-center gap-x-6">
                     <img
                         src={MULTIKNIP_QUOTE_CONTENT.image}
-                        alt="Foto de Adri Wischmann"
+                        alt={MULTIKNIP_QUOTE_CONTENT.name}
                         className="w-16 h-16 rounded-full"
                     />
                     <div className="flex flex-col items-start">
