@@ -1,11 +1,13 @@
-import { TitleTextSize, VerticalTitle, CtaCard, ImageCard } from 'react-ui-kit';
-import {
-    INTEGRATION_STACK_CTA_CARD_CONTENT,
-    INTEGRATION_STACK_IMAGE_CARD_CONTENT,
-    INTEGRATION_STACK_VERTICAL_TITLE_CONTENT,
-} from './constants';
+'use client';
+
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
+import { CtaCard, ImageCard, TitleTextSize, VerticalTitle } from 'react-ui-kit';
+import {
+    INTEGRATION_STACK_IMAGE_CARD_CONTENT,
+    INTEGRATION_STACK_CTA_CARD_CONTENT,
+    INTEGRATION_STACK_VERTICAL_TITLE_CONTENT,
+} from './constants';
 
 export function IntegrationStack({ id, theme }: BaseSectionProps) {
     return (
@@ -39,7 +41,7 @@ export function IntegrationStack({ id, theme }: BaseSectionProps) {
                                 <CtaCard
                                     title={data.title}
                                     subtitle={data.subtitle}
-                                    image={data.image}
+                                    animation={data.animation}
                                     brand
                                     isVertical
                                 ></CtaCard>
@@ -58,7 +60,7 @@ export function IntegrationStack({ id, theme }: BaseSectionProps) {
                                 <ImageCard
                                     title={data.title}
                                     subtitle={data.subtitle}
-                                    image={data.image}
+                                    animation={data.animation}
                                 ></ImageCard>
                             </Link>
                         ))}

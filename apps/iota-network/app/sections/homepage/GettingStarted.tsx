@@ -24,7 +24,7 @@ export function GettingStarted({ id, theme }: BaseSectionProps) {
                             rel="noopener noreferrer"
                             className="[&>div]:h-full"
                         >
-                            <ImageCard title={data.title} image={data.image} />
+                            <ImageCard title={data.title} animation={data.animation} />
                         </Link>
                     ))}
                 </div>

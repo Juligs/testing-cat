@@ -19,9 +19,13 @@ interface CtaCardProps {
      */
     subtitle: string;
     /**
-     * The image of the card
+     * The image of the card (used when animation is not provided)
      */
-    image: string;
+    image?: string;
+    /**
+     * An animation component (React Node)
+     */
+    animation?: React.ReactNode;
     /**
      * alt text for the image
      */
@@ -43,10 +47,12 @@ interface CtaCardProps {
      */
     isVertical?: boolean;
 }
+
 export function CtaCard({
     title,
     subtitle,
     image,
+    animation,
     alt,
     inverted,
     brand,
@@ -63,6 +69,7 @@ export function CtaCard({
           ? BG_COLOR_INVERTED
           : BG_COLOR_DEFAULT;
     const flexDirection = isVertical ? 'flex-col ' : 'flex-col sm:flex-row-reverse';
+
     return (
         <div
             className={clsx(
@@ -71,18 +78,22 @@ export function CtaCard({
                 flexDirection,
             )}
         >
-            <img
-                src={image}
-                alt={alt}
+            <div
                 className={clsx(
-                    'w-full h-auto object-cover aspect-[4/3] xs:aspect-video',
+                    'w-full object-cover aspect-[4/3] xs:aspect-video',
                     isVertical ? 'sm:aspect-[21/9]' : 'sm:w-1/2 sm:aspect-[4/3]',
                 )}
-            />
+            >
+                {animation ? (
+                    <div className="[&_>div]:aspect-[inherit] aspect-[inherit]">{animation}</div>
+                ) : image ? (
+                    <img src={image} alt={alt} className="w-full h-auto object-cover" />
+                ) : null}
+            </div>
 
             <div
                 className={clsx(
-                    ' flex flex-col items-center justify-start text-center w-full gap-2 xs:gap-4 h-full',
+                    'flex flex-col items-center justify-start text-center w-full gap-2 xs:gap-4 h-full',
                     isVertical ? 'sm:w-full' : 'sm:w-1/2',
                     PADDING_SIZE,
                 )}

@@ -1,3 +1,4 @@
+'use client';
 import { Actions, ImageCard, TextLink, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 import {
     LIGHTHOUSE_IMAGE_CARD_CONTENT,
@@ -28,12 +29,11 @@ export function LighthouseProjects({ id, theme, showLink = true }: LighthousePro
                 </VerticalTitle>
                 <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-6">
                     {LIGHTHOUSE_IMAGE_CARD_CONTENT.map((data, index) => (
-                        <a href={data.link} className="[&>div]:h-full">
+                        <a key={index} href={data.link} className="[&>div]:h-full">
                             <ImageCard
-                                key={index}
                                 title={data.title}
                                 subtitle={data.subtitle}
-                                image={data.image}
+                                animation={data.animation}
                             />
                         </a>
                     ))}

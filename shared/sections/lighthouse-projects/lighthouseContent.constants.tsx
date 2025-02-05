@@ -1,3 +1,4 @@
+import { Animation, RendererType } from 'react-ui-kit/client';
 export const LIGHTHOUSE_VERTICAL_TITLE_CONTENT = {
     title: 'Lighthouse Projects',
 };
@@ -6,25 +7,32 @@ export const LIGHTHOUSE_IMAGE_CARD_CONTENT = [
     {
         title: 'European Blockchain Pre-Commercial Procurement',
         subtitle: 'IOTA solutions for a pan-European blockchain',
-        image: '/shared/lighthouse-projects/european_blockchain.png',
+        animation: (
+            <Animation keepAspectRatio src="/shared/lighthouse-projects/european_blockchain.json" />
+        ),
         link: '/learn/showcases/ebsi',
     },
+
     {
         title: 'Tokenized KYC',
         subtitle: 'Privacy-preserving on-chain authentication',
-        image: '/shared/lighthouse-projects/tokenized_kyc.png',
+        animation: (
+            <Animation keepAspectRatio src="/shared/lighthouse-projects/tokenized_kyc.json" />
+        ),
         link: '/learn/showcases/tokenized-kyc',
     },
     {
         title: 'Intellectual Property Rights Management',
         subtitle: 'Automated and transparent rights contracts and payments',
-        image: '/shared/lighthouse-projects/intellectual_property.png',
+        animation: <Animation keepAspectRatio src="/shared/lighthouse-projects/ipr.json" />,
         link: '/learn/showcases/ipr-management',
     },
     {
         title: 'Digital Product Passports',
         subtitle: 'Secure, transparent product lifecycle data for a circular economy',
-        image: '/shared/lighthouse-projects/digital_product.png',
+        animation: (
+            <Animation keepAspectRatio src="/shared/lighthouse-projects/digital_passport.json" />
+        ),
         link: '/learn/showcases/dpp',
     },
 ];

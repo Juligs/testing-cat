@@ -12,6 +12,7 @@ interface AnimationProps {
     bgColor?: string;
     speed?: number;
     direction?: AnimationDirection;
+    keepAspectRatio?: boolean;
 }
 
 export function Animation({
@@ -23,16 +24,32 @@ export function Animation({
     bgColor = 'bg-transparent',
     speed = 1,
     direction = 1,
+    keepAspectRatio,
 }: AnimationProps) {
+    const [isMobile, setIsMobile] = useState(checkWindowWidth());
     const playerRef = useRef<HTMLDivElement>(null);
-    const [animation, setAnimation] = useState<AnimationItem | null>(null);
+    const animationRef = useRef<AnimationItem | null>(null);
+
+    function checkWindowWidth() {
+        if (typeof window === 'undefined') return false;
+        return window.innerWidth < 712;
+    }
 
     useEffect(() => {
+        const animation = animationRef.current;
+
         if (playerRef.current) {
             // If there is an animation, destroy it
             if (animation) {
                 animation.destroy();
             }
+
+            // preserveAspectRatio is a Lottie property that controls how the animation maintains its aspect ratio.
+            // "xMidYMid" centers it, while "slice" is applied to containers that need to be covered.
+            // The `keepAspectRatio` prop applies "slice" where required, and it's always used on mobile.
+
+            const preserveAspectRatio =
+                `xMidYMid` + (keepAspectRatio ? ' slice' : isMobile ? 'slice' : '');
 
             const anim = Lottie.loadAnimation({
                 renderer,
@@ -40,8 +57,12 @@ export function Animation({
                 loop,
                 autoplay,
                 path: src,
+                rendererSettings: {
+                    preserveAspectRatio,
+                },
             });
-            setAnimation(anim);
+
+            animationRef.current = anim;
         }
 
         return () => {
@@ -49,14 +70,29 @@ export function Animation({
                 animation.destroy();
             }
         };
-    }, [src, renderer, loop, autoplay]);
+    }, [src, renderer, loop, autoplay, isMobile, keepAspectRatio]);
 
     useEffect(() => {
+        const onResize = () => {
+            const isWindowMobile = checkWindowWidth();
+            if (isWindowMobile !== isMobile) {
+                setIsMobile(isWindowMobile);
+            }
+        };
+        window.addEventListener('resize', onResize);
+
+        return () => {
+            window.removeEventListener('resize', onResize);
+        };
+    }, [animationRef.current, isMobile, setIsMobile]);
+
+    useEffect(() => {
+        const animation = animationRef.current;
         if (animation) {
             animation.setSpeed(speed);
             animation.setDirection(direction);
         }
-    }, [speed, direction, animation]);
+    }, [speed, direction, animationRef.current]);
 
     return (
         <div

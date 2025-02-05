@@ -45,6 +45,10 @@ interface ImageCardprops {
      */
     image?: string;
     /**
+     * An animation component (React Node)
+     */
+    animation?: React.ReactNode;
+    /**
      * multiple links
      */
     children?: React.ReactNode;
@@ -52,6 +56,10 @@ interface ImageCardprops {
      * has a link
      */
     isHoverable?: boolean;
+    /**
+     * alt text for the image
+     */
+    alt?: string;
 }
 export function ImageCard({
     size = ImageCardSize.Large,
@@ -63,6 +71,8 @@ export function ImageCard({
     image,
     children,
     isHoverable = true,
+    animation,
+    alt,
 }: ImageCardprops): JSX.Element {
     const imageClass = IMAGE_SIZE_CLASS[size];
     const gapClass = GAP_SIZE_CLASS[size];
@@ -82,12 +92,16 @@ export function ImageCard({
                 linkHoverEffect,
             )}
         >
-            {image && (
-                <img
-                    src={image}
-                    alt=""
-                    className={clsx('w-full h-auto object-cover', imageClass)}
-                />
+            {animation ? (
+                <div className={clsx('[&_>div]:aspect-[inherit]', imageClass)}>{animation}</div>
+            ) : (
+                image && (
+                    <img
+                        src={image}
+                        alt={alt || image}
+                        className={clsx('w-full h-auto object-cover', imageClass)}
+                    />
+                )
             )}
             <div
                 className={clsx(
