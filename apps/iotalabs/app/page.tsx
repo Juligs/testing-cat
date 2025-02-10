@@ -26,14 +26,14 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <Hero id="hero" theme="inverted" />
+            <Hero id="hero" navbarColorScheme="inverted" />
             <HomepageOverview id="overview" />
             <EngineBehind id="engine" />
-            <Empowering id="empowering" theme="inverted" />
+            <Empowering id="empowering" navbarColorScheme="inverted" />
             <NewEra id="new-era" />
             <GettingStarted id="getting-started" />
             <IOTAGrants id="grants" />
-            <EVMToolkit id="evm-toolkit" theme="inverted" />
+            <EVMToolkit id="evm-toolkit" navbarColorScheme="inverted" />
             <Infrastructure id="infrastructure" />
             <BuildWith id="build-with" />
             <News id="news" />

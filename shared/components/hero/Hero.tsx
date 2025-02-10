@@ -61,8 +61,8 @@ export function Hero({
     const verticalTitleWitdh = size === HeroSize.ExtraLarge ? 'w-full xs:max-w-[780px]' : 'w-full';
 
     const mainContainer = anchorLinks
-        ? 'w-full h-screen flex flex-col justify-center items-center'
-        : 'w-full h-full';
+        ? 'w-full h-screen min-h-[900px] flex flex-col justify-center items-center'
+        : 'w-full h-screen min-h-[900px]';
 
     const isTwoColumns = image ? '' : 'sm:max-w-3xl xl:max-w-5xl';
     const textSize = verticalTitleSize

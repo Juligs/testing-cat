@@ -10,9 +10,13 @@ interface LighthouseProjectsProps extends BaseSectionProps {
     showLink?: boolean;
 }
 
-export function LighthouseProjects({ id, theme, showLink = true }: LighthouseProjectsProps) {
+export function LighthouseProjects({
+    id,
+    navbarColorScheme,
+    showLink = true,
+}: LighthouseProjectsProps) {
     return (
-        <section className="bg-white" id={id} data-theme={theme}>
+        <section className="bg-white" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-10 sm:gap-20">
                 <VerticalTitle
                     title={LIGHTHOUSE_VERTICAL_TITLE_CONTENT.title}

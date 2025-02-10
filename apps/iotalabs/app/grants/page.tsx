@@ -22,12 +22,12 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <GrantsPageHero id="hero" theme="inverted" />
+            <GrantsPageHero id="hero" navbarColorScheme="inverted" />
             <IotaGrantsOverview id="overview" />
             <GrantsStats id="stats" />
             <SupportedInitiatives id="initiatives" />
             <HowToApply id="apply" />
-            <Guidelines id="guidelines" theme="inverted" />
+            <Guidelines id="guidelines" navbarColorScheme="inverted" />
             <TieredAssessmentFramework id="tiered" />
         </>
     );

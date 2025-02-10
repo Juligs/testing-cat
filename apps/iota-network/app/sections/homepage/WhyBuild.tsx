@@ -18,12 +18,12 @@ import {
 } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function WhyBuild({ id, theme }: BaseSectionProps) {
+export function WhyBuild({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section
             className="w-full box-border relative overflow-hidden bg-network-neutral-4"
             id={id}
-            data-theme={theme}
+            data-navbar-color-scheme={navbarColorScheme}
         >
             <Video
                 src="https://files.iota.org/media/iota-network/why_build_on_iota.mp4"

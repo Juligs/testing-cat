@@ -3,9 +3,13 @@ import { HorizontalTitle, ImageCard } from 'react-ui-kit';
 import { FOCUS_AREAS_HORIZONTAL_TITLE, FOCUS_AREAS_IMAGE_CARD_CONTENT } from './constants';
 import Link from 'next/link';
 
-export function OurFocusAreas({ id, theme }: BaseSectionProps) {
+export function OurFocusAreas({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-network-neutral-6" id={id} data-theme={theme}>
+        <section
+            className="w-full bg-network-neutral-6"
+            id={id}
+            data-navbar-color-scheme={navbarColorScheme}
+        >
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-14 sm:gap-20">
                 <div className="w-full">
                     <HorizontalTitle {...FOCUS_AREAS_HORIZONTAL_TITLE} />

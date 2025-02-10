@@ -34,15 +34,15 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <Hero id="hero" theme="inverted" />
+            <Hero id="hero" navbarColorScheme="inverted" />
             {/* <NetworkStats id="network-stats" /> */}
-            <IOTAAndMoveCTA id="iotamove-cta" theme="inverted" />
+            <IOTAAndMoveCTA id="iotamove-cta" navbarColorScheme="inverted" />
             <IntegrationStack id="integration-stack" />
             <BuildingSolutions id="building-solutions" />
             <Rwa id="rwa" />
             <LighthouseProjects id="lighthouse-projects" />
             <EcosystemProjects id="ecosystem-projects" />
-            <WhyBuild id="why-build" theme="inverted" />
+            <WhyBuild id="why-build" navbarColorScheme="inverted" />
             <BlogPosts id="blog-posts" />
             <GettingStarted id="getting-started" />
         </>

@@ -8,9 +8,13 @@ import { Suspense } from 'react';
 import { Actions, Button, ButtonVariant, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function IOTAGrants({ id, theme }: BaseSectionProps) {
+export function IOTAGrants({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
+        <section
+            className="w-full bg-labs-neutral-100"
+            id={id}
+            data-navbar-color-scheme={navbarColorScheme}
+        >
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
                 <TwoColumnsImageTemplate image="/shared/how_to_apply.svg">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">

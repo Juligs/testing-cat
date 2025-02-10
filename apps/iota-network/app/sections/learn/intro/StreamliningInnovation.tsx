@@ -3,9 +3,9 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { VerticalTitle } from 'react-ui-kit';
 import { STREAMLINING_INNOVATION_VERTICAL_TITLE_CONTENT } from './constants';
 
-export function StreamliningInnovation({ id, theme }: BaseSectionProps) {
+export function StreamliningInnovation({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id} data-theme={theme}>
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30">
                 <TwoColumnsImageTemplate image="/shared/focus-areas-sections/trade_&_supply.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">

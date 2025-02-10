@@ -4,9 +4,9 @@ import { FetchGrantsSliderData } from '@repo/shared/sections';
 import { Suspense } from 'react';
 import { Actions, TextLink, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 
-export function EcosystemProjects({ id, theme }: BaseSectionProps) {
+export function EcosystemProjects({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="bg-white" id={id} data-theme={theme}>
+        <section className="bg-white" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-10 sm:gap-20">
                 <VerticalTitle title="Ecosystem Projects" size={TitleTextSize.Small} isCentered>
                     <a

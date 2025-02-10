@@ -11,9 +11,13 @@ const VERTICAL_TITLE_INFO = {
     body: 'A fusion of the IOTA flexible and highly interoperable structure with an advanced EVM-compatible smart contract chain, ushering in a new era for seamlessly tokenizing real-world assets.',
 };
 
-export function NewEra({ id, theme }: BaseSectionProps) {
+export function NewEra({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
+        <section
+            className="w-full bg-labs-neutral-100"
+            id={id}
+            data-navbar-color-scheme={navbarColorScheme}
+        >
             <div className="container py-30 flex flex-col gap-30 justify-center items-center">
                 <div className="max-w-80 xs:max-w-2xl sm:max-w-xl xl:max-w-[708px]">
                     <VerticalTitle

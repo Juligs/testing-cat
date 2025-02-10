@@ -24,7 +24,7 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <ShowcasesPageHero id="hero" theme="inverted" />
+            <ShowcasesPageHero id="hero" navbarColorScheme="inverted" />
             <PartnersCarousel id="partners" />
             <Rwa id="rwa" showLink={false} />
             <LighthouseProjects id="lighthouse-projects" showLink={false} />

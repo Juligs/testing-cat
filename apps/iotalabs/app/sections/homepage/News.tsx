@@ -9,9 +9,13 @@ const VERTICAL_TITLE_INFO = {
     body: 'Discover the latest developments in our ecosystem, including new partnerships, funding opportunities, and collaborative projects',
 };
 
-export function News({ id, theme }: BaseSectionProps) {
+export function News({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
+        <section
+            className="w-full bg-labs-neutral-100"
+            id={id}
+            data-navbar-color-scheme={navbarColorScheme}
+        >
             <div className="container py-14 xs:py-20 lg:py-30 flex justify-center text-center">
                 <TwoColumnsImageTemplate image="/homepage/section11.svg">
                     <div className="sm:pr-[116px] lg:pr-[126px] xl:max-w-xl">

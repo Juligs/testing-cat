@@ -2,9 +2,13 @@ import Link from 'next/link';
 import { CtaCard, TextLink } from 'react-ui-kit';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function EVMToolkit({ id, theme }: BaseSectionProps) {
+export function EVMToolkit({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
+        <section
+            className="w-full bg-labs-neutral-100"
+            id={id}
+            data-navbar-color-scheme={navbarColorScheme}
+        >
             <div className="container w-full py-14 xs:py-30">
                 <CtaCard
                     title="EVM Toolkit"

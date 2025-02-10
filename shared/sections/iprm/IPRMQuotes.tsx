@@ -2,9 +2,9 @@ import { Quotes } from '@repo/icons';
 import { BaseSectionProps } from '../../interfaces';
 import { IPRM_QUOTE_CONTENT, IPRM_TITLE_CONTENT } from './constants';
 
-export function IPRMQuotes({ id, theme }: BaseSectionProps) {
+export function IPRMQuotes({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id} data-theme={theme}>
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-10 xs:py-12 flex justify-center text-center flex flex-col gap-10 items-center text-darkest">
                 <div className="flex flex-col gap-6 items-center">
                     <Quotes className="w-16 h-16 text-network-primary-30" />

@@ -9,9 +9,9 @@ import {
     INTEGRATION_STACK_VERTICAL_TITLE_CONTENT,
 } from './constants';
 
-export function IntegrationStack({ id, theme }: BaseSectionProps) {
+export function IntegrationStack({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id} data-theme={theme}>
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 sm:py-20 lg:py-30 flex justify-center  items-center flex-col gap-14 xs:gap-20 w-full">
                 <div className="w-full xs:w-[650px] text-center">
                     <VerticalTitle

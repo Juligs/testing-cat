@@ -3,12 +3,12 @@ import { MULTIKNIP_HOMEPAGE_CONTENT } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { HeroSize } from 'react-ui-kit';
 
-export function Hero({ id, theme }: BaseSectionProps) {
+export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section
             className="w-full h-full hero-height bg-labs-neutral-10"
             id={id}
-            data-theme={theme}
+            data-navbar-color-scheme={navbarColorScheme}
         >
             <HeroComponent
                 verticalTitle={MULTIKNIP_HOMEPAGE_CONTENT}

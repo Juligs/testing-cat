@@ -3,9 +3,13 @@ import { Hero as HeroComponent } from '@repo/shared/components';
 import { HERO_PROJECTS_BUTTON, HERO_PROJECTS_INFO, HERO_PROJECTS_BG } from '@lib/constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function Hero({ id, theme }: BaseSectionProps) {
+export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full h-full hero-height" id={id} data-theme={theme}>
+        <section
+            className="w-full h-full hero-height"
+            id={id}
+            data-navbar-color-scheme={navbarColorScheme}
+        >
             <HeroComponent
                 verticalTitle={HERO_PROJECTS_INFO}
                 background={HERO_PROJECTS_BG}

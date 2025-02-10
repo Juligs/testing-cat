@@ -5,9 +5,9 @@ import {
 } from './constants';
 import { VerticalTitleAndGrid } from '../../components';
 
-export function IPRMTransparency({ id, theme }: BaseSectionProps) {
+export function IPRMTransparency({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id} data-theme={theme}>
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <VerticalTitleAndGrid
                 image="/shared/showcases/transparency.png"
                 verticalTitle={IPRM_TRANSPARENCY_VERTICAL_TITLE_CONTENT}

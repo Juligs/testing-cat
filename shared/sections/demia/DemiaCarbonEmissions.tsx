@@ -5,9 +5,9 @@ import {
 } from './constants';
 import { VerticalTitleAndGrid } from '../../components';
 
-export function DemiaCarbonEmissions({ id, theme }: BaseSectionProps) {
+export function DemiaCarbonEmissions({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id} data-theme={theme}>
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <VerticalTitleAndGrid
                 image="/shared/focus-areas-sections/carbon_emissions.png"
                 verticalTitle={DEMIA_CARBON_EMISSIONS_VERTICAL_TITLE_CONTENT}

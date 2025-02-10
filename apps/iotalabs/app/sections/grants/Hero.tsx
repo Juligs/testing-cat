@@ -10,9 +10,9 @@ import {
 } from '@lib/constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function Hero({ id, theme }: BaseSectionProps) {
+export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id} data-theme={theme}>
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <HeroComponent
                 verticalTitle={HERO_GRANTS_INFO}
                 background={HERO_GRANTS_BG}

@@ -10,12 +10,12 @@ import { Suspense } from 'react';
 import { GrantsCarouselSkeleton } from '@repo/shared/components';
 import Link from 'next/link';
 
-export function MakeYourProjectReal({ id, theme }: BaseSectionProps) {
+export function MakeYourProjectReal({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section
             className="w-full box-border relative overflow-hidden bg-network-neutral-4"
             id={id}
-            data-theme={theme}
+            data-navbar-color-scheme={navbarColorScheme}
         >
             <Video
                 src="https://files.iota.org/media/iota-network/make_project_reality.mp4"

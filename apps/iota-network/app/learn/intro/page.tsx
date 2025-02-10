@@ -35,16 +35,16 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <LearnPageHero id="hero" theme="inverted" />
+            <LearnPageHero id="hero" navbarColorScheme="inverted" />
             <PermissionlessWeb3 id="permissionless-web3" />
             <WhatIsIOTA id="what-is-iota" />
             <OurFeatures id="our-features" />
             <ProvenInWild id="proven-in-wild" />
             <BetterDLT id="better-dlt" />
             <GreaterThanSumOfParts id="greater-than-sum-of-parts" />
-            <OurFocusAreas id="our-focus-areas" theme="inverted" />
+            <OurFocusAreas id="our-focus-areas" navbarColorScheme="inverted" />
             <StreamliningInnovation id="streamlining-innovation" />
-            <MakeYourProjectReal id="make-your-project-real" theme="inverted" />
+            <MakeYourProjectReal id="make-your-project-real" navbarColorScheme="inverted" />
             <IntroMoreToExplore id="explore" />
         </>
     );

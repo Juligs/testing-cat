@@ -23,7 +23,7 @@ export function SectionObserver({ onSectionChange }: SectionObserverProps) {
                 const activeElement = sectionElements.find(
                     (section) => section.id === activeSection,
                 );
-                const theme = activeElement?.getAttribute('data-theme') || null;
+                const theme = activeElement?.getAttribute('data-navbar-color-scheme') || null;
                 onSectionChange(activeSection, theme);
             } else {
                 onSectionChange(null, null);

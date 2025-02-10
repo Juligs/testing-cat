@@ -3,9 +3,13 @@ import { IconContent, VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { HOW_TO_APPLY_DATA } from '@lib/constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
-export function HowToApply({ id, theme }: BaseSectionProps) {
+export function HowToApply({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full bg-labs-neutral-100" id={id} data-theme={theme}>
+        <section
+            className="w-full bg-labs-neutral-100"
+            id={id}
+            data-navbar-color-scheme={navbarColorScheme}
+        >
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
                 <TwoColumnsImageTemplate image="/shared/how_to_apply.svg">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">

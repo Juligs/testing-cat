@@ -5,9 +5,9 @@ import {
 } from './constants';
 import { VerticalTitleAndGrid } from '../../components';
 
-export function MultiKnipDigitalWallet({ id, theme }: BaseSectionProps) {
+export function MultiKnipDigitalWallet({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id} data-theme={theme}>
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <VerticalTitleAndGrid
                 image="/shared/showcases/digital_wallet.png"
                 verticalTitle={MULTIKNIP_DIGITAL_WALLET_VERTICAL_TITLE_CONTENT}

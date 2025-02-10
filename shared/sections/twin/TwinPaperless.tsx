@@ -5,9 +5,9 @@ import {
 } from './constants/twinPaperlessContent';
 import { VerticalTitleAndGrid } from '../../components';
 
-export function TwinPaperless({ id, theme }: BaseSectionProps) {
+export function TwinPaperless({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section className="w-full" id={id} data-theme={theme}>
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <VerticalTitleAndGrid
                 image="/shared/focus-areas-sections/trade_&_supply.png"
                 verticalTitle={TWIN_PAPERLESS_TITLE_CONTENT}
