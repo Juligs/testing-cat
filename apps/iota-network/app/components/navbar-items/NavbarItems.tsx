@@ -106,11 +106,9 @@ interface DropdownMenuProps {
 export function DropdownMenu({ item, isMobileNavOpen, handleLinkClick }: DropdownMenuProps) {
     return (
         <div
-            className={`${
-                isMobileNavOpen ? 'flex' : ' hidden xs:flex'
-            } w-full z-40  max-h-screen overflow-y-auto`}
+            className={`${isMobileNavOpen ? 'flex' : ' hidden xs:flex'} w-full z-40  max-h-screen`}
         >
-            <div className="overflow-y-auto flex-1">
+            <div className="flex-1">
                 <div className="pt-10 pb-14 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 justify-start max-w-7xl mx-auto cursor-default xs:container">
                     {item.navbarSections?.map((section) => (
                         <div className="flex flex-col items-start" key={section.title}>

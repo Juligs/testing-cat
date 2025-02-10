@@ -17,15 +17,29 @@ export function InfiniteCarousel({ logos, itemWidth = 190 }: InfiniteCarouselPro
     const [swiperWidth, setSwiperWidth] = useState(0);
     const [staticCarousel, setStaticCarousel] = useState(false);
     const [isLoop, setIsLoop] = useState(true);
+    const [key, setKey] = useState(0);
+    const [maxHeight, setMaxHeight] = useState('max-h-[123px]');
+
+    useEffect(() => {
+        if (window.innerWidth < 712) {
+            setMaxHeight('max-h-[90px]');
+        } else {
+            setMaxHeight('max-h-[123px]');
+        }
+    }, []);
 
     useEffect(() => {
         const handleResize = () => {
             const totalItemsWidth = logos.length * itemWidth;
             const windowWidth = window.innerWidth;
 
+            const isStatic = logos.length <= 2 || totalItemsWidth <= windowWidth;
+
             setSwiperWidth(windowWidth);
-            setStaticCarousel(totalItemsWidth <= windowWidth);
-            setIsLoop(totalItemsWidth > windowWidth);
+            setStaticCarousel(isStatic);
+            setIsLoop(!isStatic && logos.length > 2);
+
+            setKey((prevKey) => prevKey + 1);
         };
 
         handleResize();
@@ -42,6 +56,7 @@ export function InfiniteCarousel({ logos, itemWidth = 190 }: InfiniteCarouselPro
 
     return (
         <Swiper
+            key={key}
             loop={isLoop}
             observer={true}
             observeParents={true}
@@ -49,10 +64,7 @@ export function InfiniteCarousel({ logos, itemWidth = 190 }: InfiniteCarouselPro
                 swiperRef.current = swiper;
             }}
             slidesPerView="auto"
-            autoplay={{
-                delay: 0,
-                disableOnInteraction: !staticCarousel,
-            }}
+            autoplay={isLoop ? { delay: 0, disableOnInteraction: !staticCarousel } : false}
             speed={2000}
             allowTouchMove={!staticCarousel}
             className={`w-full h-full overflow-hidden ${isLoop ? 'swiper-container-infinite-loop' : ''} ${staticCarousel ? 'static-swiper' : ''}`}
@@ -65,8 +77,8 @@ export function InfiniteCarousel({ logos, itemWidth = 190 }: InfiniteCarouselPro
         >
             {logos.map((logo, index) => (
                 <SwiperSlide key={index} style={{ width: `${itemWidth}px` }}>
-                    <div className="flex items-center justify-center gap-4">
-                        <img src={logo} className="w-auto max-h-[123px] w-max-full" alt={logo} />
+                    <div className="flex items-center justify-center overflow-hidden">
+                        <img src={logo} className={`w-auto ${maxHeight} w-max-full`} alt={logo} />
                     </div>
                 </SwiperSlide>
             ))}

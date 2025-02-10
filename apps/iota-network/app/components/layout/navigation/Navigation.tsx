@@ -128,7 +128,7 @@ export function Navigation({ items }: NavigationProps) {
                     </Navbar>
 
                     {openedDropdownMenu && (
-                        <div className="max-xs:hidden">
+                        <div className="max-xs:hidden overflow-y-auto max-h-[calc(100vh-96px)]">
                             <DropdownMenu
                                 item={openedDropdownMenu}
                                 isMobileNavOpen={isMobileNavOpen}
