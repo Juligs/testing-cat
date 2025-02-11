@@ -104,33 +104,59 @@ interface DropdownMenuProps {
 }
 
 export function DropdownMenu({ item, isMobileNavOpen, handleLinkClick }: DropdownMenuProps) {
+    function getSectionClasses(sectionIndex: number) {
+        const GRID_COLUMNS = {
+            default: 1,
+            sm: 3,
+            lg: 4,
+        };
+        const baseClasses = 'flex flex-col items-start';
+        const isLastSection = sectionIndex === (item.navbarSections ?? [])?.length - 1;
+
+        if (isLastSection && sectionIndex < GRID_COLUMNS.lg - 1) {
+            // we cant use string concatenation here because of tailwindcss JIT
+            const columnClasses = [
+                'col-start-1',
+                `${sectionIndex === GRID_COLUMNS.sm ? 'sm:col-start-1' : 'sm:col-start-3'}`,
+                `lg:col-start-4`,
+            ];
+            return `${baseClasses} ${columnClasses.join(' ')}`;
+        } else {
+            return baseClasses;
+        }
+    }
+
     return (
         <div
             className={`${isMobileNavOpen ? 'flex' : ' hidden xs:flex'} w-full z-40  max-h-screen`}
         >
             <div className="flex-1">
                 <div className="pt-10 pb-14 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 justify-start max-w-7xl mx-auto cursor-default xs:container">
-                    {item.navbarSections?.map((section) => (
-                        <div className="flex flex-col items-start" key={section.title}>
-                            {(section.icon || section.title) && (
-                                <div className="flex gap-3 items-center py-6 text-network-primary-0">
-                                    {section.icon && (
-                                        <div className="[&_svg]:h-6 [&_svg]:w-6">
-                                            {section.icon}
-                                        </div>
-                                    )}
-                                    {section.title && (
-                                        <p className="text-label-lg">{section.title}</p>
-                                    )}
-                                </div>
-                            )}
-                            {section.children.map((item, itemIndex) => (
-                                <div key={itemIndex} className="flex flex-col">
-                                    <NavItem item={item} handleLinkClick={handleLinkClick} />
-                                </div>
-                            ))}
-                        </div>
-                    ))}
+                    {item.navbarSections &&
+                        item.navbarSections?.map((section, sectionIndex) => (
+                            <div
+                                className={getSectionClasses(sectionIndex)}
+                                key={`${sectionIndex}-${section.title}`}
+                            >
+                                {(section.icon || section.title) && (
+                                    <div className="flex gap-3 items-center py-6 text-network-primary-0">
+                                        {section.icon && (
+                                            <div className="[&_svg]:h-6 [&_svg]:w-6">
+                                                {section.icon}
+                                            </div>
+                                        )}
+                                        {section.title && (
+                                            <p className="text-label-lg">{section.title}</p>
+                                        )}
+                                    </div>
+                                )}
+                                {section.children.map((item, itemIndex) => (
+                                    <div key={itemIndex} className="flex flex-col">
+                                        <NavItem item={item} handleLinkClick={handleLinkClick} />
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { Navbar } from 'react-ui-kit';
 import { Logo } from '../logo';
 import { Route } from '@lib/interfaces';
@@ -24,6 +24,8 @@ export function Navigation({ items }: NavigationProps) {
     const [openDropdown, setOpenDropdown] = useState<number | null>(null);
     const isInverted =
         !(isMobileNavOpen || openDropdown !== null) && activeSection.theme === 'inverted';
+
+    const navRef = useRef<HTMLDivElement>(null);
 
     const handleLinkClick = (path: string | undefined) => {
         if (path) {
@@ -72,12 +74,21 @@ export function Navigation({ items }: NavigationProps) {
             }
         };
 
-        window.addEventListener('resize', handleResize);
+        const handleClickOutside = (event: MouseEvent) => {
+            if (navRef.current && !navRef.current.contains(event.target as Node)) {
+                setIsMobileNavOpen(false);
+                setOpenDropdown(null);
+                document.body.classList.remove('overflow-hidden');
+            }
+        };
 
+        window.addEventListener('resize', handleResize);
+        document.addEventListener('mousedown', handleClickOutside);
         updateBodyOverflow();
 
         return () => {
             window.removeEventListener('resize', handleResize);
+            document.removeEventListener('mousedown', handleClickOutside);
             document.body.classList.remove('overflow-hidden');
         };
     }, [isMobileNavOpen, openDropdown]);
@@ -87,6 +98,7 @@ export function Navigation({ items }: NavigationProps) {
     return (
         <>
             <div
+                ref={navRef}
                 className={clsx(
                     'fixed top-0 left-0 right-0 z-50 backdrop-blur max-h-screen flex flex-col',
                     (isMobileNavOpen || openedDropdownMenu) && 'bg-transparency-white-80',

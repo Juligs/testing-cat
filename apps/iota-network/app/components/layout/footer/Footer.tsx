@@ -43,7 +43,7 @@ export function Footer() {
     return (
         <footer className="bg-darkest text-white relative overflow-hidden">
             <div className="container py-8 z-1 relative bg-network-neutral-10">
-                <div className="grid grid-cols-2 xs:flex xs:flex-row xs:justify-between gap-8 xs:gap-0">
+                <div className="grid grid-cols-2 gap-6 xs:grid-cols-3">
                     {footerRoutes.map((route, routeIndex) => (
                         <div key={routeIndex} className="flex flex-col gap-y-4">
                             <span className="text-labs-neutral-100 text-label-lg">
@@ -71,7 +71,7 @@ export function Footer() {
                 </div>
                 <hr className="my-6 text-transparency-white-16" />
                 <div className="flex flex-col items-start md:items-end w-full justify-flex gap-6">
-                    <div className="flex flex-col  items-start md:flex-row w-full justify-between gap-y-8 md:gap-y-0">
+                    <div className="flex flex-col items-start md:flex-row w-full justify-between gap-y-8 md:gap-y-0">
                         <div className="flex flex-row gap-x-4 items-center">
                             <Logo color="text-labs-neutral-100" />
                             <span className="text-labs-neutral-60 text-body-sm">
@@ -124,7 +124,7 @@ export function Footer() {
                 </div>
             </div>
             <div className="w-full bg-network-neutral-6 py-6 ">
-                <div className="container grid grid-cols-1 gap-6 xs:grid-cols-3 xs:gap-4 justify-between">
+                <div className="container grid grid-cols-1 gap-4 xs:grid-cols-3 xs:gap-6">
                     {COMPANY_DATA.map((contact, index) => (
                         <div key={index} className="flex flex-col text-network-neutral-60">
                             <div className="flex flex-col">

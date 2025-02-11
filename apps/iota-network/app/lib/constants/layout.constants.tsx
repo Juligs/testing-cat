@@ -1,7 +1,9 @@
 import { Route } from '@lib/interfaces';
 import {
     BalanceFinder,
+    BlogPost,
     ClientLibraries,
+    DecentralizedDataStorageAndSeamlessTransactions,
     Discord,
     Flexibility,
     GitHub,
@@ -153,6 +155,69 @@ export const ROUTES: Route[] = [
                 ],
             },
             // featured cards
+            {
+                children: LEARN_FEATURED_CARDS,
+            },
+        ],
+    },
+    {
+        title: 'Build',
+        path: 'https://docs.iota.org/',
+        isExternal: true,
+        children: [
+            {
+                title: 'Documentation',
+                path: 'https://docs.iota.org/',
+                isExternal: true,
+            },
+        ],
+        navbarSections: [
+            {
+                title: 'Start building',
+                icon: <DecentralizedDataStorageAndSeamlessTransactions />,
+                children: [
+                    {
+                        title: 'Developer Documentation',
+                        description: 'Comprehensive knowledge source',
+                        path: 'https://docs.iota.org/',
+                        isExternal: true,
+                    },
+                ],
+            },
+            {
+                children: LEARN_FEATURED_CARDS,
+            },
+        ],
+    },
+    {
+        title: 'Connect',
+        path: ' https://blog.iota.org/',
+        isExternal: true,
+        children: [
+            {
+                title: 'Blog',
+                path: 'https://blog.iota.org/',
+                isExternal: true,
+            },
+            {
+                title: 'iotalabs',
+                path: 'https://iotalabs.io/',
+                isExternal: true,
+            },
+        ],
+        navbarSections: [
+            {
+                title: 'Latest',
+                icon: <BlogPost />,
+                children: [
+                    {
+                        title: 'Blog',
+                        description: 'Updates on our tools and products',
+                        path: 'https://blog.iota.org/',
+                        isExternal: true,
+                    },
+                ],
+            },
             {
                 children: LEARN_FEATURED_CARDS,
             },
