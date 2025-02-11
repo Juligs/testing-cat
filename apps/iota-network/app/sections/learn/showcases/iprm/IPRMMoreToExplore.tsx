@@ -1,5 +1,5 @@
-import { BaseSectionProps } from '../../interfaces';
-import { MoreToExplore } from '../../components';
+import { BaseSectionProps } from '@repo/shared/interfaces';
+import { MoreToExplore } from '@repo/shared/components';
 import { IPRM_MORE_TO_EXPLORE_CONTENT } from './constants';
 
 export function IPRMMoreToExplore({ id, navbarColorScheme }: BaseSectionProps) {

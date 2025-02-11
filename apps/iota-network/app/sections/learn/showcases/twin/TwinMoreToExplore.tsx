@@ -1,5 +1,5 @@
-import { BaseSectionProps } from '../../interfaces';
-import { MoreToExplore } from '../../components';
+import { BaseSectionProps } from '@repo/shared/interfaces';
+import { MoreToExplore } from '@repo/shared/components';
 import { TWIN_MORE_TO_EXPLORE_LINKS } from './constants';
 
 export function TwinMoreToExplore({ id, navbarColorScheme }: BaseSectionProps) {

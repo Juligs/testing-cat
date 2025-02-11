@@ -1,13 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { IPRMHero } from '@sections';
-import {
-    IPRMPartners,
-    IPRMTransparency,
-    IPRMQuotes,
-    IPRMContactUs,
-    IPRMMoreToExplore,
-} from '@repo/shared/sections';
+import { IPRMHero, IPRMMoreToExplore } from '@sections';
+import { IPRMPartners, IPRMTransparency, IPRMQuotes, IPRMContactUs } from '@repo/shared/sections';
 import {
     IPRM_METADATA_TITLE,
     IPRM_METADATA_DESCRIPTION_X,

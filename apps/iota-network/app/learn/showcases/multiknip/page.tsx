@@ -1,10 +1,9 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { MultiknipHero } from '@sections';
+import { MultiknipHero, MultiKnipMoreToExplore } from '@sections';
 import {
     MultiKnipContactUs,
     MultiKnipDigitalWallet,
-    MultiKnipMoreToExplore,
     MultiKnipPartners,
     MultiKnipQuotes,
 } from '@repo/shared/sections';

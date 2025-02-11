@@ -1,7 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { KYCHero } from '@sections';
-import { KYCContactUs, KYCMoreToExplore, KYCPartners, KYCDeFi } from '@repo/shared/sections';
+import { KYCHero, KYCMoreToExplore } from '@sections';
+import { KYCContactUs, KYCPartners, KYCDeFi } from '@repo/shared/sections';
 import {
     KYC_METADATA_TITLE,
     KYC_METADATA_DESCRIPTION_X,

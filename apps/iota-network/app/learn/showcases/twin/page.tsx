@@ -1,12 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { TwinHero } from '@sections';
-import {
-    TwinMoreToExplore,
-    TwinPaperless,
-    TwinPartners,
-    TwinContactUs,
-} from '@repo/shared/sections';
+import { TwinHero, TwinMoreToExplore } from '@sections';
+import { TwinPaperless, TwinPartners, TwinContactUs } from '@repo/shared/sections';
 import {
     TWIN_METADATA_TITLE,
     TWIN_METADATA_DESCRIPTION_X,

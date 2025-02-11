@@ -1,7 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { DPPHero } from '@sections';
-import { DPPContactUs, DPPMoreToExplore, DPPPartners, DPPLifecycles } from '@repo/shared/sections';
+import { DPPHero, DPPMoreToExplore } from '@sections';
+import { DPPContactUs, DPPPartners, DPPLifecycles } from '@repo/shared/sections';
 import {
     DPP_METADATA_TITLE,
     DPP_METADATA_DESCRIPTION_X,

@@ -1,12 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { EbsiHero } from '@sections';
-import {
-    EbsiContactUs,
-    EbsiMoreToExplore,
-    EbsiPartners,
-    EbsiScalable,
-} from '@repo/shared/sections';
+import { EbsiHero, EbsiMoreToExplore } from '@sections';
+import { EbsiContactUs, EbsiPartners, EbsiScalable } from '@repo/shared/sections';
 import {
     EBSI_METADATA_TITLE,
     EBSI_METADATA_DESCRIPTION_X,

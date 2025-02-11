@@ -1,12 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { DemiaHero } from '@sections';
-import {
-    DemiaContactUs,
-    DemiaMoreToExplore,
-    DemiaCarbonEmissions,
-    DemiaPartners,
-} from '@repo/shared/sections';
+import { DemiaHero, DemiaMoreToExplore } from '@sections';
+import { DemiaContactUs, DemiaCarbonEmissions, DemiaPartners } from '@repo/shared/sections';
 import {
     DEMIA_METADATA_TITLE,
     DEMIA_METADATA_DESCRIPTION_X,
