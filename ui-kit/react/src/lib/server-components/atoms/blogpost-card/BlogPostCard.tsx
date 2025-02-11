@@ -50,7 +50,7 @@ export function BlogPostCard({
             </div>
             <div className="flex flex-col items-start pt-6 pb-4 gap-3 w-full">
                 {children}
-                <p className={clsx('text-title-md', titleColor)}>{title}</p>
+                <p className={clsx('text-title-sm', titleColor)}>{title}</p>
                 <p className={clsx('text-label-sm', descriptionColor)}>{description}</p>
             </div>
         </div>

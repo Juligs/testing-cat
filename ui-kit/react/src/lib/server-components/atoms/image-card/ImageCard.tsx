@@ -110,11 +110,11 @@ export function ImageCard({
                 )}
             >
                 <div className={clsx('flex flex-col items-start self-stretch w-full', gapClass)}>
-                    {overline && <p className="text-label-lg">{overline}</p>}
-                    <h2 className={clsx('text-title-lg', textDarkest)}>{title}</h2>
-                    {subtitle && <p className="text-title-sm">{subtitle}</p>}
+                    {overline && <p className="text-label-sm">{overline}</p>}
+                    <h2 className={clsx('text-title-sm', textDarkest)}>{title}</h2>
+                    {subtitle && <p className="text-label-md">{subtitle}</p>}
                 </div>
-                {body && <p className="text-body-lg">{body}</p>}
+                {body && <p className="text-body-md">{body}</p>}
                 {children && <div className="flex gap-6">{children}</div>}
             </div>
         </div>

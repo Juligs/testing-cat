@@ -59,7 +59,7 @@ export function IconContent({
         >
             <div className="flex flex-col gap-4 ">
                 {icon && <div className={clsx('[&_svg]:h-12 [&_svg]:w-12', iconColor)}>{icon}</div>}
-                <p className={clsx('text-title-md', colorTitle)}>{title}</p>
+                <p className={clsx('text-title-sm', colorTitle)}>{title}</p>
                 {body && <p className={clsx('text-body-md', colorBody)}>{body}</p>}
             </div>
             {children && <>{children}</>}

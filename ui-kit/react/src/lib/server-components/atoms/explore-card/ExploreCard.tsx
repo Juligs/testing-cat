@@ -6,7 +6,6 @@ import {
     BG_COLOR_INVERTED,
     TEXT_COLOR,
     TEXT_COLOR_INVERTED,
-    TITLE_SIZE,
     SUBTITLE_COLOR,
     SUBTITLE_COLOR_INVERTED,
 } from './exploreCard.constants';
@@ -58,7 +57,7 @@ export function ExploreCard({
                 )}
             >
                 <ArrowTopRight className="absolute top-0 right-0 w-8 h-8 transform transition-transform ease-in duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                <p className={clsx(TITLE_SIZE[size])}>{title}</p>
+                <p className="text-title-lg">{title}</p>
                 {subtitle && <p className={clsx('text-body-lg', subtitleColor)}>{subtitle}</p>}
             </div>
         </div>

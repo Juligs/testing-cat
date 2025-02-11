@@ -99,7 +99,7 @@ export function CtaCard({
                 )}
             >
                 <p className={clsx('text-title-lg xs:text-headline-sm', colorTitle)}>{title}</p>
-                <p className={clsx('text-body-lg xs:text-title-md', colorSubtitle)}>{subtitle}</p>
+                <p className={clsx('text-label-md xs:text-label-lg', colorSubtitle)}>{subtitle}</p>
                 {children && (
                     <div className="flex items-center justify-center gap-6 pt-6 xs:pt-8">
                         {children}

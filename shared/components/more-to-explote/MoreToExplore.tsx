@@ -1,6 +1,8 @@
 import { ExploreCard } from 'react-ui-kit';
 import { VerticalTitle } from 'react-ui-kit';
 import { TitleTextSize } from 'react-ui-kit';
+import React from 'react';
+
 interface moreToExploreProps {
     text: string;
     content: (React.ComponentProps<typeof ExploreCard> & {
