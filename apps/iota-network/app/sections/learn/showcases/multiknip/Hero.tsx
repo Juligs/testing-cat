@@ -5,11 +5,7 @@ import { HeroSize } from 'react-ui-kit';
 
 export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section
-            className="w-full h-full hero-height bg-labs-neutral-10"
-            id={id}
-            data-navbar-color-scheme={navbarColorScheme}
-        >
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <HeroComponent
                 verticalTitle={MULTIKNIP_HOMEPAGE_CONTENT}
                 image="/shared/rwa-section/cta-carousel/multiknip.png"

@@ -4,11 +4,7 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 
 export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
-        <section
-            className="w-full h-full hero-height bg-labs-neutral-10"
-            id={id}
-            data-navbar-color-scheme={navbarColorScheme}
-        >
+        <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <HeroComponent
                 verticalTitle={HERO_HOMEPAGE_CONTENT}
                 background={HERO_HOMEPAGE_BG_VIDEO}

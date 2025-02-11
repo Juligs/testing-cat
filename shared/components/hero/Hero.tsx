@@ -1,18 +1,18 @@
-import { TwoColumnsImageTemplate } from '../two-columns-template';
+'use client';
 import clsx from 'clsx';
+import type { ImageProps } from 'next/image';
+import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 import {
+    Button,
+    HeroBackground,
     HeroLayout,
     HeroSize,
     TitleTextSize,
     VerticalTitle,
-    Button,
-    HeroBackground,
 } from 'react-ui-kit';
-import type { ImageProps } from 'next/image';
-import React from 'react';
-import { RenderButtons } from './RenderButtons';
-import { LinkProps } from './RenderButtons';
+import { TwoColumnsImageTemplate } from '../two-columns-template';
 import { RenderAnchorLinks } from './RenderAnchorLinks';
+import { LinkProps, RenderButtons } from './RenderButtons';
 
 interface HeroProps {
     verticalTitle: React.ComponentProps<typeof VerticalTitle>;
@@ -48,10 +48,30 @@ export function Hero({
     image,
     verticalTitle,
 }: HeroProps): React.JSX.Element {
+    const heroRef = useRef<HTMLDivElement>(null);
+    const [viewportHeight, setViewportHeight] = useState<number>(0);
+
+    useEffect(() => {
+        const updateHeight = () => {
+            const isMobile = window.innerWidth < 712;
+            setViewportHeight(isMobile ? window.screen.height : window.innerHeight);
+        };
+
+        updateHeight();
+
+        window.addEventListener('resize', updateHeight);
+        window.addEventListener('orientationchange', updateHeight);
+
+        return () => {
+            window.removeEventListener('resize', updateHeight);
+            window.removeEventListener('orientationchange', updateHeight);
+        };
+    }, []);
+
     const rounded = size === HeroSize.Large && anchorLinks ? 'rounded-b-4xl sm:rounded-b-none' : '';
     const Link = linkComponent
         ? linkComponent
-        : ({ href, children, ...rest }: React.PropsWithChildren<LinkProps>) => (
+        : ({ href, children, ...rest }: PropsWithChildren<LinkProps>) => (
               <a href={href as string} {...rest}>
                   {children}
               </a>
@@ -60,10 +80,7 @@ export function Hero({
     const { isCentered = true, size: verticalTitleSize, ...verticalTitleProps } = verticalTitle;
     const verticalTitleWitdh = size === HeroSize.ExtraLarge ? 'w-full xs:max-w-[780px]' : 'w-full';
 
-    const mainContainer = anchorLinks
-        ? 'w-full h-screen flex flex-col justify-center items-center'
-        : 'w-full h-full';
-
+    const mainContainer = 'w-full flex flex-col justify-center items-center';
     const isTwoColumns = image ? '' : 'sm:max-w-3xl xl:max-w-5xl';
     const textSize = verticalTitleSize
         ? verticalTitleSize
@@ -77,7 +94,13 @@ export function Hero({
 
     return (
         <>
-            <div className={clsx(mainContainer)}>
+            <div
+                ref={heroRef}
+                style={{
+                    minHeight: viewportHeight ? `${viewportHeight}px` : '100vh',
+                }}
+                className={clsx(mainContainer)}
+            >
                 <HeroLayout hasGradientBackground={!background} size={size}>
                     {background && <HeroBackground {...background} className={rounded} />}
                     <div className={clsx(isTwoColumns)}>
@@ -109,7 +132,7 @@ export function Hero({
                             </div>
                         )}
                         {anchorLinks && (
-                            <div className="hidden sm:flex absolute container bottom-0 left-1/2 -translate-x-1/2 ">
+                            <div className="hidden sm:flex absolute container bottom-0 left-1/2 -translate-x-1/2">
                                 <div className="flex gap-6 justify-center items-center w-full py-6">
                                     <RenderAnchorLinks
                                         anchorLinks={anchorLinks}
