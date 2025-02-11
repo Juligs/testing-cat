@@ -93,7 +93,14 @@ export function ImageCard({
             )}
         >
             {animation ? (
-                <div className={clsx('[&_>div]:aspect-[inherit]', imageClass)}>{animation}</div>
+                <div
+                    className={clsx(
+                        'w-full h-auto max-w-full [&_>div]:aspect-[inherit]',
+                        imageClass,
+                    )}
+                >
+                    {animation}
+                </div>
             ) : (
                 image && (
                     <img

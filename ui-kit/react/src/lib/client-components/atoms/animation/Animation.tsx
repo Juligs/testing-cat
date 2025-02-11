@@ -48,8 +48,7 @@ export function Animation({
             // "xMidYMid" centers it, while "slice" is applied to containers that need to be covered.
             // The `keepAspectRatio` prop applies "slice" where required, and it's always used on mobile.
 
-            const preserveAspectRatio =
-                `xMidYMid` + (keepAspectRatio ? ' slice' : isMobile ? 'slice' : '');
+            const preserveAspectRatio = keepAspectRatio || isMobile ? 'xMidYMid slice' : 'xMidYMid';
 
             const anim = Lottie.loadAnimation({
                 renderer,
