@@ -10,7 +10,7 @@ export const LIGHTHOUSE_IMAGE_CARD_CONTENT = [
         animation: (
             <Animation keepAspectRatio src="/shared/lighthouse-projects/european_blockchain.json" />
         ),
-        link: '/learn/showcases/ebsi',
+        link: '/showcases/ebsi',
     },
 
     {
@@ -19,13 +19,13 @@ export const LIGHTHOUSE_IMAGE_CARD_CONTENT = [
         animation: (
             <Animation keepAspectRatio src="/shared/lighthouse-projects/tokenized_kyc.json" />
         ),
-        link: '/learn/showcases/kyc',
+        link: '/showcases/kyc',
     },
     {
         title: 'Intellectual Property Rights Management',
         subtitle: 'Automated and transparent rights contracts and payments',
         animation: <Animation keepAspectRatio src="/shared/lighthouse-projects/ipr.json" />,
-        link: '/learn/showcases/iprm',
+        link: '/showcases/iprm',
     },
     {
         title: 'Digital Product Passports',
@@ -33,6 +33,6 @@ export const LIGHTHOUSE_IMAGE_CARD_CONTENT = [
         animation: (
             <Animation keepAspectRatio src="/shared/lighthouse-projects/digital_passport.json" />
         ),
-        link: '/learn/showcases/dpp',
+        link: '/showcases/dpp',
     },
 ];

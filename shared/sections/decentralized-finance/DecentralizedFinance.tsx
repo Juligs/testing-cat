@@ -1,10 +1,14 @@
+'use client';
 import { ArrowTopRight } from '@repo/icons';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '../../components';
 import { BaseSectionProps } from '../../interfaces';
 import { DECENTRALIZED_FINANCE_VERTICAL_TITLE_CONTENT } from './decentralizedFinanceContent.constants';
+import { getSharedSectionLink } from '../../utils';
+import { useTheme } from 'react-ui-kit/client';
 
 export function DecentralizedFinance({ id, navbarColorScheme }: BaseSectionProps) {
+    const themeContext = useTheme();
     return (
         <section
             className="w-full bg-labs-neutral-100"
@@ -16,7 +20,10 @@ export function DecentralizedFinance({ id, navbarColorScheme }: BaseSectionProps
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...DECENTRALIZED_FINANCE_VERTICAL_TITLE_CONTENT}>
                             <Actions>
-                                <a href="/learn/showcases" aria-label="See showcase">
+                                <a
+                                    href={getSharedSectionLink('/showcases', themeContext?.theme)}
+                                    aria-label="See showcase"
+                                >
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="See showcase"

@@ -1,10 +1,14 @@
+'use client';
 import { ArrowTopRight } from '@repo/icons';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
+import { useTheme } from 'react-ui-kit/client';
 import { TwoColumnsImageTemplate } from '../../components';
 import { BaseSectionProps } from '../../interfaces';
+import { getSharedSectionLink } from '../../utils';
 import { REAL_WORLD_VERTICAL_TITLE_CONTENT } from './realWorldContent.constants';
 
 export function RealWorldAssetTokenization({ id, navbarColorScheme }: BaseSectionProps) {
+    const themeContext = useTheme();
     return (
         <section
             className="w-full bg-labs-neutral-100"
@@ -16,7 +20,13 @@ export function RealWorldAssetTokenization({ id, navbarColorScheme }: BaseSectio
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...REAL_WORLD_VERTICAL_TITLE_CONTENT}>
                             <Actions>
-                                <a href="/learn/showcases/multiknip" aria-label="See showcase">
+                                <a
+                                    href={getSharedSectionLink(
+                                        '/showcases/multiknip',
+                                        themeContext?.theme,
+                                    )}
+                                    aria-label="See showcase"
+                                >
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="See showcase"

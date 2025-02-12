@@ -1,10 +1,12 @@
 'use client';
 import { Actions, ImageCard, TextLink, TitleTextSize, VerticalTitle } from 'react-ui-kit';
+import { useTheme } from 'react-ui-kit/client';
+import { BaseSectionProps } from '../../interfaces';
+import { getSharedSectionLink } from '../../utils';
 import {
     LIGHTHOUSE_IMAGE_CARD_CONTENT,
     LIGHTHOUSE_VERTICAL_TITLE_CONTENT,
 } from './lighthouseContent.constants';
-import { BaseSectionProps } from '@repo/shared/interfaces';
 
 interface LighthouseProjectsProps extends BaseSectionProps {
     showLink?: boolean;
@@ -15,6 +17,7 @@ export function LighthouseProjects({
     navbarColorScheme,
     showLink = true,
 }: LighthouseProjectsProps) {
+    const themeContext = useTheme();
     return (
         <section className="bg-white" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-10 sm:gap-20">
@@ -25,7 +28,10 @@ export function LighthouseProjects({
                 >
                     {showLink && (
                         <a
-                            href="/learn/showcases/#lighthouse-projects"
+                            href={getSharedSectionLink(
+                                '/showcases/#lighthouse-projects',
+                                themeContext?.theme,
+                            )}
                             aria-label="Learn more about lighthouse projects"
                         >
                             <Actions>
@@ -38,7 +44,7 @@ export function LighthouseProjects({
                     {LIGHTHOUSE_IMAGE_CARD_CONTENT.map((data, index) => (
                         <a
                             key={index}
-                            href={data.link}
+                            href={getSharedSectionLink(data.link, themeContext?.theme)}
                             className="[&>div]:h-full"
                             aria-label="Link to Lighthouse Project"
                         >

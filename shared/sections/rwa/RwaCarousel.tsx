@@ -2,16 +2,19 @@
 
 import { useRef, useState } from 'react';
 import { Actions, CtaCard, TextLink } from 'react-ui-kit';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { useTheme } from 'react-ui-kit/client';
 import { A11y, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
-import { SPACE_BETWEEN_SLIDES } from '../../constants';
 import { SliderNavigation } from '../../components';
+import { SPACE_BETWEEN_SLIDES } from '../../constants';
+import { getSharedSectionLink } from '../../utils';
 import { CTA_CAROUSEL_CONTENT, LOGOS_CAROUSEL } from './rwaContent.constants';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 export function RwaCarousel() {
+    const themeContext = useTheme();
     const ctaSwiperRef = useRef<SwiperCore | null>(null);
     const logosSwiperRef = useRef<SwiperCore | null>(null);
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -65,7 +68,7 @@ export function RwaCarousel() {
                             >
                                 <Actions>
                                     <a
-                                        href={text.link}
+                                        href={getSharedSectionLink(text.link, themeContext?.theme)}
                                         key={index}
                                         aria-label={`Visit ${text.title}`}
                                     >
