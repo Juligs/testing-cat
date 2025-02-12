@@ -1,4 +1,4 @@
-const SITE_URL = 'https://iota.org';
+const SITE_URL = 'https://iota.foundation';
 
 module.exports = {
     siteUrl: SITE_URL,
