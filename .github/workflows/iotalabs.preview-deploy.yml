@@ -7,6 +7,7 @@ on:
         paths:
             - 'apps/iotalabs/**'
             - 'ui-kit/react/**'
+            - 'shared/**'
             - '.github/workflows/iotalabs.preview-deploy.yml'
             - '.github/workflows/monorepo-app-vercel-deploy.yml'
 

@@ -7,6 +7,7 @@ on:
         paths:
             - 'apps/iota-foundation/**'
             - 'ui-kit/react/**'
+            - 'shared/**'
             - '.github/workflows/iota-foundation.preview-deploy.yml'
             - '.github/workflows/monorepo-app-vercel-deploy.yml'
 jobs:
