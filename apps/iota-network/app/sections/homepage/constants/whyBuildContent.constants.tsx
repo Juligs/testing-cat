@@ -1,5 +1,6 @@
 import { ArrowTopRight } from '@repo/icons';
 import { ButtonVariant } from 'react-ui-kit';
+import { Animation } from 'react-ui-kit/client';
 
 export const WHY_BUILD_VERTICAL_TITLE_CONTENT = {
     title: 'Why Build on IOTA?',
@@ -57,7 +58,7 @@ export const WHY_BUILD_IMAGE_CARD_CONTENT = [
 export const WHY_BUILD_CTA_CARD_CONTENT = {
     title: 'A Versatile Ledger for the Future That Works Today',
     subtitle: 'A mainnet built for flexibility and interoperability',
-    image: '/homepage/why-build/cta_card.png',
+    animation: <Animation src="/homepage/why-build/cta-animation/dotted_net.json" />,
     inverted: true,
 };
 
