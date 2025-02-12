@@ -173,11 +173,11 @@
         color: var(--display-color-text-light);
     }
 
-    .text-link:hover.text-network-neutral-40 {
+    .text-link:hover.text-iota-neutral-40 {
         color: var(--color-text-links);
     }
 
-    .text-link:hover.text-network-neutral-80 {
+    .text-link:hover.text-iota-neutral-80 {
         color: var(--color-text-links-inverted);
     }
 

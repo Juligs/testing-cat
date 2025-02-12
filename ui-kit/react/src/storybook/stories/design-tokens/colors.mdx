@@ -2,6 +2,7 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
 import {
     IOTALABS_COLOR_PALETTE,
     NETWORK_COLOR_PALETTE,
+    FOUNDATION_COLOR_PALETTE,
 } from '../../../lib/constants/colors.constants';
 import { transparencyColorPalette } from '../../utils';
 
@@ -19,6 +20,14 @@ import { transparencyColorPalette } from '../../utils';
 
 <ColorPalette>
     {Object.entries(NETWORK_COLOR_PALETTE).map(([color, values]) => {
+        return <ColorItem key={color} title={color} colors={values} />;
+    })}
+</ColorPalette>
+
+## FOUNDATION
+
+<ColorPalette>
+    {Object.entries(FOUNDATION_COLOR_PALETTE).map(([color, values]) => {
         return <ColorItem key={color} title={color} colors={values} />;
     })}
 </ColorPalette>

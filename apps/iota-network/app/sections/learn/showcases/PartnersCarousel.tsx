@@ -10,7 +10,7 @@ export function PartnersCarousel({ id, navbarColorScheme }: BaseSectionProps) {
             <div className="py-3 xs:py-6">
                 <div className="flex flex-col gap-6 py-8 xs:py-16">
                     <InfiniteCarousel logos={PARTNERS_LOGOS_CAROUSEL} />
-                    <p className="container w-full text-center text-body-md text-network-neutral-50 ">
+                    <p className="container w-full text-center text-body-md text-iota-neutral-50 ">
                         {TEXT}
                     </p>
                 </div>

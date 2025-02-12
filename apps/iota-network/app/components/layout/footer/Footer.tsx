@@ -42,7 +42,7 @@ export function Footer() {
 
     return (
         <footer className="bg-darkest text-white relative overflow-hidden">
-            <div className="container py-8 z-1 relative bg-network-neutral-10">
+            <div className="container py-8 z-1 relative bg-iota-neutral-10">
                 <div className="grid grid-cols-2 gap-6 xs:grid-cols-3">
                     {footerRoutes.map((route, routeIndex) => (
                         <div key={routeIndex} className="flex flex-col gap-y-4">
@@ -123,10 +123,10 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="w-full bg-network-neutral-6 py-6 ">
+            <div className="w-full bg-iota-neutral-6 py-6 ">
                 <div className="container grid grid-cols-1 gap-4 xs:grid-cols-3 xs:gap-6">
                     {COMPANY_DATA.map((contact, index) => (
-                        <div key={index} className="flex flex-col text-network-neutral-60">
+                        <div key={index} className="flex flex-col text-iota-neutral-60">
                             <div className="flex flex-col">
                                 <p className="text-label-sm pb-2">{contact.title}</p>
                                 {contact.address.map((line, lineIndex) => (

@@ -9,7 +9,11 @@ import {
     THEMED_CUSTOM_COLORS,
     FONT_FAMILIES,
 } from './constants';
-import { IOTALABS_COLOR_PALETTE, NETWORK_COLOR_PALETTE } from '../constants';
+import {
+    IOTALABS_COLOR_PALETTE,
+    NETWORK_COLOR_PALETTE,
+    FOUNDATION_COLOR_PALETTE,
+} from '../constants';
 import { transparencyColorPalette } from '../../storybook/utils/transparencyColorPalette';
 
 export const BASE_CONFIG: Partial<Config> = {
@@ -25,6 +29,7 @@ export const BASE_CONFIG: Partial<Config> = {
         colors: {
             ...IOTALABS_COLOR_PALETTE,
             ...NETWORK_COLOR_PALETTE,
+            ...FOUNDATION_COLOR_PALETTE,
             ...transparencyColorPalette,
             ...THEMED_CUSTOM_COLORS,
             transparent: 'transparent',

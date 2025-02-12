@@ -116,14 +116,14 @@
     --action-border-radius: theme('borderRadius.lg');
 
     /* COLORS */
-    --color-darkest: theme('colors.network-neutral.10');
-    --color-darkest-inverted: theme('colors.network-neutral.100');
-    --color-dark: theme('colors.network-neutral.30');
-    --color-dark-inverted: theme('colors.network-neutral.80');
-    --color-medium: theme('colors.network-neutral.40');
-    --color-medium-inverted: theme('colors.network-neutral.80');
-    --color-light: theme('colors.network-neutral.50');
-    --color-light-inverted: theme('colors.network-neutral.60');
+    --color-darkest: theme('colors.iota-neutral.10');
+    --color-darkest-inverted: theme('colors.iota-neutral.100');
+    --color-dark: theme('colors.iota-neutral.30');
+    --color-dark-inverted: theme('colors.iota-neutral.80');
+    --color-medium: theme('colors.iota-neutral.40');
+    --color-medium-inverted: theme('colors.iota-neutral.80');
+    --color-light: theme('colors.iota-neutral.50');
+    --color-light-inverted: theme('colors.iota-neutral.60');
     --color-highlighted: theme('colors.network-primary.20');
     --color-highlighted-inverted: theme('colors.network-primary.40');
     --color-text-links: theme('colors.network-primary.40');
@@ -140,30 +140,30 @@
 
     /* BUTTON */
     --btn-bg-primary: theme('colors.network-primary.20');
-    --btn-bg-secondary: theme('colors.network-neutral.92');
+    --btn-bg-secondary: theme('colors.iota-neutral.92');
     --btn-bg-ghost: transparent;
-    --btn-text-color-default: theme('colors.network-neutral.10');
+    --btn-text-color-default: theme('colors.iota-neutral.10');
     --btn-text-color-inverted: theme('colors.network-primary.100');
-    --btn-text-color-primary: theme('colors.network-neutral.100');
+    --btn-text-color-primary: theme('colors.iota-neutral.100');
 
     /* CHIP */
-    --chip-bg-color: theme('colors.network-neutral.92');
-    --chip-bg-color-inverted: theme('colors.network-neutral.10');
+    --chip-bg-color: theme('colors.iota-neutral.92');
+    --chip-bg-color-inverted: theme('colors.iota-neutral.10');
     --chip-bg-color-selected: theme('colors.network-primary.20');
     --chip-bg-color-selected-inverted: theme('colors.network-primary.40');
-    --chip-text-color-default: theme('colors.network-neutral.10');
+    --chip-text-color-default: theme('colors.iota-neutral.10');
     --chip-text-color-inverted: theme('colors.network-primary.100');
 
     /* CARD IMAGE */
-    --card-bg-color-default: theme('colors.network-neutral.100');
-    --card-bg-color-inverted: theme('colors.network-neutral.6');
+    --card-bg-color-default: theme('colors.iota-neutral.100');
+    --card-bg-color-inverted: theme('colors.iota-neutral.6');
     --card-border-radius: theme('borderRadius.3xl');
-    --card-text-color-medium: theme('colors.network-neutral.40');
-    --card-text-color-medium-inverted: theme('colors.network-neutral.80');
+    --card-text-color-medium: theme('colors.iota-neutral.40');
+    --card-text-color-medium-inverted: theme('colors.iota-neutral.80');
 
     /* BADGE */
-    --badge-bg-color-neutral: theme('colors.network-neutral.92');
-    --badge-bg-color-inverted: theme('colors.network-neutral.10');
+    --badge-bg-color-neutral: theme('colors.iota-neutral.92');
+    --badge-bg-color-inverted: theme('colors.iota-neutral.10');
     --badge-bg-color-light: theme('colors.network-primary.20');
     --badge-bg-color-light-inverted: theme('colors.network-primary.40');
 
@@ -184,29 +184,29 @@
     --state-layer-active-neutral: theme('colors.transparency-black.16');
 
     /* DISPLAY STATS  */
-    --display-bg-color-neutral: theme('colors.network-neutral.92');
-    --display-bg-color-inverted: theme('colors.network-neutral.10');
+    --display-bg-color-neutral: theme('colors.iota-neutral.92');
+    --display-bg-color-inverted: theme('colors.iota-neutral.10');
     --display-bg-color-light: theme('colors.network-primary.20');
-    --display-color-text-default: theme('colors.network-neutral.10');
-    --display-color-text-inverted: theme('colors.network-neutral.100');
-    --display-color-text-light: theme('colors.network-neutral.100');
+    --display-color-text-default: theme('colors.iota-neutral.10');
+    --display-color-text-inverted: theme('colors.iota-neutral.100');
+    --display-color-text-light: theme('colors.iota-neutral.100');
 
     /*ANCHOR LINK */
     --anchor-link-icon-color: theme('colors.network-primary.30');
     --anchor-link-icon-color-inverted: theme('colors.network-primary.40');
-    --anchor-link-bg-icon-color-inverted: theme('colors.network-neutral.4');
+    --anchor-link-bg-icon-color-inverted: theme('colors.iota-neutral.4');
 
     /*BLOGPOST CARD */
-    --blogpost-card-description-color: theme('colors.network-neutral.50');
-    --blogpost-card-description-color-inverted: theme('colors.network-neutral.60');
-    --blogpost-card-text-title-color: theme('colors.network-neutral.10');
-    --blogpost-card-text-title-color-inverted: theme('colors.network-neutral.100');
+    --blogpost-card-description-color: theme('colors.iota-neutral.50');
+    --blogpost-card-description-color-inverted: theme('colors.iota-neutral.60');
+    --blogpost-card-text-title-color: theme('colors.iota-neutral.10');
+    --blogpost-card-text-title-color-inverted: theme('colors.iota-neutral.100');
 
     /**CTA CARD */
-    --cta-card-title-color: theme('colors.labs-neutral.10');
-    --cta-card-title-color-inverted: theme('colors.labs-neutral.100');
-    --cta-card-subtitle-color: theme('colors.labs-neutral.30');
-    --cta-card-subtitle-color-inverted: theme('colors.labs-neutral.80');
+    --cta-card-title-color: theme('colors.iota-neutral.10');
+    --cta-card-title-color-inverted: theme('colors.iota-neutral.100');
+    --cta-card-subtitle-color: theme('colors.iota-neutral.30');
+    --cta-card-subtitle-color-inverted: theme('colors.iota-neutral.80');
 }
 
 :root.foundation {
@@ -214,4 +214,97 @@
     --font-family: theme('fontFamily.alliance-no2');
     --font-weight: 500;
     --letter-spacing: 0;
+
+    /* COLORS */
+    --color-darkest: theme('colors.iota-neutral.10');
+    --color-darkest-inverted: theme('colors.iota-neutral.100');
+    --color-dark: theme('colors.iota-neutral.30');
+    --color-dark-inverted: theme('colors.iota-neutral.80');
+    --color-medium: theme('colors.iota-neutral.40');
+    --color-medium-inverted: theme('colors.iota-neutral.80');
+    --color-light: theme('colors.iota-neutral.50');
+    --color-light-inverted: theme('colors.iota-neutral.60');
+    --color-highlighted: theme('colors.foundation-primary.20');
+    --color-highlighted-inverted: theme('colors.foundation-primary.40');
+    --color-text-links: theme('colors.foundation-primary.40');
+    --color-text-links-inverted: theme('colors.foundation-primary.60');
+    --bg-color-card: theme('colors.iota-neutral.96');
+    --bg-color-card-inverted: theme('colors.iota-neutral.6');
+    --color-icon-content: theme('colors.foundation-primary.30');
+    --color-icon-content-inverted: theme('colors.foundation-primary.80');
+    --bg-color-gradient: linear-gradient(
+        to right,
+        theme('colors.foundation-gradient.light'),
+        theme('colors.foundation-gradient.dark')
+    );
+
+    /* BUTTON */
+    --btn-bg-primary: theme('colors.foundation-primary.20');
+    --btn-bg-secondary: theme('colors.iota-neutral.92');
+    --btn-bg-ghost: transparent;
+    --btn-text-color-default: theme('colors.iota-neutral.10');
+    --btn-text-color-inverted: theme('colors.foundation-primary.100');
+    --btn-text-color-primary: theme('colors.iota-neutral.100');
+
+    /* CHIP */
+    --chip-bg-color: theme('colors.iota-neutral.92');
+    --chip-bg-color-inverted: theme('colors.iota-neutral.10');
+    --chip-bg-color-selected: theme('colors.foundation-primary.20');
+    --chip-bg-color-selected-inverted: theme('colors.foundation-primary.40');
+    --chip-text-color-default: theme('colors.iota-neutral.10');
+    --chip-text-color-inverted: theme('colors.foundation-primary.100');
+
+    /* CARD IMAGE */
+    --card-bg-color-default: theme('colors.iota-neutral.100');
+    --card-bg-color-inverted: theme('colors.iota-neutral.6');
+    --card-border-radius: theme('borderRadius.3xl');
+    --card-text-color-medium: theme('colors.iota-neutral.40');
+    --card-text-color-medium-inverted: theme('colors.iota-neutral.80');
+
+    /* BADGE */
+    --badge-bg-color-neutral: theme('colors.iota-neutral.92');
+    --badge-bg-color-inverted: theme('colors.iota-neutral.10');
+    --badge-bg-color-light: theme('colors.foundation-primary.20');
+    --badge-bg-color-light-inverted: theme('colors.foundation-primary.40');
+
+    /*SKELETON */
+    --gradient-skeleton-color: theme('colors.transparency-primary-foundation.8');
+    --gradient-skeleton-color-inverted: theme('colors.transparency-primary-foundation.12');
+
+    /* STATE LAYER */
+    --state-layer-hover: theme('colors.transparency-primary-foundation.8');
+    --state-layer-focus: theme('colors.transparency-primary-foundation.12');
+    --state-layer-active: theme('colors.transparency-primary-foundation.16');
+
+    --state-layer-focus-inverted: theme('colors.transparency-white.12');
+    --state-layer-hover-inverted: theme('colors.transparency-white.8');
+
+    --state-layer-hover-neutral: theme('colors.transparency-black.8');
+    --state-layer-focus-neutral: theme('colors.transparency-black.12');
+    --state-layer-active-neutral: theme('colors.transparency-black.16');
+
+    /* DISPLAY STATS  */
+    --display-bg-color-neutral: theme('colors.iota-neutral.92');
+    --display-bg-color-inverted: theme('colors.iota-neutral.10');
+    --display-bg-color-light: theme('colors.foundation-primary.20');
+    --display-color-text-default: theme('colors.iota-neutral.10');
+    --display-color-text-inverted: theme('colors.iota-neutral.100');
+    --display-color-text-light: theme('colors.iota-neutral.100');
+
+    /*ANCHOR LINK */
+    --anchor-link-icon-color: theme('colors.foundation-primary.30');
+    --anchor-link-icon-color-inverted: theme('colors.foundation-primary.40');
+    --anchor-link-bg-icon-color-inverted: theme('colors.iota-neutral.4');
+
+    /*BLOGPOST CARD */
+    --blogpost-card-description-color: theme('colors.iota-neutral.50');
+    --blogpost-card-description-color-inverted: theme('colors.iota-neutral.60');
+    --blogpost-card-text-title-color: theme('colors.iota-neutral.10');
+    --blogpost-card-text-title-color-inverted: theme('colors.iota-neutral.100');
+
+    /**CTA CARD */
+    --cta-card-title-color: theme('colors.iota-neutral.10');
+    --cta-card-title-color-inverted: theme('colors.iota-neutral.100');
+    --cta-card-subtitle-color: theme('colors.iota-neutral.30');
+    --cta-card-subtitle-color-inverted: theme('colors.iota-neutral.80');
 }

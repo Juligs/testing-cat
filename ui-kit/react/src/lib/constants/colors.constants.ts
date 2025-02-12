@@ -15,6 +15,28 @@ export const SHARED_COLORS = {
     },
 } as const;
 
+export const IOTA_NEUTRAL = {
+    'iota-neutral': {
+        0: '#000000',
+        4: '#0A0F17',
+        6: '#0F141C',
+        10: '#171D26',
+        12: '#1C212B',
+        20: '#29313D',
+        30: '#3C4656',
+        40: '#586272',
+        50: '#717A8A',
+        60: '#8B95A4',
+        70: '#A5AFBD',
+        80: '#C0CBD9',
+        90: '#CBD5E1',
+        92: '#E3EAF6',
+        96: '#EFF4FA',
+        98: '#F8FAFC',
+        100: '#FFFFFF',
+    },
+};
+
 export const IOTALABS_COLOR_PALETTE = {
     'labs-primary': {
         0: '#000000',
@@ -101,33 +123,38 @@ export const NETWORK_COLOR_PALETTE = {
         90: '#C2F1F4',
         100: '#FFFFFF',
     },
-    'network-neutral': {
-        0: '#000000',
-        4: '#0A0F17',
-        6: '#0F141C',
-        10: '#171D26',
-        12: '#1C212B',
-        20: '#29313D',
-        30: '#3C4656',
-        40: '#586272',
-        50: '#717A8A',
-        60: '#8B95A4',
-        70: '#A5AFBD',
-        80: '#C0CBD9',
-        90: '#CBD5E1',
-        92: '#E3EAF6',
-        96: '#EFF4FA',
-        98: '#F8FAFC',
-        100: '#FFFFFF',
-    },
-
     'network-gradient': {
         light: '#C6E6FB',
         dark: '#A3BDFC',
     },
 
+    ...IOTA_NEUTRAL,
     ...SHARED_COLORS,
 } as const;
+
+export const FOUNDATION_COLOR_PALETTE = {
+    'foundation-primary': {
+        0: '#000000',
+        5: '#001B23',
+        10: '#004154',
+        20: '#006683',
+        30: '#0091BA',
+        40: '#04A8D7',
+        50: '#11B5E4',
+        60: '#30C5EF',
+        70: '#43D5FF',
+        80: '#82E3FF',
+        90: '#C1F1FF',
+        100: '#FFFFFF',
+    },
+
+    'foundation-gradient': {
+        light: '#C1E7F2',
+        dark: '#94E1F7',
+    },
+
+    ...IOTA_NEUTRAL,
+};
 
 export const TRANSPARENCY_COLORS = {
     'transparency-primary-labs': {
@@ -153,6 +180,18 @@ export const TRANSPARENCY_COLORS = {
         56: '#1573FF',
         80: '#1573FF',
         100: '#1573FF',
+    },
+    'transparency-primary-foundation': {
+        4: '#0091BA',
+        8: '#0091BA',
+        12: '#0091BA',
+        16: '#0091BA',
+        24: '#0091BA',
+        32: '#0091BA',
+        48: '#0091BA',
+        56: '#0091BA',
+        80: '#0091BA',
+        100: '#0091BA',
     },
     'transparency-white': {
         4: '#ffffff',

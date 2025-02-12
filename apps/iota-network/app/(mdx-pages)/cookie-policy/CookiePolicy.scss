@@ -1,5 +1,6 @@
 #cookie-library-content #skcm-cookie-library {
     @apply flex flex-col;
+
     * {
         --dark: var(--color-darkest);
         --primary: var(--color-dark);
@@ -33,9 +34,11 @@
 
     #skcm-cookie-library__preferences {
         @apply mt-6;
+
         label {
             @apply my-0;
             @apply normal-case;
+
             input {
                 @apply mr-1;
             }
@@ -45,7 +48,7 @@
     #skcm-cookie-library__preferences__button {
         @apply mt-10;
         @apply text-label-md;
-        @apply bg-network-neutral-92;
+        @apply bg-iota-neutral-92;
         @apply text-darkest;
         @apply normal-case;
         @apply px-4;

@@ -6,7 +6,7 @@ import Link from 'next/link';
 export function OurFocusAreas({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section
-            className="w-full bg-network-neutral-6"
+            className="w-full bg-iota-neutral-6"
             id={id}
             data-navbar-color-scheme={navbarColorScheme}
         >

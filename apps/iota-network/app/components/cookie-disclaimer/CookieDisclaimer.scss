@@ -16,10 +16,12 @@
         @apply rounded-md;
         @apply max-w-md;
     }
+
     #skcm-cookie-disclaimer__body {
         @apply max-md:container;
         @apply flex flex-col;
         @apply items-center justify-center md:items-start;
+
         #skcm-body {
             @apply m-0;
 
@@ -39,7 +41,7 @@
         button {
             border-radius: var(--action-border-radius);
             color: var(--btn-text-color-default);
-            @apply bg-network-neutral-92;
+            @apply bg-iota-neutral-92;
             @apply py-3 px-[20px];
             @apply text-label-md normal-case;
             @apply transition-colors;

@@ -191,11 +191,11 @@ function NavItem({ item, handleLinkClick }: NavItemComponentProps) {
                 onClick={() => handleLinkClick?.(item.path)}
                 aria-label={`Link to ${item.title}`}
             >
-                <p className="text-label-lg text-network-neutral-10 group-hover:text-network-primary-40 transition-colors">
+                <p className="text-label-lg text-iota-neutral-10 group-hover:text-network-primary-40 transition-colors">
                     {item.title}
                 </p>
                 {item.description && (
-                    <p className="text-body-md text-network-neutral-30">{item.description}</p>
+                    <p className="text-body-md text-iota-neutral-30">{item.description}</p>
                 )}
             </Link>
         </>

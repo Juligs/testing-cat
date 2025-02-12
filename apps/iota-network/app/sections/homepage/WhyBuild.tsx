@@ -21,7 +21,7 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 export function WhyBuild({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section
-            className="w-full box-border relative overflow-hidden bg-network-neutral-4"
+            className="w-full box-border relative overflow-hidden bg-iota-neutral-4"
             id={id}
             data-navbar-color-scheme={navbarColorScheme}
         >
