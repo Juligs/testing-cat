@@ -13,6 +13,7 @@
         "ui-kit-react": "turbo --filter \"react-ui-kit\"",
         "iotalabs": "turbo --filter \"iotalabs\"",
         "iota-network": "turbo --filter \"iota-network\"",
+        "iota-foundation": "turbo --filter \"iota-foundation\"",
         "prepare": "husky"
     },
     "devDependencies": {
