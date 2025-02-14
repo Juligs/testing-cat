@@ -1,19 +1,19 @@
-import { MdxPage } from '../components';
 import { getPageMetadata } from '@lib/utils';
-import TermsOfUseWallet from './terms.mdx';
 import { Metadata } from 'next';
+import { MdxPage } from '../components';
+import PrivacyPolicy from './policy.mdx';
 
-const METADATA_TITLE = 'Terms of Use Wallet';
+const METADATA_TITLE = 'Trademark';
 
 export const metadata: Metadata = getPageMetadata({
     title: METADATA_TITLE,
-    path: '/iota-wallet-tos',
+    path: '/trademark',
 });
 
 export default function Page() {
     return (
         <MdxPage>
-            <TermsOfUseWallet />
+            <PrivacyPolicy />
         </MdxPage>
     );
 }

@@ -290,20 +290,16 @@ export const LEGAL_ROUTES: Route[] = [
         path: '/privacy-policy',
     },
     {
-        title: 'Impressum',
-        path: '/privacy-policy',
+        title: 'Cookie Policy',
+        path: '/cookie-policy',
     },
     {
         title: 'Trademark Policy',
-        path: '/privacy-policy',
+        path: '/trademark',
     },
     {
-        title: 'Terms of Use',
-        path: '/privacy-policy',
-    },
-    {
-        title: 'Cookie Policy',
-        path: '/cookie-policy',
+        title: 'Terms',
+        path: '/terms-of-use',
     },
 ];
 
