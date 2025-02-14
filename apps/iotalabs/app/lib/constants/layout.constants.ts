@@ -40,27 +40,30 @@ export const LEGAL_ROUTES: Route[] = [
 export const SOCIAL_LINKS = [
     {
         title: 'Builder',
-
         icon: Discord,
         url: 'https://builders-discord.iota.org/',
         isExternal: true,
+        arialLabel: 'Builder Discord',
     },
     {
         title: 'Community',
         icon: Discord,
         url: 'https://discord.iota.org',
         isExternal: true,
+        arialLabel: 'Community Discord',
     },
     {
         icon: XSocialIcon,
         url: 'https://x.com/iotalabs_',
         isExternal: true,
+        arialLabel: 'X',
     },
     {
         icon: Telegram,
         url: 'https://t.me/IOTA_Official_Community',
         isExternal: true,
         hideFromFooter: true,
+        arialLabel: 'Telegram',
     },
 ];
 

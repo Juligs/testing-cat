@@ -231,48 +231,56 @@ export const SOCIAL_LINKS = [
         icon: Discord,
         url: 'https://builders-discord.iota.org/',
         isExternal: true,
+        arialLabel: 'Builder Discord',
     },
     {
         title: 'Community',
         icon: Discord,
         url: 'https://discord.iota.org',
         isExternal: true,
+        arialLabel: 'Community Discord',
     },
     {
         icon: Telegram,
         url: 'https://t.me/IOTA_Official_Community',
         isExternal: true,
+        arialLabel: 'Telegram',
     },
     {
         icon: Reddit,
         url: 'https://www.reddit.com/r/Iota/',
         isExternal: true,
+        arialLabel: 'Reddit',
     },
     {
         icon: GitHub,
         url: 'https://github.com/iotaledger',
         isExternal: true,
+        arialLabel: 'GitHub',
     },
     {
         icon: GoogleScholar,
         url: 'https://scholar.google.com/citations?user=_ZIH81gAAAAJ&hl=en',
         isExternal: true,
-        hideFromFooter: true,
+        arialLabel: 'Google Scholar',
     },
     {
         icon: Youtube,
         url: 'https://www.youtube.com/c/iotafoundation',
         isExternal: true,
+        arialLabel: 'YouTube',
     },
     {
         icon: XSocialIcon,
         url: 'https://x.com/iotalabs_',
         isExternal: true,
+        arialLabel: 'X',
     },
     {
         icon: LinkedIn,
         url: 'https://www.linkedin.com/company/iotafoundation/',
         isExternal: true,
+        arialLabel: 'LinkedIn',
     },
 ];
 

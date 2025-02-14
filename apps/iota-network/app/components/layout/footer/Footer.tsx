@@ -92,7 +92,7 @@ export function Footer() {
                         </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                        {SOCIAL_LINKS.map(({ title, url, icon }, index) => {
+                        {SOCIAL_LINKS.map(({ title, url, icon, arialLabel }, index) => {
                             const Icon = icon;
                             return (
                                 <Link
@@ -116,6 +116,7 @@ export function Footer() {
                                         variant={ButtonVariant.Ghost}
                                         inverted
                                         icon={<Icon className="text-labs-neutral-100" />}
+                                        arialLabel={arialLabel}
                                     />
                                 </Link>
                             );
