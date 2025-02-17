@@ -12,8 +12,7 @@ import { TitleTextSize } from 'react-ui-kit';
 export const TWIN_PAPERLESS_TITLE_CONTENT = {
     title: 'Moving Paperless Trade Across Borders',
     body: [
-        'Traditional trade lacks data transparency and traceability, hindering efficiency and trust. The Trade Worldwide Information Pipeline (TWIN) is a digital platform built on IOTA that enables global supply chain participants to share and access data instantly and securely.',
-        'TWIN use cases in Africa and Europe show the potential for significant economic benefits and increased efficiency in trade.',
+        'Traditional trade suffers from limited data transparency and traceability, reducing efficiency and trust. Built on IOTA, the Trade Worldwide Information Network (TWIN) enables instant, secure data sharing across global supply chains, with use cases in Africa and Europe highlighting economic and efficiency gains.',
     ],
     size: TitleTextSize.Small,
 };
@@ -27,7 +26,7 @@ export const TWIN_PAPERLESS_ICON_CONTENT = [
     {
         icon: <SecureAndEfficientTransactions />,
         title: 'Secure and Efficient Transactions',
-        body: 'through underlying IOTA tech including the Tangle and Digital Identities.',
+        body: 'through underlying IOTA tech including our Mainnet and Digital Identities.',
     },
     {
         icon: <EliminatesCostlyDelays />,
@@ -47,6 +46,6 @@ export const TWIN_PAPERLESS_ICON_CONTENT = [
     {
         icon: <TwinConsortium />,
         title: 'TWIN Consortium',
-        body: 'includes the IOTA Foundation, Trademark Africa, The World Economic Forum, Tony Blair Institute for Global Change, Institute of Export and International Trade, Global Alliance for Trade Facilitation.',
+        body: 'includes the IOTA Foundation, Trademark Africa, The World Economic Forum, Tony Blair Institute for Global Change, Institute of Export and International Trade, and the Global Alliance for Trade Facilitation.',
     },
 ];

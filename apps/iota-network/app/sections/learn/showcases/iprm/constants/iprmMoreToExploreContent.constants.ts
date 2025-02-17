@@ -1,12 +1,12 @@
 export const IPRM_MORE_TO_EXPLORE_CONTENT = [
     {
-        title: 'Tokenized KYC',
-        subtitle: 'Privacy-preserving on-chain authentication',
-        link: '/learn/showcases/kyc',
+        title: 'All Showcases',
+        subtitle: 'Real-world use cases and lighthouse projects',
+        link: '/learn/showcases',
     },
     {
-        title: 'Demia',
-        subtitle: 'Enabling trust in carbon markets',
-        link: '/learn/showcases/demia',
+        title: 'Digital Product Passports',
+        subtitle: 'Secure, transparent product lifecycle data for a circular economy',
+        link: '/learn/showcases/dpp',
     },
 ];

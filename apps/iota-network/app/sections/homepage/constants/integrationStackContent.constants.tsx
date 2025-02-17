@@ -3,13 +3,13 @@ import { Animation } from 'react-ui-kit/client';
 export const INTEGRATION_STACK_VERTICAL_TITLE_CONTENT = {
     title: 'A Stack to Power the World',
     subtitle: ['The IOTA Integration Stack', 'builds the foundations of a new digital economy'],
-    body: 'High-performance networks like the Move-based IOTA Protocol and the IOTA EVM L2 form the backbone of our permissionless infrastructure, bridging Web3 advancements with real-world applications to drive future economies.',
+    body: 'High-performance networks like the Move-based IOTA protocol and the IOTA EVM L2 form the backbone of our permissionless infrastructure, bridging Web3 advancements with real-world applications.',
 };
 
 export const INTEGRATION_STACK_CTA_CARD_CONTENT = [
     {
-        title: 'IOTA Base Layer',
-        subtitle: 'Move-based Layer 1 Mainnet',
+        title: 'IOTA Mainnet',
+        subtitle: 'Move-based Layer 1',
         animation: <Animation src="/homepage/integration-stack/cta-animation/tangle.json" />,
         link: 'https://docs.iota.org/about-iota#layer-1',
     },
@@ -24,7 +24,7 @@ export const INTEGRATION_STACK_CTA_CARD_CONTENT = [
 export const INTEGRATION_STACK_IMAGE_CARD_CONTENT = [
     {
         title: 'IOTA Identity',
-        subtitle: 'Empowering Secure, Private, and Decentralized Digital Interactions',
+        subtitle: 'Empowering secure, private, and decentralized digital interactions',
         animation: (
             <Animation
                 keepAspectRatio

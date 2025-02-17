@@ -33,7 +33,7 @@ export const MULTIKNIP_DIGITAL_WALLET_ICON_CONTENT = [
     {
         icon: <DecentralizedDataStorageAndSeamlessTransactions />,
         title: 'Decentralized Data Storage and Seamless Transactions',
-        body: 'via the IOTA Tangle, ensuring both privacy and efficiency.',
+        body: 'via the IOTA Mainnet, ensuring both privacy and efficiency.',
     },
     {
         icon: <AnonymizedDataCollectionAndRewardDistribution />,

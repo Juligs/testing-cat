@@ -109,7 +109,6 @@ export const SHOWCASES_KEYWORDS = [
     'European Blockchain',
     'Tokenized KYC',
     'Digital Product Passports',
-    'Demia',
     'MultiKnip',
     'TWIN',
     'Intellectual Property Rights Management',
@@ -243,36 +242,6 @@ export const DPP_KEYWORDS = [
 ];
 export const DPP_IMAGE = '/metadata/meta_image_showcases_dpp.png';
 export const DPP_URL = `${BASE_URL}/learn/showcases/dpp`;
-
-export const DEMIA_METADATA_TITLE =
-    'Demia - Enabling Trust in Carbon Markets | IOTA Technology Showcase';
-export const DEMIA_METADATA_DESCRIPTION =
-    'Discover Demia, an IOTA-powered solution to secure data in carbon markets. Enhance sustainability reporting with data integrity, transparency, and trust through innovative blockchain technology.';
-export const DEMIA_METADATA_TITLE_X =
-    'Demia - Enabling Trust in Carbon Markets | IOTA Technology Showcase';
-export const DEMIA_METADATA_DESCRIPTION_X =
-    'Enhance carbon market transparency with Demia, an IOTA-powered solution for secure data and sustainability reporting.';
-
-export const DEMIA_KEYWORDS = [
-    'IOTA',
-    'Demia',
-    'carbon markets',
-    'blockchain',
-    'data integrity',
-    'sustainability reporting',
-    'trust schemas',
-    'granular data provenance',
-    'immutable data storage',
-    'real-world asset tokenization',
-    'regulatory compliance',
-    'environmental data',
-    'data compartmentalization',
-    'technology showcase',
-    'carbon emission tracking',
-    'stakeholder trust',
-];
-export const DEMIA_IMAGE = '/metadata/meta_image_showcases_demia.png';
-export const DEMIA_URL = `${BASE_URL}/learn/showcases/demia`;
 
 export const MULTIKNIP_METADATA_TITLE =
     'MultiKnip - Using Digital Tokens to Drive Purpose, Value, and Change | IOTA Technology Showcase';

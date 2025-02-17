@@ -6,7 +6,7 @@ export const CTA_CAROUSEL_CONTENT = [
     {
         title: 'TWIN',
         subtitle:
-            'The Trade Worldwide Information Pipeline is a digital platform built on IOTA that enables global supply chain participants to share and access data instantly and securely.',
+            'The Trade Worldwide Information Network is a digital platform built on IOTA that enables global supply chains to share data instantly and securely.',
         image: '/shared/rwa-section/cta-carousel/twin.png',
         text: 'View Showcases',
         link: '/showcases/twin',
@@ -14,18 +14,10 @@ export const CTA_CAROUSEL_CONTENT = [
     {
         title: 'MultiKnip',
         subtitle:
-            'Using digital tokens and wallet to inceltivize and drive purpose, value and change',
+            'Using digital tokens and wallet to incentivize and drive purpose, value and change',
         image: '/shared/rwa-section/cta-carousel/multiknip.png',
         text: 'View Showcases',
         link: '/showcases/multiknip',
-    },
-    {
-        title: 'Demia',
-        subtitle:
-            'Enabling trust in carbon markets by securing data to track, manage, and mitigate carbon emissions',
-        image: '/shared/rwa-section/cta-carousel/demia.png',
-        text: 'View Showcases',
-        link: '/showcases/demia',
     },
 ];
 
@@ -39,5 +31,4 @@ export const LOGOS_CAROUSEL = {
         '/shared/logos-carousel/TLIP.png',
     ],
     image2: ['/shared/logos-carousel/multiknip.png', '/shared/logos-carousel/kpn_iot.png'],
-    image3: ['/shared/logos-carousel/iota.png', '/shared/logos-carousel/demia.png'],
 };

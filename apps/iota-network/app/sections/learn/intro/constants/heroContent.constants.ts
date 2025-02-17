@@ -2,7 +2,7 @@ import { HeroBackground, ScreenSize } from 'react-ui-kit';
 
 export const HERO_HOMEPAGE_CONTENT = {
     title: 'We Build Cutting-Edge Technology',
-    subtitle: 'Our customers are building the futured',
+    subtitle: 'Our customers are building the future',
     inverted: true,
 };
 

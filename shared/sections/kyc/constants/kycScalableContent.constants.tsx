@@ -10,7 +10,7 @@ import { TitleTextSize } from 'react-ui-kit';
 
 export const KYC_SCALABLE_VERTICAL_TITLE_CONTENT = {
     title: 'Bringing Safety and Security to DeFi',
-    body: 'Our KYC solution allows users to authenticate without revealing personal information, reducing identity theft and fraud risks. It ensures regulatory compliance and improves user experience by integrating KYC into Web3 applications for smoother interactions with decentralized platforms.',
+    body: 'Our Know Your Customer solution allows users to authenticate without revealing personal information, reducing identity theft and fraud risks. It ensures regulatory compliance and improves user experience by integrating KYC into Web3 applications.',
     size: TitleTextSize.Small,
 };
 
@@ -23,7 +23,7 @@ export const KYC_SCALABLE_ICON_CONTENT = [
     {
         icon: <Tokenization />,
         title: 'Tokenization',
-        body: "ensures a verified identification process by storing a soulbound KYC token in the user's wallet, securely linking it to their authenticated address.",
+        body: "ensures verified identification by storing a soulbound KYC token in the user's wallet, securely linking it to their authenticated address.",
     },
     {
         icon: <SeamlessIntegrationWithWeb3 />,

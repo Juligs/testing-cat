@@ -23,7 +23,7 @@ export const LEARN_FEATURED_CARDS: Route[] = [
     //     isExternal: true,
     // },
     {
-        title: 'iotalabs',
+        title: "iotalabs Builder's Hub",
         image: '/navbar_iotalabs.png',
         path: 'https://iotalabs.io/',
         isExternal: true,
@@ -36,18 +36,13 @@ export const ROUTES: Route[] = [
         path: '/learn/intro',
         children: [
             {
-                title: 'Learn IOTA',
+                title: 'Intro to IOTA',
                 path: '/learn/intro',
             },
             {
                 title: 'Showcases',
                 path: '/learn/showcases',
                 children: [
-                    {
-                        title: 'Demia',
-                        path: '/learn/showcases/demia',
-                        hideFromFooter: true,
-                    },
                     {
                         title: 'Multiknip',
                         path: '/learn/showcases/multiknip',
@@ -199,11 +194,6 @@ export const ROUTES: Route[] = [
                 path: 'https://blog.iota.org/',
                 isExternal: true,
             },
-            {
-                title: 'iotalabs',
-                path: 'https://iotalabs.io/',
-                isExternal: true,
-            },
         ],
         navbarSections: [
             {
@@ -260,7 +250,7 @@ export const SOCIAL_LINKS = [
     },
     {
         icon: GoogleScholar,
-        url: 'https://scholar.google.com/citations?user=_ZIH81gAAAAJ&hl=en',
+        url: 'https://scholar.google.com/citations?hl=en&user=_ZIH81gAAAAJ&view_op=list_works&sortby=pubdate',
         isExternal: true,
         arialLabel: 'Google Scholar',
     },
@@ -303,22 +293,8 @@ export const LEGAL_ROUTES: Route[] = [
     },
 ];
 
-export const COMPANY_DATA = [
-    {
-        title: 'Registered Address',
-        address: ['IOTA Foundation', 'Pappelallee 78/79', '10437 Berlin', 'Germany'],
-    },
-    {
-        title: 'Company',
-        address: [
-            'ID/Company No.: 3416/1234/2',
-            'EU public ID number in the EU Transparency Register:',
-            '500027331119-04',
-            'VAT ID: DE329624902',
-        ],
-    },
-    {
-        title: 'Board of Directors',
-        address: ['Dominik Schiener,', 'Jan Misselwitz,', 'Luca Moser', 'Anja Raden'],
-    },
-];
+export const COMPANY_DATA = {
+    address:
+        'IOTA Ecosystem DLT Foundation, registered office: Tamouh Tower, Office 7, 13th Floor, Tamouh, Al Reem Island, Abu Dhabi, UAE. ',
+    email: 'contact@iotadlt.foundation',
+};

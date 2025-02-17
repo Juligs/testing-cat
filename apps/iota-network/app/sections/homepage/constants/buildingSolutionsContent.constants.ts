@@ -5,7 +5,6 @@ export const BUILDING_SOLUTIONS_LOGOS_CAROUSEL = [
     '/shared/logos-carousel/trademark_africa.png',
     '/shared/logos-carousel/tony_blair.png',
     '/shared/logos-carousel/TLIP.png',
-    '/shared/logos-carousel/demia.png',
     '/shared/logos-carousel/multiknip.png',
     '/shared/logos-carousel/walt.png',
     '/shared/logos-carousel/idnow.png',

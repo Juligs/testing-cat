@@ -10,7 +10,7 @@ import { TitleTextSize } from 'react-ui-kit';
 
 export const IPRM_TRANSPARENCY_VERTICAL_TITLE_CONTENT = {
     title: 'Transparent and Fair Rights Payment',
-    body: 'Managing intellectual property rights is difficult due to payment transparency and user experience issues that make it challenging for artists and rights holders to track and verify their earnings. Our prototype solution uses DLT and Smart Contracts for Media to simplify rights management with automated, transparent digital contracts.',
+    body: 'Payment transparency and user experience issues make it challenging for artists and rights holders to track and verify their earnings. Our prototype solution uses DLT and Smart Contracts for Media to simplify rights management with automated, transparent digital contracts.',
     size: TitleTextSize.Small,
 };
 
@@ -27,7 +27,7 @@ export const IPRM_TRANSPARENCY_ICON_CONTENT = [
     },
     {
         icon: <InterplanetaryFileSystem />,
-        title: 'InterPlanetary',
+        title: 'Inter Planetary File System',
         body: 'facilitates decentralized storage of contract data, so all information is securely and transparently maintained.',
     },
     {

@@ -1,11 +1,12 @@
 import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
-import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
+import { ButtonVariant, HeroBackground, ScreenSize, TitleTextSize } from 'react-ui-kit';
 
 export const HERO_HOMEPAGE_CONTENT = {
-    title: 'We Bring the Real World to Web3',
+    title: 'Built to make a difference',
     subtitle: 'IOTA is public blockchain infrastructure to integrate Web3 with the real world',
     inverted: true,
+    size: TitleTextSize.Medium,
 };
 
 export const HERO_HOMEPAGE_BUTTON = [

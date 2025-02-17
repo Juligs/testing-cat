@@ -5,7 +5,7 @@ export const LIGHTHOUSE_VERTICAL_TITLE_CONTENT = {
 
 export const LIGHTHOUSE_IMAGE_CARD_CONTENT = [
     {
-        title: 'European Blockchain Pre-Commercial Procurement',
+        title: 'European Blockchain PCP',
         subtitle: 'IOTA solutions for a pan-European blockchain',
         animation: (
             <Animation keepAspectRatio src="/shared/lighthouse-projects/european_blockchain.json" />

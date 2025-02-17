@@ -9,7 +9,6 @@ export * from './circular-economy';
 export * from './decentralized-finance';
 export * from './team-contact';
 export * from './twin';
-export * from './demia';
 export * from './multiknip';
 export * from './ebsi';
 export * from './kyc';

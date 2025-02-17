@@ -8,7 +8,7 @@ export function DrivingInnovationAdoption({ id, navbarColorScheme }: BaseSection
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <VerticalTitleWithAnchorLinks
                 content={DRIVING_INNOVATION_ADOPTION_ANCHORLINKS}
-                subtitle="IOTA is driving the adoption of innovative technologies across various industries. We empower businesses with increased efficiency, security, and transparency, paving the way for a more connected and decentralized future."
+                subtitle="IOTA drives the adoption of innovative technologies across industries. We empower businesses with increased efficiency, security, and transparency for a more connected and decentralized future."
             />
         </section>
     );

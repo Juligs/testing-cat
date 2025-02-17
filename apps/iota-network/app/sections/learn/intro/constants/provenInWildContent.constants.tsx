@@ -2,7 +2,7 @@ import { TitleTextSize } from 'react-ui-kit';
 
 export const PROVEN_IN_THE_WILD_VERTICAL_TITLE = {
     title: 'Proven in the Wild',
-    subtitle: "See how IOTA's technology stack is helping projects succeed.",
+    subtitle: "See how IOTA's technology stack is helping projects succeed",
     size: TitleTextSize.Small,
     isCentered: true,
 };

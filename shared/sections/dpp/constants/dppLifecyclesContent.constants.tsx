@@ -24,7 +24,7 @@ export const DPP_SCALABLE_ICON_CONTENT = [
     {
         icon: <DataInsights />,
         title: 'Data Insights',
-        body: 'into a product’s carbon footprint and sustainability, which can be used to develop new use cases and drive informed decision-making across the supply chain.',
+        body: "into a product's carbon footprint and sustainability can be used to drive informed decision-making across supply chains.",
     },
     {
         icon: <RegulatoryAndTechnicalCompliance />,
@@ -44,6 +44,6 @@ export const DPP_SCALABLE_ICON_CONTENT = [
     {
         icon: <ProtocolAgnosticDesign />,
         title: 'Protocol-Agnostic Design',
-        body: 'that supports various blockchain protocols, with IOTA as the preferred DLT stack, ensuring flexibility and broad compatibility.',
+        body: 'supports various blockchain protocols, with IOTA as the preferred DLT stack, ensuring flexibility and broad compatibility.',
     },
 ];

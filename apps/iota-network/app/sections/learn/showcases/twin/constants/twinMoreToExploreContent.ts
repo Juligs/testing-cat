@@ -1,8 +1,8 @@
 export const TWIN_MORE_TO_EXPLORE_LINKS = [
     {
-        title: 'Demia',
-        subtitle: 'Enabling trust in carbon markets',
-        link: '/learn/showcases/demia',
+        title: 'All Showcases',
+        subtitle: 'Real-world use cases and lighthouse projects',
+        link: '/learn/showcases',
     },
     {
         title: 'MultiKnip',
