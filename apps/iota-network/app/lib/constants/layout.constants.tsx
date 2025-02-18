@@ -262,7 +262,7 @@ export const SOCIAL_LINKS = [
     },
     {
         icon: XSocialIcon,
-        url: 'https://x.com/iotalabs_',
+        url: 'https://x.com/iota',
         isExternal: true,
         arialLabel: 'X',
     },
