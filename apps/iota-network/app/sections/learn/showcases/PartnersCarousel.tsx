@@ -1,6 +1,6 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { InfiniteCarousel } from '@repo/shared/components';
-import { PARTNERS_LOGOS_CAROUSEL } from './constants';
+import { PARTNERS_LOGOS_CAROUSEL } from '@repo/shared/constants';
 
 const TEXT = 'IOTA: A Trusted Partner and Technology of Choice';
 

@@ -1,18 +1,14 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 
-import {
-    CorePageHero,
-    DrivingInnovationAdoption,
-    FocusAreasMoreToExplore,
-    ContactUs,
-} from '@sections';
+import { CorePageHero, DrivingInnovationAdoption, FocusAreasMoreToExplore } from '@sections';
 import {
     RealWorldAssetTokenization,
     TradeAndSupplyChains,
     DigitalIdentity,
     CircularEconomy,
     DecentralizedFinance,
+    ContactUs,
 } from '@repo/shared/sections';
 import {
     FOCUS_AREAS_METADATA_TITLE,

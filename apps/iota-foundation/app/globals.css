@@ -10,3 +10,14 @@ body {
     height: 100%;
     scroll-behavior: smooth;
 }
+/* Important for smooth transitions in the swiper component of InfiniteCarousel*/
+.swiper-container-infinite-loop > .swiper-wrapper {
+    transition-timing-function: linear !important;
+    will-change: transform;
+}
+/* Static Carousel */
+.static-swiper > .swiper-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}

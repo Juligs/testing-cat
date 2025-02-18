@@ -10,12 +10,14 @@ import {
 
 interface LighthouseProjectsProps extends BaseSectionProps {
     showLink?: boolean;
+    animation?: boolean;
 }
 
 export function LighthouseProjects({
     id,
     navbarColorScheme,
     showLink = true,
+    animation = true,
 }: LighthouseProjectsProps) {
     const themeContext = useTheme();
     return (
@@ -48,11 +50,20 @@ export function LighthouseProjects({
                             className="[&>div]:h-full"
                             aria-label="Link to Lighthouse Project"
                         >
-                            <ImageCard
-                                title={data.title}
-                                subtitle={data.subtitle}
-                                animation={data.animation}
-                            />
+                            {animation && (
+                                <ImageCard
+                                    title={data.title}
+                                    subtitle={data.subtitle}
+                                    animation={data.animation}
+                                />
+                            )}
+                            {!animation && (
+                                <ImageCard
+                                    title={data.title}
+                                    subtitle={data.subtitle}
+                                    image={data.image}
+                                />
+                            )}
                         </a>
                     ))}
                 </div>

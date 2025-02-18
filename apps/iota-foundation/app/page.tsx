@@ -7,6 +7,18 @@ import {
     HOMEPAGE_IMAGE,
     HOMEPAGE_URL,
 } from '@lib/constants';
+import {
+    Hero,
+    FoundationStats,
+    OurPurpose,
+    OurFocusAreas,
+    OurPartners,
+    ExploreIota,
+    DLTInnovation,
+    FoundationBlog,
+} from '@sections';
+
+import { Rwa, LighthouseProjects, ContactUs } from '@repo/shared/sections';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = getPageMetadata({
@@ -20,5 +32,19 @@ export const metadata: Metadata = getPageMetadata({
 });
 
 export default function Home() {
-    return <div className="bg-network-primary-60 h-screen"></div>;
+    return (
+        <>
+            <Hero id="hero" />
+            <FoundationStats id="foundation-stats" />
+            <OurPurpose id="our-purpose" />
+            <OurFocusAreas id="our-focus-areas" />
+            <OurPartners id="our-partners" />
+            <Rwa id="rwa" />
+            <LighthouseProjects id="lighthouse-projects" animation={false} />
+            <ExploreIota id="explore-iota" />
+            <DLTInnovation id="dlt" />
+            <FoundationBlog id="foundation-blog" />
+            <ContactUs id="contact" />
+        </>
+    );
 }

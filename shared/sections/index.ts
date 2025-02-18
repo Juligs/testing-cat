@@ -14,3 +14,4 @@ export * from './ebsi';
 export * from './kyc';
 export * from './iprm';
 export * from './dpp';
+export * from './contact-us';

@@ -1,7 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
 import { Actions, Button, VerticalTitle } from 'react-ui-kit';
-import { CONTACT_US_TITLE_CONTENT } from './constants';
+import { CONTACT_US_TITLE_CONTENT } from './contactUsContent.constants';
 
 export function ContactUs({ id, navbarColorScheme }: BaseSectionProps) {
     return (
