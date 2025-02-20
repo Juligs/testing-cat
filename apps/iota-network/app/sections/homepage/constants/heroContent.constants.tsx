@@ -4,7 +4,8 @@ import { ButtonVariant, HeroBackground, ScreenSize, TitleTextSize } from 'react-
 
 export const HERO_HOMEPAGE_CONTENT = {
     title: 'Built to Make a Difference',
-    subtitle: 'IOTA is a public blockchain infrastructure to integrate Web3 with the real world',
+    subtitle:
+        'IOTA is a decentralized blockchain infrastructure to build and secure our digital world',
     inverted: true,
     size: TitleTextSize.Medium,
 };

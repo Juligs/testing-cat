@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { HeroLayout, HeroSize, HeroBackground } from '@lib/server-components/organisms';
+import { HeroLayout, HeroType, HeroBackground } from '@lib/server-components/organisms';
 import { ScreenSize } from '@lib/server';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { Viewport } from 'src/storybook/enums';
@@ -14,7 +14,7 @@ const meta: Meta<typeof HeroLayout> = {
         },
     },
     argTypes: {
-        size: getStoryEnumOptions(HeroSize),
+        type: getStoryEnumOptions(HeroType),
     },
 };
 

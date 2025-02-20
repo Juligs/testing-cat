@@ -1,22 +1,21 @@
 'use client';
 import clsx from 'clsx';
-import type { ImageProps } from 'next/image';
 import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 import {
     Button,
     HeroBackground,
     HeroLayout,
-    HeroSize,
+    HeroType,
     TitleTextSize,
     VerticalTitle,
 } from 'react-ui-kit';
-import { TwoColumnsImageTemplate } from '../two-columns-template';
 import { RenderAnchorLinks } from './RenderAnchorLinks';
 import { LinkProps, RenderButtons } from './RenderButtons';
+import { HeroAlignment } from './hero.enums';
 
 interface HeroProps {
     verticalTitle: React.ComponentProps<typeof VerticalTitle>;
-    size?: HeroSize;
+    type?: HeroType;
     anchorLinks?: {
         text: string;
         link?: string;
@@ -26,35 +25,37 @@ interface HeroProps {
     isAnchorLinksMobileInverted?: boolean;
     isAnchorLinksDesktopInverted?: boolean;
     linkComponent?: (props: LinkProps) => React.ReactNode;
-    imageComponent?: (props: ImageProps) => React.ReactNode;
+    image?: string | null;
     buttons?: (React.ComponentProps<typeof Button> & {
         link: string;
         isExternal?: boolean;
     })[];
     background?: React.ComponentProps<typeof HeroBackground>;
-    image?: string;
-    isCentered?: boolean;
+    layout?: HeroAlignment;
 }
 
 export function Hero({
-    size = HeroSize.Large,
+    type = HeroType.Default,
     anchorLinks,
     linkComponent,
-    imageComponent,
+    image,
     buttons,
     isAnchorLinksMobileInverted,
     isAnchorLinksDesktopInverted,
     background,
-    image,
     verticalTitle,
+    layout = HeroAlignment.Centered,
 }: HeroProps): React.JSX.Element {
     const heroRef = useRef<HTMLDivElement>(null);
     const [viewportHeight, setViewportHeight] = useState<number>(0);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
         const updateHeight = () => {
-            const isMobile = window.innerWidth < 712;
-            setViewportHeight(isMobile ? window.screen.height : window.innerHeight);
+            const isMobileNow = window.innerWidth < 712;
+            setIsMobile(isMobileNow);
+            setViewportHeight(isMobileNow ? window.screen.height : window.innerHeight);
         };
 
         updateHeight();
@@ -68,7 +69,6 @@ export function Hero({
         };
     }, []);
 
-    const rounded = size === HeroSize.Large && anchorLinks ? 'rounded-b-4xl sm:rounded-b-none' : '';
     const Link = linkComponent
         ? linkComponent
         : ({ href, children, ...rest }: PropsWithChildren<LinkProps>) => (
@@ -77,73 +77,61 @@ export function Hero({
               </a>
           );
 
-    const { isCentered = true, size: verticalTitleSize, ...verticalTitleProps } = verticalTitle;
-    const verticalTitleWitdh = size === HeroSize.ExtraLarge ? 'w-full xs:max-w-[780px]' : 'w-full';
+    const { size: verticalTitleSize, ...verticalTitleProps } = verticalTitle;
 
-    const mainContainer = 'w-full flex flex-col justify-center items-center';
-    const isTwoColumns = image ? '' : 'sm:max-w-3xl xl:max-w-5xl';
     const textSize = verticalTitleSize
         ? verticalTitleSize
-        : image
-          ? TitleTextSize.Medium || size === HeroSize.ExtraLarge
-              ? TitleTextSize.Large
-              : TitleTextSize.Medium
-          : size === HeroSize.Large || size === HeroSize.ExtraLarge
-            ? TitleTextSize.Large
-            : TitleTextSize.Medium;
+        : type === HeroType.Large
+          ? TitleTextSize.Large
+          : TitleTextSize.Medium;
+
+    const isCenteredClass =
+        layout === HeroAlignment.Left
+            ? 'grid grid-cols-1 sm:grid-cols-2'
+            : 'flex flex-row justify-center xs:max-w-[780px] md:max-w-[900px]';
 
     return (
         <>
             <div
                 ref={heroRef}
                 style={{
-                    minHeight: viewportHeight ? `${viewportHeight}px` : '100vh',
+                    minHeight:
+                        type === HeroType.Large || isMobile
+                            ? viewportHeight
+                                ? `${viewportHeight}px`
+                                : '100vh'
+                            : '820px',
                 }}
-                className={clsx(mainContainer)}
+                className="w-full flex flex-col justify-center items-center"
             >
-                <HeroLayout hasGradientBackground={!background} size={size}>
-                    {background && <HeroBackground {...background} className={rounded} />}
-                    <div className={clsx(isTwoColumns)}>
-                        {image ? (
-                            <TwoColumnsImageTemplate
-                                image={image}
-                                imageComponent={imageComponent}
-                                reverse
-                            >
-                                <div className="w-full sm:pr-[92px] lg:pr-[102px] items-start">
-                                    <VerticalTitle
-                                        {...verticalTitleProps}
-                                        size={textSize}
-                                        isCentered={isCentered}
-                                    >
-                                        {buttons && <RenderButtons buttons={buttons} Link={Link} />}
-                                    </VerticalTitle>
-                                </div>
-                            </TwoColumnsImageTemplate>
-                        ) : (
-                            <div className={clsx(verticalTitleWitdh)}>
-                                <VerticalTitle
-                                    {...verticalTitleProps}
-                                    size={textSize}
-                                    isCentered={isCentered}
-                                >
-                                    {buttons && <RenderButtons buttons={buttons} Link={Link} />}
-                                </VerticalTitle>
-                            </div>
-                        )}
-                        {anchorLinks && (
-                            <div className="hidden sm:flex absolute container bottom-0 left-1/2 -translate-x-1/2">
-                                <div className="flex gap-6 justify-center items-center w-full py-6">
-                                    <RenderAnchorLinks
-                                        anchorLinks={anchorLinks}
-                                        Link={Link}
-                                        inverted={isAnchorLinksDesktopInverted}
-                                        className="w-full"
-                                    />
-                                </div>
+                <HeroLayout hasGradientBackground={!background} type={type}>
+                    {background && <HeroBackground {...background} />}
+                    <div className={clsx('gap-10 xs:gap-6 w-full items-center', isCenteredClass)}>
+                        <VerticalTitle
+                            {...verticalTitleProps}
+                            size={textSize}
+                            isCentered={layout === HeroAlignment.Centered}
+                        >
+                            {buttons && <RenderButtons buttons={buttons} Link={Link} />}
+                        </VerticalTitle>
+                        {image && layout === HeroAlignment.Left && (
+                            <div className="w-full aspect-[4/3] items-center flex">
+                                <img src={image} alt="Hero Image" width={708} height="auto" />
                             </div>
                         )}
                     </div>
+                    {anchorLinks && (
+                        <div className="hidden sm:flex absolute container bottom-0 left-1/2 -translate-x-1/2">
+                            <div className="flex gap-6 justify-center items-center w-full py-6">
+                                <RenderAnchorLinks
+                                    anchorLinks={anchorLinks}
+                                    Link={Link}
+                                    inverted={isAnchorLinksDesktopInverted}
+                                    className="w-full"
+                                />
+                            </div>
+                        </div>
+                    )}
                 </HeroLayout>
             </div>
 

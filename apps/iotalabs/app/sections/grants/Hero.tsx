@@ -9,6 +9,7 @@ import {
     HERO_GRANTS_BG,
 } from '@lib/constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
+import { HeroType } from 'react-ui-kit';
 
 export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -20,6 +21,7 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
                 buttons={HERO_GRANTS_BUTTON}
                 linkComponent={Link}
                 isAnchorLinksDesktopInverted
+                type={HeroType.Large}
             />
         </section>
     );

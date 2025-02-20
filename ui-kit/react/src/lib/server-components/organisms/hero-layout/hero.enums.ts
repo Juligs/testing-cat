@@ -1,5 +1,4 @@
-export enum HeroSize {
+export enum HeroType {
     Default = 'default',
     Large = 'large',
-    ExtraLarge = 'extraLarge',
 }

@@ -1,7 +1,6 @@
-import { Hero as HeroComponent } from '@repo/shared/components';
+import { HeroAlignment, Hero as HeroComponent } from '@repo/shared/components';
 import { KYC_HOMEPAGE_CONTENT } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import { HeroSize } from 'react-ui-kit';
 
 export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -9,7 +8,7 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
             <HeroComponent
                 verticalTitle={KYC_HOMEPAGE_CONTENT}
                 image="/shared/showcases/tokenized_kyc.png"
-                size={HeroSize.ExtraLarge}
+                layout={HeroAlignment.Left}
             />
         </section>
     );
