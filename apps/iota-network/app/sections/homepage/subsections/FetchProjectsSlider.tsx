@@ -1,12 +1,14 @@
 'use client';
-import { checkInvalidImageUrlsAndRevalidate } from '@repo/shared/utils';
+import {
+    CardShowcase,
+    checkInvalidImageUrlsAndRevalidate,
+    revalidateInfraAPI,
+} from '@repo/shared/utils';
 import { useEffect, useState } from 'react';
-import { CardShowcase } from '@lib/airtable';
-import { ProjectsData } from './ProjectsData';
-import { ProjectsSkeleton } from '@sections/skeletons';
-import { revalidateInfraAPI } from '@lib/airtable/revalidate';
+import { SliderImageCardSkeleton } from '@repo/shared/components';
+import { ProjectsSlider } from './ProjectsSlider';
 
-export function FetchProjectsData() {
+export function FetchProjectsSlider() {
     const [dataProjects, setDataProjects] = useState<CardShowcase[] | undefined>(undefined);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -33,7 +35,7 @@ export function FetchProjectsData() {
                 }
             } catch (error) {
                 console.error(
-                    'Error fetching infra slider data from Airtable (FetchProjectsData):',
+                    'Error fetching infra slider data from Airtable (FetchProjectsSlider):',
                     error,
                 );
             } finally {
@@ -44,15 +46,15 @@ export function FetchProjectsData() {
     }, []);
 
     const fetchInfraData = async () => {
-        const res = await fetch('/api/projects');
+        const res = await fetch('/api/projects?useWebsitePosition=true');
         return (await res.json()) as CardShowcase[];
     };
 
     return isLoading || !dataProjects?.length ? (
-        <ProjectsSkeleton />
+        <SliderImageCardSkeleton />
     ) : (
         <div className="flex flex-col gap-12">
-            <ProjectsData data={dataProjects} />
+            <ProjectsSlider data={dataProjects} />
         </div>
     );
 }

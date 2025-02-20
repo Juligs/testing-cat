@@ -1,6 +1,6 @@
-import { GrantsCarouselSkeleton } from '@repo/shared/components';
+import { SliderImageCardSkeleton } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import { FetchGrantsSliderData } from '@repo/shared/sections';
+import { FetchProjectsSlider } from './subsections';
 import { Suspense } from 'react';
 import { Actions, TextLink, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 
@@ -20,8 +20,8 @@ export function EcosystemProjects({ id, navbarColorScheme }: BaseSectionProps) {
                         </Actions>
                     </a>
                 </VerticalTitle>
-                <Suspense fallback={<GrantsCarouselSkeleton />}>
-                    <FetchGrantsSliderData itemsToShow={3} />
+                <Suspense fallback={<SliderImageCardSkeleton />}>
+                    <FetchProjectsSlider />
                 </Suspense>
             </div>
         </section>

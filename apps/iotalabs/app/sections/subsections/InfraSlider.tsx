@@ -8,7 +8,7 @@ import { Swiper as SwiperCore } from 'swiper/types';
 import { Scrollbar, A11y, Pagination } from 'swiper/modules';
 import { SliderNavigation } from '@repo/shared/components';
 import { SWIPER_BREAKPOINTS, SPACE_BETWEEN_SLIDES } from '@repo/shared/constants';
-import { CardShowcase } from '@lib/airtable';
+import { CardShowcase } from '@repo/shared/utils';
 import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/pagination';

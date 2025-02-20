@@ -2,7 +2,7 @@ import { FieldSet, Records } from 'airtable';
 import { ComponentProps } from 'react';
 import { ImageCard } from 'react-ui-kit';
 
-export type CardShowcase = Card & { category: string[]; link: string };
+export type CardShowcase = Card & { category: string[]; link: string; websitePosition?: number };
 type Card = Omit<ComponentProps<typeof ImageCard>, 'elevated' | 'inverted' | 'size'>;
 
 type InfraFields = {
@@ -11,6 +11,7 @@ type InfraFields = {
     Name: string;
     websiteDescription?: string;
     websiteImage?: { url: string }[];
+    websitePosition?: number;
 };
 
 interface SanitizeOptions {
@@ -18,7 +19,7 @@ interface SanitizeOptions {
     placeholderImageUrl?: string;
 }
 
-export async function sanitizeInfraData(
+export async function sanitizeEcosystemProjectsData(
     data: Records<FieldSet>,
     { allowedCategories, placeholderImageUrl = '/homepage/placeholder_image.svg' }: SanitizeOptions,
 ): Promise<CardShowcase[]> {
@@ -43,6 +44,7 @@ export async function sanitizeInfraData(
                     normalizedCategories.has(c.toLowerCase()),
                 ),
                 image: record.websiteImage?.[0]?.url ?? placeholderImageUrl,
+                ...(record.websitePosition ? { websitePosition: record.websitePosition } : {}),
             };
         });
 }

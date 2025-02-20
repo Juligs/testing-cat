@@ -1,6 +1,9 @@
-import { getDataFromAirtable } from '@repo/shared/utils';
+import {
+    getDataFromAirtable,
+    sanitizeEcosystemProjectsData,
+    type CardShowcase,
+} from '@repo/shared/utils';
 import { NextResponse } from 'next/server';
-import { sanitizeInfraData, type CardShowcase } from '../../lib/airtable';
 import { INFRA_ALLOWED_CATEGORIES } from '../../lib/constants';
 
 export const dynamic = 'force-dynamic';
@@ -35,7 +38,9 @@ const fetchData: () => Promise<CardShowcase[]> = async () => {
             return [];
         }
 
-        return sanitizeInfraData(filteredData, { allowedCategories: INFRA_ALLOWED_CATEGORIES });
+        return sanitizeEcosystemProjectsData(filteredData, {
+            allowedCategories: INFRA_ALLOWED_CATEGORIES,
+        });
     } catch (error) {
         console.error('Error in fetchInfraData:', error);
         return [];

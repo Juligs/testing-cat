@@ -4,12 +4,12 @@ import {
     checkInvalidImageUrlsAndRevalidate,
     revalidateInfraAPI,
 } from '@repo/shared/utils';
-import { InfrastructureCarouselSkeleton } from '@sections/skeletons';
 import { useEffect, useState } from 'react';
-import { InfraSlider } from './InfraSlider';
+import { ProjectsSkeleton } from '../skeletons';
+import { ProjectsData } from './ProjectsData';
 
-export function FetchInfraSliderData() {
-    const [dataInfraSlider, setDataInfraSlider] = useState<CardShowcase[] | undefined>(undefined);
+export function FetchProjectsData() {
+    const [dataProjects, setDataProjects] = useState<CardShowcase[] | undefined>(undefined);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -17,11 +17,11 @@ export function FetchInfraSliderData() {
             setIsLoading(true);
             try {
                 const fetchedData = await fetchInfraData();
-                const imageUrls = fetchedData
+                const validImageUrls = fetchedData
                     .map(({ image }) => image)
                     .filter((image): image is string => Boolean(image));
                 const refreshedDataWithoutCache = await checkInvalidImageUrlsAndRevalidate(
-                    imageUrls,
+                    validImageUrls,
                     fetchInfraData,
                     revalidateInfraAPI,
                 );
@@ -29,13 +29,13 @@ export function FetchInfraSliderData() {
                 // and the revalidated data is available, then set the revalidated data
                 // else set the original fetched data
                 if (refreshedDataWithoutCache) {
-                    setDataInfraSlider(refreshedDataWithoutCache);
+                    setDataProjects(refreshedDataWithoutCache);
                 } else {
-                    setDataInfraSlider(fetchedData);
+                    setDataProjects(fetchedData);
                 }
             } catch (error) {
                 console.error(
-                    'Error fetching infra slider data from Airtable (FetchInfraSliderData):',
+                    'Error fetching infra slider data from Airtable (FetchProjectsData):',
                     error,
                 );
             } finally {
@@ -46,15 +46,15 @@ export function FetchInfraSliderData() {
     }, []);
 
     const fetchInfraData = async () => {
-        const res = await fetch('/api/infra');
+        const res = await fetch('/api/projects');
         return (await res.json()) as CardShowcase[];
     };
 
-    return isLoading || !dataInfraSlider?.length ? (
-        <InfrastructureCarouselSkeleton />
+    return isLoading || !dataProjects?.length ? (
+        <ProjectsSkeleton />
     ) : (
         <div className="flex flex-col gap-12">
-            <InfraSlider data={dataInfraSlider} />
+            <ProjectsData data={dataProjects} />
         </div>
     );
 }

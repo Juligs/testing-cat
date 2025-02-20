@@ -3,3 +3,7 @@ import { revalidatePath } from 'next/cache';
 export async function revalidateGrantsAPI() {
     return revalidatePath('/api/grants');
 }
+
+export async function revalidateInfraAPI() {
+    return revalidatePath('/api/infra');
+}

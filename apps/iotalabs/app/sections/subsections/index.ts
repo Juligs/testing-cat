@@ -1,3 +1,5 @@
 export * from './InfraSlider';
 export * from './FetchInfraSliderData';
-export * from './projects';
+
+export * from './ProjectsData';
+export * from './FetchProjectsData';

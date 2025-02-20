@@ -1,7 +1,9 @@
 import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { FetchProjectsData } from '@sections/subsections/projects';
+import { ProjectsSkeleton } from '@sections/skeletons';
+import { FetchProjectsData } from '@sections/subsections';
 import { BaseSectionProps } from '@repo/shared/interfaces';
+import { Suspense } from 'react';
 
 export function Projects({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -21,7 +23,9 @@ export function Projects({ id, navbarColorScheme }: BaseSectionProps) {
                         ></VerticalTitle>
                     </div>
                 </TwoColumnsImageTemplate>
-                <FetchProjectsData />
+                <Suspense fallback={<ProjectsSkeleton />}>
+                    <FetchProjectsData />
+                </Suspense>
             </div>
         </section>
     );
