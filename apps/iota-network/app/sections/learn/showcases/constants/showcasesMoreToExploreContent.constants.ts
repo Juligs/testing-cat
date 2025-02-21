@@ -5,7 +5,7 @@ export const SHOWCASES_MORE_TO_EXPLORE_CONTENT = [
         link: '/learn/focus-areas',
     },
     {
-        title: 'Why IOTA',
+        title: 'Why IOTA?',
         subtitle: 'Public blockchain infrastructure that integrates Web3 with the real world',
         link: '/learn/intro',
     },

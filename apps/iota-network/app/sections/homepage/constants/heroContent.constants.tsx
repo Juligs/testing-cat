@@ -20,7 +20,7 @@ export const HERO_HOMEPAGE_BUTTON = [
         isExternal: true,
     },
     {
-        text: 'What is IOTA',
+        text: 'What is IOTA?',
         link: '/learn/intro',
         variant: ButtonVariant.Secondary,
         icon: <ArrowTopRight />,

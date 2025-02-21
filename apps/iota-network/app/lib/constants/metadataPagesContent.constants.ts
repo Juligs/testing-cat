@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://iota-network-iota1.vercel.app';
+export const BASE_URL = 'https://iota-network-902916be04021d5ebb0e6b550fc23d62-iota1.vercel.app';
 
 export const HOMEPAGE_METADATA_TITLE =
     'IOTA | Bringing the Real World to Web3 with Scalable Blockchain Solutions';
@@ -53,7 +53,7 @@ export const INTRO_KEYWORDS = [
     'IOTA ecosystem',
     'open-source blockchain',
     'real-world blockchain applications',
-    'why IOTA',
+    'why IOTA?',
     'technology innovation',
     'future of blockchain',
 ];
