@@ -1,13 +1,10 @@
 export const BASE_URL = 'https://iota-network-902916be04021d5ebb0e6b550fc23d62-iota1.vercel.app';
 
-export const HOMEPAGE_METADATA_TITLE =
-    'IOTA | Bringing the Real World to Web3 with Scalable Blockchain Solutions';
+export const HOMEPAGE_METADATA_TITLE = 'IOTA | Built to Make a Difference';
 export const HOMEPAGE_METADATA_DESCRIPTION =
-    "Explore IOTA's open-source distributed ledger technology powering Web3 with real-world applications. Discover solutions for digital identity, sustainability, supply chains, and decentralized finance.";
-export const HOMEPAGE_METADATA_TITLE_X =
-    'IOTA | Bringing the Real World to Web3 with Scalable Blockchain Solutions';
+    'IOTA is a decentralized blockchain infrastructure to build and secure our digital world. Discover solutions for digital identity, sustainability, supply chains, and decentralized finance.';
 export const HOMEPAGE_METADATA_DESCRIPTION_X =
-    "Explore IOTA's distributed ledger technology for Web3. Discover real-world blockchain solutions for sustainability, identity, and more.";
+    "Explore IOTA's decentralized blockchain infrastructure to build and secure our digital world. Discover solutions for sustainability, identity, and more.";
 export const HOMEPAGE_KEYWORDS = [
     'IOTA',
     'blockchain',
@@ -35,8 +32,6 @@ export const INTRO_METADATA_TITLE =
     'What is IOTA? | Build Cutting-Edge Blockchain Technology for the Real World';
 export const INTRO_METADATA_DESCRIPTION =
     "Learn about IOTA's cutting-edge distributed ledger technology. Explore how IOTA enables secure, scalable, and sustainable blockchain solutions for Web3 and real-world applications.";
-export const INTRO_METADATA_TITLE_X =
-    'What is IOTA? | Build Cutting-Edge Blockchain Technology for the Real World';
 export const INTRO_METADATA_DESCRIPTION_X =
     "Explore how IOTA's innovative distributed ledger technology enables secure, scalable, and sustainable blockchain applications.";
 export const INTRO_KEYWORDS = [
@@ -64,8 +59,6 @@ export const FOCUS_AREAS_METADATA_TITLE =
     "Focus Areas | Explore IOTA's Focus Areas for Blockchain Innovation";
 export const FOCUS_AREAS_METADATA_DESCRIPTION =
     "Discover IOTA's core domains, including asset tokenization, trade & supply chains, digital identity, circular economy, and decentralized finance. Learn how we leverage DLT to address business challenges.";
-export const FOCUS_AREAS_METADATA_TITLE_X =
-    "Core Domains | Explore IOTA's Focus Areas for Blockchain Innovation";
 export const FOCUS_AREAS_METADATA_DESCRIPTION_X =
     'Explore how IOTA drives innovation in blockchain with core domains like asset tokenization, digital identity, supply chains, and decentralized finance.';
 export const FOCUS_AREAS_KEYWORDS = [
@@ -93,8 +86,6 @@ export const SHOWCASES_METADATA_TITLE =
     'IOTA Technology Showcases | Real-World Applications Built on Blockchain Innovation';
 export const SHOWCASES_METADATA_DESCRIPTION =
     "Explore IOTA's Technology Showcases, featuring real-world applications co-created with leading companies and institutions. From blockchain innovation to sustainability, discover solutions driving digital transformation.";
-export const SHOWCASES_METADATA_TITLE_X =
-    'IOTA Technology Showcases | Real-World Applications Built on Blockchain Innovation';
 export const SHOWCASES_METADATA_DESCRIPTION_X =
     "Explore IOTA's showcase of blockchain-powered real-world applications. From digital identity to sustainability, see the solutions shaping the future.";
 export const SHOWCASES_KEYWORDS = [
@@ -124,8 +115,6 @@ export const EBSI_METADATA_TITLE =
     'European Blockchain Pre-Commercial Procurement | IOTA Technology Showcase';
 export const EBSI_METADATA_DESCRIPTION =
     "Explore IOTA's scalable solutions for Europe's blockchain future. Developed in collaboration with partners for the European Blockchain PCP, funded by the European Commission. Discover innovations in data management, sustainability, interoperability, and more.";
-export const EBSI_METADATA_TITLE_X =
-    'European Blockchain Pre-Commercial Procurement | IOTA Technology Showcase';
 export const EBSI_METADATA_DESCRIPTION_X =
     "Discover IOTA's role in building a pan-European blockchain ecosystem. Innovative solutions for sustainability, scalability, and interoperability.";
 
@@ -151,8 +140,6 @@ export const IPRM_METADATA_TITLE =
     'Intellectual Property Rights Management | IOTA Technology Showcase';
 export const IPRM_METADATA_DESCRIPTION =
     "Discover IOTA's innovative approach to automated and transparent rights contracts and payments. Using DLT, smart contracts, and NFTs, this solution simplifies intellectual property rights management for fair and transparent transactions.";
-export const IPRM_METADATA_TITLE_X =
-    'Intellectual Property Rights Management | IOTA Technology Showcase';
 export const IPRM_METADATA_DESCRIPTION_X =
     "Simplify intellectual property rights management with IOTA's innovative blockchain solutions. Learn how automated contracts and NFTs enhance transparency and fairness.";
 
@@ -180,8 +167,6 @@ export const KYC_METADATA_TITLE =
     'Tokenized KYC - Privacy-Preserving On-Chain Authentication | IOTA Technology Showcase';
 export const KYC_METADATA_DESCRIPTION =
     "Explore IOTA's Tokenized KYC solution for privacy-preserving on-chain authentication. Reduce fraud risks, ensure regulatory compliance, and enhance Web3 user experiences with secure and decentralized identity verification.";
-export const KYC_METADATA_TITLE_X =
-    'Tokenized KYC - Privacy-Preserving On-Chain Authentication | IOTA Technology Showcase';
 export const KYC_METADATA_DESCRIPTION_X =
     "Simplify and secure identity verification with IOTA's Tokenized KYC solution. Built for Web3, this privacy-preserving approach ensures compliance and user security.";
 
@@ -213,8 +198,6 @@ export const DPP_METADATA_TITLE =
     'Digital Product Passports - Secure Product Lifecycle Data for a Circular Economy | IOTA Technology Showcase';
 export const DPP_METADATA_DESCRIPTION =
     "Discover IOTA's Digital Product Passports (DPPs) for secure and transparent product lifecycle data. Support recycling, reuse, and compliance with environmental regulations to drive a circular economy.";
-export const DPP_METADATA_TITLE_X =
-    'Digital Product Passports - Secure Product Lifecycle Data for a Circular Economy | IOTA Technology Showcase';
 export const DPP_METADATA_DESCRIPTION_X =
     'IOTA introduces Digital Product Passports for a sustainable circular economy. Learn how blockchain empowers product traceability and compliance.';
 
@@ -247,8 +230,6 @@ export const MULTIKNIP_METADATA_TITLE =
     'MultiKnip - Using Digital Tokens to Drive Purpose, Value, and Change | IOTA Technology Showcase';
 export const MULTIKNIP_METADATA_DESCRIPTION =
     'Explore MultiKnip, an IOTA-powered digital wallet for incentivizing social initiatives. Promote sustainability, social inclusion, and economic growth with privacy-preserving digital tokens.';
-export const MULTIKNIP_METADATA_TITLE_X =
-    'MultiKnip - Using Digital Tokens to Drive Purpose, Value, and Change | IOTA Technology Showcase';
 export const MULTIKNIP_METADATA_DESCRIPTION_X =
     'Learn how MultiKnip and IOTA enable privacy-preserving digital wallets for social impact, sustainability, and local economic development.';
 export const MULTIKNIP_KEYWORDS = [
@@ -277,8 +258,6 @@ export const TWIN_METADATA_TITLE =
     'TWIN - Seamless Transfer of Digital Trade Data Across Borders | IOTA Technology Showcase';
 export const TWIN_METADATA_DESCRIPTION =
     'Discover TWIN, an IOTA-powered digital platform enabling global supply chain participants to securely share and access trade data. Reduce costs, enhance efficiency, and foster transparency in international trade.';
-export const TWIN_METADATA_TITLE_X =
-    'TWIN - Seamless Transfer of Digital Trade Data Across Borders | IOTA Technology Showcase';
 export const TWIN_METADATA_DESCRIPTION_X =
     'Enhance cross-border trade efficiency with TWIN, an IOTA-based solution for secure and transparent global trade data sharing.';
 export const TWIN_KEYWORDS = [

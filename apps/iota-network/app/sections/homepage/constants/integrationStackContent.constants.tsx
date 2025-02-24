@@ -9,7 +9,7 @@ export const INTEGRATION_STACK_VERTICAL_TITLE_CONTENT = {
 export const INTEGRATION_STACK_CTA_CARD_CONTENT = [
     {
         title: 'IOTA Mainnet',
-        subtitle: 'Move-based Layer 1',
+        subtitle: 'Move-based Layer 1 with object-centric architecture',
         animation: <Animation src="/homepage/integration-stack/cta-animation/tangle.json" />,
         link: 'https://docs.iota.org/about-iota#layer-1',
     },
