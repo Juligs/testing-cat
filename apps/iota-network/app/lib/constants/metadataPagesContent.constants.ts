@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://iota-network-902916be04021d5ebb0e6b550fc23d62-iota1.vercel.app';
+export const BASE_URL = 'https://www.iota.org';
 
 export const HOMEPAGE_METADATA_TITLE = 'IOTA | Built to Make a Difference';
 export const HOMEPAGE_METADATA_DESCRIPTION =
