@@ -14,7 +14,9 @@ export function TwoColumnsImageTemplate({
     children,
     imageComponent,
 }: React.PropsWithChildren<TwoColumnsImageTemplateProps>) {
-    const REVERSED_CLASS = reverse ? 'flex-col xs:flex-row' : 'flex-col-reverse xs:flex-row';
+    const REVERSED_CLASS = reverse
+        ? 'flex-col-reverse xs:flex-row-reverse'
+        : 'flex-col-reverse xs:flex-row';
     const Image = imageComponent || 'img';
     return (
         <div

@@ -8,6 +8,14 @@ export const HOMEPAGE_KEYWORDS = [];
 export const HOMEPAGE_URL = BASE_URL;
 export const HOMEPAGE_IMAGE = '';
 
+export const PURPOSE_METADATA_TITLE = '';
+export const PURPOSE_METADATA_DESCRIPTION = '';
+export const PURPOSE_METADATA_TITLE_X = '';
+export const PURPOSE_METADATA_DESCRIPTION_X = '';
+export const PURPOSE_KEYWORDS = [];
+export const PURPOSE_URL = BASE_URL;
+export const PURPOSE_IMAGE = '';
+
 export const REGULATORY_AFFAIRS_METADATA_TITLE = '';
 export const REGULATORY_AFFAIRS_METADATA_DESCRIPTION = '';
 export const REGULATORY_AFFAIRS_METADATA_TITLE_X = '';
