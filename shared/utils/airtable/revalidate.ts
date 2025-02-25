@@ -1,4 +1,5 @@
 'use server';
+
 import { revalidatePath } from 'next/cache';
 
 export async function revalidateGrantsAPI() {
@@ -7,4 +8,8 @@ export async function revalidateGrantsAPI() {
 
 export async function revalidateInfraAPI() {
     return revalidatePath('/api/infra');
+}
+
+export async function revalidateProjectsAPI() {
+    return revalidatePath('/api/projects');
 }

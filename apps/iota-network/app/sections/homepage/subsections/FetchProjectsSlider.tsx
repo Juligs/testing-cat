@@ -2,7 +2,7 @@
 import {
     CardShowcase,
     checkInvalidImageUrlsAndRevalidate,
-    revalidateInfraAPI,
+    revalidateProjectsAPI,
 } from '@repo/shared/utils';
 import { useEffect, useState } from 'react';
 import { SliderImageCardSkeleton } from '@repo/shared/components';
@@ -23,7 +23,7 @@ export function FetchProjectsSlider() {
                 const refreshedDataWithoutCache = await checkInvalidImageUrlsAndRevalidate(
                     validImageUrls,
                     fetchInfraData,
-                    revalidateInfraAPI,
+                    revalidateProjectsAPI,
                 );
                 // If there was some error in the cached fetched data which then needed to be revalidated
                 // and the revalidated data is available, then set the revalidated data

@@ -1,4 +1,5 @@
-import { getDataFromAirtable, sanitizeGrantsData, type GrantsCardData } from '..';
+import { getDataFromAirtable } from './getDataFromAirtable';
+import { sanitizeGrantsData, type GrantsCardData } from './sanitizeGrantsData';
 
 const GRANTS_AIRTABLE_VIEW_NAME = 'iotalabs applications';
 const AIRTABLE_BASE_NAME = 'Applications';
