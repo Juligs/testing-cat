@@ -295,6 +295,6 @@ export const LEGAL_ROUTES: Route[] = [
 
 export const COMPANY_DATA = {
     address:
-        'IOTA Ecosystem DLT Foundation, registered office: Tamouh Tower, Office 7, 13th Floor, Tamouh, Al Reem Island, Abu Dhabi, UAE. ',
+        'IOTA Ecosystem DLT Foundation, registered office: Office No. 1301 & 1302, Floor 13, Tamouh Tower, Tamouh, Al Reem Island, Abu Dhabi, UAE.',
     email: 'contact@iotadlt.foundation',
 };

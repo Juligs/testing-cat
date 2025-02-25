@@ -22,11 +22,11 @@ export function DecentralizedFinance({ id, navbarColorScheme }: BaseSectionProps
                             <Actions>
                                 <a
                                     href={getSharedSectionLink('/showcases', themeContext?.theme)}
-                                    aria-label="See showcase"
+                                    aria-label="See showcases"
                                 >
                                     <Button
                                         variant={ButtonVariant.Primary}
-                                        text="See showcase"
+                                        text="See showcases"
                                         icon={<ArrowTopRight />}
                                     />
                                 </a>
