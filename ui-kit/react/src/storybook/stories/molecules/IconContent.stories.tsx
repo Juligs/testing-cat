@@ -40,3 +40,18 @@ export const IconContentFilled: Story = {
         </div>
     ),
 };
+
+export const IconContentSmall: Story = {
+    render: (args) => (
+        <div className="max-w-xs">
+            <IconContentComponent
+                {...args}
+                icon={<Placeholder />}
+                title="Title"
+                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id diam vitae lectus lobortis vehicula eget nec neque. Nam nec ultricies neque, vel mattis diam. Integer commodo elit eu ornare tristique."
+                filled
+                small
+            ></IconContentComponent>
+        </div>
+    ),
+};

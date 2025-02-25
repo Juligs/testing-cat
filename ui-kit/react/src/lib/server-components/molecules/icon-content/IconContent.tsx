@@ -35,6 +35,10 @@ interface iconContentProps {
      * children
      */
     children?: React.ReactNode;
+    /**
+     *  Filled small
+     */
+    small?: boolean;
 }
 
 export function IconContent({
@@ -44,6 +48,7 @@ export function IconContent({
     inverted = false,
     filled = false,
     children,
+    small,
 }: iconContentProps): JSX.Element {
     const iconColor = inverted ? COLOR_ICON_INVERTED : COLOR_ICON;
     const bgColors = filled ? (inverted ? BG_COLOR_INVERTED : BG_COLOR_FILLED) : inverted ? '' : '';
@@ -52,10 +57,13 @@ export function IconContent({
 
     return (
         <div
-            className={clsx('flex flex-col items-start gap-6 w-full rounded-3xl', bgColors, {
-                'min-h-[455px] justify-between pl-4 pr-6 pt-6 pb-8': filled && children,
-                'pl-4 pr-6 pt-6 pb-8': filled && !children,
-            })}
+            className={clsx(
+                'flex flex-col items-start gap-6 w-full rounded-3xl pl-4 pr-6 pt-6 pb-8',
+                bgColors,
+                {
+                    'min-h-[455px] justify-between': filled && children && !small,
+                },
+            )}
         >
             <div className="flex flex-col gap-4 ">
                 {icon && <div className={clsx('[&_svg]:h-12 [&_svg]:w-12', iconColor)}>{icon}</div>}
