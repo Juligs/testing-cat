@@ -31,3 +31,11 @@ export const FOCUS_AREAS_METADATA_DESCRIPTION_X = '';
 export const FOCUS_AREAS_KEYWORDS = [];
 export const FOCUS_AREAS_URL = BASE_URL;
 export const FOCUS_AREAS_IMAGE = '';
+
+export const SHOWCASES_METADATA_TITLE = '';
+export const SHOWCASES_METADATA_DESCRIPTION = '';
+export const SHOWCASES_METADATA_TITLE_X = '';
+export const SHOWCASES_METADATA_DESCRIPTION_X = '';
+export const SHOWCASES_KEYWORDS = [];
+export const SHOWCASES_URL = BASE_URL;
+export const SHOWCASES_IMAGE = '';

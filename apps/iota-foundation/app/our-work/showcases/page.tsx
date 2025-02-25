@@ -18,7 +18,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: SHOWCASES_KEYWORDS,
     image: SHOWCASES_IMAGE,
     url: SHOWCASES_URL,
-    path: '/learn/showcases',
+    path: '/our-work/showcases',
 });
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
             <ShowcasesPageHero id="hero" navbarColorScheme="inverted" />
             <PartnersCarousel id="partners" />
             <Rwa id="rwa" showLink={false} />
-            <LighthouseProjects id="lighthouse-projects" showLink={false} />
+            <LighthouseProjects id="lighthouse-projects" showLink={false} animation={false} />
             <TeamContactCTA id="team-contact-CTA" />
             <ShowcasesMoreToExplore id="explore" />
         </>
