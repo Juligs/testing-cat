@@ -46,7 +46,7 @@ export function FetchInfraSliderData() {
     }, []);
 
     const fetchInfraData = async () => {
-        const res = await fetch('/api/infra');
+        const res = await fetch('/api/infra?ignore-cache=true');
         return (await res.json()) as CardShowcase[];
     };
 

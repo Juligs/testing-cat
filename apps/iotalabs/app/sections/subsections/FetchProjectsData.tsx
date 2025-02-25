@@ -46,7 +46,7 @@ export function FetchProjectsData() {
     }, []);
 
     const fetchInfraData = async () => {
-        const res = await fetch('/api/projects');
+        const res = await fetch('/api/projects?ignore-cache=true');
         return (await res.json()) as CardShowcase[];
     };
 

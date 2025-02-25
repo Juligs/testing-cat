@@ -52,7 +52,7 @@ export function FetchGrantsSliderData({ itemsToShow = 6, inverted }: FetchGrants
     }, []);
 
     const fetchGrantsData = async () => {
-        const res = await fetch('/api/grants');
+        const res = await fetch('/api/grants?ignore-cache=true');
         return (await res.json()) as GrantsCardData[];
     };
 
