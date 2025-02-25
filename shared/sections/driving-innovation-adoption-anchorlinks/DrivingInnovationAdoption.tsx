@@ -1,7 +1,7 @@
 'use client';
-import { BaseSectionProps } from '@repo/shared/interfaces';
-import { VerticalTitleWithAnchorLinks } from '@repo/shared/components';
-import { DRIVING_INNOVATION_ADOPTION_ANCHORLINKS } from './constants';
+import { VerticalTitleWithAnchorLinks } from '../../components';
+import { BaseSectionProps } from '../../interfaces';
+import { DRIVING_INNOVATION_ADOPTION_ANCHORLINKS } from './drivingInnovationAdoptionContent.constants';
 
 export function DrivingInnovationAdoption({ id, navbarColorScheme }: BaseSectionProps) {
     return (

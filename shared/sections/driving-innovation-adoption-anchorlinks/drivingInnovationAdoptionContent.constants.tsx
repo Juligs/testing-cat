@@ -5,7 +5,7 @@ import {
     IotaIdentity,
     TradeSupplyChain,
 } from '@repo/icons';
-import { scrollToSection } from '@repo/shared/utils';
+import { scrollToSection } from '../../utils';
 
 export const DRIVING_INNOVATION_ADOPTION_ANCHORLINKS = [
     {

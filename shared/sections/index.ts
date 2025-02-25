@@ -15,3 +15,4 @@ export * from './kyc';
 export * from './iprm';
 export * from './dpp';
 export * from './contact-us';
+export * from './driving-innovation-adoption-anchorlinks';

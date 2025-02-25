@@ -25,7 +25,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: FOCUS_AREAS_KEYWORDS,
     image: FOCUS_AREAS_IMAGE,
     url: FOCUS_AREAS_URL,
-    path: '/learn/focus-areas',
+    path: '/our-work/focus-areas',
 });
 
 export default function Home() {
