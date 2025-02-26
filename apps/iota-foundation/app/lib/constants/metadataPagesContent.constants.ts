@@ -55,3 +55,11 @@ export const KYC_METADATA_DESCRIPTION_X = '';
 export const KYC_KEYWORDS = [];
 export const KYC_URL = BASE_URL;
 export const KYC_IMAGE = '';
+
+export const DPP_METADATA_TITLE = '';
+export const DPP_METADATA_DESCRIPTION = '';
+export const DPP_METADATA_TITLE_X = '';
+export const DPP_METADATA_DESCRIPTION_X = '';
+export const DPP_KEYWORDS = [];
+export const DPP_URL = BASE_URL;
+export const DPP_IMAGE = '';
