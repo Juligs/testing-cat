@@ -71,3 +71,11 @@ export const EBSI_METADATA_DESCRIPTION_X = '';
 export const EBSI_KEYWORDS = [];
 export const EBSI_URL = BASE_URL;
 export const EBSI_IMAGE = '';
+
+export const MULTIKNIP_METADATA_TITLE = '';
+export const MULTIKNIP_METADATA_DESCRIPTION = '';
+export const MULTIKNIP_METADATA_TITLE_X = '';
+export const MULTIKNIP_METADATA_DESCRIPTION_X = '';
+export const MULTIKNIP_KEYWORDS = [];
+export const MULTIKNIP_URL = BASE_URL;
+export const MULTIKNIP_IMAGE = '';

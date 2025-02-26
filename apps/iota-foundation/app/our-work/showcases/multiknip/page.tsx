@@ -1,6 +1,5 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-
 import { MultiknipHero, MultiKnipMoreToExplore } from '@sections';
 import {
     MultiKnipContactUs,
@@ -24,7 +23,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: MULTIKNIP_KEYWORDS,
     image: MULTIKNIP_IMAGE,
     url: MULTIKNIP_URL,
-    path: '/learn/showcases/multiknip',
+    path: '/our-work/showcases/multiknip',
 });
 
 export default function Home() {
