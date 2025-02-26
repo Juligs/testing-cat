@@ -39,3 +39,11 @@ export const SHOWCASES_METADATA_DESCRIPTION_X = '';
 export const SHOWCASES_KEYWORDS = [];
 export const SHOWCASES_URL = BASE_URL;
 export const SHOWCASES_IMAGE = '';
+
+export const TWIN_METADATA_TITLE = '';
+export const TWIN_METADATA_DESCRIPTION = '';
+export const TWIN_METADATA_TITLE_X = '';
+export const TWIN_METADATA_DESCRIPTION_X = '';
+export const TWIN_KEYWORDS = [];
+export const TWIN_URL = BASE_URL;
+export const TWIN_IMAGE = '';
