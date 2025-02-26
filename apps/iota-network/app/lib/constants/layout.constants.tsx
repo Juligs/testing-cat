@@ -1,4 +1,4 @@
-import { Route } from '@lib/interfaces';
+import { Route } from '@repo/shared/interfaces';
 import {
     BalanceFinder,
     BlogPost,

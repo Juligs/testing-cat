@@ -1,11 +1,11 @@
 'use client';
 
 import { COMPANY_DATA, LEGAL_ROUTES, ROUTES, SOCIAL_LINKS } from '@lib/constants';
-import { Route } from '@lib/interfaces';
+import { Route } from '@repo/shared/interfaces';
 import { useScreenSize } from '@repo/shared/hooks';
 import Link from 'next/link';
 import { Button, ButtonSize, ButtonVariant, ScreenSize } from 'react-ui-kit';
-import { Logo } from '../logo';
+import { Logo } from '@repo/shared/components';
 import { useState, useEffect } from 'react';
 
 export function Footer() {

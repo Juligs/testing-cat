@@ -1,4 +1,5 @@
-import { Navigation, Footer, CookieDisclaimer } from '@components';
+import { Footer, CookieDisclaimer } from '@components';
+import { Navigation } from '@repo/shared/components';
 import { ROUTES } from '@lib/constants';
 import { Metadata } from 'next';
 import { ContextProviders } from './providers';

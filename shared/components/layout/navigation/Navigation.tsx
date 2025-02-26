@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useCallback, useEffect, useRef } from 'react';
-import { Navbar } from 'react-ui-kit';
-import { Logo } from '../logo';
-import { Route } from '@lib/interfaces';
-import Link from 'next/link';
-import { SectionObserver as IntersectionObserver } from '@repo/shared/components';
 import clsx from 'clsx';
-import { DropdownMenu, MobileNavbarItem, NavbarItems } from '@components/navbar-items';
+import Link from 'next/link';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { Navbar } from 'react-ui-kit';
+import { SectionObserver as IntersectionObserver } from '../../../components';
+import { Route } from '../../../interfaces';
+import { DropdownMenu, MobileNavbarItem, NavbarItemsContainer } from '../../navbar-items';
+import { Logo } from '../logo';
 
 interface NavigationProps {
     items: Route[];
@@ -111,7 +111,7 @@ export function Navigation({ items }: NavigationProps) {
                     )}
                 >
                     <Navbar inverted={isInverted}>
-                        <NavbarItems
+                        <NavbarItemsContainer
                             logo={
                                 <Link
                                     href="/"
@@ -136,6 +136,7 @@ export function Navigation({ items }: NavigationProps) {
                             openDropdown={openDropdown}
                             handleClick={handleClick}
                             handleLinkClick={handleLinkClick}
+                            hasChildren
                         />
                     </Navbar>
 
