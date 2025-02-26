@@ -47,3 +47,11 @@ export const TWIN_METADATA_DESCRIPTION_X = '';
 export const TWIN_KEYWORDS = [];
 export const TWIN_URL = BASE_URL;
 export const TWIN_IMAGE = '';
+
+export const KYC_METADATA_TITLE = '';
+export const KYC_METADATA_DESCRIPTION = '';
+export const KYC_METADATA_TITLE_X = '';
+export const KYC_METADATA_DESCRIPTION_X = '';
+export const KYC_KEYWORDS = [];
+export const KYC_URL = BASE_URL;
+export const KYC_IMAGE = '';
