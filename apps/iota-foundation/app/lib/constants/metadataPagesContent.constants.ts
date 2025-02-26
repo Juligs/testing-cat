@@ -63,3 +63,11 @@ export const DPP_METADATA_DESCRIPTION_X = '';
 export const DPP_KEYWORDS = [];
 export const DPP_URL = BASE_URL;
 export const DPP_IMAGE = '';
+
+export const EBSI_METADATA_TITLE = '';
+export const EBSI_METADATA_DESCRIPTION = '';
+export const EBSI_METADATA_TITLE_X = '';
+export const EBSI_METADATA_DESCRIPTION_X = '';
+export const EBSI_KEYWORDS = [];
+export const EBSI_URL = BASE_URL;
+export const EBSI_IMAGE = '';
