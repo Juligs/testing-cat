@@ -7,7 +7,7 @@ export function IPRMQuotes({ id, navbarColorScheme }: BaseSectionProps) {
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-10 xs:py-12 flex justify-center text-center flex flex-col gap-10 items-center text-darkest">
                 <div className="flex flex-col gap-6 items-center">
-                    <Quotes className="w-16 h-16 text-network-primary-30" />
+                    <Quotes className="w-16 h-16 color-icon-content" />
                     <p className="text-title-md max-w-sm xs:max-w-3xl sm:max-w-lg md:max-w-xl lg:max-w-2xl font-semibold">
                         {IPRM_TITLE_CONTENT}
                     </p>

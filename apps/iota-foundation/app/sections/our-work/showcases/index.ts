@@ -5,3 +5,4 @@ export * from './kyc';
 export * from './dpp';
 export * from './ebsi';
 export * from './multiknip';
+export * from './iprm';

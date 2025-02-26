@@ -79,3 +79,11 @@ export const MULTIKNIP_METADATA_DESCRIPTION_X = '';
 export const MULTIKNIP_KEYWORDS = [];
 export const MULTIKNIP_URL = BASE_URL;
 export const MULTIKNIP_IMAGE = '';
+
+export const IPRM_METADATA_TITLE = '';
+export const IPRM_METADATA_DESCRIPTION = '';
+export const IPRM_METADATA_TITLE_X = '';
+export const IPRM_METADATA_DESCRIPTION_X = '';
+export const IPRM_KEYWORDS = [];
+export const IPRM_URL = BASE_URL;
+export const IPRM_IMAGE = '';
