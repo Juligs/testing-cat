@@ -1,7 +1,7 @@
 import { BlogPost } from '@repo/icons';
 import { TitleTextSize } from 'react-ui-kit';
 
-export const EFFORTS_VERTICAL_TITLE = {
+export const EFFORTS_HORIZONTAL_TITLE = {
     title: 'Latest Regulatory Advocacy ',
     body: 'A selection of our most recent work promoting DLT and blockchain interests in global regulatory matters',
     size: TitleTextSize.Medium,

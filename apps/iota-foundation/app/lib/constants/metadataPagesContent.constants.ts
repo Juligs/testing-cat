@@ -87,3 +87,11 @@ export const IPRM_METADATA_DESCRIPTION_X = '';
 export const IPRM_KEYWORDS = [];
 export const IPRM_URL = BASE_URL;
 export const IPRM_IMAGE = '';
+
+export const OUR_RESEARCH_METADATA_TITLE = '';
+export const OUR_RESEARCH_METADATA_DESCRIPTION = '';
+export const OUR_RESEARCH_METADATA_TITLE_X = '';
+export const OUR_RESEARCH_METADATA_DESCRIPTION_X = '';
+export const OUR_RESEARCH_KEYWORDS = [];
+export const OUR_RESEARCH_URL = BASE_URL;
+export const OUR_RESEARCH_IMAGE = '';
