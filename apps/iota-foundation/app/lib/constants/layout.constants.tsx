@@ -1,5 +1,5 @@
 import { Route } from '@repo/shared/interfaces';
-import { Placeholder } from '@repo/icons';
+import { GoogleScholar, LinkedIn, Placeholder, XSocialIcon } from '@repo/icons';
 
 export const FEATURED_CARDS: Route[] = [
     {
@@ -194,6 +194,65 @@ export const ROUTES: Route[] = [
             {
                 children: FEATURED_CARDS,
             },
+        ],
+    },
+];
+export const SOCIAL_LINKS = [
+    {
+        icon: GoogleScholar,
+        url: 'https://scholar.google.com/citations?hl=en&user=_ZIH81gAAAAJ&view_op=list_works&sortby=pubdate',
+        isExternal: true,
+        arialLabel: 'Google Scholar',
+    },
+    {
+        icon: XSocialIcon,
+        url: 'https://x.com/iotafdn',
+        isExternal: true,
+        arialLabel: 'X',
+    },
+    {
+        icon: LinkedIn,
+        url: 'https://www.linkedin.com/company/iotafoundation/?originalSubdomain=de',
+        isExternal: true,
+        arialLabel: 'LinkedIn',
+    },
+];
+
+export const LEGAL_ROUTES: Route[] = [
+    {
+        title: 'Impressum',
+        path: '/impressum',
+    },
+    {
+        title: 'Privacy Policy',
+        path: '/privacy-policy',
+    },
+    {
+        title: 'Cookie Policy',
+        path: '/cookie-policy',
+    },
+    {
+        title: 'Trademark Policy',
+        path: '/trademark',
+    },
+    {
+        title: 'Terms',
+        path: '/terms-of-use',
+    },
+];
+
+export const COMPANY_DATA = [
+    {
+        title: 'Registered Address',
+        address: ['IOTA Foundation', 'Pappelallee 78/79', '10437 Berlin', 'Germany'],
+    },
+    {
+        title: 'Company',
+        address: [
+            'ID/Company No.: 3416/1234/2',
+            'EU public ID number in the EU Transparency Register:',
+            '500027331119-04',
+            'VAT ID: DE329624902',
         ],
     },
 ];

@@ -5,6 +5,7 @@ import { FontLinks } from './components/font-links';
 import './globals.css';
 import { Navigation } from '@repo/shared/components';
 import { ROUTES } from '@lib/constants';
+import { Footer } from '@components';
 
 export const metadata: Metadata = getPageMetadata({});
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <ContextProviders>
                     <Navigation items={ROUTES} />
                     {children}
+                    <Footer />
                 </ContextProviders>
             </body>
         </html>
