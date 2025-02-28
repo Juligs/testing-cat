@@ -167,7 +167,7 @@ export const ROUTES: Route[] = [
             },
             {
                 title: 'About the Foundation',
-                path: '/about/about-the-foundation',
+                path: '/about/iota-foundation',
             },
         ],
         navbarSections: [
@@ -187,7 +187,7 @@ export const ROUTES: Route[] = [
                     {
                         title: 'About the Foundation',
                         description: 'Assets for Events and Publications',
-                        path: '/about/about-the-foundation',
+                        path: '/about/iota-foundation',
                     },
                 ],
             },

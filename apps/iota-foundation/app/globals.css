@@ -21,3 +21,12 @@ body {
     align-items: center !important;
     justify-content: center !important;
 }
+
+.swiper-pagination-custom {
+    --swiper-pagination-color: theme('colors.foundation-primary.20');
+    --swiper-pagination-bullet-inactive-color: theme('colors.transparency-black.24');
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-active-size: 8px;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+}

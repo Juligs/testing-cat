@@ -1,4 +1,3 @@
-export * from './higlited-hero-text';
 export * from './skeletons';
 export * from './two-columns-template';
 export * from './hero';
@@ -6,7 +5,6 @@ export * from './intersection-observer';
 export * from './slider-navigation';
 export * from './more-to-explote';
 export * from './vertical-title-with-anchor-links';
-export * from './higlited-hero-text';
 export * from './infinite-carousel';
 export * from './vertical-title-and-grid';
 export * from './contact-us-with-anchor-links';

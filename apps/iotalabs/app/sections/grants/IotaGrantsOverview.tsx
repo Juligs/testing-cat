@@ -1,4 +1,4 @@
-import { HiglitedHeroText } from '@repo/shared/components';
+import { HighlightedHeroText } from '@components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
 export function IotaGrantsOverview({ id, navbarColorScheme }: BaseSectionProps) {
@@ -11,7 +11,7 @@ export function IotaGrantsOverview({ id, navbarColorScheme }: BaseSectionProps) 
             id={id}
             data-navbar-color-scheme={navbarColorScheme}
         >
-            <HiglitedHeroText text={TEXT} />
+            <HighlightedHeroText text={TEXT} />
         </section>
     );
 }
