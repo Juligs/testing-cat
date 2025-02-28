@@ -11,3 +11,4 @@ export * from './contact-us-with-anchor-links';
 export * from './(mdx-pages)';
 export * from './navbar-items';
 export * from './layout';
+export * from './homepage-redirect';

@@ -22,32 +22,32 @@ export const REDIRECTIONS = [
     },
     {
         source: '/solutions/industries',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/solutions/global-trade-and-supply-chains',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/solutions/customs-and-border-management',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/solutions/digital-identity',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: false,
     },
     {
         source: '/solutions/industrial-iot',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/solutions/ehealth',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
@@ -57,12 +57,12 @@ export const REDIRECTIONS = [
     },
     {
         source: '/solutions/secure-digital-infrastructure',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/solutions/auditing-and-ssi-tools',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: false,
     },
     {
@@ -228,32 +228,32 @@ export const REDIRECTIONS = [
     },
     {
         source: '/verticals/ehealth',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/verticals/global-trade-supply-chains',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/verticals/industrial-iot',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/verticals/mobility-automotive/',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/verticals/smart-energy',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {
         source: '/verticals/tradefacilitation',
-        destination: '/learn/core-domains',
+        destination: '/learn/focus-areas',
         permanent: true,
     },
     {

@@ -1,5 +1,6 @@
 import { getPageMetadata } from '@lib/utils';
 import { LighthouseProjects, Rwa } from '@repo/shared/sections';
+import { HomepageRedirect } from '@repo/shared/components';
 import {
     Hero,
     // NetworkStats,
@@ -45,6 +46,7 @@ export default function Home() {
             <WhyBuild id="why-build" navbarColorScheme="inverted" />
             <BlogPosts id="blog-posts" />
             <GettingStarted id="getting-started" />
+            <HomepageRedirect />
         </>
     );
 }
