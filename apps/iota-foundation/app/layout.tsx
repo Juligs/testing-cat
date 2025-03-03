@@ -5,7 +5,7 @@ import { FontLinks } from './components/font-links';
 import './globals.css';
 import { Navigation } from '@repo/shared/components';
 import { ROUTES } from '@lib/constants';
-import { Footer } from '@components';
+import { Footer, CookieDisclaimer } from '@components';
 
 export const metadata: Metadata = getPageMetadata({});
 
@@ -22,6 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     <Navigation items={ROUTES} />
                     {children}
                     <Footer />
+                    <CookieDisclaimer />
                 </ContextProviders>
             </body>
         </html>
