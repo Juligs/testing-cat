@@ -18,7 +18,7 @@ import {
     FoundationBlog,
 } from '@sections';
 
-import { Rwa, LighthouseProjects, ContactUs } from '@repo/shared/sections';
+import { ContactUs } from '@repo/shared/sections';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = getPageMetadata({
@@ -39,8 +39,6 @@ export default function Home() {
             <OurPurpose id="our-purpose" />
             <OurFocusAreas id="our-focus-areas" />
             <OurPartners id="our-partners" />
-            <Rwa id="rwa" />
-            <LighthouseProjects id="lighthouse-projects" animation={false} />
             <ExploreIota id="explore-iota" />
             <DLTInnovation id="dlt" />
             <FoundationBlog id="foundation-blog" />

@@ -1,12 +1,12 @@
 export const OUR_RESEARCH_MORE_TO_EXPLORE_CONTENT = [
     {
-        title: 'Research Collaborations',
-        subtitle: 'Turning Ideas into Solutions ',
-        link: '/research/research-collaborations',
+        title: 'Driven by Purpose',
+        subtitle: "IOTA Foundation's Vision for a Sustainable Future",
+        link: '/purpose',
     },
     {
-        title: 'About the Foundation',
-        subtitle: 'International Workshop on DAG-based DLTs',
-        link: '/about/about-the-foundation',
+        title: 'Research Collaborations',
+        subtitle: 'Turning Ideas into Solutions',
+        link: '/research/research-collaborations',
     },
 ];

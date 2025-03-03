@@ -36,54 +36,20 @@ export const ROUTES: Route[] = [
         ],
     },
     {
-        title: 'Our Work',
-        path: '/our-work',
+        title: 'Regulatory',
+        path: '/regulatory-affairs',
         children: [
             {
                 title: 'Regulatory Affairs',
-                path: '/our-work/regulatory-affairs',
+                path: '/regulatory-affairs',
             },
             {
-                title: 'Focus Areas',
-                path: '/our-work/focus-areas',
+                title: 'Memberships & Working Groups',
+                path: '/regulatory-affairs/#memberships',
             },
             {
-                title: 'Lighthouse Projects',
-                path: '/our-work/showcases',
-            },
-        ],
-        navbarSections: [
-            {
-                title: 'Our work',
-                icon: <Placeholder />,
-                children: [
-                    {
-                        title: 'Regulatory Affairs',
-                        description: 'Bridging between Policymakers and Industry',
-                        path: '/our-work/regulatory-affairs',
-                    },
-                ],
-            },
-            {
-                children: [
-                    {
-                        title: 'Focus Areas',
-                        description: 'Focus Areas for Real-World use cases',
-                        path: '/our-work/focus-areas',
-                    },
-                ],
-            },
-            {
-                children: [
-                    {
-                        title: 'Lighthouse Projects',
-                        description: 'Real-World Applications of Our Technology',
-                        path: '/our-work/showcases',
-                    },
-                ],
-            },
-            {
-                children: FEATURED_CARDS,
+                title: 'Latest Regulatory Advocacy',
+                path: '/regulatory-affairs/#latest',
             },
         ],
     },

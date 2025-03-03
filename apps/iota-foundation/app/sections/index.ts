@@ -1,5 +1,5 @@
 export * from './homepage';
 export * from './purpose';
-export * from './our-work';
+export * from './regulatory-affairs';
 export * from './research';
 export * from './about';

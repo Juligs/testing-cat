@@ -1,8 +1,8 @@
 export const PURPOSE_MORE_TO_EXPLORE_CONTENT = [
     {
-        title: 'Focus Areas',
-        subtitle: 'Focus Areas for Real-World use cases',
-        link: '/our-work/focus-areas',
+        title: 'Regulatory',
+        subtitle: 'Bridging between Policymakers and Industry',
+        link: '/regulatory-affairs',
     },
     {
         title: 'Our Research',
