@@ -1,23 +1,24 @@
-import { getPageMetadata } from '@lib/utils';
 import {
-    HOMEPAGE_METADATA_TITLE,
-    HOMEPAGE_METADATA_DESCRIPTION_X,
+    HOMEPAGE_IMAGE,
     HOMEPAGE_KEYWORDS,
     HOMEPAGE_METADATA_DESCRIPTION,
-    HOMEPAGE_IMAGE,
+    HOMEPAGE_METADATA_DESCRIPTION_X,
+    HOMEPAGE_METADATA_TITLE,
     HOMEPAGE_URL,
 } from '@lib/constants';
+import { getPageMetadata } from '@lib/utils';
 import {
-    Hero,
+    DLTInnovation,
+    ExploreIota,
+    FoundationBlog,
     FoundationStats,
-    OurPurpose,
+    Hero,
     OurFocusAreas,
     OurPartners,
-    ExploreIota,
-    DLTInnovation,
-    FoundationBlog,
+    OurPurpose,
 } from '@sections';
 
+import { HomepageRedirect } from '@repo/shared/components';
 import { ContactUs } from '@repo/shared/sections';
 import type { Metadata } from 'next';
 
@@ -43,6 +44,7 @@ export default function Home() {
             <DLTInnovation id="dlt" />
             <FoundationBlog id="foundation-blog" />
             <ContactUs id="contact" />
+            <HomepageRedirect />
         </>
     );
 }

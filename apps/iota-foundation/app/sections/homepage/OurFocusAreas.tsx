@@ -17,12 +17,12 @@ export function OurFocusAreas({ id, navbarColorScheme }: BaseSectionProps) {
                 <div className="flex flex-col gap-6 w-full h-full">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {OUR_FOCUS_AREAS_CTA_CARD_CONTENT.map((data, index) => (
-                            <CtaCard {...data} brand isVertical />
+                            <CtaCard {...data} key={index} brand isVertical />
                         ))}
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         {OUR_FOCUS_AREAS_IMAGE_CARD_CONTENT.map((data, index) => (
-                            <ImageCard {...data} isHoverable={false} />
+                            <ImageCard {...data} key={index} isHoverable={false} />
                         ))}
                     </div>
                 </div>
