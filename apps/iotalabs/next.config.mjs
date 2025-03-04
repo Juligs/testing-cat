@@ -1,6 +1,19 @@
 import nextMDX from '@next/mdx';
-
 const withMDX = nextMDX({});
+
+const cspHeader = `
+    default-src 'self';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://webassets.iota.org;
+    img-src 'self' blob: data: https://files.iota.org https://v5.airtableusercontent.com;
+    font-src 'self' data: https://webassets.iota.org;
+    media-src 'self' https://files.iota.org;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+`.replace(/\n/g, '');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -16,6 +29,28 @@ const nextConfig = {
                 },
             },
         },
+    },
+    async headers() {
+        return [
+            {
+                source: '/:path*',
+                headers: [
+                    { key: 'X-Frame-Options', value: 'DENY' },
+                    { key: 'Permissions-Policy', value: 'fullscreen=(), display-capture=()' },
+                    { key: 'X-XSS-Protection', value: '0' },
+                    {
+                        key: 'Content-Security-Policy',
+                        value: cspHeader,
+                    },
+                    {
+                        key: 'Strict-Transport-Security',
+                        value: 'max-age=63072000; includeSubDomains; preload',
+                    },
+                    { key: 'X-Content-Type-Options', value: 'nosniff' },
+                    { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+                ],
+            },
+        ];
     },
 };
 
