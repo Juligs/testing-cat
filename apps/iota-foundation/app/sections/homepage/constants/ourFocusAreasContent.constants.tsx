@@ -23,17 +23,17 @@ export const OUR_FOCUS_AREAS_CTA_CARD_CONTENT = [
 export const OUR_FOCUS_AREAS_IMAGE_CARD_CONTENT = [
     {
         title: 'Trade & Supply Chains',
-        subtitle: 'Trade & Supply ChainsTrade & Supply Chains',
+        subtitle: 'Seamless transfer of digital trade data across borders',
         image: '/homepage/focus-areas/trade_and_supply.png',
     },
     {
         title: 'Decentralized Finance',
-        subtitle: 'Empowering innovative DeFi products to build new economies',
+        subtitle: 'Powering DeFi products to build new economies',
         image: '/homepage/focus-areas/decentralized.png',
     },
     {
         title: 'Circular Economy',
-        subtitle: 'Sustainable innovation with circular economy solutions',
+        subtitle: 'Tech solutions for sustainable innovation',
         image: '/homepage/focus-areas/circular_economy.png',
     },
 ];

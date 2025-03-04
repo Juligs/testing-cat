@@ -1,10 +1,10 @@
 import { Route } from '@repo/shared/interfaces';
-import { GoogleScholar, LinkedIn, Placeholder, XSocialIcon } from '@repo/icons';
+import { GoogleScholar, LinkedIn, Placeholder } from '@repo/icons';
 
 export const FEATURED_CARDS: Route[] = [
     {
-        title: 'IOTA Network',
-        image: '/navbar_network.png',
+        title: 'IOTA',
+        image: '/navbar_iota.png',
         path: 'https://www.iota.org/',
         isExternal: true,
     },
@@ -169,12 +169,6 @@ export const SOCIAL_LINKS = [
         url: 'https://scholar.google.com/citations?hl=en&user=_ZIH81gAAAAJ&view_op=list_works&sortby=pubdate',
         isExternal: true,
         arialLabel: 'Google Scholar',
-    },
-    {
-        icon: XSocialIcon,
-        url: 'https://x.com/iotafdn',
-        isExternal: true,
-        arialLabel: 'X',
     },
     {
         icon: LinkedIn,

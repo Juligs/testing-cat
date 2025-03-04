@@ -39,6 +39,6 @@ export const TESTIMONIALS_CONTENT_CAROUSEL = [
 ];
 
 export const TESTIMONIALS_VERTICAL_TITLE = {
-    title: 'Why we Love Working at the IOTA Foundation',
+    title: 'Why we love working at the IOTA Foundation',
     size: TitleTextSize.Small,
 };

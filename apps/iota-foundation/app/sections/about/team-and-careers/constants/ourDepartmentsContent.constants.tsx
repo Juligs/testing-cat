@@ -18,12 +18,12 @@ export const OUR_DEPARTMENTS_IMAGE_CARD_CONTENT = [
     },
     {
         title: 'Operations',
-        body: 'The Operations Department brings in the structure and resources which allows the rest of the organisation to thrive and focus on making our vision reality. From employee well-being, to financial stability and bringing new talent to IOTA, we provide solid grounds for healthy growth.',
+        body: 'The Operations Department brings the structure and resources that allow the rest of the organization to thrive. From employee well-being to financial stability and bringing new talent to IOTA, it provides solid grounds for healthy growth.',
         image: '/about/team-and-careers/operations.png',
     },
     {
         title: 'Legal & Regulatory Affairs',
-        body: 'The Legal & Regulatory Affairs Department handles all contractual matters, supports IF departments in legal risk management and frameworks, ensures compliance across jurisdictions, contributes to policy discussions, and collaborates with global regulators.',
+        body: 'The Legal & Regulatory Affairs Department handles all contractual matters, supports departments in legal risk management and frameworks, ensures compliance across jurisdictions, contributes to policy discussions, and collaborates with global regulators.',
         image: '/about/team-and-careers/legal_and_regulatory.png',
     },
 ];

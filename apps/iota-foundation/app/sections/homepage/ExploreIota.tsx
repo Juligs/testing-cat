@@ -10,8 +10,8 @@ export function ExploreIota({ id, navbarColorScheme }: BaseSectionProps) {
             id={id}
             data-navbar-color-scheme={navbarColorScheme}
         >
-            <div className="container py-14 xs:py-20 lg:py-30 flex flex-col sm:flex-row items-start gap-6">
-                <div className="max-w-[464px]">
+            <div className="container py-14 xs:py-20 lg:py-30 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                <div className="max-w-[464px] md:min-w-[464px]">
                     <VerticalTitle {...EXPLORE_IOTA_VERTICAL_TITLE} />
                 </div>
                 <div className="grid grid-cols-1 xs:grid-cols-2 gap-6">

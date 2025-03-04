@@ -3,7 +3,7 @@ import { ButtonVariant, TitleTextSize } from 'react-ui-kit';
 export const I_CIRCULAR3_TITLE_CONTENT = {
     title: 'iCircular3 Doctoral Network',
     subtitle: 'Circular economy and DLTs',
-    body: 'The iCircular project is a consortium of universities and companies hosting PhD students who study the potential of DLT in a circular economy. The IOTA Foundation hosts several of these students, who are enrolled at University College Dublin.',
+    body: 'The iCircular project is a consortium of universities and companies hosting PhD students who study DLT potential in a circular economy. The IOTA Foundation hosts several students from University College Dublin.',
     size: TitleTextSize.Small,
 };
 

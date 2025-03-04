@@ -3,9 +3,8 @@ import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant } from 'react-ui-kit';
 
 export const HERO_HOMEPAGE_CONTENT = {
-    overline: 'The driving force behind the network',
     title: 'IOTA Foundation',
-    body: 'The IOTA Foundation is a global non-profit organization dedicated to developing next-generation decentralized technology with real-world impact. We work with a worldwide ecosystems of enterprises, research institutions, governments, startups, and more.',
+    body: 'The IOTA Foundation is a global non-profit organization dedicated to developing next-generation decentralized technology with real-world impact. We work with a worldwide ecosystem of enterprises, research institutions, governments, startups, and more.',
 };
 
 export const HERO_HOMEPAGE_BUTTON = [

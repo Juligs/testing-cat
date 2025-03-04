@@ -9,6 +9,7 @@ import {
 } from '@lib/constants';
 import {
     RegulatoryAffairsHero,
+    RegulatoryHighlightedHeroText,
     EmpoweringDLT,
     IntegrationStack,
     Membership,
@@ -33,6 +34,7 @@ export default function Home() {
     return (
         <>
             <RegulatoryAffairsHero id="hero" />
+            <RegulatoryHighlightedHeroText id="highlighted-hero-text" />
             <EmpoweringDLT id="empowering-dlt" />
             <IntegrationStack id="integration-stack" />
             <Membership id="memberships" />
