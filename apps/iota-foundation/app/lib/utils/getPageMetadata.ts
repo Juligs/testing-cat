@@ -3,26 +3,25 @@ import { BASE_URL } from '@lib/constants';
 const METADATA_SITE_NAME = 'IOTA Foundation';
 const METADATA_IMAGE_FALLBACK = `${BASE_URL}/metadata/meta_image_home.png`;
 const KEYWORDS_FALLBACK = [
-    'IOTA',
-    'blockchain',
-    'Web3',
-    'distributed ledger technology',
+    'IOTA Foundation',
     'DLT',
-    'digital identity',
-    'supply chains',
-    'decentralized finance',
+    'distributed ledger technology',
+    'blockchain research',
+    'non-profit organization',
+    'IOTA mission',
+    'IOTA partners',
+    'real-world adoption',
     'sustainability',
-    'IOTA EVM',
-    'real-world blockchain applications',
-    'open-source blockchain',
-    'decentralized solutions',
+    'decentralized innovation',
+    'Web3 research',
+    'circular economy',
+    'digital identity',
+    'trade and supply chains',
+    'real-world asset tokenization',
     'IOTA projects',
-    'IOTA ecosystem',
-    'IOTA tools',
-    'scalability',
-    'future of blockchain',
+    'IOTA blog',
+    'contact IOTA Foundation',
 ];
-
 interface PageMetadataProps {
     url?: string;
     title?: string;

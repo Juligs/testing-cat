@@ -25,7 +25,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: OUR_RESEARCH_KEYWORDS,
     image: OUR_RESEARCH_IMAGE,
     url: OUR_RESEARCH_URL,
-    path: '/reasearch/our-reasearch',
+    path: '/research/our-research',
 });
 
 export default function Home() {

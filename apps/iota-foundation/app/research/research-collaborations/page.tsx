@@ -1,11 +1,11 @@
 import { getPageMetadata } from '@lib/utils';
 import {
-    OUR_RESEARCH_METADATA_TITLE,
-    OUR_RESEARCH_METADATA_DESCRIPTION_X,
-    OUR_RESEARCH_KEYWORDS,
-    OUR_RESEARCH_METADATA_DESCRIPTION,
-    OUR_RESEARCH_IMAGE,
-    OUR_RESEARCH_URL,
+    RESEARCH_COLLABS_METADATA_TITLE,
+    RESEARCH_COLLABS_METADATA_DESCRIPTION_X,
+    RESEARCH_COLLABS_KEYWORDS,
+    RESEARCH_COLLABS_METADATA_DESCRIPTION,
+    RESEARCH_COLLABS_IMAGE,
+    RESEARCH_COLLABS_URL,
 } from '@lib/constants';
 import {
     ResearchCollaborationsHero,
@@ -22,13 +22,13 @@ import {
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = getPageMetadata({
-    title: OUR_RESEARCH_METADATA_TITLE,
-    description: OUR_RESEARCH_METADATA_DESCRIPTION,
-    descriptionX: OUR_RESEARCH_METADATA_DESCRIPTION_X,
-    keywords: OUR_RESEARCH_KEYWORDS,
-    image: OUR_RESEARCH_IMAGE,
-    url: OUR_RESEARCH_URL,
-    path: '/reasearch/our-reasearch',
+    title: RESEARCH_COLLABS_METADATA_TITLE,
+    description: RESEARCH_COLLABS_METADATA_DESCRIPTION,
+    descriptionX: RESEARCH_COLLABS_METADATA_DESCRIPTION_X,
+    keywords: RESEARCH_COLLABS_KEYWORDS,
+    image: RESEARCH_COLLABS_IMAGE,
+    url: RESEARCH_COLLABS_URL,
+    path: '/research/research-collaborations',
 });
 
 export default function Home() {
