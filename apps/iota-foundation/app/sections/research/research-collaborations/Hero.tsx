@@ -3,7 +3,7 @@
 import { Hero as HeroComponent } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
-import { HERO_RESEARCH_COLLABORATION_CONTENT } from './constants';
+import { HERO_RESEARCH_COLLABORATION_CONTENT, HERO_RESEARCH_COLLABORATION_BG } from './constants';
 
 export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -11,6 +11,7 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
             <HeroComponent
                 verticalTitle={HERO_RESEARCH_COLLABORATION_CONTENT}
                 linkComponent={Link}
+                background={HERO_RESEARCH_COLLABORATION_BG}
             />
         </section>
     );

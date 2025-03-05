@@ -4,8 +4,10 @@ export const HERO_IOTA_FOUNDATION_CONTENT = {
     title: 'About the IOTA Foundation',
     subtitle: 'From one to many',
 };
-
 export const BG_IOTA_FOUNDATION: React.ComponentProps<typeof HeroBackground> = {
-    src: '/about/iota-foundation/hero_bg.png',
-    type: 'image',
+    type: 'video',
+    source: 'https://files.iota.org/media/iota-foundation/about_foundation_hero.webm',
+    videoProps: {
+        poster: 'https://files.iota.org/media/iota-foundation/about_foundation_hero_poster.jpg',
+    },
 };

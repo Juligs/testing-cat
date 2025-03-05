@@ -1,6 +1,6 @@
 import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
-import { ButtonVariant } from 'react-ui-kit';
+import { ButtonVariant, HeroBackground } from 'react-ui-kit';
 
 export const HERO_HOMEPAGE_CONTENT = {
     title: 'IOTA Foundation',
@@ -36,3 +36,11 @@ export const HERO_HOMEPAGE_ANCHORLINKS = [
         onClick: () => scrollToSection('#dlt'),
     },
 ];
+
+export const HERO_HOMEPAGE_BG: React.ComponentProps<typeof HeroBackground> = {
+    type: 'video',
+    source: 'https://files.iota.org/media/iota-foundation/homepage_hero.webm',
+    videoProps: {
+        poster: 'https://files.iota.org/media/iota-foundation/homepage_hero_poster.jpg',
+    },
+};
