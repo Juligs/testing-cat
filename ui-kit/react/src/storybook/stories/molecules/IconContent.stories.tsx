@@ -1,10 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconContent as IconContentComponent, TextLink } from '@lib/server-components';
+import {
+    IconContentSize,
+    IconContent as IconContentComponent,
+    TextLink,
+} from '@lib/server-components';
 import { Placeholder } from '@repo/icons';
+import { getStoryEnumOptions } from 'src/storybook/utils';
 const meta: Meta<typeof IconContentComponent> = {
     component: IconContentComponent,
     title: 'Molecules/IconContent',
-    argTypes: {},
+    argTypes: { size: getStoryEnumOptions(IconContentSize) },
 };
 
 export default meta;
@@ -41,7 +46,7 @@ export const IconContentFilled: Story = {
     ),
 };
 
-export const IconContentSmall: Story = {
+export const IconContentLarge: Story = {
     render: (args) => (
         <div className="max-w-xs">
             <IconContentComponent
@@ -50,7 +55,7 @@ export const IconContentSmall: Story = {
                 title="Title"
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id diam vitae lectus lobortis vehicula eget nec neque. Nam nec ultricies neque, vel mattis diam. Integer commodo elit eu ornare tristique."
                 filled
-                small
+                size={IconContentSize.Large}
             ></IconContentComponent>
         </div>
     ),

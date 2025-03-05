@@ -12,6 +12,7 @@ import {
     TeamAndCareersOverview,
     BreakingBoundaries,
     Mission,
+    Careers,
     OurDepartments,
     Testimonials,
     TeamAndCareersMoreToExplore,
@@ -36,6 +37,7 @@ export default function Home() {
             <TeamAndCareersOverview id="overview" />
             <BreakingBoundaries id="bold-vision" />
             <Mission id="expanding-applications" />
+            <Careers id="careers" />
             <OurDepartments id="our-departments" />
             <Testimonials id="testimonials" />
             <TeamAndCareersMoreToExplore id="explore" />

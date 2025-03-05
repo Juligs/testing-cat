@@ -1,5 +1,4 @@
-import { ChipSkeleton } from '../../../../../shared/components/skeletons/ChipSkeleton';
-import { ImageCardSkeleton } from '../../../../../shared/components/skeletons/ImageCardSkeleton';
+import { ChipSkeleton, ImageCardSkeleton } from '@repo/shared/components';
 
 export function ProjectsSkeleton() {
     return (
