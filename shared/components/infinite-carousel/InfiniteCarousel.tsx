@@ -6,9 +6,10 @@ import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper/types';
+import { StaticImageData } from 'node_modules/next/image';
 
 interface InfiniteCarouselProps {
-    logos: string[];
+    logos: (string | StaticImageData)[];
     itemWidth?: number;
 }
 
@@ -78,7 +79,11 @@ export function InfiniteCarousel({ logos, itemWidth = 190 }: InfiniteCarouselPro
             {logos.map((logo, index) => (
                 <SwiperSlide key={index} style={{ width: `${itemWidth}px` }}>
                     <div className="flex items-center justify-center overflow-hidden">
-                        <img src={logo} className={`w-auto ${maxHeight} w-max-full`} alt={logo} />
+                        <img
+                            src={typeof logo === 'string' ? logo : logo.src}
+                            className={`w-auto ${maxHeight} w-max-full`}
+                            alt={typeof logo === 'string' ? logo : logo.src}
+                        />
                     </div>
                 </SwiperSlide>
             ))}
