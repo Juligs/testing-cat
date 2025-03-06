@@ -1,5 +1,8 @@
 import nextMDX from '@next/mdx';
 import { REDIRECTIONS } from './config/redirections.mjs';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const withMDX = nextMDX({});
 
@@ -31,6 +34,22 @@ const nextConfig = {
                 },
             },
         },
+    },
+    webpack: (config, { dev }) => {
+        const __filename = fileURLToPath(import.meta.url);
+        const __dirname = path.dirname(__filename);
+
+        const copyPlugin = new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.join(__dirname, '../../shared/public/images'),
+                    to: path.join(__dirname, './public/shared/shared-images'),
+                },
+            ],
+        });
+
+        config.plugins.push(copyPlugin);
+        return config;
     },
     async redirects() {
         return REDIRECTIONS;
