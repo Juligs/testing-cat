@@ -7,7 +7,7 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <HeroComponent
                 verticalTitle={KYC_HOMEPAGE_CONTENT}
-                image="/shared/showcases/tokenized_kyc.png"
+                image="/learn/showcases/tokenized_kyc.png"
                 layout={HeroAlignment.Left}
             />
         </section>

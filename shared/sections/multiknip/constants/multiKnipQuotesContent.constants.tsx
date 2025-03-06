@@ -4,5 +4,5 @@ export const MULTIKNIP_TITLE_CONTENT =
 export const MULTIKNIP_QUOTE_CONTENT = {
     name: 'Adri Wischmann',
     roleDescription: 'Founder of PBTokn.com',
-    image: '/shared/showcases/multiknip_quotes.png',
+    image: '/learn/showcases/multiknip_quotes.png',
 };

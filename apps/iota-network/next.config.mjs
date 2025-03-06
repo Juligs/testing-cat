@@ -40,8 +40,8 @@ const nextConfig = {
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = path.dirname(__filename);
 
-        const src = path.join(__dirname, '../../shared/public/logos');
-        const dest = path.join(__dirname, './public/shared/shared-logos');
+        const src = path.join(__dirname, '../../shared/public/assets');
+        const dest = path.join(__dirname, './public/shared/shared-assets');
 
         config.plugins.push(
             new CleanWebpackPlugin({

@@ -7,7 +7,7 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <HeroComponent
                 verticalTitle={MULTIKNIP_HOMEPAGE_CONTENT}
-                image="/shared/rwa-section/cta-carousel/multiknip.png"
+                image="/shared/multiknip.png"
                 layout={HeroAlignment.Left}
             />
         </section>
