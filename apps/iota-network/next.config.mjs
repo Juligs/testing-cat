@@ -3,6 +3,7 @@ import { REDIRECTIONS } from './config/redirections.mjs';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 const withMDX = nextMDX({});
 
@@ -35,20 +36,31 @@ const nextConfig = {
             },
         },
     },
-    webpack: (config, { dev }) => {
+    webpack: (config) => {
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = path.dirname(__filename);
 
-        const copyPlugin = new CopyWebpackPlugin({
-            patterns: [
-                {
-                    from: path.join(__dirname, '../../shared/public/images'),
-                    to: path.join(__dirname, './public/shared/shared-images'),
-                },
-            ],
-        });
+        const src = path.join(__dirname, '../../shared/public/logos');
+        const dest = path.join(__dirname, './public/shared/shared-logos');
 
-        config.plugins.push(copyPlugin);
+        config.plugins.push(
+            new CleanWebpackPlugin({
+                cleanOnceBeforeBuildPatterns: [dest],
+            }),
+        );
+
+        config.plugins.push(
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        from: src,
+                        to: dest,
+                        force: true,
+                    },
+                ],
+            }),
+        );
+
         return config;
     },
     async redirects() {

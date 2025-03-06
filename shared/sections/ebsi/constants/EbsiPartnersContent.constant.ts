@@ -1,7 +1,7 @@
 export const EBSI_PARTNERS_LOGOS_CAROUSEL = [
-    '/shared/logos-carousel/european_comission.png',
-    '/shared/logos-carousel/UOC.png',
-    '/shared/logos-carousel/digimarc.png',
-    '/shared/logos-carousel/ereuso.png',
-    '/shared/logos-carousel/agrocircular.png',
+    '/shared/shared-logos/business/european_comission.png',
+    '/shared/shared-logos/business/UOC.png',
+    '/shared/shared-logos/business/digimarc.png',
+    '/shared/shared-logos/business/ereuso.png',
+    '/shared/shared-logos/business/agrocircular.png',
 ];

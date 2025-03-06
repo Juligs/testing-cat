@@ -23,12 +23,15 @@ export const CTA_CAROUSEL_CONTENT = [
 
 export const LOGOS_CAROUSEL = {
     image1: [
-        '/shared/logos-carousel/global_alliance.png',
-        '/shared/logos-carousel/world_economic_forum.png',
-        '/shared/logos-carousel/CIOIT.png',
-        '/shared/logos-carousel/trademark_africa.png',
-        '/shared/logos-carousel/tony_blair.png',
-        '/shared/logos-carousel/TLIP.png',
+        '/shared/shared-logos/business/global_alliance.png',
+        '/shared/shared-logos/business/world_economic_forum.png',
+        '/shared/shared-logos/business/CIOIT.png',
+        '/shared/shared-logos/business/trademark_africa.png',
+        '/shared/shared-logos/business/tony_blair.png',
+        '/shared/shared-logos/business/TLIP.png',
     ],
-    image2: ['/shared/logos-carousel/multiknip.png', '/shared/logos-carousel/kpn_iot.png'],
+    image2: [
+        '/shared/shared-logos/business/multiknip.png',
+        '/shared/shared-logos/business/kpn_iot.png',
+    ],
 };
