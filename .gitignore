@@ -40,4 +40,4 @@ yarn-error.log*
 *.pem
 
 #generated on build 
-apps/*/public/shared-logos
+apps/*/public/shared/shared-logos

@@ -96,6 +96,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
+      clean-webpack-plugin:
+        specifier: ^4.0.0
+        version: 4.0.0(webpack@5.95.0)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1

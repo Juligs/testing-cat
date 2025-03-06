@@ -1,9 +1,9 @@
 import nextMDX from '@next/mdx';
 import { REDIRECTIONS } from './config/redirections.mjs';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const withMDX = nextMDX({});
 
