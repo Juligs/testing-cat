@@ -7,7 +7,7 @@ export const TEAM_AND_CAREERS_MORE_TO_EXPLORE_CONTENT = [
     },
     {
         title: 'About the Foundation',
-        subtitle: 'International Workshop on DAG-based DLTs',
+        subtitle: 'From one to many',
         link: '/about/iota-foundation',
     },
 ];
