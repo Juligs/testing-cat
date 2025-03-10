@@ -1,7 +1,7 @@
 import { TitleTextSize } from 'react-ui-kit';
 
 export const INTEGRATION_STACK_VERTICAL_TITLE = {
-    title: 'Transparency and Responsibility in the Crypto Market',
+    title: 'Transparency and Responsibility in Crypto',
     size: TitleTextSize.ExtraSmall,
 };
 
@@ -13,9 +13,9 @@ export const INTEGRATION_STACK_IMAGE_CARD_CONTENT = [
         image: '/regulatory-affairs/public_dialogue.png',
     },
     {
-        title: 'Compliance With Laws and Regulation',
+        title: 'Legal and Regulatory Compliance',
         subtitle:
-            'Compliance with laws like the Markets in Crypto Assets  regulation helps ensure the legitimacy and widespread adoption of DLT',
+            'Compliance with laws like the Markets in Crypto Assets  regulation helps ensure the legitimacy and adoption of DLT',
         image: '/regulatory-affairs/compliance_and_regulation.png',
     },
 ];

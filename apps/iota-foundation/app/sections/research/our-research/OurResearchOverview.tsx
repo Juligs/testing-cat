@@ -1,7 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const OUR_RESEARCH_OVERVIEW =
-    'Our mission is to create impactful solutions through the power of innovation, guided by rigorous research.';
+    'Our mission is to create impactful solutions through the power of innovation, guided by rigorous research';
 
 export function OurResearchOverview({ id, navbarColorScheme }: BaseSectionProps) {
     return (

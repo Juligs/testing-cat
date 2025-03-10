@@ -23,7 +23,7 @@ export const HERO_PURPOSE_ANCHORLINKS = [
 
 export const HERO_PURPOSE_BG: React.ComponentProps<typeof HeroBackground> = {
     type: 'video',
-    source: 'https://files.iota.org/media/iota-foundation/purpose_hero.webm',
+    source: 'https://files.iota.org/media/iota-foundation/purpose_hero.mp4',
     videoProps: {
         poster: 'https://files.iota.org/media/iota-foundation/purpose_hero_poster.jpg',
     },

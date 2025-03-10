@@ -9,17 +9,17 @@ export const MEMBERSHIP_HORIZONTAL_TITLE = {
 export const MEMBERSHIP_ICON_CONTENT = [
     {
         title: 'European Blockchain Association',
-        body: 'Empowering the European blockchain ecosystem by providing an independent platform for blockchain-related communities and organizations.',
+        body: 'An independent platform for blockchain-related communities and organizations.',
         link: 'https://europeanblockchainassociation.org',
     },
     {
         title: 'Blockchain Bundesverband',
-        body: 'Based in the heart of the German blockchain community to work jointly on new business models and the social development of blockchain technologies.',
+        body: 'Based in the heart of the German blockchain community.',
         link: 'https://bundesblock.de/en/',
     },
     {
         title: 'INATBA',
-        body: 'The International Association of Trusted Blockchain Applications is a European Commission-hosted group convened to identify the right conditions for DLT to thrive.',
+        body: 'The International Association of Trusted Blockchain Applications is a European Commission-hosted group working to identify the right conditions for DLT to thrive.',
         link: 'https://inatba.org',
     },
 ];

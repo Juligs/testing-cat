@@ -8,14 +8,14 @@ export const EXPLORE_IOTA_VERTICAL_TITLE = {
 
 export const EXPLORE_IOTA_IMAGE_CARD_CONTENT = [
     {
-        title: 'Visit IOTA',
-        subtitle: 'Equipping builders, industries and governments with the right technology',
+        title: 'IOTA - Built to Make a Difference',
+        subtitle: 'Providing DLT for Builders, Industries, and Governments',
         image: '/navbar_iota.png',
         link: 'https://www.iota.org/',
     },
     {
-        title: 'Visit iotalabs',
-        subtitle: 'Catalyzing Growth of Value-Driven IOTA Ecosystems ',
+        title: 'iotalabs - Accelerate Growth',
+        subtitle: 'Catalyzing Growth of Value-Driven IOTA Ecosystems',
         image: '/navbar_iotalabs.png',
         link: 'https://iotalabs.io/',
     },

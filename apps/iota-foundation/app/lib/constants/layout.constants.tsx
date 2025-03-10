@@ -1,5 +1,5 @@
 import { Route } from '@repo/shared/interfaces';
-import { GoogleScholar, LinkedIn, Placeholder } from '@repo/icons';
+import { BlogPost, Daos, DataInsights, GoogleScholar, LinkedIn } from '@repo/icons';
 
 export const FEATURED_CARDS: Route[] = [
     {
@@ -70,11 +70,11 @@ export const ROUTES: Route[] = [
         navbarSections: [
             {
                 title: 'Research',
-                icon: <Placeholder />,
+                icon: <DataInsights />,
                 children: [
                     {
                         title: 'Our Research',
-                        description: 'At the Forefront of DLT Innovation',
+                        description: 'At the forefront of DLT innovation',
                         path: '/research/our-research',
                     },
                 ],
@@ -83,7 +83,7 @@ export const ROUTES: Route[] = [
                 children: [
                     {
                         title: 'Research Collaborations',
-                        description: 'Turning Ideas into Solutions',
+                        description: 'Turning ideas into solutions',
                         path: '/research/research-collaborations',
                     },
                 ],
@@ -95,24 +95,24 @@ export const ROUTES: Route[] = [
     },
     {
         title: 'News',
-        path: ' https://blog.iota.foundation',
+        path: ' https://blog.iota.org/',
         isExternal: true,
         children: [
             {
                 title: 'Blog',
-                path: 'https://blog.iota.foundation',
+                path: 'https://blog.iota.org/',
                 isExternal: true,
             },
         ],
         navbarSections: [
             {
                 title: 'News',
-                icon: <Placeholder />,
+                icon: <BlogPost />,
                 children: [
                     {
                         title: 'Blog',
-                        description: 'Get the Latest IOTA Updates',
-                        path: 'https://blog.iota.foundation',
+                        description: 'Get the latest IOTA updates',
+                        path: 'https://blog.iota.org/',
                         isExternal: true,
                     },
                 ],
@@ -139,11 +139,11 @@ export const ROUTES: Route[] = [
         navbarSections: [
             {
                 title: 'About',
-                icon: <Placeholder />,
+                icon: <Daos />,
                 children: [
                     {
                         title: 'Team & Careers',
-                        description: 'A multifaceted team of experts help propel IOTA forward',
+                        description: 'The experts that propel IOTA',
                         path: '/about/team-and-careers',
                     },
                 ],
@@ -152,7 +152,7 @@ export const ROUTES: Route[] = [
                 children: [
                     {
                         title: 'About the Foundation',
-                        description: 'Assets for Events and Publications',
+                        description: 'From one to many',
                         path: '/about/iota-foundation',
                     },
                 ],

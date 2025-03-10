@@ -7,7 +7,7 @@ export const HERO_RESEARCH_COLLABORATION_CONTENT = {
 };
 export const HERO_RESEARCH_COLLABORATION_BG: React.ComponentProps<typeof HeroBackground> = {
     type: 'video',
-    source: 'https://files.iota.org/media/iota-foundation/research_collaborations_hero.webm',
+    source: 'https://files.iota.org/media/iota-foundation/research_collaborations_hero.mp4',
     videoProps: {
         poster: 'https://files.iota.org/media/iota-foundation/research_collaborations_hero_poster.jpg',
     },

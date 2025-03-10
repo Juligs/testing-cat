@@ -1,7 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const PURPOSE_OVERVIEW =
-    'The IOTA Foundation works with regulators and policymakers to provide legal certainty for the entire DLT and blockchain industry in this rapidly evolving field.';
+    'In a rapidly evolving world, the IOTA Foundation works with regulators and policymakers to provide legal certainty for the DLT and blockchain industry';
 
 export function RegulatoryHighlightedHeroText({ id, navbarColorScheme }: BaseSectionProps) {
     return (

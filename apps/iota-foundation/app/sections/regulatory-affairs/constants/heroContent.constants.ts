@@ -7,7 +7,7 @@ export const HERO_REGULATORY_AFFAIRS_CONTENT = {
 
 export const HERO_REGULATORY_AFFAIRS_BG: React.ComponentProps<typeof HeroBackground> = {
     type: 'video',
-    source: 'https://files.iota.org/media/iota-foundation/regulatory_affairs_hero.webm',
+    source: 'https://files.iota.org/media/iota-foundation/regulatory_affairs_hero.mp4',
     videoProps: {
         poster: 'https://files.iota.org/media/iota-foundation/regulatory_affairs_hero_poster.jpg',
     },

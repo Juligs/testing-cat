@@ -12,7 +12,7 @@ export function FoundationBlog({ id, navbarColorScheme }: BaseSectionProps) {
                     <VerticalTitle {...BLOG_POSTS_TITLE_CONTENT}>
                         <Actions>
                             <Link
-                                href="https://blog.iota.foundation"
+                                href="https://blog.iota.org/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Link to blog posts"

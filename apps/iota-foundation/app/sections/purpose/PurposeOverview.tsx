@@ -1,7 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const PURPOSE_OVERVIEW =
-    'Driven by innovation, integrity, collaboration, and sustainability, we work towards a borderless world powered by DLT.';
+    'Driven by innovation, integrity, collaboration, and sustainability, we work towards a borderless world powered by DLT';
 
 export function PurposeOverview({ id, navbarColorScheme }: BaseSectionProps) {
     return (

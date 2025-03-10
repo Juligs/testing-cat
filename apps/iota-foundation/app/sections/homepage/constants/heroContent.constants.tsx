@@ -28,7 +28,7 @@ export const HERO_HOMEPAGE_ANCHORLINKS = [
         onClick: () => scrollToSection('#our-purpose'),
     },
     {
-        text: 'Our Work',
+        text: 'Our Focus',
         onClick: () => scrollToSection('#our-focus-areas'),
     },
     {
@@ -39,7 +39,7 @@ export const HERO_HOMEPAGE_ANCHORLINKS = [
 
 export const HERO_HOMEPAGE_BG: React.ComponentProps<typeof HeroBackground> = {
     type: 'video',
-    source: 'https://files.iota.org/media/iota-foundation/homepage_hero.webm',
+    source: 'https://files.iota.org/media/iota-foundation/homepage_hero.mp4',
     videoProps: {
         poster: 'https://files.iota.org/media/iota-foundation/homepage_hero_poster.jpg',
     },

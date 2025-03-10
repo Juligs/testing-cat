@@ -7,7 +7,7 @@ export const IOTA_FOUNDATION_MORE_TO_EXPLORE_CONTENT = [
     {
         title: 'Blog',
         subtitle: 'Get the Latest IOTA Updates',
-        link: 'https://blog.iota.foundation',
+        link: 'https://blog.iota.org/',
         isExternal: true,
     },
 ];
