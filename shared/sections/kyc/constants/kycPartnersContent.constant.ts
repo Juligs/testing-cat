@@ -1,6 +1,6 @@
 export const KYC_PARTNERS_LOGOS_CAROUSEL = [
-    '/shared/logos-carousel/havn.png',
-    '/shared/logos-carousel/walt.png',
-    '/shared/logos-carousel/idnow.png',
-    '/shared/logos-carousel/bloom.png',
+    '/shared/shared-assets/business/havn.png',
+    '/shared/shared-assets/business/walt.png',
+    '/shared/shared-assets/business/idnow.png',
+    '/shared/shared-assets/business/bloom.png',
 ];

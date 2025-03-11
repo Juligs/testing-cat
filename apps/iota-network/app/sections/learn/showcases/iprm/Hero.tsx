@@ -7,7 +7,7 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <HeroComponent
                 verticalTitle={IPRM_HOMEPAGE_CONTENT}
-                image="/shared/showcases/iprm.png"
+                image="/learn/showcases/iprm.png"
                 layout={HeroAlignment.Left}
             />
         </section>

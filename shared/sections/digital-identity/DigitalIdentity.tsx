@@ -16,7 +16,7 @@ export function DigitalIdentity({ id, navbarColorScheme }: BaseSectionProps) {
             data-navbar-color-scheme={navbarColorScheme}
         >
             <div className="container py-14 xs:py-20 lg:py-30">
-                <TwoColumnsImageTemplate image="/shared/focus-areas-sections/digital_identity.png">
+                <TwoColumnsImageTemplate image="/learn/focus-areas/sections/digital_identity.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...DIGITAL_IDENTITY_VERTICAL_TITLE_CONTENT}>
                             <Actions>

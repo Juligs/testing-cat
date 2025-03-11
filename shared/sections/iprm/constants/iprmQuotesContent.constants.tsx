@@ -4,5 +4,5 @@ export const IPRM_TITLE_CONTENT =
 export const IPRM_QUOTE_CONTENT = {
     name: 'Philippe Rixhon',
     roleDescription: 'CEO, Valunode',
-    image: '/shared/showcases/iprm_quote.png',
+    image: '/learn/showcases/iprm_quote.png',
 };

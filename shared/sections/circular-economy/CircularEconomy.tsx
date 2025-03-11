@@ -16,7 +16,7 @@ export function CircularEconomy({ id, navbarColorScheme }: BaseSectionProps) {
             data-navbar-color-scheme={navbarColorScheme}
         >
             <div className="container py-14 xs:py-20 lg:py-30">
-                <TwoColumnsImageTemplate image="/shared/focus-areas-sections/circular_economy.png">
+                <TwoColumnsImageTemplate image="/learn/focus-areas/sections/circular_economy.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...CIRCULAR_ECONOMY_VERTICAL_TITLE_CONTENT}>
                             <Actions>

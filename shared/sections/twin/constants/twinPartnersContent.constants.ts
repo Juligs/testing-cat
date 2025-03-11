@@ -1,8 +1,8 @@
 export const TWIN_PARTNERS_LOGOS_CAROUSEL = [
-    '/shared/logos-carousel/global_alliance.png',
-    '/shared/logos-carousel/world_economic_forum.png',
-    '/shared/logos-carousel/CIOIT.png',
-    '/shared/logos-carousel/trademark_africa.png',
-    '/shared/logos-carousel/tony_blair.png',
-    '/shared/logos-carousel/TLIP.png',
+    '/shared/shared-assets/business/global_alliance.png',
+    '/shared/shared-assets/business/world_economic_forum.png',
+    '/shared/shared-assets/business/CIOIT.png',
+    '/shared/shared-assets/business/trademark_africa.png',
+    '/shared/shared-assets/business/tony_blair.png',
+    '/shared/shared-assets/business/TLIP.png',
 ];

@@ -9,7 +9,7 @@ export function IPRMTransparency({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <VerticalTitleAndGrid
-                image="/shared/showcases/transparency.png"
+                image="/learn/showcases/transparency.png"
                 verticalTitle={IPRM_TRANSPARENCY_VERTICAL_TITLE_CONTENT}
                 iconContent={IPRM_TRANSPARENCY_ICON_CONTENT}
             />

@@ -39,3 +39,5 @@ yarn-error.log*
 .DS_Store
 *.pem
 
+#generated on build 
+apps/*/public/shared/shared-assets

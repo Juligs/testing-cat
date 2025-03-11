@@ -9,7 +9,7 @@ export function MultiKnipDigitalWallet({ id, navbarColorScheme }: BaseSectionPro
     return (
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <VerticalTitleAndGrid
-                image="/shared/showcases/digital_wallet.png"
+                image="/learn/showcases/digital_wallet.png"
                 verticalTitle={MULTIKNIP_DIGITAL_WALLET_VERTICAL_TITLE_CONTENT}
                 iconContent={MULTIKNIP_DIGITAL_WALLET_ICON_CONTENT}
             />

@@ -6,7 +6,7 @@ export function EbsiScalable({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <VerticalTitleAndGrid
-                image="/shared/showcases/scalability.png"
+                image="/learn/showcases/scalability.png"
                 verticalTitle={EBSI_SCALABLE_VERTICAL_TITLE_CONTENT}
                 iconContent={EBSI_SCALABLE_ICON_CONTENT}
             />

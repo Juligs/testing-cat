@@ -7,7 +7,7 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <HeroComponent
                 verticalTitle={EBSI_HOMEPAGE_CONTENT}
-                image="/shared/showcases/dpp_hero.png"
+                image="/learn/showcases/dpp_hero.png"
                 layout={HeroAlignment.Left}
             />
         </section>

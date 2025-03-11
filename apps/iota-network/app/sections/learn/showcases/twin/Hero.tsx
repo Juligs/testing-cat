@@ -7,7 +7,7 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <HeroComponent
                 verticalTitle={TWIN_HOMEPAGE_CONTENT}
-                image="/shared/rwa-section/cta-carousel/twin.png"
+                image="/shared/twin.png"
                 layout={HeroAlignment.Left}
             />
         </section>

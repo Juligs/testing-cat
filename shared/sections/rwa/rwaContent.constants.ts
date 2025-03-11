@@ -7,7 +7,7 @@ export const CTA_CAROUSEL_CONTENT = [
         title: 'TWIN',
         subtitle:
             'The Trade Worldwide Information Network is a digital platform built on IOTA that enables global supply chains to share data instantly and securely.',
-        image: '/shared/rwa-section/cta-carousel/twin.png',
+        image: '/shared/twin.png',
         text: 'View Showcases',
         link: '/showcases/twin',
     },
@@ -15,7 +15,7 @@ export const CTA_CAROUSEL_CONTENT = [
         title: 'MultiKnip',
         subtitle:
             'Using digital tokens and wallet to incentivize and drive purpose, value and change',
-        image: '/shared/rwa-section/cta-carousel/multiknip.png',
+        image: '/shared/multiknip.png',
         text: 'View Showcases',
         link: '/showcases/multiknip',
     },
@@ -23,12 +23,15 @@ export const CTA_CAROUSEL_CONTENT = [
 
 export const LOGOS_CAROUSEL = {
     image1: [
-        '/shared/logos-carousel/global_alliance.png',
-        '/shared/logos-carousel/world_economic_forum.png',
-        '/shared/logos-carousel/CIOIT.png',
-        '/shared/logos-carousel/trademark_africa.png',
-        '/shared/logos-carousel/tony_blair.png',
-        '/shared/logos-carousel/TLIP.png',
+        '/shared/shared-assets/business/global_alliance.png',
+        '/shared/shared-assets/business/world_economic_forum.png',
+        '/shared/shared-assets/business/CIOIT.png',
+        '/shared/shared-assets/business/trademark_africa.png',
+        '/shared/shared-assets/business/tony_blair.png',
+        '/shared/shared-assets/business/TLIP.png',
     ],
-    image2: ['/shared/logos-carousel/multiknip.png', '/shared/logos-carousel/kpn_iot.png'],
+    image2: [
+        '/shared/shared-assets/business/multiknip.png',
+        '/shared/shared-assets/business/kpn_iot.png',
+    ],
 };
