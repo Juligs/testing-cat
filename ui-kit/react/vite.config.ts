@@ -1,57 +1,15 @@
-import { defineConfig, UserConfig } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import { resolve } from 'path';
-import dts from 'vite-plugin-dts';
 import tailwindcss from 'tailwindcss';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-const isPackageProduction = process.env.BUILDING_PACKAGE === 'true';
-
-const packageBuildConfig: UserConfig['build'] = {
-    lib: {
-        entry: [resolve(__dirname, 'src/lib/client.ts'), resolve(__dirname, 'src/lib/server.ts')],
-        name: 'ui-kit-react',
-        fileName: (format, name) => `${name}.${format}.js`,
-        formats: ['es', 'cjs'],
-    },
-    rollupOptions: {
-        external: ['react', 'react-dom', 'tailwindcss'],
-        output: {
-            globals: {
-                react: 'React',
-                'react-dom': 'ReactDOM',
-                tailwindcss: 'tailwindcss',
-            },
-            banner: (chunkInfo) => {
-                if (chunkInfo.name === 'client') {
-                    return "'use client';";
-                }
-                return '';
-            },
-        },
-    },
-    sourcemap: true,
-    emptyOutDir: true,
-};
-
-const plugins = isPackageProduction
-    ? [
-          tsconfigPaths({
-              root: __dirname,
-          }),
-          react(),
-          dts({ rollupTypes: true }),
-      ]
-    : [
-          tsconfigPaths({
-              root: __dirname,
-          }),
-          react(),
-      ];
-
 export default defineConfig({
-    build: isPackageProduction ? packageBuildConfig : undefined,
-    plugins,
+    plugins: [
+        tsconfigPaths({
+            root: __dirname,
+        }),
+        react(),
+    ],
     css: {
         postcss: {
             plugins: [tailwindcss],

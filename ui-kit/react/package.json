@@ -11,13 +11,13 @@
     ],
     "exports": {
         ".": {
-            "import": "./dist/server.es.js",
-            "require": "./dist/server.cjs.js",
+            "import": "./dist/ui-kit/react/src/lib/server.es.js",
+            "require": "./dist/ui-kit/react/src/lib/server.cjs.js",
             "types": "./dist/server.d.ts"
         },
         "./client": {
-            "import": "./dist/client.es.js",
-            "require": "./dist/client.cjs.js",
+            "import": "./dist/ui-kit/react/src/lib/client.es.js",
+            "require": "./dist/ui-kit/react/src/lib/client.cjs.js",
             "types": "./dist/client.d.ts"
         },
         "./style.css": "./dist/style.css"
@@ -26,8 +26,7 @@
         "lint": "eslint . --max-warnings=0",
         "dev": "storybook dev -p 6006",
         "build": "storybook build",
-        "prepackage": "rimraf dist",
-        "package": "tsc -d && cross-env BUILDING_PACKAGE=true vite build",
+        "package": "vite build -c package.config.ts",
         "storybook": "storybook dev -p 6006",
         "typecheck": "tsc --noEmit"
     },

@@ -4,4 +4,3 @@ storybook-static
 .turbo
 .vercel
 dist
-vite.config.ts
