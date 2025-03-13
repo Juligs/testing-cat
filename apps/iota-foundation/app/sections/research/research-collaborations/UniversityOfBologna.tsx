@@ -21,7 +21,7 @@ export function UniversityOfBologna({ id, navbarColorScheme }: BaseSectionProps)
                         <VerticalTitle {...UNIVERSITY_OF_BOLOGNA_TITLE_CONTENT}>
                             <Actions>
                                 <Link
-                                    href="https://www.unibo.it/en"
+                                    href="https://phd.unibo.it/last-jd/en/program"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="University of Bologna official website"
