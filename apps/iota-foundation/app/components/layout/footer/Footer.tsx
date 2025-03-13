@@ -136,8 +136,8 @@ export function Footer() {
                     ))}
                     <div className="flex flex-col gap-2">
                         <p className="text-label-sm">Contact</p>
-                        <Link href="mailto:contact@iota.foundation" aria-label="email IOTA">
-                            <p className="text-body-sm">contact@iota.foundation</p>
+                        <Link href="mailto:contact@iota-foundation.org" aria-label="email IOTA">
+                            <p className="text-body-sm">contact@iota-foundation.org</p>
                         </Link>
                     </div>
                 </div>

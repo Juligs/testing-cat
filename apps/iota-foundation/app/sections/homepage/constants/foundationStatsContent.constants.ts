@@ -1,6 +1,6 @@
 export const FOUNDATION_STATS = [
     {
-        label: 'Employees',
+        label: 'Team Members',
         value: '110+',
         highlighted: true,
     },

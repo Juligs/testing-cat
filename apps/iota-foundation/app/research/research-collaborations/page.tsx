@@ -16,6 +16,7 @@ import {
     UZH,
     UniversityOfOslo,
     CDL,
+    UniversityOfBologna,
     ResearchCollaborationsMoreToExplore,
 } from '@sections';
 
@@ -42,6 +43,7 @@ export default function Home() {
             <UZH id="uzh" />
             <UniversityOfOslo id="university-of-oslo" />
             <CDL id="cdl" />
+            <UniversityOfBologna id="university-of-bologna" />
             <ResearchCollaborationsMoreToExplore id="explore" />
         </>
     );

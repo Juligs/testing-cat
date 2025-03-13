@@ -5,4 +5,5 @@ export * from './iCircular3Content.contants';
 export * from './UZHContent.constants';
 export * from './universityOfOsloContent.contants';
 export * from './CDLContent.constants';
+export * from './universityOfBolognaContent.contants';
 export * from './researchCollaborationsMoreToExploreContent.constants';

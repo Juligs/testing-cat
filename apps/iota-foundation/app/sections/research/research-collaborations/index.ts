@@ -6,4 +6,5 @@ export { ICircular3 } from './ICircular3';
 export { UZH } from './UZH';
 export { UniversityOfOslo } from './UniversityOfOslo';
 export { CDL } from './CDL';
+export { UniversityOfBologna } from './UniversityOfBologna';
 export { ResearchCollaborationsMoreToExplore } from './ResearchCollaborationsMoreToExplore';

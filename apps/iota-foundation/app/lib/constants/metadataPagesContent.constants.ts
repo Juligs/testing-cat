@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://iota-foundation-website-jdu4cfhec-iota1.vercel.app/';
+export const BASE_URL = 'https://iota-foundation.org';
 
 export const HOMEPAGE_METADATA_TITLE =
     'IOTA Foundation | Driving Innovation with Distributed Ledger Technology';
