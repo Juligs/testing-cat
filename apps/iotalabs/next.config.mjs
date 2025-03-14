@@ -3,11 +3,12 @@ const withMDX = nextMDX({});
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com;
     style-src 'self' 'unsafe-inline' https://webassets.iota.org;
-    img-src 'self' blob: data: https://files.iota.org https://v5.airtableusercontent.com;
+    img-src 'self' blob: data: https://files.iota.org https://v5.airtableusercontent.com https://www.googletagmanager.com;
     font-src 'self' data: https://webassets.iota.org;
     media-src 'self' https://files.iota.org;
+    connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://static.cloudflareinsights.com https://region1.google-analytics.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
