@@ -32,7 +32,7 @@ export const HERO_HOMEPAGE_ANCHORLINKS = [
         onClick: () => scrollToSection('#our-focus-areas'),
     },
     {
-        text: 'DLT Innovationn',
+        text: 'DLT Innovation',
         onClick: () => scrollToSection('#dlt'),
     },
 ];

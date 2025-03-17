@@ -26,7 +26,7 @@ export function ExpandingApplications({ id, navbarColorScheme }: BaseSectionProp
                                 >
                                     <Button
                                         variant={ButtonVariant.Primary}
-                                        text="Poduct Adoption"
+                                        text="Product Adoption"
                                         icon={<ArrowTopRight />}
                                     />
                                 </Link>
