@@ -7,7 +7,7 @@ export const HERO_HOMEPAGE_CONTENT = {
 };
 
 export const HERO_HOMEPAGE_BG_VIDEO: React.ComponentProps<typeof HeroBackground> = {
-    type: 'video',
+    mediaType: 'video',
     sourceSet: {
         [ScreenSize.Xs]: {
             src: 'https://files.iota.org/media/iota-network/learn_intro_mobile.mp4',

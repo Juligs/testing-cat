@@ -9,7 +9,7 @@ export const HERO_HOMEPAGE_INFO = {
 };
 
 export const HERO_HOMEPAGE_BG: React.ComponentProps<typeof HeroBackground> = {
-    type: 'video',
+    mediaType: 'video',
     source: 'https://files.iota.org/media/iotalabs/iotalabs_hero.mp4',
     videoProps: {
         poster: 'https://files.iota.org/media/iotalabs/iotalabs_hero_poster.jpg',
@@ -50,7 +50,7 @@ export const HERO_GRANTS_ANCHORLINKS = [
 
 export const HERO_GRANTS_BG: React.ComponentProps<typeof HeroBackground> = {
     src: '/grants/hero_bg.svg',
-    type: 'image',
+    mediaType: 'image',
 };
 
 export const HERO_PROJECTS_INFO = {
@@ -71,5 +71,5 @@ export const HERO_PROJECTS_BUTTON = [
 
 export const HERO_PROJECTS_BG: React.ComponentProps<typeof HeroBackground> = {
     src: '/projects/hero.svg',
-    type: 'image',
+    mediaType: 'image',
 };

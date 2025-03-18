@@ -44,7 +44,7 @@ export const HERO_HOMEPAGE_ANCHORLINKS = [
 ];
 
 export const HERO_HOMEPAGE_BG: React.ComponentProps<typeof HeroBackground> = {
-    type: 'video',
+    mediaType: 'video',
     sourceSet: {
         [ScreenSize.Xs]: {
             src: 'https://files.iota.org/media/iota-network/homepage_hero_mobile.mp4',

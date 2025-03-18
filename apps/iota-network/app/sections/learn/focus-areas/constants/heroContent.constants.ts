@@ -7,7 +7,7 @@ export const FOCUS_AREAS_HOMEPAGE_CONTENT = {
 };
 
 export const FOCUS_AREAS_HOMEPAGE_BG_VIDEO: React.ComponentProps<typeof HeroBackground> = {
-    type: 'video',
+    mediaType: 'video',
     sourceSet: {
         [ScreenSize.Xs]: {
             src: 'https://files.iota.org/media/iota-network/core_domains_mobile.mp4',

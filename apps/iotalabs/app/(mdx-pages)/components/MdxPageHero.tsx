@@ -5,7 +5,7 @@ export function MdxPageHero(): React.JSX.Element {
     return (
         <section className="h-full" id="hero" data-navbar-color-scheme="inverted">
             <HeroLayout>
-                <HeroBackground src="/hero_legal.png" type="image" />
+                <HeroBackground src="/hero_legal.png" mediaType="image" />
                 <div className="xl:w-3/4">
                     <MdxPageTitle />
                 </div>

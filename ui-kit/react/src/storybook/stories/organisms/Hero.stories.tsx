@@ -23,7 +23,7 @@ function HeroMediaImage(args: Story['args']) {
         <section className="min-h-screen h-full flex flex-col">
             <HeroLayout {...args}>
                 <HeroBackground
-                    type="image"
+                    mediaType="image"
                     sources={{
                         [ScreenSize.Xs]: {
                             src: 'https://fakeimg.pl/360x500?font=bebas&font_size=12',
@@ -52,15 +52,37 @@ function HeroVideo(args: Story['args']) {
         <section className="min-h-screen h-full flex flex-col">
             <HeroLayout {...args}>
                 <HeroBackground
-                    type="video"
+                    mediaType="video"
                     sourceSet={{
                         [ScreenSize.Xs]: {
-                            src: 'https://files.iota.org/media/binance_clubhouse_anaglyph.mp4',
+                            sources: [
+                                {
+                                    src: 'https://files.iota.org/media/iota-network/homepage_hero_mobile.mp4',
+                                    type: 'video/mp4',
+                                },
+                                {
+                                    src: 'https://files.iota.org/media/iota-network/homepage_hero_mobile.webm',
+                                    type: 'video/webm',
+                                },
+                            ],
                         },
-                        [ScreenSize.Lg]: {
-                            src: 'https://files.iota.org/media/iotalabs/iotalabs_hero.mp4',
+                        [ScreenSize.Md]: {
+                            sources: [
+                                {
+                                    src: 'https://files.iota.org/media/iota-network/homepage_hero.mp4',
+                                    type: 'video/mp4',
+                                },
+                                {
+                                    src: 'https://files.iota.org/media/iota-network/homepage_hero.webm',
+                                    type: 'video/webm',
+                                },
+                            ],
                         },
                     }}
+                    videoProps={{
+                        poster: 'https://files.iota.org/media/iota-network/homepage_hero_poster.jpg',
+                    }}
+                    className="rounded-lg shadow-lg"
                 />
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="text-display-lg">Title</h1>

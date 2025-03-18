@@ -14,18 +14,36 @@ export function ImageSources({ sources, alt, className }: ImageSourcesProps) {
     const sourcedSorted = sortMediaSourcesByBreakpoint(sources);
     return (
         <picture>
-            {sourcedSorted.map(([breakpoint, { src }], index) => {
+            {sourcedSorted.map(([breakpoint, sourceData], index) => {
                 const breakpointWidth = BREAKPOINTS[breakpoint];
                 const lastElement = sourcedSorted[sourcedSorted.length - 1];
                 const isLastElement = index === sourcedSorted.length - 1 && !!lastElement;
                 return (
                     <Fragment key={breakpoint}>
-                        <source media={`(max-width: ${breakpointWidth}px)`} srcSet={src} />
+                        {sourceData.sources ? (
+                            sourceData.sources.map(({ src, type }, srcIndex) => (
+                                <source
+                                    key={`${breakpoint}-${srcIndex}`}
+                                    media={`(max-width: ${breakpointWidth}px)`}
+                                    srcSet={src}
+                                    type={type}
+                                />
+                            ))
+                        ) : (
+                            <source
+                                key={breakpoint}
+                                media={`(max-width: ${breakpointWidth}px)`}
+                                srcSet={sourceData.src}
+                                type={sourceData.type}
+                            />
+                        )}
                         {isLastElement && (
                             <img
                                 className={className}
-                                alt={alt || lastElement[1].src}
-                                src={lastElement[1].src}
+                                alt={
+                                    alt || lastElement[1]?.sources?.[0]?.src || lastElement[1]?.src
+                                }
+                                src={lastElement[1]?.sources?.[0]?.src || lastElement[1]?.src}
                             />
                         )}
                     </Fragment>
@@ -34,7 +52,6 @@ export function ImageSources({ sources, alt, className }: ImageSourcesProps) {
         </picture>
     );
 }
-
 interface ImageProps extends ImageBaseProps {
     src: string;
 }

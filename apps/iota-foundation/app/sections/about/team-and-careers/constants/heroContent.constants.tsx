@@ -6,7 +6,7 @@ export const TEAM_AND_CAREERS_CONTENT = {
 };
 
 export const HERO_TEAM_AND_CAREERS_BG: React.ComponentProps<typeof HeroBackground> = {
-    type: 'video',
+    mediaType: 'video',
     source: 'https://files.iota.org/media/iota-foundation/team_careers_hero.mp4',
     videoProps: {
         poster: 'https://files.iota.org/media/iota-foundation/team_careers_hero_poster.jpg',

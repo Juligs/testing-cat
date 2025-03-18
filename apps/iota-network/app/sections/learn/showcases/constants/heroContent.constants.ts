@@ -9,7 +9,7 @@ export const SHOWCASES_HOMEPAGE_CONTENT = {
 };
 
 export const SHOWCASES_HOMEPAGE_BG_VIDEO: React.ComponentProps<typeof HeroBackground> = {
-    type: 'video',
+    mediaType: 'video',
     sourceSet: {
         [ScreenSize.Xs]: {
             src: 'https://files.iota.org/media/iota-network/technology_showcases_mobile.mp4',

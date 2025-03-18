@@ -11,22 +11,26 @@ export type MediaRendererProps = ResponsiveMediaProps & MediaRendererDiscriminan
 
 export type MediaRendererDiscriminantor =
     | {
-          type: 'video';
-          source: string;
+          mediaType: 'video';
+          sources?: { src: string; type: string }[];
+          source?: string;
           sourceSet?: never;
+          type?: string;
       }
     | {
-          type: 'video';
-          sourceSet: SourceSets;
+          mediaType: 'video';
           source?: never;
+          sourceSet: SourceSets;
+          sources?: never;
+          type?: string;
       }
     | {
-          type: 'image';
+          mediaType: 'image';
           src: string;
           sources?: never;
       }
     | {
-          type: 'image';
+          mediaType: 'image';
           sources: SourceSets;
           src?: never;
       };
@@ -38,17 +42,22 @@ export function MediaRenderer({
     imageProps,
     ...restProps
 }: MediaRendererProps): JSX.Element {
-    if (restProps.type === 'image') {
-        return <ImageController {...restProps} className={className} alt={alt} {...imageProps} />;
+    if (restProps.mediaType === 'image') {
+        const { mediaType, ...filteredProps } = restProps;
+
+        return (
+            <ImageController {...filteredProps} className={className} alt={alt} {...imageProps} />
+        );
     }
 
-    if (restProps.type === 'video') {
-        const { source, ...otherRestProps } = restProps;
-
+    if (restProps.mediaType === 'video') {
+        const { source, sources, sourceSet, mediaType, ...filteredProps } = restProps;
         const videoAttributes = {
-            src: source,
+            source,
+            sources,
+            sourceSet,
             ...videoProps,
-            ...otherRestProps,
+            ...filteredProps,
             className,
         };
 
