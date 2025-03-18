@@ -32,6 +32,6 @@ export const LOGOS_CAROUSEL = {
     ],
     image2: [
         '/shared/shared-assets/business/multiknip.png',
-        '/shared/shared-assets/business/kpn_iot.png',
+        '/shared/shared-assets/business/iota.png',
     ],
 };

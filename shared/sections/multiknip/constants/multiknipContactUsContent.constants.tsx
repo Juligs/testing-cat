@@ -3,7 +3,7 @@ import { VisitWebsite, Download, BlogPost } from '@repo/icons';
 export const MULTIKNIP_CONTACT_US_ANCHORLINKS = [
     {
         text: 'Visit MultiKnip',
-        url: 'https://pbtokn.com/multiknip-ebs.html',
+        url: 'https://pbtokn.com',
         isExternal: true,
         leadingIcon: <VisitWebsite />,
     },
