@@ -19,8 +19,8 @@
     --color-medium-inverted: theme('colors.labs-neutral.80');
     --color-light: theme('colors.labs-neutral.50');
     --color-light-inverted: theme('colors.labs-neutral.60');
-    --color-highlighted: theme('colors.labs-primary.40');
-    --color-highlighted-inverted: theme('colors.labs-primary.70');
+    --color-highlighted: theme('colors.labs-primary.20');
+    --color-highlighted-inverted: theme('colors.labs-primary.40');
     --color-text-links: theme('colors.network-primary.40');
     --color-text-links-inverted: theme('colors.network-primary.60');
     --bg-color-card: theme('colors.labs-neutral.96');
@@ -32,6 +32,7 @@
         theme('colors.labs-gradient.light'),
         theme('colors.labs-gradient.dark')
     );
+    --color-error: theme('colors.error.30');
 
     /* BUTTON */
     --action-border-radius: theme('borderRadius.full');
@@ -137,6 +138,7 @@
         theme('colors.network-gradient.light'),
         theme('colors.network-gradient.dark')
     );
+    --color-error: theme('colors.error.30');
 
     /* BUTTON */
     --btn-bg-primary: theme('colors.network-primary.20');
@@ -237,6 +239,7 @@
         theme('colors.foundation-gradient.light'),
         theme('colors.foundation-gradient.dark')
     );
+    --color-error: theme('colors.error.30');
 
     /* BUTTON */
     --btn-bg-primary: theme('colors.foundation-primary.20');

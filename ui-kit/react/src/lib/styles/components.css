@@ -4,7 +4,8 @@
     .chip,
     .card-image,
     .badge,
-    .blog-post-card {
+    .blog-post-card,
+    .text-input {
         border-radius: var(--action-border-radius);
     }
 
@@ -239,5 +240,17 @@
 
     .bg-color-gradient {
         background: var(--bg-color-gradient);
+    }
+
+    .focus-border-color-input-default {
+        border-color: var(--color-highlighted);
+    }
+
+    .focus-border-color-input-inverted {
+        border-color: var(--color-highlighted-inverted);
+    }
+
+    .color-error {
+        color: var(--color-error);
     }
 }

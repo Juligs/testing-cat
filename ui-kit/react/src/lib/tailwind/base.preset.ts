@@ -9,6 +9,7 @@ import {
     THEMED_CUSTOM_COLORS,
     FONT_FAMILIES,
 } from './constants';
+import { addNotPlaceholderShown } from './plugins';
 import {
     IOTALABS_COLOR_PALETTE,
     NETWORK_COLOR_PALETTE,
@@ -18,7 +19,7 @@ import { transparencyColorPalette } from '../../storybook/utils/transparencyColo
 
 export const BASE_CONFIG: Partial<Config> = {
     content: ['./src/**/*.{html,js,jsx,ts,tsx,md,mdx}'],
-    plugins: [addTailwindCustomTextClasses],
+    plugins: [addTailwindCustomTextClasses, addNotPlaceholderShown],
     theme: {
         screens: SCREENS,
         fontSize: {
