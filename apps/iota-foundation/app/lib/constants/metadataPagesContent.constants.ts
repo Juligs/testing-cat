@@ -52,7 +52,7 @@ export const PURPOSE_KEYWORDS = [
     'collaboration',
     'regulation',
 ];
-export const PURPOSE_URL = BASE_URL;
+export const PURPOSE_URL = `${BASE_URL}/purpose`;
 export const PURPOSE_IMAGE = '/metadata/meta_image_purpose.png';
 
 export const REGULATORY_AFFAIRS_METADATA_TITLE =
@@ -79,7 +79,7 @@ export const REGULATORY_AFFAIRS_KEYWORDS = [
     'crypto policy dialogue',
     'crypto market compliance',
 ];
-export const REGULATORY_AFFAIRS_URL = BASE_URL;
+export const REGULATORY_AFFAIRS_URL = `${BASE_URL}/regulatory-affairs`;
 export const REGULATORY_AFFAIRS_IMAGE = '/metadata/meta_image_regulatory.png';
 
 export const OUR_RESEARCH_METADATA_TITLE =
@@ -106,7 +106,7 @@ export const OUR_RESEARCH_KEYWORDS = [
     'future of blockchain',
     'IOTA research department',
 ];
-export const OUR_RESEARCH_URL = BASE_URL;
+export const OUR_RESEARCH_URL = `${BASE_URL}/research/our-research`;
 export const OUR_RESEARCH_IMAGE = '/metadata/meta_image_our-research.png';
 
 export const RESEARCH_COLLABS_METADATA_TITLE =
@@ -132,7 +132,7 @@ export const RESEARCH_COLLABS_KEYWORDS = [
     'IoT research',
     'blockchain interoperability',
 ];
-export const RESEARCH_COLLABS_URL = BASE_URL;
+export const RESEARCH_COLLABS_URL = `${BASE_URL}/research/research-collaborations`;
 export const RESEARCH_COLLABS_IMAGE = '/metadata/meta_image_research-collabs.png';
 
 export const ABOUT_IOTA_FOUNDATION_METADATA_TITLE = 'About the IOTA Foundation | From One to Many';
@@ -157,7 +157,7 @@ export const ABOUT_IOTA_FOUNDATION_KEYWORDS = [
     'blockchain vision',
     'technology empowerment',
 ];
-export const ABOUT_IOTA_FOUNDATION_URL = BASE_URL;
+export const ABOUT_IOTA_FOUNDATION_URL = `${BASE_URL}/about/iota-foundation`;
 export const ABOUT_IOTA_FOUNDATION_IMAGE = '/metadata/meta_image_the-foundation.png';
 
 export const TEAM_AND_CAREERS_METADATA_TITLE = 'Team & Careers | Join the IOTA Foundation';
@@ -183,5 +183,5 @@ export const TEAM_AND_CAREERS_KEYWORDS = [
     'work at IOTA',
     'blockchain innovation',
 ];
-export const TEAM_AND_CAREERS_URL = BASE_URL;
+export const TEAM_AND_CAREERS_URL = `${BASE_URL}/about/team-and-careers`;
 export const TEAM_AND_CAREERS_IMAGE = '/metadata/meta_image_the-team.png';
