@@ -1,6 +1,6 @@
 import { BASE_URL } from '@lib/constants';
 
-const METADATA_SITE_NAME = 'IOTA Network';
+const METADATA_SITE_NAME = 'IOTA';
 const METADATA_IMAGE_FALLBACK = `${BASE_URL}/metadata/meta_image_home.png`;
 const KEYWORDS_FALLBACK = [
     'IOTA',
@@ -41,7 +41,7 @@ export function getPageMetadata({
     keywords,
     path = '',
 }: PageMetadataProps) {
-    const pageTitle = title ? `${METADATA_SITE_NAME} – ${title}` : METADATA_SITE_NAME;
+    const pageTitle = title ? title : METADATA_SITE_NAME;
     const pageKeywords = keywords || KEYWORDS_FALLBACK;
     const pageUrl = url || BASE_URL;
     const pageImage = image

@@ -16,12 +16,12 @@ import {
 } from '@repo/icons';
 
 export const LEARN_FEATURED_CARDS: Route[] = [
-    // {
-    //     title: 'IOTA Foundation',
-    //     image: '/navbar_foundation.png',
-    //     path: '/foundation',
-    //     isExternal: true,
-    // },
+    {
+        title: 'IOTA Foundation',
+        image: '/navbar_foundation.png',
+        path: 'https://iota-foundation.org/',
+        isExternal: true,
+    },
     {
         title: "iotalabs Builder's Hub",
         image: '/navbar_iotalabs.png',
