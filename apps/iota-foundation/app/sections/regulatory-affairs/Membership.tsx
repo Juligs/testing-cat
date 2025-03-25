@@ -10,7 +10,7 @@ export function Membership({ id, navbarColorScheme }: BaseSectionProps) {
                 <div className="w-full break-words whitespace-normal">
                     <HorizontalTitle {...MEMBERSHIP_HORIZONTAL_TITLE} />
                 </div>
-                <div className="grid grid-cols-1  sm:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-6">
                     {MEMBERSHIP_ICON_CONTENT.map((data, index) => (
                         <IconContent key={index} title={data.title} body={data.body} filled>
                             <Actions>

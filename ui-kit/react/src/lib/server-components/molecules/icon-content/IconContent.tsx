@@ -55,12 +55,12 @@ export function IconContent({
     const bgColors = filled ? (inverted ? BG_COLOR_INVERTED : BG_COLOR_FILLED) : inverted ? '' : '';
     const colorTitle = inverted ? COLOR_TITLE_INVERTED : COLOR_TITLE;
     const colorBody = inverted ? COLOR_BODY_INVERTED : COLOR_BODY;
-    const iconSize = size === IconContentSize.Large ? 'min-h-[455px] justify-between' : '';
+    const iconSize = size === IconContentSize.Large ? 'min-h-[455px]' : '';
 
     return (
         <div
             className={clsx(
-                'flex flex-col items-start gap-6 w-full rounded-3xl pl-4 pr-6 pt-6 pb-8',
+                'flex flex-col items-start gap-6 w-full rounded-3xl pl-4 pr-6 pt-6 pb-8 justify-between',
                 bgColors,
                 iconSize,
             )}

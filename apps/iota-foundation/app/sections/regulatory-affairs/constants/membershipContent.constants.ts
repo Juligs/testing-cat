@@ -22,4 +22,9 @@ export const MEMBERSHIP_ICON_CONTENT = [
         body: 'The International Association of Trusted Blockchain Applications is a European Commission-hosted group working to identify the right conditions for DLT to thrive.',
         link: 'https://inatba.org',
     },
+    {
+        title: 'GBBC ',
+        body: 'Global Blockchain Business Council is the largest leading global industry association for the blockchain technology ecosystem.',
+        link: 'https://www.gbbc.io',
+    },
 ];
