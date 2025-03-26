@@ -91,6 +91,8 @@
     --display-color-text-default: theme('colors.labs-neutral.10');
     --display-color-text-inverted: theme('colors.labs-primary.100');
     --display-color-text-light: theme('colors.labs-neutral.10');
+    --display-icon-color-default: theme('colors.labs-primary.30');
+    --display-icon-color-inverted: theme('colors.labs-primary.80');
 
     /*ANCHOR LINK */
     --anchor-link-icon-color: theme('colors.labs-primary.30');
@@ -192,6 +194,8 @@
     --display-color-text-default: theme('colors.iota-neutral.10');
     --display-color-text-inverted: theme('colors.iota-neutral.100');
     --display-color-text-light: theme('colors.iota-neutral.100');
+    --display-icon-color-default: theme('colors.network-primary.30');
+    --display-icon-color-inverted: theme('colors.network-primary.80');
 
     /*ANCHOR LINK */
     --anchor-link-icon-color: theme('colors.network-primary.30');
@@ -293,6 +297,8 @@
     --display-color-text-default: theme('colors.iota-neutral.10');
     --display-color-text-inverted: theme('colors.iota-neutral.100');
     --display-color-text-light: theme('colors.iota-neutral.100');
+    --display-icon-color-default: theme('colors.foundation-primary.30');
+    --display-icon-color-inverted: theme('colors.foundation-primary.80');
 
     /*ANCHOR LINK */
     --anchor-link-icon-color: theme('colors.foundation-primary.30');
