@@ -6,6 +6,9 @@ on:
             PRODUCTION:
                 type: boolean
                 required: true
+            APP_NAME:
+                type: string
+                required: true
         secrets:
             VERCEL_TOKEN:
                 required: true
@@ -64,14 +67,32 @@ jobs:
             - name: Build Project
               run: vercel build ${{ steps.setup_vercel_flags.outputs.VERCEL_FLAGS }} ${{ steps.setup_vercel_flags.outputs.PROD_FLAG }}
 
-            - name: Deploy to Vercel Action
-              uses: BetaHuhn/deploy-to-vercel-action@v1
+            - name: Deploy to Vercel
+              id: vercel-deploy
+              run: |
+                  vercel deploy --prebuilt --archive=tgz ${{ steps.setup_vercel_flags.outputs.VERCEL_FLAGS }} ${{ steps.setup_vercel_flags.outputs.PROD_FLAG }} > deployment_output.txt
+                  echo "PREVIEW_URL=$(cat deployment_output.txt)" >> $GITHUB_OUTPUT
+
+            - name: Comment on PR
+              uses: phulsechinmay/rewritable-pr-comment@v0.3.0
+              if: ${{ inputs.PRODUCTION != true }}
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-                  VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
-                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-                  PRODUCTION: ${{ inputs.PRODUCTION }}
-                  PREBUILT: true
-                  DELETE_EXISTING_COMMENT: false
+                  COMMENT_IDENTIFIER: '${{ inputs.APP_NAME }} vercel deploy'
+                  message: |
+                      This pull request has been deployed to Vercel.
+
+                      <table>
+                       <tr>
+                          <td><strong>🌐 APP NAME:</strong></td>
+                          <td>${{ inputs.APP_NAME }}</td>
+                      </tr>
+                      <tr>
+                          <td><strong>✅ Preview:</strong></td>
+                          <td><a href='${{ steps.vercel-deploy.outputs.PREVIEW_URL }}'>${{ steps.vercel-deploy.outputs.PREVIEW_URL }}</a></td>
+                      </tr>
+                       <tr>
+                          <td><strong>⚫️ Latest commit:</strong></td>
+                          <td>${{ github.sha }}</td>
+                      </tr>
+                      </table>
