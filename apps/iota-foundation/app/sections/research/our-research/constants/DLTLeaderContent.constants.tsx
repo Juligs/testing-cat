@@ -11,7 +11,7 @@ export const DLT_LEADER_VERTICAL_TITLE = {
 export const DLT_LEADER_ICON_CONTENT = [
     {
         title: 'Academic publications',
-        body: "We've published over 50 academic papers, two being awarded with best paper awards by the BLOCKCHAIN Congress.",
+        body: "We've published over 50 publications in international peer reviewed journals and conferences. ",
         icon: <GranularDataProvenance />,
         link: 'https://scholar.google.com/citations?hl=en&user=_ZIH81gAAAAJ&view_op=list_works&sortby=pubdate',
         isExternal: true,

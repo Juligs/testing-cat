@@ -1,6 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import { HorizontalTitle, IconContent } from 'react-ui-kit';
+import { Actions, HorizontalTitle, IconContent, TextLink } from 'react-ui-kit';
 import { LATEST_ICON_CONTENT, LATEST_HORIZONTAL_TITLE } from './constants';
+import Link from 'next/link';
 
 export function Latest({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -11,7 +12,18 @@ export function Latest({ id, navbarColorScheme }: BaseSectionProps) {
                 </div>
                 <div className="grid grid-cols-1  sm:grid-cols-3 gap-6">
                     {LATEST_ICON_CONTENT.map((data, index) => (
-                        <IconContent key={index} {...data} />
+                        <IconContent key={index} {...data}>
+                            <Actions>
+                                <Link
+                                    href={data.link}
+                                    target="_blank"
+                                    rel="nopener noreferrer"
+                                    aria-label={`Read blog post: ${data.title}`}
+                                >
+                                    <TextLink text="Read the blog post" showIcon />
+                                </Link>
+                            </Actions>
+                        </IconContent>
                     ))}
                 </div>
             </div>
