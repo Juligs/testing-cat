@@ -55,7 +55,7 @@ export const ROUTES: Route[] = [
     },
     {
         title: 'Research',
-        path: ' /research',
+        path: '/research',
         isExternal: true,
         children: [
             {
@@ -125,7 +125,7 @@ export const ROUTES: Route[] = [
     },
     {
         title: 'About',
-        path: ' /about',
+        path: '/about',
         children: [
             {
                 title: 'Team & Careers',

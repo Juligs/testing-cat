@@ -19,7 +19,7 @@ export function NavbarItem({
     ...rest
 }: NavbarItemProps) {
     return (
-        <li className={clsx('group cursor-pointer', { 'active-class': active })} {...rest}>
+        <li className={clsx('group cursor-pointer', { active })} {...rest}>
             {hasChildren ? (
                 <>
                     <div className="py-4 px-3 xs:py-8 xs:px-4 text-label-md xs:text-center">

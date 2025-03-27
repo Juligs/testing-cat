@@ -33,7 +33,7 @@ export const LEARN_FEATURED_CARDS: Route[] = [
 export const ROUTES: Route[] = [
     {
         title: 'Learn',
-        path: '/learn/intro',
+        path: '/learn',
         children: [
             {
                 title: 'Intro to IOTA',

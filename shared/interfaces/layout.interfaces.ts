@@ -8,6 +8,7 @@ export interface Route {
     children?: Route[];
     navbarSections?: NavbarSection[];
     image?: string;
+    active?: boolean;
 }
 
 export interface NavbarSection {

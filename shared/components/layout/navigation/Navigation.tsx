@@ -8,6 +8,7 @@ import { SectionObserver as IntersectionObserver } from '../../../components';
 import { Route } from '../../../interfaces';
 import { DropdownMenu, MobileNavbarItem, NavbarItemsContainer } from '../../navbar-items';
 import { Logo } from '../logo';
+import { usePathname } from 'next/navigation';
 
 interface NavigationProps {
     items: Route[];
@@ -26,6 +27,7 @@ export function Navigation({ items }: NavigationProps) {
         !(isMobileNavOpen || openDropdown !== null) && activeSection.theme === 'inverted';
 
     const navRef = useRef<HTMLDivElement>(null);
+    const currentPath = usePathname();
 
     const handleLinkClick = (path: string | undefined) => {
         if (path) {
@@ -95,6 +97,11 @@ export function Navigation({ items }: NavigationProps) {
 
     const openedDropdownMenu = items.find((_, index) => openDropdown === index);
 
+    const itemsWithActive = items.map((item) => ({
+        ...item,
+        active: currentPath === item.path || currentPath.startsWith(item.path + '/'),
+    }));
+
     return (
         <>
             <div
@@ -112,6 +119,7 @@ export function Navigation({ items }: NavigationProps) {
                 >
                     <Navbar inverted={isInverted}>
                         <NavbarItemsContainer
+                            items={itemsWithActive}
                             logo={
                                 <Link
                                     href="/"
@@ -132,11 +140,11 @@ export function Navigation({ items }: NavigationProps) {
                                     handleClick(null);
                                 }
                             }}
-                            items={items}
                             openDropdown={openDropdown}
                             handleClick={handleClick}
                             handleLinkClick={handleLinkClick}
                             hasChildren
+                            inverted={isInverted}
                         />
                     </Navbar>
 

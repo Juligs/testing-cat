@@ -11,6 +11,7 @@ interface NavbarItemsProps {
     handleClick: (index: number | null) => void;
     handleLinkClick: (path: string | undefined) => void;
     hasChildren: boolean;
+    inverted: boolean;
 }
 export function NavbarItemsContainer({
     logo,
@@ -20,6 +21,7 @@ export function NavbarItemsContainer({
     openDropdown,
     handleClick,
     handleLinkClick,
+    inverted,
 }: React.PropsWithChildren<NavbarItemsProps>) {
     return (
         <>
@@ -34,8 +36,8 @@ export function NavbarItemsContainer({
                         return (
                             <NavbarItem
                                 key={index}
-                                active={openDropdown === index}
-                                inverted={isMobileNavOpen}
+                                active={openDropdown === index || !!item.active}
+                                inverted={inverted}
                                 onClick={() => {
                                     if (hasChildren) {
                                         handleClick(index);
