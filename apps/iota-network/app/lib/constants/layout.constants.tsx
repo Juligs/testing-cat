@@ -276,6 +276,10 @@ export const SOCIAL_LINKS = [
 
 export const LEGAL_ROUTES: Route[] = [
     {
+        title: 'Impressum',
+        path: '/impressum',
+    },
+    {
         title: 'Privacy Policy',
         path: '/privacy-policy',
     },
@@ -293,8 +297,18 @@ export const LEGAL_ROUTES: Route[] = [
     },
 ];
 
-export const COMPANY_DATA = {
-    address:
-        'IOTA Ecosystem DLT Foundation, registered office: Office No. 1301 & 1302, Floor 13, Tamouh Tower, Tamouh, Al Reem Island, Abu Dhabi, UAE.',
-    email: 'contact@iotadlt.foundation',
-};
+export const COMPANY_DATA = [
+    {
+        title: 'Registered Address',
+        address: ['IOTA Foundation', 'Pappelallee 78/79', '10437 Berlin', 'Germany'],
+    },
+    {
+        title: 'Company',
+        address: [
+            'ID/Company No.: 3416/1234/2',
+            'EU public ID number in the EU Transparency Register:',
+            '500027331119-04',
+            'VAT ID: DE329624902',
+        ],
+    },
+];

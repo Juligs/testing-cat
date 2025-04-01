@@ -11,12 +11,12 @@ export const DRIVING_GLOBAL_ADOPTION_IMAGE_CARD_CONTENT = [
         overline: 'tangle-association.ch',
         title: 'Visit Tangle Ecosystem Association',
         image: '/about/iota-foundation/tangle_association.png',
-        link: 'https://www.iota.org/',
+        link: 'https://tangle-association.ch/',
     },
     {
         overline: 'iotadlt.foundation',
         title: 'Visit IOTA Ecosystem DLT Foundation',
         image: '/about/iota-foundation/iota_ecosystem.png',
-        link: 'https://iotalabs.io/',
+        link: 'https://iotadlt.foundation/',
     },
 ];

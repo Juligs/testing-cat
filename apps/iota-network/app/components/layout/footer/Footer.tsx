@@ -75,8 +75,7 @@ export function Footer() {
                         <div className="flex flex-row gap-x-4 items-center">
                             <Logo color="text-labs-neutral-100" />
                             <span className="text-labs-neutral-60 text-body-sm">
-                                © {COPYRIGHT_YEAR} IOTA Ecosystem DLT Foundation. All rights
-                                reserved.
+                                © {COPYRIGHT_YEAR} IOTA Foundation. All rights reserved.
                             </span>
                         </div>
                         <div className="grid grid-cols-2 xs:flex xs:flex-nowrap gap-4 xs:gap-6">
@@ -125,12 +124,26 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="w-full bg-iota-neutral-6 py-6">
-                <div className="container flex w-full flex-col gap-4 md:justify-between md:flex-row  text-label-sm text-iota-neutral-60">
-                    <p>{COMPANY_DATA.address}</p>
-                    <Link href={`mailto:${COMPANY_DATA.email}`} aria-label="Contact Email IOTA">
-                        {COMPANY_DATA.email}
-                    </Link>
+            <div className="w-full bg-iota-neutral-6 py-6 ">
+                <div className="container grid grid-cols-1 gap-4 xs:grid-cols-3 xs:gap-6justify-between text-iota-neutral-50">
+                    {COMPANY_DATA.map((contact, index) => (
+                        <div key={index} className="flex flex-col">
+                            <div className="flex flex-col">
+                                <p className="text-label-sm pb-2">{contact.title}</p>
+                                {contact.address.map((line, lineIndex) => (
+                                    <p className="text-body-sm" key={lineIndex}>
+                                        {line}
+                                    </p>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                    <div className="flex flex-col gap-2">
+                        <p className="text-label-sm">Contact</p>
+                        <Link href="mailto:contact@iota.org" aria-label="email IOTA">
+                            <p className="text-body-sm">contact@iota.org</p>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </footer>
