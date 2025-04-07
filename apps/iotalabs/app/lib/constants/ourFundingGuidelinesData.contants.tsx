@@ -1,33 +1,40 @@
 import React from 'react';
-import { Placeholder } from '@repo/icons';
+import {
+    AssetCreation,
+    AssetManagement,
+    AssetTokenization,
+    DecentralizedDataStorageAndSeamlessTransactions,
+    DecentralizedFinance,
+    EvaluationAndInterview,
+} from '@repo/icons';
 export const FUNDING_GUIDELINES_DATA = [
     {
-        icon: <Placeholder />,
+        icon: <DecentralizedDataStorageAndSeamlessTransactions />,
         title: 'Relevance & Impact',
         body: 'Your project must push the IOTA network and its ecosystem forward. It has to solve a problem or fulfill a need with the potential to create serious impact.',
     },
     {
-        icon: <Placeholder />,
+        icon: <AssetTokenization />,
         title: 'Capability & Fair Market Value',
         body: "You've got to have the chops to deliver successfully, and your requested budget should align with industry standards for similar tasks to make sure it's fair.",
     },
     {
-        icon: <Placeholder />,
+        icon: <AssetManagement />,
         title: 'Risk Assessment',
         body: 'Keep the risks low - no flops, legal dramas, or bad PR. We want projects with low potential for poor outcomes, legal issues, and negative public perception.',
     },
     {
-        icon: <Placeholder />,
+        icon: <DecentralizedFinance />,
         title: 'No Duplication of Funding',
         body: "No double-dipping. Your project shouldn't have funding for the same work from another source.",
     },
     {
-        icon: <Placeholder />,
+        icon: <EvaluationAndInterview />,
         title: 'Conflict of Interest & Anti-Bribery',
         body: 'Be upfront about any conflicts of interest. Bribes or gifts? Hard pass. Any bribery or compensation attempts will get your application canned immediately.',
     },
     {
-        icon: <Placeholder />,
+        icon: <AssetCreation />,
         title: 'Open Source',
         body: 'All code-based projects must be open source, using licenses like MIT, GNU, or Apache 2.0. Non-OSS projects should still keep it transparent by sharing results with the public.',
     },
