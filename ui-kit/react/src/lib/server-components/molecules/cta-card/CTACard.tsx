@@ -46,6 +46,10 @@ interface CtaCardProps {
      * column layout
      */
     isVertical?: boolean;
+    /**
+     * align items start
+     */
+    alignStart?: boolean;
 }
 
 export function CtaCard({
@@ -58,6 +62,7 @@ export function CtaCard({
     brand,
     children,
     isVertical,
+    alignStart,
 }: CtaCardProps): JSX.Element {
     const colorTitle = inverted ? COLOR_TITLE_INVERTED : COLOR_TITLE;
     const colorSubtitle = inverted ? COLOR_SUBTITLE_INVERTED : COLOR_SUBTILE;
@@ -95,7 +100,8 @@ export function CtaCard({
 
             <div
                 className={clsx(
-                    'flex flex-col items-center justify-start text-center w-full gap-2 xs:gap-4 h-full',
+                    'flex flex-col justify-start text-center w-full gap-2 xs:gap-4 h-full',
+                    alignStart ? 'items-start' : 'items-center',
                     isVertical ? 'sm:w-full' : 'sm:w-1/2',
                     PADDING_SIZE,
                 )}

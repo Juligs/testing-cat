@@ -1,0 +1,57 @@
+import { Accordion } from './Accordion';
+
+<Accordion title="What is proof of stake?">
+IOTA uses a Delegated Proof of Stake (DPoS) system to secure and operate the network. This means that a validator's voting power during an epoch is determined by the amount of stake delegated to them by IOTA token holders for this epoch. The more stake delegated to a validators staking pool, the more voting power they have. In exchange for processing transactions and performing consensus, validator's staking pools earn rewards based on their share of an epoch voting power determined by the amount of stake delegated to the validator. These rewards are then shared among the stakers that delegated to the validator pool as staking rewards, and the validator itself, which is allowed to charge a commission from stakers for its operation.
+
+</Accordion>
+
+<Accordion title ='How do I stake IOTA?' >
+**Staking**  
+To stake your IOTA tokens, you send a transaction to the network that calls the staking function implemented as part of the system Move package. This transaction wraps the IOTA tokens into a self-custodial stake object, which contains details such as the validator staking pool ID and the activation epoch of your stake.
+
+Most IOTA-compatible crypto wallets provide the functionality to initiate staking and unstaking directly from your IOTA address. See the specific documentation for your chosen wallet to get detailed instructions and begin staking your IOTA.
+
+**Unstaking**  
+Similar to staking, you can withdraw your staked IOTA tokens from a validator pool by sending a transaction to the network that calls the unstaking function in the system Move package. This transaction unwraps the stake object and returns both your original stake (principal) and any accumulated rewards to your wallet in the form of IOTA tokens at the end of the epoch when the unstaking transaction happened.
+
+Rewards are accrued only during epochs where your stake remains active for the entire epoch. The rewards withdrawn from the validator's rewards pool are calculated based on the stake's activation epoch and unstaking epoch.
+
+</Accordion>
+
+<Accordion title ='Do I need to maintain my staking in any way?' >
+Stakers are encouraged to observe if the validator they delegated to is still active and participates in the set of active validators. If the delegated stake of a validator is lower than those of others, or the validator is offline, the validator will be excluded from participating  in an epoch, and stakers will not earn rewards from their delegations for these epochs.
+
+Stakers may then choose a different validator that is more reliable in participating in the active set.
+
+</Accordion>
+
+<Accordion title ='How do I choose IOTA validators?'>
+There are many metrics to consider when selecting a validator to delegate to:
+
+**Commission Rates:**  
+The commission rate is the percentage of your rewards that the validator keeps. Higher commission rates mean lower rewards for you, while very low rates might indicate the validator is not sustaining profitability, which could impact their future stability. Note that validators can adjust their commission rates over time.
+
+**Network Share:**  
+It's typically best to avoid delegating to validators with either the highest or lowest network shares. Delegating to top validators can increase centralization risks, giving them disproportionate influence in governance. Conversely, validators with minimal network share may face sustainability challenges, increasing the risk of discontinuation.
+
+**Performance:**  
+Choose a validator with a high uptime (ideally ≥99%) and a history free from slashes. Performance metrics can be reviewed on the Validator Detail page.
+
+**Value Add to the Ecosystem:**  
+Some validators provide additional resources, such as RPC Endpoints, Wallets,Tooling, App development, Node services, Marketing, tax reporting tools or explorers, which can be beneficial to long-term delegators.
+
+**Validators Self-Staked Balance:**  
+A validator with a significant amount of self-staked tokens has more at stake, potentially providing them with a greater incentive to maintain reliable operations compared to those with minimal self-stakes.
+
+</Accordion>
+
+<Accordion title ='How are staking rewards generated?'>
+When staking on IOTA, you select a specific validator to stake with. Your choice of validator can potentially affect the amount of staking rewards you receive. Several factors influence these rewards, including:
+
+-   **Validator commission rate:** Validators will set a commission rate defining which percentage of staking rewards they are taking from stakers that delegate to them. Validators use this commission to finance their operation and the technology and resources they provide to the network.For example, if a validator has a commission rate of 10%, then 10% of every staker's staking rewards is given to the validator. Note that a validator can change its commission rate at any time without prior notice, so it's essential to stay informed.
+
+-   **Validator performance:** Validators with poor performance may be penalized by slashing the rewards they should have earned during an epoch. If other Validators determine a non-performing or misbehaving Validator, they can vote to slash the rewards of their validator for the epoch where the misbehavior has occurred. If the 2/3rd majority of voting power in an epoch votes in favor of slashing, the rewards that would have been distributed to the validator's staking pool for this epoch will be burned instead, leaving the stakers and the validator without rewards.
+
+Most IOTA-compatible crypto wallets and explorers provide detailed validator metrics, including commission rates and annual percentage yield (APY). Consult the respective documentation for your wallet or explorer to learn how to access this information and make an informed decision.
+
+</Accordion>

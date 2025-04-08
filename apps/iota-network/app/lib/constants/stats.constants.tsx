@@ -1,0 +1,2 @@
+export const MINIMUM_APY_THRESHOLD = 0.001;
+export const DEFAULT_APY_DECIMALS = 2;

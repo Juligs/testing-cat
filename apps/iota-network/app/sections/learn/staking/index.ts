@@ -1,0 +1,10 @@
+export { Hero as HeroStaking } from './Hero';
+export { StakingStats } from './StakingStats';
+export { BoostYourRewards } from './BoostYouRewards';
+export { EploreValidators } from './ExploreValidators';
+export { GetStarted as Blog } from './GetStarted';
+export { IotaWallet } from './IotaWallet';
+export { StartStaking } from './StartStaking';
+export { StakingMoreToExplore } from './StakingMoreToExplore';
+export { FAQs } from './FAQs';
+export * from './components';

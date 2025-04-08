@@ -283,3 +283,22 @@ export const TWIN_KEYWORDS = [
 ];
 export const TWIN_IMAGE = '/metadata/meta_image_showcases_twin.png';
 export const TWIN_URL = `${BASE_URL}/learn/showcases/twin`;
+
+export const STAKING_METADATA_TITLE = 'IOTA Staking - Earn Rewards with Your Tokens';
+export const STAKING_METADATA_DESCRIPTION =
+    'Learn how to stake your IOTA tokens and earn rewards through a secure, decentralized, and efficient staking system.';
+export const STAKING_METADATA_DESCRIPTION_X =
+    'Stake your IOTA tokens and earn rewards securely through a decentralized and efficient staking system.';
+export const STAKING_KEYWORDS = [
+    'IOTA',
+    'staking',
+    'crypto rewards',
+    'blockchain staking',
+    'DLT',
+    'passive income',
+    'decentralized finance',
+    'staking rewards',
+    'token economy',
+];
+export const STAKING_IMAGE = '/metadata/meta_image_staking.png';
+export const STAKING_URL = `${BASE_URL}/learn/staking`;

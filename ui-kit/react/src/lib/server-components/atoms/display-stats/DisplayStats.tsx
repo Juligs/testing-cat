@@ -87,9 +87,9 @@ export function DisplayStats({
           ? ICON_COLOR_INVERTED
           : ICON_COLOR_DEFAULT;
 
-    const lineNumberLayout = isMultiLine ? 'flex-row items-baseline' : 'flex-col items-start';
+    const lineNumberLayout = isMultiLine ? 'flex-col items-start' : 'flex-row items-baseline';
     const iconLayout =
-        size === CardSize.Small ? (isMultiLine ? 'items-center ' : 'items-start') : '';
+        size === CardSize.Small ? (isMultiLine ? 'items-start ' : 'items-center') : '';
     const wrapperBaseClasses = clsx(
         'rounded-3xl w-full p-6 flex',
         size === CardSize.Default ? 'min-h-[180px]' : '',

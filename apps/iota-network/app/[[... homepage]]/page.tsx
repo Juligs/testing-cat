@@ -3,9 +3,10 @@ import { LighthouseProjects, Rwa } from '@repo/shared/sections';
 import { HomepageRedirect } from '@repo/shared/components';
 import {
     Hero,
-    // NetworkStats,
+    NetworkStats,
     IOTAAndMoveCTA,
     IntegrationStack,
+    StakingOnIota,
     BuildingSolutions,
     EcosystemProjects,
     WhyBuild,
@@ -20,6 +21,7 @@ import {
     HOMEPAGE_IMAGE,
     HOMEPAGE_URL,
 } from '@lib/constants';
+
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = getPageMetadata({
@@ -36,9 +38,10 @@ export default function Home() {
     return (
         <>
             <Hero id="hero" navbarColorScheme="inverted" />
-            {/* <NetworkStats id="network-stats" /> */}
+            <NetworkStats id="network-stats" />
             <IOTAAndMoveCTA id="iotamove-cta" navbarColorScheme="inverted" />
             <IntegrationStack id="integration-stack" />
+            <StakingOnIota id="staking-on-iota" />
             <BuildingSolutions id="building-solutions" />
             <Rwa id="rwa" />
             <LighthouseProjects id="lighthouse-projects" />

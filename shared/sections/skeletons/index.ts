@@ -1,1 +1,1 @@
-export * from './GrantsStatsSkeleton';
+export * from './ArrayDisplayStatsSkeleton';

@@ -2,6 +2,7 @@ export * from './Hero';
 export * from './NetworkStats';
 export * from './IOTAAndMoveCTA';
 export * from './IntegrationStack';
+export * from './StakingOnIota';
 export * from './BuildingSolutions';
 export * from './EcosystemProjects';
 export * from './WhyBuild';

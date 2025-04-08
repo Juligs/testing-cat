@@ -90,6 +90,11 @@ export const ROUTES: Route[] = [
                         description: 'Blockchain infrastructure bridging Web3 and the real world',
                         path: '/learn/intro',
                     },
+                    {
+                        title: 'Staking',
+                        description: 'Help secure the network while earning rewards',
+                        path: '/learn/staking',
+                    },
                 ],
             },
             {

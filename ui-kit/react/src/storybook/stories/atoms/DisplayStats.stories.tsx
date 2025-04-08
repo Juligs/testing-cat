@@ -43,6 +43,20 @@ export const DisplayStatsDefaultWithIconProgress: Story = {
         </div>
     ),
 };
+export const DisplayStatsSmallWithIconProgress: Story = {
+    render: (args) => (
+        <div className="max-w-md">
+            <DisplayStatsComponent
+                {...args}
+                value="500"
+                label="Label"
+                supportingText="Supp Text"
+                size={CardSize.Small}
+                icon={<ProgressCircleIcon progress={50} />}
+            />
+        </div>
+    ),
+};
 
 export const DisplayStatsSmall: Story = {
     render: (args) => (
@@ -54,13 +68,12 @@ export const DisplayStatsSmall: Story = {
                 supportingText="Supp Text"
                 size={CardSize.Small}
                 icon={<Placeholder />}
-                isMultiLine
             />
         </div>
     ),
 };
 
-export const DisplayStatsIconProgress: Story = {
+export const DisplayStatsMultiline: Story = {
     render: (args) => (
         <div className="max-w-xs">
             <DisplayStatsComponent

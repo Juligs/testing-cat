@@ -152,3 +152,5 @@ export { default as W3ConformingDecentralizedIdentifiers } from './W3ConformingD
 export { default as W3ConformingVerifiableCredentials } from './W3ConformingVerifiableCredentials';
 export { default as XSocialIcon } from './XSocialIcon';
 export { default as Youtube } from './Youtube';
+export { default as Dash } from './Dash';
+export { default as Add } from './Add';

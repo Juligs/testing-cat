@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { GrantsStatsSkeleton } from '../../sections/skeletons/GrantsStatsSkeleton';
+import { ArrayDisplayStatsSkeleton } from '../skeletons/ArrayDisplayStatsSkeleton';
 import { GrantsStats } from '../../utils/airtable';
 import { GrantsStatsSection } from './GrantsStatsSection';
 
@@ -33,7 +33,7 @@ export function FetchGrantsStatsData({ inverted }: FetchGrantsStatsDataProps) {
     };
 
     return isLoading || !stats ? (
-        <GrantsStatsSkeleton />
+        <ArrayDisplayStatsSkeleton />
     ) : (
         <GrantsStatsSection stats={stats} inverted={inverted} />
     );

@@ -1,8 +1,8 @@
-export const LEARN_MORE_TO_EXPLORE_CONTENT = [
+export const INTRO_MORE_TO_EXPLORE_CONTENT = [
     {
-        title: 'Focus Areas',
-        subtitle: 'Explore our diverse focus areas leveraging DLT to address real business needs',
-        link: '/learn/focus-areas',
+        title: 'Staking on IOTA',
+        subtitle: 'Earn rewards by staking your IOTAs',
+        link: '/learn/staking',
     },
     {
         title: 'Showcases',

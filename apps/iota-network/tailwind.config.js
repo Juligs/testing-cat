@@ -34,6 +34,24 @@ module.exports = {
                         },
                     },
                 },
+                accordion: {
+                    css: {
+                        '--tw-prose-body': 'var(--color-medium)',
+                        '--tw-prose-headings': 'var(--color-medium)',
+                        '--tw-prose-links': 'var(--color-medium)',
+                        '--tw-prose-counters': 'var(--color-medium)',
+                        '--tw-prose-bullets': 'var(--color-medium)',
+                        '--tw-prose-bold': 'var(--color-medium)',
+                        p: {
+                            marginBottom: theme('spacing.2'),
+                            marginTop: theme('spacing.2'),
+                        },
+                        ul: {
+                            marginBottom: theme('spacing.2'),
+                            marginTop: theme('spacing.2'),
+                        },
+                    },
+                },
             }),
         },
     },
