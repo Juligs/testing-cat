@@ -284,6 +284,26 @@ export const TWIN_KEYWORDS = [
 export const TWIN_IMAGE = '/metadata/meta_image_showcases_twin.png';
 export const TWIN_URL = `${BASE_URL}/learn/showcases/twin`;
 
+export const CONSENSUS_METADATA_TITLE = 'IOTA Consensus - Secure and Reliable Transactions';
+export const CONSENSUS_METADATA_DESCRIPTION =
+    "Discover how IOTA's consensus mechanism ensures security, reliability, and high-speed transactions with innovative technology like the Mystique protocol.";
+export const CONSENSUS_METADATA_DESCRIPTION_X =
+    "Explore IOTA's cutting-edge consensus model, designed for fast, secure, and decentralized transactions, ensuring reliability and scalability.";
+export const CONSENSUS_KEYWORDS = [
+    'IOTA',
+    'consensus',
+    'blockchain',
+    'DLT',
+    'security',
+    'decentralization',
+    'Mystique',
+    'scalability',
+    'smart contracts',
+    'transactions',
+];
+export const CONSENSUS_IMAGE = '/metadata/meta_image_consensus.png';
+export const CONSENSUS_URL = `${BASE_URL}/learn/consensus`;
+
 export const MOVE_METADATA_TITLE = 'Move on IOTA - The Smart Contract Revolution';
 export const MOVE_METADATA_DESCRIPTION =
     'Explore how Move on IOTA is redefining smart contract security, composability, and performance. Build secure and efficient dApps with the Move language on the IOTA network.';

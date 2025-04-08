@@ -48,6 +48,10 @@ export const ROUTES: Route[] = [
                 path: '/learn/tokenomics',
             },
             {
+                title: 'Consensus',
+                path: '/learn/consensus',
+            },
+            {
                 title: 'Staking',
                 path: '/learn/staking',
             },
@@ -111,6 +115,11 @@ export const ROUTES: Route[] = [
                         title: 'Tokenomics',
                         description: "Explore what drives the platform's economic dynamics",
                         path: '/learn/tokenomics',
+                    },
+                    {
+                        title: 'Consensus',
+                        description: 'Enabling fast, scalable transaction processing across apps',
+                        path: '/learn/consensus',
                     },
                     {
                         title: 'Staking',

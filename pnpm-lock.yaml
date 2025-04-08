@@ -130,8 +130,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2
       '@iota/iota-sdk':
-        specifier: ^0.5.0
-        version: 0.5.0(typescript@5.6.2)
+        specifier: ^0.6.0
+        version: 0.6.0(typescript@5.6.2)
       '@mdx-js/loader':
         specifier: ^3.0.1
         version: 3.0.1(webpack@5.95.0)
@@ -878,8 +878,8 @@ packages:
   '@iota/bcs@0.2.1':
     resolution: {integrity: sha512-T+iv5gZhUZP7BiDY7+Ir4MA2rYmyGNZA2b+nxjv219Fp8klFt+l38OWA+1RgJXrCmzuZ+M4hbMAeHhHziURX6Q==}
 
-  '@iota/iota-sdk@0.5.0':
-    resolution: {integrity: sha512-ZFg4C5EuHV55fHITKOO6Mg1dLqgojZqJsDsR3SRt8W9Ofzbjt8shlM2uLNRwDpiM7GzTb4UUFcKXpOt//5gEmQ==}
+  '@iota/iota-sdk@0.6.0':
+    resolution: {integrity: sha512-NEYiE7bdWw2DA3vLV7dO2EnoLDljN9NPhYrjfDGefTbIS9XpqX0JZTHMi//Q/K0aO4NwSHR5gu7n/ywoOTzTKg==}
     engines: {node: '>=20'}
 
   '@isaacs/cliui@8.0.2':
@@ -5543,7 +5543,7 @@ snapshots:
     dependencies:
       bs58: 6.0.0
 
-  '@iota/iota-sdk@0.5.0(typescript@5.6.2)':
+  '@iota/iota-sdk@0.6.0(typescript@5.6.2)':
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
       '@iota/bcs': 0.2.1

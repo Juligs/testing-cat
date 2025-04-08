@@ -9,5 +9,6 @@ module.exports = {
         '/api/grants-stats',
         '/api/network-stats',
         '/api/staking-stats',
+        '/api/consensus-stats',
     ],
 };
