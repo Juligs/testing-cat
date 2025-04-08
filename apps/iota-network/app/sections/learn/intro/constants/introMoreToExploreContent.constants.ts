@@ -5,8 +5,8 @@ export const INTRO_MORE_TO_EXPLORE_CONTENT = [
         link: '/learn/staking',
     },
     {
-        title: 'Showcases',
-        subtitle: 'Real-world use cases and lighthouse projects',
-        link: '/learn/showcases',
+        title: 'Move on IOTA',
+        subtitle: 'Sustainable tokenomics enable solutions for a fair, long-term economy',
+        link: '/learn/move',
     },
 ];

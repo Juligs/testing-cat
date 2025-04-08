@@ -40,8 +40,16 @@ export const ROUTES: Route[] = [
                 path: '/learn/intro',
             },
             {
+                title: 'Move on IOTA',
+                path: '/learn/move',
+            },
+            {
                 title: 'Tokenomics',
                 path: '/learn/tokenomics',
+            },
+            {
+                title: 'Staking',
+                path: '/learn/staking',
             },
             {
                 title: 'Showcases',
@@ -95,14 +103,19 @@ export const ROUTES: Route[] = [
                         path: '/learn/intro',
                     },
                     {
-                        title: 'Staking',
-                        description: 'Help secure the network while earning rewards',
-                        path: '/learn/staking',
+                        title: 'Move',
+                        description: 'Move forward with safe smart contract development',
+                        path: '/learn/move',
                     },
                     {
                         title: 'Tokenomics',
                         description: "Explore what drives the platform's economic dynamics",
                         path: '/learn/tokenomics',
+                    },
+                    {
+                        title: 'Staking',
+                        description: 'Help secure the network while earning rewards',
+                        path: '/learn/staking',
                     },
                 ],
             },

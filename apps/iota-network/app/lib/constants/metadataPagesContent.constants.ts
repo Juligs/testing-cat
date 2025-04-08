@@ -284,6 +284,26 @@ export const TWIN_KEYWORDS = [
 export const TWIN_IMAGE = '/metadata/meta_image_showcases_twin.png';
 export const TWIN_URL = `${BASE_URL}/learn/showcases/twin`;
 
+export const MOVE_METADATA_TITLE = 'Move on IOTA - The Smart Contract Revolution';
+export const MOVE_METADATA_DESCRIPTION =
+    'Explore how Move on IOTA is redefining smart contract security, composability, and performance. Build secure and efficient dApps with the Move language on the IOTA network.';
+export const MOVE_METADATA_DESCRIPTION_X =
+    'Unlock the potential of Move on IOTA for secure, scalable, and composable smart contracts. Experience the future of decentralized applications.';
+export const MOVE_KEYWORDS = [
+    'Move language',
+    'IOTA',
+    'smart contracts',
+    'blockchain',
+    'decentralized finance',
+    'dApps',
+    'Web3',
+    'composability',
+    'security',
+    'scalability',
+];
+export const MOVE_IMAGE = '/metadata/meta_image_move.png';
+export const MOVE_URL = `${BASE_URL}/learn/move`;
+
 export const STAKING_METADATA_TITLE = 'IOTA Staking - Earn Rewards with Your Tokens';
 export const STAKING_METADATA_DESCRIPTION =
     'Learn how to stake your IOTA tokens and earn rewards through a secure, decentralized, and efficient staking system.';

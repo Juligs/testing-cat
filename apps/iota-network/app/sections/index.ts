@@ -8,5 +8,6 @@ export * from './learn/showcases/ebsi';
 export * from './learn/showcases/kyc';
 export * from './learn/showcases/iprm';
 export * from './learn/showcases/dpp';
+export * from './learn/move';
 export * from './learn/staking';
 export * from './learn/tokenomics';
