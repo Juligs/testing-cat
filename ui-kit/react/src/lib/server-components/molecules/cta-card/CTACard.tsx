@@ -3,8 +3,8 @@ import {
     PADDING_SIZE,
     COLOR_TITLE,
     COLOR_TITLE_INVERTED,
-    COLOR_SUBTILE,
-    COLOR_SUBTITLE_INVERTED,
+    COLOR_TEXT,
+    COLOR_TEXT_INVERTED,
     BG_COLOR_DEFAULT,
     BG_COLOR_INVERTED,
     BG_COLOR_GRADIENT,
@@ -18,6 +18,10 @@ interface CtaCardProps {
      * The subtitle of the card
      */
     subtitle: string;
+    /**
+     * The body text of the card
+     */
+    body?: string;
     /**
      * The image of the card (used when animation is not provided)
      */
@@ -55,6 +59,7 @@ interface CtaCardProps {
 export function CtaCard({
     title,
     subtitle,
+    body,
     image,
     animation,
     alt,
@@ -65,7 +70,7 @@ export function CtaCard({
     alignStart,
 }: CtaCardProps): JSX.Element {
     const colorTitle = inverted ? COLOR_TITLE_INVERTED : COLOR_TITLE;
-    const colorSubtitle = inverted ? COLOR_SUBTITLE_INVERTED : COLOR_SUBTILE;
+    const colorText = inverted ? COLOR_TEXT_INVERTED : COLOR_TEXT;
     const bgColor = brand
         ? inverted
             ? BG_COLOR_INVERTED
@@ -107,7 +112,8 @@ export function CtaCard({
                 )}
             >
                 <p className={clsx('text-title-lg xs:text-headline-sm', colorTitle)}>{title}</p>
-                <p className={clsx('text-label-md xs:text-label-lg', colorSubtitle)}>{subtitle}</p>
+                <p className={clsx('text-label-md xs:text-label-lg', colorText)}>{subtitle}</p>
+                {body && <p className={clsx('text-body-lg', colorText)}>{body}</p>}
                 {children && (
                     <div className="flex items-center justify-center gap-6 pt-6 xs:pt-8">
                         {children}

@@ -34,7 +34,7 @@ export default function Home() {
     return (
         <>
             <HeroTokenomics id="hero" navbarColorScheme="inverted" />
-            <KeyPlayers id="key-players" navbarColorScheme="inverted" />
+            <KeyPlayers id="key-players" />
             <BalancedSystem id="balanced-system" />
             <IotaEconomy id="iota-economy" />
             <BoostYourReturns id="boost-your-returns" />

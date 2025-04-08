@@ -7,9 +7,7 @@ export const LIGHTHOUSE_IMAGE_CARD_CONTENT = [
     {
         title: 'European Blockchain PCP',
         subtitle: 'IOTA solutions for a pan-European blockchain',
-        animation: (
-            <Animation keepAspectRatio src="/lighthouse-projects/european_blockchain.json" />
-        ),
+        animation: <Animation keepAspectRatio src="/shared/european_blockchain.json" />,
         link: '/showcases/ebsi',
         image: '/lighthouse-projects/european_blockchain.png',
     },
@@ -31,7 +29,7 @@ export const LIGHTHOUSE_IMAGE_CARD_CONTENT = [
     {
         title: 'Digital Product Passports',
         subtitle: 'Secure, transparent product lifecycle data for a circular economy',
-        animation: <Animation keepAspectRatio src="/lighthouse-projects/digital_passport.json" />,
+        animation: <Animation keepAspectRatio src="/shared/digital_passport.json" />,
         link: '/showcases/dpp',
         image: '/lighthouse-projects/digital_passport.png',
     },

@@ -108,8 +108,8 @@
     /**CTA CARD */
     --cta-card-title-color: theme('colors.labs-neutral.10');
     --cta-card-title-color-inverted: theme('colors.labs-neutral.100');
-    --cta-card-subtitle-color: theme('colors.labs-neutral.30');
-    --cta-card-subtitle-color-inverted: theme('colors.labs-neutral.80');
+    --cta-card-text-color: theme('colors.labs-neutral.30');
+    --cta-card-text-color-inverted: theme('colors.labs-neutral.80');
 }
 
 :root.network {
@@ -211,8 +211,8 @@
     /**CTA CARD */
     --cta-card-title-color: theme('colors.iota-neutral.10');
     --cta-card-title-color-inverted: theme('colors.iota-neutral.100');
-    --cta-card-subtitle-color: theme('colors.iota-neutral.30');
-    --cta-card-subtitle-color-inverted: theme('colors.iota-neutral.80');
+    --cta-card-text-color: theme('colors.iota-neutral.30');
+    --cta-card-text-color-inverted: theme('colors.iota-neutral.80');
 }
 
 :root.foundation {
@@ -314,6 +314,6 @@
     /**CTA CARD */
     --cta-card-title-color: theme('colors.iota-neutral.10');
     --cta-card-title-color-inverted: theme('colors.iota-neutral.100');
-    --cta-card-subtitle-color: theme('colors.iota-neutral.30');
-    --cta-card-subtitle-color-inverted: theme('colors.iota-neutral.80');
+    --cta-card-text-color: theme('colors.iota-neutral.30');
+    --cta-card-text-color-inverted: theme('colors.iota-neutral.80');
 }

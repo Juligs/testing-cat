@@ -284,6 +284,27 @@ export const TWIN_KEYWORDS = [
 export const TWIN_IMAGE = '/metadata/meta_image_showcases_twin.png';
 export const TWIN_URL = `${BASE_URL}/learn/showcases/twin`;
 
+export const BUSINESS_INNOVATION_PROGRAM_METADATA_TITLE =
+    'IOTA Business Innovation Program | Technical & Financial Support for Builders';
+export const BUSINESS_INNOVATION_PROGRAM_METADATA_DESCRIPTION =
+    'Apply to the IOTA Business Innovation Program and receive funding, guidance, and access to a global ecosystem. Build on the IOTA mainnet and turn your vision into real-world impact.';
+export const BUSINESS_INNOVATION_PROGRAM_METADATA_DESCRIPTION_X =
+    'Receive financial and technical backing from the IOTA Foundation. Accelerate your project with the Business Innovation Program.';
+export const BUSINESS_INNOVATION_PROGRAM_KEYWORDS = [
+    'IOTA',
+    'Business Innovation',
+    'Funding',
+    'Mainnet',
+    'Web3',
+    'Digital Product Passport',
+    'Supply Chain',
+    'Innovation',
+    'Support Program',
+    'IOTA Builders',
+];
+export const BUSINESS_INNOVATION_PROGRAM_IMAGE = '/metadata/meta_image_business_innovation.png';
+export const BUSINESS_INNOVATION_PROGRAM_URL = `${BASE_URL}/build/business-innovation-program`;
+
 export const CONSENSUS_METADATA_TITLE = 'IOTA Consensus - Secure and Reliable Transactions';
 export const CONSENSUS_METADATA_DESCRIPTION =
     "Discover how IOTA's consensus mechanism ensures security, reliability, and high-speed transactions with innovative technology like the Mystique protocol.";

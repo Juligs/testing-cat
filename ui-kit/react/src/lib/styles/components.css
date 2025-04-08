@@ -238,12 +238,12 @@
         color: var(--cta-card-title-color-inverted);
     }
 
-    .cta-card-subtitle-color {
-        color: var(--cta-card-subtitle-color);
+    .cta-card-text-color {
+        color: var(--cta-card-text-color);
     }
 
-    .cta-card-subtitle-color-inverted {
-        color: var(--cta-card-subtitle-color-inverted);
+    .cta-card-text-color-inverted {
+        color: var(--cta-card-text-color-inverted);
     }
 
     .bg-color-gradient {

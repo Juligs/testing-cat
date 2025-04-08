@@ -13,6 +13,7 @@ import {
     Telegram,
     XSocialIcon,
     Youtube,
+    DecentralizedFinance,
 } from '@repo/icons';
 
 export const LEARN_FEATURED_CARDS: Route[] = [
@@ -201,6 +202,10 @@ export const ROUTES: Route[] = [
                 path: 'https://docs.iota.org/',
                 isExternal: true,
             },
+            {
+                title: 'Business innovation Program',
+                path: '/build/business-innovation-program',
+            },
         ],
         navbarSections: [
             {
@@ -212,6 +217,17 @@ export const ROUTES: Route[] = [
                         description: 'Comprehensive knowledge source',
                         path: 'https://docs.iota.org/',
                         isExternal: true,
+                    },
+                ],
+            },
+            {
+                title: 'Grants',
+                icon: <DecentralizedFinance />,
+                children: [
+                    {
+                        title: 'IOTA Business Innovation Program',
+                        description: 'Technical and financial support for real-world impact',
+                        path: '/build/business-innovation-program',
                     },
                 ],
             },

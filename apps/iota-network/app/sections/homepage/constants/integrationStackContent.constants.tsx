@@ -25,23 +25,13 @@ export const INTEGRATION_STACK_IMAGE_CARD_CONTENT = [
     {
         title: 'IOTA Identity',
         subtitle: 'Empowering secure, private, and decentralized digital interactions',
-        animation: (
-            <Animation
-                keepAspectRatio
-                src="/homepage/integration-stack/image-card-animation/identity.json"
-            />
-        ),
+        animation: <Animation keepAspectRatio src="/shared/identity.json" />,
         link: 'https://docs.iota.org/iota-identity',
     },
     {
         title: 'IOTA Tokenization',
         subtitle: 'Effortlessly create and manage unique digital assets',
-        animation: (
-            <Animation
-                keepAspectRatio
-                src="/homepage/integration-stack/image-card-animation/raw_tokenization.json"
-            />
-        ),
+        animation: <Animation keepAspectRatio src="/shared/raw_tokenization.json" />,
         link: 'https://docs.iota.org/developer/advanced/asset-tokenization',
     },
     {

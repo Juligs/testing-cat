@@ -35,7 +35,7 @@ export const CtaCardFullWidth: Story = {
         <div className="p-6">
             <CtaCardCardComponent
                 {...args}
-                image="https://files.iota.org/media/iotalabs/iotalabs_hero_poster.jpg"
+                image="https://images.unsplash.com/photo-1742646895349-93c71c08e693?q=80&w=2026&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 title="CTA Card Title"
                 subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id diam vitae lectus lobortis vehicula eget nec neque."
             >
@@ -55,7 +55,7 @@ export const CtaCardHalfWidthDesktop: Story = {
     render: (args) => (
         <CtaCardCardComponent
             {...args}
-            image="https://files.iota.org/media/iotalabs/iotalabs_hero_poster.jpg"
+            image="https://images.unsplash.com/photo-1742646895349-93c71c08e693?q=80&w=2026&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             title="CTA Card Title"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id diam vitae lectus lobortis vehicula eget nec neque."
         >
@@ -74,7 +74,7 @@ export const CtaCardMobile: Story = {
     render: (args) => (
         <CtaCardCardComponent
             {...args}
-            image="https://files.iota.org/media/iotalabs/iotalabs_hero_poster.jpg"
+            image="https://images.unsplash.com/photo-1742646895349-93c71c08e693?q=80&w=2026&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             title="CTA Card Title"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id diam vitae lectus lobortis vehicula eget nec neque."
         />

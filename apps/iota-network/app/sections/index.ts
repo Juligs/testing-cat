@@ -8,6 +8,7 @@ export * from './learn/showcases/ebsi';
 export * from './learn/showcases/kyc';
 export * from './learn/showcases/iprm';
 export * from './learn/showcases/dpp';
+export * from './build/business-innovation-program';
 export * from './learn/consensus';
 export * from './learn/move';
 export * from './learn/staking';

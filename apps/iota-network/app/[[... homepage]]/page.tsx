@@ -12,6 +12,7 @@ import {
     WhyBuild,
     BlogPosts,
     GettingStarted,
+    JoinUsBuildingCTA,
 } from '@sections';
 import {
     HOMEPAGE_METADATA_TITLE,
@@ -45,6 +46,7 @@ export default function Home() {
             <BuildingSolutions id="building-solutions" />
             <Rwa id="rwa" />
             <LighthouseProjects id="lighthouse-projects" />
+            <JoinUsBuildingCTA id="join-us-in-building" />
             <EcosystemProjects id="ecosystem-projects" />
             <WhyBuild id="why-build" navbarColorScheme="inverted" />
             <BlogPosts id="blog-posts" />
