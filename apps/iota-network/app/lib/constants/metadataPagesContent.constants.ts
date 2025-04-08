@@ -302,3 +302,23 @@ export const STAKING_KEYWORDS = [
 ];
 export const STAKING_IMAGE = '/metadata/meta_image_staking.png';
 export const STAKING_URL = `${BASE_URL}/learn/staking`;
+
+export const TOKENOMICS_METADATA_TITLE = 'IOTA Tokenomics - Sustainable and Scalable Economy';
+export const TOKENOMICS_METADATA_DESCRIPTION =
+    "Explore how IOTA's tokenomics model enables a sustainable, decentralized economy with staking, governance, and innovative digital asset utilities.";
+export const TOKENOMICS_METADATA_DESCRIPTION_X =
+    'Enhance cross-border trade efficiency with TWIN, an IOTA-based solution for secure and transparent global trade data sharing.';
+export const TOKENOMICS_KEYWORDS = [
+    'IOTA',
+    'tokenomics',
+    'blockchain economy',
+    'staking',
+    'governance',
+    'crypto',
+    'digital assets',
+    'DLT',
+    'decentralization',
+    'ecosystem',
+];
+export const TOKENOMICS_IMAGE = '/metadata/meta_image_tokenomics.png';
+export const TOKENOMICS_URL = `${BASE_URL}/learn/tokenomics`;

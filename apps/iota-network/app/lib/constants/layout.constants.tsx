@@ -40,6 +40,10 @@ export const ROUTES: Route[] = [
                 path: '/learn/intro',
             },
             {
+                title: 'Tokenomics',
+                path: '/learn/tokenomics',
+            },
+            {
                 title: 'Showcases',
                 path: '/learn/showcases',
                 children: [
@@ -94,6 +98,11 @@ export const ROUTES: Route[] = [
                         title: 'Staking',
                         description: 'Help secure the network while earning rewards',
                         path: '/learn/staking',
+                    },
+                    {
+                        title: 'Tokenomics',
+                        description: "Explore what drives the platform's economic dynamics",
+                        path: '/learn/tokenomics',
                     },
                 ],
             },

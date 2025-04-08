@@ -9,3 +9,4 @@ export * from './learn/showcases/kyc';
 export * from './learn/showcases/iprm';
 export * from './learn/showcases/dpp';
 export * from './learn/staking';
+export * from './learn/tokenomics';

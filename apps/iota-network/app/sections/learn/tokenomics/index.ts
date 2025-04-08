@@ -1,0 +1,9 @@
+export { Hero as HeroTokenomics } from './Hero';
+export { KeyPlayers } from './KeyPlayers';
+export { BalancedSystem } from './BalancedSystem';
+export { IotaEconomy } from './IotaEconomy';
+export { BoostYourReturns } from './BoostYourReturns';
+export { Exchanges } from './Exchanges';
+export { InstitutionalAcquisition } from './InstitutionalAcquisition';
+export { Wallets } from './Wallets';
+export { KeyPlayersMoreToExplore } from './KeyPlayersMoreToExplore';
