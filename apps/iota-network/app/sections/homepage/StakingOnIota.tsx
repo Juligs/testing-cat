@@ -13,12 +13,12 @@ export function StakingOnIota({ id, navbarColorScheme }: BaseSectionProps) {
                     <div className="sm:pr-[92px] lg:pr-[102px] text-balance">
                         <VerticalTitle {...STAKING_ON_IOTA_VERTICAL_TITLE}>
                             <Actions>
-                                {STAKING_ON_IOTA_BUTTONS.map((data, index) => (
+                                {STAKING_ON_IOTA_BUTTONS.map(({ isExternal, ...data }, index) => (
                                     <Link
                                         href={data.link}
                                         key={index}
-                                        target={data.isExternal ? '_blank' : undefined}
-                                        rel={data.isExternal ? 'noopener noreferrer' : undefined}
+                                        target={isExternal ? '_blank' : undefined}
+                                        rel={isExternal ? 'noopener noreferrer' : undefined}
                                         className="[&>div]:h-full"
                                         aria-label={`Link to ${data.arialLabel}`}
                                     >
