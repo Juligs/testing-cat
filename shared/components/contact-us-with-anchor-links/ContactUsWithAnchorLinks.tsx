@@ -12,9 +12,11 @@ interface ContactUsProps {
         isExternal?: boolean;
         leadingIcon?: React.ReactNode;
     }[];
+    contactButtonLink?: string;
 }
 
-export function ContactUsWithAnchorLinks({ anchorLinks }: ContactUsProps) {
+export function ContactUsWithAnchorLinks({ anchorLinks, contactButtonLink }: ContactUsProps) {
+    const contactLink = contactButtonLink ?? CONTACT_US_BUTTON.link;
     return (
         <div className="flex flex-col sm:flex-row w-full overflow-hidden rounded-4xl items-center text-center bg-color-gradient p-10 sm:p-14 lg:p-20 gap-10 sm:gap-20">
             <div className="sm:w-1/2">
@@ -24,7 +26,7 @@ export function ContactUsWithAnchorLinks({ anchorLinks }: ContactUsProps) {
                     body={CONTACT_US_TITLE_CONTENT.body}
                 >
                     <Actions>
-                        <Link href={CONTACT_US_BUTTON.link} aria-label="Link to Contact Us">
+                        <Link href={contactLink} aria-label="Link to Contact Us">
                             <Button
                                 text={CONTACT_US_BUTTON.text}
                                 variant={CONTACT_US_BUTTON.variant}

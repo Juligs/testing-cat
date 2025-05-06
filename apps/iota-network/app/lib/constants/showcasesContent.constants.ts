@@ -37,4 +37,9 @@ export const SHOWCASES_LIST: Showcase[] = [
         subtitle: 'Secure, transparent product lifecycle data for a circular economy',
         link: '/learn/showcases/dpp',
     },
+    {
+        title: 'Realize',
+        subtitle: 'Unlocking Yields for Tokenized Assets',
+        link: '/learn/showcases/realize',
+    },
 ];

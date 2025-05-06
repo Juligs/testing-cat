@@ -383,3 +383,33 @@ export const TOKENOMICS_KEYWORDS = [
 ];
 export const TOKENOMICS_IMAGE = '/metadata/meta_image_tokenomics.png';
 export const TOKENOMICS_URL = `${BASE_URL}/learn/tokenomics`;
+
+export const REALIZE_METADATA_TITLE =
+    'Realize - Unlocking Yields for Tokenized Assets | IOTA Technology Showcase';
+export const REALIZE_METADATA_DESCRIPTION =
+    "Discover Realize, Abu Dhabi's pioneering tokenization platform, launching the Middle East's first tokenized T-Bills Fund. By integrating tokenized assets into curated DeFi applications, Realize creates new yield opportunities, enhances liquidity, and ensures regulatory compliance - paving the way for a new era of digital finance.";
+export const REALIZE_METADATA_DESCRIPTION_X =
+    'Realize is bringing real-world assets on-chain with institutional-grade tokenization, unlocking new liquidity and yield opportunities for investors. Explore the future of tokenized asset management.';
+export const REALIZE_KEYWORDS = [
+    'IOTA',
+    'Realize',
+    'tokenization',
+    'DeFi',
+    'T-Bills',
+    'digital assets',
+    'blockchain finance',
+    'real-world assets',
+    'Abu Dhabi',
+    'ADGM',
+    'liquidity solutions',
+    'institutional custody',
+    'regulated tokenization',
+    'secure transactions',
+    'yield generation',
+    'asset management',
+    'finance innovation',
+    'on-chain assets',
+    'blockchain',
+];
+export const REALIZE_IMAGE = '/metadata/meta_image_showcases_realize.png';
+export const REALIZE_URL = `${BASE_URL}/learn/showcases/realize`;
