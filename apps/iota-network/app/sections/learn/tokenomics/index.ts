@@ -7,3 +7,4 @@ export { Exchanges } from './Exchanges';
 export { InstitutionalAcquisition } from './InstitutionalAcquisition';
 export { Wallets } from './Wallets';
 export { KeyPlayersMoreToExplore } from './KeyPlayersMoreToExplore';
+export { LiquidStaking } from './LiquidStaking';

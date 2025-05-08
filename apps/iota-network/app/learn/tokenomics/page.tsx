@@ -10,6 +10,7 @@ import {
     Exchanges,
     InstitutionalAcquisition,
     Wallets,
+    LiquidStaking,
 } from '@sections';
 import { ContactUs } from '@repo/shared/sections';
 import {
@@ -38,6 +39,7 @@ export default function Home() {
             <BalancedSystem id="balanced-system" />
             <IotaEconomy id="iota-economy" />
             <BoostYourReturns id="boost-your-returns" />
+            <LiquidStaking id="liquid-staking" />
             <Exchanges id="exchanges" />
             <InstitutionalAcquisition id="institutional-acqusition" navbarColorScheme="inverted" />
             <Wallets id="wallets" />
