@@ -30,7 +30,7 @@ export default function Home() {
     return (
         <>
             <HeroMainnet id="hero" navbarColorScheme="inverted" />
-            <Versatile id="versatile" navbarColorScheme="inverted" />
+            <Versatile id="versatile" />
             <CombiningDAG id="combining-dag" />
             <Immutable id="immutable" />
             <MainnetIotaTechnologyStack id="mainnet-iota-technology-stack" />

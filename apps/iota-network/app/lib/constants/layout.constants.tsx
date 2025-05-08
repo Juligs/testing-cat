@@ -195,7 +195,7 @@ export const ROUTES: Route[] = [
     },
     {
         title: 'Build',
-        path: 'https://docs.iota.org/',
+        path: '/build',
         isExternal: true,
         children: [
             {
@@ -246,12 +246,12 @@ export const ROUTES: Route[] = [
                 path: '/products/product-suite',
             },
             {
-                title: 'EVM',
-                path: '/products/evm',
-            },
-            {
                 title: 'Mainnet',
                 path: '/products/mainnet',
+            },
+            {
+                title: 'EVM',
+                path: '/products/evm',
             },
         ],
         navbarSections: [

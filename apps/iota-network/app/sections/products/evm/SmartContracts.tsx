@@ -11,8 +11,13 @@ export function SmartContracts({ id, navbarColorScheme }: BaseSectionProps) {
 
                 <div className="gap-6 grid grid-cols-1 xs:grid-cols-3">
                     {SMART_CONTRACTS_IMAGE_CARD_CONTENT.map((data, index) => (
-                        <Link href={data.link} target="_blank" className="[&>div]:h-full">
-                            <ImageCard key={index} {...data} />
+                        <Link
+                            href={data.link}
+                            target="_blank"
+                            className="[&>div]:h-full"
+                            key={index}
+                        >
+                            <ImageCard {...data} />
                         </Link>
                     ))}
                 </div>
