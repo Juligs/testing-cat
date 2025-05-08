@@ -4,6 +4,8 @@ import {
     BG_COLOR_INVERTED,
     TEXT_COLOR,
     TEXT_COLOR_INVERTED,
+    ICON_COLOR,
+    ICON_COLOR_INVERTED,
 } from './stackContainer.constants';
 
 interface StackContainerProps {
@@ -23,6 +25,14 @@ interface StackContainerProps {
      * are links
      */
     children?: React.ReactNode;
+    /**
+     * column icon
+     */
+    column?: boolean;
+    /**
+     * color icon
+     */
+    highlighted?: boolean;
 }
 
 export function StackContainer({
@@ -30,21 +40,26 @@ export function StackContainer({
     inverted,
     icon,
     children,
+    column,
+    highlighted,
 }: StackContainerProps): JSX.Element {
-    const bgColors = inverted ? BG_COLOR_INVERTED : BG_COLOR;
+    const bgColors = highlighted ? (inverted ? '' : '') : inverted ? BG_COLOR_INVERTED : BG_COLOR;
+
     const textColor = inverted ? TEXT_COLOR_INVERTED : TEXT_COLOR;
+    const IconColor = inverted ? ICON_COLOR_INVERTED : ICON_COLOR;
     return (
         <div
             className={clsx('stack-container flex flex-col w-full p-6 gap-6 rounded-3xl', bgColors)}
         >
             <div
                 className={clsx(
-                    'flex justify-between items-start pb-4 [&_svg]:h-8 [&_svg]:w-8',
+                    'flex items-start pb-4',
                     textColor,
+                    column ? 'flex flex-col-reverse gap-4' : 'justify-between',
                 )}
             >
                 <p className="text-label-lg">{text}</p>
-                {icon}
+                <div className={clsx('[&_svg]:h-8 [&_svg]:w-8', IconColor)}>{icon}</div>
             </div>
             <div className="flex flex-col gap-4">{children}</div>
         </div>

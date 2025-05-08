@@ -1,6 +1,14 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { CorePageHero, FocusAreasMoreToExplore } from '@sections';
+import {
+    CorePageHero,
+    FocusAreasMoreToExplore,
+    RWAIotaTechnology,
+    TWINIotaTechnology,
+    IdentityIotaTechnology,
+    CircularIotaTechnology,
+    DecentralizedIotaTechnology,
+} from '@sections';
 import {
     RealWorldAssetTokenization,
     DrivingInnovationAdoption,
@@ -34,10 +42,15 @@ export default function Home() {
             <CorePageHero id="hero" navbarColorScheme="inverted" />
             <DrivingInnovationAdoption id="driving-innovation-adoption" />
             <RealWorldAssetTokenization id="real-world-asset-tokenization" />
+            <RWAIotaTechnology id="rwa-iota-technology" />
             <TradeAndSupplyChains id="trade-and-supply-chains" />
+            <TWINIotaTechnology id="twin-iota-technology" />
             <DigitalIdentity id="digital-identity" />
+            <IdentityIotaTechnology id="identity-iota-technology" />
             <CircularEconomy id="circular-economy" />
+            <CircularIotaTechnology id="circular-iota-technology" />
             <DecentralizedFinance id="decentralized-finance" />
+            <DecentralizedIotaTechnology id="decentralized-iota-technology" />
             <FocusAreasMoreToExplore id="explore" />
             <ContactUs id="contact" />
         </>
