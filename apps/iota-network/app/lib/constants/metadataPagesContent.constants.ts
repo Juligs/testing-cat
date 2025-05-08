@@ -432,3 +432,23 @@ export const PRODUCT_SUITE_KEYWORDS = [
 ];
 export const PRODUCT_SUITE_IMAGE = '/metadata/meta_image_product_suite.png';
 export const PRODUCT_SUITE_URL = `${BASE_URL}/products/product-suite`;
+
+export const MAINNET_METADATA_TITLE = 'IOTA Mainnet - Fast, Scalable, and Decentralized Layer 1';
+export const MAINNET_METADATA_DESCRIPTION =
+    'Explore the IOTA Mainnet, a highly efficient, feeless, and scalable Layer 1 network designed for real-world applications with enhanced programmability and decentralization.';
+export const MAINNET_METADATA_DESCRIPTION_X =
+    'Discover the IOTA Mainnet, a next-gen Layer 1 network offering unmatched scalability, decentralization, and efficiency for real-world applications.';
+export const MAINNET_KEYWORDS = [
+    'IOTA',
+    'mainnet',
+    'Layer 1',
+    'decentralization',
+    'scalability',
+    'blockchain',
+    'DAG',
+    'smart contracts',
+    'Move language',
+    'digital ledger',
+];
+export const MAINNET_IMAGE = '/metadata/meta_image_mainnet.png';
+export const MAINNET_URL = `${BASE_URL}/products/mainnet`;

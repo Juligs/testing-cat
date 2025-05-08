@@ -245,6 +245,10 @@ export const ROUTES: Route[] = [
                 title: 'Product Suite',
                 path: '/products/product-suite',
             },
+            {
+                title: 'Mainnet',
+                path: '/products/mainnet',
+            },
         ],
         navbarSections: [
             {
@@ -255,6 +259,15 @@ export const ROUTES: Route[] = [
                         title: 'Product Suite',
                         description: 'Explore our complete Technology Stack',
                         path: '/products/product-suite',
+                    },
+                ],
+            },
+            {
+                children: [
+                    {
+                        title: 'IOTA Mainnet',
+                        description: 'Move-based Layer 1 with object-centric architectures',
+                        path: '/products/mainnet',
                     },
                 ],
             },
