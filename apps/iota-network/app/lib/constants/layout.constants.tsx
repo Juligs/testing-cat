@@ -8,6 +8,7 @@ import {
     Flexibility,
     GitHub,
     GoogleScholar,
+    IotaChains,
     LinkedIn,
     Reddit,
     Telegram,
@@ -228,6 +229,32 @@ export const ROUTES: Route[] = [
                         title: 'IOTA Business Innovation Program',
                         description: 'Technical and financial support for real-world impact',
                         path: '/build/business-innovation-program',
+                    },
+                ],
+            },
+            {
+                children: LEARN_FEATURED_CARDS,
+            },
+        ],
+    },
+    {
+        title: 'Products',
+        path: '/products',
+        children: [
+            {
+                title: 'Product Suite',
+                path: '/products/product-suite',
+            },
+        ],
+        navbarSections: [
+            {
+                title: 'Core Tech',
+                icon: <IotaChains />,
+                children: [
+                    {
+                        title: 'Product Suite',
+                        description: 'Explore our complete Technology Stack',
+                        path: '/products/product-suite',
                     },
                 ],
             },

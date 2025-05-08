@@ -413,3 +413,22 @@ export const REALIZE_KEYWORDS = [
 ];
 export const REALIZE_IMAGE = '/metadata/meta_image_showcases_realize.png';
 export const REALIZE_URL = `${BASE_URL}/learn/showcases/realize`;
+
+export const PRODUCT_SUITE_METADATA_TITLE = 'IOTA Product Suite - Building the Digital Economy';
+export const PRODUCT_SUITE_METADATA_DESCRIPTION =
+    'Discover the IOTA Product Suite, an advanced technology stack powering decentralization, security, and interoperability across digital assets and applications.';
+export const PRODUCT_SUITE_METADATA_DESCRIPTION_X =
+    "Unlock the full potential of IOTA's Product Suite, a powerful technology stack for decentralization, scalability, and security.";
+export const PRODUCT_SUITE_KEYWORDS = [
+    'IOTA',
+    'Product Suite',
+    'blockchain technology',
+    'DLT',
+    'digital economy',
+    'decentralization',
+    'smart contracts',
+    'interoperability',
+    'security',
+];
+export const PRODUCT_SUITE_IMAGE = '/metadata/meta_image_product_suite.png';
+export const PRODUCT_SUITE_URL = `${BASE_URL}/products/product-suite`;
