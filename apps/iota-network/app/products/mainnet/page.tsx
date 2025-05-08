@@ -5,7 +5,7 @@ import {
     Versatile,
     CombiningDAG,
     Immutable,
-    IotaTechnologyStack,
+    MainnetIotaTechnologyStack,
     MainnetMoreToExplore,
 } from '@sections';
 import {
@@ -33,7 +33,7 @@ export default function Home() {
             <Versatile id="versatile" navbarColorScheme="inverted" />
             <CombiningDAG id="combining-dag" />
             <Immutable id="immutable" />
-            <IotaTechnologyStack id="iota-technology-stack" />
+            <MainnetIotaTechnologyStack id="mainnet-iota-technology-stack" />
             <MainnetMoreToExplore id="more to explore" />
         </>
     );

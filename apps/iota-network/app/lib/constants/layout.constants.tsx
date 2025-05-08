@@ -204,7 +204,7 @@ export const ROUTES: Route[] = [
                 isExternal: true,
             },
             {
-                title: 'Business innovation Program',
+                title: 'Business Innovation Program',
                 path: '/build/business-innovation-program',
             },
         ],
@@ -246,6 +246,10 @@ export const ROUTES: Route[] = [
                 path: '/products/product-suite',
             },
             {
+                title: 'EVM',
+                path: '/products/evm',
+            },
+            {
                 title: 'Mainnet',
                 path: '/products/mainnet',
             },
@@ -268,6 +272,15 @@ export const ROUTES: Route[] = [
                         title: 'IOTA Mainnet',
                         description: 'Move-based Layer 1 with object-centric architectures',
                         path: '/products/mainnet',
+                    },
+                ],
+            },
+            {
+                children: [
+                    {
+                        title: 'IOTA EVM',
+                        description: 'High-performance Layer 2 EVM with seamless interoperability',
+                        path: '/products/evm',
                     },
                 ],
             },

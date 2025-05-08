@@ -384,6 +384,45 @@ export const TOKENOMICS_KEYWORDS = [
 export const TOKENOMICS_IMAGE = '/metadata/meta_image_tokenomics.png';
 export const TOKENOMICS_URL = `${BASE_URL}/learn/tokenomics`;
 
+export const PRODUCT_SUITE_METADATA_TITLE = 'IOTA Product Suite - Building the Digital Economy';
+export const PRODUCT_SUITE_METADATA_DESCRIPTION =
+    'Discover the IOTA Product Suite, an advanced technology stack powering decentralization, security, and interoperability across digital assets and applications.';
+export const PRODUCT_SUITE_METADATA_DESCRIPTION_X =
+    "Unlock the full potential of IOTA's Product Suite, a powerful technology stack for decentralization, scalability, and security.";
+export const PRODUCT_SUITE_KEYWORDS = [
+    'IOTA',
+    'Product Suite',
+    'blockchain technology',
+    'DLT',
+    'digital economy',
+    'decentralization',
+    'smart contracts',
+    'interoperability',
+    'security',
+];
+export const PRODUCT_SUITE_IMAGE = '/metadata/meta_image_product_suite.png';
+export const PRODUCT_SUITE_URL = `${BASE_URL}/products/product-suite`;
+
+export const EVM_METADATA_TITLE = 'IOTA EVM - Scalable and Interoperable Smart Contracts';
+export const EVM_METADATA_DESCRIPTION =
+    'Unlock the power of smart contracts with IOTA EVM, a high-performance Ethereum-compatible environment that enables seamless interoperability and scalability.';
+export const EVM_METADATA_DESCRIPTION_X =
+    'Deploy powerful, scalable, and Ethereum-compatible smart contracts on IOTA EVM. Experience seamless interoperability and enhanced performance.';
+export const EVM_KEYWORDS = [
+    'IOTA',
+    'EVM',
+    'smart contracts',
+    'Ethereum compatibility',
+    'blockchain',
+    'DLT',
+    'tokenization',
+    'scalability',
+    'interoperability',
+    'Web3',
+];
+export const EVM_IMAGE = '/metadata/meta_image_evm.png';
+export const EVM_URL = `${BASE_URL}/products/evm`;
+
 export const REALIZE_METADATA_TITLE =
     'Realize - Unlocking Yields for Tokenized Assets | IOTA Technology Showcase';
 export const REALIZE_METADATA_DESCRIPTION =
@@ -413,25 +452,6 @@ export const REALIZE_KEYWORDS = [
 ];
 export const REALIZE_IMAGE = '/metadata/meta_image_showcases_realize.png';
 export const REALIZE_URL = `${BASE_URL}/learn/showcases/realize`;
-
-export const PRODUCT_SUITE_METADATA_TITLE = 'IOTA Product Suite - Building the Digital Economy';
-export const PRODUCT_SUITE_METADATA_DESCRIPTION =
-    'Discover the IOTA Product Suite, an advanced technology stack powering decentralization, security, and interoperability across digital assets and applications.';
-export const PRODUCT_SUITE_METADATA_DESCRIPTION_X =
-    "Unlock the full potential of IOTA's Product Suite, a powerful technology stack for decentralization, scalability, and security.";
-export const PRODUCT_SUITE_KEYWORDS = [
-    'IOTA',
-    'Product Suite',
-    'blockchain technology',
-    'DLT',
-    'digital economy',
-    'decentralization',
-    'smart contracts',
-    'interoperability',
-    'security',
-];
-export const PRODUCT_SUITE_IMAGE = '/metadata/meta_image_product_suite.png';
-export const PRODUCT_SUITE_URL = `${BASE_URL}/products/product-suite`;
 
 export const MAINNET_METADATA_TITLE = 'IOTA Mainnet - Fast, Scalable, and Decentralized Layer 1';
 export const MAINNET_METADATA_DESCRIPTION =

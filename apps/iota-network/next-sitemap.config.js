@@ -10,5 +10,6 @@ module.exports = {
         '/api/network-stats',
         '/api/staking-stats',
         '/api/consensus-stats',
+        '/api/evm-stats',
     ],
 };

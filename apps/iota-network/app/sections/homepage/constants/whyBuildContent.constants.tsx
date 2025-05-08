@@ -66,9 +66,11 @@ export const WHY_BUILD_TEXT_LINK = [
     {
         text: 'Get started with Move',
         link: 'https://docs.iota.org/developer/iota-101/move-overview/',
+        isExternal: true,
     },
     {
         text: 'Get started with EVM',
-        link: 'https://evm.iota.org',
+        link: '/products/evm',
+        isExternal: false,
     },
 ];
