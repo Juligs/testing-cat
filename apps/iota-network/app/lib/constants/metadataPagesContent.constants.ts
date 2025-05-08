@@ -345,11 +345,12 @@ export const MOVE_KEYWORDS = [
 export const MOVE_IMAGE = '/metadata/meta_image_move.png';
 export const MOVE_URL = `${BASE_URL}/learn/move`;
 
-export const STAKING_METADATA_TITLE = 'IOTA Staking - Earn Rewards with Your Tokens';
+export const STAKING_METADATA_TITLE =
+    'IOTA Staking - Securing and Decentralizing the Network while earning Rewards';
 export const STAKING_METADATA_DESCRIPTION =
-    'Learn how to stake your IOTA tokens and earn rewards through a secure, decentralized, and efficient staking system.';
+    'Learn how to stake your IOTA tokens and help secure the network while earning with our efficient staking system.';
 export const STAKING_METADATA_DESCRIPTION_X =
-    'Stake your IOTA tokens and earn rewards securely through a decentralized and efficient staking system.';
+    'Stake your IOTA tokens and help secure the network while earning with our efficient staking system.';
 export const STAKING_KEYWORDS = [
     'IOTA',
     'staking',
