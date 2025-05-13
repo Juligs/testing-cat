@@ -4,6 +4,7 @@ import {
     BusinessInnovationHero,
     BusinessInnovationOverview,
     ProjectFunding,
+    FirstParticipants,
     OurDecisionFramework,
     WhatIsSupported,
     HowToApply,
@@ -35,6 +36,7 @@ export default function Home() {
             <BusinessInnovationHero id="hero" navbarColorScheme="inverted" />
             <BusinessInnovationOverview id="business-innovation-overview" />
             <ProjectFunding id="project-funding" />
+            <FirstParticipants id="first-participants" />
             <OurDecisionFramework id="our-decision-framework" />
             <WhatIsSupported id="what-is-supported" />
             <HowToApply id="how-to-apply" />

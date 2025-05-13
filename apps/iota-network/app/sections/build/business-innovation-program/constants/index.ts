@@ -1,5 +1,6 @@
 export * from './heroContent.constants';
 export * from './projectFundingContent.constants';
+export * from './firstParticipantsContent.constants';
 export * from './ourDecisionFrameworkContent.constants';
 export * from './whatIsSupportedContent.constants';
 export * from './joinUsInBuildingCTAContent.constants';

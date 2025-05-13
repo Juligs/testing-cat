@@ -49,6 +49,6 @@ export const WHAT_IS_SUPPORTED_IMAGE_CARD = [
 export const WHAT_IS_SUPPORTED_ICON_CONTENT = {
     icon: <DataInsights />,
     title: 'Disclaimer',
-    body: 'We support real-world solutions ready for commercial deployment on the public IOTA Mainnet. Our focus is on projects with tangible business applications ? not speculative or high-risk DeFi, pure infrastructure, academic research, or solutions built on other networks (like private chains or the IOTA EVM). If your idea falls outside these guidelines, please explore the Iotalabs Grants Program.',
+    body: 'We support real-world solutions ready for commercial deployment on the public IOTA Mainnet. Our focus is on projects with tangible business applications - not speculative or high-risk DeFi, pure infrastructure, academic research, or solutions built on other networks (like private chains or the IOTA EVM). If your idea falls outside these guidelines, please explore the Iotalabs Grants Program.',
     filled: true,
 };
