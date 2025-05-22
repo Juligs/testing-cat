@@ -1,38 +1,50 @@
-import { getIotaClient } from '@lib/utils';
-import { getStakingRatio } from '@lib/utils';
+import { getIotaClient, getStakingRatio, formatCompactNumber } from '@lib/utils';
 
 export interface NetworkStats {
-    dailyActiveAddresses?: number | string | null;
     stakingRatio?: number | null;
+    numberOfTxsLast30Days?: string | null;
 }
 
-async function getDailyActiveAddresses() {
-    const client = getIotaClient();
+async function getTotalTxsLast30Epochs(): Promise<string | null> {
     try {
-        const { dailyActiveAddresses } = await client.getAddressMetrics();
-        return dailyActiveAddresses;
+        const client = getIotaClient();
+        const { data } = await client.getEpochMetrics({
+            descendingOrder: true,
+            limit: 31, // Request 31 to skip current epoch (epochTotalTransactions = 0) and use previous 30
+        });
+
+        if (!data || data.length < 2) return null;
+
+        // Skip current epoch and sum the previous 30
+        const totalTxsLast30days = data
+            .slice(1, 31)
+            .reduce(
+                (sum, { epochTotalTransactions }) => sum + Number(epochTotalTransactions || 0),
+                0,
+            );
+
+        return formatCompactNumber(totalTxsLast30days);
     } catch (error) {
-        console.error('Error in getTotalSupply:', error);
+        console.error('Error fetching total transactions for last 30 epochs:', error);
         return null;
     }
 }
-
 export async function getNetworkStats(): Promise<NetworkStats> {
     try {
-        const [dailyActiveAddresses, stakingRatio] = await Promise.all([
-            getDailyActiveAddresses(),
+        const [stakingRatio, numberOfTxsLast30Days] = await Promise.all([
             getStakingRatio(),
+            getTotalTxsLast30Epochs(),
         ]);
 
         return {
-            dailyActiveAddresses,
             stakingRatio,
+            numberOfTxsLast30Days,
         };
     } catch (error) {
         console.error('Error in getNetworkStats:', error);
         return {
-            dailyActiveAddresses: null,
             stakingRatio: null,
+            numberOfTxsLast30Days: null,
         };
     }
 }
