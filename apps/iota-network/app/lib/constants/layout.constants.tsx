@@ -15,6 +15,7 @@ import {
     XSocialIcon,
     Youtube,
     DecentralizedFinance,
+    ProtocolAgnosticDesign,
 } from '@repo/icons';
 
 export const LEARN_FEATURED_CARDS: Route[] = [
@@ -253,6 +254,10 @@ export const ROUTES: Route[] = [
                 title: 'EVM',
                 path: '/products/evm',
             },
+            {
+                title: 'Identity',
+                path: '/products/identity',
+            },
         ],
         navbarSections: [
             {
@@ -264,23 +269,28 @@ export const ROUTES: Route[] = [
                         description: 'Explore our complete Technology Stack',
                         path: '/products/product-suite',
                     },
-                ],
-            },
-            {
-                children: [
                     {
                         title: 'IOTA Mainnet',
                         description: 'Move-based Layer 1 with object-centric architectures',
                         path: '/products/mainnet',
                     },
-                ],
-            },
-            {
-                children: [
                     {
                         title: 'IOTA EVM',
                         description: 'High-performance Layer 2 EVM with seamless interoperability',
                         path: '/products/evm',
+                    },
+                ],
+            },
+
+            {
+                title: 'Trust Framework',
+                icon: <ProtocolAgnosticDesign />,
+                children: [
+                    {
+                        title: 'IOTA Digital Identity',
+                        description:
+                            'Empowering secure, private, and decentralized digital interactions',
+                        path: '/products/identity',
                     },
                 ],
             },
@@ -289,6 +299,7 @@ export const ROUTES: Route[] = [
             },
         ],
     },
+
     {
         title: 'Connect',
         path: ' https://blog.iota.org/',

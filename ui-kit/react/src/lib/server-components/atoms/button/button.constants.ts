@@ -31,6 +31,17 @@ export const TEXT_COLOR: Record<ButtonVariant, string> = {
 };
 export const TEXT_COLOR_INVERTED: Record<ButtonVariant, string> = {
     [ButtonVariant.Primary]: 'btn-text-color-primary',
-    [ButtonVariant.Secondary]: 'btn-text-color-default',
+    [ButtonVariant.Secondary]: 'btn-text-color-inverted',
     [ButtonVariant.Ghost]: 'btn-text-color-inverted',
+};
+
+export const BUTTON_BG_COLOR: Record<ButtonVariant, string> = {
+    [ButtonVariant.Primary]: 'btn-bg-primary',
+    [ButtonVariant.Secondary]: 'btn-bg-secondary',
+    [ButtonVariant.Ghost]: 'btn-bg-ghost',
+};
+
+export const BUTTON_BG_COLOR_INVERTED: Record<ButtonVariant, string> = {
+    ...BUTTON_BG_COLOR,
+    [ButtonVariant.Secondary]: 'btn-bg-secondary-inverted',
 };

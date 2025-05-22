@@ -473,3 +473,24 @@ export const MAINNET_KEYWORDS = [
 ];
 export const MAINNET_IMAGE = '/metadata/meta_image_mainnet.png';
 export const MAINNET_URL = `${BASE_URL}/products/mainnet`;
+
+export const IDENTITY_METADATA_TITLE =
+    'IOTA Identity | Privacy-Preserving Digital Identity with DLT';
+export const IDENTITY_METADATA_DESCRIPTION =
+    'Discover IOTA Identity, the decentralized identity protocol that puts individuals and organizations in control of their data. Built for security, privacy, and interoperability on the IOTA mainnet.';
+export const IDENTITY_METADATA_DESCRIPTION_X =
+    'Take control of your data with IOTA Identity. Create, share, and verify identities and credentials securely.';
+export const IDENTITY_KEYWORDS = [
+    'IOTA Identity',
+    'Digital Identity',
+    'Decentralized Identity',
+    'DID',
+    'Self-Sovereign Identity',
+    'SSI',
+    'Zero-Knowledge',
+    'Verifiable Credentials',
+    'IOTA',
+    'DLT',
+];
+export const IDENTITY_URL = `${BASE_URL}/products/identity`;
+export const IDENTITY_IMAGE = '/metadata/meta_image_identity.png';
