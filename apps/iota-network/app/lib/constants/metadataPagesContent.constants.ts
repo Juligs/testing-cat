@@ -345,11 +345,12 @@ export const MOVE_KEYWORDS = [
 export const MOVE_IMAGE = '/metadata/meta_image_move.png';
 export const MOVE_URL = `${BASE_URL}/learn/move`;
 
-export const STAKING_METADATA_TITLE = 'IOTA Staking - Earn Rewards with Your Tokens';
+export const STAKING_METADATA_TITLE =
+    'IOTA Staking - Securing and Decentralizing the Network while earning Rewards';
 export const STAKING_METADATA_DESCRIPTION =
-    'Learn how to stake your IOTA tokens and earn rewards through a secure, decentralized, and efficient staking system.';
+    'Learn how to stake your IOTA tokens and help secure the network while earning with our efficient staking system.';
 export const STAKING_METADATA_DESCRIPTION_X =
-    'Stake your IOTA tokens and earn rewards securely through a decentralized and efficient staking system.';
+    'Stake your IOTA tokens and help secure the network while earning with our efficient staking system.';
 export const STAKING_KEYWORDS = [
     'IOTA',
     'staking',
@@ -383,3 +384,113 @@ export const TOKENOMICS_KEYWORDS = [
 ];
 export const TOKENOMICS_IMAGE = '/metadata/meta_image_tokenomics.png';
 export const TOKENOMICS_URL = `${BASE_URL}/learn/tokenomics`;
+
+export const PRODUCT_SUITE_METADATA_TITLE = 'IOTA Product Suite - Building the Digital Economy';
+export const PRODUCT_SUITE_METADATA_DESCRIPTION =
+    'Discover the IOTA Product Suite, an advanced technology stack powering decentralization, security, and interoperability across digital assets and applications.';
+export const PRODUCT_SUITE_METADATA_DESCRIPTION_X =
+    "Unlock the full potential of IOTA's Product Suite, a powerful technology stack for decentralization, scalability, and security.";
+export const PRODUCT_SUITE_KEYWORDS = [
+    'IOTA',
+    'Product Suite',
+    'blockchain technology',
+    'DLT',
+    'digital economy',
+    'decentralization',
+    'smart contracts',
+    'interoperability',
+    'security',
+];
+export const PRODUCT_SUITE_IMAGE = '/metadata/meta_image_product_suite.png';
+export const PRODUCT_SUITE_URL = `${BASE_URL}/products/product-suite`;
+
+export const EVM_METADATA_TITLE = 'IOTA EVM - Scalable and Interoperable Smart Contracts';
+export const EVM_METADATA_DESCRIPTION =
+    'Unlock the power of smart contracts with IOTA EVM, a high-performance Ethereum-compatible environment that enables seamless interoperability and scalability.';
+export const EVM_METADATA_DESCRIPTION_X =
+    'Deploy powerful, scalable, and Ethereum-compatible smart contracts on IOTA EVM. Experience seamless interoperability and enhanced performance.';
+export const EVM_KEYWORDS = [
+    'IOTA',
+    'EVM',
+    'smart contracts',
+    'Ethereum compatibility',
+    'blockchain',
+    'DLT',
+    'tokenization',
+    'scalability',
+    'interoperability',
+    'Web3',
+];
+export const EVM_IMAGE = '/metadata/meta_image_evm.png';
+export const EVM_URL = `${BASE_URL}/products/evm`;
+
+export const REALIZE_METADATA_TITLE =
+    'Realize - Unlocking Yields for Tokenized Assets | IOTA Technology Showcase';
+export const REALIZE_METADATA_DESCRIPTION =
+    "Discover Realize, Abu Dhabi's pioneering tokenization platform, launching the Middle East's first tokenized T-Bills Fund. By integrating tokenized assets into curated DeFi applications, Realize creates new yield opportunities, enhances liquidity, and ensures regulatory compliance - paving the way for a new era of digital finance.";
+export const REALIZE_METADATA_DESCRIPTION_X =
+    'Realize is bringing real-world assets on-chain with institutional-grade tokenization, unlocking new liquidity and yield opportunities for investors. Explore the future of tokenized asset management.';
+export const REALIZE_KEYWORDS = [
+    'IOTA',
+    'Realize',
+    'tokenization',
+    'DeFi',
+    'T-Bills',
+    'digital assets',
+    'blockchain finance',
+    'real-world assets',
+    'Abu Dhabi',
+    'ADGM',
+    'liquidity solutions',
+    'institutional custody',
+    'regulated tokenization',
+    'secure transactions',
+    'yield generation',
+    'asset management',
+    'finance innovation',
+    'on-chain assets',
+    'blockchain',
+];
+export const REALIZE_IMAGE = '/metadata/meta_image_showcases_realize.png';
+export const REALIZE_URL = `${BASE_URL}/learn/showcases/realize`;
+
+export const MAINNET_METADATA_TITLE = 'IOTA Mainnet - Fast, Scalable, and Decentralized Layer 1';
+export const MAINNET_METADATA_DESCRIPTION =
+    'Explore the IOTA Mainnet, a highly efficient, feeless, and scalable Layer 1 network designed for real-world applications with enhanced programmability and decentralization.';
+export const MAINNET_METADATA_DESCRIPTION_X =
+    'Discover the IOTA Mainnet, a next-gen Layer 1 network offering unmatched scalability, decentralization, and efficiency for real-world applications.';
+export const MAINNET_KEYWORDS = [
+    'IOTA',
+    'mainnet',
+    'Layer 1',
+    'decentralization',
+    'scalability',
+    'blockchain',
+    'DAG',
+    'smart contracts',
+    'Move language',
+    'digital ledger',
+];
+export const MAINNET_IMAGE = '/metadata/meta_image_mainnet.png';
+export const MAINNET_URL = `${BASE_URL}/products/mainnet`;
+
+export const IDENTITY_METADATA_TITLE =
+    'IOTA Identity | Privacy-Preserving Digital Identity with DLT';
+export const IDENTITY_METADATA_DESCRIPTION =
+    'Discover IOTA Identity, the decentralized identity protocol that puts individuals and organizations in control of their data. Built for security, privacy, and interoperability on the IOTA mainnet.';
+export const IDENTITY_METADATA_DESCRIPTION_X =
+    'Take control of your data with IOTA Identity. Create, share, and verify identities and credentials securely.';
+export const IDENTITY_KEYWORDS = [
+    'IOTA Identity',
+    'Digital Identity',
+    'Decentralized Identity',
+    'DID',
+    'Self-Sovereign Identity',
+    'SSI',
+    'Zero-Knowledge',
+    'Verifiable Credentials',
+    'IOTA',
+    'DLT',
+];
+export const IDENTITY_URL = `${BASE_URL}/products/identity`;
+export const IDENTITY_IMAGE = '/metadata/meta_image_identity.png';

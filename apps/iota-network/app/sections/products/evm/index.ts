@@ -1,0 +1,11 @@
+export { Hero as HeroEVM } from './Hero';
+export { EVMOverview } from './EVMOverview';
+export { Unlock } from './Unlock';
+export { BridgingIota } from './BridgingdIota';
+export { EVMNewEra } from './EVMNewEra';
+export { SmartContracts } from './SmartContracts';
+export { Connection } from './Connection';
+export { EVMBridge } from './EVMBridge';
+export { EVMIotaTechnologyStack } from './EVMIotaTechnologyStack';
+export { Learning } from './Learning';
+export { EVMMoreToExplore } from './EVMMoreToExplore';

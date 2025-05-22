@@ -11,7 +11,7 @@ export const EXPLORE_VALIDATORS_IMAGE_CARD_CONTENT = [
         title: 'IOTA Explorer ',
         body: 'Search by coin, NFT, package, object or transaction',
         image: '/learn/staking/explore-validators/iota_explorer.png',
-        link: 'https://explorer.rebased.iota.org/',
+        link: 'https://explorer.iota.org/',
     },
     {
         title: 'IOTASCAN',

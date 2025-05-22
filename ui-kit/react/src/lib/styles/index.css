@@ -39,6 +39,7 @@
     --btn-bg-primary: theme('colors.labs-primary.70');
     --btn-bg-secondary: theme('colors.labs-neutral.92');
     --btn-bg-ghost: transparent;
+    --btn-bg-secondary-inverted: theme('colors.transparency-primary-labs.16');
     --btn-text-color-default: theme('colors.labs-neutral.10');
     --btn-text-color-inverted: theme('colors.labs-primary.100');
     --btn-text-color-primary: theme('colors.labs-neutral.10');
@@ -131,8 +132,8 @@
     --color-highlighted-inverted: theme('colors.network-primary.40');
     --color-text-links: theme('colors.network-primary.40');
     --color-text-links-inverted: theme('colors.network-primary.60');
-    --bg-color-card: theme('colors.labs-neutral.96');
-    --bg-color-card-inverted: theme('colors.labs-neutral.6');
+    --bg-color-card: theme('colors.iota-neutral.96');
+    --bg-color-card-inverted: theme('colors.iota-neutral.6');
     --color-icon-content: theme('colors.network-primary.30');
     --color-icon-content-inverted: theme('colors.network-primary.80');
     --bg-color-gradient: linear-gradient(
@@ -145,6 +146,7 @@
     /* BUTTON */
     --btn-bg-primary: theme('colors.network-primary.20');
     --btn-bg-secondary: theme('colors.iota-neutral.92');
+    --btn-bg-secondary-inverted: theme('colors.transparency-primary-network.16');
     --btn-bg-ghost: transparent;
     --btn-text-color-default: theme('colors.iota-neutral.10');
     --btn-text-color-inverted: theme('colors.network-primary.100');
@@ -248,6 +250,7 @@
     /* BUTTON */
     --btn-bg-primary: theme('colors.foundation-primary.20');
     --btn-bg-secondary: theme('colors.iota-neutral.92');
+    --btn-bg-secondary-inverted: theme('colors.transparency-primary-foundation.16');
     --btn-bg-ghost: transparent;
     --btn-text-color-default: theme('colors.iota-neutral.10');
     --btn-text-color-inverted: theme('colors.foundation-primary.100');

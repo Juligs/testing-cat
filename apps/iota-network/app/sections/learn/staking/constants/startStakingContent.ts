@@ -9,7 +9,7 @@ export const START_STAKING_CTA_CONTENT = {
 export const TEXT_LINK_CTA = [
     {
         text: 'Stake now',
-        link: 'https://explorer.rebased.iota.org/validators',
+        link: 'https://explorer.iota.org/validators',
     },
     {
         text: 'Get the wallet',

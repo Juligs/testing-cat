@@ -66,7 +66,7 @@ export function AnchorLink({
     return (
         <div
             className={clsx(
-                'group anchor-link hover:cursor-pointer flex flex-row justify-between items-center w-full',
+                'group anchor-link hover:cursor-pointer flex flex-row justify-between items-center w-full gap-6',
                 hoverBgColor,
                 hoverTextColor,
                 ANCHOR_LINK_PADDING[size],

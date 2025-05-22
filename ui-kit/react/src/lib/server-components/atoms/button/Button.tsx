@@ -5,6 +5,8 @@ import {
     TEXT_SIZE_MAP,
     TEXT_COLOR,
     TEXT_COLOR_INVERTED,
+    BUTTON_BG_COLOR,
+    BUTTON_BG_COLOR_INVERTED,
 } from './button.constants';
 import { ButtonSize, ButtonVariant } from './button.enums';
 import clsx from 'clsx';
@@ -58,12 +60,13 @@ export function Button({
     const textColor = inverted ? TEXT_COLOR_INVERTED[variant] : TEXT_COLOR[variant];
     const isOnlyIcon = Boolean(!text && icon);
     const isSmallButton = ButtonSize.Small === size;
+    const bgColor = inverted ? BUTTON_BG_COLOR_INVERTED[variant] : BUTTON_BG_COLOR[variant];
 
     return (
         <button
             type={type}
             {...buttonProps}
-            className={clsx('btn state-layer', variant, {
+            className={clsx('btn state-layer', bgColor, {
                 'w-full': fullWidth,
                 'opacity-50': buttonProps.disabled,
             })}

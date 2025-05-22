@@ -17,7 +17,7 @@ export function EVMToolkit({ id, navbarColorScheme }: BaseSectionProps) {
                     inverted
                 >
                     <Link
-                        href="https://evm-toolkit.evm.iotaledger.net"
+                        href="https://evm-bridge.iota.org/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

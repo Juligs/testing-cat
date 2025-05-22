@@ -8,12 +8,14 @@ import {
     Flexibility,
     GitHub,
     GoogleScholar,
+    IotaChains,
     LinkedIn,
     Reddit,
     Telegram,
     XSocialIcon,
     Youtube,
     DecentralizedFinance,
+    ProtocolAgnosticDesign,
 } from '@repo/icons';
 
 export const LEARN_FEATURED_CARDS: Route[] = [
@@ -194,7 +196,7 @@ export const ROUTES: Route[] = [
     },
     {
         title: 'Build',
-        path: 'https://docs.iota.org/',
+        path: '/build',
         isExternal: true,
         children: [
             {
@@ -203,7 +205,7 @@ export const ROUTES: Route[] = [
                 isExternal: true,
             },
             {
-                title: 'Business innovation Program',
+                title: 'Business Innovation Program',
                 path: '/build/business-innovation-program',
             },
         ],
@@ -236,6 +238,68 @@ export const ROUTES: Route[] = [
             },
         ],
     },
+    {
+        title: 'Products',
+        path: '/products',
+        children: [
+            {
+                title: 'Product Suite',
+                path: '/products/product-suite',
+            },
+            {
+                title: 'Mainnet',
+                path: '/products/mainnet',
+            },
+            {
+                title: 'EVM',
+                path: '/products/evm',
+            },
+            {
+                title: 'Identity',
+                path: '/products/identity',
+            },
+        ],
+        navbarSections: [
+            {
+                title: 'Core Tech',
+                icon: <IotaChains />,
+                children: [
+                    {
+                        title: 'Product Suite',
+                        description: 'Explore our complete Technology Stack',
+                        path: '/products/product-suite',
+                    },
+                    {
+                        title: 'IOTA Mainnet',
+                        description: 'Move-based Layer 1 with object-centric architectures',
+                        path: '/products/mainnet',
+                    },
+                    {
+                        title: 'IOTA EVM',
+                        description: 'High-performance Layer 2 EVM with seamless interoperability',
+                        path: '/products/evm',
+                    },
+                ],
+            },
+
+            {
+                title: 'Trust Framework',
+                icon: <ProtocolAgnosticDesign />,
+                children: [
+                    {
+                        title: 'IOTA Digital Identity',
+                        description:
+                            'Empowering secure, private, and decentralized digital interactions',
+                        path: '/products/identity',
+                    },
+                ],
+            },
+            {
+                children: LEARN_FEATURED_CARDS,
+            },
+        ],
+    },
+
     {
         title: 'Connect',
         path: ' https://blog.iota.org/',

@@ -9,7 +9,7 @@
         border-radius: var(--action-border-radius);
     }
 
-    .btn-primary {
+    .btn-bg-primary {
         background-color: var(--btn-bg-primary);
     }
 
@@ -17,11 +17,15 @@
         color: var(--btn-text-color-primary);
     }
 
-    .btn-secondary {
+    .btn-bg-secondary {
         background-color: var(--btn-bg-secondary);
     }
 
-    .btn-ghost {
+    .btn-bg-secondary-inverted {
+        background-color: var(--btn-bg-secondary-inverted);
+    }
+
+    .btn-bg-ghost {
         background-color: var(--btn-bg-ghost);
     }
 
