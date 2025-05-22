@@ -474,6 +474,32 @@ export const MAINNET_KEYWORDS = [
 export const MAINNET_IMAGE = '/metadata/meta_image_mainnet.png';
 export const MAINNET_URL = `${BASE_URL}/products/mainnet`;
 
+export const TOKENIZATION_METADATA_TITLE =
+    'IOTA Tokenization |  Effortlessly Create and Manage Unique Digital Assets';
+export const TOKENIZATION_METADATA_DESCRIPTION =
+    'IOTA Tokenization enables secure, real-world asset ownership on-chain by transforming rights into digital tokens. Unlock new markets and efficiencies with effortless asset creation and management on IOTA.';
+export const TOKENIZATION_METADATA_DESCRIPTION_X =
+    'Unlock new markets with IOTA Tokenization by turning real-world asset ownership into secure, on-chain digital tokens for effortless creation and management.';
+export const TOKENIZATION_KEYWORDS = [
+    'IOTA Tokenization',
+    'Asset Tokenization',
+    'Real-World Assets',
+    'Digital Ownership',
+    'DLT',
+    'Tokenized Assets',
+    'Fractional Ownership',
+    'Web3',
+    'Digital Twins',
+    'On-Chain Assets',
+    'Smart Contracts',
+    'Secure Asset Management',
+    'IOTA',
+    'Trustless Transfers',
+    'Decentralized Finance',
+];
+export const TOKENIZATION_IMAGE = '/metadata/meta_image_tokenization.png';
+export const TOKENIZATION_URL = `${BASE_URL}/products/tokenization`;
+
 export const IDENTITY_METADATA_TITLE =
     'IOTA Identity | Privacy-Preserving Digital Identity with DLT';
 export const IDENTITY_METADATA_DESCRIPTION =

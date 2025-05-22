@@ -255,6 +255,10 @@ export const ROUTES: Route[] = [
                 path: '/products/evm',
             },
             {
+                title: 'Tokenization',
+                path: '/products/tokenization',
+            },
+            {
                 title: 'Identity',
                 path: '/products/identity',
             },
@@ -287,6 +291,11 @@ export const ROUTES: Route[] = [
                 icon: <ProtocolAgnosticDesign />,
                 children: [
                     {
+                        title: 'IOTA Tokenization',
+                        description: 'Effortlessly create and manage unique digital assets',
+                        path: '/products/tokenization',
+                    },
+                    {
                         title: 'IOTA Digital Identity',
                         description:
                             'Empowering secure, private, and decentralized digital interactions',
@@ -294,6 +303,7 @@ export const ROUTES: Route[] = [
                     },
                 ],
             },
+
             {
                 children: LEARN_FEATURED_CARDS,
             },
