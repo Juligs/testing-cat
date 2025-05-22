@@ -4,7 +4,7 @@ export * from './bridgingIotaContent.constants';
 export * from './smartContractsContent.constants';
 export * from './connectionContent.constants';
 export * from './evmBridgeContent.constants';
-export * from './iotaTechnologyStackContent.constants';
+export * from './EVMIotaTechnologyStackContent.constants';
 export * from './learningContent.constants';
 export * from './evmMoreToExploreContent.constants';
 export * from './EVMNewEraContent.constants';
