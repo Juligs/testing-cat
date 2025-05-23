@@ -16,7 +16,7 @@ export function EploreValidators({ id, navbarColorScheme }: BaseSectionProps) {
                         <VerticalTitle {...EXPLORE_VALIDATORS_VERTICAL_TITLE} />
                     </div>
                 </TwoColumnsImageTemplate>
-                <div className="gap-6 grid grid-cols-1 xs:grid-cols-3">
+                <div className="gap-6 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4">
                     {EXPLORE_VALIDATORS_IMAGE_CARD_CONTENT.map((data, index) => (
                         <Link
                             key={index}
@@ -26,12 +26,7 @@ export function EploreValidators({ id, navbarColorScheme }: BaseSectionProps) {
                             className="[&>div]:h-full"
                             aria-label={`Link to ${data.title}`}
                         >
-                            <ImageCard
-                                title={data.title}
-                                body={data.body}
-                                image={data.image}
-                                size={ImageCardSize.Small}
-                            />
+                            <ImageCard {...data} size={ImageCardSize.Small} />
                         </Link>
                     ))}
                 </div>

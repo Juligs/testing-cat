@@ -4,6 +4,7 @@ export { BoostYourRewards } from './BoostYouRewards';
 export { EploreValidators } from './ExploreValidators';
 export { GetStarted as Blog } from './GetStarted';
 export { IotaWallet } from './IotaWallet';
+export { LiquidStaking as LiquidStakingIcons } from './LiquidStaking';
 export { StartStaking } from './StartStaking';
 export { StakingMoreToExplore } from './StakingMoreToExplore';
 export { FAQs } from './FAQs';

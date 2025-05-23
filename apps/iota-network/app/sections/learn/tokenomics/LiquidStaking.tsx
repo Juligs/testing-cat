@@ -10,7 +10,7 @@ export function LiquidStaking({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30">
-                <TwoColumnsImageTemplate image="/learn/tokenomics/liquid_staking.png">
+                <TwoColumnsImageTemplate image="/shared/liquid_staking.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...LIQUID_STAKING_TITLE}>
                             <Actions>
