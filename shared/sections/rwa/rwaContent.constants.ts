@@ -23,7 +23,7 @@ export const CTA_CAROUSEL_CONTENT = [
         title: 'Realize',
         subtitle:
             "A tokenization platform from Abu Dhabi, launching the Middle East's first tokenized T-Bills Fund and integrating assets into curated DeFi to boost liquidity, utility, and returns.",
-        image: '/shared/realize.png',
+        image: '/shared/realize_without_bg.png',
         text: 'View Showcases',
         link: '/showcases/realize',
     },
