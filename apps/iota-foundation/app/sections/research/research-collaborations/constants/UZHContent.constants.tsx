@@ -10,7 +10,7 @@ export const UZH_TITLE_CONTENT = {
 export const UZH_BUTTONS = [
     {
         text: 'Learn more',
-        link: 'https://www.uzh.ch/en.html',
+        link: 'https://www.blockchain.uzh.ch',
         variant: ButtonVariant.Primary,
     },
     {
