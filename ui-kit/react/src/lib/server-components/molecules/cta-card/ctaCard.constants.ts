@@ -1,4 +1,4 @@
-export const PADDING_SIZE = 'py-8 px-6 xs:px-12 xs:pb-12 sm:px-16';
+export const PADDING_SIZE = 'px-6 xs:px-12 xs:pb-12 sm:px-16';
 
 export const COLOR_TITLE = 'cta-card-title-color';
 export const COLOR_TITLE_INVERTED = 'cta-card-title-color-inverted';
