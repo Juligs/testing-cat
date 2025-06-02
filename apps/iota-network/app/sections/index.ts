@@ -15,3 +15,4 @@ export * from './learn/move';
 export * from './learn/staking';
 export * from './learn/tokenomics';
 export * from './products';
+export * from './connect';

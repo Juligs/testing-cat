@@ -4,16 +4,8 @@ import {
     BlogPost,
     ClientLibraries,
     DecentralizedDataStorageAndSeamlessTransactions,
-    Discord,
     Flexibility,
-    GitHub,
-    GoogleScholar,
     IotaChains,
-    LinkedIn,
-    Reddit,
-    Telegram,
-    XSocialIcon,
-    Youtube,
     DecentralizedFinance,
     ProtocolAgnosticDesign,
 } from '@repo/icons';
@@ -317,9 +309,14 @@ export const ROUTES: Route[] = [
 
     {
         title: 'Connect',
-        path: ' https://blog.iota.org/',
+        path: '/connect',
         isExternal: true,
         children: [
+            {
+                title: 'Build Together',
+                path: '/connect/building-together',
+                isExternal: false,
+            },
             {
                 title: 'Blog',
                 path: 'https://blog.iota.org/',
@@ -327,6 +324,16 @@ export const ROUTES: Route[] = [
             },
         ],
         navbarSections: [
+            {
+                children: [
+                    {
+                        title: 'Build Together',
+                        description: 'Join the conversation',
+                        path: '/connect/building-together',
+                        isExternal: false,
+                    },
+                ],
+            },
             {
                 title: 'Latest',
                 icon: <BlogPost />,
@@ -343,65 +350,6 @@ export const ROUTES: Route[] = [
                 children: LEARN_FEATURED_CARDS,
             },
         ],
-    },
-];
-
-export const SOCIAL_LINKS = [
-    {
-        title: 'Builder',
-        icon: Discord,
-        url: 'https://builders-discord.iota.org/',
-        isExternal: true,
-        arialLabel: 'Builder Discord',
-    },
-    {
-        title: 'Community',
-        icon: Discord,
-        url: 'https://discord.iota.org',
-        isExternal: true,
-        arialLabel: 'Community Discord',
-    },
-    {
-        icon: Telegram,
-        url: 'https://t.me/IOTA_Official_Community',
-        isExternal: true,
-        arialLabel: 'Telegram',
-    },
-    {
-        icon: Reddit,
-        url: 'https://www.reddit.com/r/Iota/',
-        isExternal: true,
-        arialLabel: 'Reddit',
-    },
-    {
-        icon: GitHub,
-        url: 'https://github.com/iotaledger',
-        isExternal: true,
-        arialLabel: 'GitHub',
-    },
-    {
-        icon: GoogleScholar,
-        url: 'https://scholar.google.com/citations?hl=en&user=_ZIH81gAAAAJ&view_op=list_works&sortby=pubdate',
-        isExternal: true,
-        arialLabel: 'Google Scholar',
-    },
-    {
-        icon: Youtube,
-        url: 'https://www.youtube.com/c/iotafoundation',
-        isExternal: true,
-        arialLabel: 'YouTube',
-    },
-    {
-        icon: XSocialIcon,
-        url: 'https://x.com/iota',
-        isExternal: true,
-        arialLabel: 'X',
-    },
-    {
-        icon: LinkedIn,
-        url: 'https://www.linkedin.com/company/iotafoundation/',
-        isExternal: true,
-        arialLabel: 'LinkedIn',
     },
 ];
 

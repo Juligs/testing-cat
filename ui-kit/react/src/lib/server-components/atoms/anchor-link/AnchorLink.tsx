@@ -27,6 +27,7 @@ interface AnchorLinkProps {
     inverted?: boolean;
     leadingIcon?: React.ReactNode;
     onClick?: () => void;
+    darkest?: boolean;
 }
 
 export function AnchorLink({
@@ -36,9 +37,16 @@ export function AnchorLink({
     inverted,
     leadingIcon,
     onClick,
+    darkest,
 }: AnchorLinkProps) {
     const textColor = inverted ? INVERTED_TEXT_COLOR : DEFAULT_TEXT_COLOR;
-    const leadingIconColor = inverted ? INVERTED_ICON_COLOR : DEFAULT_ICON_COLOR;
+    const leadingIconColor = darkest
+        ? inverted
+            ? INVERTED_TEXT_COLOR
+            : DEFAULT_TEXT_COLOR
+        : inverted
+          ? INVERTED_ICON_COLOR
+          : DEFAULT_ICON_COLOR;
     const hoverTextColor = leadingIcon || size === AnchorLinkSize.Small ? HOVER_TEXT_COLOR : '';
     const hoverBgColor = leadingIcon && size === AnchorLinkSize.Default ? '' : HOVER_BG_COLOR;
 
