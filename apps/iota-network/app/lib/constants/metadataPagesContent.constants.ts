@@ -520,3 +520,24 @@ export const IDENTITY_KEYWORDS = [
 ];
 export const IDENTITY_URL = `${BASE_URL}/products/identity`;
 export const IDENTITY_IMAGE = '/metadata/meta_image_identity.png';
+
+export const GAS_STATION_METADATA_TITLE =
+    'IOTA Gas Station | Sponsored transaction fees for a smoother Web3 experience';
+export const GAS_STATION_METADATA_DESCRIPTION =
+    'IOTA Gas Station enables fee-free Web3 experiences by sponsoring transaction costs for users. Unlock new business models and seamless user onboarding with sponsored transactions on IOTA.';
+export const GAS_STATION_METADATA_DESCRIPTION_X =
+    'Say goodbye to transaction fees. IOTA Gas Station lets businesses sponsor user transactions, creating a seamless Web3 experience.';
+export const GAS_STATION_KEYWORDS = [
+    'IOTA Gas Station',
+    'Gas Fees',
+    'Sponsored Transactions',
+    'Web3',
+    'Feeless Blockchain',
+    'User Onboarding',
+    'DLT',
+    'IOTA',
+    'Tokenization',
+    'Smart Contracts',
+];
+export const GAS_STATION_URL = `${BASE_URL}/products/gas-station`;
+export const GAS_STATION_IMAGE = '/metadata/meta_image_gas.png';

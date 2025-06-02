@@ -301,6 +301,11 @@ export const ROUTES: Route[] = [
                             'Empowering secure, private, and decentralized digital interactions',
                         path: '/products/identity',
                     },
+                    {
+                        title: 'IOTA Gas Station',
+                        description: 'Simplify Web3 user experience and onboarding',
+                        path: '/products/gas-station',
+                    },
                 ],
             },
 
