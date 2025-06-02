@@ -296,7 +296,7 @@ export const ROUTES: Route[] = [
                         path: '/products/tokenization',
                     },
                     {
-                        title: 'IOTA Digital Identity',
+                        title: 'IOTA Identity',
                         description:
                             'Empowering secure, private, and decentralized digital interactions',
                         path: '/products/identity',

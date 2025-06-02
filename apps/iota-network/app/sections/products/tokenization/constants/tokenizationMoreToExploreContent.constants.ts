@@ -5,8 +5,8 @@ export const TOKENIZATION_MORE_TO_EXPLORE_CONTENT = [
         link: '/products/identity',
     },
     {
-        title: 'IOTA EVM',
-        subtitle: 'High-performance Layer 2 EVM with seamless interoperability',
-        link: '/products/evm',
+        title: 'IOTA Gas Station',
+        subtitle: 'Sponsored transaction fees for a smoother Web3 experience',
+        link: '/products/gas-station',
     },
 ];
