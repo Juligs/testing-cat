@@ -9,7 +9,7 @@ export * from './learn/showcases/kyc';
 export * from './learn/showcases/iprm';
 export * from './learn/showcases/dpp';
 export * from './learn/showcases/realize';
-export * from './build/business-innovation-program';
+export * from './build';
 export * from './learn/consensus';
 export * from './learn/move';
 export * from './learn/staking';

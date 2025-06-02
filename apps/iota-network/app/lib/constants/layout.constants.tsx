@@ -219,6 +219,11 @@ export const ROUTES: Route[] = [
                 icon: <DecentralizedFinance />,
                 children: [
                     {
+                        title: 'Project Funding',
+                        description: 'Fund for innovative project ideas',
+                        path: '/build/grants',
+                    },
+                    {
                         title: 'IOTA Business Innovation Program',
                         description: 'Technical and financial support for real-world impact',
                         path: '/build/business-innovation-program',

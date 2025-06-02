@@ -562,3 +562,23 @@ export const BUILDING_TOGETHER_KEYWORDS = [
 ];
 export const BUILDING_TOGETHER_URL = `${BASE_URL}/connect/building-together`;
 export const BUILDING_TOGETHER_IMAGE = '/metadata/meta_image_building-together.png';
+
+export const GRANTS_METADATA_TITLE = 'IOTA Grants | Turn Ideas Into Reality With Ecosystem Funding';
+export const GRANTS_METADATA_DESCRIPTION =
+    'Apply for an IOTA grant to fund your innovative Web3 or DLT project. From open-source to education, turn your ideas into impactful solutions.';
+export const GRANTS_METADATA_DESCRIPTION_X =
+    'Get financial support for your IOTA-based projects. From research to real-world adoption, grants are available to help you build.';
+export const GRANTS_KEYWORDS = [
+    'IOTA Grants',
+    'Funding',
+    'Web3 Grants',
+    'Blockchain Funding',
+    'Open Source',
+    'Education',
+    'Innovation',
+    'Ecosystem Support',
+    'DLT',
+    'iotalabs',
+];
+export const GRANTS_URL = `${BASE_URL}/connect/grants`;
+export const GRANTS_IMAGE = '/metadata/meta_image_grants.png';
