@@ -542,6 +542,26 @@ export const GAS_STATION_KEYWORDS = [
 export const GAS_STATION_URL = `${BASE_URL}/products/gas-station`;
 export const GAS_STATION_IMAGE = '/metadata/meta_image_gas.png';
 
+export const COMMUNITY_METADATA_TITLE = 'Building Together | Join the Collaborative IOTA Community';
+export const COMMUNITY_METADATA_DESCRIPTION =
+    'Be part of the IOTA community - a global network of experts, contributors, and enthusiasts shaping the future of open innovation.';
+export const COMMUNITY_METADATA_DESCRIPTION_X =
+    'Unite with builders, researchers, and innovators in the IOTA community. Share ideas, launch projects, and shape the future together.';
+export const COMMUNITY_KEYWORDS = [
+    'IOTA Community',
+    'Join IOTA',
+    'Web3 Collaboration',
+    'Open Source',
+    'Blockchain Community',
+    'DAO',
+    'Treasury Funds',
+    'Working Groups',
+    'Building Together',
+    'IOTA Ecosystem',
+];
+export const COMMUNITY_URL = `${BASE_URL}/connect/our-community`;
+export const COMMUNITY_IMAGE = '/metadata/meta_image_community.png';
+
 export const BUILDING_TOGETHER_METADATA_TITLE =
     'Building Together | Join the Collaborative IOTA Community';
 export const BUILDING_TOGETHER_METADATA_DESCRIPTION =

@@ -8,6 +8,7 @@ import {
     IotaChains,
     DecentralizedFinance,
     ProtocolAgnosticDesign,
+    Daos,
 } from '@repo/icons';
 
 export const LEARN_FEATURED_CARDS: Route[] = [
@@ -318,6 +319,11 @@ export const ROUTES: Route[] = [
         isExternal: true,
         children: [
             {
+                title: 'Our Community',
+                path: '/connect/our-community',
+                isExternal: true,
+            },
+            {
                 title: 'Build Together',
                 path: '/connect/building-together',
                 isExternal: false,
@@ -329,6 +335,18 @@ export const ROUTES: Route[] = [
             },
         ],
         navbarSections: [
+            {
+                title: 'Community',
+                icon: <Daos />,
+                children: [
+                    {
+                        title: 'Our Community',
+                        description: 'The latest from our ecosystem',
+                        path: '/connect/our-community',
+                        isExternal: false,
+                    },
+                ],
+            },
             {
                 children: [
                     {

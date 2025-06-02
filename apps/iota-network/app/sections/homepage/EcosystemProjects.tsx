@@ -1,6 +1,6 @@
 import { SliderImageCardSkeleton } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import { FetchProjectsSlider } from './subsections';
+import { FetchProjectsSlider } from '@lib/utils';
 import { Suspense } from 'react';
 import { Actions, TextLink, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 
