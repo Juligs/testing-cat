@@ -198,6 +198,10 @@ export const ROUTES: Route[] = [
                 isExternal: true,
             },
             {
+                title: 'Grants',
+                path: '/build/grants',
+            },
+            {
                 title: 'Business Innovation Program',
                 path: '/build/business-innovation-program',
             },
@@ -253,12 +257,16 @@ export const ROUTES: Route[] = [
                 path: '/products/evm',
             },
             {
+                title: 'Identity',
+                path: '/products/identity',
+            },
+            {
                 title: 'Tokenization',
                 path: '/products/tokenization',
             },
             {
-                title: 'Identity',
-                path: '/products/identity',
+                title: 'Gas Station',
+                path: '/products/gas-station',
             },
         ],
         navbarSections: [
