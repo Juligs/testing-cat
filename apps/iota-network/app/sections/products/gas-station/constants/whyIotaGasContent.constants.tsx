@@ -22,7 +22,7 @@ export const WHY_IOTA_ICON_CONTENT = [
     {
         icon: <KeyRotation />,
         title: 'Flexible Security Options',
-        body: 'Works with external Key Management Services (KMS) for secure transaction signing or supports in-memory private key storage for simpler setups.',
+        body: 'Works with external Key Management Services for secure transaction signing or supports in-memory private key storage for simpler setups.',
         link: 'https://docs.iota.org/operator/gas-station/architecture/features#access-controller',
     },
 ];

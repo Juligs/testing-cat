@@ -1,7 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const GRANTS_OVERVIEW =
-    'IOTA Grants range from funding innovative IOTA projects and initiatives to research grants and scholarships at the cutting-edge of DLT research. Discover how they can turn your ideas into reality.';
+    'IOTA Grants support everything from bold projects to leading-edge research in DLT. See how they can help bring your vision to life.';
 
 export function GrantsOverview({ id, navbarColorScheme }: BaseSectionProps) {
     return (

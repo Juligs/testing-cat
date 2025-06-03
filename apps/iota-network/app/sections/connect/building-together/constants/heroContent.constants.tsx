@@ -3,7 +3,7 @@ import { HeroBackground, ScreenSize, TitleTextSize } from 'react-ui-kit';
 export const HERO_BUILDING_TOGETHER_CONTENT = {
     title: 'Building Together',
     subtitle:
-        'The IOTA community is a group of like-minded individuals from all walks of life, united by their shared  enthusiasm for a better and self-determined future.',
+        'The IOTA community is a group of like-minded individuals from all walks of life, united by their shared  enthusiasm for a better and self-determined future',
     inverted: true,
     size: TitleTextSize.Large,
 };

@@ -2,7 +2,7 @@ import { TitleTextSize } from 'react-ui-kit';
 
 export const PROJECTS_ON_IOTA_VERTICAL_TITLE = {
     title: 'Projects on IOTA',
-    subtitle: 'Explore our Community Directory to discover innovative projects built on IOTA',
+    subtitle: 'Explore our Community Directory to discover innovative projects building on IOTA',
     size: TitleTextSize.Small,
     link: 'https://iotalabs.io/projects',
     isCentered: true,

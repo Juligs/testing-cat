@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import {
     GrantsOverview,
     HeroGrants,
-    ProjectFundingGrants,
+    SeekingBold,
     GrantsSupportedInitiatives,
     OurFundingGuidelines,
     GrantsHowToApply,
@@ -33,7 +33,7 @@ export default function Home() {
         <>
             <HeroGrants id="hero" navbarColorScheme="inverted" />
             <GrantsOverview id="overview" />
-            <ProjectFundingGrants id="project-funding" />
+            <SeekingBold id="seeking-bold" />
             <GrantsSupportedInitiatives id="supported-initiatives" />
             <OurFundingGuidelines id="our-funding-guidelines" />
             <GrantsHowToApply id="how-to-apply" />

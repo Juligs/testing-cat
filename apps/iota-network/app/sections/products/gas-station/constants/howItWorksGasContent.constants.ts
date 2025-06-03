@@ -3,7 +3,7 @@ import { TitleTextSize } from 'react-ui-kit';
 export const HOW_IT_WORKS_VERTICAL_TITLE = {
     title: 'How it Works',
     subtitle: 'Gas-free transactions for seamless Web3 adoption',
-    body: 'IOTA Gas Station is a configurable module that integrates directly into your application, enabling sponsored transactions for users - no IOTA tokens required. Serving as a bridge between users and application builders, it delivers a frictionless Web3 experience.',
+    body: 'IOTA Gas Station is a configurable module that integrates directly into your application, enabling sponsored transactions for users –– no IOTA tokens required. Serving as a bridge between users and application builders, it delivers a frictionless Web3 experience.',
     size: TitleTextSize.Small,
 };
 
@@ -15,7 +15,7 @@ export const HOW_IT_WORKS_IMAGE_CARD_CONTENT = [
     },
     {
         title: 'Builders',
-        body: 'Integrate IOTA Gas Station into your apps and configure the rules. Manage limits, define access control, and create custom monetization strategies to boost adoption and retention.',
+        body: 'Integrate IOTA Gas Station into your apps and configure the rules. Manage limits, define access control, and  customize monetization strategies to boost adoption and retention.',
         image: '/products/gas-station/how-it-works/builders.png',
     },
     {

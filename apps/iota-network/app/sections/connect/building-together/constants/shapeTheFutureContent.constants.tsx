@@ -11,7 +11,7 @@ export const SHAPE_THE_FUTURE_IMAGE_CARD_CONTENT = [
     {
         title: 'Use of Treasury Funds',
         subtitle:
-            "Help determine how IOTA's treasury funds are allocated to drive innovation and development within the ecosystem",
+            "Help determine how IOTA's treasury funds are allocated to drive innovation and development in the ecosystem",
         image: '/connect/building-together/shape-the-future/use_of_treasury.png',
     },
     {

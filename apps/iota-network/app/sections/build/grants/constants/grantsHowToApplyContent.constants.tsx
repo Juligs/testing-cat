@@ -26,7 +26,7 @@ export const HOW_TO_APPLY_ICON_CONTENT = [
     {
         icon: <ApplicationSubmission />,
         title: 'Application Submission',
-        body: 'Check that your project fits our guidelines and then apply by filling out the application form. Make sure to provide as much information as possible.',
+        body: 'Check that your project fits our guidelines and then apply by filling out the application form. Please provide as much information as possible.',
     },
     {
         icon: <CollectiveInvitation />,

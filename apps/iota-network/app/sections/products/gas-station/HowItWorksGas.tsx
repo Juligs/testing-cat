@@ -10,7 +10,7 @@ export function HowItWorksGas({ id, navbarColorScheme }: BaseSectionProps) {
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
                 <TwoColumnsImageTemplate image="/products/gas-station/how-it-works/how_it_works_gas.png">
-                    <div className="sm:pr-[20px] text-center">
+                    <div className="sm:pr-[80px] text-center">
                         <VerticalTitle {...HOW_IT_WORKS_VERTICAL_TITLE}>
                             <Actions>
                                 <Link
