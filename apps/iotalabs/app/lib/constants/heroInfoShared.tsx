@@ -49,7 +49,7 @@ export const HERO_GRANTS_ANCHORLINKS = [
 ];
 
 export const HERO_GRANTS_BG: React.ComponentProps<typeof HeroBackground> = {
-    src: '/grants/hero_bg.svg',
+    src: '/grants/hero_bg.png',
     mediaType: 'image',
 };
 
@@ -70,6 +70,6 @@ export const HERO_PROJECTS_BUTTON = [
 ];
 
 export const HERO_PROJECTS_BG: React.ComponentProps<typeof HeroBackground> = {
-    src: '/projects/hero.svg',
+    src: '/projects/hero.png',
     mediaType: 'image',
 };

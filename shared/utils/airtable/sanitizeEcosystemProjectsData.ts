@@ -21,7 +21,7 @@ interface SanitizeOptions {
 
 export async function sanitizeEcosystemProjectsData(
     data: Records<FieldSet>,
-    { allowedCategories, placeholderImageUrl = '/homepage/placeholder_image.svg' }: SanitizeOptions,
+    { allowedCategories, placeholderImageUrl = '/homepage/placeholder_image.png' }: SanitizeOptions,
 ): Promise<CardShowcase[]> {
     const normalizedCategories = new Set(allowedCategories.map((c) => c.toLowerCase()));
 

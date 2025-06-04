@@ -13,7 +13,7 @@ export function EVMToolkit({ id, navbarColorScheme }: BaseSectionProps) {
                 <CtaCard
                     title="EVM Toolkit"
                     subtitle="Get stared with IOTA EVM by sending and wrapping assets and making withdrawals on EVM Layer 2"
-                    image="/homepage/section7.svg"
+                    image="/homepage/evm_toolkit.png"
                     inverted
                 >
                     <Link

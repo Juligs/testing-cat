@@ -17,7 +17,7 @@ export function TieredAssessmentFramework({ id, navbarColorScheme }: BaseSection
     return (
         <section className="bg-[#5FF45B]" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
-                <TwoColumnsImageTemplate image="/grants/section6.svg">
+                <TwoColumnsImageTemplate image="/grants/tiered.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle
                             title="Tiered Assessment Framework"

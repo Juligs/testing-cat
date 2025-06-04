@@ -42,7 +42,7 @@ export function NewEra({ id, navbarColorScheme }: BaseSectionProps) {
                         </Actions>
                     </VerticalTitle>
                 </div>
-                <Image src="/homepage/section4.svg" alt="Image" width={1200} height={515} />
+                <Image src="/homepage/new_era.png" alt="Image" width={1200} height={515} />
             </div>
         </section>
     );

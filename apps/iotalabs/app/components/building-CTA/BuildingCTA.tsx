@@ -4,7 +4,7 @@ import { CtaCard, TextLink } from 'react-ui-kit';
 export function BuildingCTA() {
     return (
         <CtaCard
-            image="/shared/building_iota.svg"
+            image="/shared/building_iota.png"
             title="Are you building on IOTA?"
             subtitle="Register your application and get featured on the on iotalabs and the official website"
             inverted

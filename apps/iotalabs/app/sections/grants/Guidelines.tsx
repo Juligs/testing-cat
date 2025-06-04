@@ -56,7 +56,7 @@ export function Guidelines({ id, navbarColorScheme }: BaseSectionProps) {
                             />
                         ))}
                     </div>
-                    <TwoColumnsImageTemplate image="/grants/section5.svg">
+                    <TwoColumnsImageTemplate image="/grants/evaluation.png">
                         <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                             <VerticalTitle
                                 title="Evaluation of Applications"
