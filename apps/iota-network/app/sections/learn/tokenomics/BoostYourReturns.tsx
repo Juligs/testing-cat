@@ -10,7 +10,7 @@ export function BoostYourReturns({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30">
-                <TwoColumnsImageTemplate image="/learn/tokenomics/boost_your_returns.png">
+                <TwoColumnsImageTemplate image="/shared/boost_rewards.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...BOOST_YOUR_RETURNS_TITLE}>
                             <Actions>

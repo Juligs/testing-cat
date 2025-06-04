@@ -11,7 +11,7 @@ export function WhyIota({ id, navbarColorScheme }: BaseSectionProps) {
             data-navbar-color-scheme={navbarColorScheme}
         >
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
-                <TwoColumnsImageTemplate image="/products/identity/why_iota.png">
+                <TwoColumnsImageTemplate image="/shared/NFT.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...WHY_IOTA_VERTICAL_TITLE} />
                     </div>

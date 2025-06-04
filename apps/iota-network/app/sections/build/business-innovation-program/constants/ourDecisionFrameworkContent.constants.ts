@@ -12,18 +12,18 @@ export const OUR_DECISION_IMAGE_CARD_CONTENT = [
         title: 'Mainnet Utilization',
         subtitle:
             'Projects commit to demonstrating measurable activity on the IOTA Mainnet within a reasonable timeframe.',
-        image: '/build/business-innovation/our-decision/mainnet_utilization.png',
+        image: '/shared/mainnet_utilization.png',
     },
     {
         title: 'Proven Capabilities',
         subtitle:
             'Teams should showcase the technical and domain expertise necessary to deliver a market-ready solution.',
-        image: '/build/business-innovation/our-decision/proven_capabilities.png',
+        image: '/shared/validators.png',
     },
     {
         title: 'Functional Representation',
         subtitle:
             'Solutions must create on-chain assets tied to real-world counterparts to emphasize tangible impact.',
-        image: '/build/business-innovation/our-decision/functional_representation.png',
+        image: '/shared/functional_representation.png',
     },
 ];

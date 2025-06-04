@@ -10,7 +10,7 @@ export const SMART_CONTRACTS_IMAGE_CARD_CONTENT = [
     {
         title: 'Connect to IOTA EVM',
         subtitle: 'Start exploring',
-        image: '/products/evm/smart-contracts/connect_to_iota.png',
+        image: '/shared/seamless.png',
         link: 'https://docs.iota.org/iota-evm/how-tos/send-funds-from-L1-to-L2?network=iota',
     },
     {

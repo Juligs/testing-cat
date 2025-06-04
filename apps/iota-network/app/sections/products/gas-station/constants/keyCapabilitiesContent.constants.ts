@@ -15,11 +15,11 @@ export const KEY_CAPABILITIES_IMAGE_CARD_CONTENT = [
     {
         title: 'Security and Access Control',
         body: 'Businesses and developers maintain full control over sponsored transactions with customizable rules, ensuring a secure and efficient sponsorship model.',
-        image: '/products/gas-station/key-capabilities/security_and_access_control.png',
+        image: '/shared/secure.png',
     },
     {
         title: 'Cost and Resource Management',
         body: 'Set sponsorship limits, manage transaction costs, and monitor usage. Adjust strategies as needed for optimal resource allocation.',
-        image: '/products/gas-station/key-capabilities/cost_and_resource.png',
+        image: '/shared/asset_management.png',
     },
 ];

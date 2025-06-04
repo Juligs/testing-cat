@@ -11,7 +11,7 @@ export const UNLOCK_THE_POWER_IMAGE_CARD_CONTENT = [
     {
         title: 'Tokenization of Real-World Assets ',
         body: 'Represent tangible assets like physical commodities or real estate on-chain for new business models',
-        image: '/products/tokenization/unlock-the-power/RWA.png',
+        image: '/shared/RWA.png',
     },
     {
         title: 'Fully Programmable Assets',

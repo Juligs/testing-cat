@@ -11,16 +11,16 @@ export const HOW_IT_WORKS_IMAGE_CARD_CONTENT = [
     {
         title: 'Users',
         body: 'Interact with dApps without the hassle of acquiring tokens. Enjoy transactions that combine Web2 simplicity with blockchain security.',
-        image: '/products/gas-station/how-it-works/users.png',
+        image: '/shared/users.png',
     },
     {
         title: 'Builders',
         body: 'Integrate IOTA Gas Station into your apps and configure the rules. Manage limits, define access control, and  customize monetization strategies to boost adoption and retention.',
-        image: '/products/gas-station/how-it-works/builders.png',
+        image: '/shared/validators.png',
     },
     {
         title: 'IOTA Gas Station',
         body: 'A funding hub that covers transaction fees based on set rules, with built-in access control, usage metrics, and resource management.',
-        image: '/products/gas-station/how-it-works/iota-gas-station.png',
+        image: '/shared/iota_tokens.png',
     },
 ];

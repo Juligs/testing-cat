@@ -19,7 +19,7 @@ export const UNLOCK_IMAGE_CARD_CONTENT = [
     {
         overline: 'Solidity Smart Contracts',
         title: 'Seamless Interoperability',
-        image: '/products/evm/unlock/seamless.png',
+        image: '/shared/seamless.png',
     },
 ];
 

@@ -11,16 +11,16 @@ export const HOW_IT_WORKS_IMAGE_CARD_CONTENT = [
     {
         title: 'Holders',
         body: 'Holders are the owners of digital identities, maintaining full control over their data. They decide what information to share, how much to share, and with whom, ensuring complete autonomy and privacy.',
-        image: '/products/identity/how-it-works/holders.png',
+        image: '/shared/iota_tokens.png',
     },
     {
         title: 'Issuers',
         body: 'Issuers are trusted entities or authorities that create and provide credentials to holders. Credentials can include any type of document, such as identity cards, health records, diplomas, or certifications.',
-        image: '/products/identity/how-it-works/issuers.png',
+        image: '/shared/users.png',
     },
     {
         title: 'Verifiers',
         body: "Verifiers are third parties that need to confirm the authenticity of a holder's data. They can validate any type of information, such as identity, age, qualifications, or other credentials.",
-        image: '/products/identity/how-it-works/verifiers.png',
+        image: '/shared/validators.png',
     },
 ];

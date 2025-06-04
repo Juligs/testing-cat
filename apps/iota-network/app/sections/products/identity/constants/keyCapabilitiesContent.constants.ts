@@ -11,7 +11,7 @@ export const KEY_CAPABILITIES_IMAGE_CARD_CONTENT = [
     {
         title: 'Self-Sovereign Identity',
         body: 'Implements standards allowing users to create, manage, and control their digital identities. It enables secure and privacy-focused interactions across digital and physical spaces.',
-        image: '/products/identity/key-capabilities/self_sovereign.png',
+        image: '/shared/secure.png',
     },
     {
         title: 'Privacy-Centric Design',
@@ -21,6 +21,6 @@ export const KEY_CAPABILITIES_IMAGE_CARD_CONTENT = [
     {
         title: 'Ready for Real-World Use',
         body: 'IOTA Identity enables verifiable credentials for both digital and real-world interactions. It ensures compliance and integrates seamlessly with mobile wallets.',
-        image: '/products/identity/key-capabilities/ready_for_real.png',
+        image: '/shared/asset_management.png',
     },
 ];

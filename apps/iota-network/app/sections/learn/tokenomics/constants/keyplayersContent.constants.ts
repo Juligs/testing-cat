@@ -11,16 +11,16 @@ export const TOKENOMICS_IMAGE_CARD_CONTENT = [
     {
         title: 'Users',
         body: 'submit transactions to create, modify, and transfer digital assets, or interact with dApps enabled by smart contracts.',
-        image: '/learn/tokenomics/key-players/users.png',
+        image: '/shared/users.png',
     },
     {
         title: 'IOTA Token Holders',
         body: 'can stake their tokens to validators, participating in the proof-of-stake consensus',
-        image: '/learn/tokenomics/key-players/iota_tokens_holders.png',
+        image: '/shared/iota_tokens.png',
     },
     {
         title: 'Validators',
         body: "process and execute transactions on the IOTA platform, ensuring the network's security and efficiency.",
-        image: '/learn/tokenomics/key-players/validators.png',
+        image: '/shared/validators.png',
     },
 ];
