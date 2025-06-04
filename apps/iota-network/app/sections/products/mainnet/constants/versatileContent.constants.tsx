@@ -17,8 +17,7 @@ export const VERSATILE_IMAGE_CARD_CONTENT = [
     },
     {
         title: 'Enhanced Programmability',
-        subtitle:
-            'Decentralized applications through smart contracts written in the Move programming language',
+        subtitle: 'Decentralized applications through smart contracts written in Move',
         image: '/shared/decentralized_applications.png',
         link: 'https://docs.iota.org/developer/iota-101/move-overview/',
     },

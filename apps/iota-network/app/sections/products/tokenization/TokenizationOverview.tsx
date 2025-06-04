@@ -1,7 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const TOKENIZATION_OVERVIEW =
-    'IOTA brings real-world assets into the digital era by transforming ownership rights into secure, DLT-based tokens. From real estate and commodities to stocks and art, tokenization empowers a new era of digital asset management.';
+    'IOTA digitizes real-world assets by transforming ownership rights into secure, DLT-based tokens. From real estate and commodities to stocks and art, tokenization empowers a new era of digital asset management.';
 
 export function TokenizationOverview({ id, navbarColorScheme }: BaseSectionProps) {
     return (

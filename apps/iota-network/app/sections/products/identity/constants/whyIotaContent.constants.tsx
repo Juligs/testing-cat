@@ -17,11 +17,11 @@ export const WHY_IOTA_ICON_CONTENT = [
     {
         icon: <EnhnacedFeatures />,
         title: 'Best-in-Class Tech Stack',
-        body: 'IOTA Identity leverages industry-wide standards like W3C and is anchored on the fully decentralized, high-performance IOTA Mainnet. With unmatched capacity, fast processing time, and consistent low fees, it ensures cost-efficient and scalable identity solutions.',
+        body: 'IOTA Identity leverages industry standards like W3C and is anchored on the fully decentralized, high-performance IOTA Mainnet. With unmatched capacity, fast processing time, and consistent low fees, it ensures cost-efficient and scalable identity solutions.',
     },
     {
         icon: <UniversalCompatibility />,
         title: 'Innovation Across Industries',
-        body: "Combining cutting-edge tech with W3C-compliant SSI frameworks, IOTA Identity enables builders to create privacy-first, interoperable solutions. Flexible and compatible, it's the perfect foundation for trusted, scalable digital identity applications across any industry.",
+        body: 'Combining cutting-edge tech with W3C-compliant SSI frameworks, IOTA Identity enables builders to create privacy-first, interoperable solutions. Flexible and compatible, it’s the perfect basis for trusted, scalable digital identity applications across any industry.',
     },
 ];

@@ -4,7 +4,7 @@ import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 
 export const HERO_IDENTITY_CONTENT = {
     title: 'IOTA Identity',
-    subtitle: 'Empowering secure, private, and decentralized digital interactions.',
+    subtitle: 'Empowering secure, private, and decentralized digital interactions',
     inverted: true,
 };
 
