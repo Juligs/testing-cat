@@ -1,4 +1,4 @@
-name: Preview Deploy fot the IOTA Network website
+name: Preview Deploy for the IOTA Network website
 
 on:
     workflow_dispatch:
@@ -10,6 +10,7 @@ on:
             - 'shared/**'
             - '.github/workflows/iota-network.preview-deploy.yml'
             - '.github/workflows/monorepo-app-vercel-deploy.yml'
+
 jobs:
     deploy-preview:
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml

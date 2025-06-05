@@ -1,4 +1,4 @@
-name: Preview Deploy fot the IOTA Foundation website
+name: Preview Deploy for the IOTA Foundation website
 
 on:
     workflow_dispatch:

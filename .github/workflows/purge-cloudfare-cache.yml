@@ -1,0 +1,69 @@
+name: Purge Cloudflare Cache
+
+on:
+    workflow_call:
+        inputs:
+            IS_IOTALABS:
+                description: 'Purge IOTALABS Cloudflare Cache'
+                type: boolean
+                required: false
+                default: false
+            IS_IOTA_NETWORK:
+                description: 'Purge IOTA Network Cloudflare Cache'
+                type: boolean
+                required: false
+                default: false
+            IS_IOTA_FOUNDATION:
+                description: 'Purge IOTA Foundation Cloudflare Cache'
+                type: boolean
+                required: false
+                default: false
+    workflow_dispatch:
+        inputs:
+            IS_IOTALABS:
+                description: 'Purge IOTALABS Cloudflare Cache'
+                required: false
+                type: boolean
+                default: false
+            IS_IOTA_NETWORK:
+                description: 'Purge IOTA Network Cloudflare Cache'
+                type: boolean
+                required: false
+                default: false
+            IS_IOTA_FOUNDATION:
+                description: 'Purge IOTA Foundation Cloudflare Cache'
+                type: boolean
+                required: false
+                default: false
+
+jobs:
+    purge-iotalabs-cloudflare-cache:
+        runs-on: ubuntu-latest
+        if: ${{ github.event.inputs.IS_IOTALABS == 'true' }}
+        steps:
+            - name: Purge Cloudflare Cache
+              uses: nathanvaughn/actions-cloudflare-purge@master
+              with:
+                  cf_zone: ${{ secrets.CLOUDFLARE_IOTALABS_ZONE_ID }}
+                  cf_auth: ${{ secrets.CLOUDFLARE_CACHE_API_TOKEN }}
+                  hosts: iotalabs.io
+    purge-iota-network-cloudflare-cache:
+        runs-on: ubuntu-latest
+        if: ${{ github.event.inputs.IS_IOTA_NETWORK == 'true' }}
+        steps:
+            - name: Purge Cloudflare Cache
+              uses: nathanvaughn/actions-cloudflare-purge@master
+              with:
+                  cf_zone: ${{ secrets.CLOUDFLARE_NETWORK_ZONE_ID }}
+                  cf_auth: ${{ secrets.CLOUDFLARE_CACHE_API_TOKEN }}
+                  hosts: www.iota.org
+    purge-iota-foundation-cloudflare-cache:
+        runs-on: ubuntu-latest
+        if: ${{ github.event.inputs.IS_IOTA_FOUNDATION == 'true' }}
+        steps:
+            - name: Purge Cloudflare Cache
+              uses: nathanvaughn/actions-cloudflare-purge@master
+              with:
+                  cf_zone: ${{ secrets.CLOUDFLARE_FOUNDATION_ZONE_ID }}
+                  cf_auth: ${{ secrets.CLOUDFLARE_CACHE_API_TOKEN }}
+                  hosts: iota-foundation.org
