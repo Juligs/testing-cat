@@ -22,12 +22,12 @@ export const WHY_TOKENIZED_ICON_CONTENT = [
     {
         icon: <OnChainMetadata />,
         title: 'On-Chain Metadata',
-        body: 'Move supports encoding up to 256KB of data on the ledger. For larger data, dynamic structures like maps and linked lists offer flexible, scalable storage solutions.',
+        body: 'Move supports encoding up to 256KB of data on the ledger. For larger data, dynamic structures like maps and linked lists offer flexible storage solutions.',
     },
     {
         icon: <AnyoneCanIssueAssets />,
         title: 'Anyone Can Issue Assets',
-        body: 'Creating custom tokenized assets is simple and accessible, allowing anyone, including smart contract chains, to use them programmatically.',
+        body: 'Creating custom tokenized assets is simple, allowing anyone, including smart contract chains, to use them programmatically.',
     },
     {
         icon: <RentSpaceDontBuyIt />,

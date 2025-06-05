@@ -13,7 +13,7 @@ export function Empowering({ id, navbarColorScheme }: BaseSectionProps) {
                 data-navbar-color-scheme={navbarColorScheme}
             >
                 <div className="container py-20 md:py-16 xl:py-20 flex justify-center text-center">
-                    <TwoColumnsImageTemplate image="/homepage/section3.svg">
+                    <TwoColumnsImageTemplate image="/homepage/empowering.png">
                         <div className="text-headline-sm text-labs-neutral-80 max-w-sm lg:max-w-xl text-center xs:text-left">
                             {TEXT}
                         </div>

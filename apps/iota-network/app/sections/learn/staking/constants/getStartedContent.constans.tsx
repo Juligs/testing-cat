@@ -19,7 +19,7 @@ export const GET_STARTED_BLOG_POST_CARD_CONTENT = [
         title: 'Stake IOTA',
         label: 'Tutorial',
         description: 'Stake your IOTA tokens to earn rewards while helping secure the network.',
-        image: '/learn/staking/get-started/stake_iota.png',
+        image: '/shared/iota_tokens.png',
         link: 'https://docs.iota.org/about-iota/iota-wallet/how-to/stake',
     },
     {

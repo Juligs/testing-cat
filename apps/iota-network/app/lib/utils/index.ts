@@ -9,3 +9,4 @@ export * from './roundFloat';
 export * from './getStakingRatio';
 export * from './getIotaTVL';
 export * from './formatCompactNumber';
+export * from './airtable';

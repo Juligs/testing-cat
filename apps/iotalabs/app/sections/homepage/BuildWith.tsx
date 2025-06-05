@@ -18,7 +18,7 @@ export function BuildWith({ id, navbarColorScheme }: BaseSectionProps) {
             data-navbar-color-scheme={navbarColorScheme}
         >
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col justify-center text-center gap-y-14 xs:gap-y-20 lg:gap-y-30">
-                <TwoColumnsImageTemplate reverse image="/homepage/section9.svg">
+                <TwoColumnsImageTemplate reverse image="/homepage/build_with.png">
                     <div className="sm:pl-[92px] lg:pl-[102px] xl:pl-[122px]">
                         <VerticalTitle
                             title={VERTICAL_TITLE_INFO.title}

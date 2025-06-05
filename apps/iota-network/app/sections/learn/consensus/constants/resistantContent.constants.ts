@@ -18,13 +18,13 @@ export const RESISTANT_IMAGE_CARD_CONTENT = [
     {
         title: 'Checkpoint Verification',
         subtitle: 'Checkpoints ensure accuracy with cryptographic hashes and validator signatures.',
-        image: '/learn/consensus/resistant-against/checkpoint_verification.png',
+        image: '/shared/mainnet_utilization.png',
         link: 'https://docs.iota.org/developer/cryptography/checkpoint-verification',
     },
     {
         title: 'Cryptography in Smart Contracts',
         subtitle: 'Cryptography keeps your smart contract transactions secure.',
-        image: '/learn/consensus/resistant-against/cryptography_in_smart_contracts.png',
+        image: '/shared/functional_representation.png',
         link: 'https://docs.iota.org/developer/cryptography/on-chain',
     },
 ];

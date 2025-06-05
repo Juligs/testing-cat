@@ -18,7 +18,7 @@ export function EngineBehind({ id, navbarColorScheme }: BaseSectionProps) {
                 data-navbar-color-scheme={navbarColorScheme}
             >
                 <div className="container py-14 sm:py-20 lg:py-30 flex justify-center text-center">
-                    <TwoColumnsImageTemplate reverse image="/homepage/section2.svg">
+                    <TwoColumnsImageTemplate reverse image="/homepage/engine_behind.png">
                         <div className="sm:pl-[92px] lg:pl-[102px] xl:pl-[122px]">
                             <VerticalTitle
                                 title={VERTICAL_TITLE_INFO.title}

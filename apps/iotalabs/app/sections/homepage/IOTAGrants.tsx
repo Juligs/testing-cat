@@ -16,7 +16,7 @@ export function IOTAGrants({ id, navbarColorScheme }: BaseSectionProps) {
             data-navbar-color-scheme={navbarColorScheme}
         >
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
-                <TwoColumnsImageTemplate image="/shared/how_to_apply.svg">
+                <TwoColumnsImageTemplate image="/shared/grants.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle
                             title="IOTA Grants"

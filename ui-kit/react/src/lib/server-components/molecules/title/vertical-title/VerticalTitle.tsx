@@ -17,7 +17,7 @@ interface VerticalTitleProps {
     /**
      * Title content
      */
-    title: React.ReactNode;
+    title?: React.ReactNode;
     /**
      * Subtitle content
      */
@@ -57,9 +57,11 @@ export function VerticalTitle({
         <div className={clsx('flex flex-col', alignmentClass, GAP_CHILDREN[size])}>
             <div className={clsx('flex flex-col', TITLE_VERTICAL_GAP[size])}>
                 {overline && <Overline inverted={inverted}>{overline}</Overline>}
-                <Title size={size} inverted={inverted} tag={titleTag}>
-                    {title}
-                </Title>
+                {title && (
+                    <Title size={size} inverted={inverted} tag={titleTag}>
+                        {title}
+                    </Title>
+                )}
                 {subtitle && (
                     <Subtitle inverted={inverted} size={size} isCentered={isCentered}>
                         {subtitle}

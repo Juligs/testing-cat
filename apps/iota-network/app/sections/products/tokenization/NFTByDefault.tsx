@@ -9,7 +9,7 @@ export function NFTByDefault({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex">
-                <TwoColumnsImageTemplate image="/products/tokenization/NFT.png">
+                <TwoColumnsImageTemplate image="/shared/NFT.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...NFT_VERTICAL_TITLE}>
                             <Actions>

@@ -520,3 +520,85 @@ export const IDENTITY_KEYWORDS = [
 ];
 export const IDENTITY_URL = `${BASE_URL}/products/identity`;
 export const IDENTITY_IMAGE = '/metadata/meta_image_identity.png';
+
+export const GAS_STATION_METADATA_TITLE =
+    'IOTA Gas Station | Sponsored transaction fees for a smoother Web3 experience';
+export const GAS_STATION_METADATA_DESCRIPTION =
+    'IOTA Gas Station enables fee-free Web3 experiences by sponsoring transaction costs for users. Unlock new business models and seamless user onboarding with sponsored transactions on IOTA.';
+export const GAS_STATION_METADATA_DESCRIPTION_X =
+    'Say goodbye to transaction fees. IOTA Gas Station lets businesses sponsor user transactions, creating a seamless Web3 experience.';
+export const GAS_STATION_KEYWORDS = [
+    'IOTA Gas Station',
+    'Gas Fees',
+    'Sponsored Transactions',
+    'Web3',
+    'Feeless Blockchain',
+    'User Onboarding',
+    'DLT',
+    'IOTA',
+    'Tokenization',
+    'Smart Contracts',
+];
+export const GAS_STATION_URL = `${BASE_URL}/products/gas-station`;
+export const GAS_STATION_IMAGE = '/metadata/meta_image_gas.png';
+
+export const COMMUNITY_METADATA_TITLE = 'Building Together | Join the Collaborative IOTA Community';
+export const COMMUNITY_METADATA_DESCRIPTION =
+    'Be part of the IOTA community - a global network of experts, contributors, and enthusiasts shaping the future of open innovation.';
+export const COMMUNITY_METADATA_DESCRIPTION_X =
+    'Unite with builders, researchers, and innovators in the IOTA community. Share ideas, launch projects, and shape the future together.';
+export const COMMUNITY_KEYWORDS = [
+    'IOTA Community',
+    'Join IOTA',
+    'Web3 Collaboration',
+    'Open Source',
+    'Blockchain Community',
+    'DAO',
+    'Treasury Funds',
+    'Working Groups',
+    'Building Together',
+    'IOTA Ecosystem',
+];
+export const COMMUNITY_URL = `${BASE_URL}/connect/our-community`;
+export const COMMUNITY_IMAGE = '/metadata/meta_image_community.png';
+
+export const BUILDING_TOGETHER_METADATA_TITLE =
+    'Building Together | Join the Collaborative IOTA Community';
+export const BUILDING_TOGETHER_METADATA_DESCRIPTION =
+    'Be part of the IOTA community ? a global network of experts, contributors, and enthusiasts shaping the future of open innovation.';
+export const BUILDING_TOGETHER_METADATA_DESCRIPTION_X =
+    'Unite with builders, researchers, and innovators in the IOTA community. Share ideas, launch projects, and shape the future together.';
+export const BUILDING_TOGETHER_KEYWORDS = [
+    'IOTA Community',
+    'Join IOTA',
+    'Web3 Collaboration',
+    'Open Source',
+    'Blockchain Community',
+    'DAO',
+    'Treasury Funds',
+    'Working Groups',
+    'Building Together',
+    'IOTA Ecosystem',
+];
+export const BUILDING_TOGETHER_URL = `${BASE_URL}/connect/building-together`;
+export const BUILDING_TOGETHER_IMAGE = '/metadata/meta_image_building-together.png';
+
+export const GRANTS_METADATA_TITLE = 'IOTA Grants | Turn Ideas Into Reality With Ecosystem Funding';
+export const GRANTS_METADATA_DESCRIPTION =
+    'Apply for an IOTA grant to fund your innovative Web3 or DLT project. From open-source to education, turn your ideas into impactful solutions.';
+export const GRANTS_METADATA_DESCRIPTION_X =
+    'Get financial support for your IOTA-based projects. From research to real-world adoption, grants are available to help you build.';
+export const GRANTS_KEYWORDS = [
+    'IOTA Grants',
+    'Funding',
+    'Web3 Grants',
+    'Blockchain Funding',
+    'Open Source',
+    'Education',
+    'Innovation',
+    'Ecosystem Support',
+    'DLT',
+    'iotalabs',
+];
+export const GRANTS_URL = `${BASE_URL}/connect/grants`;
+export const GRANTS_IMAGE = '/metadata/meta_image_grants.png';

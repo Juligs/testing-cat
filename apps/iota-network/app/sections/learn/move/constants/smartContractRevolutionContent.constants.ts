@@ -12,18 +12,18 @@ export const SMART_CONTRACT_IMAGE_CARD_CONTENT = [
         title: 'Inherently Secure',
         subtitle:
             'Move is designed with security as a core principle, ensuring robust protection against vulnerabilities.',
-        image: '/learn/move/smart-contract/inherently_secure.png',
+        image: '/shared/secure.png',
     },
     {
         title: 'Naturally Intuitive',
         subtitle:
             'Move offers an intuitive syntax and structure, making it accessible and easy to use for developers.',
-        image: '/learn/move/smart-contract/naturally_intuitive.png',
+        image: '/shared/decentralized_applications.png',
     },
     {
         title: 'Flexible Design',
         subtitle:
             "Move's highly expressive framework enables the creation of complex and sophisticated smart contracts.",
-        image: '/learn/move/smart-contract/flexible_design.png',
+        image: '/shared/flexible_design.png',
     },
 ];

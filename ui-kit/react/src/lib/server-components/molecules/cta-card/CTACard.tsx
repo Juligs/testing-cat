@@ -54,6 +54,10 @@ interface CtaCardProps {
      * align items start
      */
     alignStart?: boolean;
+    /**
+     * image aspect video
+     */
+    aspectVideo?: boolean;
 }
 
 export function CtaCard({
@@ -68,6 +72,7 @@ export function CtaCard({
     children,
     isVertical,
     alignStart,
+    aspectVideo,
 }: CtaCardProps): JSX.Element {
     const colorTitle = inverted ? COLOR_TITLE_INVERTED : COLOR_TITLE;
     const colorText = inverted ? COLOR_TEXT_INVERTED : COLOR_TEXT;
@@ -91,7 +96,9 @@ export function CtaCard({
             <div
                 className={clsx(
                     'w-full object-cover aspect-[4/3] xs:aspect-video',
-                    isVertical ? 'sm:aspect-[21/9]' : 'sm:w-1/2 sm:aspect-[4/3]',
+                    isVertical && 'sm:aspect-[21/9]',
+                    !isVertical && aspectVideo && 'aspect-video sm:aspect-video sm:w-1/2',
+                    !isVertical && !aspectVideo && 'sm:w-1/2 sm:aspect-[4/3]',
                 )}
             >
                 {animation ? (
@@ -108,6 +115,7 @@ export function CtaCard({
                     'flex flex-col justify-start text-center w-full gap-2 xs:gap-4 h-full',
                     alignStart ? 'items-start' : 'items-center',
                     isVertical ? 'sm:w-full' : 'sm:w-1/2',
+                    aspectVideo ? 'pt-0 pb-8 sm:py-8' : 'py-8',
                     PADDING_SIZE,
                 )}
             >

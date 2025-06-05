@@ -14,7 +14,7 @@ export function DecentralizedConsensus({ id, navbarColorScheme }: BaseSectionPro
             data-navbar-color-scheme={navbarColorScheme}
         >
             <div className="container py-14 xs:py-20 lg:py-30">
-                <TwoColumnsImageTemplate image="/learn/consensus/decentralized_consensus.png">
+                <TwoColumnsImageTemplate image="/shared/decentralized_grid.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...DECENTRALIZED_CONSENSUS_VERTICAL_TITLE}>
                             <Actions>

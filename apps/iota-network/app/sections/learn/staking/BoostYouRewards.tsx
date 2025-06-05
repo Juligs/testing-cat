@@ -13,7 +13,7 @@ export function BoostYourRewards({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
-                <TwoColumnsImageTemplate image="/learn/staking/boost-rewards/boost_rewards.png">
+                <TwoColumnsImageTemplate image="/shared/boost_rewards.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...BOOST_YOUR_REWARDS_VERTICAL_TITLE_CONTENT}>
                             <Actions>

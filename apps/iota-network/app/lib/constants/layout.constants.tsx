@@ -4,18 +4,11 @@ import {
     BlogPost,
     ClientLibraries,
     DecentralizedDataStorageAndSeamlessTransactions,
-    Discord,
     Flexibility,
-    GitHub,
-    GoogleScholar,
     IotaChains,
-    LinkedIn,
-    Reddit,
-    Telegram,
-    XSocialIcon,
-    Youtube,
     DecentralizedFinance,
     ProtocolAgnosticDesign,
+    Daos,
 } from '@repo/icons';
 
 export const LEARN_FEATURED_CARDS: Route[] = [
@@ -205,6 +198,10 @@ export const ROUTES: Route[] = [
                 isExternal: true,
             },
             {
+                title: 'Grants',
+                path: '/build/grants',
+            },
+            {
                 title: 'Business Innovation Program',
                 path: '/build/business-innovation-program',
             },
@@ -226,6 +223,11 @@ export const ROUTES: Route[] = [
                 title: 'Grants',
                 icon: <DecentralizedFinance />,
                 children: [
+                    {
+                        title: 'Project Funding',
+                        description: 'Fund for innovative project ideas',
+                        path: '/build/grants',
+                    },
                     {
                         title: 'IOTA Business Innovation Program',
                         description: 'Technical and financial support for real-world impact',
@@ -255,12 +257,16 @@ export const ROUTES: Route[] = [
                 path: '/products/evm',
             },
             {
+                title: 'Identity',
+                path: '/products/identity',
+            },
+            {
                 title: 'Tokenization',
                 path: '/products/tokenization',
             },
             {
-                title: 'Identity',
-                path: '/products/identity',
+                title: 'Gas Station',
+                path: '/products/gas-station',
             },
         ],
         navbarSections: [
@@ -296,10 +302,15 @@ export const ROUTES: Route[] = [
                         path: '/products/tokenization',
                     },
                     {
-                        title: 'IOTA Digital Identity',
+                        title: 'IOTA Identity',
                         description:
                             'Empowering secure, private, and decentralized digital interactions',
                         path: '/products/identity',
+                    },
+                    {
+                        title: 'IOTA Gas Station',
+                        description: 'Simplify Web3 user experience and onboarding',
+                        path: '/products/gas-station',
                     },
                 ],
             },
@@ -312,9 +323,19 @@ export const ROUTES: Route[] = [
 
     {
         title: 'Connect',
-        path: ' https://blog.iota.org/',
+        path: '/connect',
         isExternal: true,
         children: [
+            {
+                title: 'Our Community',
+                path: '/connect/our-community',
+                isExternal: true,
+            },
+            {
+                title: 'Build Together',
+                path: '/connect/building-together',
+                isExternal: false,
+            },
             {
                 title: 'Blog',
                 path: 'https://blog.iota.org/',
@@ -322,6 +343,28 @@ export const ROUTES: Route[] = [
             },
         ],
         navbarSections: [
+            {
+                title: 'Community',
+                icon: <Daos />,
+                children: [
+                    {
+                        title: 'Our Community',
+                        description: 'The latest from our ecosystem',
+                        path: '/connect/our-community',
+                        isExternal: false,
+                    },
+                ],
+            },
+            {
+                children: [
+                    {
+                        title: 'Build Together',
+                        description: 'Join the conversation',
+                        path: '/connect/building-together',
+                        isExternal: false,
+                    },
+                ],
+            },
             {
                 title: 'Latest',
                 icon: <BlogPost />,
@@ -338,65 +381,6 @@ export const ROUTES: Route[] = [
                 children: LEARN_FEATURED_CARDS,
             },
         ],
-    },
-];
-
-export const SOCIAL_LINKS = [
-    {
-        title: 'Builder',
-        icon: Discord,
-        url: 'https://builders-discord.iota.org/',
-        isExternal: true,
-        arialLabel: 'Builder Discord',
-    },
-    {
-        title: 'Community',
-        icon: Discord,
-        url: 'https://discord.iota.org',
-        isExternal: true,
-        arialLabel: 'Community Discord',
-    },
-    {
-        icon: Telegram,
-        url: 'https://t.me/IOTA_Official_Community',
-        isExternal: true,
-        arialLabel: 'Telegram',
-    },
-    {
-        icon: Reddit,
-        url: 'https://www.reddit.com/r/Iota/',
-        isExternal: true,
-        arialLabel: 'Reddit',
-    },
-    {
-        icon: GitHub,
-        url: 'https://github.com/iotaledger',
-        isExternal: true,
-        arialLabel: 'GitHub',
-    },
-    {
-        icon: GoogleScholar,
-        url: 'https://scholar.google.com/citations?hl=en&user=_ZIH81gAAAAJ&view_op=list_works&sortby=pubdate',
-        isExternal: true,
-        arialLabel: 'Google Scholar',
-    },
-    {
-        icon: Youtube,
-        url: 'https://www.youtube.com/c/iotafoundation',
-        isExternal: true,
-        arialLabel: 'YouTube',
-    },
-    {
-        icon: XSocialIcon,
-        url: 'https://x.com/iota',
-        isExternal: true,
-        arialLabel: 'X',
-    },
-    {
-        icon: LinkedIn,
-        url: 'https://www.linkedin.com/company/iotafoundation/',
-        isExternal: true,
-        arialLabel: 'LinkedIn',
     },
 ];
 

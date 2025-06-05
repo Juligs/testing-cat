@@ -11,16 +11,16 @@ export const BOOST_YOUR_REWARDS_IMAGE_CARD_CONTENT = [
     {
         title: 'Put Your Tokens to Work',
         body: "Staking your IOTA tokens isn't just about holding them. It's a way to get rewarded for actively contributing to the network's security and decentralization.",
-        image: '/learn/staking/boost-rewards/put_your_tokens.png',
+        image: '/shared/iota_tokens.png',
     },
     {
         title: 'Support the IOTA Ecosystem',
         body: "By staking IOTA, you contribute directly to the network's security and operational efficiency.",
-        image: '/learn/staking/boost-rewards/support_the_iota_ecosystem.png',
+        image: '/shared/users.png',
     },
     {
         title: 'Receive staking rewards',
         body: 'The IOTA protocol issues staking rewards as a way to earn token-based participation incentives.',
-        image: '/learn/staking/boost-rewards/passive_income.png',
+        image: '/shared/validators.png',
     },
 ];

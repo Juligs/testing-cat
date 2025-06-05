@@ -5,7 +5,7 @@ import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 export const HERO_EVM_CONTENT = {
     title: 'IOTA EVM',
     subtitle:
-        'Real world meets Web3. IOTA EVM is your new home to create products that reach the next billion users.',
+        'Real world meets Web3. IOTA EVM is your new home to create products that reach the next billion users',
     inverted: true,
 };
 

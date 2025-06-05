@@ -21,12 +21,12 @@ export const WALLETS_IMAGE_CARD_CONTENT = [
     {
         title: 'Asset Management ',
         body: 'Safely and conveniently manage your portfolio by dividing your assets across multiple wallets.',
-        image: '/learn/tokenomics/wallets/asset_management.png',
+        image: '/shared/asset_management.png',
     },
     {
         title: 'Staking',
         body: 'Earn rewards by staking your IOTAs. No lock-ups mean you can start and stop staking at any time.',
-        image: '/learn/tokenomics/wallets/staking.png',
+        image: '/shared/RWA.png',
     },
     {
         title: 'Ledger Integration',

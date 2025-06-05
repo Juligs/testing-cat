@@ -10,6 +10,7 @@ import {
     StartStaking,
     StakingMoreToExplore,
     FAQs,
+    LiquidStakingIcons,
 } from '@sections';
 
 import {
@@ -39,6 +40,7 @@ export default function Home() {
             <BoostYourRewards id="boost-your-rewards" />
             <EploreValidators id="explore-validators" />
             <IotaWallet id="iota-wallet" />
+            <LiquidStakingIcons id="liquid-staking" />
             <Blog id="blog" />
             <StartStaking id="start-staking" />
             <FAQs id="faqs" />
