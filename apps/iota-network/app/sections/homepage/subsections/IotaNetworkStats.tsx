@@ -20,12 +20,12 @@ export function IotaNetworkStats({ stats }: IotaNetworkStatsProps) {
             value: '~400ms',
         },
         {
-            label: 'Active Accounts (24h)',
-            value: stats?.dailyActiveAddresses ? `${stats.dailyActiveAddresses}` : MISSING_VALUE,
-        },
-        {
             label: 'Staking Ratio',
             value: stats?.stakingRatio ? `${stats.stakingRatio}%` : MISSING_VALUE,
+        },
+        {
+            label: 'Transactions (30d)',
+            value: stats?.stakingRatio ? `${stats.numberOfTxsLast30Days}` : MISSING_VALUE,
         },
     ];
 
