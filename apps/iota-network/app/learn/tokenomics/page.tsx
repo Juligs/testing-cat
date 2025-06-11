@@ -11,6 +11,7 @@ import {
     InstitutionalAcquisition,
     Wallets,
     LiquidStaking,
+    IotaTechnical,
 } from '@sections';
 import { ContactUs } from '@repo/shared/sections';
 import {
@@ -37,6 +38,7 @@ export default function Home() {
             <HeroTokenomics id="hero" navbarColorScheme="inverted" />
             <KeyPlayers id="key-players" />
             <BalancedSystem id="balanced-system" />
+            <IotaTechnical id="iota-technical" />
             <IotaEconomy id="iota-economy" />
             <BoostYourReturns id="boost-your-returns" />
             <LiquidStaking id="liquid-staking" />

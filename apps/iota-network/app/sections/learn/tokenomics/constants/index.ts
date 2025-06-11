@@ -1,6 +1,7 @@
 export * from './heroContent.constants';
 export * from './keyplayersContent.constants';
 export * from './balancedSystemContent.constants';
+export * from './iotaTechnicalContent.constants';
 export * from './iotaEconomyContent.constants';
 export * from './boostYourReturns.constants';
 export * from './exchangesContent.constants';
