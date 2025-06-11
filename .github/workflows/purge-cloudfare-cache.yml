@@ -18,6 +18,20 @@ on:
                 type: boolean
                 required: false
                 default: false
+        secrets:
+            CLOUDFLARE_IOTALABS_ZONE_ID:
+                description: 'Cloudflare Zone ID for IOTALABS'
+                required: false
+            CLOUDFLARE_NETWORK_ZONE_ID:
+                description: 'Cloudflare Zone ID for IOTA Network'
+                required: false
+            CLOUDFLARE_FOUNDATION_ZONE_ID:
+                description: 'Cloudflare Zone ID for IOTA Foundation'
+                required: false
+            CLOUDFLARE_CACHE_API_TOKEN:
+                description: 'Cloudflare API Token for Cache Purge'
+                required: false
+
     workflow_dispatch:
         inputs:
             IS_IOTALABS:

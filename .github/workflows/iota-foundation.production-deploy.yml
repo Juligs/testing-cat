@@ -27,3 +27,6 @@ jobs:
         uses: ./.github/workflows/purge-cloudfare-cache.yml
         with:
             IS_IOTA_FOUNDATION: true
+        secrets:
+            CLOUDFLARE_FOUNDATION_ZONE_ID: ${{ secrets.CLOUDFLARE_FOUNDATION_ZONE_ID }}
+            CLOUDFLARE_CACHE_API_TOKEN: ${{ secrets.CLOUDFLARE_CACHE_API_TOKEN }}
