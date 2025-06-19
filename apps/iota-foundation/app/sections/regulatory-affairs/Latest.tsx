@@ -1,7 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import { Actions, HorizontalTitle, IconContent, TextLink } from 'react-ui-kit';
-import { LATEST_ICON_CONTENT, LATEST_HORIZONTAL_TITLE } from './constants';
-import Link from 'next/link';
+import { HorizontalTitle } from 'react-ui-kit';
+import { LatestRegulatoryCarousel } from './components';
+import { LATEST_HORIZONTAL_TITLE } from './constants';
 
 export function Latest({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -10,22 +10,7 @@ export function Latest({ id, navbarColorScheme }: BaseSectionProps) {
                 <div className="w-full">
                     <HorizontalTitle {...LATEST_HORIZONTAL_TITLE} />
                 </div>
-                <div className="grid grid-cols-1  sm:grid-cols-3 gap-6">
-                    {LATEST_ICON_CONTENT.map((data, index) => (
-                        <IconContent key={index} {...data}>
-                            <Actions>
-                                <Link
-                                    href={data.link}
-                                    target="_blank"
-                                    rel="nopener noreferrer"
-                                    aria-label={`Read blog post: ${data.title}`}
-                                >
-                                    <TextLink text="Read the blog post" showIcon />
-                                </Link>
-                            </Actions>
-                        </IconContent>
-                    ))}
-                </div>
+                <LatestRegulatoryCarousel />
             </div>
         </section>
     );

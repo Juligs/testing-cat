@@ -7,7 +7,13 @@ export const LATEST_HORIZONTAL_TITLE = {
     size: TitleTextSize.Medium,
 };
 
-export const LATEST_ICON_CONTENT = [
+export const LATEST_REGULATORY_CONTENT = [
+    {
+        title: 'Smarter Rules for a Safer Web3',
+        body: "IOTA's Take on Australia’s AML Reform",
+        icon: <BlogPost />,
+        link: 'https://blog.iota.org/austrac-aml-cft-consultation/',
+    },
     {
         title: 'Our Response to FATF AML/CFT Standards Revisions',
         body: "We support FATF's proposed changes to enhance financial inclusion while maintaining robust compliance.",
@@ -15,15 +21,15 @@ export const LATEST_ICON_CONTENT = [
         link: 'https://blog.iota.org/fatf-aml-cft-standards-response/',
     },
     {
-        title: 'Our Response to IOSCO on Finfluencers Regulation',
-        body: 'We call for clearer finfluencer regulations, focusing on transparency, accountability, and investor protection.',
-        icon: <BlogPost />,
-        link: 'https://blog.iota.org/regulatory-proposals-finfluencers/',
-    },
-    {
         title: "Our Comments on Kenya's Virtual Asset Service Providers Bill",
         body: "We proposes key refinements to Kenya's VASP Bill to align with international best practices.",
         icon: <BlogPost />,
         link: 'https://blog.iota.org/kenya-virtual-asset-law-proposals/',
+    },
+    {
+        title: 'Our Response to IOSCO on Finfluencers Regulation',
+        body: 'We call for clearer finfluencer regulations, focusing on transparency, accountability, and investor protection.',
+        icon: <BlogPost />,
+        link: 'https://blog.iota.org/regulatory-proposals-finfluencers/',
     },
 ];
