@@ -13,3 +13,7 @@ export async function revalidateInfraAPI() {
 export async function revalidateProjectsAPI() {
     return revalidatePath('/api/projects');
 }
+
+export async function revalidateEventsAPI() {
+    return revalidatePath('/api/events');
+}

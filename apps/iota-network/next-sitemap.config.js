@@ -11,5 +11,6 @@ module.exports = {
         '/api/staking-stats',
         '/api/consensus-stats',
         '/api/evm-stats',
+        '/api/events',
     ],
 };

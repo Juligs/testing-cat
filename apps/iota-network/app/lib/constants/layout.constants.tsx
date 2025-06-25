@@ -329,7 +329,7 @@ export const ROUTES: Route[] = [
             {
                 title: 'Our Community',
                 path: '/connect/our-community',
-                isExternal: true,
+                isExternal: false,
             },
             {
                 title: 'Build Together',
@@ -340,6 +340,11 @@ export const ROUTES: Route[] = [
                 title: 'Blog',
                 path: 'https://blog.iota.org/',
                 isExternal: true,
+            },
+            {
+                title: 'Events',
+                path: '/connect/events',
+                isExternal: false,
             },
         ],
         navbarSections: [
@@ -374,6 +379,12 @@ export const ROUTES: Route[] = [
                         description: 'Updates on our tools and products',
                         path: 'https://blog.iota.org/',
                         isExternal: true,
+                    },
+                    {
+                        title: 'Events',
+                        description: 'Whats our plan for events?',
+                        path: '/connect/events',
+                        isExternal: false,
                     },
                 ],
             },

@@ -602,3 +602,23 @@ export const GRANTS_KEYWORDS = [
 ];
 export const GRANTS_URL = `${BASE_URL}/connect/grants`;
 export const GRANTS_IMAGE = '/metadata/meta_image_grants.png';
+
+export const EVENTS_METADATA_TITLE = 'IOTA Events | Connect, Collaborate, and Shape the Future';
+export const EVENTS_METADATA_DESCRIPTION =
+    'Discover IOTA events and workshops. Connect with the network’s creators, exchange ideas, and join a global community of innovators.';
+export const EVENTS_METADATA_DESCRIPTION_X =
+    'Stay informed about IOTA events, conferences, and workshops. Engage with creators and the global IOTA community.';
+export const EVENTS_KEYWORDS = [
+    'IOTA Events',
+    'Blockchain Conferences',
+    'Web3 Meetups',
+    'IOTA Workshops',
+    'Summits',
+    'Hackathons',
+    'Community Events',
+    'Innovation',
+    'Tech Events',
+    'DLT',
+];
+export const EVENTS_URL = `${BASE_URL}/connect/events`;
+export const EVENTS_IMAGE = '/metadata/meta_image_events.png';

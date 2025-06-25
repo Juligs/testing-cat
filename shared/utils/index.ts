@@ -5,3 +5,5 @@ export * from './airtable';
 export * from './sanitizeXData';
 export * from './fetchGrantsStats';
 export * from './getSharedSectionLink';
+export * from './sanitizeLinks';
+export * from './formatDate';
