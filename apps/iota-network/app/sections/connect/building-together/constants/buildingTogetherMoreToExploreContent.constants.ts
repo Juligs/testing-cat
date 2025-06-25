@@ -5,8 +5,8 @@ export const BUILDING_TOGETHER_MORE_TO_EXPLORE_CONTENT = [
         link: '/connect/our-community',
     },
     {
-        title: 'Why IOTA?',
-        subtitle: 'Public blockchain infrastructure that integrates Web3 with the real world',
-        link: '/learn/intro',
+        title: 'Events',
+        subtitle: 'Connect and exchange ideas with like-minded professionals',
+        link: '/connect/events',
     },
 ];

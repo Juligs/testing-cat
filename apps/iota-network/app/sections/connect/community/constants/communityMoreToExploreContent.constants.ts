@@ -1,8 +1,8 @@
 export const COMMUNITY_MORE_TO_EXPLORE_CONTENT = [
     {
-        title: 'IOTA Business Innovation Program',
-        subtitle: 'Technical and financial support for real-world impact',
-        link: '/build/business-innovation-program',
+        title: 'Events',
+        subtitle: 'Connect and exchange ideas with like-minded professionals',
+        link: '/connect/events',
     },
     {
         title: 'Building Together',
