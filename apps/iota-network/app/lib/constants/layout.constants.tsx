@@ -7,6 +7,7 @@ import {
     Flexibility,
     IotaChains,
     DecentralizedFinance,
+    DeveloperFriendly,
     ProtocolAgnosticDesign,
     Daos,
 } from '@repo/icons';
@@ -268,6 +269,10 @@ export const ROUTES: Route[] = [
                 title: 'Gas Station',
                 path: '/products/gas-station',
             },
+            {
+                title: 'Tools',
+                path: '/products/tooling',
+            },
         ],
         navbarSections: [
             {
@@ -291,7 +296,37 @@ export const ROUTES: Route[] = [
                     },
                 ],
             },
-
+            {
+                title: 'Tooling',
+                icon: <DeveloperFriendly />,
+                children: [
+                    {
+                        title: 'Explorer',
+                        description: 'Mainnet Explorer, EVM Explorer, Universal Resolver',
+                        path: '/products/tooling/#explorers',
+                    },
+                    {
+                        title: 'Libraries',
+                        description: 'SDKs and core APIs',
+                        path: '/products/tooling/#iota-application-libraries',
+                    },
+                    {
+                        title: 'CLIs',
+                        description: 'Interact directly with IOTA network',
+                        path: '/products/tooling/#iota-CLIs',
+                    },
+                    {
+                        title: 'Wallets',
+                        description: 'Secure gateway to the ecosystem',
+                        path: '/products/wallet',
+                    },
+                    {
+                        title: 'IOTA EVM Bridge',
+                        description: 'Sending assets and making withdrawals on Layer 2',
+                        path: '/products/tooling/#iota-evm-bridge',
+                    },
+                ],
+            },
             {
                 title: 'Trust Framework',
                 icon: <ProtocolAgnosticDesign />,
@@ -314,7 +349,6 @@ export const ROUTES: Route[] = [
                     },
                 ],
             },
-
             {
                 children: LEARN_FEATURED_CARDS,
             },

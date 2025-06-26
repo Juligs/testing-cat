@@ -5,3 +5,4 @@ export * from './stack-container-with-anchorlinks';
 export * from './text-link-with-icon';
 export * from './iota-technoly-stack';
 export * from './contact-us-CTA';
+export * from './CTA-card-with-icon-content';

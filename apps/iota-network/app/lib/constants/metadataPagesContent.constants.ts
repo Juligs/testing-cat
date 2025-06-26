@@ -622,3 +622,25 @@ export const EVENTS_KEYWORDS = [
 ];
 export const EVENTS_URL = `${BASE_URL}/connect/events`;
 export const EVENTS_IMAGE = '/metadata/meta_image_events.png';
+
+export const TOOLING_METADATA_TITLE =
+    'IOTA Tooling | SDKs, CLIs, Explorers & Libraries to Build on IOTA';
+export const TOOLING_METADATA_DESCRIPTION =
+    'The IOTA Tooling suite provides everything developers need to build, test, and deploy dApps and services on IOTA. Includes SDKs, CLIs, libraries, explorers, and IDE extensions for seamless development.';
+export const TOOLING_METADATA_DESCRIPTION_X =
+    'Discover the IOTA Mainnet, a next-gen Layer 1 network offering unmatched scalability, decentralization, and efficiency for real-world applications.';
+export const TOOLING_KEYWORDS = [
+    'IOTA Tooling',
+    'IOTA SDK',
+    'Blockchain Tools',
+    'CLI',
+    'IOTA Explorer',
+    'Web3 Development',
+    'Smart Contracts',
+    'EVM Toolkit',
+    'Developer Tools',
+    'IOTA Move',
+    'IOTA Libraries',
+];
+export const TOOLING_IMAGE = '/metadata/meta_image_tooling.png';
+export const TOOLING_URL = `${BASE_URL}/products/tooling`;
