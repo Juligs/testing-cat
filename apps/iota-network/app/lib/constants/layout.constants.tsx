@@ -270,6 +270,10 @@ export const ROUTES: Route[] = [
                 path: '/products/gas-station',
             },
             {
+                title: 'Wallet',
+                path: '/products/wallet',
+            },
+            {
                 title: 'Tools',
                 path: '/products/tooling',
             },

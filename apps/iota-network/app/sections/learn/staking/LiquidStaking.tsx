@@ -31,7 +31,7 @@ export function LiquidStaking({ id, navbarColorScheme }: BaseSectionProps) {
                             body={data.body}
                             icon={data.icon}
                             filled
-                        />
+                        ></IconContent>
                     ))}
                 </div>
             </div>

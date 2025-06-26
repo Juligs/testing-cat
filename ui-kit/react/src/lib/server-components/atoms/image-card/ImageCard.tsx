@@ -60,6 +60,10 @@ interface ImageCardprops {
      * alt text for the image
      */
     alt?: string;
+    /**
+     * aspect ratio
+     */
+    noAspectRatio?: boolean;
 }
 export function ImageCard({
     size = ImageCardSize.Large,
@@ -73,6 +77,7 @@ export function ImageCard({
     isHoverable = true,
     animation,
     alt,
+    noAspectRatio,
 }: ImageCardprops): JSX.Element {
     const imageClass = IMAGE_SIZE_CLASS[size];
     const gapClass = GAP_SIZE_CLASS[size];
@@ -81,6 +86,7 @@ export function ImageCard({
     const bgColor = inverted ? BG_COLOR_INVERTED : BG_COLOR_DEFAULT;
     const border = inverted ? BORDER_INVERTED : BORDER_DEFAULT;
     const linkHoverEffect = isHoverable ? HOVER_EFFECT : '';
+    const aspectRatio = !noAspectRatio ? imageClass : 'aspect-[21/9] md:aspect-auto';
 
     return (
         <div
@@ -106,7 +112,7 @@ export function ImageCard({
                     <img
                         src={image}
                         alt={alt || image}
-                        className={clsx('w-full h-auto object-cover', imageClass)}
+                        className={clsx('w-full h-auto object-cover', aspectRatio)}
                     />
                 )
             )}

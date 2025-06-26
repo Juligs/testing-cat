@@ -623,6 +623,28 @@ export const EVENTS_KEYWORDS = [
 export const EVENTS_URL = `${BASE_URL}/connect/events`;
 export const EVENTS_IMAGE = '/metadata/meta_image_events.png';
 
+export const WALLET_METADATA_TITLE =
+    'IOTA Wallets | Manage Digital Assets Across the IOTA Ecosystem';
+export const WALLET_METADATA_DESCRIPTION =
+    'Manage digital assets, stake, migrate, and access dApps with secure, user-friendly IOTA wallets and the powerful Dashboard dApp.';
+export const WALLET_METADATA_DESCRIPTION_X =
+    'Take control of your data with IOTA Identity. Create, share, and verify identities and credentials securely.';
+export const WALLET_KEYWORDS = [
+    'IOTA Wallet',
+    'Crypto Wallet',
+    'Web3 Wallet',
+    'Dashboard dApp',
+    'Staking',
+    'Digital Assets',
+    'Token Management',
+    'IOTA',
+    'Blockchain Wallet',
+    'Browser Wallet',
+    'Migrate Stardust',
+];
+export const WALLET_URL = `${BASE_URL}/products/wallet`;
+export const WALLET_IMAGE = '/metadata/meta_image_wallets.png';
+
 export const TOOLING_METADATA_TITLE =
     'IOTA Tooling | SDKs, CLIs, Explorers & Libraries to Build on IOTA';
 export const TOOLING_METADATA_DESCRIPTION =
