@@ -36,7 +36,7 @@ export function FetchEventsDataCards() {
     }, []);
 
     const fetchEventsData = async () => {
-        const res = await fetch('/api/events');
+        const res = await fetch('/api/events?ignore-cache=true');
         return (await res.json()) as EventsCards[];
     };
 
