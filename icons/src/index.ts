@@ -154,4 +154,6 @@ export { default as XSocialIcon } from './XSocialIcon';
 export { default as Youtube } from './Youtube';
 export { default as Dash } from './Dash';
 export { default as Add } from './Add';
+export { default as Prover } from './Prover';
+export { default as Speed } from './Speed';
 export { default as Instagram } from './Instagram';

@@ -1,0 +1,12 @@
+export { Hero as HeroNotarization } from './Hero';
+export { NotarizationOverview } from './NotarizationOverview';
+export { ArchievingData } from './ArchievingData';
+export { HowItWorks as HowItWorksNotarization } from './HowItWorks';
+export { NotarizationWorkflow } from './NotarizationWorkflow';
+export { ChooseTheRightLevel } from './ChooseTheRightLevel';
+export { RealWorldUseCases } from './RealWorldUseCases';
+export { WhyIota as WhyIotaNotarization } from './WhyIota';
+export { TechAndTooling } from './TechAndTooling';
+export { NotarizationTechnologyStack } from './NotarizationTechnologyStack';
+export { NotarizationContactUs } from './NotarizationContactUs';
+export { NotarizationMoreToExplore } from './NotarizationMoreToExplore';

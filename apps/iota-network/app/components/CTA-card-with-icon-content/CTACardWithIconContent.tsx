@@ -6,14 +6,19 @@ interface CTACardWithIconContentProps {
         link: string;
     };
     iconContent: (React.ComponentProps<typeof IconContent> & {
-        link: string;
+        link?: string;
     })[];
 }
 export function CTACardWithIconContent({ content, iconContent }: CTACardWithIconContentProps) {
     return (
-        <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-12">
+        <div className="flex flex-col gap-6 xs:gap-12">
             <CtaCard {...content} brand aspectVideo>
-                <Link href={content.link} aria-label="Go to the documentation">
+                <Link
+                    href={content.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Go to the documentation"
+                >
                     <TextLink text={'Learn more'} showIcon />
                 </Link>
             </CtaCard>
@@ -26,9 +31,11 @@ export function CTACardWithIconContent({ content, iconContent }: CTACardWithIcon
                         icon={data.icon}
                         filled
                     >
-                        <Link href={data.link}>
-                            <TextLink text={'Learn more'} showIcon />
-                        </Link>
+                        {data.link && (
+                            <Link href={data.link} target="_blank" rel="noopener noreferrer">
+                                <TextLink text={'Learn more'} showIcon />
+                            </Link>
+                        )}
                     </IconContent>
                 ))}
             </div>

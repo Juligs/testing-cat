@@ -106,7 +106,7 @@ export function AnchorLink({
 
             <span
                 className={clsx(isExternalIconColor, ANCHOR_LINK_ICON_IS_EXTERNAL[size], {
-                    'group-hover:translate-x-2 group-hover:transition ease-in group-hover:duration-300':
+                    'group-hover:translate-x-2 transition ease-in duration-150':
                         size === AnchorLinkSize.Default && !isExternal,
                 })}
             >

@@ -666,3 +666,24 @@ export const TOOLING_KEYWORDS = [
 ];
 export const TOOLING_IMAGE = '/metadata/meta_image_tooling.png';
 export const TOOLING_URL = `${BASE_URL}/products/tooling`;
+
+export const NOTARIZATION_METADATA_TITLE =
+    'IOTA Notarization | Verifiable, Immutable and Flexible On-Chain Records for Any Use Case';
+export const NOTARIZATION_METADATA_DESCRIPTION =
+    'Create verifiable, immutable, and privacy-respecting records on-chain with IOTA Notarization. A flexible framework for tamper-proof data anchoring across industries.';
+export const NOTARIZATION_METADATA_DESCRIPTION_X =
+    "Create tamper-proof, verifiable on-chain records with IOTA's flexible and secure notarization toolkit.";
+export const NOTARIZATION_KEYWORDS = [
+    'IOTA',
+    'Notarization',
+    'data integrity',
+    'blockchain notarization',
+    'immutable records',
+    'on-chain storage',
+    'verifiable records',
+    'compliance',
+    'digital product passport',
+    'smart contracts',
+];
+export const NOTARIZATION_URL = `${BASE_URL}/products/notarization`;
+export const NOTARIZATION_IMAGE = '/metadata/meta_image_notarization.png';

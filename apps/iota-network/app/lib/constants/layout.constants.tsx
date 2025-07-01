@@ -277,6 +277,10 @@ export const ROUTES: Route[] = [
                 title: 'Tools',
                 path: '/products/tooling',
             },
+            {
+                title: 'Notarization',
+                path: '/products/notarization',
+            },
         ],
         navbarSections: [
             {
@@ -350,6 +354,11 @@ export const ROUTES: Route[] = [
                         title: 'IOTA Gas Station',
                         description: 'Simplify Web3 user experience and onboarding',
                         path: '/products/gas-station',
+                    },
+                    {
+                        title: 'IOTA Notarization',
+                        description: 'Verifiable and Immutable On-Chain Records for Any Use Case',
+                        path: '/products/notarization',
                     },
                 ],
             },
