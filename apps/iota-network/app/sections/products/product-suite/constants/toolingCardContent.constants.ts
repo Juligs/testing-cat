@@ -40,6 +40,11 @@ export const LAYER_1_LINKS = [
                 link: 'https://marketplace.visualstudio.com/items?itemName=iotaledger.iota-move&ssr=false#overview',
                 isExternal: true,
             },
+            {
+                text: 'IOTA Notarization',
+                link: 'https://docs.iota.org/developer/iota-notarization/',
+                isExternal: true,
+            },
         ],
     },
     {
