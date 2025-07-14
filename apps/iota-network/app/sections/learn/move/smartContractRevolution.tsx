@@ -16,7 +16,7 @@ export function SmartContractRevolution({ id, navbarColorScheme }: BaseSectionPr
                             rel="noopener noreferrer"
                             aria-label="Link to Move documentation"
                         >
-                            <Button text="Learn More" icon={<ArrowTopRight />} />
+                            <Button text="Learn more" icon={<ArrowTopRight />} />
                         </Link>
                     </Actions>
                 </HorizontalTitle>

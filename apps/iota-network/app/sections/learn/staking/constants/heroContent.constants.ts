@@ -2,7 +2,7 @@ import { HeroBackground, ScreenSize } from 'react-ui-kit';
 
 export const HERO_STAKING_CONTENT = {
     title: 'Staking on IOTA',
-    subtitle: 'Securing and Decentralizing the Network While Earning Rewards',
+    subtitle: 'Securing and decentralizing the network while earning rewards',
     inverted: true,
 };
 

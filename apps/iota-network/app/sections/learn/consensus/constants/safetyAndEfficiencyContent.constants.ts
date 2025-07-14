@@ -3,7 +3,7 @@ import { ButtonVariant, TitleTextSize } from 'react-ui-kit';
 export const SAFETY_AND_EFFICIENCY_VERTICAL_TITLE = {
     title: 'Safety and Efficiency',
     subtitle: 'Consensus powered by Mysticeti',
-    body: "IOTA's consensus is built on the Mysticeti protocol, a Byzantine Fault-Tolerant (BFT) system. It enables efficient, secure consensus, maintaining transaction integrity and data even in the face of malicious nodes. BFT also ensures high fault tolerance, protecting against attacks and ensuring uninterrupted operations.",
+    body: 'IOTA’s consensus is built on the Mysticeti protocol. It enables efficient, secure consensus, maintaining transaction integrity and data even in the face of malicious nodes. It also ensures high fault tolerance, protection against attacks, and uninterrupted operations.',
     size: TitleTextSize.Small,
 };
 

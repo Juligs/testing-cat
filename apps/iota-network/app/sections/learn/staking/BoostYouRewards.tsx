@@ -23,7 +23,7 @@ export function BoostYourRewards({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferre"
                                     aria-label="go to the wallet"
                                 >
-                                    <Button text="Start Staking" icon={<ArrowTopRight />} />
+                                    <Button text="Start staking" icon={<ArrowTopRight />} />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

@@ -15,7 +15,7 @@ export const TOKENOMICS_IMAGE_CARD_CONTENT = [
     },
     {
         title: 'IOTA Token Holders',
-        body: 'can stake their tokens to validators, participating in the proof-of-stake consensus',
+        body: 'can stake their tokens to validators, participating in the proof-of-stake consensus.',
         image: '/shared/iota_tokens.png',
     },
     {

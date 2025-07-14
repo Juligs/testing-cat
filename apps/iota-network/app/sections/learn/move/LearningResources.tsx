@@ -19,7 +19,7 @@ export function LearningResources({ id, navbarColorScheme }: BaseSectionProps) {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Button text="See All" icon={<ArrowTopRight />} />
+                                <Button text="See all" icon={<ArrowTopRight />} />
                             </Link>
                         </Actions>
                     </VerticalTitle>

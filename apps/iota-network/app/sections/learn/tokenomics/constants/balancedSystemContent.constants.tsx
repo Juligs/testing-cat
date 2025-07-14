@@ -9,7 +9,7 @@ import {
 export const BALANCED_SYSTEM_VERTICAL_TITLE = {
     title: 'A Balanced System',
     subtitle: 'Creating a robust and fair ecosystem',
-    body: "IOTA tokenomics are composed of key elements, each essential to the platform's functionality and integrity",
+    body: "IOTA tokenomics are composed of key elements, each essential to the platform's functionality and integrity.",
 };
 
 export const BALANCED_SYSTEM_ICON_CONTENT = [
