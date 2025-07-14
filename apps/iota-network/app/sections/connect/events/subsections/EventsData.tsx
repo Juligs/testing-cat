@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import clsx from 'clsx';
 
 interface EventsProps {
     data: EventsCards[];
@@ -35,6 +36,12 @@ export function EventsData({ data }: EventsProps) {
             ? sortedDataAlphabetically
             : sortedDataAlphabetically.filter((card) => card.category.includes(selectedCategory));
 
+    const isSimplifiedLayout = data.length <= 2;
+
+    const cardsContainerLayout = isSimplifiedLayout
+        ? 'grid grid-cols-1 max-xs:place-items-center xs:flex xs:flex-row gap-6 justify-center items-stretch'
+        : 'grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-6';
+
     function handleCategoryClick(category: string) {
         setSelectedCategory(category === selectedCategory ? 'All' : category);
     }
@@ -56,52 +63,28 @@ export function EventsData({ data }: EventsProps) {
         );
     }
 
-    if (data.length <= 2) {
-        return (
-            <div className="flex flex-row gap-6 items-center w-full max-w-[400px] justify-center mx-auto">
-                {data.map((card, index) => {
-                    const content = (
-                        <>
-                            <ImageCard
-                                title={card.title}
-                                overline={buildOverlineText(card)}
-                                image={card.image}
-                                isHoverable={!card.link ? false : undefined}
-                            />
-                        </>
-                    );
-                    return card.link ? (
-                        <Link
-                            key={`${card.title}-${index}`}
-                            className="block"
-                            href={card.link ?? ''}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {content}
-                        </Link>
-                    ) : (
-                        <div key={`${card.title}-${index}`}>{content}</div>
-                    );
-                })}
-            </div>
-        );
-    }
-
     return (
-        <div className="flex flex-col gap-12 w-full">
-            <div className="w-full flex flex-wrap gap-2 capitalize items-center justify-center">
-                {uniqueCardCategories.map((category) => (
-                    <Chip
-                        key={category}
-                        label={category}
-                        size={ChipSize.Large}
-                        onClick={() => handleCategoryClick(category)}
-                        selected={selectedCategory === category}
-                    />
-                ))}
-            </div>
-            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-6 !h-auto">
+        <div
+            className={clsx(
+                'flex flex-col gap-12 w-full',
+                isSimplifiedLayout && 'max-w-[950px] mx-auto',
+            )}
+        >
+            {!isSimplifiedLayout && (
+                <div className="w-full flex flex-wrap gap-2 capitalize items-center justify-center">
+                    {uniqueCardCategories.map((category) => (
+                        <Chip
+                            key={category}
+                            label={category}
+                            size={ChipSize.Large}
+                            onClick={() => handleCategoryClick(category)}
+                            selected={selectedCategory === category}
+                        />
+                    ))}
+                </div>
+            )}
+
+            <div className={clsx(cardsContainerLayout)}>
                 {filteredCards.map((card, index) => {
                     const categories = Array.isArray(card.category)
                         ? card.category
@@ -110,36 +93,34 @@ export function EventsData({ data }: EventsProps) {
                           : [];
 
                     const content = (
-                        <>
-                            <ImageCard
-                                title={card.title}
-                                overline={buildOverlineText(card)}
-                                body={
-                                    typeof card.body === 'string' ? (
-                                        <span title={card.body.length > 250 ? card.body : ''}>
-                                            {card.body.slice(0, 250)}
-                                            {card.body.length > 250 ? '...' : ''}
-                                        </span>
-                                    ) : undefined
-                                }
-                                image={card.image}
-                                isHoverable={!card.link ? false : undefined}
-                            >
-                                {categories.length > 0 && (
-                                    <div className="flex flex-wrap gap-2 mt-2">
-                                        {categories.map((data, index) => (
-                                            <Badge key={index} label={data} />
-                                        ))}
-                                    </div>
-                                )}
-                            </ImageCard>
-                        </>
+                        <ImageCard
+                            title={card.title}
+                            overline={buildOverlineText(card)}
+                            body={
+                                !isSimplifiedLayout && typeof card.body === 'string' ? (
+                                    <span title={card.body.length > 250 ? card.body : ''}>
+                                        {card.body.slice(0, 250)}
+                                        {card.body.length > 250 ? '...' : ''}
+                                    </span>
+                                ) : undefined
+                            }
+                            image={card.image}
+                            isHoverable={!card.link ? false : undefined}
+                        >
+                            {!isSimplifiedLayout && categories.length > 0 && (
+                                <div className="flex flex-wrap gap-2 mt-2">
+                                    {categories.map((data, index) => (
+                                        <Badge key={index} label={data} />
+                                    ))}
+                                </div>
+                            )}
+                        </ImageCard>
                     );
 
                     return card.link ? (
                         <Link
                             key={`${card.title}-${index}`}
-                            className="!h-full block [&>div]:h-full"
+                            className={clsx('flex', isSimplifiedLayout && 'w-full max-w-[493px]')}
                             href={card.link ?? ''}
                             target="_blank"
                             rel="noopener noreferrer"
