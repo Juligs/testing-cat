@@ -21,7 +21,6 @@ export const fetchEventsData = async (): Promise<EventsCards[]> => {
             filtered: false,
             airtableName: EVENTS_AIRTABLE_TABLE_NAME,
         });
-
         return sanitizeEventsData(allRecords);
     } catch (error) {
         console.error('Error fetching events:', error);

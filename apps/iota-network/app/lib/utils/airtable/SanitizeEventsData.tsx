@@ -35,18 +35,29 @@ export function sanitizeEventsData(records: Records<FieldSet>): EventsCards[] {
     const filteredFields = records.filter((record) => {
         const fields = record.fields as EventsFields;
         const startDate = new Date(fields['Start Date']);
+        const endDate = fields['End Date'] ? new Date(fields['End Date']) : null;
+        const isInProgress = startDate <= currentDate;
         const sanitizedUrl = sanitizeUrl(fields.URL);
-        return (
+
+        const hasRequiredFields =
             fields.websiteShown === true &&
             fields['Event Title'] &&
             fields['Start Date'] &&
-            fields.Image &&
             fields.Categories &&
             fields.Location &&
             fields.Description &&
-            sanitizedUrl &&
-            startDate >= currentDate
-        );
+            fields.Image &&
+            sanitizedUrl;
+
+        const dateCondition = endDate
+            ? isInProgress
+                ? endDate >= currentDate
+                : startDate >= currentDate
+            : startDate >= currentDate;
+
+        const allConditionsMet = !!(hasRequiredFields && dateCondition);
+
+        return allConditionsMet;
     });
 
     if (filteredFields.length === 0) {
