@@ -9,8 +9,20 @@ export const LATEST_HORIZONTAL_TITLE = {
 
 export const LATEST_REGULATORY_CONTENT = [
     {
+        title: 'UK’s Financial Conduct Authority Cryptoasset Proposals',
+        body: 'Joint response with INATBA and Cardano Foundation',
+        icon: <BlogPost />,
+        link: 'https://blog.iota.org/iota-response-fca-uk/',
+    },
+    {
+        title: 'Global Standards, Local Challenges',
+        body: 'Response to the Financial Stability Board’s review of its global regulatory framework on crypto-asset activities.',
+        icon: <BlogPost />,
+        link: 'https://blog.iota.org/iota-response-fsb/',
+    },
+    {
         title: 'Smarter Rules for a Safer Web3',
-        body: "IOTA's Take on Australia’s AML Reform",
+        body: 'IOTA’s take on Australia’s AML reform',
         icon: <BlogPost />,
         link: 'https://blog.iota.org/austrac-aml-cft-consultation/',
     },
