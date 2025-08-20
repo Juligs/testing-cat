@@ -9,6 +9,7 @@ import {
     Resources,
     EventsMoreToExplore,
 } from '@sections';
+import { EventTerms } from '@repo/shared/sections';
 import {
     EVENTS_METADATA_TITLE,
     EVENTS_METADATA_DESCRIPTION_X,
@@ -36,6 +37,7 @@ export default function Home() {
             <UpcomingEvents id="upcoming-events" />
             <Hosting id="hosting" navbarColorScheme="inverted" />
             <Resources id="resources" />
+            <EventTerms id="event-terms" />
             <EventsMoreToExplore id="more-to-explore" />
         </>
     );
