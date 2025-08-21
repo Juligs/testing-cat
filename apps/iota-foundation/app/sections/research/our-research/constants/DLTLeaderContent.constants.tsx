@@ -13,14 +13,14 @@ export const DLT_LEADER_ICON_CONTENT = [
         title: 'Academic publications',
         body: "We've published over 50 publications in international peer reviewed journals and conferences. ",
         icon: <GranularDataProvenance />,
-        link: 'https://scholar.google.com/citations?hl=en&user=_ZIH81gAAAAJ&view_op=list_works&sortby=pubdate',
-        isExternal: true,
+        link: '/research/research-papers',
+        isExternal: false,
     },
     {
         title: 'International IEEE workshop',
         body: 'IOTA Foundation is creator and co-host of Beyond the Chain, the International Workshop on DAG-based Distributed Ledger Technologies.',
         icon: <BuiltWithPartners />,
-        link: 'https://icbc2024.ieee-icbc.org/workshop/dag-dlt',
+        link: 'https://icbc2025.ieee-icbc.org/workshop/nextgendlt',
         isExternal: true,
     },
     {

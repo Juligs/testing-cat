@@ -7,7 +7,9 @@
         "NEXT_PUBLIC_IOTANETWORK_GOOGLE_ANALYTICS_ID",
         "NEXT_PUBLIC_IOTAFOUNDATION_GOOGLE_ANALYTICS_ID",
         "IOTA_NETWORK_INDEXER_URL",
-        "IOTA_PRICE_URL"
+        "IOTA_PRICE_URL",
+        "GOOGLE_SHEETS_API_KEY",
+        "NODE_ENV"
     ],
     "tasks": {
         "build": {

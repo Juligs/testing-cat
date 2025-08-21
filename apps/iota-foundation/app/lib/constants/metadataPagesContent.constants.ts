@@ -185,3 +185,23 @@ export const TEAM_AND_CAREERS_KEYWORDS = [
 ];
 export const TEAM_AND_CAREERS_URL = `${BASE_URL}/about/team-and-careers`;
 export const TEAM_AND_CAREERS_IMAGE = '/metadata/meta_image_the-team.png';
+
+export const RESEARCH_PAPERS_METADATA_TITLE =
+    'Research Papers | Exploring the science behind the Technology';
+export const RESEARCH_PAPERS_METADATA_DESCRIPTION =
+    'Explore our academic papers on the IOTA Mainnet and other IOTA technologies, which offering in-depth analysis, theoretical foundations, and practical implementations that drive the development of our protocol.';
+export const RESEARCH_PAPERS_METADATA_DESCRIPTION_X =
+    'Explore our academic papers on the IOTA Mainnet and related technologies, featuring analysis, theory, and practical implementations driving our protocol.';
+export const RESEARCH_PAPERS_KEYWORDS = [
+    'IOTA Foundation',
+    'research papers',
+    'academic papers',
+    'distributed ledger technology',
+    'blockchain research',
+    'DLT innovation',
+    'blockchain consensus',
+    'blockchain interoperability',
+    'IOTA Mainnet',
+];
+export const RESEARCH_PAPERS_URL = `${BASE_URL}/research/research-papers`;
+export const RESEARCH_PAPERS_IMAGE = '/metadata/meta_image_research-papers.png';

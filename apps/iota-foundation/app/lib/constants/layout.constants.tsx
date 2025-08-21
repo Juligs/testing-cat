@@ -66,6 +66,10 @@ export const ROUTES: Route[] = [
                 title: 'Research Collaborations',
                 path: '/research/research-collaborations',
             },
+            {
+                title: 'Research Papers',
+                path: '/research/research-papers',
+            },
         ],
         navbarSections: [
             {
@@ -85,6 +89,15 @@ export const ROUTES: Route[] = [
                         title: 'Research Collaborations',
                         description: 'Turning ideas into solutions',
                         path: '/research/research-collaborations',
+                    },
+                ],
+            },
+            {
+                children: [
+                    {
+                        title: 'Research Papers',
+                        description: 'The science behind IOTA',
+                        path: '/research/research-papers',
                     },
                 ],
             },

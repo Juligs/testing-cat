@@ -41,20 +41,13 @@ export function Navigation({ items }: NavigationProps) {
     }, []);
 
     const handleClick = (index: number | null) => {
-        setOpenDropdown((prev) => {
-            const newState = prev === index ? null : index;
-
-            document.body.classList.toggle('overflow-hidden', newState !== null);
-
-            return newState;
-        });
+        setOpenDropdown((prev) => (prev === index ? null : index));
     };
 
     const handleMobileNavToggle = () => {
         setIsMobileNavOpen((prev) => {
             if (prev) {
                 setOpenDropdown(null);
-                document.body.classList.remove('overflow-hidden');
             }
             return !prev;
         });
@@ -80,7 +73,6 @@ export function Navigation({ items }: NavigationProps) {
             if (navRef.current && !navRef.current.contains(event.target as Node)) {
                 setIsMobileNavOpen(false);
                 setOpenDropdown(null);
-                document.body.classList.remove('overflow-hidden');
             }
         };
 
@@ -164,7 +156,7 @@ export function Navigation({ items }: NavigationProps) {
                         {items.map((item, index) => (
                             <MobileNavbarItem
                                 item={item}
-                                key={item.path}
+                                key={index}
                                 isOpen={openDropdown === index}
                                 onClick={() => handleClick(index)}
                                 handleLinkClick={handleLinkClick}

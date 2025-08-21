@@ -46,8 +46,8 @@ export function MobileNavbarItem({
 
             {hasChildren && (
                 <div className={clsx(isOpen ? 'max-h-full' : 'max-h-0 overflow-hidden')}>
-                    {item.navbarSections?.map((section) => (
-                        <div className="flex flex-col items-start" key={section.title}>
+                    {item.navbarSections?.map((section, index) => (
+                        <div className="flex flex-col items-start" key={index}>
                             {(section.icon || section.title) && (
                                 <div className="flex gap-3 items-center py-6 text-network-primary-0">
                                     {section.icon && (
