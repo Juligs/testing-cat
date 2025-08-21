@@ -204,4 +204,4 @@ export const RESEARCH_PAPERS_KEYWORDS = [
     'IOTA Mainnet',
 ];
 export const RESEARCH_PAPERS_URL = `${BASE_URL}/research/research-papers`;
-export const RESEARCH_PAPERS_IMAGE = '/metadata/meta_image_research-papers.png';
+export const RESEARCH_PAPERS_IMAGE = '/metadata/meta_image_research_papers.png';

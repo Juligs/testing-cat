@@ -16,7 +16,7 @@ export function CookieDisclaimer(): React.JSX.Element {
     const configuration: SKCMConfiguration = {
         disclaimer: {
             title: undefined,
-            body: 'By using the IOTA site, you agree with our use of cookies.',
+            body: 'By using the IOTA site, you agree with our use of cookies. ',
             policyText: 'Read our Cookie Policy',
             policyUrl: '/cookie-policy',
         },
