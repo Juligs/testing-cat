@@ -521,6 +521,27 @@ export const IDENTITY_KEYWORDS = [
 export const IDENTITY_URL = `${BASE_URL}/products/identity`;
 export const IDENTITY_IMAGE = '/metadata/meta_image_identity.png';
 
+export const TRUST_HIERACHIES_METADATA_TITLE =
+    'IOTA Hierarchies | Programmable and verifiable trust relationships';
+export const TRUST_HIERACHIES_METADATA_DESCRIPTION =
+    'Build and verify scalable chains of trust across people, organizations, and devices. IOTA Hierarchies enable decentralized, cryptographically verifiable delegation of authority.';
+export const TRUST_HIERACHIES_METADATA_DESCRIPTION_X =
+    'Enable secure, scalable delegation of trust with IOTA Hierarchies.';
+export const TRUST_HIERACHIES_KEYWORDS = [
+    'IOTA',
+    'Hierarchies',
+    'digital trust',
+    'decentralized identity',
+    'SSI',
+    'delegation',
+    'DID',
+    'verifiable credentials',
+    'chain of trust',
+    'IOTA Identity',
+];
+export const TRUST_HIERACHIES_URL = `${BASE_URL}/products/trust-hierarchies`;
+export const TRUST_HIERACHIES_IMAGE = '/metadata/meta_image_hierarchies.png';
+
 export const GAS_STATION_METADATA_TITLE =
     'IOTA Gas Station | Sponsored transaction fees for a smoother Web3 experience';
 export const GAS_STATION_METADATA_DESCRIPTION =
@@ -605,7 +626,7 @@ export const GRANTS_IMAGE = '/metadata/meta_image_grants.png';
 
 export const EVENTS_METADATA_TITLE = 'IOTA Events | Connect, Collaborate, and Shape the Future';
 export const EVENTS_METADATA_DESCRIPTION =
-    'Discover IOTA events and workshops. Connect with the network’s creators, exchange ideas, and join a global community of innovators.';
+    "Discover IOTA events and workshops. Connect with the network's creators, exchange ideas, and join a global community of innovators.";
 export const EVENTS_METADATA_DESCRIPTION_X =
     'Stay informed about IOTA events, conferences, and workshops. Engage with creators and the global IOTA community.';
 export const EVENTS_KEYWORDS = [

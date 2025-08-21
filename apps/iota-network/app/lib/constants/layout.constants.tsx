@@ -281,6 +281,10 @@ export const ROUTES: Route[] = [
                 title: 'Notarization',
                 path: '/products/notarization',
             },
+            {
+                title: 'Identity',
+                path: '/products/identity',
+            },
         ],
         navbarSections: [
             {
@@ -359,6 +363,11 @@ export const ROUTES: Route[] = [
                         title: 'IOTA Notarization',
                         description: 'Verifiable and Immutable On-Chain Records for Any Use Case',
                         path: '/products/notarization',
+                    },
+                    {
+                        title: 'IOTA Trust Hierarchies',
+                        description: 'Secure and verifiable trust delegation in digital ecosystems',
+                        path: '/products/trust-hierarchies',
                     },
                 ],
             },

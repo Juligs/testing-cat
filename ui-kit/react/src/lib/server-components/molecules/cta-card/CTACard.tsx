@@ -119,7 +119,15 @@ export function CtaCard({
                     PADDING_SIZE,
                 )}
             >
-                <p className={clsx('text-title-lg xs:text-headline-sm', colorTitle)}>{title}</p>
+                <p
+                    className={clsx(
+                        'text-title-lg xs:text-headline-sm',
+                        colorTitle,
+                        isVertical && 'whitespace-pre-line',
+                    )}
+                >
+                    {title}
+                </p>
                 <p className={clsx('text-label-md xs:text-label-lg', colorText)}>{subtitle}</p>
                 {body && <p className={clsx('text-body-lg', colorText)}>{body}</p>}
                 {children && (

@@ -10,7 +10,7 @@ export const REAL_WORLD_USE_CASES_IMAGE_CARD_CONTENT = [
     {
         title: 'Legal and Regulatory Compliance',
         body: 'Anchor court documents, contracts, and filings on-chain. Ensure they’re immutable and publicly verifiable.',
-        image: '/products/notarization/real-world-use-cases/legal_and_regulatory.png',
+        image: '/shared/legal.png',
     },
     {
         title: 'Credentials and Certifications',
@@ -25,7 +25,7 @@ export const REAL_WORLD_USE_CASES_IMAGE_CARD_CONTENT = [
     {
         title: 'Digital Product Passports and Supply Chains',
         body: 'Capture product lifecycle events with updatable records for traceability, sustainability, and provenance.',
-        image: '/products/notarization/real-world-use-cases/dpp.png',
+        image: '/shared/supply_chains.png',
     },
     {
         title: 'Public Registries and Digital Twins',

@@ -3,6 +3,7 @@ export * from './evm';
 export * from './mainnet';
 export * from './tokenization';
 export * from './identity';
+export * from './trust-hierarchies';
 export * from './notarization';
 export * from './wallet';
 export * from './gas-station';
