@@ -108,7 +108,7 @@ export const ROUTES: Route[] = [
     },
     {
         title: 'News',
-        path: ' https://blog.iota.org/',
+        path: '/news',
         isExternal: true,
         children: [
             {
@@ -127,6 +127,15 @@ export const ROUTES: Route[] = [
                         description: 'Get the latest IOTA updates',
                         path: 'https://blog.iota.org/',
                         isExternal: true,
+                    },
+                ],
+            },
+            {
+                children: [
+                    {
+                        title: 'Brand Library',
+                        description: 'Assets for events and publications',
+                        path: '/news/brand-library',
                     },
                 ],
             },

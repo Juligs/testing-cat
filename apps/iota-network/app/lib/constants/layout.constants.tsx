@@ -365,7 +365,7 @@ export const ROUTES: Route[] = [
                         path: '/products/notarization',
                     },
                     {
-                        title: 'IOTA Trust Hierarchies',
+                        title: 'IOTA Hierarchies',
                         description: 'Secure and verifiable trust delegation in digital ecosystems',
                         path: '/products/trust-hierarchies',
                     },

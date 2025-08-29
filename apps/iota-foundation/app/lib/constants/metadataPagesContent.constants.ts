@@ -205,3 +205,26 @@ export const RESEARCH_PAPERS_KEYWORDS = [
 ];
 export const RESEARCH_PAPERS_URL = `${BASE_URL}/research/research-papers`;
 export const RESEARCH_PAPERS_IMAGE = '/metadata/meta_image_research_papers.png';
+
+export const BRAND_LIBRARY_METADATA_TITLE =
+    'Brand Library | Your one-stop destination for brand assets and guidelines';
+export const BRAND_LIBRARY_METADATA_DESCRIPTION =
+    "Explore our comprehensive collection of brand assets and guidelines, whether you're planning an event, preparing a publication, or covering news about IOTA, our asset library has everything you need.";
+export const BRAND_LIBRARY_METADATA_DESCRIPTION_X =
+    'Explore our brand assets and guidelines—whether for events, publications, or IOTA news, our library has everything you need.';
+export const BRAND_LIBRARY_KEYWORDS = [
+    'IOTA Foundation',
+    'brand library',
+    'brand assets',
+    'guidelines',
+    'collection of brand assets',
+    'event',
+    'publication',
+    'news',
+    'logo',
+    'brand colors',
+    'typography',
+    'branding guideline',
+];
+export const BRAND_LIBRARY_URL = `${BASE_URL}/news/brand-library`;
+export const BRAND_LIBRARY_IMAGE = '/metadata/meta_image_brand_library.png';
