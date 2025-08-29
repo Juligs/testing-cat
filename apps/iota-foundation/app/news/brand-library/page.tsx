@@ -7,12 +7,7 @@ import {
     BRAND_LIBRARY_IMAGE,
     BRAND_LIBRARY_URL,
 } from '@lib/constants';
-import {
-    BrandAssets,
-    BrandLibraryMoreToExplore,
-    BrandLibraryOverview,
-    HeroBrandLibrary,
-} from '@sections';
+import { BrandAssets, BrandLibraryOverview, HeroBrandLibrary } from '@sections';
 
 import type { Metadata } from 'next';
 
@@ -32,7 +27,6 @@ export default function Home() {
             <HeroBrandLibrary id="hero" />
             <BrandLibraryOverview id="overview" />
             <BrandAssets id="assets" />
-            <BrandLibraryMoreToExplore id="more-to-explore" />
         </>
     );
 }
