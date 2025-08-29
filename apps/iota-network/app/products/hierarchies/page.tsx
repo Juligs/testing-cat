@@ -29,7 +29,7 @@ export const metadata: Metadata = getPageMetadata({
     keywords: TRUST_HIERACHIES_KEYWORDS,
     image: TRUST_HIERACHIES_IMAGE,
     url: TRUST_HIERACHIES_URL,
-    path: '/products/trust-hierarchies',
+    path: '/products/hierarchies',
 });
 
 export default function Home() {

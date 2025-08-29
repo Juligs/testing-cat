@@ -13,14 +13,14 @@ export const HOW_IT_WORKS_CTA_CARD_CONTENT = [
         title: 'Root Authority:\nDelegate from the Top',
         subtitle:
             'Initiates the trust structure. Defines roles, issues accreditations, and revokes permissions as needed.',
-        image: '/products/trust-hierarchies/define_delegate.png',
+        image: '/products/hierarchies/define_delegate.png',
         link: 'https://docs.iota.org/developer/iota-hierarchies/explanations/federation#the-root-authority',
     },
     {
         title: 'Federation:\nSet the Rules of Trust',
         subtitle:
             'Establishes a shared trust domain, where entities follow common roles, rules, and policies.',
-        image: '/products/trust-hierarchies/modular_structure.png',
+        image: '/products/hierarchies/modular_structure.png',
         link: 'https://docs.iota.org/developer/iota-hierarchies/explanations/federation#federation',
     },
 ];

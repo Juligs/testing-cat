@@ -367,7 +367,7 @@ export const ROUTES: Route[] = [
                     {
                         title: 'IOTA Hierarchies',
                         description: 'Secure and verifiable trust delegation in digital ecosystems',
-                        path: '/products/trust-hierarchies',
+                        path: '/products/hierarchies',
                     },
                 ],
             },

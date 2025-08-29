@@ -10,7 +10,7 @@ export function IndustryApplications({ id, navbarColorScheme }: BaseSectionProps
     return (
         <section id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-14 xs:gap-20 sm:gap-30">
-                <TwoColumnsImageTemplate image="/products/trust-hierarchies/what_you_can_build.png">
+                <TwoColumnsImageTemplate image="/products/hierarchies/what_you_can_build.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...INDUSTRY_APPLICATIONS_VERTICAL_TITLE} />
                     </div>

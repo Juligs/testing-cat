@@ -11,7 +11,7 @@ export function Decentralization({ id, navbarColorScheme }: BaseSectionProps) {
             data-navbar-color-scheme={navbarColorScheme}
         >
             <div className="container py-14 xs:py-20 lg:py-30">
-                <TwoColumnsImageTemplate image="/products/trust-hierarchies/decentralization.png">
+                <TwoColumnsImageTemplate image="/products/hierarchies/decentralization.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...TRUST_HIERARCHIES_VERTICAL_TITLE_CONTENT} />
                     </div>

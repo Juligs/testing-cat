@@ -539,7 +539,7 @@ export const TRUST_HIERACHIES_KEYWORDS = [
     'chain of trust',
     'IOTA Identity',
 ];
-export const TRUST_HIERACHIES_URL = `${BASE_URL}/products/trust-hierarchies`;
+export const TRUST_HIERACHIES_URL = `${BASE_URL}/products/hierarchies`;
 export const TRUST_HIERACHIES_IMAGE = '/metadata/meta_image_hierarchies.png';
 
 export const GAS_STATION_METADATA_TITLE =
