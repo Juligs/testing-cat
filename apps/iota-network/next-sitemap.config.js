@@ -12,5 +12,6 @@ module.exports = {
         '/api/consensus-stats',
         '/api/evm-stats',
         '/api/events',
+        '/api/exchanges',
     ],
 };

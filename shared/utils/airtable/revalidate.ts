@@ -17,3 +17,7 @@ export async function revalidateProjectsAPI() {
 export async function revalidateEventsAPI() {
     return revalidatePath('/api/events');
 }
+
+export async function revalidateExchangesAPI() {
+    return revalidatePath('/api/exchanges');
+}
