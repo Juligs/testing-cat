@@ -24,7 +24,6 @@
     .text-headline-lg,
     .text-headline-md,
     .text-headline-sm {
-        font-feature-settings: 'ss02' on;
         font-weight: var(--font-weight);
         letter-spacing: var(--letter-spacing);
     }
