@@ -708,3 +708,29 @@ export const NOTARIZATION_KEYWORDS = [
 ];
 export const NOTARIZATION_URL = `${BASE_URL}/products/notarization`;
 export const NOTARIZATION_IMAGE = '/metadata/meta_image_notarization.png';
+
+export const TRUST_FRAMEWORK_METADATA_TITLE =
+    'IOTA Trust Framework | Open-source modules that simplify and scale digital trust';
+export const TRUST_FRAMEWORK_METADATA_DESCRIPTION =
+    'Explore the IOTA Trust Framework, empowering developers, governments, and businesses with open-source tools for secure, transparent, and verifiable interactions. From identity verification to data integrity, it delivers modular solutions for digital trust.';
+export const TRUST_FRAMEWORK_METADATA_DESCRIPTION_X =
+    'Open-source tools for secure, transparent, and verifiable digital interactions. The IOTA Trust Framework supports identity, data integrity, and trust delegation.';
+export const TRUST_FRAMEWORK_KEYWORDS = [
+    'IOTA Trust Framework',
+    'Digital Trust',
+    'Verifiable Credentials',
+    'Decentralized Identity',
+    'Data Integrity',
+    'Trust Delegation',
+    'Open Source',
+    'Secure Digital Ecosystems',
+    'Hierarchical Trust',
+    'Digital Verification',
+    'IOTA Hierarchies',
+    'IOTA Identity',
+    'IOTA Gas Station',
+    'IOTA Tokenization',
+    'IOTA Notarization',
+];
+export const TRUST_FRAMEWORK_URL = `${BASE_URL}/products/trust-framework`;
+export const TRUST_FRAMEWORK_IMAGE = '/metadata/meta_image_trust-framework.png';
