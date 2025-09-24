@@ -12,7 +12,7 @@ export const HERO_HOMEPAGE_CONTENT = {
 
 export const HERO_HOMEPAGE_BUTTON = [
     {
-        text: 'Get Started',
+        text: 'Get started',
         link: 'https://docs.iota.org/developer/getting-started',
         variant: ButtonVariant.Primary,
         icon: <ArrowTopRight />,

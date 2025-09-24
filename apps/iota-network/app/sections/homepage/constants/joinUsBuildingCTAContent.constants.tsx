@@ -1,7 +1,7 @@
 export const JOIN_US_BUILDING_CTA_CONTENT = {
     title: 'Join Us in Building on the IOTA Mainnet',
     subtitle: 'We invite innovators to showcase real-world impact with IOTA',
-    body: 'The IOTA Business Innovation Program supports with technical resources, community support, and funding, you’ll gain the tools to bring your vision to life.',
+    body: 'The IOTA Business Innovation Program offers technical resources, community support, and funding to help you bring your vision to life.',
     image: '/build/business-innovation/join_us_in_building_cta.png',
     inverted: true,
 };

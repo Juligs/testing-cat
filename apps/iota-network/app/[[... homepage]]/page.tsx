@@ -4,7 +4,7 @@ import { HomepageRedirect } from '@repo/shared/components';
 import {
     Hero,
     NetworkStats,
-    IOTAAndMoveCTA,
+    MoveLanding,
     IntegrationStack,
     StakingOnIota,
     BuildingSolutions,
@@ -40,13 +40,13 @@ export default function Home() {
         <>
             <Hero id="hero" navbarColorScheme="inverted" />
             <NetworkStats id="network-stats" />
-            <IOTAAndMoveCTA id="iotamove-cta" navbarColorScheme="inverted" />
+            <MoveLanding id="iotamove-cta" navbarColorScheme="inverted" />
             <IntegrationStack id="integration-stack" />
             <StakingOnIota id="staking-on-iota" />
             <BuildingSolutions id="building-solutions" />
             <Rwa id="rwa" />
             <LighthouseProjects id="lighthouse-projects" />
-            <JoinUsBuildingCTA id="join-us-in-building" />
+            <JoinUsBuildingCTA id="join-us-in-building" navbarColorScheme="inverted" />
             <EcosystemProjects id="ecosystem-projects" />
             <WhyBuild id="why-build" navbarColorScheme="inverted" />
             <BlogPosts id="blog-posts" />
