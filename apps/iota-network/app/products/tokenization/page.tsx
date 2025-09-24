@@ -19,6 +19,10 @@ import {
     TOKENIZATION_IMAGE,
     TOKENIZATION_URL,
 } from '@lib/constants';
+import {
+    DppTrustFrameworkTeaser,
+    PRODUCT_TOKENIZATION,
+} from '@components/dpp-trust-framework-teaser';
 export const metadata: Metadata = getPageMetadata({
     title: TOKENIZATION_METADATA_TITLE,
     description: TOKENIZATION_METADATA_DESCRIPTION,
@@ -40,6 +44,7 @@ export default function Home() {
             <NFTByDefault id="nft-by-default" />
             <CoinsAndsTokens id="coins-and-tokens" />
             <TokenizationStack id="tokenization-stack" />
+            <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_TOKENIZATION} />
             <TokenizationMoreToExplore id="more-to-explore" />
         </>
     );
