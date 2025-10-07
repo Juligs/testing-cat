@@ -159,8 +159,13 @@ function MobileSection({ section, onClose }: { section: VerticalSection; onClose
                 </div>
             )}
             {section.children?.length && (
-                <div className="flex flex-col gap-2">
-                    {section.children?.map((route, idx) => (
+                <div
+                    className={clsx(
+                        'flex flex-col',
+                        section.children.some((child) => child.image) ? 'gap-4' : 'gap-2',
+                    )}
+                >
+                    {section.children.map((route, idx) => (
                         <NavItem key={idx} item={route} onClose={onClose} />
                     ))}
                 </div>

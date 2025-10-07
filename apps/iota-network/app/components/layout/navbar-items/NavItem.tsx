@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { MenuRoute } from '../layout.interfaces';
-import clsx from 'clsx';
 import Image from 'next/image';
 
 interface NavItemProps {
@@ -17,7 +16,7 @@ export function NavItem({ item, onClose }: NavItemProps) {
             {...external}
             onClick={() => onClose?.()}
             aria-label={`Link to ${item.title}`}
-            className={clsx('group flex flex-col items-start text-start', item.image && 'pb-2')}
+            className="group flex flex-col items-start text-start"
         >
             <div className="flex flex-row items-center gap-4">
                 {item.image && (

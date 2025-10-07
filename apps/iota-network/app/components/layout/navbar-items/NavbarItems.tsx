@@ -61,8 +61,8 @@ export function DropdownMenu({ item, onClose }: DropdownMenuProps) {
                                 <div
                                     key={`${rowIdx}-${sIdx}`}
                                     className={clsx(
-                                        'flex flex-col items-start pb-12 pr-6 pl-12 gap-y-4',
-                                        row.isFooter ? 'pt-4 pb-6' : 'pt-8',
+                                        'flex flex-col items-start pr-6 pl-12 gap-y-4',
+                                        row.isFooter ? 'pt-4 pb-6' : 'pt-8 pb-12',
                                         'highlighted' in section &&
                                             section.highlighted &&
                                             'bg-white/30 rounded-xl gap-y-6',
