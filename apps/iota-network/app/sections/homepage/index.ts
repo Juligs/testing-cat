@@ -1,6 +1,6 @@
 export * from './Hero';
 export * from './NetworkStats';
-export * from './IOTAAndMoveCTA';
+export * from './MoveLanding';
 export * from './IntegrationStack';
 export * from './StakingOnIota';
 export * from './BuildingSolutions';

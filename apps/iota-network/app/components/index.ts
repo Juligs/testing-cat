@@ -6,3 +6,4 @@ export * from './text-link-with-icon';
 export * from './iota-technoly-stack';
 export * from './contact-us-CTA';
 export * from './CTA-card-with-icon-content';
+export * from './trust-framework';

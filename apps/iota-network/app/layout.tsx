@@ -1,11 +1,11 @@
 import { Footer, CookieDisclaimer } from '@components';
-import { Navigation } from '@repo/shared/components';
-import { ROUTES } from '@lib/constants';
+import { Navigation } from './components/layout/navigation';
 import { Metadata } from 'next';
 import { ContextProviders } from './providers';
 import { getPageMetadata } from '@lib/utils';
 import { FontLinks } from './components/font-links';
 import './globals.css';
+import { items } from './lib/constants/navbarRoutes.constants';
 
 export const metadata: Metadata = getPageMetadata({});
 
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <body>
                 <FontLinks />
                 <ContextProviders>
-                    <Navigation items={ROUTES} />
+                    <Navigation items={items} />
                     {children}
                     <Footer />
                     <CookieDisclaimer />

@@ -58,6 +58,10 @@ interface CtaCardProps {
      * image aspect video
      */
     aspectVideo?: boolean;
+    /***
+     * Small card
+     */
+    small?: boolean;
 }
 
 export function CtaCard({
@@ -73,6 +77,7 @@ export function CtaCard({
     isVertical,
     alignStart,
     aspectVideo,
+    small,
 }: CtaCardProps): JSX.Element {
     const colorTitle = inverted ? COLOR_TITLE_INVERTED : COLOR_TITLE;
     const colorText = inverted ? COLOR_TEXT_INVERTED : COLOR_TEXT;
@@ -112,23 +117,32 @@ export function CtaCard({
 
             <div
                 className={clsx(
-                    'flex flex-col justify-start text-center w-full gap-2 xs:gap-4 h-full',
+                    'flex flex-col w-full h-full',
+                    small ? 'gap-0' : 'gap-2 xs:gap-4',
                     alignStart ? 'items-start' : 'items-center',
                     isVertical ? 'sm:w-full' : 'sm:w-1/2',
                     aspectVideo ? 'pt-0 pb-8 sm:py-8' : 'py-8',
-                    PADDING_SIZE,
+                    small ? 'pt-8 pb-12 pr-4 pl-8' : PADDING_SIZE,
+                    small ? 'justify-center text-start' : 'justify-start text-center',
                 )}
             >
                 <p
                     className={clsx(
-                        'text-title-lg xs:text-headline-sm',
+                        small ? 'text-title-sm' : 'text-title-lg xs:text-headline-sm',
                         colorTitle,
                         isVertical && 'whitespace-pre-line',
                     )}
                 >
                     {title}
                 </p>
-                <p className={clsx('text-label-md xs:text-label-lg', colorText)}>{subtitle}</p>
+                <p
+                    className={clsx(
+                        small ? 'text-body-md' : 'text-label-md xs:text-label-lg',
+                        colorText,
+                    )}
+                >
+                    {subtitle}
+                </p>
                 {body && <p className={clsx('text-body-lg', colorText)}>{body}</p>}
                 {children && (
                     <div className="flex items-center justify-center gap-6 pt-6 xs:pt-8">

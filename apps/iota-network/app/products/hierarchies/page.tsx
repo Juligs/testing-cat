@@ -22,6 +22,10 @@ import {
     TRUST_HIERACHIES_IMAGE,
     TRUST_HIERACHIES_URL,
 } from '@lib/constants';
+import {
+    DppTrustFrameworkTeaser,
+    PRODUCT_HIERARCHIES,
+} from '@components/dpp-trust-framework-teaser';
 export const metadata: Metadata = getPageMetadata({
     title: TRUST_HIERACHIES_METADATA_TITLE,
     description: TRUST_HIERACHIES_METADATA_DESCRIPTION,
@@ -44,6 +48,7 @@ export default function Home() {
             <WhyIotaTrustHierarchies id="why-iota" />
             <TechAndToolingTrustHierarchies id="tech-and-tooling" />
             <TrustHierarchieTechnologyStack id="iota-technology-stack" />
+            <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_HIERARCHIES} />
             <TrustHierarchiesContactUs id="contact-us" />
             <TrustHierarchiesMoreToExplore id="more-to-explore" />
         </>

@@ -1,8 +1,7 @@
 'use client';
 
-import { COMPANY_DATA, LEGAL_ROUTES, ROUTES } from '@lib/constants';
+import { COMPANY_DATA, LEGAL_ROUTES, FOOTER_ROUTES } from '@lib/constants';
 import { SOCIAL_LINKS } from '@repo/shared/constants';
-import { Route } from '@repo/shared/interfaces';
 import { useScreenSize } from '@repo/shared/hooks';
 import Link from 'next/link';
 import { Button, ButtonSize, ButtonVariant, ScreenSize } from 'react-ui-kit';
@@ -19,35 +18,13 @@ export function Footer() {
         setClientScreenSize(screenSize);
     }, [screenSize]);
 
-    function getFooterRoutes(routes: Route[]): Route[] {
-        return routes
-            .filter((route) => !route.hideFromFooter)
-            .map((route) => ({
-                ...route,
-                children: route.children?.length ? flattenChildren(route.children) : undefined,
-            }));
-    }
-
-    function flattenChildren(routes: Route[]): Route[] {
-        return routes.flatMap((route) => {
-            if (route.hideFromFooter) return [];
-
-            const currentRoute = { ...route, children: undefined };
-            const nestedRoutes = route.children ? flattenChildren(route.children) : [];
-
-            return [currentRoute, ...nestedRoutes];
-        });
-    }
-
-    const footerRoutes = getFooterRoutes(ROUTES);
-
     const footerLinksMedia = SOCIAL_LINKS.filter((link) => link.visibility?.includes('footer'));
 
     return (
         <footer className="bg-darkest text-white relative overflow-hidden">
             <div className="container py-8 z-1 relative bg-iota-neutral-10">
                 <div className="grid grid-cols-2 gap-6 xs:grid-cols-4">
-                    {footerRoutes.map((route, routeIndex) => (
+                    {FOOTER_ROUTES.map((route, routeIndex) => (
                         <div key={routeIndex} className="flex flex-col gap-y-4">
                             <span className="text-labs-neutral-100 text-label-lg">
                                 {route.title}

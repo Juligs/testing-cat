@@ -21,6 +21,7 @@ import {
     IDENTITY_IMAGE,
     IDENTITY_URL,
 } from '@lib/constants';
+import { DppTrustFrameworkTeaser, PRODUCT_IDENTITY } from '@components/dpp-trust-framework-teaser';
 export const metadata: Metadata = getPageMetadata({
     title: IDENTITY_METADATA_TITLE,
     description: IDENTITY_METADATA_DESCRIPTION,
@@ -43,6 +44,7 @@ export default function Home() {
             <Tooling id="tooling" />
             <ZeroKnowledge id="zero-knowledge" />
             <IdentityIotaTechnologyStack id="iota-tecnholgy-stack" />
+            <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_IDENTITY} />
             <IdentityContactUs id="contact-us" />
             <IdentityMoreToExplore id="more-to-explore" />
         </>

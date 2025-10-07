@@ -1,6 +1,6 @@
 export * from './heroContent.constants';
 export * from './buildingSolutionsContent.constants';
-export * from './iotaAndMoveCTAContent.constants';
+export * from './moveLandingContent.constants';
 export * from './stakingOnIotaContent.constants';
 export * from './integrationStackContent.constants';
 export * from './whyBuildContent.constants';

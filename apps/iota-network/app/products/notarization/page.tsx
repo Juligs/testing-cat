@@ -23,6 +23,10 @@ import {
     NOTARIZATION_IMAGE,
     NOTARIZATION_URL,
 } from '@lib/constants';
+import {
+    DppTrustFrameworkTeaser,
+    PRODUCT_NOTARIZATION,
+} from '@components/dpp-trust-framework-teaser';
 export const metadata: Metadata = getPageMetadata({
     title: NOTARIZATION_METADATA_TITLE,
     description: NOTARIZATION_METADATA_DESCRIPTION,
@@ -46,6 +50,7 @@ export default function Home() {
             <WhyIotaNotarization id="why-iota-notarization" />
             <TechAndTooling id="tech-and-tooling" />
             <NotarizationTechnologyStack id="notarization-technology-stack" />
+            <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_NOTARIZATION} />
             <NotarizationContactUs id="contact-us" />
             <NotarizationMoreToExplore id="more-to-explore" />
         </>

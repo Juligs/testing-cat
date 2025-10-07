@@ -20,6 +20,10 @@ import {
 } from '@lib/constants';
 import { HowItWorksGas } from '@sections/products/gas-station/HowItWorksGas';
 import { GasMoreToExplore } from '@sections/products/gas-station/GasMoreToExplore';
+import {
+    DppTrustFrameworkTeaser,
+    PRODUCT_GAS_STATION,
+} from '@components/dpp-trust-framework-teaser';
 export const metadata: Metadata = getPageMetadata({
     title: GAS_STATION_METADATA_TITLE,
     description: GAS_STATION_METADATA_DESCRIPTION,
@@ -41,6 +45,7 @@ export default function Home() {
             <FlexibleUseCases id="flexible-use-cases" />
             <WhyIotaGas id="tech-and-tooling" />
             <GasTechnologyStack id="gas-technology-stack" />
+            <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_GAS_STATION} />
             <GasContactUs id="contact-us" />
             <GasMoreToExplore id="more to explore" />
         </>
