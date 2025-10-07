@@ -11,7 +11,7 @@ export const DPP_TRUST_FRAMEWORK_IMAGE_CARD_CONTENT = [
         title: 'IOTA Products Working as One',
         body: 'Discover how IOTA’s public infrastructure and Trust Framework work together in a real-world demo',
         image: '/shared/iota_technology.png',
-        link: 'https://www.dpp.demo.iota.org/',
+        link: 'https://dpp.demo.iota.org/',
         text: 'Try the Demo',
         isExternal: true,
     },

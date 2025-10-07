@@ -276,7 +276,7 @@ export const items: NavbarGroupItem[] = [
                         children: [
                             {
                                 title: 'Digital Product Passport',
-                                href: 'https://www.dpp.demo.iota.org/',
+                                href: 'https://dpp.demo.iota.org/',
                                 isExternal: true,
                             },
                         ],

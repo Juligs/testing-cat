@@ -14,9 +14,10 @@ export function ExperienceIota({ id, navbarColorScheme }: BaseSectionProps) {
                         <VerticalTitle {...EXPERIENCE_IOTA_TITLE_CONTENT}>
                             <Actions>
                                 <Link
-                                    href="https://www.dpp.demo.iota.org/"
+                                    href="https://dpp.demo.iota.org/"
                                     rel="noopener noreferrer"
                                     target="_blank"
+                                    aria-Label="Try the Digital Product Passport demo"
                                 >
                                     <Button text="Launch demo" icon={<ArrowTopRight />} />
                                 </Link>
