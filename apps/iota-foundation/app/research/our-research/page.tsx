@@ -15,7 +15,6 @@ import {
     DLTLeader,
     OurResearchMoreToExplore,
 } from '@sections';
-
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = getPageMetadata({

@@ -1,6 +1,6 @@
-import { BaseSectionProps } from '@repo/shared/interfaces';
-import { JOIN_VERTICAL_TITLE_CONTENT } from './constants';
-import { SOCIAL_LINKS } from '@repo/shared/constants';
+import { BaseSectionProps } from '../../interfaces';
+import { JOIN_VERTICAL_TITLE_CONTENT } from './joinContent.constants';
+import { SOCIAL_LINKS } from '../../constants';
 import { AnchorLink, VerticalTitle } from 'react-ui-kit';
 import Link from 'next/link';
 
@@ -19,7 +19,7 @@ export function Join({ id, navbarColorScheme }: BaseSectionProps) {
                 </div>
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
                     {sectionLinks.map((data, index) => (
-                        <Link key={index} href={data.url} target="_blank">
+                        <Link key={index} href={data.url} target="_blank" rel="noopener noreferrer">
                             <AnchorLink
                                 text={
                                     index < 2

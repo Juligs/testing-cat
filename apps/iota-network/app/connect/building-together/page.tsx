@@ -3,12 +3,12 @@ import type { Metadata } from 'next';
 import {
     HeroBuildingTogether,
     CollaborativeCommunity,
-    Join,
     CryptoPlatforms,
     BuildingTogetherContactUs,
     ShapeTheFuture,
     BuildingTogetherMoreToExplore,
 } from '@sections';
+import { Join } from '@repo/shared/sections';
 import {
     BUILDING_TOGETHER_METADATA_TITLE,
     BUILDING_TOGETHER_METADATA_DESCRIPTION_X,

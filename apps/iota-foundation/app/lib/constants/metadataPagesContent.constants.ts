@@ -206,6 +206,26 @@ export const RESEARCH_PAPERS_KEYWORDS = [
 export const RESEARCH_PAPERS_URL = `${BASE_URL}/research/research-papers`;
 export const RESEARCH_PAPERS_IMAGE = '/metadata/meta_image_research_papers.png';
 
+export const OUR_PARTNERS_METADATA_TITLE = 'Our Partners | Our partners and investors';
+export const OUR_PARTNERS_METADATA_DESCRIPTION =
+    'Join us in partnering and collaborating to boost resource efficiency and build lasting trust—let’s achieve more, together.';
+export const OUR_PARTNERS_METADATA_DESCRIPTION_X =
+    'Join us in partnering and collaborating to boost resource efficiency and build lasting trust—let’s achieve more, together.';
+export const OUR_PARTNERS_KEYWORDS = [
+    'IOTA Foundation',
+    'Partnerships',
+    'Collaborations',
+    'Technology Partners',
+    'Corporate Partners',
+    'Strategic Alliances',
+    'Innovation Partners',
+    'Ecosystem',
+    'Trusted Partners',
+    'Blockchain Partnerships',
+];
+export const OUR_PARTNERS_URL = `${BASE_URL}/about/our-partners`;
+export const OUR_PARTNERS_IMAGE = '/metadata/meta_image_our-partners.png';
+
 export const BRAND_LIBRARY_METADATA_TITLE =
     'Brand Library | Your one-stop destination for brand assets and guidelines';
 export const BRAND_LIBRARY_METADATA_DESCRIPTION =
