@@ -16,7 +16,7 @@ export const SOCIAL_LINKS = [
         icon: Discord,
         url: 'https://discord.iota.org',
         isExternal: true,
-        arialLabel: 'Discord Community',
+        ariaLabel: 'Discord Community',
         labels: {
             section: 'Discord Community',
             footer: 'Community',
@@ -27,7 +27,7 @@ export const SOCIAL_LINKS = [
         icon: Discord,
         url: 'https://builders-discord.iota.org/',
         isExternal: true,
-        arialLabel: 'Discord Builder',
+        ariaLabel: 'Discord Builder',
         labels: {
             section: 'Discord Builder',
             footer: 'Builder',
@@ -39,7 +39,7 @@ export const SOCIAL_LINKS = [
         icon: Telegram,
         url: 'https://t.me/IOTA_Official_Community',
         isExternal: true,
-        arialLabel: 'Telegram',
+        ariaLabel: 'Telegram',
         visibility: ['section', 'footer'],
     },
     {
@@ -47,7 +47,7 @@ export const SOCIAL_LINKS = [
         icon: Reddit,
         url: 'https://www.reddit.com/r/Iota/',
         isExternal: true,
-        arialLabel: 'Reddit',
+        ariaLabel: 'Reddit',
         visibility: ['section', 'footer'],
     },
     {
@@ -55,7 +55,7 @@ export const SOCIAL_LINKS = [
         icon: Instagram,
         url: 'https://www.instagram.com/iotafoundation/',
         isExternal: true,
-        arialLabel: 'Instagram',
+        ariaLabel: 'Instagram',
         isSection: true,
         visibility: ['section'],
     },
@@ -64,7 +64,7 @@ export const SOCIAL_LINKS = [
         icon: XSocialIcon,
         url: 'https://x.com/iota',
         isExternal: true,
-        arialLabel: 'X',
+        ariaLabel: 'X',
         visibility: ['section', 'footer'],
     },
     {
@@ -72,7 +72,7 @@ export const SOCIAL_LINKS = [
         icon: GitHub,
         url: 'https://github.com/iotaledger',
         isExternal: true,
-        arialLabel: 'GitHub',
+        ariaLabel: 'GitHub',
         visibility: ['section', 'footer'],
     },
     {
@@ -80,7 +80,7 @@ export const SOCIAL_LINKS = [
         icon: Youtube,
         url: 'https://www.youtube.com/c/iotafoundation',
         isExternal: true,
-        arialLabel: 'YouTube',
+        ariaLabel: 'YouTube',
         visibility: ['section', 'footer'],
     },
     {
@@ -88,7 +88,7 @@ export const SOCIAL_LINKS = [
         icon: GoogleScholar,
         url: 'https://scholar.google.com/citations?hl=en&user=_ZIH81gAAAAJ&view_op=list_works&sortby=pubdate',
         isExternal: true,
-        arialLabel: 'Google Scholar',
+        ariaLabel: 'Google Scholar',
         isFooter: true,
         visibility: ['footer'],
     },
@@ -97,7 +97,7 @@ export const SOCIAL_LINKS = [
         icon: LinkedIn,
         url: 'https://www.linkedin.com/company/iotafoundation/',
         isExternal: true,
-        arialLabel: 'LinkedIn',
+        ariaLabel: 'LinkedIn',
         visibility: ['section', 'footer'],
     },
 
@@ -106,7 +106,7 @@ export const SOCIAL_LINKS = [
         icon: EvaluationAndInterview,
         url: 'https://blog.iota.org',
         isExternal: true,
-        arialLabel: 'Blog',
+        ariaLabel: 'Blog',
         isSection: true,
         visibility: ['section'],
     },

@@ -10,13 +10,13 @@ export const STAKING_ON_IOTA_BUTTONS = [
     {
         text: 'Start staking',
         link: 'https://docs.iota.org/about-iota/iota-wallet/how-to/stake',
-        arialLabel: 'Go to the documentation',
+        ariaLabel: 'Go to the documentation',
         isExternal: true,
     },
     {
         text: 'Learn more',
         link: '/learn/staking',
         variant: ButtonVariant.Secondary,
-        arialLabel: 'go to the page',
+        ariaLabel: 'go to the page',
     },
 ];

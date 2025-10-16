@@ -72,10 +72,10 @@ export function Footer() {
                         </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                        {footerLinksMedia.map(({ url, icon, arialLabel, labels }, index) => {
+                        {footerLinksMedia.map(({ url, icon, ariaLabel, labels }, index) => {
                             const Icon = icon;
                             const showText = index < 2;
-                            const text = showText ? (labels?.footer ?? arialLabel) : undefined;
+                            const text = showText ? (labels?.footer ?? ariaLabel) : undefined;
                             return (
                                 <Link
                                     key={index}
@@ -98,7 +98,7 @@ export function Footer() {
                                         variant={ButtonVariant.Ghost}
                                         inverted
                                         icon={<Icon className="text-labs-neutral-100" />}
-                                        arialLabel={arialLabel}
+                                        ariaLabel={ariaLabel}
                                     />
                                 </Link>
                             );

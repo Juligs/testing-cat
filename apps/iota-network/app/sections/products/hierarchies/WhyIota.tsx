@@ -31,7 +31,7 @@ export function WhyIota({ id, navbarColorScheme }: BaseSectionProps) {
                 <div className="grid grid-cols-1 xs:grid-cols-3 gap-6">
                     {WHY_IOTA_ICON_CONTENT.map((data, index) => (
                         <IconContent key={index} {...data} filled>
-                            <Link href={data.link} aria-label={data.arialLabel}>
+                            <Link href={data.link} aria-label={data.ariaLabel}>
                                 <TextLink text="Learn more" showIcon />
                             </Link>
                         </IconContent>

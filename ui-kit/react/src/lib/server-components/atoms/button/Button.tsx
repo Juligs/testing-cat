@@ -42,9 +42,9 @@ interface ButtonProps extends HTMLButtonProps {
      */
     icon?: React.ReactNode;
     /**
-     * Arial label for the button
+     * Aria label for the button
      */
-    arialLabel?: string;
+    ariaLabel?: string;
 }
 export function Button({
     type = 'button',
@@ -54,7 +54,7 @@ export function Button({
     inverted,
     text,
     icon,
-    arialLabel,
+    ariaLabel,
     ...buttonProps
 }: ButtonProps) {
     const textColor = inverted ? TEXT_COLOR_INVERTED[variant] : TEXT_COLOR[variant];
@@ -70,9 +70,9 @@ export function Button({
                 'w-full': fullWidth,
                 'opacity-50': buttonProps.disabled,
             })}
-            aria-label={arialLabel || (isOnlyIcon ? 'Icon button' : text)}
-            title={arialLabel || (isOnlyIcon ? 'Icon button' : text)}
-            aria-labelledby={arialLabel || (isOnlyIcon ? 'Icon button' : text)}
+            aria-label={ariaLabel || (isOnlyIcon ? 'Icon button' : text)}
+            title={ariaLabel || (isOnlyIcon ? 'Icon button' : text)}
+            aria-labelledby={ariaLabel || (isOnlyIcon ? 'Icon button' : text)}
         >
             <div
                 className={clsx(

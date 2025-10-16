@@ -32,7 +32,7 @@ export function SliderNavigation({
                         })}
                     />
                 }
-                arialLabel="Previous"
+                ariaLabel="Previous"
                 disabled={isPrevDisabled}
             />
             <div
@@ -54,7 +54,7 @@ export function SliderNavigation({
                 }
                 variant={ButtonVariant.Ghost}
                 disabled={isNextDisabled}
-                arialLabel="Next"
+                ariaLabel="Next"
             />
         </div>
     );

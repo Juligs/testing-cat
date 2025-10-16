@@ -20,7 +20,7 @@ export function StakingOnIota({ id, navbarColorScheme }: BaseSectionProps) {
                                         target={isExternal ? '_blank' : undefined}
                                         rel={isExternal ? 'noopener noreferrer' : undefined}
                                         className="[&>div]:h-full"
-                                        aria-label={`Link to ${data.arialLabel}`}
+                                        aria-label={`Link to ${data.ariaLabel}`}
                                     >
                                         <Button {...data} icon={<ArrowTopRight />} />
                                     </Link>

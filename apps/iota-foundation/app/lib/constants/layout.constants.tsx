@@ -203,13 +203,13 @@ export const SOCIAL_LINKS = [
         icon: GoogleScholar,
         url: 'https://scholar.google.com/citations?hl=en&user=_ZIH81gAAAAJ&view_op=list_works&sortby=pubdate',
         isExternal: true,
-        arialLabel: 'Google Scholar',
+        ariaLabel: 'Google Scholar',
     },
     {
         icon: LinkedIn,
         url: 'https://www.linkedin.com/company/iotafoundation/?originalSubdomain=de',
         isExternal: true,
-        arialLabel: 'LinkedIn',
+        ariaLabel: 'LinkedIn',
     },
 ];
 

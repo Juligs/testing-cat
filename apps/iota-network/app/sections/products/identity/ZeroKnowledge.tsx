@@ -29,7 +29,7 @@ export function ZeroKnowledge({ id, navbarColorScheme }: BaseSectionProps) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="[&>div]:h-full"
-                                        aria-label={`Link to ${data.arialLabel}`}
+                                        aria-label={`Link to ${data.ariaLabel}`}
                                     >
                                         <Button {...data} icon={<ArrowTopRight />} />
                                     </Link>

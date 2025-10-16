@@ -10,13 +10,13 @@ export const ZERO_KNOWLEDGE_BUTTONS = [
     {
         text: 'Learn more',
         link: 'https://docs.iota.org/iota-identity/how-tos/verifiable-credentials/zero-knowledge-selective-disclosure',
-        arialLabel: 'Go to the documentation',
+        ariaLabel: 'Go to the documentation',
     },
     {
         text: 'Read the blog post',
         link: 'https://blog.iota.org/iota-identity-zero-knowledge/',
         variant: ButtonVariant.Secondary,
-        arialLabel: 'Go to the Blog',
+        ariaLabel: 'Go to the Blog',
     },
 ];
 
