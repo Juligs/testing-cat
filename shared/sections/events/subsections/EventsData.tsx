@@ -1,7 +1,6 @@
 'use client';
 
-import { EventsCards } from '@lib/utils';
-import { formatDate, getPlatformFromUrl } from '@repo/shared/utils';
+import { EventsCards, formatDate, getPlatformFromUrl } from '../../../utils';
 import { Badge, Chip, ChipSize, ImageCard } from 'react-ui-kit';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -51,10 +50,10 @@ export function EventsData({ data }: EventsProps) {
             <div className="w-full max-w-[850px] mx-auto">
                 <div className="flex flex-col items-center justify-center gap-6">
                     <Image
-                        src="/connect/events/no_events.png"
+                        src="/shared/no_events.png"
                         width={464}
                         height={348}
-                        alt="footer-pattern"
+                        alt="No events available"
                     />
 
                     <p className="text-label-lg text-light text-center">No events</p>

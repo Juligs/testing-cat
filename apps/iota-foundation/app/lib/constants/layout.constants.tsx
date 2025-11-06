@@ -139,6 +139,15 @@ export const ROUTES: Route[] = [
                     },
                 ],
             },
+            {
+                children: [
+                    {
+                        title: 'Events',
+                        description: 'Connect with the creators of the network',
+                        path: '/news/events',
+                    },
+                ],
+            },
 
             {
                 children: FEATURED_CARDS,

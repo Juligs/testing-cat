@@ -1,7 +1,10 @@
 'use client';
-import { EventsCards } from '@lib/utils';
-import { SliderImageCardSkeleton } from '@repo/shared/components';
-import { checkInvalidImageUrlsAndRevalidate, revalidateEventsAPI } from '@repo/shared/utils';
+import {
+    EventsCards,
+    checkInvalidImageUrlsAndRevalidate,
+    revalidateEventsAPI,
+} from '../../../utils';
+import { SliderImageCardSkeleton } from '../../../components';
 import { useEffect, useState } from 'react';
 import { EventsData } from './EventsData';
 

@@ -1,5 +1,5 @@
-import { getDataFromAirtable } from '@repo/shared/utils';
-import { sanitizeEventsData, EventsCards } from './SanitizeEventsData';
+import { getDataFromAirtable } from './getDataFromAirtable';
+import { sanitizeEventsData, EventsCards } from './sanitizeEventsData';
 
 const EVENTS_AIRTABLE_TABLE_NAME = 'websiteEvents';
 

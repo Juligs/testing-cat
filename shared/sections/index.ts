@@ -17,5 +17,6 @@ export * from './dpp';
 export * from './contact-us';
 export * from './partners-carousel';
 export * from './driving-innovation-adoption-anchorlinks';
+export * from './events';
 export * from './join';
 export * from './event-terms';

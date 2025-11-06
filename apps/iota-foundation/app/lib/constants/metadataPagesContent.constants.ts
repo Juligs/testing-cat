@@ -206,6 +206,25 @@ export const RESEARCH_PAPERS_KEYWORDS = [
 export const RESEARCH_PAPERS_URL = `${BASE_URL}/research/research-papers`;
 export const RESEARCH_PAPERS_IMAGE = '/metadata/meta_image_research_papers.png';
 
+export const EVENTS_METADATA_TITLE =
+    'Events | Connect with the creators of the network, exchange ideas, and explore new opportunities';
+export const EVENTS_METADATA_DESCRIPTION =
+    'Join and discover IOTA events—or host your own. Connect with network creators, exchange ideas, and unlock new opportunities with like-minded professionals.';
+export const EVENTS_METADATA_DESCRIPTION_X =
+    'Join and discover IOTA events—or host your own. Connect with network creators, exchange ideas, and unlock new opportunities with like-minded professionals.';
+export const EVENTS_KEYWORDS = [
+    'IOTA Foundation',
+    'Events',
+    'Meetup',
+    'Conference',
+    'Keynote',
+    'Hackathon',
+    'builder community',
+    'Event Registration',
+    'Ecosystem',
+];
+export const EVENTS_URL = `${BASE_URL}/news/events`;
+export const EVENTS_IMAGE = '/metadata/meta_image_events.png';
 export const OUR_PARTNERS_METADATA_TITLE = 'Our Partners | Our partners and investors';
 export const OUR_PARTNERS_METADATA_DESCRIPTION =
     'Join us in partnering and collaborating to boost resource efficiency and build lasting trust—let’s achieve more, together.';

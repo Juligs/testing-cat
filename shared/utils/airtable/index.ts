@@ -5,3 +5,5 @@ export * from './revalidate';
 export * from './fetchGrantsData';
 export * from './sanitizeEcosystemProjectsData';
 export * from './fetchProjects';
+export * from './fetchEventsData';
+export * from './sanitizeEventsData';

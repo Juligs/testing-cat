@@ -1,4 +1,4 @@
-import { sanitizeUrl } from '@repo/shared/utils';
+import { sanitizeUrl } from '../sanitizeLinks';
 import { FieldSet, Records } from 'airtable';
 import { ComponentProps } from 'react';
 import { ImageCard } from 'react-ui-kit';

@@ -1,14 +1,13 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import {
-    HeroEvents,
-    EventsOverview,
-    BeyondTheChain,
-    Hosting,
-    Resources,
-    EventsMoreToExplore,
+    HeroEventsFoundation,
+    EventKit,
+    HostingEvent,
+    BTC,
+    EventsFoundationMoreToExplore,
 } from '@sections';
-import { UpcomingEvents, EventTerms, EVENT_TERMS_NETWORK } from '@repo/shared/sections';
+import { UpcomingEvents, EventTerms, EVENT_TERMS_FOUNDATION } from '@repo/shared/sections';
 import {
     EVENTS_METADATA_TITLE,
     EVENTS_METADATA_DESCRIPTION_X,
@@ -24,20 +23,19 @@ export const metadata: Metadata = getPageMetadata({
     keywords: EVENTS_KEYWORDS,
     image: EVENTS_IMAGE,
     url: EVENTS_URL,
-    path: '/connect/events',
+    path: '/news/events',
 });
 
 export default function Home() {
     return (
         <>
-            <HeroEvents id="hero" navbarColorScheme="inverted" />
-            <EventsOverview id="overview" />
-            <BeyondTheChain id="beyond-the-chain" />
+            <HeroEventsFoundation id="hero" />
             <UpcomingEvents id="upcoming-events" />
-            <Hosting id="hosting" navbarColorScheme="inverted" />
-            <Resources id="resources" />
-            <EventTerms id="event-terms" {...EVENT_TERMS_NETWORK} />
-            <EventsMoreToExplore id="more-to-explore" />
+            <BTC id="beyond-the-chain" />
+            <HostingEvent id="hosting-event" />
+            <EventKit id="event-kit" />
+            <EventTerms id="event-terms" {...EVENT_TERMS_FOUNDATION} />
+            <EventsFoundationMoreToExplore id="more-to-explore" />
         </>
     );
 }
