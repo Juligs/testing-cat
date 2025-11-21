@@ -8,6 +8,7 @@ enum LegalRoutes {
     TermsOfUse = 'Terms of Use',
     CookiePolicy = 'Cookie Policy',
     TermsOfUseTelegram = 'Welcome to the Official IOTA Telegram',
+    TermsOfUseAmbassador = 'IOTA Ambassador Program Terms',
 }
 
 const routeTitles: Record<string, string> = {
@@ -15,6 +16,7 @@ const routeTitles: Record<string, string> = {
     '/terms-of-use': LegalRoutes.TermsOfUse,
     '/cookie-policy': LegalRoutes.CookiePolicy,
     '/terms-telegram': LegalRoutes.TermsOfUseTelegram,
+    '/terms-ambassador': LegalRoutes.TermsOfUseAmbassador,
 };
 
 export function MdxPageTitle(): React.JSX.Element {
