@@ -2,8 +2,7 @@ import { HeroBackground, ScreenSize } from 'react-ui-kit';
 
 export const SHOWCASES_HOMEPAGE_CONTENT = {
     title: 'IOTA Technology Showcases ',
-    subtitle:
-        'IOTA collaborates with numerous companies and institutions to create real-world applications leveraging Distributed Ledger Technology',
+    body: 'IOTA has collaborated with numerous companies and institutions to co-create real-world applications leveraging Distributed Ledger Technologies',
     inverted: true,
     isCentered: false,
 };

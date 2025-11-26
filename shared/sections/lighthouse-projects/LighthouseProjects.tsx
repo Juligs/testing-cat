@@ -7,10 +7,12 @@ import {
     LIGHTHOUSE_IMAGE_CARD_CONTENT,
     LIGHTHOUSE_VERTICAL_TITLE_CONTENT,
 } from './lighthouseContent.constants';
+import clsx from 'clsx';
 
 interface LighthouseProjectsProps extends BaseSectionProps {
     showLink?: boolean;
     animation?: boolean;
+    small?: boolean;
 }
 
 export function LighthouseProjects({
@@ -18,14 +20,20 @@ export function LighthouseProjects({
     navbarColorScheme,
     showLink = true,
     animation = true,
+    small,
 }: LighthouseProjectsProps) {
     const themeContext = useTheme();
     return (
         <section className="bg-white" id={id} data-navbar-color-scheme={navbarColorScheme}>
-            <div className="container py-14 xs:py-20 lg:py-30 flex flex-col gap-6 xs:gap-10 sm:gap-20">
+            <div
+                className={clsx(
+                    'container flex flex-col gap-6 xs:gap-10 sm:gap-20',
+                    small ? 'py-10 xs:py-16 lg:py-20' : 'py-14 xs:py-20 lg:py-30',
+                )}
+            >
                 <VerticalTitle
                     title={LIGHTHOUSE_VERTICAL_TITLE_CONTENT.title}
-                    size={TitleTextSize.Small}
+                    size={small ? TitleTextSize.ExtraSmall : TitleTextSize.Small}
                     isCentered
                 >
                     {showLink && (

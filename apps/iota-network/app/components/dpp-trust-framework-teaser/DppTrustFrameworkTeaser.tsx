@@ -4,7 +4,8 @@ import { DPP_TRUST_FRAMEWORK_IMAGE_CARD_CONTENT } from './dppTrustFrameworkConte
 import Link from 'next/link';
 
 interface DppTrustFrameworkTeaserProps {
-    productName: string;
+    productName?: string;
+    customTitle?: string;
 }
 type DppTrustFrameworkTeaser = BaseSectionProps & DppTrustFrameworkTeaserProps;
 
@@ -12,6 +13,7 @@ export function DppTrustFrameworkTeaser({
     id,
     navbarColorScheme,
     productName,
+    customTitle,
 }: DppTrustFrameworkTeaser) {
     return (
         <section id={id} data-navbar-color-scheme={navbarColorScheme}>
@@ -19,7 +21,11 @@ export function DppTrustFrameworkTeaser({
                 <div className="flex flex-col gap-6 md:flex-row items-center sm:items-start md:items-center">
                     <div className="max-w-full xs:max-w-[464px]">
                         <VerticalTitle
-                            title={`See how IOTA ${productName} works with the Trust Framework`}
+                            title={
+                                !customTitle
+                                    ? `See how IOTA ${productName} works with the Trust Framework`
+                                    : customTitle
+                            }
                             size={TitleTextSize.ExtraSmall}
                         />
                     </div>

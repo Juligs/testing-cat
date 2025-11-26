@@ -39,6 +39,14 @@ interface TextLinkProps {
      * size of the text
      */
     size?: TextLinkSize;
+    /**
+     * icon position
+     */
+    iconPosition?: 'left' | 'right';
+    /**
+     * whether the text should be highlighted
+     */
+    highlighted?: boolean;
 }
 
 export function TextLink({
@@ -48,26 +56,41 @@ export function TextLink({
     underline = false,
     size = TextLinkSize.Small,
     showIcon = false,
+    iconPosition = 'right',
+    highlighted,
 }: TextLinkProps) {
     const underlineColor = inverted ? UNDERLINE_COLOR_INVERTED : UNDERLINE_COLOR_DEFAULT;
-
+    const textColorHover = underline ? '' : CLASS_TEXT_HOVER_COLOR;
     const underlineHoverColor = inverted
         ? UNDERLINE_HOVER_COLOR_INVERTED
         : UNDERLINE_HOVER_COLOR_DEFAULT;
 
-    const textColorHover = underline ? '' : CLASS_TEXT_HOVER_COLOR;
+    const textColor = (() => {
+        const needsIconColor = Boolean(
+            !underline && (icon || showIcon || highlighted) && iconPosition === 'right',
+        );
+        if (needsIconColor) return inverted ? TEXT_COLOR_ICON_INVERTED : TEXT_COLOR_ICON;
+        return inverted ? TEXT_COLOR_DEFAULT_INVERTED : TEXT_COLOR_DEFAULT;
+    })();
 
-    const textColor = underline
-        ? inverted
-            ? TEXT_COLOR_DEFAULT_INVERTED
-            : TEXT_COLOR_DEFAULT
-        : icon || showIcon
-          ? inverted
-              ? TEXT_COLOR_ICON_INVERTED
-              : TEXT_COLOR_ICON
-          : inverted
-            ? TEXT_COLOR_DEFAULT_INVERTED
-            : TEXT_COLOR_DEFAULT;
+    const iconBaseColor =
+        iconPosition === 'left' ? (inverted ? 'text-darkest-inverted' : 'text-darkest') : '';
+
+    const iconClasses = clsx(
+        iconPosition === 'right' &&
+            'transform transition-transform ease-in duration-300 group-hover:translate-x-1',
+        iconBaseColor,
+        iconPosition === 'left' &&
+            'group-hover:text-network-primary-40 [&_svg]:h-[32px] [&_svg]:w-[32px]',
+    );
+
+    const iconElement = icon ? (
+        <span className={iconClasses}>{icon}</span>
+    ) : showIcon ? (
+        <span className={iconClasses}>
+            <LineArrowSmall />
+        </span>
+    ) : null;
 
     return (
         <div
@@ -76,9 +99,11 @@ export function TextLink({
                 textColorHover,
                 textColor,
                 TEXT_SIZE[size],
+                iconPosition === 'left' && 'flex-row-reverse',
             )}
         >
             {text}
+
             {underline && (
                 <>
                     <span
@@ -86,27 +111,17 @@ export function TextLink({
                             'absolute -bottom-0.5 left-0 w-full h-[1px]',
                             underlineColor,
                         )}
-                    ></span>
+                    />
                     <span
                         className={clsx(
                             'absolute -bottom-0.5 left-0 w-0 h-[1px] transition-all ease-in duration-500 group-hover:w-full',
                             underlineHoverColor,
                         )}
-                    ></span>
+                    />
                 </>
             )}
 
-            {showIcon && !underline && !icon && (
-                <span className="transform group-hover:translate-x-1 transition-transform ease-in duration-300">
-                    <LineArrowSmall />
-                </span>
-            )}
-
-            {icon && !underline && !showIcon && (
-                <span className="transform group-hover:translate-x-1 transition-transform ease-in duration-300">
-                    {icon}
-                </span>
-            )}
+            {!underline && iconElement}
         </div>
     );
 }

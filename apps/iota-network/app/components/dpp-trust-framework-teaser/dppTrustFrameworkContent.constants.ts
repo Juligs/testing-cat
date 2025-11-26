@@ -22,3 +22,5 @@ export const PRODUCT_TOKENIZATION = 'Tokenization';
 export const PRODUCT_GAS_STATION = 'Gas Station';
 export const PRODUCT_NOTARIZATION = 'Notarization';
 export const PRODUCT_HIERARCHIES = 'Hierarchies';
+export const CUSTOM_TITLE_DPP_TRUST_FRAMEWORK =
+    'See how IOTA Trust Framework enables a Digital Product Passport.';

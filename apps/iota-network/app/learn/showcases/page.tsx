@@ -1,7 +1,7 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import { ShowcasesPageHero, ShowcasesMoreToExplore } from '@sections';
-import { Rwa, LighthouseProjects, TeamContactCTA, PartnersCarousel } from '@repo/shared/sections';
+import { LighthouseProjects, TeamContactCTA, PartnersCarousel } from '@repo/shared/sections';
 import {
     SHOWCASES_METADATA_TITLE,
     SHOWCASES_METADATA_DESCRIPTION_X,
@@ -10,6 +10,7 @@ import {
     SHOWCASES_IMAGE,
     SHOWCASES_URL,
 } from '@lib/constants';
+import { Rwa } from '@sections/learn/showcases/Rwa';
 
 export const metadata: Metadata = getPageMetadata({
     title: SHOWCASES_METADATA_TITLE,
@@ -26,9 +27,9 @@ export default function Home() {
         <>
             <ShowcasesPageHero id="hero" navbarColorScheme="inverted" />
             <PartnersCarousel id="partners" />
-            <Rwa id="rwa" showLink={false} />
-            <LighthouseProjects id="lighthouse-projects" showLink={false} />
-            <TeamContactCTA id="team-contact-CTA" />
+            <Rwa id="rwa" />
+            <LighthouseProjects id="lighthouse-projects" showLink={false} small />
+            <TeamContactCTA id="team-contact-CTA" small />
             <ShowcasesMoreToExplore id="explore" />
         </>
     );

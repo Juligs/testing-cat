@@ -4,7 +4,6 @@ export const PARTNERS_LOGOS_CAROUSEL = [
     '/shared/shared-assets/business/CIOIT.png',
     '/shared/shared-assets/business/trademark_africa.png',
     '/shared/shared-assets/business/tony_blair.png',
-    '/shared/shared-assets/business/multiknip.png',
     '/shared/shared-assets/business/walt.png',
     '/shared/shared-assets/business/idnow.png',
     '/shared/shared-assets/business/bloom.png',
@@ -16,4 +15,9 @@ export const PARTNERS_LOGOS_CAROUSEL = [
     '/shared/shared-assets/business/ereuso.png',
     '/shared/shared-assets/business/agrocircular.png',
     '/shared/shared-assets/business/akkodis.png',
+    '/shared/shared-assets/business/salus.png',
+    '/shared/shared-assets/business/turing-space.png',
+    '/shared/shared-assets/business/impierce.png',
+    '/shared/shared-assets/business/orobo.png',
+    '/shared/shared-assets/business/objectID.png',
 ];

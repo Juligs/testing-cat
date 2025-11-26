@@ -23,7 +23,7 @@ const KEYWORDS_FALLBACK = [
     'future of blockchain',
 ];
 
-interface PageMetadataProps {
+export interface PageMetadataProps {
     url?: string;
     title?: string;
     description?: string;
