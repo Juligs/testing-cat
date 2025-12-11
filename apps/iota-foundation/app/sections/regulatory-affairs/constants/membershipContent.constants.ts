@@ -8,11 +8,6 @@ export const MEMBERSHIP_HORIZONTAL_TITLE = {
 
 export const MEMBERSHIP_ICON_CONTENT = [
     {
-        title: 'European Blockchain Association',
-        body: 'An independent platform for blockchain-related communities and organizations.',
-        link: 'https://europeanblockchainassociation.org',
-    },
-    {
         title: 'Blockchain Bundesverband',
         body: 'Based in the heart of the German blockchain community.',
         link: 'https://bundesblock.de/en/',
@@ -26,5 +21,10 @@ export const MEMBERSHIP_ICON_CONTENT = [
         title: 'GBBC ',
         body: 'Global Blockchain Business Council is the largest leading global industry association for the blockchain technology ecosystem.',
         link: 'https://www.gbbc.io',
+    },
+    {
+        title: 'CryptoUK',
+        body: "The UK's leading trade association for crypto and digital assets since 2017.",
+        link: 'https://cryptouk.io/',
     },
 ];
