@@ -9,9 +9,10 @@ import {
     WhyIota,
     Tooling,
     ZeroKnowledge,
-    IdentityIotaTechnologyStack,
     IdentityContactUs,
     IdentityMoreToExplore,
+    IotaTechnologyStack,
+    ShowcaseProject,
 } from '@sections';
 import {
     IDENTITY_METADATA_TITLE,
@@ -43,7 +44,15 @@ export default function Home() {
             <WhyIota id="why-iota" />
             <Tooling id="tooling" />
             <ZeroKnowledge id="zero-knowledge" />
-            <IdentityIotaTechnologyStack id="iota-tecnholgy-stack" />
+            <IotaTechnologyStack
+                showLearnMoreLink
+                showcases={[
+                    ShowcaseProject.Impierce,
+                    ShowcaseProject.Orobo,
+                    ShowcaseProject.ObjectID,
+                    ShowcaseProject.TuringSpace,
+                ]}
+            />
             <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_IDENTITY} />
             <IdentityContactUs id="contact-us" />
             <IdentityMoreToExplore id="more-to-explore" />

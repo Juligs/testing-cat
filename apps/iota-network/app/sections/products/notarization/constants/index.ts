@@ -6,5 +6,4 @@ export * from './chooseTheRightLevelContent.constants';
 export * from './realWorldUseCasesContent.constants';
 export * from './whyIotaContent.constants';
 export * from './techAndToolingContent.constants';
-export * from './notarizationTechnologyStackContent.constants';
 export * from './notarizationMoreToExploreContent.constants';

@@ -10,9 +10,10 @@ import {
     IndustryApplications,
     WhyIotaTrustHierarchies,
     TechAndToolingTrustHierarchies,
-    TrustHierarchieTechnologyStack,
     TrustHierarchiesContactUs,
     TrustHierarchiesMoreToExplore,
+    IotaTechnologyStack,
+    ShowcaseProject,
 } from '@sections';
 import {
     TRUST_HIERACHIES_METADATA_TITLE,
@@ -47,7 +48,14 @@ export default function Home() {
             <IndustryApplications id="industry-applications" />
             <WhyIotaTrustHierarchies id="why-iota" />
             <TechAndToolingTrustHierarchies id="tech-and-tooling" />
-            <TrustHierarchieTechnologyStack id="iota-technology-stack" />
+            <IotaTechnologyStack
+                showcases={[
+                    ShowcaseProject.Impierce,
+                    ShowcaseProject.Orobo,
+                    ShowcaseProject.ObjectID,
+                    ShowcaseProject.TuringSpace,
+                ]}
+            />
             <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_HIERARCHIES} />
             <TrustHierarchiesContactUs id="contact-us" />
             <TrustHierarchiesMoreToExplore id="more-to-explore" />

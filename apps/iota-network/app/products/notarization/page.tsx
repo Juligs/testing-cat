@@ -11,9 +11,10 @@ import {
     RealWorldUseCases,
     WhyIotaNotarization,
     TechAndTooling,
-    NotarizationTechnologyStack,
     NotarizationContactUs,
     NotarizationMoreToExplore,
+    IotaTechnologyStack,
+    ShowcaseProject,
 } from '@sections';
 import {
     NOTARIZATION_METADATA_TITLE,
@@ -49,7 +50,14 @@ export default function Home() {
             <RealWorldUseCases id="real-world-use-cases" />
             <WhyIotaNotarization id="why-iota-notarization" />
             <TechAndTooling id="tech-and-tooling" />
-            <NotarizationTechnologyStack id="notarization-technology-stack" />
+            <IotaTechnologyStack
+                showcases={[
+                    ShowcaseProject.Impierce,
+                    ShowcaseProject.Orobo,
+                    ShowcaseProject.ObjectID,
+                    ShowcaseProject.TuringSpace,
+                ]}
+            />
             <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_NOTARIZATION} />
             <NotarizationContactUs id="contact-us" />
             <NotarizationMoreToExplore id="more-to-explore" />

@@ -8,8 +8,9 @@ import {
     Customization,
     NFTByDefault,
     CoinsAndsTokens,
-    TokenizationStack,
     TokenizationMoreToExplore,
+    IotaTechnologyStack,
+    ShowcaseProject,
 } from '@sections';
 import {
     TOKENIZATION_METADATA_TITLE,
@@ -43,7 +44,14 @@ export default function Home() {
             <Customization id="customization" />
             <NFTByDefault id="nft-by-default" />
             <CoinsAndsTokens id="coins-and-tokens" />
-            <TokenizationStack id="tokenization-stack" />
+            <IotaTechnologyStack
+                showcases={[
+                    ShowcaseProject.Impierce,
+                    ShowcaseProject.Orobo,
+                    ShowcaseProject.ObjectID,
+                    ShowcaseProject.TuringSpace,
+                ]}
+            />
             <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_TOKENIZATION} />
             <TokenizationMoreToExplore id="more-to-explore" />
         </>

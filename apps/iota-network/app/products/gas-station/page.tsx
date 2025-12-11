@@ -7,8 +7,9 @@ import {
     KeyCapabilitiesGasStation,
     FlexibleUseCases,
     WhyIotaGas,
-    GasTechnologyStack,
     GasContactUs,
+    IotaTechnologyStack,
+    ShowcaseProject,
 } from '@sections';
 import {
     GAS_STATION_METADATA_TITLE,
@@ -44,7 +45,14 @@ export default function Home() {
             <KeyCapabilitiesGasStation id="key-capabilities" />
             <FlexibleUseCases id="flexible-use-cases" />
             <WhyIotaGas id="tech-and-tooling" />
-            <GasTechnologyStack id="gas-technology-stack" />
+            <IotaTechnologyStack
+                showcases={[
+                    ShowcaseProject.Impierce,
+                    ShowcaseProject.Orobo,
+                    ShowcaseProject.ObjectID,
+                    ShowcaseProject.Salus,
+                ]}
+            />
             <DppTrustFrameworkTeaser id="dpp-trust-framework" productName={PRODUCT_GAS_STATION} />
             <GasContactUs id="contact-us" />
             <GasMoreToExplore id="more to explore" />

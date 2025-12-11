@@ -5,5 +5,4 @@ export { WhyTokenizedWithIOTA } from './WhyTokenizedWithIOTA';
 export { Customization } from './Customization';
 export { NFTByDefault } from './NFTByDefault';
 export { CoinsAndsTokens } from './CoinsAndTokens';
-export { TokenizationStack } from './TokenizationStack';
 export { TokenizationMoreToExplore } from './TokenizationMoreToExplore';

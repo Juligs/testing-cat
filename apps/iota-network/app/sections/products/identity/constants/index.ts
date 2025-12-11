@@ -6,4 +6,3 @@ export * from './keyCapabilitiesContent.constants';
 export * from './whyIotaContent.constants';
 export * from './toolingContent.constants';
 export * from './zeroKnowledgeContent.constants';
-export * from './identityiotaTechnologyStackContent.constants';

@@ -22,7 +22,7 @@ export function DigitalIdentity({ id, navbarColorScheme }: BaseSectionProps) {
                             <Actions>
                                 <a
                                     href={getSharedSectionLink(
-                                        '/showcases/kyc',
+                                        '/showcases/impierce',
                                         themeContext?.theme,
                                     )}
                                     aria-label="See showcase"

@@ -22,7 +22,7 @@ export function CircularEconomy({ id, navbarColorScheme }: BaseSectionProps) {
                             <Actions>
                                 <a
                                     href={getSharedSectionLink(
-                                        '/showcases/dpp',
+                                        '/showcases/orobo',
                                         themeContext?.theme,
                                     )}
                                     aria-label="See showcase"

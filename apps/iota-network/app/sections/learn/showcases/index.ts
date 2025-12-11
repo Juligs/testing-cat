@@ -3,3 +3,5 @@ export { ShowcasesMoreToExplore } from './ShowcasesMoreToExplore';
 export { ShowcasesFrame } from './ShowcasesFrame';
 export { TestimonialShowcase as TestimonialsShowcase } from './TestimonialShowcase';
 export { ExploreMoreShowcases } from './ExploreMore';
+export { IotaTechnologyStack } from './IotaTechnologyStack';
+export * from './showcasesProjects.enums';

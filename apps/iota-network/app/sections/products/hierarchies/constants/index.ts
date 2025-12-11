@@ -5,5 +5,4 @@ export * from './keyCapabilitiesContent.constants';
 export * from './industryApplicationsContent.constants';
 export * from './whyIotaContent.constants';
 export * from './techAndToolingContent.constants';
-export * from './trustHierarchieTechnologyStackContent.constants';
 export * from './trustHierarchiesMoreToExploreContent.constants';

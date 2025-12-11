@@ -13,8 +13,6 @@ export enum ShowcaseProject {
     Kyc = 'kyc',
     Ebsi = 'ebsi',
     Iprm = 'iprm',
-    Multiknip = 'multiknip',
-    Realize = 'realize',
 }
 
 export enum ShowcaseCategory {

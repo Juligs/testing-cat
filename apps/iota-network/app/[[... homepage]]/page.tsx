@@ -1,5 +1,5 @@
 import { getPageMetadata } from '@lib/utils';
-import { LighthouseProjects, Rwa } from '@repo/shared/sections';
+import { LighthouseProjects } from '@repo/shared/sections';
 import { HomepageRedirect } from '@repo/shared/components';
 import {
     Hero,
@@ -24,6 +24,8 @@ import {
 } from '@lib/constants';
 
 import type { Metadata } from 'next';
+import { IotaTechnologyStack } from '@sections/learn/showcases/IotaTechnologyStack';
+import { ShowcaseProject } from '@sections/learn/showcases/showcasesProjects.enums';
 
 export const metadata: Metadata = getPageMetadata({
     title: HOMEPAGE_METADATA_TITLE,
@@ -44,7 +46,23 @@ export default function Home() {
             <IntegrationStack id="integration-stack" />
             <StakingOnIota id="staking-on-iota" />
             <BuildingSolutions id="building-solutions" />
-            <Rwa id="rwa" />
+            <IotaTechnologyStack
+                title="Real-World Adoption in Action"
+                isTitleCentered
+                hasBackgroundColor
+                showSeeAllLink
+                isLarge
+                showLearnMoreLink={false}
+                showcases={[
+                    ShowcaseProject.PoolsFinance,
+                    ShowcaseProject.Virtue,
+                    ShowcaseProject.Twin,
+                    ShowcaseProject.Salus,
+                    ShowcaseProject.Orobo,
+                    ShowcaseProject.Impierce,
+                ]}
+            />
+
             <LighthouseProjects id="lighthouse-projects" />
             <JoinUsBuildingCTA id="join-us-in-building" navbarColorScheme="inverted" />
             <EcosystemProjects id="ecosystem-projects" />

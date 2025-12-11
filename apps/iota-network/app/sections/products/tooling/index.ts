@@ -7,4 +7,3 @@ export { BridgeLibs } from './BridgeLibs';
 export { Wallets as WalletsTooling } from './Wallets';
 export { Explorers } from './Explorers';
 export { ToolingMoreToExplore } from './ToolingMoreToExplore';
-export { ToolingStack } from './ToolingStack';

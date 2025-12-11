@@ -1,7 +1,6 @@
 export * from './skeletons';
 export * from './grants';
 export * from './lighthouse-projects';
-export * from './rwa';
 export * from './real-world-asset-tokenization';
 export * from './trade-and-supply-chains';
 export * from './digital-identity';

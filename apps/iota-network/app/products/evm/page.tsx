@@ -9,9 +9,10 @@ import {
     SmartContracts,
     Connection,
     EVMBridge,
-    EVMIotaTechnologyStack,
     Learning,
     EVMMoreToExplore,
+    IotaTechnologyStack,
+    ShowcaseProject,
 } from '@sections';
 import {
     EVM_METADATA_TITLE,
@@ -42,7 +43,14 @@ export default function Home() {
             <SmartContracts id="smart-contracts" />
             <Connection id="connection" />
             <EVMBridge id="iota-evm" />
-            <EVMIotaTechnologyStack id="evm-iota-technology-stack" />
+            <IotaTechnologyStack
+                showcases={[
+                    ShowcaseProject.Virtue,
+                    ShowcaseProject.PoolsFinance,
+                    ShowcaseProject.Salus,
+                    ShowcaseProject.Orobo,
+                ]}
+            />
             <Learning id="learning" />
             <EVMMoreToExplore id="more-to-explore" />
         </>

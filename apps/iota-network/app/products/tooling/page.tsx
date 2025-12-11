@@ -6,11 +6,12 @@ import {
     IotaSDKs,
     CLI,
     BridgeLibs,
-    ToolingStack,
     ToolingMoreToExplore,
     Libs,
     WalletsTooling,
     Explorers,
+    IotaTechnologyStack,
+    ShowcaseProject,
 } from '@sections';
 import {
     TOOLING_METADATA_TITLE,
@@ -41,7 +42,14 @@ export default function Home() {
             <BridgeLibs id="iota-evm-bridge" />
             <Explorers id="explorers" />
             <WalletsTooling id="wallets" />
-            <ToolingStack id="tooling-stack" />
+            <IotaTechnologyStack
+                showcases={[
+                    ShowcaseProject.Virtue,
+                    ShowcaseProject.PoolsFinance,
+                    ShowcaseProject.Salus,
+                    ShowcaseProject.Orobo,
+                ]}
+            />
             <ToolingMoreToExplore id="more-to-explore" />
         </>
     );

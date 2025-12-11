@@ -55,8 +55,8 @@ export const DECENTRALIZED_CONTAINER_CONTENT = [
         text: 'Showcases',
         anchorLinks: [
             {
-                text: 'Realize',
-                link: '/learn/showcases/realize',
+                text: 'TWIN',
+                link: '/learn/showcases/twin',
                 isExternal: false,
             },
         ],

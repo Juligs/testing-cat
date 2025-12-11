@@ -7,6 +7,5 @@ export { ChooseTheRightLevel } from './ChooseTheRightLevel';
 export { RealWorldUseCases } from './RealWorldUseCases';
 export { WhyIota as WhyIotaNotarization } from './WhyIota';
 export { TechAndTooling } from './TechAndTooling';
-export { NotarizationTechnologyStack } from './NotarizationTechnologyStack';
 export { NotarizationContactUs } from './NotarizationContactUs';
 export { NotarizationMoreToExplore } from './NotarizationMoreToExplore';

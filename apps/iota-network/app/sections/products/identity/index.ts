@@ -6,6 +6,5 @@ export { KeyCapabilities } from './KeyCapabilities';
 export { WhyIota } from './WhyIota';
 export { Tooling } from './Tooling';
 export { ZeroKnowledge } from './ZeroKnowledge';
-export { IdentityIotaTechnologyStack } from './IdentityIotaTechnologyStack';
 export { IdentityContactUs } from './IdentityContactUs';
 export { IdentityMoreToExplore } from './IdentityMoreToExplore';

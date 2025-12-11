@@ -50,8 +50,8 @@ export const RWA_STACK_CONTAINER_CONTENT = [
         text: 'Showcases',
         anchorLinks: [
             {
-                text: 'Realize',
-                link: '/learn/showcases/realize',
+                text: 'EBSI',
+                link: '/learn/showcases/ebsi',
                 isExternal: false,
             },
             {

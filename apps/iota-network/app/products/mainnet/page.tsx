@@ -5,8 +5,8 @@ import {
     Versatile,
     CombiningDAG,
     Immutable,
-    MainnetIotaTechnologyStack,
     MainnetMoreToExplore,
+    IotaTechnologyStack,
 } from '@sections';
 import {
     MAINNET_METADATA_TITLE,
@@ -16,6 +16,7 @@ import {
     MAINNET_IMAGE,
     MAINNET_URL,
 } from '@lib/constants';
+import { ShowcaseProject } from '@sections/learn/showcases/showcasesProjects.enums';
 export const metadata: Metadata = getPageMetadata({
     title: MAINNET_METADATA_TITLE,
     description: MAINNET_METADATA_DESCRIPTION,
@@ -33,7 +34,14 @@ export default function Home() {
             <Versatile id="versatile" />
             <CombiningDAG id="combining-dag" />
             <Immutable id="immutable" />
-            <MainnetIotaTechnologyStack id="mainnet-iota-technology-stack" />
+            <IotaTechnologyStack
+                showcases={[
+                    ShowcaseProject.Virtue,
+                    ShowcaseProject.PoolsFinance,
+                    ShowcaseProject.Salus,
+                    ShowcaseProject.Twin,
+                ]}
+            />
             <MainnetMoreToExplore id="more to explore" />
         </>
     );

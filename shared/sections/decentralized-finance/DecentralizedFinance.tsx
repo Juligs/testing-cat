@@ -21,7 +21,10 @@ export function DecentralizedFinance({ id, navbarColorScheme }: BaseSectionProps
                         <VerticalTitle {...DECENTRALIZED_FINANCE_VERTICAL_TITLE_CONTENT}>
                             <Actions>
                                 <a
-                                    href={getSharedSectionLink('/showcases', themeContext?.theme)}
+                                    href={getSharedSectionLink(
+                                        '/showcases/pools-finance',
+                                        themeContext?.theme,
+                                    )}
                                     aria-label="See showcases"
                                 >
                                     <Button

@@ -22,7 +22,7 @@ export function RealWorldAssetTokenization({ id, navbarColorScheme }: BaseSectio
                             <Actions>
                                 <a
                                     href={getSharedSectionLink(
-                                        '/showcases/multiknip',
+                                        '/showcases/salus',
                                         themeContext?.theme,
                                     )}
                                     aria-label="See showcase"

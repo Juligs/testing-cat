@@ -6,6 +6,5 @@ export { KeyCapabilities as KeyCapabilitiesTrustHierarchies } from './KeyCapabil
 export { IndustryApplications } from './IndustryApplications';
 export { WhyIota as WhyIotaTrustHierarchies } from './WhyIota';
 export { TechAndTooling as TechAndToolingTrustHierarchies } from './TechAndTooling';
-export { TrustHierarchieTechnologyStack } from './TrustHierarchieTechnologyStack';
 export { TrustHierarchiesContactUs } from './TrustHierarchiesContactUs';
 export { TrustHierarchiesMoreToExplore } from './TrustHierarchiesMoreToExplore';
