@@ -7,3 +7,4 @@ export * from './fetchGrantsStats';
 export * from './getSharedSectionLink';
 export * from './sanitizeLinks';
 export * from './formatDate';
+export * from './eventsUtils';

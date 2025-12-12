@@ -8,7 +8,7 @@ import { SliderImageCardSkeleton } from '../../../components';
 import { useEffect, useState } from 'react';
 import { EventsData } from './EventsData';
 
-export function FetchEventsDataCards() {
+export function FetchEventsDataCards({ useFeatured }: { useFeatured?: boolean }) {
     const [dataEvents, setDataEvents] = useState<EventsCards[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -48,7 +48,7 @@ export function FetchEventsDataCards() {
     }
     return (
         <div className="flex flex-col gap-12">
-            <EventsData data={dataEvents} />
+            <EventsData data={dataEvents} isFeatured={useFeatured} />
         </div>
     );
 }

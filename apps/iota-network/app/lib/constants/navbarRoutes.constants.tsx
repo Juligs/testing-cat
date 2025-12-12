@@ -355,6 +355,10 @@ export const items: NavbarGroupItem[] = [
                                 href: 'https://docs.iota.org/',
                                 isExternal: true,
                             },
+                            {
+                                title: 'IOTA Workshop Series',
+                                href: '/build/workshop-series',
+                            },
                         ],
                     },
                     {

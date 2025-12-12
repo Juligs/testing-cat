@@ -96,24 +96,31 @@ export function CtaCard({
                 'flex w-full overflow-hidden rounded-4xl items-center text-center',
                 bgColor,
                 flexDirection,
+                !image && 'justify-center p-6 xs:p-14',
             )}
         >
-            <div
-                className={clsx(
-                    'w-full object-cover aspect-[4/3] xs:aspect-video',
-                    isVertical && 'sm:aspect-[21/9]',
-                    !isVertical && aspectVideo && 'aspect-video sm:aspect-video sm:w-1/2',
-                    !isVertical && !aspectVideo && 'sm:w-1/2 sm:aspect-[4/3]',
-                )}
-            >
-                {animation ? (
-                    <div className="w-full h-auto max-w-full [&_>div]:aspect-[inherit] aspect-[inherit]">
-                        {animation}
-                    </div>
-                ) : image ? (
-                    <img src={image} alt={alt || image} className="w-full h-auto object-cover" />
-                ) : null}
-            </div>
+            {image || animation ? (
+                <div
+                    className={clsx(
+                        'w-full object-cover aspect-[4/3] xs:aspect-video',
+                        isVertical && 'sm:aspect-[21/9]',
+                        !isVertical && aspectVideo && 'aspect-video sm:aspect-video sm:w-1/2',
+                        !isVertical && !aspectVideo && 'sm:w-1/2 sm:aspect-[4/3]',
+                    )}
+                >
+                    {animation ? (
+                        <div className="w-full h-auto max-w-full [&_>div]:aspect-[inherit] aspect-[inherit]">
+                            {animation}
+                        </div>
+                    ) : image ? (
+                        <img
+                            src={image}
+                            alt={alt || image}
+                            className="w-full h-auto object-cover"
+                        />
+                    ) : null}
+                </div>
+            ) : null}
 
             <div
                 className={clsx(

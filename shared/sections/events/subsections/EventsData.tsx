@@ -1,6 +1,11 @@
 'use client';
 
-import { EventsCards, formatDate, getPlatformFromUrl } from '../../../utils';
+import {
+    buildOverlineText,
+    EventsCards,
+    getFeaturedEvents,
+    sortEventsByDate,
+} from '../../../utils';
 import { Badge, Chip, ChipSize, ImageCard } from 'react-ui-kit';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,31 +16,28 @@ import clsx from 'clsx';
 
 interface EventsProps {
     data: EventsCards[];
+    isFeatured?: boolean;
 }
 
-function buildOverlineText(data: EventsCards) {
-    const date = formatDate(data.startDate, data.endDate);
-    const location = data.location ? ` (${getPlatformFromUrl(data.location)})` : '';
-    return `${date}${location}`;
-}
-
-export function EventsData({ data }: EventsProps) {
-    const sortedDataAlphabetically = [...data].sort((a, b) => a.title.localeCompare(b.title));
+export function EventsData({ data, isFeatured }: EventsProps) {
+    const baseCards = isFeatured ? getFeaturedEvents(data) : data;
+    const sortedDataByDate = sortEventsByDate(baseCards);
     const uniqueCardCategories = [
         'All',
-        ...Array.from(new Set(sortedDataAlphabetically.flatMap((card) => card.category))).sort(
-            (a, b) => a.localeCompare(b),
+        ...Array.from(new Set(sortedDataByDate.flatMap((card) => card.category))).sort((a, b) =>
+            a.localeCompare(b),
         ),
     ];
 
     const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-    const filteredCards =
-        selectedCategory === 'All'
-            ? sortedDataAlphabetically
-            : sortedDataAlphabetically.filter((card) => card.category.includes(selectedCategory));
+    const filteredCards = isFeatured
+        ? sortedDataByDate
+        : selectedCategory === 'All'
+          ? sortedDataByDate
+          : sortedDataByDate.filter((card) => card.category.includes(selectedCategory));
 
-    const isSimplifiedLayout = data.length <= 2;
+    const isSimplifiedLayout = baseCards.length <= 2;
 
     const cardsContainerLayout = isSimplifiedLayout
         ? 'grid grid-cols-1 max-xs:place-items-center xs:flex xs:flex-row gap-6 justify-center items-stretch'
@@ -62,14 +64,48 @@ export function EventsData({ data }: EventsProps) {
         );
     }
 
-    return (
+    return isFeatured ? (
+        <div className="grid grid-cols-1 xs:grid-cols-2 gap-6">
+            {sortedDataByDate.map((card, index) => {
+                const categories = Array.isArray(card.category)
+                    ? card.category
+                    : typeof card.category === 'string'
+                      ? [card.category]
+                      : [];
+
+                return (
+                    <ImageCard
+                        key={card.title + index}
+                        title={card.title}
+                        overline={buildOverlineText(card)}
+                        body={
+                            typeof card.body === 'string' ? (
+                                <span title={card.body.length > 250 ? card.body : ''}>
+                                    {card.body.slice(0, 250)}
+                                    {card.body.length > 250 ? '...' : ''}
+                                </span>
+                            ) : undefined
+                        }
+                        image={card.image}
+                        isHoverable={!!card.link}
+                    >
+                        <div className="flex flex-wrap gap-2 mt-2">
+                            {categories.map((data, index) => (
+                                <Badge key={index} label={data} />
+                            ))}
+                        </div>
+                    </ImageCard>
+                );
+            })}
+        </div>
+    ) : (
         <div
             className={clsx(
                 'flex flex-col gap-12 w-full',
                 isSimplifiedLayout && 'max-w-[950px] mx-auto',
             )}
         >
-            {!isSimplifiedLayout && (
+            {!isSimplifiedLayout && !isFeatured && (
                 <div className="w-full flex flex-wrap gap-2 capitalize items-center justify-center">
                     {uniqueCardCategories.map((category) => (
                         <Chip

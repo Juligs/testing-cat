@@ -531,3 +531,28 @@ export const TRUST_FRAMEWORK_KEYWORDS = [
 ];
 export const TRUST_FRAMEWORK_URL = `${BASE_URL}/products/trust-framework`;
 export const TRUST_FRAMEWORK_IMAGE = '/metadata/meta_image_trust-framework.png';
+
+export const WORKSHOP_SERIES_METADATA_TITLE =
+    'IOTA Workshop Series | Learn the IOTA Tech Stack End-to-End';
+export const WORKSHOP_SERIES_METADATA_DESCRIPTION =
+    'Hands-on IOTA workshops for developers. Learn the IOTA tech stack, Move smart contracts, decentralized identity, verifiable credentials, tokenization, dApp development, and real-world solution design using the IOTA Trust Framework.';
+export const WORKSHOP_SERIES_METADATA_DESCRIPTION_X =
+    'Hands-on IOTA workshops teaching core tech, identity, tokenization, and dApp development. Build real-world solutions with the IOTA stack.';
+export const WORKSHOP_SERIES_KEYWORDS = [
+    'IOTA',
+    'IOTA workshops',
+    'IOTA developer workshops',
+    'IOTA tech stack',
+    'IOTA Move',
+    'IOTA Trust Framework',
+    'decentralized identity',
+    'IOTA dApp development',
+    'verifiable credentials',
+    'IOTA tutorials',
+    'IOTA onboarding',
+    'IOTA smart contracts',
+    'IOTA DID',
+    'IOTA developer education',
+];
+export const WORKSHOP_SERIES_URL = `${BASE_URL}/build/workshop-series`;
+export const WORKSHOP_SERIES_IMAGE = '/metadata/meta_image_workshop-series.png';
