@@ -2,22 +2,14 @@ import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import {
     CorePageHero,
-    FocusAreasMoreToExplore,
-    RWAIotaTechnology,
-    TWINIotaTechnology,
-    IdentityIotaTechnology,
-    CircularIotaTechnology,
-    DecentralizedIotaTechnology,
-} from '@sections';
-import {
-    RealWorldAssetTokenization,
-    DrivingInnovationAdoption,
-    TradeAndSupplyChains,
-    DigitalIdentity,
-    CircularEconomy,
     DecentralizedFinance,
-    ContactUs,
-} from '@repo/shared/sections';
+    DigitalIdentityFocusAreas,
+    FocusAreasMoreToExplore,
+    ProductLifecycle,
+    RealWorldAssetTokenization,
+    RwaCards,
+    TradeAndSupply,
+} from '@sections';
 import {
     FOCUS_AREAS_METADATA_TITLE,
     FOCUS_AREAS_METADATA_DESCRIPTION_X,
@@ -40,19 +32,13 @@ export default function Home() {
     return (
         <>
             <CorePageHero id="hero" navbarColorScheme="inverted" />
-            <DrivingInnovationAdoption id="driving-innovation-adoption" />
+            <RwaCards id="rwa-cards" />
             <RealWorldAssetTokenization id="real-world-asset-tokenization" />
-            <RWAIotaTechnology id="rwa-iota-technology" />
-            <TradeAndSupplyChains id="trade-and-supply-chains" />
-            <TWINIotaTechnology id="twin-iota-technology" />
-            <DigitalIdentity id="digital-identity" />
-            <IdentityIotaTechnology id="identity-iota-technology" />
-            <CircularEconomy id="circular-economy" />
-            <CircularIotaTechnology id="circular-iota-technology" />
+            <TradeAndSupply id="trade-and-supply" />
+            <DigitalIdentityFocusAreas id="digital-identity" />
+            <ProductLifecycle id="product-lifecycle" />
             <DecentralizedFinance id="decentralized-finance" />
-            <DecentralizedIotaTechnology id="decentralized-iota-technology" />
             <FocusAreasMoreToExplore id="explore" />
-            <ContactUs id="contact" />
         </>
     );
 }

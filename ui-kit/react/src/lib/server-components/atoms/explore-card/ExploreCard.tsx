@@ -27,6 +27,10 @@ interface exploreCardProps {
      * size of the card
      */
     size?: ExploreCardSize;
+    /**
+     * overline
+     */
+    overline?: string;
 }
 
 export function ExploreCard({
@@ -34,6 +38,7 @@ export function ExploreCard({
     subtitle,
     inverted,
     size = ExploreCardSize.Large,
+    overline,
 }: exploreCardProps) {
     const isSmall = size === ExploreCardSize.Small;
     const bgColors = inverted ? BG_COLOR_INVERTED : BG_COLOR;
@@ -51,14 +56,41 @@ export function ExploreCard({
             <div
                 className={clsx(
                     'relative flex flex-col w-full',
-                    isSmall && subtitle ? 'justify-between' : 'justify-end',
-                    isSmall ? '' : 'gap-2',
-                    isSmall && !subtitle ? 'justify-center' : '',
+                    isSmall
+                        ? subtitle
+                            ? 'justify-between'
+                            : 'justify-center'
+                        : overline
+                          ? 'justify-between'
+                          : 'justify-end',
+                    !isSmall && 'gap-2',
                 )}
             >
-                <ArrowTopRight className="absolute top-0 right-0 w-8 h-8 transform transition-transform ease-in duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                <p className="text-title-lg">{title}</p>
-                {subtitle && <p className={clsx('text-body-lg', subtitleColor)}>{subtitle}</p>}
+                {overline ? (
+                    <>
+                        <div className="flex flex-col w-full">
+                            <ArrowTopRight className="self-end w-8 h-8 transform transition-transform ease-in duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                            <p className="text-label-md self-start text-iota-neutral-50">
+                                {overline}
+                            </p>
+                        </div>
+
+                        <div>
+                            <p className="text-title-lg">{title}</p>
+                            {subtitle && (
+                                <p className={clsx('text-body-lg', subtitleColor)}>{subtitle}</p>
+                            )}
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <ArrowTopRight className="absolute top-0 right-0 w-8 h-8 transform transition-transform ease-in duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                        <p className="text-title-lg">{title}</p>
+                        {subtitle && (
+                            <p className={clsx('text-body-lg', subtitleColor)}>{subtitle}</p>
+                        )}
+                    </>
+                )}
             </div>
         </div>
     );

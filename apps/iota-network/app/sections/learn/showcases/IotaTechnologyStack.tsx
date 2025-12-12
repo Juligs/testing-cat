@@ -24,18 +24,11 @@ export function IotaTechnologyStack({
     showSeeAllLink,
     isLarge,
 }: IotaTechnologyStackProps) {
-    const normalizedShowcases = showcases.map((s) => s.toLowerCase());
-
-    const orderMap = new Map(normalizedShowcases.map((v, idx) => [v, idx]));
-
-    const showcaseCards = Object.entries(SHOWCASES)
-        .filter(([key, page]) => page.card && normalizedShowcases.includes(key.toLowerCase()))
-        .sort(([a], [b]) => {
-            return (orderMap.get(a.toLowerCase()) ?? 0) - (orderMap.get(b.toLowerCase()) ?? 0);
-        })
-        .map(([key, page]) => ({
-            ...page.card!,
-            link: `/learn/showcases/${key}`,
+    const showcaseCards = showcases
+        .filter((e) => e in SHOWCASES && SHOWCASES[e].card)
+        .map((e) => ({
+            ...SHOWCASES[e].card!,
+            link: `/learn/showcases/${e}`,
         }));
 
     return (

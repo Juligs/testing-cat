@@ -167,3 +167,5 @@ export { default as IotaTokenization } from './IotaTokenization';
 export { default as GasStation } from './GasStation';
 export { default as TrustHierarchies } from './TrustHierarchies';
 export { default as Reward } from './Reward';
+export { default as Frame } from './Frame';
+export { default as Copy } from './Copy';

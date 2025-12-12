@@ -6,12 +6,14 @@ interface TwoColumnsImageTemplateProps {
     reverse?: boolean;
     image: string;
     imageComponent?: (props: ImageProps) => React.ReactNode;
+    rounded?: boolean;
 }
 
 export function TwoColumnsImageTemplate({
     reverse = false,
     image,
     children,
+    rounded,
     imageComponent,
 }: React.PropsWithChildren<TwoColumnsImageTemplateProps>) {
     const REVERSED_CLASS = reverse
@@ -27,7 +29,13 @@ export function TwoColumnsImageTemplate({
         >
             <div className="w-full xs:w-1/2">{children}</div>
             <div className="w-full xs:w-1/2 aspect-[4/3] items-center flex">
-                <Image src={image} alt="Image" width={708} height={531} />
+                <Image
+                    src={image}
+                    alt="Image"
+                    width={708}
+                    height={531}
+                    className={clsx(rounded && 'rounded-2xl')}
+                />
             </div>
         </div>
     );
