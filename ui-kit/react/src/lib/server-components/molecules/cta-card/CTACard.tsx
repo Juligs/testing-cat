@@ -96,7 +96,7 @@ export function CtaCard({
                 'flex w-full overflow-hidden rounded-4xl items-center text-center',
                 bgColor,
                 flexDirection,
-                !image && 'justify-center p-6 xs:p-14',
+                !image && !animation && 'justify-center p-6 xs:p-14',
             )}
         >
             {image || animation ? (
