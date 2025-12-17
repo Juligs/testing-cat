@@ -34,7 +34,7 @@ export default function Home() {
             <CorePageHero id="hero" navbarColorScheme="inverted" />
             <RwaCards id="rwa-cards" />
             <RealWorldAssetTokenization id="real-world-asset-tokenization" />
-            <TradeAndSupply id="trade-and-supply" />
+            <TradeAndSupply id="trade-and-supply-chains" />
             <DigitalIdentityFocusAreas id="digital-identity" />
             <ProductLifecycle id="product-lifecycle" />
             <DecentralizedFinance id="decentralized-finance" />
