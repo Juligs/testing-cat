@@ -21,10 +21,10 @@ export const FOCUS_AREAS_IMAGE_CARD_CONTENT = [
         link: '/learn/focus-areas/#decentralized-finance',
     },
     {
-        title: 'Circular Economy',
-        subtitle: 'Sustainable innovation with circular economy solutions',
-        image: '/learn/intro/focus-areas/circular.png',
-        link: '/learn/focus-areas/#circular-economy',
+        title: 'Product Lifecycle',
+        subtitle: 'Trust and traceability across a product’s entire journey',
+        image: '/learn/intro/focus-areas/lifecycle.png',
+        link: '/learn/focus-areas/#product-lifecycle',
     },
     {
         title: 'Digital Identity',

@@ -163,8 +163,8 @@ export const items: NavbarGroupItem[] = [
                                 href: '/learn/focus-areas/#decentralized-finance',
                             },
                             {
-                                title: 'Circular Economy',
-                                href: '/learn/focus-areas/#circular-economy',
+                                title: 'Product Lifecycle',
+                                href: '/learn/focus-areas/#product-lifecycle',
                             },
                         ],
                     },
