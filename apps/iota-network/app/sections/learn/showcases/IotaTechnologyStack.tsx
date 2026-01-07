@@ -4,8 +4,9 @@ import { VerticalTitle, Actions, TextLink, TitleTextSize } from 'react-ui-kit';
 import { ShowcaseProject } from './showcasesProjects.enums';
 import { SHOWCASES } from './constants/showcasesContent.constants';
 import { SmallCtaCard } from '@components/small-CTA-card/SmallCtaCard';
+import { BaseSectionProps } from '@repo/shared/interfaces';
 
-interface IotaTechnologyStackProps {
+type IotaTechnologyStackProps = BaseSectionProps & {
     title?: string;
     showcases: ShowcaseProject[];
     isTitleCentered?: boolean;
@@ -13,7 +14,7 @@ interface IotaTechnologyStackProps {
     hasBackgroundColor?: boolean;
     showSeeAllLink?: boolean;
     isLarge?: boolean;
-}
+};
 
 export function IotaTechnologyStack({
     title = 'IOTA Technology Stack in Action',
@@ -23,6 +24,8 @@ export function IotaTechnologyStack({
     hasBackgroundColor,
     showSeeAllLink,
     isLarge,
+    id,
+    navbarColorScheme,
 }: IotaTechnologyStackProps) {
     const showcaseCards = showcases
         .filter((e) => e in SHOWCASES && SHOWCASES[e].card)
@@ -32,7 +35,11 @@ export function IotaTechnologyStack({
         }));
 
     return (
-        <section className={clsx('w-full', hasBackgroundColor && 'bg-iota-neutral-98')}>
+        <section
+            className={clsx('w-full', hasBackgroundColor && 'bg-iota-neutral-98')}
+            id={id}
+            data-navbar-color-scheme={navbarColorScheme}
+        >
             <div
                 className={clsx(
                     'container flex flex-col',

@@ -47,6 +47,7 @@ export default function Home() {
             <StakingOnIota id="staking-on-iota" />
             <BuildingSolutions id="building-solutions" />
             <IotaTechnologyStack
+                id="rwa"
                 title="Real-World Adoption in Action"
                 isTitleCentered
                 hasBackgroundColor

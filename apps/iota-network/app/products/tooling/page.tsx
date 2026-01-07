@@ -43,6 +43,7 @@ export default function Home() {
             <Explorers id="explorers" />
             <WalletsTooling id="wallets" />
             <IotaTechnologyStack
+                id="rwa"
                 showcases={[
                     ShowcaseProject.Virtue,
                     ShowcaseProject.PoolsFinance,

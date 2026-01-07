@@ -46,6 +46,7 @@ export default function Home() {
             <FlexibleUseCases id="flexible-use-cases" />
             <WhyIotaGas id="tech-and-tooling" />
             <IotaTechnologyStack
+                id="rwa"
                 showcases={[
                     ShowcaseProject.Impierce,
                     ShowcaseProject.Orobo,

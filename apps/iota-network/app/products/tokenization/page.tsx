@@ -45,6 +45,7 @@ export default function Home() {
             <NFTByDefault id="nft-by-default" />
             <CoinsAndsTokens id="coins-and-tokens" />
             <IotaTechnologyStack
+                id="rwa"
                 showcases={[
                     ShowcaseProject.Impierce,
                     ShowcaseProject.Orobo,

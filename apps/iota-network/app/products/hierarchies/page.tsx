@@ -49,6 +49,7 @@ export default function Home() {
             <WhyIotaTrustHierarchies id="why-iota" />
             <TechAndToolingTrustHierarchies id="tech-and-tooling" />
             <IotaTechnologyStack
+                id="rwa"
                 showcases={[
                     ShowcaseProject.Impierce,
                     ShowcaseProject.Orobo,

@@ -35,6 +35,7 @@ export default function Home() {
             <CombiningDAG id="combining-dag" />
             <Immutable id="immutable" />
             <IotaTechnologyStack
+                id="rwa"
                 showcases={[
                     ShowcaseProject.Virtue,
                     ShowcaseProject.PoolsFinance,

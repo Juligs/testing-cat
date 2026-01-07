@@ -45,6 +45,7 @@ export default function Home() {
             <Tooling id="tooling" />
             <ZeroKnowledge id="zero-knowledge" />
             <IotaTechnologyStack
+                id="rwa"
                 showLearnMoreLink
                 showcases={[
                     ShowcaseProject.Impierce,

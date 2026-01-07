@@ -51,6 +51,7 @@ export default function Home() {
             <WhyIotaNotarization id="why-iota-notarization" />
             <TechAndTooling id="tech-and-tooling" />
             <IotaTechnologyStack
+                id="rwa"
                 showcases={[
                     ShowcaseProject.Impierce,
                     ShowcaseProject.Orobo,

@@ -44,6 +44,7 @@ export default function Home() {
             <Connection id="connection" />
             <EVMBridge id="iota-evm" />
             <IotaTechnologyStack
+                id="rwa"
                 showcases={[
                     ShowcaseProject.Virtue,
                     ShowcaseProject.PoolsFinance,
