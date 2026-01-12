@@ -46,7 +46,7 @@ const IOTA_ECOSYSTEM_ROW: MenuRowSection[] = [
             {
                 title: 'IOTA Names',
                 description: 'Your On-Chain Name',
-                href: 'https://testnet.iotanames.com/',
+                href: 'https://iotanames.com/',
                 image: '/iota_names.svg',
                 isExternal: true,
             },
@@ -76,7 +76,7 @@ const IOTA_ECOSYSTEM_SECTION = {
         {
             title: 'IOTA Names',
             description: 'Your On-Chain Name',
-            href: 'https://testnet.iotanames.com/',
+            href: 'https://iotanames.com/',
             image: '/iota_names.svg',
             isExternal: true,
         },
