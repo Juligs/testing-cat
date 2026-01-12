@@ -35,6 +35,14 @@ export const LEGAL_ROUTES: Route[] = [
         title: 'Terms of Use',
         path: '/terms-of-use',
     },
+    {
+        title: 'Ambassador Terms of Use',
+        path: '/terms-ambassador',
+    },
+    {
+        title: 'Telegram Terms of Use',
+        path: '/terms-telegram',
+    },
 ];
 
 export const SOCIAL_LINKS = [
