@@ -117,7 +117,7 @@
     --font-family: theme('fontFamily.alliance-no2');
     --font-weight: 500;
     --letter-spacing: 0;
-    --action-border-radius: theme('borderRadius.lg');
+    --action-border-radius: theme('borderRadius.full');
 
     /* COLORS */
     --color-darkest: theme('colors.iota-neutral.10');

@@ -1,7 +1,13 @@
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
-import { HeroProductsuite, ToolingCard, ProductSuiteMoreToExplore } from '@sections';
-import { ContactUs } from '@repo/shared/sections';
+import {
+    BuildTools,
+    HeroProductsuite,
+    IntegrationStackProducts,
+    ProductSuiteMoreToExplore,
+    ServicesDapps,
+    TrustFrameworkProducts,
+} from '@sections';
 import {
     PRODUCT_SUITE_METADATA_TITLE,
     PRODUCT_SUITE_METADATA_DESCRIPTION_X,
@@ -24,9 +30,14 @@ export default function Home() {
     return (
         <>
             <HeroProductsuite id="hero" navbarColorScheme="inverted" />
-            <ToolingCard id="tooling-card" navbarColorScheme="inverted" />
+            <IntegrationStackProducts
+                id="integration-stack-products"
+                navbarColorScheme="inverted"
+            />
+            <TrustFrameworkProducts id="trust-framework-products" />
+            <ServicesDapps id="services-&-dapps" />
+            <BuildTools id="build-tools" />
             <ProductSuiteMoreToExplore id="more to explore" />
-            <ContactUs id="contact" />
         </>
     );
 }

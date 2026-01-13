@@ -64,6 +64,10 @@ interface ImageCardprops {
      * aspect ratio
      */
     noAspectRatio?: boolean;
+    /**
+     * highlight background color
+     */
+    isHighlighted?: boolean;
 }
 export function ImageCard({
     size = ImageCardSize.Large,
@@ -78,13 +82,18 @@ export function ImageCard({
     animation,
     alt,
     noAspectRatio,
+    isHighlighted,
 }: ImageCardprops): JSX.Element {
     const imageClass = IMAGE_SIZE_CLASS[size];
     const gapClass = GAP_SIZE_CLASS[size];
     const texMedium = inverted ? TEXT_COLOR_MEDIUM_INVERTED : TEXT_COLOR_MEDIUM;
     const textDarkest = inverted ? TEXT_COLOR_DARKEST_INVERTED : TEXT_COLOR_DARKEST;
     const bgColor = inverted ? BG_COLOR_INVERTED : BG_COLOR_DEFAULT;
-    const border = inverted ? BORDER_INVERTED : BORDER_DEFAULT;
+    const border = isHighlighted
+        ? 'bg-iota-neutral-96'
+        : inverted
+          ? BORDER_INVERTED
+          : BORDER_DEFAULT;
     const linkHoverEffect = isHoverable ? HOVER_EFFECT : '';
     const aspectRatio = !noAspectRatio ? imageClass : 'aspect-[21/9] md:aspect-auto';
 
