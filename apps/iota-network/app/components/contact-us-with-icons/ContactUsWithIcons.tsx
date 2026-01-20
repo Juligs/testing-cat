@@ -2,7 +2,7 @@ import { ArrowTopRight } from '@repo/icons';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button, ButtonVariant } from 'react-ui-kit';
+import { Button, ButtonRadius, ButtonVariant } from 'react-ui-kit';
 
 interface ContactIcon {
     icon: React.ReactNode;
@@ -80,7 +80,11 @@ export function ContactUsWithIcons({
                         rel="noopener noreferrer"
                         aria-label="Contact us"
                     >
-                        <Button text="partnerships@iota.org" icon={<ArrowTopRight />} />
+                        <Button
+                            text="partnerships@iota.org"
+                            icon={<ArrowTopRight />}
+                            buttonBorderRadius={ButtonRadius.Rounded}
+                        />
                     </Link>
 
                     {icons?.length ? (
@@ -93,7 +97,12 @@ export function ContactUsWithIcons({
                                     rel="noopener noreferrer"
                                     aria-label={`Link to ${url}`}
                                 >
-                                    <Button variant={ButtonVariant.Ghost} inverted icon={icon} />
+                                    <Button
+                                        variant={ButtonVariant.Ghost}
+                                        inverted
+                                        icon={icon}
+                                        buttonBorderRadius={ButtonRadius.Rounded}
+                                    />
                                 </Link>
                             ))}
                         </div>

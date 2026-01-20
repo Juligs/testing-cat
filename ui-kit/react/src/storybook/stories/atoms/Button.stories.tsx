@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, ButtonSize, ButtonVariant } from '@lib/server-components/atoms';
+import { Button, ButtonRadius, ButtonSize, ButtonVariant } from '@lib/server-components/atoms';
 import { ArrowTopRight } from '@repo/icons';
 import { getStoryEnumOptions } from 'src/storybook/utils';
 
@@ -38,4 +38,8 @@ export const ButtonWithTextAndIcon: Story = {
 export const ButtonWithIcon: Story = {
     args: {},
     render: (args) => <Button {...args} icon={<ArrowTopRight />} />,
+};
+export const ButtonFullRounded: Story = {
+    args: {},
+    render: (args) => <Button {...args} text="Button" buttonBorderRadius={ButtonRadius.Rounded} />,
 };

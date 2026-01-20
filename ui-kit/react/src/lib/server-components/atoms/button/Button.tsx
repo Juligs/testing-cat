@@ -7,8 +7,9 @@ import {
     TEXT_COLOR_INVERTED,
     BUTTON_BG_COLOR,
     BUTTON_BG_COLOR_INVERTED,
+    BUTTON_BORDER_RADIUS,
 } from './button.constants';
-import { ButtonSize, ButtonVariant } from './button.enums';
+import { ButtonRadius, ButtonSize, ButtonVariant } from './button.enums';
 import clsx from 'clsx';
 
 type HTMLButtonProps = Omit<
@@ -45,6 +46,10 @@ interface ButtonProps extends HTMLButtonProps {
      * Aria label for the button
      */
     ariaLabel?: string;
+    /**
+     * Border radius of the button
+     */
+    buttonBorderRadius?: ButtonRadius;
 }
 export function Button({
     type = 'button',
@@ -55,6 +60,7 @@ export function Button({
     text,
     icon,
     ariaLabel,
+    buttonBorderRadius = ButtonRadius.Default,
     ...buttonProps
 }: ButtonProps) {
     const textColor = inverted ? TEXT_COLOR_INVERTED[variant] : TEXT_COLOR[variant];
@@ -66,7 +72,7 @@ export function Button({
         <button
             type={type}
             {...buttonProps}
-            className={clsx('btn state-layer', bgColor, {
+            className={clsx('btn state-layer', bgColor, BUTTON_BORDER_RADIUS[buttonBorderRadius], {
                 'w-full': fullWidth,
                 'opacity-50': buttonProps.disabled,
             })}

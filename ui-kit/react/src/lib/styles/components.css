@@ -37,6 +37,10 @@
         color: var(--btn-text-color-inverted);
     }
 
+    .btn-border-radius-full {
+        border-radius: var(--btn-border-radius-full);
+    }
+
     .anchor-link-default {
         color: var(--color-darkest);
     }

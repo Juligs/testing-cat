@@ -9,3 +9,8 @@ export enum ButtonVariant {
     Secondary = 'btn-secondary',
     Ghost = 'btn-ghost',
 }
+
+export enum ButtonRadius {
+    Default = 'default',
+    Rounded = 'rounded',
+}

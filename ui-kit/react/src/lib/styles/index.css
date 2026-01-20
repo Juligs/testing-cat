@@ -117,7 +117,7 @@
     --font-family: theme('fontFamily.alliance-no2');
     --font-weight: 500;
     --letter-spacing: 0;
-    --action-border-radius: theme('borderRadius.full');
+    --action-border-radius: theme('borderRadius.lg');
 
     /* COLORS */
     --color-darkest: theme('colors.iota-neutral.10');
@@ -151,6 +151,7 @@
     --btn-text-color-default: theme('colors.iota-neutral.10');
     --btn-text-color-inverted: theme('colors.network-primary.100');
     --btn-text-color-primary: theme('colors.iota-neutral.100');
+    --btn-border-radius-full: theme('borderRadius.full');
 
     /* CHIP */
     --chip-bg-color: theme('colors.iota-neutral.92');

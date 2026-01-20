@@ -1,4 +1,4 @@
-import { Button, ButtonSize, TitleTextSize, VerticalTitle } from 'react-ui-kit';
+import { Button, ButtonRadius, ButtonSize, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 
 interface SegmentedButtonItem extends React.ComponentProps<typeof Button> {}
 
@@ -15,7 +15,12 @@ export function SectionTabs({ content, titleProps }: SectionTabsProps) {
             )}
             <div className="flex gap-2 p-1 rounded-full bg-iota-neutral-92">
                 {content.map((item, i) => (
-                    <Button key={i} {...item} size={ButtonSize.Small} />
+                    <Button
+                        key={i}
+                        {...item}
+                        size={ButtonSize.Small}
+                        buttonBorderRadius={ButtonRadius.Rounded}
+                    />
                 ))}
             </div>
         </div>

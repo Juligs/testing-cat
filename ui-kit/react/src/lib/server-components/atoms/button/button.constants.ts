@@ -1,4 +1,4 @@
-import { ButtonSize, ButtonVariant } from './button.enums';
+import { ButtonSize, ButtonVariant, ButtonRadius } from './button.enums';
 
 export const BUTTON_PADDINGS_MAP: Record<ButtonSize, string> = {
     [ButtonSize.Small]: 'py-1 px-2',
@@ -44,4 +44,9 @@ export const BUTTON_BG_COLOR: Record<ButtonVariant, string> = {
 export const BUTTON_BG_COLOR_INVERTED: Record<ButtonVariant, string> = {
     ...BUTTON_BG_COLOR,
     [ButtonVariant.Secondary]: 'btn-bg-secondary-inverted',
+};
+
+export const BUTTON_BORDER_RADIUS: Record<ButtonRadius, string> = {
+    [ButtonRadius.Default]: '',
+    [ButtonRadius.Rounded]: 'btn-border-radius-full',
 };
