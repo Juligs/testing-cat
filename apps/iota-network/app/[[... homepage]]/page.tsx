@@ -13,6 +13,7 @@ import {
     BlogPosts,
     GettingStarted,
     JoinUsBuildingCTA,
+    LearnBuildShipHomepage,
 } from '@sections';
 import {
     HOMEPAGE_METADATA_TITLE,
@@ -65,6 +66,7 @@ export default function Home() {
             />
 
             <LighthouseProjects id="lighthouse-projects" />
+            <LearnBuildShipHomepage id="learn-build-ship" />
             <JoinUsBuildingCTA id="join-us-in-building" navbarColorScheme="inverted" />
             <EcosystemProjects id="ecosystem-projects" />
             <WhyBuild id="why-build" navbarColorScheme="inverted" />
