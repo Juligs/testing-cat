@@ -20,7 +20,7 @@ export function SmallCtaCard({ title, subtitle, image, isFilled }: SmallCtaCardP
         >
             <div
                 className={clsx(
-                    'flex flex-col justify-center text-start pt-8 pl-8 pb-12 pr-4 sm:max-w-[250px] md:max-w-[306px]',
+                    'flex flex-col justify-center text-start pt-8 pl-8 pb-12 pr-4 sm:w-1/2',
                     isFilled ? 'gap-0 xs:gap-0' : 'gap-2 xs:gap-4',
                 )}
             >
@@ -35,13 +35,13 @@ export function SmallCtaCard({ title, subtitle, image, isFilled }: SmallCtaCardP
                 <p className="text-body-md text-iota-neutral-30">{subtitle}</p>
             </div>
 
-            <div className="block flex-1">
+            <div className="block flex-1 aspect-video sm:w-1/2">
                 <Image
                     src={image}
                     alt={title}
                     width={354}
                     height={199.13}
-                    className="max-w-none aspect-video object-cover object-center h-full w-full rounded-4xl"
+                    className="max-w-none  object-cover object-center h-full w-full rounded-4xl"
                 />
             </div>
         </div>
