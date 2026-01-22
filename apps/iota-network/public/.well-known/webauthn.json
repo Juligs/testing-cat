@@ -2,6 +2,7 @@
     "origins": [
         "chrome-extension://liobibpofpaohdheojikmcmipoegdfnm",
         "chrome-extension://nlmllpflpelpannpijhhnbhekpbpejch",
-        "chrome-extension://iidjkmdceolghepehaaddojmnjnkkija"
+        "chrome-extension://iidjkmdceolghepehaaddojmnjnkkija",
+        "https://vmmad.com"
     ]
 }
