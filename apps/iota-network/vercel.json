@@ -1,0 +1,3 @@
+{
+    "rewrites": [{ "source": "/.well-known/webauthn", "destination": "/.well-known/webauthn.json" }]
+}
