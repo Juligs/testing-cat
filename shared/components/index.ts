@@ -12,3 +12,4 @@ export * from './(mdx-pages)';
 export * from './navbar-items';
 export * from './layout';
 export * from './homepage-redirect';
+export * from './blog-post-section';

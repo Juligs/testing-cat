@@ -4,3 +4,4 @@ export * from './SliderImageCardSkeleton';
 export * from './ChipSkeleton';
 export * from './ImageCardSkeleton';
 export * from './IconSkeleton';
+export * from './BlogPostCardSkeleton';

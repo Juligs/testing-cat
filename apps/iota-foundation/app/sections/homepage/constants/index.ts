@@ -5,4 +5,3 @@ export * from './ourFocusAreasContent.constants';
 export * from './ourPartnersContent.constants';
 export * from './exploreIota.constants';
 export * from './DLTInnovationContent.constants';
-export * from './foundationBlogContent.constants';

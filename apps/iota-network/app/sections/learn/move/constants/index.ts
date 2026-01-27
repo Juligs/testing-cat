@@ -5,5 +5,4 @@ export * from './flexibleAndComposableContent.constants';
 export * from './enhancedDevExContent.constants';
 export * from './keyFeaturesContent.constants';
 export * from './learningResourcesContent.constants';
-export * from './blogPostsContent.constants';
 export * from './moveMoreToExploreContent.constants';

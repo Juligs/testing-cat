@@ -6,7 +6,6 @@ export * from './StakingOnIota';
 export * from './BuildingSolutions';
 export * from './EcosystemProjects';
 export * from './WhyBuild';
-export * from './BlogPosts';
 export * from './GettingStarted';
 export * from './constants';
 export * from './JoinUsBuildingCTA';

@@ -10,7 +10,6 @@ import { getPageMetadata } from '@lib/utils';
 import {
     DLTInnovation,
     ExploreIota,
-    FoundationBlog,
     FoundationStats,
     Hero,
     OurFocusAreas,
@@ -21,6 +20,7 @@ import {
 import { HomepageRedirect } from '@repo/shared/components';
 import { ContactUs } from '@repo/shared/sections';
 import type { Metadata } from 'next';
+import { FetchBlogPostsSection } from '@repo/shared/utils/ghost-blog/FetchBlogPostData';
 
 export const metadata: Metadata = getPageMetadata({
     title: HOMEPAGE_METADATA_TITLE,
@@ -42,7 +42,10 @@ export default function Home() {
             <OurPartners id="our-partners" />
             <ExploreIota id="explore-iota" />
             <DLTInnovation id="dlt" />
-            <FoundationBlog id="foundation-blog" />
+            <FetchBlogPostsSection
+                source="network"
+                contentTitle={{ subtitle: 'Official news, insights, and deep dives from IOTA' }}
+            />
             <ContactUs id="contact" />
             <HomepageRedirect />
         </>

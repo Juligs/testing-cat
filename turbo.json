@@ -9,6 +9,10 @@
         "IOTA_NETWORK_INDEXER_URL",
         "IOTA_PRICE_URL",
         "GOOGLE_SHEETS_API_KEY",
+        "IOTA_NETWORK_BLOG_KEY",
+        "IOTA_NETWORK_BLOG_URL",
+        "IOTALABS_BLOG_KEY",
+        "IOTALABS_BLOG_URL",
         "NODE_ENV"
     ],
     "tasks": {

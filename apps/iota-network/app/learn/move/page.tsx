@@ -8,7 +8,6 @@ import {
     EnhancedDevEX,
     KeyFeatures,
     LearningResources,
-    MoveBlogPosts,
     MoveMoreToExplore,
 } from '@sections';
 import { ContactUs } from '@repo/shared/sections';
@@ -20,6 +19,7 @@ import {
     MOVE_IMAGE,
     MOVE_URL,
 } from '@lib/constants';
+import { FetchBlogPostsSection } from '@repo/shared/utils/ghost-blog/FetchBlogPostData';
 export const metadata: Metadata = getPageMetadata({
     title: MOVE_METADATA_TITLE,
     description: MOVE_METADATA_DESCRIPTION,
@@ -40,7 +40,7 @@ export default function Home() {
             <EnhancedDevEX id="enhanced-dev-EX" />
             <KeyFeatures id="key-features" />
             <LearningResources id="learning-resources" />
-            <MoveBlogPosts id="blog-posts" />
+            <FetchBlogPostsSection source="network" />
             <MoveMoreToExplore id="more-to-explore" />
             <ContactUs id="contact" />
         </>

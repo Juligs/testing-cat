@@ -7,6 +7,7 @@
     },
     "dependencies": {
         "@repo/icons": "workspace:*",
+        "@tryghost/content-api": "^1.12.2",
         "airtable": "^0.12.2",
         "next": "14.2.35",
         "react": "18.3.1",

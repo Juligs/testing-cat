@@ -5,5 +5,4 @@ export { FlexibleAndComposable } from './FlexibleAndComposable';
 export { EnhancedDevEX } from './EnchancedDevEx';
 export { KeyFeatures } from './KeyFeatures';
 export { LearningResources } from './LearningResources';
-export { BlogPosts as MoveBlogPosts } from './BlogPosts';
 export { MoveMoreToExplore } from './MoveMoreToExplore';

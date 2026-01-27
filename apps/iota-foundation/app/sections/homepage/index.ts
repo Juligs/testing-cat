@@ -5,4 +5,3 @@ export * from './OurFocusAreas';
 export * from './OurPartners';
 export * from './ExploreIota';
 export * from './DLTInnovation';
-export * from './FoundationBlog';

@@ -13,5 +13,6 @@ module.exports = {
         '/api/evm-stats',
         '/api/events',
         '/api/exchanges',
+        '/api/blog',
     ],
 };

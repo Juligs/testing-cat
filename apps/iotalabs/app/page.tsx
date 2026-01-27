@@ -11,9 +11,9 @@ import {
     EVMToolkit,
     Infrastructure,
     BuildWith,
-    News,
 } from '@sections';
 import { getPageMetadata } from '@lib/utils';
+import { FetchBlogPostsSection } from '@repo/shared/utils/ghost-blog/FetchBlogPostData';
 const METADATA_TITLE = 'Power Up Your Builder Journey';
 const METADATA_DESCRIPTION =
     'iotalabs propels the IOTA ecosystem through grants, growth initiatives, builder support, and strategic partnerships. Join us in shaping the future of IOTA—one breakthrough at a time.';
@@ -36,7 +36,14 @@ export default function Home() {
             <EVMToolkit id="evm-toolkit" navbarColorScheme="inverted" />
             <Infrastructure id="infrastructure" />
             <BuildWith id="build-with" />
-            <News id="news" />
+            <FetchBlogPostsSection
+                source="labs"
+                contentTitle={{
+                    title: 'IOTA Labs News',
+                    subtitle:
+                        'Discover the latest developments in our ecosystem, including new partnerships, funding opportunities, and collaborative projects',
+                }}
+            />
         </>
     );
 }

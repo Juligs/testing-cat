@@ -1,4 +1,4 @@
-import { EventsCards, formatDate, getPlatformFromUrl } from '.';
+import { EventsCards, formatDateInterval, getPlatformFromUrl } from '.';
 
 export function sortEventsByDate(events: EventsCards[]) {
     return [...events].sort(
@@ -37,7 +37,7 @@ export function getFeaturedEvents(data: EventsCards[]) {
 }
 
 export function buildOverlineText(data: EventsCards) {
-    const date = formatDate(data.startDate, data.endDate);
+    const date = formatDateInterval(data.startDate, data.endDate);
     const location = data.location ? ` (${getPlatformFromUrl(data.location)})` : '';
     return `${date}${location}`;
 }

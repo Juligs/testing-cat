@@ -1,3 +1,5 @@
+import { isValidUrl } from '@repo/shared/utils';
+
 export interface PaperData {
     title: string;
     linkPeerReviewed?: string;
@@ -7,17 +9,6 @@ export interface PaperData {
     abstract?: string;
     award?: string;
 }
-
-function isValidUrl(url: string | undefined): boolean {
-    if (!url) return false;
-    try {
-        new URL(url);
-        return true;
-    } catch {
-        return false;
-    }
-}
-
 export function sanitizeSheetData(rows: (string | undefined)[][], sheet: string): PaperData[] {
     if (!Array.isArray(rows) || rows.length < 2) {
         console.log(`No data found or invalid format in sheet: ${sheet}`);

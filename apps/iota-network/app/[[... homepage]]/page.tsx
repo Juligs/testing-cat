@@ -10,7 +10,6 @@ import {
     BuildingSolutions,
     EcosystemProjects,
     WhyBuild,
-    BlogPosts,
     GettingStarted,
     JoinUsBuildingCTA,
     LearnBuildShipHomepage,
@@ -27,6 +26,7 @@ import {
 import type { Metadata } from 'next';
 import { IotaTechnologyStack } from '@sections/learn/showcases/IotaTechnologyStack';
 import { ShowcaseProject } from '@sections/learn/showcases/showcasesProjects.enums';
+import { FetchBlogPostsSection } from '@repo/shared/utils/ghost-blog/FetchBlogPostData';
 
 export const metadata: Metadata = getPageMetadata({
     title: HOMEPAGE_METADATA_TITLE,
@@ -70,7 +70,7 @@ export default function Home() {
             <JoinUsBuildingCTA id="join-us-in-building" navbarColorScheme="inverted" />
             <EcosystemProjects id="ecosystem-projects" />
             <WhyBuild id="why-build" navbarColorScheme="inverted" />
-            <BlogPosts id="blog-posts" />
+            <FetchBlogPostsSection id="blog-post" source="network" />
             <GettingStarted id="getting-started" />
             <HomepageRedirect />
         </>
