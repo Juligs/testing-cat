@@ -1,13 +1,25 @@
-import { TitleTextSize } from 'react-ui-kit';
+import { HorizontalTitle, ImageCard, TitleTextSize } from 'react-ui-kit';
 
-export const FIRST_PARTICIPANTS_HORIZONTAL_TITLE = {
+type ImageCardWithLink = React.ComponentProps<typeof ImageCard> & {
+    link: string;
+};
+
+export const FIRST_PARTICIPANTS_HORIZONTAL_TITLE: React.ComponentProps<typeof HorizontalTitle> = {
     title: 'Introducing the First Wave of Participants',
     subtitle: 'Kickstarting Real-World Innovation on the IOTA Mainnet',
-    body: "The first participants in IOTA's Business Innovation Program are building real-world solutions on the new IOTA Mainnet. Impierce, Orobo, and ObjectID tackle challenges in digital identity, sustainability, and product authenticity, leveraging IOTA's tech, funding, and support to bring trust and transparency to global systems.",
+    body: 'The first participants in IOTA’s Business Innovation Program are building real-world solutions on the new IOTA Mainnet. Kalalohko, Impierce, Orobo, and ObjectID tackle challenges in digital identity, sustainability, and product authenticity, leveraging IOTA’s tech, funding, and support to bring trust and transparency to global systems.',
     size: TitleTextSize.Medium,
 };
 
-export const FIRST_PARTICIPANTS_IMAGE_CARD = [
+export const FIRST_PARTICIPANTS_IMAGE_CARD: ImageCardWithLink[] = [
+    {
+        title: 'Kalalohko',
+        subtitle:
+            'Enables verifiable seafood provenance from catch to buyer, supporting fairer economics and compliant supply chains.',
+        image: '/build/business-innovation/first-participants/kalalohko.png',
+        body: 'Kalalohko is rebuilding the seafood supply chain with transparency and fairness. As a new participant in the IOTA Business Innovation Program, it uses IOTA Identity, Notarization, and the Gas Station to trace seafood provenance, support local fishermen, and drive scalable, verifiable real-world adoption.',
+        link: 'https://blog.iota.org/kalalohko-joins-iota-bip/',
+    },
     {
         title: 'Impierce',
         subtitle: 'Decentralized Identity Infrastructure for a Privacy-Respecting Digital Society',

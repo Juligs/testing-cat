@@ -1,8 +1,9 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import { Actions, Button, ImageCard, HorizontalTitle, ButtonVariant } from 'react-ui-kit';
-import { FIRST_PARTICIPANTS_IMAGE_CARD, FIRST_PARTICIPANTS_HORIZONTAL_TITLE } from './constants';
+import { Actions, Button, HorizontalTitle, ButtonVariant } from 'react-ui-kit';
+import { FIRST_PARTICIPANTS_HORIZONTAL_TITLE } from './constants';
 import Link from 'next/link';
 import { ArrowTopRight } from '@repo/icons';
+import { FirstParticipantsCarousel } from './subsections/FirstParticipantsCarousel';
 
 export function FirstParticipants({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -24,20 +25,7 @@ export function FirstParticipants({ id, navbarColorScheme }: BaseSectionProps) {
                         </Link>
                     </Actions>
                 </HorizontalTitle>
-                <div className="grid grid-cols-1 xs:grid-cols-3 gap-6">
-                    {FIRST_PARTICIPANTS_IMAGE_CARD.map((data, index) => (
-                        <Link
-                            href={data.link}
-                            key={index}
-                            target="_blank"
-                            rel="nopener noreferrer"
-                            aria-label={`Link to ${data.title}`}
-                            className="[&>div]:h-full"
-                        >
-                            <ImageCard {...data} />
-                        </Link>
-                    ))}
-                </div>
+                <FirstParticipantsCarousel />
             </div>
         </section>
     );
