@@ -20,10 +20,10 @@ export const PROJECTS_LINKS_TWIN: ProjectLinksProps = {
 export const EXPLORE_MORE_SHOWCASES_TWIN: ExploreMoreProps = {
     ctaExploreCard: [
         {
-            image: '/learn/showcases/explore-more/virtue.png',
-            title: 'Virtue',
-            subtitle: 'Rise Above Financial Barriers With Virtue',
-            link: '/learn/showcases/virtue',
+            image: '/learn/showcases/explore-more/kalalohko.png',
+            title: 'Kalalohko',
+            subtitle: 'Fair and transparent seafood industry ecosystems',
+            link: '/learn/showcases/kalalohko',
         },
         {
             image: '/learn/showcases/explore-more/salus.png',

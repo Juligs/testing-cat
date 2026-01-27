@@ -6,7 +6,7 @@ export enum ShowcaseProject {
     Impierce = 'impierce',
     Orobo = 'orobo',
     ObjectID = 'objectID',
-    // Kalalohko = 'kalalohko',
+    Kalalohko = 'kalalohko',
     // Extrimian = 'extrimian',
     TuringSpace = 'turing-space',
     DPP = 'dpp',

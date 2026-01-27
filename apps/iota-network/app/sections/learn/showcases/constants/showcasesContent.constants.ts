@@ -11,7 +11,7 @@ import { SHOWCASE_TWIN } from './twin';
 import { SHOWCASE_KYC } from './kyc';
 import { SHOWCASE_IPRM } from './iprm';
 // import { SHOWCASE_EXTRIMIAN } from './extrimian';
-// import { SHOWCASE_KALALOHKO } from './kalalohko';
+import { SHOWCASE_KALALOHKO } from './kalalohko';
 import { SHOWCASE_POOLS } from './pools';
 import { SHOWCASE_VIRTUE } from './virtue';
 
@@ -23,11 +23,11 @@ export const SHOWCASES: Record<ShowcaseProject, ShowcasePage> = {
     [ShowcaseProject.Impierce]: SHOWCASE_IMPIERCE,
     [ShowcaseProject.Orobo]: SHOWCASE_OROBO,
     [ShowcaseProject.ObjectID]: SHOWCASE_OBJECT_ID,
+    [ShowcaseProject.Kalalohko]: SHOWCASE_KALALOHKO,
     [ShowcaseProject.TuringSpace]: SHOWCASE_TURING_SPACE,
     [ShowcaseProject.Ebsi]: SHOWCASE_EBSI,
     [ShowcaseProject.Kyc]: SHOWCASE_KYC,
     [ShowcaseProject.Iprm]: SHOWCASE_IPRM,
     [ShowcaseProject.DPP]: SHOWCASE_DPP,
-    // [ShowcaseProject.Kalalohko]: SHOWCASE_KALALOHKO,
     // [ShowcaseProject.Extrimian]: SHOWCASE_EXTRIMIAN,
 };

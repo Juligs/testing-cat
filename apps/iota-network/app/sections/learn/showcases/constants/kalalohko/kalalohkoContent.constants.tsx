@@ -126,7 +126,7 @@ export const SHOWCASE_KALALOHKO: ShowcasePage = {
     card: {
         title: 'Kalalohko',
         subtitle: 'Fair and transparent seafood industry ecosystems',
-        image: '/learn/showcases/explore-more/kalakoho.png',
+        image: '/learn/showcases/explore-more/kalalohko.png',
         category: ['Trade & Supply Chain'],
     },
     metadata: SHOWCASE_KALALOHKO_METADATA,
