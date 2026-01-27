@@ -45,6 +45,7 @@ export default function Home() {
             <FetchBlogPostsSection
                 source="network"
                 contentTitle={{ subtitle: 'Official news, insights, and deep dives from IOTA' }}
+                id="blog-post"
             />
             <ContactUs id="contact" />
             <HomepageRedirect />

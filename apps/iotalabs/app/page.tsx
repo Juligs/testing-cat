@@ -43,6 +43,7 @@ export default function Home() {
                     subtitle:
                         'Discover the latest developments in our ecosystem, including new partnerships, funding opportunities, and collaborative projects',
                 }}
+                id="blog-post"
             />
         </>
     );

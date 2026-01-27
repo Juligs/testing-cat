@@ -40,7 +40,7 @@ export default function Home() {
             <EnhancedDevEX id="enhanced-dev-EX" />
             <KeyFeatures id="key-features" />
             <LearningResources id="learning-resources" />
-            <FetchBlogPostsSection source="network" />
+            <FetchBlogPostsSection source="network" id="blog-post" />
             <MoveMoreToExplore id="more-to-explore" />
             <ContactUs id="contact" />
         </>
