@@ -1,5 +1,5 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import { VerticalTitle, Actions, DisplayStats, Button, ButtonVariant } from 'react-ui-kit';
+import { VerticalTitle, Actions, DisplayStats, Button, TextSize } from 'react-ui-kit';
 import { PROJECT_FUNDING_VERTICAL_TITLE, PROJECT_FUNDING_STATS_CONTENT } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
@@ -14,18 +14,11 @@ export function ProjectFunding({ id, navbarColorScheme }: BaseSectionProps) {
                         <VerticalTitle {...PROJECT_FUNDING_VERTICAL_TITLE}>
                             <Actions>
                                 <Link
-                                    href="https://airtable.com/appoUvqpIo5bkDoSO/pag16jQChVVMh3zyh/form?ref=blog.iota.org"
+                                    href="https://blog.iota.org/iota-business-innovation-program/"
                                     target="_blank"
                                     rel="nopener noreferrer"
                                 >
-                                    <Button text="Apply now" icon={<ArrowTopRight />} />
-                                </Link>
-                                <Link
-                                    href="https://blog.iota.org/iota-business-innovation-program"
-                                    target="_blank"
-                                    rel="nopener noreferrer"
-                                >
-                                    <Button text="Blog post" variant={ButtonVariant.Secondary} />
+                                    <Button text="Blog post" icon={<ArrowTopRight />} />
                                 </Link>
                             </Actions>
                         </VerticalTitle>
@@ -33,7 +26,7 @@ export function ProjectFunding({ id, navbarColorScheme }: BaseSectionProps) {
                 </TwoColumnsImageTemplate>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     {PROJECT_FUNDING_STATS_CONTENT.map((data, index) => (
-                        <DisplayStats key={index} {...data} />
+                        <DisplayStats key={index} {...data} textSize={TextSize.Small} />
                     ))}
                 </div>
             </div>
