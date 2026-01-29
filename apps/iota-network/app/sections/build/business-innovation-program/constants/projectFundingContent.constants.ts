@@ -15,7 +15,7 @@ export const PROJECT_FUNDING_STATS_CONTENT = [
     },
     {
         label: 'Application process',
-        value: 'Temporarily pausing while we restructure the Program for 2026',
+        value: 'Temporarily paused for 2026 restructuring',
     },
     {
         label: 'Updates coming soon',
