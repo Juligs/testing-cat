@@ -1,9 +1,9 @@
 import { VerticalTitle, TitleTextSize } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ProjectsSkeleton } from '@sections/skeletons';
 import { FetchProjectsData } from '@sections/subsections';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Suspense } from 'react';
+import { ProjectsSkeleton } from '@repo/shared/sections';
 
 export function Projects({ id, navbarColorScheme }: BaseSectionProps) {
     return (

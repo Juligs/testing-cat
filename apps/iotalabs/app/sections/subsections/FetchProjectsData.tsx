@@ -5,8 +5,7 @@ import {
     revalidateInfraAPI,
 } from '@repo/shared/utils';
 import { useEffect, useState } from 'react';
-import { ProjectsSkeleton } from '../skeletons';
-import { ProjectsData } from './ProjectsData';
+import { ProjectsData, ProjectsSkeleton } from '@repo/shared/sections';
 
 export function FetchProjectsData() {
     const [dataProjects, setDataProjects] = useState<CardShowcase[] | undefined>(undefined);

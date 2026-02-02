@@ -15,36 +15,61 @@ type InfraFields = {
 };
 
 interface SanitizeOptions {
-    allowedCategories: string[];
+    allowedCategories?: string[];
     placeholderImageUrl?: string;
+    requireWebsitePosition?: boolean;
 }
 
 export async function sanitizeEcosystemProjectsData(
-    data: Records<FieldSet>,
-    { allowedCategories, placeholderImageUrl = '/homepage/placeholder_image.png' }: SanitizeOptions,
+    records: Records<FieldSet>,
+    {
+        allowedCategories,
+        placeholderImageUrl = '/homepage/placeholder_image.png',
+        requireWebsitePosition = false,
+    }: SanitizeOptions,
 ): Promise<CardShowcase[]> {
-    const normalizedCategories = new Set(allowedCategories.map((c) => c.toLowerCase()));
+    const normalizedCategories = allowedCategories
+        ? new Set(allowedCategories.map((c) => c.toLowerCase()))
+        : null;
 
-    return data
-        .filter((record) => {
-            const categories = record.fields['Sub-Category'];
-            return (
-                Array.isArray(categories) &&
-                categories.some((c) => normalizedCategories.has(c.toLowerCase()))
-            );
-        })
-        .map(({ fields }) => {
-            const record = fields as unknown as InfraFields;
+    const filteredRecords = records.filter((record) => {
+        const fields = record.fields as Partial<InfraFields>;
 
-            return {
-                link: record.Website,
-                title: record.Name,
-                body: record.websiteDescription,
-                category: record['Sub-Category'].filter((c) =>
-                    normalizedCategories.has(c.toLowerCase()),
-                ),
-                image: record.websiteImage?.[0]?.url ?? placeholderImageUrl,
-                ...(record.websitePosition ? { websitePosition: record.websitePosition } : {}),
-            };
-        });
+        const hasRequiredFields =
+            fields.Name &&
+            fields.Website &&
+            Array.isArray(fields['Sub-Category']) &&
+            fields['Sub-Category'].length > 0;
+
+        const categoryCondition =
+            !normalizedCategories ||
+            fields['Sub-Category']!.some((c) => normalizedCategories.has(c.toLowerCase()));
+
+        const websitePositionCondition =
+            !requireWebsitePosition || fields.websitePosition !== undefined;
+
+        return !!(hasRequiredFields && categoryCondition && websitePositionCondition);
+    });
+
+    if (filteredRecords.length === 0) {
+        console.log('sanitizeEcosystemProjectsData No records passed the filter');
+    }
+
+    return filteredRecords.map(({ fields }) => {
+        const record = fields as unknown as InfraFields;
+        const categories = record['Sub-Category'];
+
+        return {
+            link: record.Website,
+            title: record.Name,
+            body: record.websiteDescription,
+            category: normalizedCategories
+                ? categories.filter((c) => normalizedCategories.has(c.toLowerCase()))
+                : categories,
+            image: record.websiteImage?.[0]?.url ?? placeholderImageUrl,
+            ...(record.websitePosition !== undefined
+                ? { websitePosition: record.websitePosition }
+                : {}),
+        };
+    });
 }

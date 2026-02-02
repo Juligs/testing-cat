@@ -1,8 +1,8 @@
-import { ChipSkeleton, ImageCardSkeleton } from '@repo/shared/components';
+import { ChipSkeleton, ImageCardSkeleton } from '../../components';
 
 export function ProjectsSkeleton() {
     return (
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12 w-full">
             <div className="w-full ">
                 <div className="flex flex-wrap items-center justify-start gap-2">
                     {Array.from({ length: 6 }).map((_, index) => (

@@ -5,10 +5,9 @@ import {
     revalidateProjectsAPI,
 } from '@repo/shared/utils';
 import { useEffect, useState } from 'react';
-import { SliderImageCardSkeleton } from '@repo/shared/components';
-import { ProjectsSlider } from './ProjectsSlider';
+import { ProjectsData, ProjectsSkeleton } from '@repo/shared/sections';
 
-export function FetchProjectsSlider() {
+export function FetchProjectsFullData() {
     const [dataProjects, setDataProjects] = useState<CardShowcase[] | undefined>(undefined);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -16,13 +15,13 @@ export function FetchProjectsSlider() {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const fetchedData = await fetchInfraData();
+                const fetchedData = await fetchIotaProjectsData();
                 const validImageUrls = fetchedData
                     .map(({ image }) => image)
                     .filter((image): image is string => Boolean(image));
                 const refreshedDataWithoutCache = await checkInvalidImageUrlsAndRevalidate(
                     validImageUrls,
-                    fetchInfraData,
+                    fetchIotaProjectsData,
                     revalidateProjectsAPI,
                 );
                 // If there was some error in the cached fetched data which then needed to be revalidated
@@ -34,10 +33,7 @@ export function FetchProjectsSlider() {
                     setDataProjects(fetchedData);
                 }
             } catch (error) {
-                console.error(
-                    'Error fetching infra slider data from Airtable (FetchProjectsSlider):',
-                    error,
-                );
+                console.error('Error fetching project full data from Airtable:', error);
             } finally {
                 setIsLoading(false);
             }
@@ -45,23 +41,21 @@ export function FetchProjectsSlider() {
         fetchData();
     }, []);
 
-    const fetchInfraData = async () => {
+    const fetchIotaProjectsData = async () => {
         const res = await fetch(
             `/api/projects?${new URLSearchParams({
                 'ignore-cache': 'true',
                 view: 'IOTA Projects',
-                useWebsitePosition: 'true',
             }).toString()}`,
         );
-
         return (await res.json()) as CardShowcase[];
     };
 
     return isLoading || !dataProjects?.length ? (
-        <SliderImageCardSkeleton />
+        <ProjectsSkeleton />
     ) : (
         <div className="flex flex-col gap-12">
-            <ProjectsSlider data={dataProjects} />
+            <ProjectsData data={dataProjects} pagination />
         </div>
     );
 }

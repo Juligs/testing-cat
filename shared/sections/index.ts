@@ -10,3 +10,4 @@ export * from './driving-innovation-adoption-anchorlinks';
 export * from './events';
 export * from './join';
 export * from './event-terms';
+export * from './projects/ProjectsData';

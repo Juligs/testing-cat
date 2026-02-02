@@ -4,7 +4,15 @@ import { NextRequest, NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
-    const useWebsitePosition = request.nextUrl.searchParams.get('useWebsitePosition') === 'true';
-    const data = await fetchProjects(useWebsitePosition);
+    const searchParams = request.nextUrl.searchParams;
+
+    const view = searchParams.get('view') ?? undefined;
+    const useWebsitePosition = searchParams.get('useWebsitePosition') === 'true';
+
+    const data = await fetchProjects({
+        view,
+        useWebsitePosition,
+    });
+
     return NextResponse.json(data);
 }

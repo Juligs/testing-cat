@@ -1,15 +1,22 @@
-import { ECOSYSTEM_PROJECTS_ALLOWED_CATEGORIES } from '../../constants';
 import { getDataFromAirtable, sanitizeEcosystemProjectsData, type CardShowcase } from '../../utils';
 
 const PROJECTS_AIRTABLE_BASE_NAME = 'Accounts';
-const PROJECTS_AIRTABLE_VIEW_NAME = 'iotalabs projects';
+const DEFAULT_VIEW = 'iotalabs projects';
+const IOTA_PROJECTS_VIEW = 'IOTA Projects';
 
-export const fetchProjects: (useWebsitePosition?: boolean) => Promise<CardShowcase[]> = async (
+export const fetchProjects = async ({
+    view,
     useWebsitePosition = false,
-) => {
+}: {
+    view?: string;
+    useWebsitePosition?: boolean;
+}): Promise<CardShowcase[]> => {
+    const selectedView = view ?? DEFAULT_VIEW;
+
     try {
         const rawData = await getDataFromAirtable({
-            view: PROJECTS_AIRTABLE_VIEW_NAME,
+            airtableName: PROJECTS_AIRTABLE_BASE_NAME,
+            view: selectedView,
             fields: [
                 'Name',
                 'Sub-Category',
@@ -18,28 +25,20 @@ export const fetchProjects: (useWebsitePosition?: boolean) => Promise<CardShowca
                 'websiteDescription',
                 ...(useWebsitePosition ? ['websitePosition'] : []),
             ],
-            airtableName: PROJECTS_AIRTABLE_BASE_NAME,
         });
-        const filteredData = rawData.filter(
-            (record) =>
-                record.fields.Name &&
-                record.fields.Website &&
-                record.fields['Sub-Category'] &&
-                Array.isArray(record.fields['Sub-Category']) &&
-                record.fields['Sub-Category'].length > 0 &&
-                (useWebsitePosition ? record.fields.websitePosition : true),
-        );
 
-        if (!filteredData || filteredData.length === 0) {
-            console.warn('No records passed the filter for Infra');
-            return [];
-        }
-
-        return sanitizeEcosystemProjectsData(filteredData, {
-            allowedCategories: ECOSYSTEM_PROJECTS_ALLOWED_CATEGORIES,
+        return sanitizeEcosystemProjectsData(rawData, {
+            requireWebsitePosition: useWebsitePosition,
         });
     } catch (error) {
-        console.error('Error in fetchInfraData:', error);
+        if (selectedView !== IOTA_PROJECTS_VIEW) {
+            return fetchProjects({
+                view: IOTA_PROJECTS_VIEW,
+                useWebsitePosition,
+            });
+        }
+
+        console.error('Error in fetchProjects:', error);
         return [];
     }
 };
