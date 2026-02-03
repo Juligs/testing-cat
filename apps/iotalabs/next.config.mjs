@@ -31,6 +31,9 @@ const nextConfig = {
             },
         },
     },
+    images: {
+        domains: ['v5.airtableusercontent.com', 'files.iota.org'],
+    },
     async headers() {
         return [
             {

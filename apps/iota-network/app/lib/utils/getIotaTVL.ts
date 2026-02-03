@@ -1,3 +1,5 @@
+import { formatCoin } from '@repo/shared/utils';
+
 export interface IotaTVLProps {
     tvl: number | string;
 }
@@ -9,11 +11,6 @@ export async function getIotaTVL(): Promise<IotaTVLProps> {
     if (!iota) {
         throw new Error('IOTA-EVM not found');
     }
-    const formattedTVL = new Intl.NumberFormat('en-US', {
-        notation: 'compact',
-        currency: 'USD',
-        style: 'currency',
-        maximumFractionDigits: 1,
-    }).format(iota.tvl);
+    const formattedTVL = formatCoin(iota.tvl, true);
     return { tvl: formattedTVL };
 }

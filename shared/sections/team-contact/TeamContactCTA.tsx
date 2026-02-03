@@ -1,7 +1,7 @@
 import { Actions, CtaCard, TextLink } from 'react-ui-kit';
 import { CTA_CONTENT } from './teamContactCTAContent.constants';
 import Link from 'next/link';
-import { BaseSectionProps } from '@repo/shared/interfaces';
+import { BaseSectionProps } from '../../interfaces';
 import clsx from 'clsx';
 
 interface TeamContactCTAProps extends BaseSectionProps {

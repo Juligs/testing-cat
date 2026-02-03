@@ -37,6 +37,9 @@ const nextConfig = {
             },
         },
     },
+    images: {
+        domains: ['v5.airtableusercontent.com', 'files.iota.org'],
+    },
     webpack: (config) => {
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = path.dirname(__filename);

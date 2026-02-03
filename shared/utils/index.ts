@@ -5,6 +5,8 @@ export * from './airtable';
 export * from './sanitizeXData';
 export * from './fetchGrantsStats';
 export * from './getSharedSectionLink';
+export * from './formatCoin';
+export * from './baseProposalSectionProps';
 export * from './sanitizeLinks';
 export * from './formatDateInterval';
 export * from './eventsUtils';

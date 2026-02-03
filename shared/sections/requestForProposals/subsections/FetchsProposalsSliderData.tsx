@@ -1,41 +1,43 @@
 'use client';
 import {
-    CardShowcase,
     checkInvalidImageUrlsAndRevalidate,
-    revalidateInfraAPI,
-} from '@repo/shared/utils';
+    ProposalCards,
+    revalidateProposalsAPI,
+} from '../../../utils';
 import { useEffect, useState } from 'react';
-import { InfraSlider } from './InfraSlider';
-import { ChipsCarouselSkeleton } from '@repo/shared/sections';
+import { ProposalsSliderData } from './ProposalsSliderData';
+import { ChipsCarouselSkeleton } from '../../skeletons';
 
-export function FetchInfraSliderData() {
-    const [dataInfraSlider, setDataInfraSlider] = useState<CardShowcase[] | undefined>(undefined);
+export function FetchsProposalsSliderData() {
+    const [dataProposalsSlider, setDataProposalSlider] = useState<ProposalCards[] | undefined>(
+        undefined,
+    );
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const fetchedData = await fetchInfraData();
+                const fetchedData = await fetchProposalsData();
                 const imageUrls = fetchedData
                     .map(({ image }) => image)
                     .filter((image): image is string => Boolean(image));
                 const refreshedDataWithoutCache = await checkInvalidImageUrlsAndRevalidate(
                     imageUrls,
-                    fetchInfraData,
-                    revalidateInfraAPI,
+                    fetchProposalsData,
+                    revalidateProposalsAPI,
                 );
                 // If there was some error in the cached fetched data which then needed to be revalidated
                 // and the revalidated data is available, then set the revalidated data
                 // else set the original fetched data
                 if (refreshedDataWithoutCache) {
-                    setDataInfraSlider(refreshedDataWithoutCache);
+                    setDataProposalSlider(refreshedDataWithoutCache);
                 } else {
-                    setDataInfraSlider(fetchedData);
+                    setDataProposalSlider(fetchedData);
                 }
             } catch (error) {
                 console.error(
-                    'Error fetching infra slider data from Airtable (FetchInfraSliderData):',
+                    'Error fetching proposals data from Airtable (FetchProposalsSliderData):',
                     error,
                 );
             } finally {
@@ -45,16 +47,16 @@ export function FetchInfraSliderData() {
         fetchData();
     }, []);
 
-    const fetchInfraData = async () => {
-        const res = await fetch('/api/infra?ignore-cache=true');
-        return (await res.json()) as CardShowcase[];
+    const fetchProposalsData = async () => {
+        const res = await fetch('/api/proposals?ignore-cache=true&type=proposalCards');
+        return (await res.json()) as ProposalCards[];
     };
 
-    return isLoading || !dataInfraSlider?.length ? (
-        <ChipsCarouselSkeleton />
+    return isLoading || !dataProposalsSlider?.length ? (
+        <ChipsCarouselSkeleton chipCount={2} />
     ) : (
         <div className="flex flex-col gap-12">
-            <InfraSlider data={dataInfraSlider} />
+            <ProposalsSliderData data={dataProposalsSlider} />
         </div>
     );
 }
