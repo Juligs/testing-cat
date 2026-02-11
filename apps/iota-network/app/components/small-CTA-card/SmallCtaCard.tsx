@@ -6,13 +6,20 @@ interface SmallCtaCardProps {
     subtitle: string;
     image: string;
     isFilled?: boolean;
+    hasSmallTitle?: boolean;
 }
 
-export function SmallCtaCard({ title, subtitle, image, isFilled }: SmallCtaCardProps): JSX.Element {
+export function SmallCtaCard({
+    title,
+    subtitle,
+    image,
+    isFilled,
+    hasSmallTitle,
+}: SmallCtaCardProps): JSX.Element {
     return (
         <div
             className={clsx(
-                'flex flex-col-reverse sm:flex-row w-full items-stretch overflow-hidden rounded-4xl ',
+                'flex flex-col-reverse sm:flex-row w-full sm:max-w-[708px] sm:h-[220px] overflow-hidden rounded-4xl',
                 isFilled
                     ? 'border-none bg-iota-neutral-96'
                     : 'border border-transparency-black-16 bg-none',
@@ -27,7 +34,7 @@ export function SmallCtaCard({ title, subtitle, image, isFilled }: SmallCtaCardP
                 <p
                     className={clsx(
                         'text-iota-neutral-10',
-                        isFilled ? 'text-title-md' : 'text-title-lg',
+                        hasSmallTitle ? 'text-title-md' : 'text-title-lg',
                     )}
                 >
                     {title}
@@ -35,13 +42,14 @@ export function SmallCtaCard({ title, subtitle, image, isFilled }: SmallCtaCardP
                 <p className="text-body-md text-iota-neutral-30">{subtitle}</p>
             </div>
 
-            <div className="block flex-1 aspect-video sm:w-1/2">
+            <div className="flex-1 aspect-video sm:flex-none sm:w-1/2 sm:h-full overflow-hidden">
                 <Image
                     src={image}
                     alt={title}
                     width={354}
-                    height={199.13}
-                    className="max-w-none  object-cover object-center h-full w-full rounded-4xl"
+                    height={199}
+                    sizes="(max-width: 640px) 100vw, 354px"
+                    className="w-full h-full object-cover object-center rounded-4xl"
                 />
             </div>
         </div>

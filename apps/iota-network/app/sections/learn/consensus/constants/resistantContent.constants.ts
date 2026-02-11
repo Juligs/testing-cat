@@ -1,13 +1,15 @@
-import { TitleTextSize } from 'react-ui-kit';
+import { HorizontalTitle, ImageCard, TitleTextSize } from 'react-ui-kit';
 
-export const RESISTANT_HORIZONTAL_TITLE = {
+export const RESISTANT_HORIZONTAL_TITLE: React.ComponentProps<typeof HorizontalTitle> = {
     title: 'Resistant Against External Threats',
     subtitle:
         'Best-in class security measures prevent ledger manipulation and attempts to disrupt the network',
-    size: TitleTextSize.Small,
+    size: TitleTextSize.ExtraSmall,
 };
 
-export const RESISTANT_IMAGE_CARD_CONTENT = [
+export const RESISTANT_IMAGE_CARD_CONTENT: (React.ComponentProps<typeof ImageCard> & {
+    link: string;
+})[] = [
     {
         title: 'Transaction Authentication',
         subtitle:

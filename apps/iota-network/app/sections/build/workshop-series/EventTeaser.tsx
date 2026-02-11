@@ -39,7 +39,7 @@ export function EventTeaser({ id, navbarColorScheme }: BaseSectionProps) {
                             rel={data.isExternal ? 'noopener noreferrer' : undefined}
                             aria-label={`Link to ${data.title}`}
                         >
-                            <SmallCtaCard {...data} isFilled />
+                            <SmallCtaCard {...data} isFilled hasSmallTitle />
                         </Link>
                     ))}
                 </div>

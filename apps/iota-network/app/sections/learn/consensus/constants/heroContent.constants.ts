@@ -1,3 +1,4 @@
+import { scrollToSection } from '@repo/shared/utils';
 import { HeroBackground, ScreenSize } from 'react-ui-kit';
 
 export const HERO_CONSENSUS_CONTENT = {
@@ -21,3 +22,13 @@ export const HERO_CONSENSUS_BG: React.ComponentProps<typeof HeroBackground> = {
         poster: 'https://files.iota.org/media/iota-network/consensus_hero_poster.jpg',
     },
 };
+export const HERO_CONSENSUS_ANCHORLINKS = [
+    {
+        text: 'Mainnet: Mysticeti (Live)',
+        onClick: () => scrollToSection('#mysticeti'),
+    },
+    {
+        text: 'Testnet: Starfish (Next)',
+        onClick: () => scrollToSection('#starfish'),
+    },
+];

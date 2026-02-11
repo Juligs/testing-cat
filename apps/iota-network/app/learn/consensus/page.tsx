@@ -2,11 +2,13 @@ import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import {
     HeroConsensus,
-    DynamicConsensus,
-    SafetyAndEfficiency,
+    Mysticeti,
     DecentralizedConsensus,
     Resistant,
     ConsensusMoretoExplore,
+    ConsensusOverview,
+    StarfishSection,
+    StarfishTesnet,
 } from '@sections';
 import {
     CONSENSUS_METADATA_TITLE,
@@ -30,10 +32,12 @@ export default function Home() {
     return (
         <>
             <HeroConsensus id="hero" navbarColorScheme="inverted" />
-            <DynamicConsensus id="dynamic-consensus" />
-            <SafetyAndEfficiency id="safety-and-efficiency" />
+            <ConsensusOverview id="overview" />
             <DecentralizedConsensus id="decentralized-consensus" />
+            <Mysticeti id="mysticeti" />
             <Resistant id="resistant" />
+            <StarfishTesnet id="starfish" />
+            <StarfishSection id="starfish-section" navbarColorScheme="inverted" />
             <ConsensusMoretoExplore id="more-to-explore" />
         </>
     );

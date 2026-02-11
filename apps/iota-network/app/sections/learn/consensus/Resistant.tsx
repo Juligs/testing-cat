@@ -14,6 +14,7 @@ export function Resistant({ id, navbarColorScheme }: BaseSectionProps) {
                         <Link
                             href={data.link}
                             key={index}
+                            className="[&>div]:h-full"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
