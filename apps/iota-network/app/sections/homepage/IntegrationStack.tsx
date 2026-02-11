@@ -25,13 +25,7 @@ export function IntegrationStack({ id, navbarColorScheme }: BaseSectionProps) {
                                     className="[&>div]:h-full"
                                     aria-label={`Link to ${data.title}`}
                                 >
-                                    <CtaCard
-                                        title={data.title}
-                                        subtitle={data.subtitle}
-                                        animation={data.animation}
-                                        brand
-                                        isVertical
-                                    ></CtaCard>
+                                    <CtaCard {...data} isVertical />
                                 </Link>
                             ))}
                         </div>
