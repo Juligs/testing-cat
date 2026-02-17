@@ -276,4 +276,9 @@ export const REDIRECTIONS = [
         destination: 'https://www.youtube.com/c/iotafoundation',
         permanent: true,
     },
+    {
+        source: '/iota-wallet-tos',
+        destination: 'https://iotadlt.foundation/iota-wallet-tos',
+        permanent: true,
+    },
 ];
