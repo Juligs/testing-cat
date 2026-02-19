@@ -8,6 +8,7 @@ import {
     SCREEN_PADDINGS,
     THEMED_CUSTOM_COLORS,
     FONT_FAMILIES,
+    themeVariants,
 } from './constants';
 import { addNotPlaceholderShown } from './plugins';
 import {
@@ -19,7 +20,7 @@ import { transparencyColorPalette } from '../../storybook/utils/transparencyColo
 
 export const BASE_CONFIG: Partial<Config> = {
     content: ['./src/**/*.{html,js,jsx,ts,tsx,md,mdx}'],
-    plugins: [addTailwindCustomTextClasses, addNotPlaceholderShown],
+    plugins: [addTailwindCustomTextClasses, addNotPlaceholderShown, themeVariants],
     theme: {
         screens: SCREENS,
         fontSize: {

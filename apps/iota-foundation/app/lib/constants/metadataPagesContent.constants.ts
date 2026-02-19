@@ -267,3 +267,24 @@ export const BRAND_LIBRARY_KEYWORDS = [
 ];
 export const BRAND_LIBRARY_URL = `${BASE_URL}/news/brand-library`;
 export const BRAND_LIBRARY_IMAGE = '/metadata/meta_image_brand_library.png';
+
+export const SUSTAINABILITY_METADATA_TITLE =
+    "Sustainability | Explore the IOTA Network's Sustainability";
+export const SUSTAINABILITY_METADATA_DESCRIPTION =
+    'IOTA delivers energy-efficient blockchain infrastructure with sustainability metrics aligned to EU MiCA regulations, minimizing carbon footprint while enabling scalable digital innovation.';
+export const SUSTAINABILITY_METADATA_DESCRIPTION_X =
+    'IOTA delivers energy-efficient blockchain infrastructure with sustainability metrics aligned to EU MiCA regulations, minimizing carbon footprint while enabling scalable digital innovation.';
+export const SUSTAINABILITY_KEYWORDS = [
+    'IOTA',
+    'Sustainability',
+    'Energy Efficiency',
+    'Green Blockchain',
+    'MiCA',
+    'Crypto Carbon Ratings Institute',
+    'Low Energy Consumption',
+    'Carbon Footprint',
+    'Eco-friendly DLT',
+    'Sustainable Crypto',
+];
+export const SUSTAINABILITY_URL = `${BASE_URL}/sustainability`;
+export const SUSTAINABILITY_IMAGE = '/metadata/meta_image_sustainability.png';

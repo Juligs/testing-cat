@@ -54,6 +54,16 @@ export const ROUTES: Route[] = [
         ],
     },
     {
+        title: 'Sustainability',
+        path: '/sustainability',
+        children: [
+            {
+                title: 'Sustainability',
+                path: 'sustainability',
+            },
+        ],
+    },
+    {
         title: 'Research',
         path: '/research',
         isExternal: true,

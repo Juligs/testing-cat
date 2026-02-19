@@ -4,3 +4,4 @@ export * from './regulatory-affairs';
 export * from './research';
 export * from './about';
 export * from './news';
+export * from './sustainability';

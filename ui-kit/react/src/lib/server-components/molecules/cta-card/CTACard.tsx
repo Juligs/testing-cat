@@ -126,7 +126,7 @@ export function CtaCard({
                 className={clsx(
                     'flex flex-col w-full h-full',
                     small ? 'gap-0' : 'gap-2 xs:gap-4',
-                    alignStart ? 'items-start' : 'items-center',
+                    alignStart ? 'items-start text-center xs:text-start' : 'items-center',
                     isVertical ? 'sm:w-full' : 'sm:w-1/2',
                     aspectVideo ? 'pt-0 pb-8 sm:py-8' : 'py-8',
                     small ? 'pt-8 pb-12 pr-4 pl-8' : PADDING_SIZE,

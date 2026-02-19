@@ -9,6 +9,7 @@
         "IOTA_NETWORK_INDEXER_URL",
         "IOTA_PRICE_URL",
         "GOOGLE_SHEETS_API_KEY",
+        "MICA_API_URL",
         "IOTA_NETWORK_BLOG_KEY",
         "IOTA_NETWORK_BLOG_URL",
         "IOTALABS_BLOG_KEY",

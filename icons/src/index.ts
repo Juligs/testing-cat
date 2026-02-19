@@ -169,3 +169,5 @@ export { default as TrustHierarchies } from './TrustHierarchies';
 export { default as Reward } from './Reward';
 export { default as Frame } from './Frame';
 export { default as Copy } from './Copy';
+export { default as Electricity } from './Electricity';
+export { default as Emissions } from './Emissions';
