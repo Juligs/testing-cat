@@ -4,6 +4,6 @@ export { EnergyEfficiency } from './EnergyEfficiency';
 export { HistoricalData } from './HistoricalData';
 export { ComparisonOfElectricity } from './ComparisonOfElectricity';
 export { GlossaryMica } from './GlossaryMica';
-export { HighlightedHeroOverview } from './HighlightedHeroOverview';
+export { CCRI } from './CCRI';
 export { CollectedDataPoints } from './CollectedDataPoints';
 export { MoreToExploreSustainability } from './MoreToExploreSustainability';

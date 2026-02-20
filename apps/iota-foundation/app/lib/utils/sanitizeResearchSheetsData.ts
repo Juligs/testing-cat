@@ -9,7 +9,10 @@ export interface PaperData {
     abstract?: string;
     award?: string;
 }
-export function sanitizeSheetData(rows: (string | undefined)[][], sheet: string): PaperData[] {
+export function sanitizeResearchSheetsData(
+    rows: (string | undefined)[][],
+    sheet: string,
+): PaperData[] {
     if (!Array.isArray(rows) || rows.length < 2) {
         console.log(`No data found or invalid format in sheet: ${sheet}`);
         return [];

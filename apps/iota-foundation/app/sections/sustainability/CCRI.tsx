@@ -7,7 +7,7 @@ export const HIGHLIGHTED_TEXT = {
         'CCRI is a leading data provider for cryptocurrency sustainability metrics. CCRI evaluates the sustainability metrics of the IOTA Ecosystem since 2024 and deploys industry-leading measurement methodologies for its metrics generation. In the context of the Markets in Crypto-Asset (MiCA) Regulation, sustainability data gain increasingly importance.',
 };
 
-export function HighlightedHeroOverview({ id, navbarColorScheme }: BaseSectionProps) {
+export function CCRI({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-12 xs:py-20">

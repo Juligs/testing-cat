@@ -1,9 +1,7 @@
 import { google } from 'googleapis';
-import { sanitizeSheetData } from './sanitizeSheetsData';
-
-const SPREADSHEET_ID = '1FUwmeJylloLgVzs4fGg6_gbUynKFY3IwdqTzTj6KNas';
 
 let sheets: ReturnType<typeof google.sheets> | null = null;
+export type SanitizeFunction<T> = (rows: (string | undefined)[][], sheet: string) => T[];
 
 function getSheets() {
     if (!sheets) {
@@ -26,18 +24,16 @@ function getSheets() {
     return sheets;
 }
 
-async function fetchSheetData(sheet: string) {
+export async function fetchSheetData<T>(
+    spreadsheetId: string,
+    sheet: string,
+    sanitizeFn: SanitizeFunction<T>,
+): Promise<T[]> {
     const res = await getSheets().spreadsheets.values.get({
-        spreadsheetId: SPREADSHEET_ID,
+        spreadsheetId,
         range: sheet,
     });
 
-    return sanitizeSheetData(res.data.values ?? [], sheet);
-}
-
-export async function fetchResearchPapers() {
-    return Promise.all([
-        fetchSheetData('COORDICIDE PAPERS'),
-        fetchSheetData('PRE-COORDICIDE PAPERS'),
-    ]);
+    const rows = res.data.values ?? [];
+    return sanitizeFn(rows, sheet);
 }

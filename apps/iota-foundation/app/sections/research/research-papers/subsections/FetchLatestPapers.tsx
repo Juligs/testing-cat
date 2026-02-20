@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { PaperData } from '@lib/utils';
 import { PapersLayout } from './PapersLayout';
-import { PapersSkeleton } from '../components';
+import { PapersSkeleton } from '@components';
 
 export function FetchLatestPapers() {
     const [data, setData] = useState<PaperData[]>([]);

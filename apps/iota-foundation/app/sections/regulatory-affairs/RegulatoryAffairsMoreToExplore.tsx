@@ -8,6 +8,7 @@ export function RegulatoryAffairsMoreToExplore({ id, navbarColorScheme }: BaseSe
             <MoreToExplore
                 content={REGULATORY_AFFAIRS_MORE_TO_EXPLORE_CONTENT}
                 text="More to Explore"
+                hasSmallPadding
             />
         </section>
     );

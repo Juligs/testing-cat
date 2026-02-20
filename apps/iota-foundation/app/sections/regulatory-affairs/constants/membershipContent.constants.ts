@@ -1,9 +1,11 @@
-import { TitleTextSize } from 'react-ui-kit';
+import React from 'react';
+import { CtaCard } from 'react-ui-kit';
 
-export const MEMBERSHIP_HORIZONTAL_TITLE = {
+export const MEMBERSHIP_CTA_CARD: React.ComponentProps<typeof CtaCard> = {
     title: 'Memberships & Working Groups',
-    body: 'The IOTA Foundation is a member of several international working groups that empower the ecosystem, develop new business models, and advocate for the industry.',
-    size: TitleTextSize.Medium,
+    subtitle:
+        'The IOTA Foundation is a member of several international working groups that empower the ecosystem, develop new business models, and advocate for the industry.',
+    image: '/regulatory-affairs/memberships.png',
 };
 
 export const MEMBERSHIP_ICON_CONTENT = [
@@ -14,7 +16,7 @@ export const MEMBERSHIP_ICON_CONTENT = [
     },
     {
         title: 'INATBA',
-        body: 'The International Association of Trusted Blockchain Applications is a European Commission-hosted group working to identify the right conditions for DLT to thrive.',
+        body: 'The International Association of Trusted Blockchain Applications is hosted by the European Commission.',
         link: 'https://inatba.org',
     },
     {

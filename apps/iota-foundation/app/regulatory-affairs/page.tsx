@@ -10,11 +10,12 @@ import {
 import {
     RegulatoryAffairsHero,
     RegulatoryHighlightedHeroText,
-    EmpoweringDLT,
-    IntegrationStack,
+    RegulatoryCompliance,
+    SustainabilityData,
     Membership,
     Latest,
     RegulatoryAffairsMoreToExplore,
+    Consultation,
 } from '@sections';
 
 import type { Metadata } from 'next';
@@ -35,10 +36,11 @@ export default function Home() {
         <>
             <RegulatoryAffairsHero id="hero" />
             <RegulatoryHighlightedHeroText id="highlighted-hero-text" />
-            <EmpoweringDLT id="empowering-dlt" />
-            <IntegrationStack id="integration-stack" />
-            <Membership id="memberships" />
+            <RegulatoryCompliance id="regulatory-compliance" />
+            <SustainabilityData id="sustainability" />
+            <Consultation id="consultation" />
             <Latest id="latest" />
+            <Membership id="memberships" />
             <RegulatoryAffairsMoreToExplore id="more-to-explore" />
             <ContactUs id="contact" />
         </>

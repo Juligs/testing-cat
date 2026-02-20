@@ -9,12 +9,12 @@ import {
     SUSTAINABILITY_URL,
 } from '@lib/constants';
 import {
+    CCRI,
     CollectedDataPoints,
     ComparisonOfElectricity,
     EnergyEfficiency,
     GlossaryMica,
     HeroSustainabilityFoundation,
-    HighlightedHeroOverview,
     HistoricalData,
     MoreToExploreSustainability,
     SustainabilityOverview,
@@ -39,7 +39,7 @@ export default function Home() {
             <ComparisonOfElectricity id="comparison-of-electricity" />
             <HistoricalData id="historical-data" />
             <GlossaryMica id="glossary-mica" />
-            <HighlightedHeroOverview id="highlighted-hero-overview" />
+            <CCRI id="ccri" />
             <CollectedDataPoints id="collected-data-points" />
             <MoreToExploreSustainability id="more-to-explore" />
             <ContactUs id="contact-us" />
