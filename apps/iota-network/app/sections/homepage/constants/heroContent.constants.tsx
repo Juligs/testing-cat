@@ -13,11 +13,10 @@ export const HERO_HOMEPAGE_CONTENT = {
 export const HERO_HOMEPAGE_BUTTON = [
     {
         text: 'Get started',
-        link: 'https://docs.iota.org/developer/getting-started',
+        link: '/build/get-started',
         variant: ButtonVariant.Primary,
         icon: <ArrowTopRight />,
         inverted: true,
-        isExternal: true,
     },
     {
         text: 'What is IOTA?',

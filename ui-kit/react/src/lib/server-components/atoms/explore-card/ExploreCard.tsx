@@ -68,7 +68,7 @@ export function ExploreCard({
             >
                 {overline ? (
                     <>
-                        <div className="flex flex-col w-full">
+                        <div className="flex flex-row-reverse w-full justify-between">
                             <ArrowTopRight className="self-end w-8 h-8 transform transition-transform ease-in duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                             <p className="text-label-md self-start text-iota-neutral-50">
                                 {overline}

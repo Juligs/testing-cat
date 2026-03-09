@@ -1,5 +1,6 @@
 import { ContactUsWithIcons } from '@components/contact-us-with-icons';
 import { Discord, Telegram, XSocialIcon } from '@repo/icons';
+import clsx from 'clsx';
 import Link from 'next/link';
 import { ExploreCard } from 'react-ui-kit';
 
@@ -8,11 +9,20 @@ interface ExploreMoreAreasProps {
         link: string;
         isExternal?: boolean;
     })[];
+    hasSmallPadding?: boolean;
 }
 
-export function ExploreMoreAreas({ content }: React.PropsWithChildren<ExploreMoreAreasProps>) {
+export function ExploreMoreAreas({
+    content,
+    hasSmallPadding,
+}: React.PropsWithChildren<ExploreMoreAreasProps>) {
     return (
-        <div className="container grid gap-6 grid-cols-1 md:grid-cols-2 py-14 xs:py-20 lg:py-30">
+        <div
+            className={clsx(
+                'container grid gap-6 grid-cols-1 md:grid-cols-2',
+                hasSmallPadding ? 'py-12' : 'py-14 xs:py-20 lg:py-30',
+            )}
+        >
             <ContactUsWithIcons
                 title="Any questions? We're here to help"
                 overline="Contact Us"

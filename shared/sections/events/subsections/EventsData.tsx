@@ -17,9 +17,10 @@ import clsx from 'clsx';
 interface EventsProps {
     data: EventsCards[];
     isFeatured?: boolean;
+    inverted?: boolean;
 }
 
-export function EventsData({ data, isFeatured }: EventsProps) {
+export function EventsData({ data, isFeatured, inverted }: EventsProps) {
     const baseCards = isFeatured ? getFeaturedEvents(data) : data;
     const sortedDataByDate = sortEventsByDate(baseCards);
     const uniqueCardCategories = [
@@ -88,10 +89,11 @@ export function EventsData({ data, isFeatured }: EventsProps) {
                         }
                         image={card.image}
                         isHoverable={!!card.link}
+                        inverted={inverted}
                     >
                         <div className="flex flex-wrap gap-2 mt-2">
                             {categories.map((data, index) => (
-                                <Badge key={index} label={data} />
+                                <Badge key={index} label={data} inverted={inverted} />
                             ))}
                         </div>
                     </ImageCard>
@@ -114,6 +116,7 @@ export function EventsData({ data, isFeatured }: EventsProps) {
                             size={ChipSize.Large}
                             onClick={() => handleCategoryClick(category)}
                             selected={selectedCategory === category}
+                            inverted={inverted}
                         />
                     ))}
                 </div>
@@ -141,11 +144,12 @@ export function EventsData({ data, isFeatured }: EventsProps) {
                             }
                             image={card.image}
                             isHoverable={!card.link ? false : undefined}
+                            inverted={inverted}
                         >
                             {!isSimplifiedLayout && categories.length > 0 && (
                                 <div className="flex flex-wrap gap-2 mt-2">
                                     {categories.map((data, index) => (
-                                        <Badge key={index} label={data} />
+                                        <Badge key={index} label={data} inverted={inverted} />
                                     ))}
                                 </div>
                             )}

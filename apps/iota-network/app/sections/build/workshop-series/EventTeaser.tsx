@@ -25,7 +25,7 @@ export function EventTeaser({ id, navbarColorScheme }: BaseSectionProps) {
                         </VerticalTitle>
                     </div>
                     <div className="sm:max-w-[708px]">
-                        <FetchEventsDataCards useFeatured />
+                        <FetchEventsDataCards isFeatured />
                     </div>
                 </div>
                 <Separator />

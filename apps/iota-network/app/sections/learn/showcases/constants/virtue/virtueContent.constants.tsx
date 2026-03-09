@@ -106,7 +106,7 @@ export const SHOWCASE_VIRTUE: ShowcasePage = {
     category: ShowcaseCategory.RealWorldAdoption,
     card: {
         title: 'Virtue',
-        subtitle: 'Rise Above Financial Barriers With Virtue',
+        subtitle: 'Rise above financial barriers',
         image: '/learn/showcases/explore-more/virtue.png',
         category: ['Decentralized Finance'],
     },

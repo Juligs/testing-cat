@@ -2,6 +2,7 @@
 import {
     CardShowcase,
     checkInvalidImageUrlsAndRevalidate,
+    PROJECT_VIEWS,
     revalidateProjectsAPI,
 } from '@repo/shared/utils';
 import { useEffect, useState } from 'react';
@@ -45,7 +46,7 @@ export function FetchProjectsFullData() {
         const res = await fetch(
             `/api/projects?${new URLSearchParams({
                 'ignore-cache': 'true',
-                view: 'IOTA Projects',
+                view: PROJECT_VIEWS.IOTA_PROJECTS,
             }).toString()}`,
         );
         return (await res.json()) as CardShowcase[];

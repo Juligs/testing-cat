@@ -17,7 +17,7 @@ interface DisplayStatsProps {
     /**
      * label of the stats
      */
-    label: string;
+    label?: string;
     /**
      * value of the stats
      */
@@ -112,9 +112,12 @@ export function DisplayStats({
     return icon ? (
         <div className={clsx('flex flex-row justify-between p-6 ', wrapperBaseClasses, iconLayout)}>
             <div className={contentClasses}>
-                <p className={clsx('text-label-sm', size === CardSize.Small ? 'pb-3' : '')}>
-                    {label}
-                </p>
+                {label && (
+                    <p className={clsx('text-label-sm', size === CardSize.Small ? 'pb-3' : '')}>
+                        {label}
+                    </p>
+                )}
+
                 <div className={clsx('flex gap-1', lineNumberLayout)}>
                     <p className={clsx(VALUE_TEXT_SIZE[textSize], valueColor)}>{value}</p>
                     {supportingText && (

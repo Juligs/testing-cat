@@ -14,7 +14,7 @@ export const EVENT_TEASER_CTA_CONTENT = [
         isExternal: false,
     },
     {
-        image: '/build/workshop-series/event-teaser/discord.png',
+        image: '/shared/discord.png',
         title: 'Join Our Builder  Discord',
         subtitle: 'Collaborate with builders and innovators worldwide.',
         link: 'https://discord.com/invite/iota-builders',

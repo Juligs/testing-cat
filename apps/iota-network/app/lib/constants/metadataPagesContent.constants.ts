@@ -556,3 +556,29 @@ export const WORKSHOP_SERIES_KEYWORDS = [
 ];
 export const WORKSHOP_SERIES_URL = `${BASE_URL}/build/workshop-series`;
 export const WORKSHOP_SERIES_IMAGE = '/metadata/meta_image_workshop-series.png';
+
+export const GET_STARTED_METADATA_TITLE =
+    'Get Started with IOTA | Build. Connect. Grow. Powered by IOTA';
+export const GET_STARTED_METADATA_DESCRIPTION =
+    'The perfect starting point to tap into the tools, support, and community to build and use what’s next.';
+export const GET_STARTED_METADATA_DESCRIPTION_X = GET_STARTED_METADATA_DESCRIPTION;
+export const GET_STARTED_KEYWORDS = [
+    'IOTA Get Started',
+    'IOTA Builders',
+    'Web3 Projects',
+    'Grants',
+    'Builder Tools',
+    'Support',
+    'IOTA Workshop',
+    'Ecosystem',
+    'Infrastructure',
+    'Wallets',
+    'Explorer',
+    'Staking',
+    'Real-world adoption',
+    'Documentation',
+    'Tokenomics',
+    'Exchanges',
+];
+export const GET_STARTED_URL = `${BASE_URL}/build/get-started`;
+export const GET_STARTED_IMAGE = '/metadata/meta_image_get-started.png';

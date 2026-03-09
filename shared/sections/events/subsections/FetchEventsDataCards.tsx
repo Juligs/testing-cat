@@ -8,7 +8,11 @@ import { SliderImageCardSkeleton } from '../../../components';
 import { useEffect, useState } from 'react';
 import { EventsData } from './EventsData';
 
-export function FetchEventsDataCards({ useFeatured }: { useFeatured?: boolean }) {
+interface FetchEventsDataCardsProps {
+    isFeatured?: boolean;
+    inverted?: boolean;
+}
+export function FetchEventsDataCards({ isFeatured, inverted }: FetchEventsDataCardsProps) {
     const [dataEvents, setDataEvents] = useState<EventsCards[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -48,7 +52,7 @@ export function FetchEventsDataCards({ useFeatured }: { useFeatured?: boolean })
     }
     return (
         <div className="flex flex-col gap-12">
-            <EventsData data={dataEvents} isFeatured={useFeatured} />
+            <EventsData data={dataEvents} isFeatured={isFeatured} inverted={inverted} />
         </div>
     );
 }

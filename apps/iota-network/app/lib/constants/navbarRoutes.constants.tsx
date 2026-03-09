@@ -359,6 +359,10 @@ export const items: NavbarGroupItem[] = [
                                 title: 'IOTA Workshop Series',
                                 href: '/build/workshop-series',
                             },
+                            {
+                                title: 'Get Started',
+                                href: '/build/get-started',
+                            },
                         ],
                     },
                     {

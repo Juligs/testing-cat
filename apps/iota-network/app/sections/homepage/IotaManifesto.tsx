@@ -34,8 +34,8 @@ export function IotaManifesto({ id, navbarColorScheme }: BaseSectionProps) {
                     {IOTA_MANIFESTO_CTA_CARD_CONTENT.map((data, index) => (
                         <Link
                             href={data.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target={data.isExternal ? '_blank' : undefined}
+                            rel={data.isExternal ? 'noopener noreferrer' : undefined}
                             className="[&>div]:h-full"
                             key={index}
                             aria-label={`Link to ${data.title}`}

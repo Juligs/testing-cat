@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Link from 'next/link';
-import { VerticalTitle, Actions, TextLink, TitleTextSize } from 'react-ui-kit';
+import { VerticalTitle, Actions, TextLink, TitleTextSize, HorizontalTitle } from 'react-ui-kit';
 import { ShowcaseProject } from './showcasesProjects.enums';
 import { SHOWCASES } from './constants/showcasesContent.constants';
 import { SmallCtaCard } from '@components/small-CTA-card/SmallCtaCard';
@@ -14,6 +14,7 @@ type IotaTechnologyStackProps = BaseSectionProps & {
     hasBackgroundColor?: boolean;
     showSeeAllLink?: boolean;
     isLarge?: boolean;
+    hasHorizontalTitle?: boolean;
 };
 
 export function IotaTechnologyStack({
@@ -24,6 +25,8 @@ export function IotaTechnologyStack({
     hasBackgroundColor,
     showSeeAllLink,
     isLarge,
+    hasHorizontalTitle,
+
     id,
     navbarColorScheme,
 }: IotaTechnologyStackProps) {
@@ -48,19 +51,27 @@ export function IotaTechnologyStack({
                         : 'gap-6 xs:gap-12 py-10 xs:py-16 lg:py-20',
                 )}
             >
-                <VerticalTitle
-                    title={title}
-                    size={TitleTextSize.ExtraSmall}
-                    isCentered={isTitleCentered}
-                >
-                    {showLearnMoreLink && (
-                        <Actions>
-                            <Link href="/learn/showcases" aria-label="Go to the Showcases page">
-                                <TextLink text="Learn more" showIcon />
-                            </Link>
-                        </Actions>
-                    )}
-                </VerticalTitle>
+                {hasHorizontalTitle ? (
+                    <HorizontalTitle title={title} size={TitleTextSize.ExtraSmall}>
+                        <Link href="/learn/showcases" aria-label="See all showcases">
+                            <TextLink text="See All Showcase" showIcon />
+                        </Link>
+                    </HorizontalTitle>
+                ) : (
+                    <VerticalTitle
+                        title={title}
+                        size={TitleTextSize.ExtraSmall}
+                        isCentered={isTitleCentered}
+                    >
+                        {showLearnMoreLink && (
+                            <Actions>
+                                <Link href="/learn/showcases" aria-label="Go to the Showcases page">
+                                    <TextLink text="Learn more" showIcon />
+                                </Link>
+                            </Actions>
+                        )}
+                    </VerticalTitle>
+                )}
 
                 <div className="gap-6 grid grid-cols-1 xs:grid-cols-2">
                     {showcaseCards.map((item, index) => (

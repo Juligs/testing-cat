@@ -6,6 +6,7 @@ import {
 } from '@repo/shared/utils';
 import { useEffect, useState } from 'react';
 import { SliderImageCardSkeleton } from '@repo/shared/components';
+import { PROJECT_VIEWS } from '@repo/shared/utils';
 import { ProjectsSlider } from './ProjectsSlider';
 
 export function FetchProjectsSlider() {
@@ -49,7 +50,7 @@ export function FetchProjectsSlider() {
         const res = await fetch(
             `/api/projects?${new URLSearchParams({
                 'ignore-cache': 'true',
-                view: 'IOTA Projects',
+                view: PROJECT_VIEWS.IOTA_PROJECTS,
                 useWebsitePosition: 'true',
             }).toString()}`,
         );

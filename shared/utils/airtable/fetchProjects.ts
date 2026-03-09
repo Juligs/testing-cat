@@ -1,8 +1,15 @@
 import { getDataFromAirtable, sanitizeEcosystemProjectsData, type CardShowcase } from '../../utils';
 
 const PROJECTS_AIRTABLE_BASE_NAME = 'Accounts';
-const DEFAULT_VIEW = 'iotalabs projects';
-const IOTA_PROJECTS_VIEW = 'IOTA Projects';
+export const PROJECT_VIEWS = {
+    DEFAULT: 'iotalabs projects',
+    IOTA_PROJECTS: 'IOTA Projects',
+    IOTA_INFRA: 'IOTA Infra',
+} as const;
+
+const DEFAULT_VIEW = PROJECT_VIEWS.DEFAULT;
+export const IOTA_PROJECTS_VIEW = PROJECT_VIEWS.IOTA_PROJECTS;
+export const IOTA_INFRA_VIEW = PROJECT_VIEWS.IOTA_INFRA;
 
 export const fetchProjects = async ({
     view,
@@ -31,14 +38,15 @@ export const fetchProjects = async ({
             requireWebsitePosition: useWebsitePosition,
         });
     } catch (error) {
-        if (selectedView !== IOTA_PROJECTS_VIEW) {
+        console.error(`Error loading view: ${selectedView}`, error);
+
+        if (selectedView !== PROJECT_VIEWS.IOTA_PROJECTS) {
             return fetchProjects({
-                view: IOTA_PROJECTS_VIEW,
+                view: PROJECT_VIEWS.IOTA_PROJECTS,
                 useWebsitePosition,
             });
         }
 
-        console.error('Error in fetchProjects:', error);
         return [];
     }
 };

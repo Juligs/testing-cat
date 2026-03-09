@@ -35,7 +35,7 @@ export const LEARN_BUILD_BUTTONS: ButtonsContent[] = [
 
 export const LEARN_BUILD_CTA_CONTENT: LearnBuildCtaItem[] = [
     {
-        image: '/build/workshop-series/event-teaser/community_events.png',
+        image: '/shared/community_events.png',
         title: 'Attend Community Events',
         subtitle: 'Take part in IOTA workshops, hackathons, and meetups.',
         link: '/connect/events',
