@@ -1,4 +1,5 @@
-export const BASE_URL = 'https://www.iota.org';
+const vercelUrl = process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL;
+export const BASE_URL = `https://${vercelUrl || 'www.iota.org'}`;
 
 export const HOMEPAGE_METADATA_TITLE = 'IOTA | Built to Make a Difference';
 export const HOMEPAGE_METADATA_DESCRIPTION =

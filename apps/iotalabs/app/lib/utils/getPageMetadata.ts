@@ -1,4 +1,5 @@
-const BASE_URL = 'https://iotalabs.io';
+const vercelUrl = process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL;
+const BASE_URL = `https://${vercelUrl || 'iotalabs.io'}`;
 const METADATA_SITE_NAME = 'iotalabs';
 const METADATA_IMAGE_FALLBACK = `${BASE_URL}/meta_image.png`;
 

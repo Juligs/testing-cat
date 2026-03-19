@@ -1,4 +1,5 @@
-export const BASE_URL = 'https://iota-foundation.org';
+const vercelUrl = process.env.VERCEL_URL || process.env.NEXT_PUBLIC_VERCEL_URL;
+export const BASE_URL = `https://${vercelUrl || 'iota-foundation.org'}`;
 
 export const HOMEPAGE_METADATA_TITLE =
     'IOTA Foundation | Driving Innovation with Distributed Ledger Technology';
