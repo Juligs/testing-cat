@@ -16,7 +16,7 @@ export function BalancedSystem({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://docs.iota.org/about-iota/tokenomics/"
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Go to the documentation"
                                 >
                                     <Button text="Learn more" icon={<ArrowTopRight />} />
@@ -32,7 +32,7 @@ export function BalancedSystem({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href={data.link}
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label={`Learn more about ${data.title}`}
                                 >
                                     <TextLink text="Learn More" showIcon />

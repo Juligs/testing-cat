@@ -17,7 +17,7 @@ export function WhatIsSupported({ id, navbarColorScheme }: BaseSectionProps) {
                         <Link
                             href="https://airtable.com/appoUvqpIo5bkDoSO/pag16jQChVVMh3zyh/form?ref=blog.iota.org"
                             target="_blank"
-                            rel="nopener noreferrer"
+                            rel="noopener noreferrer"
                             aria-label="Go to the form"
                         >
                             <Button text="Apply now" icon={<ArrowTopRight />} />
@@ -33,7 +33,7 @@ export function WhatIsSupported({ id, navbarColorScheme }: BaseSectionProps) {
                             <Link
                                 href="https://iotalabs.io/grants"
                                 target="_blank"
-                                rel="nopener noreferrer"
+                                rel="noopener noreferrer"
                                 aria-label="Go to the website"
                             >
                                 <TextLink text="IOTA Grants" showIcon />

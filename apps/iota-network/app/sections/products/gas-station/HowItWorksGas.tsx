@@ -16,8 +16,8 @@ export function HowItWorksGas({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://docs.iota.org/operator/gas-station/architecture/"
                                     target="_blank"
-                                    rel="nopener noreferrer"
-                                    aria-label="Go to the documentarion"
+                                    rel="noopener noreferrer"
+                                    aria-label="Go to the documentation"
                                 >
                                     <Button text="Learn more" icon={<ArrowTopRight />} />
                                 </Link>

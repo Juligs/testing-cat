@@ -16,7 +16,7 @@ export function CombiningDAG({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://docs.iota.org/developer/getting-started/"
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Go to the documentation"
                                 >
                                     <Button text="Get started" icon={<ArrowTopRight />} />

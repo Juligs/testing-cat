@@ -12,7 +12,7 @@ export function CryptoPlatforms({ id, navbarColorScheme }: BaseSectionProps) {
                     {CRYPTO_PLATFORMS_IMAGE_CARD_CONTENT.map((data, index) => (
                         <ImageCard key={index} {...data} size={ImageCardSize.Small}>
                             <Actions>
-                                <Link href={data.link} target="_blak">
+                                <Link href={data.link} target="_blank">
                                     <TextLink text="Learn more" showIcon />
                                 </Link>
                             </Actions>

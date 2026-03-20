@@ -1,27 +1,12 @@
-import { scrollToSection } from '@repo/shared/utils';
-import { HeroBackground, ScreenSize, TitleTextSize } from 'react-ui-kit';
+import { HeroBackground, ScreenSize, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 
-export const HERO_BUSINESS_CONTENT = {
+export const HERO_BUSINESS_CONTENT: React.ComponentProps<typeof VerticalTitle> = {
     title: 'IOTA Business Innovation Program',
-    subtitle: 'Technical and financial support for real-world impact',
+    subtitle: 'Outcomes, deployments, and product learnings from the first cohort',
+    body: 'The program is now concluded. The seven funded projects are active in the field and continue to drive adoption on IOTA.',
     inverted: true,
     size: TitleTextSize.Medium,
 };
-
-export const HERO_BUSINESS_ANCHORLINKS = [
-    {
-        text: 'Our Decision Framework',
-        onClick: () => scrollToSection('#our-decision-framework'),
-    },
-    {
-        text: "What We're Looking For",
-        onClick: () => scrollToSection('#what-is-supported'),
-    },
-    {
-        text: 'How to Apply',
-        onClick: () => scrollToSection('#how-to-apply'),
-    },
-];
 
 export const HERO_BUSINESS_BG: React.ComponentProps<typeof HeroBackground> = {
     mediaType: 'video',

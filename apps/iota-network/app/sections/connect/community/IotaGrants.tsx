@@ -21,7 +21,7 @@ export function IotaGrants({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href={IOTA_GRANTS_VERTICAL_TITLE.link}
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Go to the Iota Grants page"
                                 >
                                     <Button text="Learn more" icon={<ArrowTopRight />} inverted />

@@ -17,8 +17,8 @@ export function BoostYourReturns({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://docs.iota.org/about-iota/iota-architecture/staking-rewards"
                                     aria-label="Go to the documentation"
-                                    target="_blak"
-                                    rel="nopener noreferrer"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <Button
                                         variant={ButtonVariant.Primary}

@@ -4,14 +4,12 @@ import {
     BusinessInnovationHero,
     BusinessInnovationOverview,
     ProjectFunding,
+    ProjectOutcome,
     FirstParticipants,
-    OurDecisionFramework,
-    WhatIsSupported,
-    HowToApply,
-    JoinUsInBuildingCTA,
     BusinessInnovationMoreToExplore,
+    BuildWithPurpose,
+    IntegrationFeedback,
 } from '@sections';
-import { ContactUs } from '@repo/shared/sections';
 import {
     BUSINESS_INNOVATION_PROGRAM_METADATA_TITLE,
     BUSINESS_INNOVATION_PROGRAM_METADATA_DESCRIPTION_X,
@@ -20,6 +18,7 @@ import {
     BUSINESS_INNOVATION_PROGRAM_IMAGE,
     BUSINESS_INNOVATION_PROGRAM_URL,
 } from '@lib/constants';
+
 export const metadata: Metadata = getPageMetadata({
     title: BUSINESS_INNOVATION_PROGRAM_METADATA_TITLE,
     description: BUSINESS_INNOVATION_PROGRAM_METADATA_DESCRIPTION,
@@ -37,11 +36,9 @@ export default function Home() {
             <BusinessInnovationOverview id="business-innovation-overview" />
             <ProjectFunding id="project-funding" />
             <FirstParticipants id="first-participants" />
-            <OurDecisionFramework id="our-decision-framework" />
-            <WhatIsSupported id="what-is-supported" />
-            <HowToApply id="how-to-apply" />
-            <JoinUsInBuildingCTA id="join-us-in-building" navbarColorScheme="inverted" />
-            <ContactUs id="contact" />
+            <ProjectOutcome id="project-outcome" />
+            <IntegrationFeedback id="integration-feedback" />
+            <BuildWithPurpose className="container w-full" id="build-with-purpose" />
             <BusinessInnovationMoreToExplore id="more-to-explore" />
         </>
     );

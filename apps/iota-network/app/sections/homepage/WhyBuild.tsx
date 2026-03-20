@@ -93,7 +93,7 @@ export function WhyBuild({ id, navbarColorScheme }: BaseSectionProps) {
                                 key={index}
                                 href={data.link}
                                 target={data.isExternal ? '_blank' : undefined}
-                                rel={data.isExternal ? 'nopener noreferrer' : undefined}
+                                rel={data.isExternal ? 'noopener noreferrer' : undefined}
                                 aria-label={`Link to ${data.text}`}
                             >
                                 <TextLink text={data.text} showIcon inverted />

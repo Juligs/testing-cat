@@ -14,8 +14,6 @@ import {
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import {
     SEEKING_CTA_CONTENT,
-    BUILD_PURPOSE_VERTICAL_TITLE,
-    BUILD_PURPOSE_IMAGE_CARD_CONTENT,
     CONNECT_VERTICAL_TITLE,
     CONNECT_CTA_CONTENT,
     CONTRIBUTE_IMAGE_CARD_CONTENT,
@@ -27,6 +25,7 @@ import { ArrowTopRight } from '@repo/icons';
 import { FetchEventsDataCards } from '@repo/shared/sections/events/subsections';
 import clsx from 'clsx';
 import { FetchGrantsStatsDataGetStarted } from './subsections/FetchGrantsStatsDataGetStarted';
+import { BuildWithPurpose } from './BuildWithPurpose';
 
 export function SeekingBold({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -65,25 +64,7 @@ export function SeekingBold({ id, navbarColorScheme }: BaseSectionProps) {
                         ),
                     )}
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-6">
-                    <div className="max-w-[464px]">
-                        <VerticalTitle {...BUILD_PURPOSE_VERTICAL_TITLE} inverted />
-                    </div>
-                    <div className="grid grid-cols-1 xs:grid-cols-2 gap-6">
-                        {BUILD_PURPOSE_IMAGE_CARD_CONTENT.map((data, index) => (
-                            <Link
-                                href={data.link}
-                                key={index}
-                                aria-label={`Link to ${data.title}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="[&>div]:h-full"
-                            >
-                                <ImageCard {...data} inverted size={ImageCardSize.Small} />
-                            </Link>
-                        ))}
-                    </div>
-                </div>
+                <BuildWithPurpose inverted />
                 <div className="flex flex-col gap-10 sm:gap-0 sm:flex-row sm:justify-between w-full items-center">
                     <div className="sm:max-w-[464px]">
                         <VerticalTitle {...CONNECT_VERTICAL_TITLE} inverted>

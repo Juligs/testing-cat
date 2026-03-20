@@ -19,7 +19,7 @@ export function GrantsSupportedInitiatives({ id, navbarColorScheme }: BaseSectio
                                 <Link
                                     href={SUPPORTED_INITIATIVES_VERTICAL_TITLE.link}
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Go to the Iota Grants page"
                                 >
                                     <Button text="Learn more" icon={<ArrowTopRight />} />

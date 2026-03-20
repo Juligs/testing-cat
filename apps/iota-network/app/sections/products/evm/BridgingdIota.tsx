@@ -16,7 +16,7 @@ export function BridgingIota({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://stargate.finance/bridge"
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Go to the page"
                                 >
                                     <Button text="Bridge" icon={<ArrowTopRight />} />

@@ -23,7 +23,7 @@ export function Unlock({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://docs.iota.org/iota-evm/how-tos/core-contracts/introduction"
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Go to the documentation"
                                 >
                                     <Button text="View docs" icon={<ArrowTopRight />} />

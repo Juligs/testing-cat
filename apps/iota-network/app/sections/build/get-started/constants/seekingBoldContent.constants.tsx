@@ -79,18 +79,50 @@ export const CONNECT_CTA_CONTENT: (React.ComponentProps<typeof SmallCtaCard> & {
     },
 ];
 
+const CONTRIBUTE_TO_DOCS_TEXTS = {
+    title: 'Contribute to the docs',
+    subtitle: 'Help improving the documentation or create learning resources',
+    link: 'https://docs.iota.org/developer/references/contribute/contribution-process',
+};
+
+const CONTRIBUTE_TO_REPOS_TEXTS = {
+    title: 'Contribute to IOTA Repos',
+    subtitle: 'Actively participating in the IOTA community',
+    link: 'https://docs.iota.org/developer/references/contribute/contribute-to-iota-repos',
+};
+
 export const CONTRIBUTE_IMAGE_CARD_CONTENT: (React.ComponentProps<typeof ImageCard> & {
     link: string;
 })[] = [
     {
-        title: 'Contribute to the docs',
-        body: 'Help improving the documentation or create learning resources',
-        link: 'https://docs.iota.org/developer/references/contribute/contribution-process',
+        title: CONTRIBUTE_TO_DOCS_TEXTS.title,
+        body: CONTRIBUTE_TO_DOCS_TEXTS.subtitle,
+        link: CONTRIBUTE_TO_DOCS_TEXTS.link,
     },
     {
-        title: 'Contribute to IOTA Repos',
-        body: 'Actively participating in the IOTA community',
-        link: 'https://docs.iota.org/developer/references/contribute/contribute-to-iota-repos',
+        title: CONTRIBUTE_TO_REPOS_TEXTS.title,
+        body: CONTRIBUTE_TO_REPOS_TEXTS.subtitle,
+        link: CONTRIBUTE_TO_REPOS_TEXTS.link,
+    },
+];
+
+export const CONTRIBUTE_SMALL_CARD_CONTENT: (React.ComponentProps<typeof SmallCtaCard> & {
+    link: string;
+    isExternal: boolean;
+})[] = [
+    {
+        title: CONTRIBUTE_TO_DOCS_TEXTS.title,
+        subtitle: CONTRIBUTE_TO_DOCS_TEXTS.subtitle,
+        link: CONTRIBUTE_TO_DOCS_TEXTS.link,
+        isExternal: true,
+        image: '/build/grants/supported-initiatives/education.png',
+    },
+    {
+        title: CONTRIBUTE_TO_REPOS_TEXTS.title,
+        subtitle: CONTRIBUTE_TO_REPOS_TEXTS.subtitle,
+        link: CONTRIBUTE_TO_REPOS_TEXTS.link,
+        isExternal: true,
+        image: '/build/grants/supported-initiatives/open_source.png',
     },
 ];
 

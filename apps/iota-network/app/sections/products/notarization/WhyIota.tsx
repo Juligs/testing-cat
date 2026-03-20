@@ -25,7 +25,7 @@ export function WhyIota({ id, navbarColorScheme }: BaseSectionProps) {
                         <IconContent key={index} {...data} filled>
                             <Link
                                 href={data.link}
-                                aria-label={`Go to the documentarion ${data.title}`}
+                                aria-label={`Go to the documentation ${data.title}`}
                             >
                                 <TextLink text="Learn more" showIcon />
                             </Link>

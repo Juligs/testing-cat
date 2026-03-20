@@ -9,3 +9,4 @@ export { SeekingBold as SeekingBoldGetStarted } from './SeekingBold';
 export { StakingGetStarted } from './StakingGetStarted';
 export { RealWorldGetStarted } from './RealWorldGetStarted';
 export { ExploreMoreGetStarted } from './ExploreMoreGetStarted';
+export { BuildWithPurpose } from './BuildWithPurpose';

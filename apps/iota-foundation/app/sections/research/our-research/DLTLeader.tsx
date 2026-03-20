@@ -25,7 +25,7 @@ export function DLTLeader({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href={data.link}
                                     target={data.isExternal ? '_blank' : undefined}
-                                    rel={data.isExternal ? 'nopener noreferrer' : undefined}
+                                    rel={data.isExternal ? 'noopener noreferrer' : undefined}
                                 >
                                     <TextLink text="Read more" showIcon />
                                 </Link>

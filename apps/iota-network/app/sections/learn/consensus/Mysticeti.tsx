@@ -21,7 +21,7 @@ export function Mysticeti({ id, navbarColorScheme }: BaseSectionProps) {
                                 key={index}
                                 href={data.link}
                                 target="_blank"
-                                rel="nopener noreferrer"
+                                rel="noopener noreferrer"
                                 aria-label={data.ariaLabel}
                             >
                                 <Button

@@ -16,7 +16,7 @@ export function OurDecisionFramework({ id, navbarColorScheme }: BaseSectionProps
                                 <Link
                                     href="https://airtable.com/appoUvqpIo5bkDoSO/pag16jQChVVMh3zyh/form?ref=blog.iota.org"
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Go to the form"
                                 >
                                     <Button text="Apply now" icon={<ArrowTopRight />} />

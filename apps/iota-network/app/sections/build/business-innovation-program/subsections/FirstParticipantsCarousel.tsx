@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { Actions, ImageCard } from 'react-ui-kit';
+import { Actions, ImageCard, TextLink } from 'react-ui-kit';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { A11y, Pagination, Scrollbar } from 'swiper/modules';
@@ -37,18 +37,28 @@ export function FirstParticipantsCarousel() {
                 breakpoints={SWIPER_BREAKPOINTS}
             >
                 {FIRST_PARTICIPANTS_IMAGE_CARD.map((data) => (
-                    <SwiperSlide key={data.title} className="!h-auto">
+                    <SwiperSlide key={data.title} className="!h-auto cursor-move">
                         <div className="!h-full block [&>div]:h-full">
-                            <Actions>
-                                <Link
-                                    href={data.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="!h-full block [&>div]:h-full"
-                                >
-                                    <ImageCard {...data} />
-                                </Link>
-                            </Actions>
+                            <ImageCard {...data} isHoverable={false} body={data.body}>
+                                <Actions>
+                                    <Link
+                                        href={data.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <TextLink text={`Visit ${data.title}`} showIcon />
+                                    </Link>
+                                    {data.showcaseLink && (
+                                        <Link
+                                            href={data.showcaseLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <TextLink text="View Showcase" showIcon />
+                                        </Link>
+                                    )}
+                                </Actions>
+                            </ImageCard>
                         </div>
                     </SwiperSlide>
                 ))}

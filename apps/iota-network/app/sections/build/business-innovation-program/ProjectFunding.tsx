@@ -1,5 +1,12 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import { VerticalTitle, Actions, DisplayStats, Button, TextSize } from 'react-ui-kit';
+import {
+    VerticalTitle,
+    Actions,
+    DisplayStats,
+    Button,
+    TextSize,
+    ButtonVariant,
+} from 'react-ui-kit';
 import { PROJECT_FUNDING_VERTICAL_TITLE, PROJECT_FUNDING_STATS_CONTENT } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
@@ -16,9 +23,16 @@ export function ProjectFunding({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://blog.iota.org/iota-business-innovation-program/"
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                 >
                                     <Button text="Blog post" icon={<ArrowTopRight />} />
+                                </Link>
+                                <Link href="/learn/showcases#rwa">
+                                    <Button
+                                        text="Explore participant projects"
+                                        icon={<ArrowTopRight />}
+                                        variant={ButtonVariant.Secondary}
+                                    />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

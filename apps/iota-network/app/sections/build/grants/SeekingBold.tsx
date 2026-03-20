@@ -17,7 +17,7 @@ export function SeekingBold({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href={SEEKING_BOLD_GRANTS_VERTICAL_TITLE.link}
                                     target="_blank"
-                                    rel="nopener noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Go to the form"
                                 >
                                     <Button text="Apply for a grant" icon={<ArrowTopRight />} />

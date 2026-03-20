@@ -37,7 +37,7 @@ export function DppTrustFrameworkTeaser({
                                     <Link
                                         href={data.link}
                                         target={data.isExternal ? '_blank' : undefined}
-                                        rel={data.isExternal ? 'nopener noreferrer' : undefined}
+                                        rel={data.isExternal ? 'noopener noreferrer' : undefined}
                                     >
                                         <TextLink text={data.text} showIcon />
                                     </Link>

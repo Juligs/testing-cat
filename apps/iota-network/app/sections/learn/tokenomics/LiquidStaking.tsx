@@ -17,8 +17,8 @@ export function LiquidStaking({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://swirlstake.com/"
                                     aria-label="Go to the Swirl Stake website"
-                                    target="_blak"
-                                    rel="nopener noreferrer"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <Button
                                         variant={ButtonVariant.Primary}
