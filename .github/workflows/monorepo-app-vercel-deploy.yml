@@ -74,7 +74,7 @@ jobs:
                   echo "PREVIEW_URL=$(cat deployment_output.txt)" >> $GITHUB_OUTPUT
 
             - name: Comment on PR
-              uses: phulsechinmay/rewritable-pr-comment@v0.3.0
+              uses: phulsechinmay/rewritable-pr-comment@a1b041997fa84ec3e524ee9dee5ba0b5f4e73604 # pin@v0.3.0
               if: ${{ inputs.PRODUCTION != true }}
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
