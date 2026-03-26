@@ -28,7 +28,7 @@
         "react-dom": "18.3.1",
         "react-ui-kit": "workspace:*",
         "sass-loader": "^16.0.2",
-        "swiper": "^11.1.14"
+        "swiper": "^12.1.2"
     },
     "devDependencies": {
         "@repo/eslint-config": "workspace:*",
