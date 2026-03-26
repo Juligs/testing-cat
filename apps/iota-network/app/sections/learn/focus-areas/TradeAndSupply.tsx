@@ -14,7 +14,7 @@ export function TradeAndSupply({ id, navbarColorScheme }: BaseSectionProps) {
                 image="/shared/supply_chains.png"
                 verticalTitleContent={TRADE_AND_SUPPLY_VERTICAL_TITLE_CONTENT}
                 iconContentColumns={TRADE_AND_SUPPLY_ICON_CONTENT}
-                showcases={[ShowcaseProject.Twin]}
+                showcases={[ShowcaseProject.Twin, ShowcaseProject.Kalalohko]}
             />
         </section>
     );

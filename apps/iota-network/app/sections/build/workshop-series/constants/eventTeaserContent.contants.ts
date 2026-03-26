@@ -7,7 +7,7 @@ export const EVENT_TEASER_VERTICAL_TITLE = {
 };
 export const EVENT_TEASER_CTA_CONTENT = [
     {
-        image: '/build/workshop-series/event-teaser/community_events.png',
+        image: '/shared/community_events.png',
         title: 'Attend Community Events',
         subtitle: 'Take part in IOTA workshops, hackathons, and meetups.',
         link: '/connect/events',
