@@ -18,6 +18,7 @@
         "@next/mdx": "^14.2.13",
         "@repo/icons": "workspace:*",
         "@repo/shared": "workspace:*",
+        "@repo/sitemap-config": "workspace:*",
         "@tailwindcss/typography": "^0.5.15",
         "@types/mdx": "^2.0.13",
         "airtable": "^0.12.2",

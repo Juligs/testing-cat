@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { sitemapTransform } = require('@repo/sitemap-config');
+
 const SITE_URL = 'https://iota.org';
 
 module.exports = {
@@ -16,4 +19,6 @@ module.exports = {
         '/api/exchanges',
         '/api/blog',
     ],
+    transform: sitemapTransform,
+    additionalPaths: async (config) => [await config.transform(config, '/')],
 };
