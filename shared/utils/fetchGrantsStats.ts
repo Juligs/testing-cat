@@ -3,7 +3,7 @@ import { getDataFromAirtable, sanitizeGrantsStats, GrantsStats } from '../utils'
 const GRANTS_AIRTABLE_VIEW_NAME = 'iotalabs applications';
 const AIRTABLE_BASE_NAME = 'Applications';
 
-export async function fetchGrantsStats(): Promise<GrantsStats | undefined> {
+export async function fetchGrantsStats(): Promise<GrantsStats | null> {
     try {
         const rawData = await getDataFromAirtable({
             fields: ['Sum Milestones (USD)', 'Grant Running'],
@@ -18,11 +18,12 @@ export async function fetchGrantsStats(): Promise<GrantsStats | undefined> {
 
         if (!filteredData || filteredData.length === 0) {
             console.warn('No records passed the filter for Stats');
-            return undefined;
+            return null;
         }
 
         return await sanitizeGrantsStats(filteredData);
     } catch (error) {
         console.error('Error in fetchStatsData:', error);
+        return null;
     }
 }
