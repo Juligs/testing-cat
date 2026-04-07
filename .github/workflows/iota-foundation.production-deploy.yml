@@ -10,6 +10,7 @@ on:
             - 'shared/**'
             - '.github/workflows/iota-foundation.production-deploy.yml'
             - '.github/workflows/monorepo-app-vercel-deploy.yml'
+    workflow_dispatch: {}
 
 jobs:
     deploy-production:
