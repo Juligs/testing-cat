@@ -10,13 +10,7 @@ on:
             - 'shared/**'
             - '.github/workflows/iotalabs.production-deploy.yml'
             - '.github/workflows/monorepo-app-vercel-deploy.yml'
-    workflow_dispatch:
-        inputs:
-            branch:
-                description: 'Branch to deploy'
-                required: true
-                default: 'main'
-                type: string
+    workflow_dispatch: {}
 
 jobs:
     deploy-production:
@@ -24,7 +18,6 @@ jobs:
         with:
             PRODUCTION: true
             APP_NAME: IOTALABS
-            REF: ${{ github.event.inputs.branch }}
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
