@@ -18,7 +18,7 @@ jobs:
               id: detect
               uses: ./.github/actions/detect-changes
 
-    no-changes:
+    vercel-deploy:
         needs: [detect]
         if: "needs.detect.outputs.packages == '[]'"
         runs-on: ubuntu-latest
