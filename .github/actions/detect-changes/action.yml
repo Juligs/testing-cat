@@ -49,16 +49,13 @@ runs:
                   exit 0
               fi
 
-              REF="${BASE_REF:-main}"
+              TURBO_SCM_BASE="${BASE_REF:-main}"
+              export TURBO_SCM_BASE
 
-              RESULT=$(pnpm --silent exec turbo query affected \
-                  --packages "${PACKAGE}" \
-                  --base "origin/${REF}" \
-                  --output json)
+              affected=$(pnpm --silent exec turbo query affected --packages "${PACKAGE}")
+              count=$(echo "$affected" | jq '.data.affectedPackages.length')
 
-              COUNT=$(echo "$RESULT" | jq '.data.affectedPackages.length')
-
-              if [ "${COUNT}" -gt 0 ]; then
+              if [ "$count" -gt 0 ]; then
                   echo "Package ${PACKAGE} is affected."
                   echo "affected=true" >> $GITHUB_OUTPUT
               else
