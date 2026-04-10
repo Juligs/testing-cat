@@ -10,7 +10,7 @@ jobs:
     detect:
         runs-on: ubuntu-latest
         outputs:
-            packages: ${{ steps.detect.outputs.packages }}
+            affected: ${{ steps.detect.outputs.affected }}
         steps:
             - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
               with:
@@ -18,10 +18,12 @@ jobs:
             - name: Detect changes
               id: detect
               uses: ./.github/actions/detect-changes
+              with:
+                  package: iota-foundation
 
     deploy-production:
         needs: [detect]
-        if: "contains(fromJson(needs.detect.outputs.packages), 'iota-foundation')"
+        if: needs.detect.outputs.affected == 'true'
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: true

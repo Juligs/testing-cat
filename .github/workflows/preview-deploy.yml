@@ -6,10 +6,10 @@ on:
         types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:
-    detect:
+    detect-iotalabs:
         runs-on: ubuntu-latest
         outputs:
-            packages: ${{ steps.detect.outputs.packages }}
+            affected: ${{ steps.detect.outputs.affected }}
         steps:
             - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
               with:
@@ -17,17 +17,54 @@ jobs:
             - name: Detect changes
               id: detect
               uses: ./.github/actions/detect-changes
+              with:
+                  package: iotalabs
 
-    vercel-deploy:
-        needs: [detect]
-        if: "needs.detect.outputs.packages == '[]'"
+    detect-iota-network:
         runs-on: ubuntu-latest
+        outputs:
+            affected: ${{ steps.detect.outputs.affected }}
         steps:
-            - run: echo "No affected packages detected. Skipping all deploys."
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+              with:
+                  fetch-depth: 0
+            - name: Detect changes
+              id: detect
+              uses: ./.github/actions/detect-changes
+              with:
+                  package: iota-network
+
+    detect-iota-foundation:
+        runs-on: ubuntu-latest
+        outputs:
+            affected: ${{ steps.detect.outputs.affected }}
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+              with:
+                  fetch-depth: 0
+            - name: Detect changes
+              id: detect
+              uses: ./.github/actions/detect-changes
+              with:
+                  package: iota-foundation
+
+    detect-react-ui-kit:
+        runs-on: ubuntu-latest
+        outputs:
+            affected: ${{ steps.detect.outputs.affected }}
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+              with:
+                  fetch-depth: 0
+            - name: Detect changes
+              id: detect
+              uses: ./.github/actions/detect-changes
+              with:
+                  package: react-ui-kit
 
     iotalabs:
-        needs: [detect]
-        if: "contains(fromJson(needs.detect.outputs.packages), 'iotalabs')"
+        needs: [detect-iotalabs]
+        if: needs.detect-iotalabs.outputs.affected == 'true'
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
@@ -39,8 +76,8 @@ jobs:
             VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
 
     iota-network:
-        needs: [detect]
-        if: "contains(fromJson(needs.detect.outputs.packages), 'iota-network')"
+        needs: [detect-iota-network]
+        if: needs.detect-iota-network.outputs.affected == 'true'
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
@@ -52,8 +89,8 @@ jobs:
             VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
 
     iota-foundation:
-        needs: [detect]
-        if: "contains(fromJson(needs.detect.outputs.packages), 'iota-foundation')"
+        needs: [detect-iota-foundation]
+        if: needs.detect-iota-foundation.outputs.affected == 'true'
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
@@ -65,8 +102,8 @@ jobs:
             VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
 
     react-ui-kit:
-        needs: [detect]
-        if: "contains(fromJson(needs.detect.outputs.packages), 'react-ui-kit')"
+        needs: [detect-react-ui-kit]
+        if: needs.detect-react-ui-kit.outputs.affected == 'true'
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
