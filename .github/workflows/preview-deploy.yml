@@ -1,0 +1,71 @@
+name: Preview Deploy
+
+on:
+    workflow_dispatch:
+    pull_request:
+        types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+    detect:
+        runs-on: ubuntu-latest
+        outputs:
+            packages: ${{ steps.detect.outputs.packages }}
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+              with:
+                  fetch-depth: 0
+            - name: Detect changes
+              id: detect
+              uses: ./.github/actions/detect-changes
+
+    iotalabs:
+        needs: [detect]
+        if: "contains(fromJson(needs.detect.outputs.packages), 'iotalabs')"
+        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
+        with:
+            PRODUCTION: false
+            APP_NAME: IOTALABS
+        secrets:
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
+            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+
+    iota-network:
+        needs: [detect]
+        if: "contains(fromJson(needs.detect.outputs.packages), 'iota-network')"
+        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
+        with:
+            PRODUCTION: false
+            APP_NAME: IOTA Network
+        secrets:
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.IOTA_NETWORK_VERCEL_PROJECT_ID }}
+            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+
+    iota-foundation:
+        needs: [detect]
+        if: "contains(fromJson(needs.detect.outputs.packages), 'iota-foundation')"
+        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
+        with:
+            PRODUCTION: false
+            APP_NAME: IOTA Foundation
+        secrets:
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.IOTA_FOUNDATION_VERCEL_PROJECT_ID }}
+            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+
+    react-ui-kit:
+        needs: [detect]
+        if: "contains(fromJson(needs.detect.outputs.packages), 'react-ui-kit')"
+        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
+        with:
+            PRODUCTION: false
+            APP_NAME: React UI-Kit Storybook
+        secrets:
+            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
+            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
