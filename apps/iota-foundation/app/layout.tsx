@@ -24,7 +24,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     <Footer />
                     <CookieDisclaimer />
                 </ContextProviders>
-            </body>
+            ;</body>
         </html>
     );
 }
