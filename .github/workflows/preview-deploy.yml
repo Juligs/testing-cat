@@ -18,6 +18,13 @@ jobs:
               id: detect
               uses: ./.github/actions/detect-changes
 
+    no-changes:
+        needs: [detect]
+        if: "needs.detect.outputs.packages == '[]'"
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "No affected packages detected. Skipping all deploys."
+
     iotalabs:
         needs: [detect]
         if: "contains(fromJson(needs.detect.outputs.packages), 'iotalabs')"
