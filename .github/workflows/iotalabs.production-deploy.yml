@@ -4,16 +4,21 @@ on:
     push:
         branches:
             - main
-        paths:
-            - 'apps/iotalabs/**'
-            - 'ui-kit/react/**'
-            - 'shared/**'
-            - '.github/workflows/iotalabs.production-deploy.yml'
-            - '.github/workflows/monorepo-app-vercel-deploy.yml'
     workflow_dispatch:
 
 jobs:
+    detect:
+        runs-on: ubuntu-latest
+        outputs:
+            packages: ${{ steps.detect.outputs.packages }}
+        steps:
+            - name: Detect changes
+              id: detect
+              uses: ./.github/actions/detect-changes
+
     deploy-production:
+        needs: [detect]
+        if: "contains(fromJson(needs.detect.outputs.packages), 'iotalabs')"
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: true
@@ -26,6 +31,7 @@ jobs:
 
     purge-iotalabs-cloudflare-cache:
         needs: [deploy-production]
+        if: needs.deploy-production.result == 'success'
         uses: ./.github/workflows/purge-cloudfare-cache.yml
         with:
             IS_IOTALABS: true

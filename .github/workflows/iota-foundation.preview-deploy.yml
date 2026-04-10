@@ -4,14 +4,20 @@ on:
     workflow_dispatch:
     pull_request:
         types: [opened, synchronize, reopened, ready_for_review]
-        paths:
-            - 'apps/iota-foundation/**'
-            - 'ui-kit/react/**'
-            - 'shared/**'
-            - '.github/workflows/iota-foundation.preview-deploy.yml'
-            - '.github/workflows/monorepo-app-vercel-deploy.yml'
+
 jobs:
+    detect:
+        runs-on: ubuntu-latest
+        outputs:
+            packages: ${{ steps.detect.outputs.packages }}
+        steps:
+            - name: Detect changes
+              id: detect
+              uses: ./.github/actions/detect-changes
+
     deploy-preview:
+        needs: [detect]
+        if: "contains(fromJson(needs.detect.outputs.packages), 'iota-foundation')"
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false

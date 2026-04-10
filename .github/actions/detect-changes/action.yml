@@ -1,0 +1,54 @@
+name: Detect Changes in Turbo Workspace
+description: Outputs a JSON list of turbo packages affected by the current changes.
+
+outputs:
+    packages:
+        description: 'A JSON array of package names that have changed (e.g. ["iotalabs","react-ui-kit"])'
+        value: '${{ steps.changes.outputs.packages }}'
+
+runs:
+    using: composite
+    steps:
+        - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # pin@v4.2.1
+          with:
+              fetch-depth: 0
+
+        - name: Fetch base branch
+          shell: bash
+          run: "git fetch origin ${{ github.base_ref || 'main' }}"
+
+        - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
+
+        - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+          with:
+              node-version: '20'
+              cache: 'pnpm'
+
+        - name: Install dependencies
+          shell: bash
+          run: pnpm install --frozen-lockfile
+
+        - name: Detect changes
+          id: changes
+          shell: bash
+          env:
+              EVENT_NAME: '${{ github.event_name }}'
+              BASE_REF: '${{ github.base_ref }}'
+          run: |
+              if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
+                  echo "Manual trigger — marking all packages as affected."
+                  ALL=$(pnpm --silent exec turbo run build --dry=json | jq -c '.packages')
+                  echo "packages=$ALL" >> $GITHUB_OUTPUT
+                  exit 0
+              fi
+
+              REF="${BASE_REF:-main}"
+              PACKAGES=$(pnpm --silent exec turbo run build --filter="...[origin/${REF}]" --dry=json | jq -c '.packages')
+              echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
+
+        - name: Print detected changes
+          shell: bash
+          env:
+              PACKAGES: '${{ steps.changes.outputs.packages }}'
+          run: |
+              echo "Affected packages: ${PACKAGES}"
