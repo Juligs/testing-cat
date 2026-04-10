@@ -1,0 +1,19 @@
+name: Echo Cat
+
+on:
+    workflow_call:
+    push:
+        branches:
+            - main
+  
+jobs:
+    echo-cat:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+            deployments: write
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+            - name: Echo cat
+              run: echo ":3"
