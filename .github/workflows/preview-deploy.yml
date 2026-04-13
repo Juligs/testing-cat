@@ -12,11 +12,7 @@ jobs:
             PRODUCTION: false
             APP_NAME: IOTALABS
             PACKAGE: iotalabs
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        secrets: inherit
 
     iota-network:
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
@@ -24,11 +20,7 @@ jobs:
             PRODUCTION: false
             APP_NAME: IOTA Network
             PACKAGE: iota-network
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTA_NETWORK_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        secrets: inherit
 
     iota-foundation:
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
@@ -36,11 +28,7 @@ jobs:
             PRODUCTION: false
             APP_NAME: IOTA Foundation
             PACKAGE: iota-foundation
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTA_FOUNDATION_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        secrets: inherit
 
     react-ui-kit:
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
@@ -48,8 +36,4 @@ jobs:
             PRODUCTION: false
             APP_NAME: React UI-Kit Storybook
             PACKAGE: react-ui-kit
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        secrets: inherit
