@@ -13,18 +13,4 @@ jobs:
             PRODUCTION: true
             APP_NAME: IOTALABS
             PACKAGE: iotalabs
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
-
-    purge-iotalabs-cloudflare-cache:
-        needs: [deploy-production]
-        if: needs.deploy-production.result == 'success'
-        uses: ./.github/workflows/purge-cloudfare-cache.yml
-        with:
-            IS_IOTALABS: true
-        secrets:
-            CLOUDFLARE_IOTALABS_ZONE_ID: ${{ secrets.CLOUDFLARE_IOTALABS_ZONE_ID }}
-            CLOUDFLARE_CACHE_API_TOKEN: ${{ secrets.CLOUDFLARE_CACHE_API_TOKEN }}
+        secrets: inherit

@@ -12,20 +12,6 @@ on:
             PACKAGE:
                 type: string
                 required: true
-        secrets:
-            VERCEL_TOKEN:
-                required: true
-            VERCEL_ORG_ID:
-                required: true
-            VERCEL_PROJECT_ID:
-                required: true
-            VERCEL_SCOPE:
-                required: true
-
-env:
-    VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-    VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-    VERCEL_ENVIRONMENT: ${{ inputs.PRODUCTION && 'production' || 'preview' }}
 
 concurrency:
     group: ${{ github.workflow }}-${{ inputs.APP_NAME }}-${{ github.event.pull_request.number || github.ref }}
@@ -37,7 +23,6 @@ jobs:
         permissions:
             contents: read
             pull-requests: write
-            deployments: write
         steps:
             - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
               with:
@@ -76,56 +61,6 @@ jobs:
                       echo "result=false" >> $GITHUB_OUTPUT
                   fi
 
-            - name: Install Vercel CLI
+            - name: Deploy
               if: steps.affected.outputs.result == 'true'
-              run: pnpm add --global vercel@canary
-
-            - name: Setup Vercel Flags
-              id: setup_vercel_flags
-              if: steps.affected.outputs.result == 'true'
-              run: |
-                  echo "VERCEL_FLAGS=--token=${{ secrets.VERCEL_TOKEN }} --scope=${{ secrets.VERCEL_SCOPE }}" >> $GITHUB_OUTPUT
-                  if [[ "${{ inputs.PRODUCTION }}" == "true" ]]; then
-                      echo "PROD_FLAG=--prod" >> $GITHUB_OUTPUT
-                  else
-                      echo "PROD_FLAG=" >> $GITHUB_OUTPUT
-                  fi
-
-            - name: Pull Vercel Environment Information
-              if: steps.affected.outputs.result == 'true'
-              run: echo ":3"
-
-            - name: Build Project
-              if: steps.affected.outputs.result == 'true'
-              run: echo ":3"
-
-            - name: Deploy to Vercel
-              id: vercel-deploy
-              if: steps.affected.outputs.result == 'true'
-              run: |
-                  vercel deploy --prebuilt --archive=tgz ${{ steps.setup_vercel_flags.outputs.VERCEL_FLAGS }} ${{ steps.setup_vercel_flags.outputs.PROD_FLAG }} > deployment_output.txt
-                  echo "PREVIEW_URL=$(cat deployment_output.txt)" >> $GITHUB_OUTPUT
-
-            - name: Comment on PR
-              uses: phulsechinmay/rewritable-pr-comment@a1b041997fa84ec3e524ee9dee5ba0b5f4e73604 # pin@v0.3.0
-              if: steps.affected.outputs.result == 'true' && inputs.PRODUCTION != true
-              with:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  COMMENT_IDENTIFIER: '${{ inputs.APP_NAME }} vercel deploy'
-                  message: |
-                      This pull request has been deployed to Vercel.
-
-                      <table>
-                       <tr>
-                          <td><strong>🌐 APP NAME:</strong></td>
-                          <td>${{ inputs.APP_NAME }}</td>
-                      </tr>
-                      <tr>
-                          <td><strong>✅ Preview:</strong></td>
-                          <td><a href='${{ steps.vercel-deploy.outputs.PREVIEW_URL }}'>${{ steps.vercel-deploy.outputs.PREVIEW_URL }}</a></td>
-                      </tr>
-                       <tr>
-                          <td><strong>⚫️ Latest commit:</strong></td>
-                          <td>${{ github.sha }}</td>
-                      </tr>
-                      </table>
+              run: echo "Deploy ${{ inputs.APP_NAME }} (${{ inputs.PRODUCTION && 'production' || 'preview' }})"
