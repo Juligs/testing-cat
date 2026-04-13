@@ -9,10 +9,9 @@ on:
             APP_NAME:
                 type: string
                 required: true
-            AFFECTED:
-                type: boolean
-                required: false
-                default: true
+            PACKAGE:
+                type: string
+                required: true
         secrets:
             VERCEL_TOKEN:
                 required: true
@@ -35,26 +34,55 @@ concurrency:
 jobs:
     vercel-deploy:
         runs-on: ubuntu-latest
-        if: inputs.AFFECTED
         permissions:
             contents: read
             pull-requests: write
             deployments: write
         steps:
             - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+              with:
+                  filter: blob:none
+                  fetch-depth: 0
+
             - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
 
-            - name: Install Nodejs
-              uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+            - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
               with:
                   node-version: '20'
                   cache: 'pnpm'
 
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
+
+            - name: Check if package is affected
+              id: affected
+              shell: bash
+              env:
+                  PACKAGE: ${{ inputs.PACKAGE }}
+                  EVENT_NAME: ${{ github.event_name }}
+              run: |
+                  if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
+                      echo "Manual trigger — marking ${PACKAGE} as affected."
+                      echo "result=true" >> $GITHUB_OUTPUT
+                      exit 0
+                  fi
+
+                  affected=$(pnpm exec turbo query affected --packages "${PACKAGE}")
+                  count=$(echo "$affected" | jq '.data.affectedPackages.length')
+
+                  if [ "$count" -gt 0 ]; then
+                      echo "result=true" >> $GITHUB_OUTPUT
+                  else
+                      echo "result=false" >> $GITHUB_OUTPUT
+                  fi
+
             - name: Install Vercel CLI
+              if: steps.affected.outputs.result == 'true'
               run: pnpm add --global vercel@canary
 
             - name: Setup Vercel Flags
               id: setup_vercel_flags
+              if: steps.affected.outputs.result == 'true'
               run: |
                   echo "VERCEL_FLAGS=--token=${{ secrets.VERCEL_TOKEN }} --scope=${{ secrets.VERCEL_SCOPE }}" >> $GITHUB_OUTPUT
                   if [[ "${{ inputs.PRODUCTION }}" == "true" ]]; then
@@ -63,24 +91,24 @@ jobs:
                       echo "PROD_FLAG=" >> $GITHUB_OUTPUT
                   fi
 
-            - name: Install Project Dependencies
-              run: pnpm install --frozen-lockfile
-
             - name: Pull Vercel Environment Information
+              if: steps.affected.outputs.result == 'true'
               run: vercel pull ${{ steps.setup_vercel_flags.outputs.VERCEL_FLAGS }} --yes --environment=${{ env.VERCEL_ENVIRONMENT }}
 
             - name: Build Project
+              if: steps.affected.outputs.result == 'true'
               run: vercel build ${{ steps.setup_vercel_flags.outputs.VERCEL_FLAGS }} ${{ steps.setup_vercel_flags.outputs.PROD_FLAG }}
 
             - name: Deploy to Vercel
               id: vercel-deploy
+              if: steps.affected.outputs.result == 'true'
               run: |
                   vercel deploy --prebuilt --archive=tgz ${{ steps.setup_vercel_flags.outputs.VERCEL_FLAGS }} ${{ steps.setup_vercel_flags.outputs.PROD_FLAG }} > deployment_output.txt
                   echo "PREVIEW_URL=$(cat deployment_output.txt)" >> $GITHUB_OUTPUT
 
             - name: Comment on PR
               uses: phulsechinmay/rewritable-pr-comment@a1b041997fa84ec3e524ee9dee5ba0b5f4e73604 # pin@v0.3.0
-              if: ${{ inputs.PRODUCTION != true }}
+              if: steps.affected.outputs.result == 'true' && inputs.PRODUCTION != true
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   COMMENT_IDENTIFIER: '${{ inputs.APP_NAME }} vercel deploy'

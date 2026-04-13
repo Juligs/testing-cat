@@ -6,69 +6,12 @@ on:
         types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:
-    detect-iotalabs:
-        runs-on: ubuntu-latest
-        outputs:
-            affected: ${{ steps.detect.outputs.affected }}
-        steps:
-            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
-              with:
-                  fetch-depth: 0
-            - name: Detect changes
-              id: detect
-              uses: ./.github/actions/detect-changes
-              with:
-                  package: iotalabs
-
-    detect-iota-network:
-        runs-on: ubuntu-latest
-        outputs:
-            affected: ${{ steps.detect.outputs.affected }}
-        steps:
-            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
-              with:
-                  fetch-depth: 0
-            - name: Detect changes
-              id: detect
-              uses: ./.github/actions/detect-changes
-              with:
-                  package: iota-network
-
-    detect-iota-foundation:
-        runs-on: ubuntu-latest
-        outputs:
-            affected: ${{ steps.detect.outputs.affected }}
-        steps:
-            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
-              with:
-                  fetch-depth: 0
-            - name: Detect changes
-              id: detect
-              uses: ./.github/actions/detect-changes
-              with:
-                  package: iota-foundation
-
-    detect-react-ui-kit:
-        runs-on: ubuntu-latest
-        outputs:
-            affected: ${{ steps.detect.outputs.affected }}
-        steps:
-            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
-              with:
-                  fetch-depth: 0
-            - name: Detect changes
-              id: detect
-              uses: ./.github/actions/detect-changes
-              with:
-                  package: react-ui-kit
-
     iotalabs:
-        needs: [detect-iotalabs]
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
             APP_NAME: IOTALABS
-            AFFECTED: ${{ needs.detect-iotalabs.outputs.affected == 'true' }}
+            PACKAGE: iotalabs
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -76,12 +19,11 @@ jobs:
             VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
 
     iota-network:
-        needs: [detect-iota-network]
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
             APP_NAME: IOTA Network
-            AFFECTED: ${{ needs.detect-iota-network.outputs.affected == 'true' }}
+            PACKAGE: iota-network
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -89,12 +31,11 @@ jobs:
             VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
 
     iota-foundation:
-        needs: [detect-iota-foundation]
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
             APP_NAME: IOTA Foundation
-            AFFECTED: ${{ needs.detect-iota-foundation.outputs.affected == 'true' }}
+            PACKAGE: iota-foundation
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -102,12 +43,11 @@ jobs:
             VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
 
     react-ui-kit:
-        needs: [detect-react-ui-kit]
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
             APP_NAME: React UI-Kit Storybook
-            AFFECTED: ${{ needs.detect-react-ui-kit.outputs.affected == 'true' }}
+            PACKAGE: react-ui-kit
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
