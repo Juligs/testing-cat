@@ -31,7 +31,7 @@ export default function Home() {
     return (
         <>
             <HeroBuildingTogether id="hero" navbarColorScheme="inverted" />
-            <CollaborativeCommunity id="collaborative-community" />
+            <CollaborativeCommunity id="collaborative-community" />;
             <Join id="Join" />
             <CryptoPlatforms id="crypto-platforms" />
             <BuildingTogetherContactUs id="contact-us" />
