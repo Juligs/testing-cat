@@ -1,0 +1,71 @@
+name: Detect Changes in Turbo Workspace
+description: >
+    Checks whether a specific package (or any of its transitive dependents) is
+    affected by changes between HEAD and the base branch.
+    Requires actions/checkout (fetch-depth 0) to have run before this action.
+
+inputs:
+    package:
+        description: 'Turbo package name to check (e.g. "iotalabs", "iota-network")'
+        required: true
+
+outputs:
+    affected:
+        description: '"true" if the package is affected, "false" otherwise'
+        value: '${{ steps.check.outputs.affected }}'
+
+runs:
+    using: composite
+    steps:
+        - name: Fetch base branch
+          shell: bash
+          env:
+              BASE_REF: '${{ github.base_ref }}'
+          run: |
+              git fetch origin "${BASE_REF:-main}"
+
+        - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
+
+        - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+          with:
+              node-version: '20'
+              cache: 'pnpm'
+
+        - name: Install dependencies
+          shell: bash
+          run: pnpm install --frozen-lockfile
+
+        - name: Check if package is affected
+          id: check
+          shell: bash
+          env:
+              EVENT_NAME: '${{ github.event_name }}'
+              BASE_REF: '${{ github.base_ref }}'
+              BEFORE_SHA: '${{ github.event.before }}'
+              PACKAGE: '${{ inputs.package }}'
+          run: |
+              if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
+                  echo "Manual trigger — marking ${PACKAGE} as affected."
+                  echo "affected=true" >> $GITHUB_OUTPUT
+                  exit 0
+              fi
+
+              if [ "${EVENT_NAME}" = "push" ]; then
+                  # On push to main, compare the pushed commit against the previous one
+                  export TURBO_SCM_BASE="${BEFORE_SHA}"
+                  export TURBO_SCM_HEAD="HEAD"
+              else
+                  # On pull_request, compare against the base branch
+                  export TURBO_SCM_BASE="${BASE_REF:-main}"
+              fi
+
+              affected=$(pnpm --silent exec turbo query affected --packages "${PACKAGE}")
+              count=$(echo "$affected" | jq '.data.affectedPackages.length')
+
+              if [ "$count" -gt 0 ]; then
+                  echo "Package ${PACKAGE} is affected."
+                  echo "affected=true" >> $GITHUB_OUTPUT
+              else
+                  echo "Package ${PACKAGE} is not affected."
+                  echo "affected=false" >> $GITHUB_OUTPUT
+              fi

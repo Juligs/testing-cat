@@ -9,6 +9,10 @@ on:
             APP_NAME:
                 type: string
                 required: true
+            AFFECTED:
+                type: boolean
+                required: false
+                default: true
         secrets:
             VERCEL_TOKEN:
                 required: true
@@ -25,12 +29,13 @@ env:
     VERCEL_ENVIRONMENT: ${{ inputs.PRODUCTION && 'production' || 'preview' }}
 
 concurrency:
-    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    group: ${{ github.workflow }}-${{ inputs.APP_NAME }}-${{ github.event.pull_request.number || github.ref }}
     cancel-in-progress: ${{ inputs.PRODUCTION != true }}
 
 jobs:
     vercel-deploy:
         runs-on: ubuntu-latest
+        if: inputs.AFFECTED
         permissions:
             contents: read
             pull-requests: write

@@ -4,20 +4,30 @@ on:
     push:
         branches:
             - main
-        paths:
-            - 'apps/iota-foundation/**'
-            - 'ui-kit/react/**'
-            - 'shared/**'
-            - '.github/workflows/iota-foundation.production-deploy.yml'
-            - '.github/workflows/monorepo-app-vercel-deploy.yml'
     workflow_dispatch:
 
 jobs:
+    detect:
+        runs-on: ubuntu-latest
+        outputs:
+            affected: ${{ steps.detect.outputs.affected }}
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+              with:
+                  fetch-depth: 0
+            - name: Detect changes
+              id: detect
+              uses: ./.github/actions/detect-changes
+              with:
+                  package: iota-foundation
+
     deploy-production:
+        needs: [detect]
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: true
             APP_NAME: IOTA Foundation
+            AFFECTED: ${{ needs.detect.outputs.affected == 'true' }}
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -26,6 +36,7 @@ jobs:
 
     purge-iota-foundation-cloudflare-cache:
         needs: [deploy-production]
+        if: needs.deploy-production.result == 'success'
         uses: ./.github/workflows/purge-cloudfare-cache.yml
         with:
             IS_IOTA_FOUNDATION: true
