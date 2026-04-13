@@ -64,11 +64,11 @@ jobs:
 
     iotalabs:
         needs: [detect-iotalabs]
-        if: needs.detect-iotalabs.outputs.affected == 'true'
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
             APP_NAME: IOTALABS
+            AFFECTED: ${{ needs.detect-iotalabs.outputs.affected == 'true' }}
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -77,11 +77,11 @@ jobs:
 
     iota-network:
         needs: [detect-iota-network]
-        if: needs.detect-iota-network.outputs.affected == 'true'
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
             APP_NAME: IOTA Network
+            AFFECTED: ${{ needs.detect-iota-network.outputs.affected == 'true' }}
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -90,11 +90,11 @@ jobs:
 
     iota-foundation:
         needs: [detect-iota-foundation]
-        if: needs.detect-iota-foundation.outputs.affected == 'true'
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
             APP_NAME: IOTA Foundation
+            AFFECTED: ${{ needs.detect-iota-foundation.outputs.affected == 'true' }}
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -103,11 +103,11 @@ jobs:
 
     react-ui-kit:
         needs: [detect-react-ui-kit]
-        if: needs.detect-react-ui-kit.outputs.affected == 'true'
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: false
             APP_NAME: React UI-Kit Storybook
+            AFFECTED: ${{ needs.detect-react-ui-kit.outputs.affected == 'true' }}
         secrets:
             VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
             VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}

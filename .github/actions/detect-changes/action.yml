@@ -41,6 +41,7 @@ runs:
           env:
               EVENT_NAME: '${{ github.event_name }}'
               BASE_REF: '${{ github.base_ref }}'
+              BEFORE_SHA: '${{ github.event.before }}'
               PACKAGE: '${{ inputs.package }}'
           run: |
               if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
@@ -49,8 +50,14 @@ runs:
                   exit 0
               fi
 
-              TURBO_SCM_BASE="${BASE_REF:-main}"
-              export TURBO_SCM_BASE
+              if [ "${EVENT_NAME}" = "push" ]; then
+                  # On push to main, compare the pushed commit against the previous one
+                  export TURBO_SCM_BASE="${BEFORE_SHA}"
+                  export TURBO_SCM_HEAD="HEAD"
+              else
+                  # On pull_request, compare against the base branch
+                  export TURBO_SCM_BASE="${BASE_REF:-main}"
+              fi
 
               affected=$(pnpm --silent exec turbo query affected --packages "${PACKAGE}")
               count=$(echo "$affected" | jq '.data.affectedPackages.length')
