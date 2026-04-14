@@ -11,6 +11,5 @@ jobs:
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: true
-            APP_NAME: IOTALABS
-            PACKAGE: iotalabs
+            APP_ID: iotalabs
         secrets: inherit

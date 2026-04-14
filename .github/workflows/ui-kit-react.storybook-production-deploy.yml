@@ -11,6 +11,5 @@ jobs:
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: true
-            APP_NAME: React UI-Kit Storybook
-            PACKAGE: react-ui-kit
+            APP_ID: react-ui-kit
         secrets: inherit
