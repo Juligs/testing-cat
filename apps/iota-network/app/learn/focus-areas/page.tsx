@@ -31,7 +31,7 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <CorePageHero id="hero" />
+            <CorePageHero id="hero" navbarColorScheme="inverted" />
             <RwaCards id="rwa-cards" />
             <RealWorldAssetTokenization id="real-world-asset-tokenization" />
             <TradeAndSupply id="trade-and-supply-chains" />
