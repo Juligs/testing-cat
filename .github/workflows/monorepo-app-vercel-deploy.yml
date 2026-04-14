@@ -18,12 +18,12 @@ concurrency:
     cancel-in-progress: ${{ inputs.PRODUCTION != true }}
 
 jobs:
-    check:
+    deploy:
         runs-on: ubuntu-latest
         permissions:
             contents: read
-        outputs:
-            affected: ${{ steps.affected.outputs.result }}
+            pull-requests: write
+            deployments: write
         steps:
             - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
               with:
@@ -62,14 +62,6 @@ jobs:
                       echo "result=false" >> $GITHUB_OUTPUT
                   fi
 
-    deploy:
-        needs: check
-        if: needs.check.outputs.affected == 'true'
-        runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            pull-requests: write
-            deployments: write
-        steps:
             - name: Deploy
+              if: steps.affected.outputs.result == 'true'
               run: echo "Deploy ${{ inputs.APP_NAME }} (${{ inputs.PRODUCTION && 'production' || 'preview' }})"
