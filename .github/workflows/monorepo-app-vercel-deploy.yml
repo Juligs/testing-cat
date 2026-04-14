@@ -18,12 +18,12 @@ concurrency:
     cancel-in-progress: ${{ inputs.PRODUCTION != true }}
 
 jobs:
-    deploy:
+    check:
         runs-on: ubuntu-latest
         permissions:
             contents: read
-            pull-requests: write
-            deployments: write
+        outputs:
+            affected: ${{ steps.affected.outputs.result }}
         steps:
             - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
               with:
@@ -46,6 +46,7 @@ jobs:
               env:
                   PACKAGE: ${{ inputs.PACKAGE }}
                   EVENT_NAME: ${{ github.event_name }}
+                  BASE_SHA: ${{ github.event.pull_request.base.sha }}
               run: |
                   if [ "${EVENT_NAME}" = "workflow_dispatch" ]; then
                       echo "Manual trigger — marking ${PACKAGE} as affected."
@@ -53,7 +54,7 @@ jobs:
                       exit 0
                   fi
 
-                  affected=$(pnpm exec turbo query affected --packages "${PACKAGE}")
+                  affected=$(pnpm exec turbo query affected --packages "${PACKAGE}" --base "${BASE_SHA}")
                   count=$(echo "$affected" | jq '.data.affectedPackages.length')
 
                   if [ "$count" -gt 0 ]; then
@@ -62,6 +63,14 @@ jobs:
                       echo "result=false" >> $GITHUB_OUTPUT
                   fi
 
+    deploy:
+        needs: check
+        if: needs.check.outputs.affected == 'true'
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+            deployments: write
+        steps:
             - name: Deploy
-              if: steps.affected.outputs.result == 'true'
               run: echo "Deploy ${{ inputs.APP_NAME }} (${{ inputs.PRODUCTION && 'production' || 'preview' }})"
