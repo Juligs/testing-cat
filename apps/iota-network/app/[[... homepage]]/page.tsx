@@ -41,7 +41,7 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <Hero id="hero" navbarColorScheme="inverted" />
+            <Hero id="hero" />
             <NetworkStats id="network-stats" />
             <IotaManifesto id="iota-manifesto" />
             <IntegrationStack id="integration-stack" />
