@@ -18,7 +18,7 @@ export const getDataFromAirtable = async ({
     try {
         Airtable.configure({
             endpointUrl: AIRTABLE_ENDPOINT_URL,
-            apiKey: process.env.IOTALABS_AIRTABLE_KEY,
+            apiKey: process.env.COMMS_WEBSITES_AIRTABLE_KEY,
         });
 
         const airtableBase = Airtable.base(AIRTABLE_BASE_ID);

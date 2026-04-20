@@ -38,4 +38,4 @@ Copy `.env.defaults` to `.env.local` and fill in the required values.
 | `MICA_API_URL`                                   | MiCA regulation data API URL              |
 | `IOTA_NETWORK_BLOG_KEY`                          | Blog API key                              |
 | `IOTA_NETWORK_BLOG_URL`                          | Blog API URL                              |
-| `IOTALABS_AIRTABLE_KEY`                          | Airtable API key                          |
+| `COMMS_WEBSITES_AIRTABLE_KEY`                    | Airtable API key                          |

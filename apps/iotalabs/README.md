@@ -34,6 +34,6 @@ Copy `.env.defaults` to `.env.local` and fill in the required values.
 | Variable                                   | Description                     |
 | ------------------------------------------ | ------------------------------- |
 | `NEXT_PUBLIC_IOTALABS_GOOGLE_ANALYTICS_ID` | Google Analytics measurement ID |
-| `IOTALABS_AIRTABLE_KEY`                    | Airtable API key                |
+| `COMMS_WEBSITES_AIRTABLE_KEY`              | Airtable API key                |
 | `IOTALABS_BLOG_KEY`                        | Blog API key                    |
 | `IOTALABS_BLOG_URL`                        | Blog API URL                    |
