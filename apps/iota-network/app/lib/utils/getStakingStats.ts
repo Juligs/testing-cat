@@ -15,6 +15,7 @@ export interface StakingStats {
     stakingRatio?: number | null;
     validators?: number | null;
     lastEpochRewardValidators?: number | string | null;
+    participationMetrics?: string | null;
 }
 
 async function getSystemState() {
@@ -107,6 +108,17 @@ async function getLastEpochReward(): Promise<number | string | null> {
     return formattedLastEpochRewards;
 }
 
+async function getParticipationMetrics(): Promise<string | null> {
+    const client = getIotaClient();
+    try {
+        const metrics = await client.getParticipationMetrics();
+        return metrics?.totalAddresses ?? null;
+    } catch (error) {
+        console.error('Error in getParticipationMetrics:', error);
+        return null;
+    }
+}
+
 export async function getStakingStats(): Promise<StakingStats> {
     try {
         const [
@@ -115,12 +127,14 @@ export async function getStakingStats(): Promise<StakingStats> {
             stakingRatio,
             validators,
             lastEpochRewardValidators,
+            participationMetrics,
         ] = await Promise.all([
             getTotalStake(),
             getAverageApy(),
             getStakingRatio(),
             getActiveValidators(),
             getLastEpochReward(),
+            getParticipationMetrics(),
         ]);
 
         return {
@@ -130,6 +144,7 @@ export async function getStakingStats(): Promise<StakingStats> {
             stakingRatio,
             validators,
             lastEpochRewardValidators,
+            participationMetrics,
         };
     } catch (error) {
         console.error('Error in getStakingStats:', error);
