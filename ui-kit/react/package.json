@@ -5,20 +5,20 @@
     "type": "module",
     "main": "./dist/index.umd.js",
     "module": "./dist/index.es.js",
-    "types": "./dist/index.d.ts",
+    "types": "./dist/src/lib/server.d.ts",
     "files": [
         "dist"
     ],
     "exports": {
         ".": {
+            "types": "./dist/src/lib/server.d.ts",
             "import": "./dist/ui-kit/react/src/lib/server.es.js",
-            "require": "./dist/ui-kit/react/src/lib/server.cjs.js",
-            "types": "./dist/server.d.ts"
+            "require": "./dist/ui-kit/react/src/lib/server.cjs.js"
         },
         "./client": {
+            "types": "./dist/src/lib/client.d.ts",
             "import": "./dist/ui-kit/react/src/lib/client.es.js",
-            "require": "./dist/ui-kit/react/src/lib/client.cjs.js",
-            "types": "./dist/client.d.ts"
+            "require": "./dist/ui-kit/react/src/lib/client.cjs.js"
         },
         "./style.css": "./dist/style.css"
     },
@@ -30,53 +30,48 @@
         "storybook": "storybook dev -p 6006",
         "typecheck": "tsc --noEmit"
     },
+    "peerDependencies": {
+        "react": "^18.0.0 || ^19.0.0",
+        "react-dom": "^18.0.0 || ^19.0.0"
+    },
     "dependencies": {
         "@fontsource-variable/inter": "^5.1.0",
         "@fontsource-variable/red-hat-display": "^5.1.0",
         "@repo/icons": "workspace:*",
         "cross-env": "^7.0.3",
-        "lottie-web": "^5.12.2"
-    },
-    "peerDependencies": {
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "lottie-web": "^5.13.0"
     },
     "devDependencies": {
-        "@chromatic-com/storybook": "^1.9.0",
+        "@chromatic-com/storybook": "^4.1.3",
         "@repo/eslint-config": "workspace:*",
         "@repo/lint-staged-config": "workspace:*",
         "@repo/typescript-config": "workspace:*",
-        "@storybook/addon-essentials": "^8.3.2",
-        "@storybook/addon-interactions": "^8.3.2",
-        "@storybook/addon-links": "^8.3.2",
-        "@storybook/addon-onboarding": "^8.3.2",
-        "@storybook/addon-themes": "^8.3.2",
-        "@storybook/addon-viewport": "^8.3.2",
-        "@storybook/blocks": "^8.3.2",
-        "@storybook/react": "^8.3.2",
-        "@storybook/react-vite": "^8.3.2",
-        "@storybook/test": "^8.3.2",
-        "@types/node": "^20.16.5",
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
+        "@storybook/addon-docs": "9.1.20",
+        "@storybook/addon-links": "9.1.20",
+        "@storybook/addon-onboarding": "9.1.20",
+        "@storybook/addon-themes": "9.1.20",
+        "@storybook/react-vite": "9.1.20",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
         "@vitejs/plugin-react": "^4.3.1",
-        "@vitejs/plugin-react-swc": "^3.7.0",
+        "@vitejs/plugin-react-swc": "^4.3.0",
         "autoprefixer": "^10.4.20",
         "clsx": "^2.1.1",
-        "eslint": "^8.57.1",
-        "eslint-plugin-storybook": "^0.8.0",
-        "globals": "^15.9.0",
+        "eslint": "^9.0.0",
+        "eslint-plugin-storybook": "9.1.20",
+        "globals": "^17.0.0",
         "postcss": "^8.4.47",
         "postcss-import": "^16.1.0",
         "postcss-nested": "^6.2.0",
+        "react": "19.2.4",
+        "react-dom": "19.2.4",
         "rimraf": "^6.0.1",
-        "storybook": "^8.6.15",
+        "storybook": "9.1.20",
         "tailwindcss": "^3.4.12",
-        "typescript": "^5.3.3",
-        "vite": "^4.4.11",
-        "vite-plugin-dts": "^3.9.1",
+        "typescript": "^5.5.0",
+        "vite": "^5.4.21",
+        "vite-plugin-dts": "^4.5.4",
         "vite-tsconfig-paths": "^5.0.1"
     }
 }

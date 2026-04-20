@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { DEFAULT_BG_COLOR, INVERTED_BG_COLOR } from './skeleton.contants';
 interface SkeletonProps {
     /**

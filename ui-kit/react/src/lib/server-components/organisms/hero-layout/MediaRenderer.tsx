@@ -41,7 +41,7 @@ export function MediaRenderer({
     videoProps,
     imageProps,
     ...restProps
-}: MediaRendererProps): JSX.Element {
+}: MediaRendererProps): React.JSX.Element {
     if (restProps.mediaType === 'image') {
         const { mediaType, ...filteredProps } = restProps;
 

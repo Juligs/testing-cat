@@ -3,7 +3,6 @@
 import { Hero as HeroComponent } from '@repo/shared/components';
 import { GET_STARTED_CONTENT, GET_STARTED_BG, GET_STARTED_ANCHORLINKS } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import Link from 'next/link';
 
 export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -17,7 +16,6 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
                 background={GET_STARTED_BG}
                 anchorLinks={GET_STARTED_ANCHORLINKS}
                 isAnchorLinksDesktopInverted
-                linkComponent={Link}
             />
         </section>
     );

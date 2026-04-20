@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TextLink as TextLinkComponent, TextLinkSize } from '@lib/server-components/atoms';
 import { Placeholder, Right } from '@repo/icons';
 import { getStoryEnumOptions } from 'src/storybook/utils';

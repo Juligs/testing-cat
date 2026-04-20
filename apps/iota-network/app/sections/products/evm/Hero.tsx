@@ -3,7 +3,6 @@
 import { HeroAlignment, Hero as HeroComponent } from '@repo/shared/components';
 import { HERO_EVM_CONTENT, HERO_EVM_BG, HERO_EVM_BUTTONS, HERO_EVM_ANCHORLINKS } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import Link from 'next/link';
 
 export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -15,7 +14,6 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
                 anchorLinks={HERO_EVM_ANCHORLINKS}
                 isAnchorLinksDesktopInverted
                 buttons={HERO_EVM_BUTTONS}
-                linkComponent={Link}
             />
         </section>
     );

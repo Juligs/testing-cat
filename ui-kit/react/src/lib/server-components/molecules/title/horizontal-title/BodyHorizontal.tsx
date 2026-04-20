@@ -1,5 +1,5 @@
 import { SECONDARY_TEXT_COLOR, INVERTED_SECONDARY_TEXT_COLOR } from '../title.constants';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface TitleProps {
     /*

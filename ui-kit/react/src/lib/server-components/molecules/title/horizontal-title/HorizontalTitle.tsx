@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { TitleTextSize } from '../titleSize.enums';
 import { BodyHorizontal, SubtitleHorizontal } from '.';
 import { TitleTag } from '../title.enums';

@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { CtaCard as CtaCardCardComponent, TextLink } from '@lib/server-components';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import { Viewport } from 'src/storybook/enums';
 
 const meta: Meta<typeof CtaCardCardComponent> = {

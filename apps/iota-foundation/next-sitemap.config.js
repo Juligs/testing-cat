@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { sitemapTransform } = require('@repo/sitemap-config');
 
 const SITE_URL = 'https://iota-foundation.org';

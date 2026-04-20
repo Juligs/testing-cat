@@ -1,7 +1,6 @@
 import { ExploreCard } from 'react-ui-kit';
 import { VerticalTitle } from 'react-ui-kit';
 import { TitleTextSize } from 'react-ui-kit';
-import React from 'react';
 import clsx from 'clsx';
 
 export interface moreToExploreProps {
@@ -12,7 +11,11 @@ export interface moreToExploreProps {
     })[];
     hasSmallPadding?: boolean;
 }
-export function MoreToExplore({ text, content, hasSmallPadding }: moreToExploreProps): JSX.Element {
+export function MoreToExplore({
+    text,
+    content,
+    hasSmallPadding,
+}: moreToExploreProps): React.JSX.Element {
     return (
         <div
             className={clsx(

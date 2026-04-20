@@ -4,7 +4,7 @@ import {
     COLOR_TITLE,
     COLOR_TITLE_INVERTED,
 } from './BlogPostCard.constants';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 interface BlogPostCardProps {
     /**
      * post title
@@ -30,7 +30,7 @@ export function BlogPostCard({
     image,
     inverted,
     children,
-}: React.PropsWithChildren<BlogPostCardProps>): JSX.Element {
+}: React.PropsWithChildren<BlogPostCardProps>): React.JSX.Element {
     const descriptionColor = inverted ? COLOR_DESCRIPTION_INVERTED : COLOR_DESCRIPTION;
     const titleColor = inverted ? COLOR_TITLE_INVERTED : COLOR_TITLE;
     return (

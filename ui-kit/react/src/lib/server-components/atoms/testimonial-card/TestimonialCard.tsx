@@ -8,7 +8,7 @@ import {
     BG_COLOR_DEFAULT,
     TEXT_COLOR_SUPPORTING,
 } from './testimonialCard.constants';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface TestimonialCardProps {
     /**

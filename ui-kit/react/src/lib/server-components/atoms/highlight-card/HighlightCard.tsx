@@ -1,6 +1,6 @@
 import { ArrowTopRight } from '@repo/icons';
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface HighlightCardProps {
     /**

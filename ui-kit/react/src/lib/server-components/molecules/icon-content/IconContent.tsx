@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import {
     COLOR_ICON,
     COLOR_ICON_INVERTED,
@@ -50,7 +50,7 @@ export function IconContent({
     filled = false,
     children,
     size = IconContentSize.Small,
-}: iconContentProps): JSX.Element {
+}: iconContentProps): React.JSX.Element {
     const iconColor = inverted ? COLOR_ICON_INVERTED : COLOR_ICON;
     const bgColors = filled ? (inverted ? BG_COLOR_INVERTED : BG_COLOR_FILLED) : inverted ? '' : '';
     const colorTitle = inverted ? COLOR_TITLE_INVERTED : COLOR_TITLE;

@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { HeroLayout, HeroType, HeroBackground } from '@lib/server-components/organisms';
 import { ScreenSize } from '@lib/server';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import { Viewport } from 'src/storybook/enums';
 import { Button, ButtonVariant } from '@lib/server-components';
 import { getStoryEnumOptions } from 'src/storybook/utils';

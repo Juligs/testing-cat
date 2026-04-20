@@ -4,7 +4,7 @@ import { clampValue } from '@lib/utils/clampValue';
 import { EDGE_MARGIN, TOOLTIP_OFFSET } from '@sections/sustainability/constants';
 import { useLayoutEffect, useRef, useState } from 'react';
 
-export function useTooltip(containerRef: React.RefObject<HTMLDivElement>) {
+export function useTooltip(containerRef: React.RefObject<HTMLDivElement | null>) {
     const tooltipRef = useRef<HTMLDivElement | null>(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [style, setStyle] = useState<React.CSSProperties>();

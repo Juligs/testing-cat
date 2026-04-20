@@ -16,12 +16,20 @@
         "iota-foundation": "turbo --filter \"iota-foundation\"",
         "prepare": "husky"
     },
+    "manypkg": {
+        "ignoredRules": [
+            "INTERNAL_MISMATCH",
+            "ROOT_HAS_DEV_DEPENDENCIES"
+        ]
+    },
     "devDependencies": {
+        "@manypkg/cli": "^0.21.4",
+        "globals": "^17.0.0",
         "husky": "^9.1.6",
         "lint-staged": "^15.2.10",
         "prettier": "^3.3.3",
         "turbo": "^2.1.2",
-        "typescript": "^5.4.5"
+        "typescript": "^5.5.0"
     },
     "packageManager": "pnpm@9.10.0",
     "engines": {

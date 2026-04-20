@@ -1,9 +1,10 @@
-import { getBlogPostsFromRequest } from '@repo/shared/utils/ghost-blog';
-import { NextResponse } from 'next/server';
+import { fetchBlogPostsFromQuery } from '@repo/shared/utils/ghost-blog';
+import { type NextRequest, NextResponse } from 'next/server';
 export const revalidate = 14400;
-export async function GET(req: Request) {
+export async function GET(req: NextRequest) {
+    const searchParams = req.nextUrl.searchParams;
     try {
-        const posts = await getBlogPostsFromRequest(req);
+        const posts = await fetchBlogPostsFromQuery(searchParams);
         return NextResponse.json(posts);
     } catch (error) {
         console.error('error fetching ghost posts', error);

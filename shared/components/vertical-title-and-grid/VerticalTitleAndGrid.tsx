@@ -1,6 +1,5 @@
 import { IconContent, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '../two-columns-template';
-import React from 'react';
 
 interface VerticalTitleAndGridProps {
     verticalTitle: React.ComponentProps<typeof VerticalTitle>;

@@ -3,10 +3,10 @@ import {
     CardShowcase,
     checkInvalidImageUrlsAndRevalidate,
     revalidateProjectsAPI,
+    PROJECT_VIEWS,
 } from '@repo/shared/utils';
 import { useEffect, useState } from 'react';
 import { SliderImageCardSkeleton } from '@repo/shared/components';
-import { PROJECT_VIEWS } from '@repo/shared/utils';
 import { ProjectsSlider } from './ProjectsSlider';
 
 export function FetchProjectsSlider() {

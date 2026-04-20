@@ -2,7 +2,6 @@
 
 import { Hero as HeroComponent } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import Link from 'next/link';
 import { HERO_PURPOSE_ANCHORLINKS, HERO_PURPOSE_BG, HERO_PURPOSE_CONTENT } from './constants';
 import { HeroType } from 'react-ui-kit';
 
@@ -12,7 +11,6 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
             <HeroComponent
                 verticalTitle={HERO_PURPOSE_CONTENT}
                 anchorLinks={HERO_PURPOSE_ANCHORLINKS}
-                linkComponent={Link}
                 type={HeroType.Large}
                 background={HERO_PURPOSE_BG}
             />

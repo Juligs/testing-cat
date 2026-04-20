@@ -4,7 +4,7 @@ import {
     INVERTED_SECONDARY_TEXT_COLOR,
     SUBTITLE_SIZE,
 } from '../title.constants';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface SubtitleProps {
     /*

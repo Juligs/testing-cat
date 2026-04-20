@@ -38,6 +38,7 @@ export type HistoricalDataMinimal = {
 async function micaFetch<T>(path: string, init?: RequestInit): Promise<T> {
     const res = await fetch(`${MICA_BASE_URL}${path}`, {
         ...init,
+        next: { revalidate: 14400 },
         headers: {
             'Content-Type': 'application/json',
             ...(init?.headers ?? {}),

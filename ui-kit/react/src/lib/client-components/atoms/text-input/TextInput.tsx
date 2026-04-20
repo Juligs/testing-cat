@@ -12,7 +12,7 @@ import {
     INPUT_BORDER_DISABLED,
     INPUT_BORDER_DISABLED_INVERTED,
 } from './textInput.constants';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { Close } from '@repo/icons';
 
 interface TextInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {

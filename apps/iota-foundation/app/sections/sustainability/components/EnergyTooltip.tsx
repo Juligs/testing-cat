@@ -5,7 +5,7 @@ import { EnergyItem } from '../subsections/ComparisonOfElectricityChart';
 
 type EnergyTooltipProps = {
     item: EnergyItem;
-    tooltipRef: React.RefObject<HTMLDivElement>;
+    tooltipRef: React.RefObject<HTMLDivElement | null>;
     style?: React.CSSProperties;
 };
 

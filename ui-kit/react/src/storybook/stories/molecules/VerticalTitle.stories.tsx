@@ -7,7 +7,7 @@ import {
     TitleTextSize,
 } from '@lib/server-components';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<typeof VerticalTitle> = {
     component: VerticalTitle,

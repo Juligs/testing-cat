@@ -6,7 +6,7 @@ import {
     INVERTED_LIGHT_BG_COLOR,
     INVERTED_BG_COLOR,
 } from './badge.contants';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface BadgeProps {
     /**

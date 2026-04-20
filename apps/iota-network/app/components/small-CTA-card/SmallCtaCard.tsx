@@ -23,7 +23,7 @@ export function SmallCtaCard({
     inverted,
     imgSizes,
     smallGap,
-}: SmallCtaCardProps): JSX.Element {
+}: SmallCtaCardProps): React.JSX.Element {
     return (
         <div
             className={clsx(

@@ -8,7 +8,7 @@ export function VerticalTitleWithAnchorLinks({
     title,
     subtitle,
     content,
-}: VerticalTitleWithAnchorLinksProps): JSX.Element {
+}: VerticalTitleWithAnchorLinksProps): React.JSX.Element {
     return (
         <div className="container py-14 xs:py-20 lg:py-30 flex flex-col md:flex-row justify-between text-center gap-14 xs:items-center w-full">
             <div className="md:w-1/2 xl:w-2/5 shrink-0">

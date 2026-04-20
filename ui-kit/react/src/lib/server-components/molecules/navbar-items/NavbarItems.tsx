@@ -1,5 +1,5 @@
 import { Close, MenuColapsed } from '@repo/icons';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface NavbarItemsProps {
     isMobileNavOpen: boolean;

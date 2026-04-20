@@ -19,20 +19,14 @@ const cspHeader = `
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-    experimental: {
-        mdxRs: true,
-        turbo: {
-            resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
-            rules: {
-                '*.scss': {
-                    loaders: ['sass-loader'],
-                    as: '*.css',
-                },
-            },
-        },
+    turbopack: {
+        resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
     },
     images: {
-        domains: ['v5.airtableusercontent.com', 'files.iota.org'],
+        remotePatterns: [
+            { protocol: 'https', hostname: 'v5.airtableusercontent.com' },
+            { protocol: 'https', hostname: 'files.iota.org' },
+        ],
     },
     async headers() {
         return [

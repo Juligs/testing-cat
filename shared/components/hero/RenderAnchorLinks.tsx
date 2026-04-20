@@ -1,4 +1,3 @@
-import React from 'react';
 import { AnchorLink } from 'react-ui-kit';
 import { LinkProps } from './RenderButtons';
 

@@ -15,14 +15,15 @@
         "lint": "pnpm run eslint:check && pnpm run prettier:check",
         "lint:fix": "pnpm run eslint:fix && pnpm run prettier:fix"
     },
-    "dependencies": {
+    "devDependencies": {
         "@svgr/cli": "^8.1.0",
         "@svgr/core": "^8.1.0",
-        "@types/react": "^18",
+        "@types/react": "^19",
+        "react": "19.2.4",
         "rimraf": "^6.0.1",
-        "typescript": "^5.6.2"
+        "typescript": "^5.5.0"
     },
     "peerDependencies": {
-        "react": "^18.3.1"
+        "react": "^18 || ^19"
     }
 }

@@ -1,8 +1,6 @@
 import { ArrowTopRight } from '@repo/icons';
-import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { FetchGrantsStatsData } from '@repo/shared/sections';
-import { GrantsCarouselSkeleton } from '@repo/shared/components';
-import { FetchGrantsSliderData } from '@repo/shared/sections';
+import { TwoColumnsImageTemplate, GrantsCarouselSkeleton } from '@repo/shared/components';
+import { FetchGrantsStatsData, FetchGrantsSliderData } from '@repo/shared/sections';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { Actions, Button, ButtonVariant, TitleTextSize, VerticalTitle } from 'react-ui-kit';

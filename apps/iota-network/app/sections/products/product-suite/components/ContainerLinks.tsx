@@ -2,7 +2,7 @@ import { IotaToken } from '@repo/icons';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { TextLink } from 'react-ui-kit';
-interface Link {
+interface LinkItem {
     text: string;
     link: string;
     isExternal?: boolean;
@@ -11,7 +11,7 @@ interface Link {
 interface Block {
     sectionLabel: string;
     sectionTitle: string;
-    links: Link[];
+    links: LinkItem[];
 }
 
 interface ContainerLinksProps {

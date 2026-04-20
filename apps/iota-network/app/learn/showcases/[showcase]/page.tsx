@@ -6,30 +6,40 @@ import { ShowcasesFrame } from '@sections/learn/showcases/ShowcasesFrame';
 import { getPageMetadata } from '@lib/utils';
 import type { Metadata } from 'next';
 import { BASE_URL, SHOWCASES_KEYWORDS } from '@lib/constants';
-import { ShowcaseProject } from '@sections/learn/showcases/showcasesProjects.enums';
 import { SHOWCASES } from '@sections/learn/showcases/constants/showcasesContent.constants';
 import {
     CUSTOM_TITLE_DPP_TRUST_FRAMEWORK,
     DppTrustFrameworkTeaser,
 } from '@components/dpp-trust-framework-teaser';
 import { redirect } from 'next/navigation';
-interface Props {
-    params: { showcase: ShowcaseProject };
+
+const getDefaultMetadata = (showcase?: string) =>
+    getPageMetadata({
+        title: 'IOTA Showcase',
+        description: 'Explore real-world projects powered by IOTA technologies.',
+        image: `${BASE_URL}/metadata/meta_image_home.png`,
+        path: `/learn/showcases/${showcase}`,
+        keywords: SHOWCASES_KEYWORDS,
+    });
+
+function isValidShowcase(showcase: string): showcase is keyof typeof SHOWCASES {
+    return Object.hasOwn(SHOWCASES, showcase);
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(
+    props: PageProps<'/learn/showcases/[showcase]'>,
+): Promise<Metadata> {
+    const params = await props.params;
     const showcase = params.showcase;
+
+    if (!isValidShowcase(showcase)) {
+        return getDefaultMetadata(showcase);
+    }
+
     const page = SHOWCASES[showcase];
     const data = page?.metadata;
-
     if (!data) {
-        return getPageMetadata({
-            title: 'IOTA Showcase',
-            description: 'Explore real-world projects powered by IOTA technologies.',
-            image: `${BASE_URL}/metadata/meta_image_home.png`,
-            path: `/learn/showcases/${showcase}`,
-            keywords: SHOWCASES_KEYWORDS,
-        });
+        return getDefaultMetadata(showcase);
     }
 
     return getPageMetadata({
@@ -43,12 +53,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     });
 }
 
-export default function ShowcasePage({ params }: Props) {
+export default async function ShowcasePage(props: PageProps<'/learn/showcases/[showcase]'>) {
+    const params = await props.params;
     const { showcase } = params;
 
-    const page = SHOWCASES[showcase];
-
-    if (!page) {
+    if (!isValidShowcase(showcase)) {
         return redirect('/learn/showcases');
     }
 

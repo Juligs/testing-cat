@@ -3,6 +3,7 @@ import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { DLT_INNOVATION_TITLE_CONTENT } from './constants';
+import Link from 'next/link';
 
 export function DLTInnovation({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -16,13 +17,13 @@ export function DLTInnovation({ id, navbarColorScheme }: BaseSectionProps) {
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...DLT_INNOVATION_TITLE_CONTENT}>
                             <Actions>
-                                <a href="/research/our-research" aria-label="Research">
+                                <Link href="/research/our-research" aria-label="Research">
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Research"
                                         icon={<ArrowTopRight />}
                                     />
-                                </a>
+                                </Link>
                             </Actions>
                         </VerticalTitle>
                     </div>

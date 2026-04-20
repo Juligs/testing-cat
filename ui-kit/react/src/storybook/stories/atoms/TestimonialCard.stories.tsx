@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TestimonialCard as TestimonialCardComponent } from '@lib/server-components';
 const meta: Meta<typeof TestimonialCardComponent> = {
     component: TestimonialCardComponent,

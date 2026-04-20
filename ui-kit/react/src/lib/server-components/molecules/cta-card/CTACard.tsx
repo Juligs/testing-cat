@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import {
     PADDING_SIZE,
     COLOR_TITLE,
@@ -78,7 +78,7 @@ export function CtaCard({
     alignStart,
     aspectVideo,
     small,
-}: CtaCardProps): JSX.Element {
+}: CtaCardProps): React.JSX.Element {
     const colorTitle = inverted ? COLOR_TITLE_INVERTED : COLOR_TITLE;
     const colorText = inverted ? COLOR_TEXT_INVERTED : COLOR_TEXT;
     const bgColor = brand

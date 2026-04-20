@@ -1,6 +1,6 @@
 import { Button, ButtonRadius, ButtonSize, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 
-interface SegmentedButtonItem extends React.ComponentProps<typeof Button> {}
+type SegmentedButtonItem = React.ComponentProps<typeof Button>;
 
 interface SectionTabsProps {
     content: SegmentedButtonItem[];

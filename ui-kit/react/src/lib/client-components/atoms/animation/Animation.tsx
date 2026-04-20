@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Lottie, { AnimationDirection, AnimationItem } from 'lottie-web';
 import { RendererType } from './animation.enums';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface AnimationProps {
     src: string;

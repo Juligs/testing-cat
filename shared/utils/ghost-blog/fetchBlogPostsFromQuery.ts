@@ -1,9 +1,7 @@
 import { sanitizeBlogPosts } from './getBlogPosts';
 import { ghostClient } from './ghostApiClient';
 
-export async function getBlogPostsFromRequest(req: Request) {
-    const { searchParams } = new URL(req.url);
-
+export async function fetchBlogPostsFromQuery(searchParams: URLSearchParams) {
     const source = (searchParams.get('source') as 'network' | 'labs') ?? 'network';
 
     const tagsParam = searchParams.get('tags');

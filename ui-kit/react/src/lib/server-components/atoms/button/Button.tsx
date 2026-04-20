@@ -10,7 +10,7 @@ import {
     BUTTON_BORDER_RADIUS,
 } from './button.constants';
 import { ButtonRadius, ButtonSize, ButtonVariant } from './button.enums';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 type HTMLButtonProps = Omit<
     React.ButtonHTMLAttributes<HTMLButtonElement>,

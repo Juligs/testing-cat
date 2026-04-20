@@ -3,18 +3,17 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { DPP_TRUST_FRAMEWORK_IMAGE_CARD_CONTENT } from './dppTrustFrameworkContent.constants';
 import Link from 'next/link';
 
-interface DppTrustFrameworkTeaserProps {
+type DppTrustFrameworkTeaserProps = BaseSectionProps & {
     productName?: string;
     customTitle?: string;
-}
-type DppTrustFrameworkTeaser = BaseSectionProps & DppTrustFrameworkTeaserProps;
+};
 
 export function DppTrustFrameworkTeaser({
     id,
     navbarColorScheme,
     productName,
     customTitle,
-}: DppTrustFrameworkTeaser) {
+}: DppTrustFrameworkTeaserProps) {
     return (
         <section id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-14 xs:py-20 lg:py-30">

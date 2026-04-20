@@ -2,7 +2,6 @@
 
 import { Hero as HeroComponent } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import Link from 'next/link';
 import {
     HERO_HOMEPAGE_ANCHORLINKS,
     HERO_HOMEPAGE_BG,
@@ -18,7 +17,6 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
                 verticalTitle={HERO_HOMEPAGE_CONTENT}
                 anchorLinks={HERO_HOMEPAGE_ANCHORLINKS}
                 buttons={HERO_HOMEPAGE_BUTTON}
-                linkComponent={Link}
                 type={HeroType.Large}
                 background={HERO_HOMEPAGE_BG}
             />

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TextInput, TextInputSize } from '@lib/client-components/atoms';
 import { getStoryEnumOptions } from 'src/storybook/utils';
 

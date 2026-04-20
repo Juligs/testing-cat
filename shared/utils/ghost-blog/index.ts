@@ -1,3 +1,3 @@
 export * from './getBlogPosts';
 export * from './ghostApiClient';
-export * from './getBlogPostsFromRequest';
+export * from './fetchBlogPostsFromQuery';

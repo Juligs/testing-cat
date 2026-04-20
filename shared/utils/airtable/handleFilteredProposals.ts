@@ -1,9 +1,11 @@
 import { fetchFilteredProposals } from '../airtable/fetchProposalsData';
+import { type NextRequest } from 'next/server';
 
-export async function handleFilteredProposals(request: Request) {
-    const { searchParams } = new URL(request.url);
-    const type = searchParams.get('type');
-    const slug = searchParams.get('slug');
+export async function handleFilteredProposals(req: NextRequest) {
+    const searchParams = req.nextUrl.searchParams;
+
+    const type = searchParams.get('type') || undefined;
+    const slug = searchParams.get('slug') || undefined;
 
     const filteredData = await fetchFilteredProposals();
     const keys = Object.keys(filteredData);

@@ -2,7 +2,7 @@ import { INVERTED_TEXT_COLOR, DEFAULT_TEXT_COLOR, TITLE_SIZE } from './title.con
 import { TitleTextSize } from './titleSize.enums';
 import { TitleTag } from './title.enums';
 import { HEADING_TO_SIZE, SIZE_TO_HEADING } from './title.maps';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface TitleProps {
     /*

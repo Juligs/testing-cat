@@ -1,6 +1,0 @@
-.eslintrc.cjs
-!.storybook
-storybook-static
-.turbo
-.vercel
-dist

@@ -1,8 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import { ImageCard } from 'react-ui-kit';
-import { Chip, ChipSize } from 'react-ui-kit';
+import { ImageCard, Chip, ChipSize } from 'react-ui-kit';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { Scrollbar, A11y, Pagination } from 'swiper/modules';

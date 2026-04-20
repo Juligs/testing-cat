@@ -42,7 +42,7 @@ export default defineConfig({
             root: __dirname,
         }),
         react(),
-        dts({ rollupTypes: true }),
+        dts({ rollupTypes: false }),
     ],
     css: {
         postcss: {

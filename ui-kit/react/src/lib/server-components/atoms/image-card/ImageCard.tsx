@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ImageCardSize } from './imageCard.enums';
 import {
     IMAGE_SIZE_CLASS,
@@ -83,7 +83,7 @@ export function ImageCard({
     alt,
     noAspectRatio,
     isHighlighted,
-}: ImageCardprops): JSX.Element {
+}: ImageCardprops): React.JSX.Element {
     const imageClass = IMAGE_SIZE_CLASS[size];
     const gapClass = GAP_SIZE_CLASS[size];
     const texMedium = inverted ? TEXT_COLOR_MEDIUM_INVERTED : TEXT_COLOR_MEDIUM;

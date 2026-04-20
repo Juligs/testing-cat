@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { Hero as HeroComponent } from '@repo/shared/components';
 import {
     HERO_TRUST_FRAMEWORK_ANCHORLINKS,
@@ -18,7 +17,6 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
                 background={HERO_TRUST_FRAMEWORK_BG}
                 anchorLinks={HERO_TRUST_FRAMEWORK_ANCHORLINKS}
                 buttons={HERO_TRUST_FRAMEWORK_BUTTON}
-                linkComponent={Link}
                 isAnchorLinksDesktopInverted
             />
         </section>

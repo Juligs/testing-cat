@@ -1,8 +1,4 @@
 import nextMDX from '@next/mdx';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 const withMDX = nextMDX({});
 
@@ -24,44 +20,8 @@ const cspHeader = `
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-    experimental: {
-        mdxRs: true,
-        turbo: {
-            resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
-            rules: {
-                '*.scss': {
-                    loaders: ['sass-loader'],
-                    as: '*.css',
-                },
-            },
-        },
-    },
-    webpack: (config) => {
-        const __filename = fileURLToPath(import.meta.url);
-        const __dirname = path.dirname(__filename);
-
-        const src = path.join(__dirname, '../../shared/public/assets');
-        const dest = path.join(__dirname, './public/shared/shared-assets');
-
-        config.plugins.push(
-            new CleanWebpackPlugin({
-                cleanOnceBeforeBuildPatterns: [dest],
-            }),
-        );
-
-        config.plugins.push(
-            new CopyWebpackPlugin({
-                patterns: [
-                    {
-                        from: src,
-                        to: dest,
-                        force: true,
-                    },
-                ],
-            }),
-        );
-
-        return config;
+    turbopack: {
+        resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
     },
     async headers() {
         return [

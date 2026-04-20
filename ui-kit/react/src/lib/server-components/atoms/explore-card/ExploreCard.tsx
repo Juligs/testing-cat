@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ArrowTopRight } from '@repo/icons';
 import { ExploreCardSize } from './exploreCard.enums';
 import {

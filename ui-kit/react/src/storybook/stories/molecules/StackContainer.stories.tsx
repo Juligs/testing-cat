@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { StackContainer as StackContainerComponent } from '@lib/server-components/molecules';
 import { TextLink } from '@lib/server-components';
 import { Placeholder } from '@repo/icons';

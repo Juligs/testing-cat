@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ChipSize } from './chip.enums';
 import {
     DEFAULT_TEXT_COLOR,

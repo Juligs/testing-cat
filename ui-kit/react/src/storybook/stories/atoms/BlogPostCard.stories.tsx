@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { BlogPostCard as BlogPostCardComponent, Badge } from '@lib/server-components/atoms';
 
 const meta: Meta<typeof BlogPostCardComponent> = {

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ImageCard, TextLink } from '@lib/server-components/atoms';
 import { getStoryEnumOptions } from 'src/storybook/utils';
 import { ImageCardSize } from '@lib/server-components/atoms/image-card/imageCard.enums';

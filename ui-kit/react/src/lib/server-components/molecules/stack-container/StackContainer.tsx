@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import {
     BG_COLOR,
     BG_COLOR_INVERTED,
@@ -42,7 +42,7 @@ export function StackContainer({
     children,
     column,
     highlighted,
-}: StackContainerProps): JSX.Element {
+}: StackContainerProps): React.JSX.Element {
     const bgColors = highlighted ? (inverted ? '' : '') : inverted ? BG_COLOR_INVERTED : BG_COLOR;
 
     const textColor = inverted ? TEXT_COLOR_INVERTED : TEXT_COLOR;

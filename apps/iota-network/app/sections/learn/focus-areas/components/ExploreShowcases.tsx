@@ -1,5 +1,5 @@
 import { TextLink } from 'react-ui-kit';
-import React from 'react';
+
 import { SmallCtaCard } from '@components/small-CTA-card/SmallCtaCard';
 import Link from 'next/link';
 import { ShowcaseProject } from '@sections/learn/showcases/showcasesProjects.enums';
@@ -8,7 +8,7 @@ import { SHOWCASES } from '@sections/learn/showcases/constants/showcasesContent.
 interface ExploreShowcasesProps {
     showcases: ShowcaseProject[];
 }
-export function ExploreShowcases({ showcases }: ExploreShowcasesProps): JSX.Element {
+export function ExploreShowcases({ showcases }: ExploreShowcasesProps): React.JSX.Element {
     const showcaseCards = showcases
         .filter((e) => e in SHOWCASES && SHOWCASES[e].card)
         .map((e) => ({

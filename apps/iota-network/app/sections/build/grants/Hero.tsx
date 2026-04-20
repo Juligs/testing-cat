@@ -1,7 +1,6 @@
 import { Hero as HeroComponent } from '@repo/shared/components';
 import { HERO_GRANTS_CONTENT, HERO_GRANTS_BG, HERO_GRANTS_BUTTONS } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import Link from 'next/link';
 
 export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -11,7 +10,6 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
                 background={HERO_GRANTS_BG}
                 isAnchorLinksDesktopInverted
                 buttons={HERO_GRANTS_BUTTONS}
-                linkComponent={Link}
             />
         </section>
     );

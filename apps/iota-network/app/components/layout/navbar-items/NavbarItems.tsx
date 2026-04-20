@@ -2,7 +2,6 @@
 
 import clsx from 'clsx';
 import Link from 'next/link';
-import React from 'react';
 
 import { CTASection, MenuRow, NavbarGroupItem, type VerticalSection } from '../layout.interfaces';
 import { TextLink } from 'react-ui-kit';

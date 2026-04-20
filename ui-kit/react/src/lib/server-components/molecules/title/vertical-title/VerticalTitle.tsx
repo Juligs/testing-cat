@@ -3,7 +3,7 @@ import { Overline, Subtitle, Body } from '.';
 import { TitleTag } from '../title.enums';
 import { Title } from '../Title';
 import { TITLE_VERTICAL_GAP, GAP_CHILDREN } from '../title.constants';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface VerticalTitleProps {
     /**

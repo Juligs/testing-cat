@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { TextSize, CardSize } from './displayStats.enums';
 import {
     DEFAULT_BG_COLOR,

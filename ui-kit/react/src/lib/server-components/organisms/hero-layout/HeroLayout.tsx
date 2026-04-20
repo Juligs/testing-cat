@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { HERO_GRADIENT_BG_COLOR, HERO_TYPE } from './hero.contants';
 import { HeroType } from './hero.enums';
 interface HeroProps {

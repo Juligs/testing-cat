@@ -1,4 +1,3 @@
-import React from 'react';
 import { CtaCard } from 'react-ui-kit';
 
 export const MEMBERSHIP_CTA_CARD: React.ComponentProps<typeof CtaCard> = {

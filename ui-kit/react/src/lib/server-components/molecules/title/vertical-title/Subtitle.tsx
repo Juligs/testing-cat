@@ -4,7 +4,7 @@ import {
     SUBTITLE_SIZE,
 } from '../title.constants';
 import { TitleTextSize } from '../titleSize.enums';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 interface SubtitleProps {
     /*

@@ -35,7 +35,7 @@ export function AreaGraph<D>({
     getX,
     getY,
     tooltipContent,
-}: AreaGraphProps<D>): JSX.Element | null {
+}: AreaGraphProps<D>): React.JSX.Element | null {
     const graphTop = 1;
     const graphBottom = Math.max(0, height - 30);
     const graphLeft = 30;
@@ -107,7 +107,7 @@ export function AreaGraph<D>({
     const [handleTooltipThrottled, setHandleTooltipThrottled] =
         useState<ReturnType<typeof throttle>>();
 
-    const handleTooltipThrottledRef = useRef<ReturnType<typeof throttle>>();
+    const handleTooltipThrottledRef = useRef<ReturnType<typeof throttle> | undefined>(undefined);
 
     useEffect(() => {
         handleTooltipThrottledRef.current = throttle(100, handleTooltip);

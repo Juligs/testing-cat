@@ -1,9 +1,5 @@
 import nextMDX from '@next/mdx';
 import { REDIRECTIONS } from './config/redirections.mjs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const withMDX = nextMDX({});
 
@@ -25,47 +21,14 @@ const cspHeader = `
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-    experimental: {
-        mdxRs: true,
-        turbo: {
-            resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
-            rules: {
-                '*.scss': {
-                    loaders: ['sass-loader'],
-                    as: '*.css',
-                },
-            },
-        },
+    turbopack: {
+        resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
     },
     images: {
-        domains: ['v5.airtableusercontent.com', 'files.iota.org'],
-    },
-    webpack: (config) => {
-        const __filename = fileURLToPath(import.meta.url);
-        const __dirname = path.dirname(__filename);
-
-        const src = path.join(__dirname, '../../shared/public/assets');
-        const dest = path.join(__dirname, './public/shared/shared-assets');
-
-        config.plugins.push(
-            new CleanWebpackPlugin({
-                cleanOnceBeforeBuildPatterns: [dest],
-            }),
-        );
-
-        config.plugins.push(
-            new CopyWebpackPlugin({
-                patterns: [
-                    {
-                        from: src,
-                        to: dest,
-                        force: true,
-                    },
-                ],
-            }),
-        );
-
-        return config;
+        remotePatterns: [
+            { protocol: 'https', hostname: 'v5.airtableusercontent.com' },
+            { protocol: 'https', hostname: 'files.iota.org' },
+        ],
     },
     async redirects() {
         return REDIRECTIONS;

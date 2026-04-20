@@ -1,4 +1,3 @@
-import React from 'react';
 import { TitleTextSize, VerticalTitle } from 'react-ui-kit';
 import { Animation } from 'react-ui-kit/client';
 

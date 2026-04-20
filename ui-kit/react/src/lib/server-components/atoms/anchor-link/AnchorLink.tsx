@@ -1,4 +1,3 @@
-import React from 'react';
 import { AnchorLinkSize } from './anchorLink.enums';
 import {
     INVERTED_TEXT_COLOR,
@@ -17,7 +16,7 @@ import {
     ANCHOR_LINK_ICON_LEADING_ICON,
     TEXT_SIZE,
 } from './anchorLink.constants';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { LineArrowSmall, OutboundLink } from '@repo/icons';
 
 interface AnchorLinkProps {

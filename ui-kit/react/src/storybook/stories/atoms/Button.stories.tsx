@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button, ButtonRadius, ButtonSize, ButtonVariant } from '@lib/server-components/atoms';
 import { ArrowTopRight } from '@repo/icons';
 import { getStoryEnumOptions } from 'src/storybook/utils';

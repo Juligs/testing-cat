@@ -8,7 +8,6 @@ import {
     GAS_STATION_BUTTONS,
 } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import Link from 'next/link';
 
 export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,7 +18,6 @@ export function Hero({ id, navbarColorScheme }: BaseSectionProps) {
                 anchorLinks={GAS_STATION_ANCHORLINKS}
                 isAnchorLinksDesktopInverted
                 buttons={GAS_STATION_BUTTONS}
-                linkComponent={Link}
             />
         </section>
     );

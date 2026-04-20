@@ -1,4 +1,4 @@
-import { Decorator, ReactRenderer } from '@storybook/react';
+import { Decorator, ReactRenderer } from '@storybook/react-vite';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import '../src/lib/styles/storybook.css';
 import '../src/lib/styles/index.css';

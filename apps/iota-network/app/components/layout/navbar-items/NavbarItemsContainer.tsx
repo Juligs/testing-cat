@@ -1,4 +1,3 @@
-import React from 'react';
 import { Close, MenuColapsed } from '@repo/icons';
 
 import type { NavbarGroupItem } from '../layout.interfaces';

@@ -1,5 +1,6 @@
 import { FetchProposalsPage } from '@repo/shared/sections';
 
-export default function ProposalPage({ params }: { params: { slug: string } }) {
+export default async function ProposalPage(props: { params: Promise<{ slug: string }> }) {
+    const params = await props.params;
     return <FetchProposalsPage rawSlug={params.slug} />;
 }

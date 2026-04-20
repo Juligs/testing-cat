@@ -1,5 +1,5 @@
-import React from 'react';
-import { Meta, Title, IconGallery, IconItem } from '@storybook/blocks';
+import { createElement } from 'react';
+import { Meta, Title, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
 import * as Icons from '@repo/icons';
 
 <Meta title="Design Tokens/Icon Gallery" />
@@ -11,7 +11,7 @@ import * as Icons from '@repo/icons';
 <IconGallery>
     {Object.keys(Icons).map((icon) => (
         <IconItem key={icon} name={icon}>
-            {React.createElement(Icons[icon])}
+            {createElement(Icons[icon])}
         </IconItem>
     ))}
 </IconGallery>

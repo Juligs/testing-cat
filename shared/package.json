@@ -9,20 +9,23 @@
         "@repo/icons": "workspace:*",
         "@tryghost/content-api": "^1.12.2",
         "airtable": "^0.12.2",
-        "next": "14.2.35",
+        "clsx": "^2.1.1",
+        "react-markdown": "^10.1.0",
         "react-ui-kit": "workspace:*",
-        "swiper": "^12.1.2",
-        "react-markdown": "^10.1.0"
-    },
-    "peerDependencies": {
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "swiper": "^12.1.2"
     },
     "devDependencies": {
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
-        "clsx": "^2.1.1",
-        "eslint": "^8.57.1",
-        "eslint-config-next": "14.2.6"
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9.0.0",
+        "eslint-config-next": "16.1.6",
+        "next": "16.1.6",
+        "react": "19.2.4",
+        "react-dom": "19.2.4"
+    },
+    "peerDependencies": {
+        "next": "^16",
+        "react": "^18 || ^19",
+        "react-dom": "^18 || ^19"
     }
 }

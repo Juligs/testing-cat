@@ -12,6 +12,7 @@ import {
 import { RenderAnchorLinks } from './RenderAnchorLinks';
 import { LinkProps, RenderButtons } from './RenderButtons';
 import { HeroAlignment } from './hero.enums';
+import Link from 'next/link';
 
 interface HeroProps {
     verticalTitle: React.ComponentProps<typeof VerticalTitle>;
@@ -24,7 +25,6 @@ interface HeroProps {
     }[];
     isAnchorLinksMobileInverted?: boolean;
     isAnchorLinksDesktopInverted?: boolean;
-    linkComponent?: (props: LinkProps) => React.ReactNode;
     image?: string | null;
     buttons?: (React.ComponentProps<typeof Button> & {
         link: string;
@@ -37,7 +37,6 @@ interface HeroProps {
 export function Hero({
     type = HeroType.Default,
     anchorLinks,
-    linkComponent,
     image,
     buttons,
     isAnchorLinksMobileInverted,
@@ -68,14 +67,6 @@ export function Hero({
             window.removeEventListener('orientationchange', updateHeight);
         };
     }, []);
-
-    const Link = linkComponent
-        ? linkComponent
-        : ({ href, children, ...rest }: PropsWithChildren<LinkProps>) => (
-              <a href={href as string} {...rest}>
-                  {children}
-              </a>
-          );
 
     const { size: verticalTitleSize, ...verticalTitleProps } = verticalTitle;
 
