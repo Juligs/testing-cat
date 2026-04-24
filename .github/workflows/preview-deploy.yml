@@ -76,13 +76,42 @@ jobs:
 
                   echo "apps=[$(IFS=,; echo "${apps[*]}")]" >> $GITHUB_OUTPUT
 
-    deploy:
+    deploy-iotalabs:
+        name: Preview Deploy / IOTALABS
         needs: detect
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                app: [iotalabs, iota-network, iota-foundation, react-ui-kit]
-        steps:
-            - name: Deploy ${{ matrix.app }}
-              if: contains(fromJSON(needs.detect.outputs.affected), matrix.app)
-              run: echo "Deploying ${{ matrix.app }} (preview)"
+        if: contains(fromJSON(needs.detect.outputs.affected), 'iotalabs')
+        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
+        with:
+            APP_ID: iotalabs
+            PRODUCTION: false
+        secrets: inherit
+
+    deploy-iota-network:
+        name: Preview Deploy / IOTA Network
+        needs: detect
+        if: contains(fromJSON(needs.detect.outputs.affected), 'iota-network')
+        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
+        with:
+            APP_ID: iota-network
+            PRODUCTION: false
+        secrets: inherit
+
+    deploy-iota-foundation:
+        name: Preview Deploy / IOTA Foundation
+        needs: detect
+        if: contains(fromJSON(needs.detect.outputs.affected), 'iota-foundation')
+        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
+        with:
+            APP_ID: iota-foundation
+            PRODUCTION: false
+        secrets: inherit
+
+    deploy-react-ui-kit:
+        name: Preview Deploy / React UI Kit
+        needs: detect
+        if: contains(fromJSON(needs.detect.outputs.affected), 'react-ui-kit')
+        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
+        with:
+            APP_ID: react-ui-kit
+            PRODUCTION: false
+        secrets: inherit
