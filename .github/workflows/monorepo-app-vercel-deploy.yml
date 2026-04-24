@@ -25,7 +25,7 @@ env:
     VERCEL_ENVIRONMENT: ${{ inputs.PRODUCTION && 'production' || 'preview' }}
 
 concurrency:
-    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    group: ${{ github.workflow }}-${{ inputs.APP_NAME }}-${{ github.event.pull_request.number || github.ref }}
     cancel-in-progress: ${{ inputs.PRODUCTION != true }}
 
 jobs:
