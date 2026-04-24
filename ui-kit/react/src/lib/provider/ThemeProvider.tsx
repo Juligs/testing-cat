@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 import { Theme } from '../enums/theme.enums';
 
 interface ThemeContextProps {
@@ -17,10 +17,6 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({ children, initialTheme }: ThemeProviderProps) {
     const [theme, setTheme] = useState<Theme>(initialTheme);
-
-    useEffect(() => {
-        document.documentElement.className = theme;
-    }, [theme]);
 
     return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
 }

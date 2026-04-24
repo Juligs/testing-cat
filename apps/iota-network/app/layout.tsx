@@ -3,11 +3,13 @@ import { Navigation } from './components/layout/navigation';
 import { Metadata } from 'next';
 import { ContextProviders } from './providers';
 import { getPageMetadata } from '@lib/utils';
-import { FontLinks } from './components/font-links';
+import { FontLinks } from '@repo/shared/components/font-links';
+import { Theme } from 'react-ui-kit';
 import './globals.css';
 import { items } from './lib/constants/navbarRoutes.constants';
 
 export const metadata: Metadata = getPageMetadata({});
+const APP_THEME = Theme.Network;
 
 interface RootLayoutProps {
     children: React.ReactNode;
@@ -15,10 +17,10 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
-        <html lang="en">
+        <html lang="en" className={APP_THEME}>
+            <FontLinks />
             <body>
-                <FontLinks />
-                <ContextProviders>
+                <ContextProviders initialTheme={APP_THEME}>
                     <Navigation items={items} />
                     {children}
                     <Footer />

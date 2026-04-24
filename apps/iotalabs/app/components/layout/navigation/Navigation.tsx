@@ -18,7 +18,10 @@ interface SectionInfo {
 }
 
 export function Navigation({ items }: NavigationProps) {
-    const [activeSection, setActiveSection] = useState<SectionInfo>({ id: null, theme: null });
+    const [activeSection, setActiveSection] = useState<SectionInfo>({
+        id: 'hero',
+        theme: 'inverted',
+    });
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
     const currentPath = usePathname();
 
