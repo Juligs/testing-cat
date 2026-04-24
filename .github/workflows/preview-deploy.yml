@@ -37,11 +37,17 @@ jobs:
                   node-version: '20'
                   cache: 'pnpm'
 
+            - name: Fetch base branch
+              if: ${{ github.event_name == 'pull_request' }}
+              run: git fetch origin ${{ github.base_ref }}:refs/remotes/origin/${{ github.base_ref }}
+
             - name: Detect affected apps
               id: affected
               env:
                   EVENT_NAME: ${{ github.event_name }}
                   DISPATCH_APP: ${{ inputs.app }}
+                  TURBO_SCM_BASE: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || '' }}
+                  TURBO_SCM_HEAD: ${{ github.sha }}
               run: |
                   APPS='["iotalabs","iota-network","iota-foundation","react-ui-kit"]'
 
