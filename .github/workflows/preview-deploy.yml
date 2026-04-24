@@ -46,8 +46,6 @@ jobs:
               env:
                   EVENT_NAME: ${{ github.event_name }}
                   DISPATCH_APP: ${{ inputs.app }}
-                  TURBO_SCM_BASE: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || '' }}
-                  TURBO_SCM_HEAD: ${{ github.sha }}
               run: |
                   APPS='["iotalabs","iota-network","iota-foundation","react-ui-kit"]'
 
@@ -58,7 +56,7 @@ jobs:
                         apps=$(echo "$APPS" | jq -c --arg app "$DISPATCH_APP" '[.[] | select(. == $app)]')
                     fi
                   else
-                    affected=$(pnpm dlx turbo@2.9.6 query affected --packages $(echo "$APPS" | jq -r '.[]' | xargs))
+                    affected=$(pnpm dlx turbo@2.9.6 query affected --base "origin/${{ github.base_ref }}" --head "${{ github.sha }}" --packages $(echo "$APPS" | jq -r '.[]' | xargs))
                     apps=$(echo "$affected" | jq -c '[.data.affectedPackages.items[].name]')
                   fi
 
