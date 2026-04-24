@@ -41,9 +41,19 @@ jobs:
                       exit 0
                   fi
 
+                  if [ -z "${BASE_SHA}" ]; then
+                      echo "BASE_SHA is empty — marking all apps as affected."
+                      echo 'apps=["iotalabs","iota-network","iota-foundation","react-ui-kit"]' >> $GITHUB_OUTPUT
+                      exit 0
+                  fi
+
+                  echo "Comparing against base: ${BASE_SHA}"
+
                   apps=()
                   for pkg in iotalabs iota-network iota-foundation react-ui-kit; do
-                      count=$(pnpm exec turbo query affected --packages "${pkg}" --base "${BASE_SHA}" | jq '.data.affectedPackages.length')
+                      raw=$(pnpm exec turbo query affected --packages "${pkg}" --base "${BASE_SHA}")
+                      count=$(echo "$raw" | jq '.data.affectedPackages.length')
+                      echo "${pkg}: ${count} affected packages"
                       if [ "$count" -gt 0 ]; then
                           apps+=("\"${pkg}\"")
                       fi
@@ -57,8 +67,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                app: [iotalabs, iota-network, iota-foundation, react-ui-kit]
+                app: ${{ fromJSON(needs.detect.outputs.affected) }}
         steps:
             - name: Deploy ${{ matrix.app }}
-              if: contains(fromJSON(needs.detect.outputs.affected), matrix.app)
               run: echo "Deploying ${{ matrix.app }} (preview)"
