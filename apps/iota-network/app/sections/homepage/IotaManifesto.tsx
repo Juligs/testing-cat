@@ -9,7 +9,7 @@ import { SmallCtaCard } from '@components/small-CTA-card/SmallCtaCard';
 export function IotaManifesto({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section className="w-full" id={id} data-navbar-color-scheme={navbarColorScheme}>
-            <div className="container py-14 sm:py-20 lg:py-30 flex justify-center items-center flex-col gap-14 xs:gap-20 w-full">
+            <div className="container py-20 lg:py-30 flex justify-center items-center flex-col gap-14 xs:gap-20 w-full">
                 <TwoColumnsImageTemplate image="/homepage/why-iota/manifesto.png">
                     <div className="sm:pr-[92px] lg:pr-[102px] text-center">
                         <VerticalTitle {...IOTA_MANIFESTO_VERTICAL_TITLE}>
