@@ -3,7 +3,9 @@
 @import 'tailwindcss/utilities';
 
 @import 'react-ui-kit/dist/style.css';
-
+a {
+    text-decoration: none;
+}
 html,
 body {
     width: 100%;
