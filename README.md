@@ -23,8 +23,8 @@ Monorepo powering the IOTA web presence — built with [Next.js](https://nextjs.
 
 ## Requirements
 
--   **Node** >= 18
--   **pnpm** 9.10.0 — install with `npm i -g pnpm@9.10.0`
+- **Node** >= 18
+- **pnpm** 9.10.0 — install with `npm i -g pnpm@9.10.0`
 
 ## Getting Started
 

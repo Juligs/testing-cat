@@ -17,27 +17,27 @@ The grants program supports bold innovators building next-generation dApps and b
 
 Focus areas for funding include:
 
--   Open-source tooling and developer infrastructure
--   dApps and applications on IOTA Mainnet
--   Educational resources and community content
--   Research and technical exploration
--   Real-world adoption use cases in the Trust Framework focus areas
+- Open-source tooling and developer infrastructure
+- dApps and applications on IOTA Mainnet
+- Educational resources and community content
+- Research and technical exploration
+- Real-world adoption use cases in the Trust Framework focus areas
 
 ## Funding Guidelines
 
 Grants are targeted for maximum impact. The program prioritizes projects that:
 
--   Build on or extend the IOTA Mainnet (Layer 1)
--   Produce reusable, open-source outcomes
--   Have a proven team with relevant track record
--   Align with IOTA's focus areas (identity, supply chain, circular economy, DeFi)
+- Build on or extend the IOTA Mainnet (Layer 1)
+- Produce reusable, open-source outcomes
+- Have a proven team with relevant track record
+- Align with IOTA's focus areas (identity, supply chain, circular economy, DeFi)
 
 Projects that are not eligible:
 
--   Private instances without integration to IOTA Mainnet
--   EVM-only deployments without Layer 1 connection
--   Speculative DeFi without real-world application
--   Solo builders without team structure
+- Private instances without integration to IOTA Mainnet
+- EVM-only deployments without Layer 1 connection
+- Speculative DeFi without real-world application
+- Solo builders without team structure
 
 ## How to Apply
 
@@ -53,5 +53,5 @@ Applying is straightforward:
 
 ## Learn More
 
--   Full grants information: https://iotalabs.io/grants
--   Apply now: https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form
+- Full grants information: https://iotalabs.io/grants
+- Apply now: https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form

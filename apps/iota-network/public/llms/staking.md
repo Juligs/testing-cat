@@ -41,36 +41,36 @@ The IOTA protocol issues staking rewards as token-based participation incentives
 
 Staking strengthens the network by:
 
--   Distributing consensus power across independent validators
--   Making the network more resilient against attacks
--   Reducing token concentration risk
+- Distributing consensus power across independent validators
+- Making the network more resilient against attacks
+- Reducing token concentration risk
 
 ## Exploring Validators
 
 Multiple tools are available to compare validators:
 
--   **IOTA Explorer** (https://explorer.iota.org): search by coin, NFT, package, object, or transaction
--   **IOTASCAN** (https://iotascan.com): view validator performances and compare commission rates
--   **Staking Rewards** (https://www.stakingrewards.com/asset/iota): reliable crypto staking information
--   **IOTA APY Calculator** (https://www.iotastaking.com): estimate potential staking rewards
+- **IOTA Explorer** (https://explorer.iota.org): search by coin, NFT, package, object, or transaction
+- **IOTASCAN** (https://iotascan.com): view validator performances and compare commission rates
+- **Staking Rewards** (https://www.stakingrewards.com/asset/iota): reliable crypto staking information
+- **IOTA APY Calculator** (https://www.iotastaking.com): estimate potential staking rewards
 
 ## Liquid Staking
 
 IOTA supports liquid staking through stIOTA:
 
--   Stake instantly via a swap-like interface
--   Receive stIOTA, a tradeable liquid staking token
--   Remain active in the IOTA ecosystem while earning staking rewards
--   Unstake instantly with no waiting period
--   Audited by Hacken for institutional-grade security
+- Stake instantly via a swap-like interface
+- Receive stIOTA, a tradeable liquid staking token
+- Remain active in the IOTA ecosystem while earning staking rewards
+- Unstake instantly with no waiting period
+- Audited by Hacken for institutional-grade security
 
 ## IOTA Wallet
 
 The IOTA Wallet is the primary interface for staking. It supports:
 
--   Delegating and undelegating stake
--   Viewing staking rewards
--   Managing digital assets
--   Accessing dApps
+- Delegating and undelegating stake
+- Viewing staking rewards
+- Managing digital assets
+- Accessing dApps
 
 Available as a browser extension and mobile app.

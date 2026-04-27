@@ -15,20 +15,20 @@ Teams building on IOTA can register their project to gain visibility and connect
 
 Teams building on IOTA Mainnet can submit their project for listing in the iotalabs projects directory.
 
--   Register a project: https://airtable.com/appQqzg74YoTqK3Ht/pagAntotjuYq5XNlT/form
+- Register a project: https://airtable.com/appQqzg74YoTqK3Ht/pagAntotjuYq5XNlT/form
 
 ## Ecosystem Context
 
 Projects listed on iotalabs.io/projects build on IOTA Mainnet (Layer 1, MoveVM). The ecosystem spans:
 
--   DeFi protocols and tokenized financial assets
--   Identity and credential management applications
--   Supply chain and trade digitization tools
--   Digital product passport implementations
--   Developer tooling and infrastructure
+- DeFi protocols and tokenized financial assets
+- Identity and credential management applications
+- Supply chain and trade digitization tools
+- Digital product passport implementations
+- Developer tooling and infrastructure
 
 ## Learn More
 
--   Projects directory: https://iotalabs.io/projects
--   Grants program: https://iotalabs.io/grants
--   IOTA documentation: https://docs.iota.org
+- Projects directory: https://iotalabs.io/projects
+- Grants program: https://iotalabs.io/grants
+- IOTA documentation: https://docs.iota.org

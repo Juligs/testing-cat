@@ -15,11 +15,11 @@ IOTA uses delegated Proof-of-Stake with independent validators to prevent double
 
 ### Key Properties
 
--   **Low latency**: quick confirmations through efficient consensus progress
--   **High throughput**: scalable parallel processing
--   **Fast finality**: quick irreversible confirmation
--   **Energy efficient**: BFT consensus without proof-of-work compute costs
--   **Secure and decentralized**: honest-majority validator security model
+- **Low latency**: quick confirmations through efficient consensus progress
+- **High throughput**: scalable parallel processing
+- **Fast finality**: quick irreversible confirmation
+- **Energy efficient**: BFT consensus without proof-of-work compute costs
+- **Secure and decentralized**: honest-majority validator security model
 
 ## Mysticeti: Current Mainnet Protocol
 
@@ -27,10 +27,10 @@ Mysticeti is the BFT consensus protocol currently running on IOTA Mainnet. It is
 
 ### Mysticeti Features
 
--   **Parallel block proposals**: multiple validators propose simultaneously to maximize bandwidth and improve censorship resistance
--   **Optimized voting**: parallel certification reduces median and tail latency
--   **Three-round finality**: blocks finalize in three rounds of communication
--   **Fault tolerance**: resilient even if some validators are offline or faulty
+- **Parallel block proposals**: multiple validators propose simultaneously to maximize bandwidth and improve censorship resistance
+- **Optimized voting**: parallel certification reduces median and tail latency
+- **Three-round finality**: blocks finalize in three rounds of communication
+- **Fault tolerance**: resilient even if some validators are offline or faulty
 
 The Mysticeti whitepaper is published at: https://arxiv.org/pdf/2310.14821
 

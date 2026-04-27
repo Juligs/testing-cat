@@ -13,10 +13,10 @@ The IOTA Foundation was founded in 2017 to develop a next-generation distributed
 
 IOTA's transparency, immutability, and secure data transfer capabilities have been fundamental to many collaborative projects across sectors:
 
--   **Mobility**: Gaia-X ROMS
--   **Data governance**: GOVS
--   **Smart meters**: SUSEE
--   **E-commerce**: ENSURESEC
+- **Mobility**: Gaia-X ROMS
+- **Data governance**: GOVS
+- **Smart meters**: SUSEE
+- **E-commerce**: ENSURESEC
 
 Key collaborations included organizations such as Volkswagen, Bosch, Fujitsu, TMForum, and Taipei City, Taiwan.
 
@@ -26,9 +26,9 @@ A critical step in IOTA's journey has been decentralizing its governance and eco
 
 Mature projects have been spun off into independent entities, allowing IOTA's core priorities to remain central:
 
--   Research
--   Protocol development
--   Regulatory advocacy
+- Research
+- Protocol development
+- Regulatory advocacy
 
 ## A Thriving Ecosystem
 
@@ -42,13 +42,13 @@ Two supporting entities help drive the adoption of IOTA tech and its token aroun
 
 A Swiss-based non-profit association supporting ecosystem development.
 
--   Website: https://tangle-association.ch/
+- Website: https://tangle-association.ch/
 
 ### IOTA Ecosystem DLT Foundation
 
 The first DLT foundation to be registered in Abu Dhabi Global Markets.
 
--   Website: https://iotadlt.foundation/
+- Website: https://iotadlt.foundation/
 
 ## Organization Structure
 

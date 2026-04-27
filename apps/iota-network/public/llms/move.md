@@ -51,20 +51,20 @@ Move is designed with security as a core principle, ensuring robust protection a
 
 IOTA enhances Move with:
 
--   Object-centric architecture where every asset is a first-class object
--   Programmable Transaction Blocks for efficient batch operations
--   Inherent NFT semantics without separate token standards
--   Native support for complex asset hierarchies and delegation
+- Object-centric architecture where every asset is a first-class object
+- Programmable Transaction Blocks for efficient batch operations
+- Inherent NFT semantics without separate token standards
+- Native support for complex asset hierarchies and delegation
 
 ## The Smart Contract Revolution
 
 Move represents a new standard for safe and reliable smart contracts:
 
--   **Inherently Secure**: security as a core design principle
--   **Naturally Intuitive**: accessible syntax for developers
--   **Flexible Design**: highly expressive framework for complex contracts
+- **Inherently Secure**: security as a core design principle
+- **Naturally Intuitive**: accessible syntax for developers
+- **Flexible Design**: highly expressive framework for complex contracts
 
 ## Getting Started
 
--   Docs: https://docs.iota.org/developer/iota-101/move-overview/
--   Move language overview: https://docs.iota.org/developer/iota-101/move-overview/
+- Docs: https://docs.iota.org/developer/iota-101/move-overview/
+- Move language overview: https://docs.iota.org/developer/iota-101/move-overview/

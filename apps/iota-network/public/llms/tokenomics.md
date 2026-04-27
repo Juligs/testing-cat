@@ -15,10 +15,10 @@ IOTA tokenomics are designed to create a sustainable, decentralized economy. The
 
 The native asset of the IOTA platform, facilitating various network operations and transactions. The IOTA token is used for:
 
--   Transaction fees (gas)
--   Storage deposits for on-chain objects
--   Staking to validators for consensus participation
--   Governance participation
+- Transaction fees (gas)
+- Storage deposits for on-chain objects
+- Staking to validators for consensus participation
+- Governance participation
 
 ### Low Gas Fees
 
@@ -32,10 +32,10 @@ Delegated Proof-of-Stake rewards honest validators and stakers. Token holders st
 
 IOTA ensures a sustainable equilibrium by offsetting inflation with deflation:
 
--   Validators earn fixed staking rewards per epoch
--   Transaction fees are burned
--   The minting rate is up to 767K IOTA per day
--   Supply growth is linear and capped validator power prevents concentration
+- Validators earn fixed staking rewards per epoch
+- Transaction fees are burned
+- The minting rate is up to 767K IOTA per day
+- Supply growth is linear and capped validator power prevents concentration
 
 ### Sponsored Transactions
 
@@ -45,18 +45,18 @@ Developers and businesses use IOTA Gas Station to cover their users' fees, enabl
 
 Three main participants interact in the IOTA economy:
 
--   **Users**: submit transactions to create, modify, and transfer digital assets, or interact with dApps enabled by smart contracts
--   **IOTA Token Holders**: can stake their tokens to validators, participating in the Proof-of-Stake consensus
--   **Validators**: process and execute transactions on the IOTA platform, ensuring the network's security and efficiency
+- **Users**: submit transactions to create, modify, and transfer digital assets, or interact with dApps enabled by smart contracts
+- **IOTA Token Holders**: can stake their tokens to validators, participating in the Proof-of-Stake consensus
+- **Validators**: process and execute transactions on the IOTA platform, ensuring the network's security and efficiency
 
 ## Technical Design
 
 The IOTA Delegated Proof-of-Stake design:
 
--   Aligns network security with user rewards
--   Uses automatic fee burning to offset inflation
--   Linear supply growth with capped validator power
--   Nano-level fee granularity keeps transactions affordable
+- Aligns network security with user rewards
+- Uses automatic fee burning to offset inflation
+- Linear supply growth with capped validator power
+- Nano-level fee granularity keeps transactions affordable
 
 For full technical details, see the IOTA Tokenomics paper at: https://docs.iota.org/about-iota/tokenomics/
 
@@ -64,10 +64,10 @@ For full technical details, see the IOTA Tokenomics paper at: https://docs.iota.
 
 IOTA supports liquid staking through stIOTA, the first liquid staking token on IOTA:
 
--   Staked assets remain accessible and tradable at all times
--   No lockups or waiting periods
--   Instantly stake and unstake
--   Audited by Hacken for institutional-grade security
+- Staked assets remain accessible and tradable at all times
+- No lockups or waiting periods
+- Instantly stake and unstake
+- Audited by Hacken for institutional-grade security
 
 ## Exchanges and Wallets
 

@@ -17,7 +17,7 @@ iotalabs is not IOTA Foundation. It is a separate entity focused on ecosystem gr
 
 The IOTA Grants program provides financial support for developers, researchers, and organizations building on IOTA Mainnet. Three funding tiers cover projects from small experiments up to large-scale initiatives.
 
--   Apply at: https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form
+- Apply at: https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form
 
 ### Builder Support
 
@@ -27,17 +27,17 @@ iotalabs provides resources, mentorship, and connections to help builders succee
 
 iotalabs tracks and showcases projects building on IOTA. Teams can register their projects to gain visibility within the ecosystem and connect with partners.
 
--   Register a project: https://airtable.com/appQqzg74YoTqK3Ht/pagAntotjuYq5XNlT/form
+- Register a project: https://airtable.com/appQqzg74YoTqK3Ht/pagAntotjuYq5XNlT/form
 
 ### Supported Initiatives
 
 iotalabs funds work across three initiative categories:
 
--   **Open-source Development** — Tools, infrastructure, and software components that benefit the broader IOTA ecosystem
--   **Education** — Resources, tutorials, courses, and content that grow the IOTA developer and user community
--   **Events** — Conferences, hackathons, workshops, and meetups that connect the ecosystem
+- **Open-source Development** — Tools, infrastructure, and software components that benefit the broader IOTA ecosystem
+- **Education** — Resources, tutorials, courses, and content that grow the IOTA developer and user community
+- **Events** — Conferences, hackathons, workshops, and meetups that connect the ecosystem
 
 ## Contact
 
--   Website: https://iotalabs.io
--   Email: contact@iotalabs.io
+- Website: https://iotalabs.io
+- Email: contact@iotalabs.io

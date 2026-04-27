@@ -33,17 +33,17 @@ Asset-centric solutions tailored to real-world needs. The object-centric ledger 
 
 IOTA's technology is applied across key industry verticals:
 
--   **Trade and Supply Chains**: seamless transfer of digital trade data across borders
--   **Decentralized Finance**: innovative DeFi products to build new economies
--   **Product Lifecycle**: trust and traceability across a product's entire journey
--   **Digital Identity**: a global trust layer for seamless and secure verification
--   **Real World Asset Tokenization**: merging traditional finance with Web3 for efficiency
+- **Trade and Supply Chains**: seamless transfer of digital trade data across borders
+- **Decentralized Finance**: innovative DeFi products to build new economies
+- **Product Lifecycle**: trust and traceability across a product's entire journey
+- **Digital Identity**: a global trust layer for seamless and secure verification
+- **Real World Asset Tokenization**: merging traditional finance with Web3 for efficiency
 
 ## Building a Better DLT
 
 IOTA fundamentally differs from traditional blockchains. Its unique data structure enables:
 
--   Parallel transaction execution
--   High throughput without sacrificing decentralization
--   Energy-efficient BFT consensus
--   Object-centric programmability via Move
+- Parallel transaction execution
+- High throughput without sacrificing decentralization
+- Energy-efficient BFT consensus
+- Object-centric programmability via Move
