@@ -80,11 +80,7 @@ jobs:
         with:
             PRODUCTION: false
             APP_NAME: iotalabs
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        secrets: inherit
 
     deploy-iota-network:
         needs: detect
@@ -93,11 +89,7 @@ jobs:
         with:
             PRODUCTION: false
             APP_NAME: iota-network
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTA_NETWORK_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        secrets: inherit
 
     deploy-iota-foundation:
         needs: detect
@@ -106,11 +98,7 @@ jobs:
         with:
             PRODUCTION: false
             APP_NAME: iota-foundation
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTA_FOUNDATION_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        secrets: inherit
 
     deploy-react-ui-kit:
         needs: detect
@@ -119,8 +107,4 @@ jobs:
         with:
             PRODUCTION: false
             APP_NAME: react-ui-kit
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        secrets: inherit
