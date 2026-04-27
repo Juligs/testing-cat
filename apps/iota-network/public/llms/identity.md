@@ -15,8 +15,8 @@ IOTA Identity combines W3C identity standards with the scalable execution enviro
 
 Digital trust requires two guarantees:
 
--   **Data integrity**: ensuring information has not been altered
--   **Data authenticity**: ensuring claims originate from a verifiable source
+- **Data integrity**: ensuring information has not been altered
+- **Data authenticity**: ensuring claims originate from a verifiable source
 
 Traditional centralized identity systems rely on gatekeepers, concentrate sensitive data in centralized databases, and create single points of failure. IOTA Identity replaces these intermediaries with cryptographic proofs anchored on public infrastructure.
 
@@ -80,11 +80,11 @@ IOTA Identity supports post-quantum and hybrid signatures for Verifiable Credent
 
 ## Real-World Applications
 
--   **Finance**: KYC processes, digital signatures, fraud prevention
--   **Supply Chain**: provenance, certifications, audit trails
--   **Healthcare**: secure records and privacy-preserving data sharing
--   **IoT and Smart Infrastructure**: device authentication and trusted communication
--   **Governments and Enterprises**: e-government services and corporate identity management
+- **Finance**: KYC processes, digital signatures, fraud prevention
+- **Supply Chain**: provenance, certifications, audit trails
+- **Healthcare**: secure records and privacy-preserving data sharing
+- **IoT and Smart Infrastructure**: device authentication and trusted communication
+- **Governments and Enterprises**: e-government services and corporate identity management
 
 ## Identity for Organizations
 
@@ -100,5 +100,5 @@ IOTA Identity is a core component of the IOTA Trust Framework. It provides the i
 
 ## Docs and Contact
 
--   Documentation: https://docs.iota.org/iota-identity
--   Partnership inquiries: partnerships@iota.org
+- Documentation: https://docs.iota.org/iota-identity
+- Partnership inquiries: partnerships@iota.org

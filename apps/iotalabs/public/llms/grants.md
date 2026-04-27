@@ -13,51 +13,51 @@ The IOTA Grants program, administered by iotalabs, provides financial support fo
 
 Grants fund work across three categories:
 
--   **Open-source Development** — Tooling, infrastructure, libraries, and software components that benefit IOTA builders
--   **Education** — Tutorials, courses, documentation, and educational content growing the IOTA developer community
--   **Events** — Hackathons, conferences, meetups, and workshops that connect the IOTA ecosystem
+- **Open-source Development** — Tooling, infrastructure, libraries, and software components that benefit IOTA builders
+- **Education** — Tutorials, courses, documentation, and educational content growing the IOTA developer community
+- **Events** — Hackathons, conferences, meetups, and workshops that connect the IOTA ecosystem
 
 ## Funding Tiers
 
 ### Tier 1 — Up to $10,000
 
--   No KYC required
--   Average score threshold: 12
--   2 committee members review the application
+- No KYC required
+- Average score threshold: 12
+- 2 committee members review the application
 
 ### Tier 2 — Up to $50,000
 
--   KYC required
--   Average score threshold: 14
--   3 committee members review the application
+- KYC required
+- Average score threshold: 14
+- 3 committee members review the application
 
 ### Tier 3 — $50,000 and above
 
--   KYC required
--   Average score threshold: 16
--   5 committee members review the application
+- KYC required
+- Average score threshold: 16
+- 5 committee members review the application
 
 ## Funding Guidelines
 
 Applications are evaluated against six criteria:
 
--   **Relevance and Impact** — The project must advance the IOTA network and ecosystem. It should solve a real problem with potential for serious impact.
--   **Capability and Fair Market Value** — The team must have the skills to deliver, and the requested budget must align with industry standards.
--   **Risk Assessment** — Projects should have low risk of poor outcomes, legal issues, or negative public perception.
--   **No Duplication of Funding** — The project must not have existing funding for the same work from another source.
--   **Conflict of Interest and Anti-Bribery** — Any conflicts of interest must be disclosed upfront. Bribery or compensation attempts result in immediate disqualification.
--   **Open Source** — Code-based projects must use an open-source license (MIT, GNU, or Apache 2.0). Non-code projects should share results publicly.
+- **Relevance and Impact** — The project must advance the IOTA network and ecosystem. It should solve a real problem with potential for serious impact.
+- **Capability and Fair Market Value** — The team must have the skills to deliver, and the requested budget must align with industry standards.
+- **Risk Assessment** — Projects should have low risk of poor outcomes, legal issues, or negative public perception.
+- **No Duplication of Funding** — The project must not have existing funding for the same work from another source.
+- **Conflict of Interest and Anti-Bribery** — Any conflicts of interest must be disclosed upfront. Bribery or compensation attempts result in immediate disqualification.
+- **Open Source** — Code-based projects must use an open-source license (MIT, GNU, or Apache 2.0). Non-code projects should share results publicly.
 
 ## Application Assessment Criteria
 
 Committee members score applications on six dimensions:
 
--   **Expertise of Grantee** — Qualifications and reliability of the team to execute the project
--   **Usefulness** — Concrete benefits to IOTA builders, users, and partners
--   **Long-Term Viability** — Clear vision for the project beyond the initial funding period
--   **Funding Guidelines Alignment** — Fit with iotalabs funding objectives
--   **Safety** — Low risk of poor results, legal issues, and negative perception
--   **Scale** — Likelihood of the project growing effectively
+- **Expertise of Grantee** — Qualifications and reliability of the team to execute the project
+- **Usefulness** — Concrete benefits to IOTA builders, users, and partners
+- **Long-Term Viability** — Clear vision for the project beyond the initial funding period
+- **Funding Guidelines Alignment** — Fit with iotalabs funding objectives
+- **Safety** — Low risk of poor results, legal issues, and negative perception
+- **Scale** — Likelihood of the project growing effectively
 
 ## Application Process
 
@@ -71,5 +71,5 @@ Committee members score applications on six dimensions:
 
 ## Apply
 
--   Application form: https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form
--   Full grants information: https://iotalabs.io/grants
+- Application form: https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form
+- Full grants information: https://iotalabs.io/grants

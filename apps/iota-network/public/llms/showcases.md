@@ -17,7 +17,7 @@ IOTA Technology Showcases are real-world applications and lighthouse projects co
 
 TWIN (Trade and Logistics Information Network) digitizes trade documents for cross-border commerce. It uses IOTA Identity and Notarization to create verifiable digital trade records, reducing friction in international logistics and customs processes.
 
--   Link: https://iota.org/learn/showcases/twin
+- Link: https://iota.org/learn/showcases/twin
 
 ### European Blockchain PCP
 
@@ -25,7 +25,7 @@ TWIN (Trade and Logistics Information Network) digitizes trade documents for cro
 
 IOTA was ranked first in the European Commission's blockchain pre-commercial procurement process. This showcase demonstrates IOTA's suitability for public sector and pan-European digital infrastructure.
 
--   Link: https://iota.org/learn/showcases/ebsi
+- Link: https://iota.org/learn/showcases/ebsi
 
 ### Tokenized KYC
 
@@ -33,7 +33,7 @@ IOTA was ranked first in the European Commission's blockchain pre-commercial pro
 
 Tokenized KYC uses IOTA Identity and Verifiable Credentials to enable privacy-preserving Know-Your-Customer processes. Users prove identity attributes without exposing full personal data.
 
--   Link: https://iota.org/learn/showcases/kyc
+- Link: https://iota.org/learn/showcases/kyc
 
 ### Intellectual Property Rights Management
 
@@ -41,7 +41,7 @@ Tokenized KYC uses IOTA Identity and Verifiable Credentials to enable privacy-pr
 
 Uses IOTA Notarization and Tokenization to create tamper-proof intellectual property records and automate rights management and royalty payments.
 
--   Link: https://iota.org/learn/showcases/iprm
+- Link: https://iota.org/learn/showcases/iprm
 
 ### Digital Product Passports
 
@@ -49,14 +49,14 @@ Uses IOTA Notarization and Tokenization to create tamper-proof intellectual prop
 
 Digital Product Passports (DPP) use IOTA Notarization and Identity to capture product lifecycle events from creation to recycling. Supports EU circular economy regulations and sustainability reporting.
 
--   Link: https://iota.org/learn/showcases/dpp
+- Link: https://iota.org/learn/showcases/dpp
 
 ## Common Patterns
 
 These showcases share common patterns that demonstrate the Trust Framework in action:
 
--   Identity verification for parties and organizations (IOTA Identity)
--   Data integrity and audit trails for process records (IOTA Notarization)
--   Asset and value representation on-chain (IOTA Tokenization)
--   Frictionless user interactions without token management (IOTA Gas Station)
--   Delegated authority across organizational hierarchies (IOTA Hierarchies)
+- Identity verification for parties and organizations (IOTA Identity)
+- Data integrity and audit trails for process records (IOTA Notarization)
+- Asset and value representation on-chain (IOTA Tokenization)
+- Frictionless user interactions without token management (IOTA Gas Station)
+- Delegated authority across organizational hierarchies (IOTA Hierarchies)

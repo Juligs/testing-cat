@@ -11,15 +11,15 @@ The IOTA Foundation pioneers distributed ledger technology that transcends digit
 
 The Foundation is a non-profit organization, not a company. Two supporting entities drive adoption of IOTA technology worldwide:
 
--   **Tangle Ecosystem Association**: a Swiss-based non-profit association
--   **IOTA Ecosystem DLT Foundation**: the first DLT foundation registered in Abu Dhabi Global Markets
+- **Tangle Ecosystem Association**: a Swiss-based non-profit association
+- **IOTA Ecosystem DLT Foundation**: the first DLT foundation registered in Abu Dhabi Global Markets
 
 ## Key Numbers
 
--   110+ team members
--   50+ research papers published
--   27+ team locations worldwide
--   Founded in 2017
+- 110+ team members
+- 50+ research papers published
+- 27+ team locations worldwide
+- Founded in 2017
 
 ## Core Purpose
 
@@ -27,18 +27,18 @@ The Foundation develops distributed ledger technology that empowers businesses, 
 
 ## Guiding Values
 
--   **Permissionless innovation**: open access to the technology and ecosystem
--   **Integrity**: transparent operations and governance
--   **Open-source collaboration**: all core technology is open source
--   **Sustainability**: energy-efficient protocols with minimal environmental footprint
+- **Permissionless innovation**: open access to the technology and ecosystem
+- **Integrity**: transparent operations and governance
+- **Open-source collaboration**: all core technology is open source
+- **Sustainability**: energy-efficient protocols with minimal environmental footprint
 
 ## Focus Areas
 
--   **Digital Identity**: a global trust layer for seamless verification
--   **Real World Asset Tokenization**: merging traditional finance with Web3
--   **Trade and Supply Chains**: seamless transfer of digital trade data across borders
--   **Decentralized Finance**: powering DeFi products to build new economies
--   **Circular Economy**: technology solutions for sustainable innovation
+- **Digital Identity**: a global trust layer for seamless verification
+- **Real World Asset Tokenization**: merging traditional finance with Web3
+- **Trade and Supply Chains**: seamless transfer of digital trade data across borders
+- **Decentralized Finance**: powering DeFi products to build new economies
+- **Circular Economy**: technology solutions for sustainable innovation
 
 ## Research
 

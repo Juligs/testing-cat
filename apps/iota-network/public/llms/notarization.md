@@ -77,9 +77,9 @@ Record continuous device and sensor updates on-chain for trusted real-time autom
 
 IOTA Notarization integrates via:
 
--   WASM/Rust libraries for off-chain integration
--   Move smart contracts for on-chain automation
--   REST APIs for standard application integration
+- WASM/Rust libraries for off-chain integration
+- Move smart contracts for on-chain automation
+- REST APIs for standard application integration
 
 ## Position in Trust Framework
 
@@ -87,5 +87,5 @@ IOTA Notarization is a core component of the IOTA Trust Framework. It provides t
 
 ## Docs and Contact
 
--   Documentation: https://docs.iota.org/developer/iota-notarization/
--   Partnership inquiries: partnerships@iota.org
+- Documentation: https://docs.iota.org/developer/iota-notarization/
+- Partnership inquiries: partnerships@iota.org

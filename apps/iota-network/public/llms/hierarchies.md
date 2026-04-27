@@ -81,5 +81,5 @@ IOTA Hierarchies is a core component of the IOTA Trust Framework. It builds on I
 
 ## Docs and Contact
 
--   Documentation: https://docs.iota.org/developer/iota-hierarchies/
--   Partnership inquiries: partnerships@iota.org
+- Documentation: https://docs.iota.org/developer/iota-hierarchies/
+- Partnership inquiries: partnerships@iota.org
