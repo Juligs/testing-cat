@@ -85,6 +85,7 @@ jobs:
             group: ${{ github.workflow }}-iotalabs-${{ github.event.number || github.ref }}
             cancel-in-progress: true
         steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
             - uses: ./.github/actions/monorepo-app-vercel-deploy
               with:
                   production: 'false'
@@ -106,6 +107,7 @@ jobs:
             group: ${{ github.workflow }}-iota-network-${{ github.event.number || github.ref }}
             cancel-in-progress: true
         steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
             - uses: ./.github/actions/monorepo-app-vercel-deploy
               with:
                   production: 'false'
@@ -127,6 +129,7 @@ jobs:
             group: ${{ github.workflow }}-iota-foundation-${{ github.event.number || github.ref }}
             cancel-in-progress: true
         steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
             - uses: ./.github/actions/monorepo-app-vercel-deploy
               with:
                   production: 'false'
@@ -148,6 +151,7 @@ jobs:
             group: ${{ github.workflow }}-react-ui-kit-${{ github.event.number || github.ref }}
             cancel-in-progress: true
         steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
             - uses: ./.github/actions/monorepo-app-vercel-deploy
               with:
                   production: 'false'
