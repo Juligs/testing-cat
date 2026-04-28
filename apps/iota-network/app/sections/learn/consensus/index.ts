@@ -1,8 +1,10 @@
 export { Hero as HeroConsensus } from './Hero';
 export { ConsensusOverview } from './ConsensusOverview';
 export { Mysticeti } from './Mysticeti';
+export { WhyStarfishMatters } from './WhyStarfishMatters';
 export { DecentralizedConsensus } from './DecentralizedConsensus';
-export { Resistant } from './Resistant';
+export { Resilience } from './Resilience';
+export { SecretStorage } from './SecretStorage';
 export { ConsensusMoretoExplore } from './ConsensusMoretoExplore';
-export { StarfishSection } from './StarfishSection';
-export { StarfishTesnet } from './StarfishTesnet';
+export { Backed } from './Backed';
+export { ProofPoints } from './ProofPoints';

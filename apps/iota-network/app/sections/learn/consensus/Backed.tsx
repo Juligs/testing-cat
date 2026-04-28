@@ -1,16 +1,16 @@
 import { Actions, TextLink, VerticalTitle } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
-import { DECENTRALIZED_CONSENSUS_VERTICAL_TITLE } from './constants';
+import { BACKED_VERTICAL_TITLE } from './constants';
 import Link from 'next/link';
 
-export function DecentralizedConsensus({ id, navbarColorScheme }: BaseSectionProps) {
+export function Backed({ id, navbarColorScheme }: BaseSectionProps) {
     return (
         <section id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container flex flex-col py-14 xs:py-20 lg:py-30 gap-14 xs:gap-20 lg:gap-30">
-                <TwoColumnsImageTemplate image="/learn/consensus/decentralized_consensus.png">
-                    <div className="sm:pr-[92px] lg:pr-[98px] text-center break-words whitespace-normal w-full">
-                        <VerticalTitle {...DECENTRALIZED_CONSENSUS_VERTICAL_TITLE}>
+                <TwoColumnsImageTemplate image="/shared/data_visualization_dashboard.png">
+                    <div className="sm:pr-[92px] lg:pr-[98px] text-center  w-full">
+                        <VerticalTitle {...BACKED_VERTICAL_TITLE}>
                             <Actions>
                                 <Link
                                     href="https://eprint.iacr.org/2025/567"

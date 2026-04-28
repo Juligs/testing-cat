@@ -1,7 +1,7 @@
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
 const CONSENSUS_OVERVIEW =
-    'Mysticeti secures Mainnet today. Starfish is coming to Testnet to improve robustness under real-world network conditions.';
+    'Built for real-world conditions – unpredictable network speeds and spikes in demand. Starfish strengthens IOTA for enterprise and global-scale use.';
 
 export function ConsensusOverview({ id, navbarColorScheme }: BaseSectionProps) {
     return (

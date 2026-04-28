@@ -133,22 +133,23 @@ export const BUSINESS_INNOVATION_PROGRAM_KEYWORDS = [
 export const BUSINESS_INNOVATION_PROGRAM_IMAGE = '/metadata/meta_image_business_innovation.png';
 export const BUSINESS_INNOVATION_PROGRAM_URL = `${BASE_URL}/build/business-innovation-program`;
 
-export const CONSENSUS_METADATA_TITLE = 'IOTA Consensus - Secure and Reliable Transactions';
+export const CONSENSUS_METADATA_TITLE =
+    'IOTA Real-World Consensus | Reliable, Resilient, Enterprise-Ready';
 export const CONSENSUS_METADATA_DESCRIPTION =
-    "Discover how IOTA's consensus mechanism ensures security, reliability, and high-speed transactions with innovative technology like the Mystique protocol.";
+    'Explore IOTA’s real-world consensus with Starfish, built for reliable, resilient performance under unpredictable network conditions and at global scale.';
 export const CONSENSUS_METADATA_DESCRIPTION_X =
-    "Explore IOTA's cutting-edge consensus model, designed for fast, secure, and decentralized transactions, ensuring reliability and scalability.";
+    'See how IOTA Starfish enables real-world consensus with the resilience, reliability, and scale needed for enterprise and global-use applications.';
 export const CONSENSUS_KEYWORDS = [
     'IOTA',
-    'consensus',
-    'blockchain',
-    'DLT',
-    'security',
-    'decentralization',
-    'Mystique',
-    'scalability',
-    'smart contracts',
-    'transactions',
+    'real-world consensus',
+    'Starfish',
+    'enterprise DLT',
+    'resilient consensus',
+    'reliable transactions',
+    'global scale',
+    'fault tolerant',
+    'low latency',
+    'distributed validation',
 ];
 export const CONSENSUS_IMAGE = '/metadata/meta_image_consensus.png';
 export const CONSENSUS_URL = `${BASE_URL}/learn/consensus`;

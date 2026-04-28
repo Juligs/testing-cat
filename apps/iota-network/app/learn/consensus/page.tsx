@@ -4,11 +4,13 @@ import {
     HeroConsensus,
     Mysticeti,
     DecentralizedConsensus,
-    Resistant,
     ConsensusMoretoExplore,
     ConsensusOverview,
-    StarfishSection,
-    StarfishTesnet,
+    WhyStarfishMatters,
+    Resilience,
+    SecretStorage,
+    Backed,
+    ProofPoints,
 } from '@sections';
 import {
     CONSENSUS_METADATA_TITLE,
@@ -34,10 +36,12 @@ export default function Home() {
             <HeroConsensus id="hero" navbarColorScheme="inverted" />
             <ConsensusOverview id="overview" />
             <DecentralizedConsensus id="decentralized-consensus" />
+            <WhyStarfishMatters id="why-starfish-matters" />
             <Mysticeti id="mysticeti" />
-            <Resistant id="resistant" />
-            <StarfishTesnet id="starfish" />
-            <StarfishSection id="starfish-section" navbarColorScheme="inverted" />
+            <Resilience id="resilience" />
+            <SecretStorage id="secret-storage" />
+            <Backed id="backed" />
+            <ProofPoints id="proof-points" />
             <ConsensusMoretoExplore id="more-to-explore" />
         </>
     );
