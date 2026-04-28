@@ -37,7 +37,7 @@ export function Footer() {
     return (
         <footer className="bg-iota-neutral-96 relative overflow-hidden">
             <div className="container py-8 z-1 relative">
-                <div className="grid grid-cols-2 gap-6 xs:grid-cols-3 sm:grid-cols-5">
+                <div className="grid grid-cols-2 gap-6 xs:grid-cols-3 sm:grid-cols-6">
                     {footerRoutes.map((route, routeIndex) => (
                         <div key={routeIndex} className="flex flex-col gap-y-4">
                             <span className="text-darkest text-label-lg">{route.title}</span>

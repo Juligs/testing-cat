@@ -3,5 +3,6 @@ export * from './purpose';
 export * from './regulatory-affairs';
 export * from './research';
 export * from './about';
+export * from './beyond-the-chain';
 export * from './news';
 export * from './sustainability';
