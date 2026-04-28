@@ -1,9 +1,8 @@
-import { scrollToSection } from '@repo/shared/utils';
 import { HeroBackground, ScreenSize } from 'react-ui-kit';
 
 export const HERO_CONSENSUS_CONTENT = {
-    title: 'IOTA Consensus',
-    subtitle: 'Building trust: How IOTA ensures security and reliability for your solutions',
+    title: 'Real-World \n Consensus \n',
+    subtitle: "Starfish. Because global infrastructure \n can't fail when it matters most.\n",
     inverted: true,
     isCentered: true,
 };
@@ -22,13 +21,3 @@ export const HERO_CONSENSUS_BG: React.ComponentProps<typeof HeroBackground> = {
         poster: 'https://files.iota.org/media/iota-network/consensus_hero_poster.jpg',
     },
 };
-export const HERO_CONSENSUS_ANCHORLINKS = [
-    {
-        text: 'Mainnet: Mysticeti (Live)',
-        onClick: () => scrollToSection('#mysticeti'),
-    },
-    {
-        text: 'Testnet: Starfish (Next)',
-        onClick: () => scrollToSection('#starfish'),
-    },
-];
