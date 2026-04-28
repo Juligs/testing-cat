@@ -7,6 +7,6 @@ export const OVERVIEW_MORE_TO_EXPLORE_CONTENT = [
     {
         title: 'Workshop Highlights',
         subtitle: 'The Workshop Archive and accepted papers',
-        link: '/beyond-the-chain/workshop-highlights',
+        link: '/beyond-the-chain/workshop-highlights/2025',
     },
 ];

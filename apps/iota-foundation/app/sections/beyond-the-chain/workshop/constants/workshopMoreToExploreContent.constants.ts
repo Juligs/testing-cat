@@ -1,12 +1,12 @@
 export const WORKSHOP_MORE_TO_EXPLORE_CONTENT = [
     {
-        title: 'Workshop',
-        subtitle: 'Meet the Chairs and Program Committee',
-        link: '',
+        title: 'Overview',
+        subtitle: 'International Workshop on Next-Generation Distributed Ledger Technologies',
+        link: '/beyond-the-chain/overview',
     },
     {
-        title: 'Program',
-        subtitle: 'Workshop Agenda and Speaker Lineup',
-        link: '/beyond-the-chain/program',
+        title: 'Our Research',
+        subtitle: 'At the Forefront of DLT Innovation',
+        link: '/research/our-research',
     },
 ];
