@@ -5,18 +5,12 @@ import { LogoWithOutText } from '@repo/shared/components';
 import { useScreenSize } from '@repo/shared/hooks';
 import { Route } from '@repo/shared/interfaces';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { Button, ButtonSize, ButtonVariant, ScreenSize } from 'react-ui-kit';
 
 export function Footer() {
     const COPYRIGHT_YEAR = new Date().getFullYear();
 
     const { size: screenSize } = useScreenSize();
-    const [clientScreenSize, setClientScreenSize] = useState<ScreenSize | null>(null);
-
-    useEffect(() => {
-        setClientScreenSize(screenSize);
-    }, [screenSize]);
 
     function getFooterRoutes(routes: Route[]): Route[] {
         return routes
@@ -102,10 +96,7 @@ export function Footer() {
                                 >
                                     <Button
                                         size={
-                                            clientScreenSize &&
-                                            [ScreenSize.Xs, ScreenSize.Sm].includes(
-                                                clientScreenSize,
-                                            )
+                                            [ScreenSize.Xs, ScreenSize.Sm].includes(screenSize)
                                                 ? ButtonSize.Small
                                                 : ButtonSize.Medium
                                         }

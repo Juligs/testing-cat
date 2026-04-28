@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useSyncExternalStore } from 'react';
 import { BREAKPOINTS, ScreenSize } from 'react-ui-kit';
 
 interface ScreenSizeState {
@@ -13,36 +13,32 @@ const DEFAULT_STATE: ScreenSizeState = {
     size: ScreenSize.Xs,
 };
 
+let screenSizeCache: ScreenSizeState = DEFAULT_STATE;
+
+function getSnapshot(): ScreenSizeState {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const size = getScreenSize(width);
+
+    if (
+        screenSizeCache.width === width &&
+        screenSizeCache.height === height &&
+        screenSizeCache.size === size
+    ) {
+        return screenSizeCache;
+    }
+
+    screenSizeCache = { width, height, size };
+    return screenSizeCache;
+}
+
+function subscribe(callback: () => void): () => void {
+    window.addEventListener('resize', callback);
+    return () => window.removeEventListener('resize', callback);
+}
+
 export function useScreenSize(): ScreenSizeState {
-    const [screenSize, setScreenSize] = useState<ScreenSizeState>(() => {
-        if (typeof window === 'undefined') return DEFAULT_STATE;
-
-        return {
-            width: window.innerWidth,
-            height: window.innerHeight,
-            size: getScreenSize(window.innerWidth),
-        };
-    });
-
-    const handleResize = useCallback(() => {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
-        setScreenSize({
-            width,
-            height,
-            size: getScreenSize(width),
-        });
-    }, []);
-
-    useEffect(() => {
-        if (typeof window === 'undefined') return;
-
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [handleResize]);
-
-    return screenSize;
+    return useSyncExternalStore(subscribe, getSnapshot, () => DEFAULT_STATE);
 }
 
 function getScreenSize(width: number): ScreenSize {
