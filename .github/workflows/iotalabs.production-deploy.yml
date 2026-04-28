@@ -9,20 +9,28 @@ on:
             - 'ui-kit/react/**'
             - 'shared/**'
             - '.github/workflows/iotalabs.production-deploy.yml'
-            - '.github/workflows/monorepo-app-vercel-deploy.yml'
+            - '.github/actions/monorepo-app-vercel-deploy/**'
     workflow_dispatch:
 
 jobs:
     deploy-production:
-        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
-        with:
-            PRODUCTION: true
-            APP_NAME: IOTALABS
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-IOTALABS-${{ github.ref }}
+            cancel-in-progress: false
+        steps:
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'true'
+                  app_name: IOTALABS
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
 
     purge-iotalabs-cloudflare-cache:
         needs: [deploy-production]

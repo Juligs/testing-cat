@@ -76,51 +76,83 @@ jobs:
     deploy-iotalabs:
         needs: detect
         if: contains(fromJSON(needs.detect.outputs.affected), 'iotalabs')
-        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
-        with:
-            PRODUCTION: false
-            APP_NAME: iotalabs
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-iotalabs-${{ github.event.number || github.ref }}
+            cancel-in-progress: true
+        steps:
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'false'
+                  app_name: iotalabs
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
 
     deploy-iota-network:
         needs: detect
         if: contains(fromJSON(needs.detect.outputs.affected), 'iota-network')
-        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
-        with:
-            PRODUCTION: false
-            APP_NAME: iota-network
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTA_NETWORK_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-iota-network-${{ github.event.number || github.ref }}
+            cancel-in-progress: true
+        steps:
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'false'
+                  app_name: iota-network
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.IOTA_NETWORK_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
 
     deploy-iota-foundation:
         needs: detect
         if: contains(fromJSON(needs.detect.outputs.affected), 'iota-foundation')
-        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
-        with:
-            PRODUCTION: false
-            APP_NAME: iota-foundation
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTA_FOUNDATION_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-iota-foundation-${{ github.event.number || github.ref }}
+            cancel-in-progress: true
+        steps:
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'false'
+                  app_name: iota-foundation
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.IOTA_FOUNDATION_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
 
     deploy-react-ui-kit:
         needs: detect
         if: contains(fromJSON(needs.detect.outputs.affected), 'react-ui-kit')
-        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
-        with:
-            PRODUCTION: false
-            APP_NAME: react-ui-kit
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-react-ui-kit-${{ github.event.number || github.ref }}
+            cancel-in-progress: true
+        steps:
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'false'
+                  app_name: react-ui-kit
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
