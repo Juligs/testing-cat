@@ -1,0 +1,102 @@
+name: Monorepo App Vercel Deploy
+description: Deploys a monorepo app to Vercel within the caller job.
+
+inputs:
+  production:
+    description: Whether to deploy to production.
+    required: true
+  app_name:
+    description: Application name shown in logs and PR comments.
+    required: true
+  vercel_token:
+    description: Vercel token.
+    required: false
+    default: ''
+  vercel_org_id:
+    description: Vercel org ID.
+    required: false
+    default: ''
+  vercel_project_id:
+    description: Vercel project ID.
+    required: false
+    default: ''
+  vercel_scope:
+    description: Vercel scope.
+    required: false
+    default: ''
+
+outputs:
+  preview_url:
+    description: Resulting Vercel deployment URL.
+    value: ${{ steps.vercel_deploy.outputs.PREVIEW_URL }}
+
+runs:
+  using: composite
+  steps:
+    - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
+
+    - name: Install Nodejs
+      uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+      with:
+        node-version: '20'
+
+    - name: Install Vercel CLI
+      if: ${{ inputs.vercel_token != '' && inputs.vercel_org_id != '' && inputs.vercel_project_id != '' && inputs.vercel_scope != '' }}
+      shell: bash
+      run: pnpm add --global vercel@canary
+
+    - name: Install Project Dependencies
+      if: ${{ inputs.vercel_token != '' && inputs.vercel_org_id != '' && inputs.vercel_project_id != '' && inputs.vercel_scope != '' }}
+      shell: bash
+      run: pnpm install --frozen-lockfile
+
+    - name: Pull Vercel Environment Information
+      if: ${{ inputs.vercel_token != '' && inputs.vercel_org_id != '' && inputs.vercel_project_id != '' && inputs.vercel_scope != '' }}
+      shell: bash
+      run: vercel pull --token="${{ inputs.vercel_token }}" --scope="${{ inputs.vercel_scope }}" --yes --environment="${{ inputs.production == 'true' && 'production' || 'preview' }}"
+
+    - name: Build Project
+      if: ${{ inputs.vercel_token != '' && inputs.vercel_org_id != '' && inputs.vercel_project_id != '' && inputs.vercel_scope != '' }}
+      shell: bash
+      run: |
+        if [[ "${{ inputs.production }}" == "true" ]]; then
+          vercel build --token="${{ inputs.vercel_token }}" --scope="${{ inputs.vercel_scope }}" --prod
+        else
+          vercel build --token="${{ inputs.vercel_token }}" --scope="${{ inputs.vercel_scope }}"
+        fi
+
+    - name: Deploy to Vercel
+      if: ${{ inputs.vercel_token != '' && inputs.vercel_org_id != '' && inputs.vercel_project_id != '' && inputs.vercel_scope != '' }}
+      id: vercel_deploy
+      shell: bash
+      run: |
+        if [[ "${{ inputs.production }}" == "true" ]]; then
+          vercel deploy --prebuilt --archive=tgz --token="${{ inputs.vercel_token }}" --scope="${{ inputs.vercel_scope }}" --prod > deployment_output.txt
+        else
+          vercel deploy --prebuilt --archive=tgz --token="${{ inputs.vercel_token }}" --scope="${{ inputs.vercel_scope }}" > deployment_output.txt
+        fi
+        echo "PREVIEW_URL=$(cat deployment_output.txt)" >> "$GITHUB_OUTPUT"
+
+    - name: Comment on PR
+      uses: phulsechinmay/rewritable-pr-comment@a1b041997fa84ec3e524ee9dee5ba0b5f4e73604 # pin@v0.3.0
+      if: ${{ inputs.vercel_token != '' && inputs.vercel_org_id != '' && inputs.vercel_project_id != '' && inputs.vercel_scope != '' && inputs.production != 'true' }}
+      with:
+        GITHUB_TOKEN: ${{ github.token }}
+        COMMENT_IDENTIFIER: ${{ inputs.app_name }} vercel deploy
+        message: |
+          This pull request has been deployed to Vercel.
+
+          <table>
+           <tr>
+              <td><strong>🌐 APP NAME:</strong></td>
+              <td>${{ inputs.app_name }}</td>
+          </tr>
+          <tr>
+              <td><strong>✅ Preview:</strong></td>
+              <td><a href='${{ steps.vercel_deploy.outputs.PREVIEW_URL }}'>${{ steps.vercel_deploy.outputs.PREVIEW_URL }}</a></td>
+          </tr>
+           <tr>
+              <td><strong>⚫️ Latest commit:</strong></td>
+              <td>${{ github.sha }}</td>
+          </tr>
+          </table>
