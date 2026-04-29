@@ -36,7 +36,7 @@ export default function Home() {
     return (
         <>
             <Hero id="hero" />
-            <FoundationStats id="foundation-stats" />
+            <FoundationStats id="foundation-stat" />
             <OurPurpose id="our-purpose" />
             <OurFocusAreas id="our-focus-areas" />
             <OurPartners id="our-partners" />

@@ -7,16 +7,25 @@ on:
         paths:
             - 'ui-kit/react/**'
             - '.github/workflows/ui-kit-react.storybook-production-deploy.yml'
-            - '.github/workflows/monorepo-app-vercel-deploy.yml'
+            - '.github/actions/monorepo-app-vercel-deploy/**'
 
 jobs:
     deploy-production:
-        uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
-        with:
-            PRODUCTION: true
-            APP_NAME: React UI-Kit Storybook
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-React UI-Kit Storybook-${{ github.ref }}
+            cancel-in-progress: false
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'true'
+                  app_name: React UI-Kit Storybook
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
