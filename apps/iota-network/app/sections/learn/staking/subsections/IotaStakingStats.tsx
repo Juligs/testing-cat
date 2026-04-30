@@ -2,6 +2,7 @@ import { StakingStats } from '@lib/utils';
 import { Daos, DecentralizedFinance, IotaDnsResolver } from '@repo/icons';
 import { ComponentProps } from 'react';
 import { CardSize, DisplayStats, ProgressCircleIcon, TextSize } from 'react-ui-kit';
+import { ScrollReveal } from '@repo/shared/components';
 
 export interface IotaStakingStatsProps {
     stats: StakingStats | undefined;
@@ -61,16 +62,28 @@ export function IotaStakingStats({ stats }: IotaStakingStatsProps) {
 
     return (
         <div className="flex flex-col gap-6">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                {TOP_CARDS.map((card) => (
-                    <DisplayStats key={card.label} {...card} />
+            <ScrollReveal
+                variant="reveal-stagger"
+                rootMargin="-10% 0px"
+                className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+            >
+                {TOP_CARDS.map((card, i) => (
+                    <div key={card.label} style={{ '--i': i } as React.CSSProperties}>
+                        <DisplayStats {...card} />
+                    </div>
                 ))}
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
-                {BOTTOM_CARDS.map((card) => (
-                    <DisplayStats key={card.label} {...card} />
+            </ScrollReveal>
+            <ScrollReveal
+                variant="reveal-stagger"
+                rootMargin="-10% 0px"
+                className="grid grid-cols-1 sm:grid-cols-4 gap-6"
+            >
+                {BOTTOM_CARDS.map((card, i) => (
+                    <div key={card.label} style={{ '--i': i } as React.CSSProperties}>
+                        <DisplayStats {...card} />
+                    </div>
                 ))}
-            </div>
+            </ScrollReveal>
         </div>
     );
 }

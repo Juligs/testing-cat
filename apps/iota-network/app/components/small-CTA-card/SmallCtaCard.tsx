@@ -11,6 +11,7 @@ interface SmallCtaCardProps {
     inverted?: boolean;
     imgSizes?: string;
     smallGap?: boolean;
+    isHovered?: boolean;
 }
 
 export function SmallCtaCard({
@@ -23,11 +24,16 @@ export function SmallCtaCard({
     inverted,
     imgSizes,
     smallGap,
+    isHovered = true,
 }: SmallCtaCardProps): React.JSX.Element {
+    const textColor = inverted ? 'text-iota-neutral-100' : 'text-iota-neutral-10';
+
     return (
         <div
             className={clsx(
-                'flex flex-col-reverse sm:flex-row w-full sm:max-w-[708px] sm:h-[220px] overflow-hidden rounded-4xl',
+                'flex flex-col-reverse sm:flex-row w-full sm:max-w-[708px] sm:h-[220px] overflow-hidden rounded-4xl group hover:cursor-pointer',
+                isHovered &&
+                    'hover:shadow-lg transition-[transform,box-shadow] hover:-translate-y-1 duration-300 ease-in',
                 inverted && 'bg-iota-neutral-6',
                 isFilled
                     ? 'border-none bg-iota-neutral-96'
@@ -45,8 +51,9 @@ export function SmallCtaCard({
                 )}
                 <p
                     className={clsx(
-                        inverted ? 'text-iota-neutral-100' : 'text-iota-neutral-10',
+                        textColor,
                         hasSmallTitle ? 'text-title-md' : 'text-title-lg',
+                        isHovered ? 'group-hover:text-network-primary-40' : '',
                     )}
                 >
                     {title}

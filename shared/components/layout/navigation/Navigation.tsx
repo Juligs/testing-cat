@@ -88,24 +88,37 @@ export function Navigation({ items }: NavigationProps) {
     }, [isMobileNavOpen, openDropdown]);
 
     const openedDropdownMenu = items.find((_, index) => openDropdown === index);
+    const [displayedDropdownMenu, setDisplayedDropdownMenu] = useState<Route | undefined>(
+        undefined,
+    );
+
+    useEffect(() => {
+        if (openedDropdownMenu) {
+            setDisplayedDropdownMenu(openedDropdownMenu);
+        } else {
+            const timer = setTimeout(() => setDisplayedDropdownMenu(undefined), 300);
+            return () => clearTimeout(timer);
+        }
+    }, [openedDropdownMenu]);
 
     const itemsWithActive = items.map((item) => ({
         ...item,
         active: currentPath === item.path || currentPath.startsWith(item.path + '/'),
     }));
+    const isMenuOpen = isMobileNavOpen || openDropdown !== null;
 
     return (
         <>
             <div
                 ref={navRef}
                 className={clsx(
-                    'fixed top-0 left-0 right-0 z-50 backdrop-blur max-h-screen flex flex-col',
-                    (isMobileNavOpen || openedDropdownMenu) && 'bg-transparency-white-80',
+                    'fixed top-0 left-0 right-0 z-50 max-h-screen flex flex-col transition-[background] duration-300 ease-out pointer-events-none',
+                    isMenuOpen && 'bg-transparency-white-80',
                 )}
             >
                 <div
                     className={clsx(
-                        'max-xs:[&_>nav]:max-h-screen [&_>nav]:backdrop-blur-none',
+                        'max-xs:[&_>nav]:max-h-screen [&_>nav]:backdrop-blur-none backdrop-blur pointer-events-auto',
                         isMobileNavOpen,
                     )}
                 >
@@ -139,31 +152,43 @@ export function Navigation({ items }: NavigationProps) {
                             inverted={isInverted}
                         />
                     </Navbar>
-
-                    {openedDropdownMenu && (
-                        <div className="max-xs:hidden overflow-y-auto max-h-[calc(100vh-96px)]">
-                            <DropdownMenu
-                                item={openedDropdownMenu}
-                                isMobileNavOpen={isMobileNavOpen}
-                                handleLinkClick={handleLinkClick}
-                            />
-                        </div>
+                </div>
+                <div
+                    className={clsx(
+                        'max-xs:hidden backdrop-blur overflow-y-auto max-h-[calc(100vh-96px)] transition-[opacity,transform] duration-300 ease-out',
+                        openDropdown !== null
+                            ? 'opacity-100 translate-y-0 pointer-events-auto'
+                            : 'opacity-0 -translate-y-2 pointer-events-none',
+                    )}
+                >
+                    {displayedDropdownMenu && (
+                        <DropdownMenu
+                            item={displayedDropdownMenu}
+                            isMobileNavOpen={isMobileNavOpen}
+                            handleLinkClick={handleLinkClick}
+                        />
                     )}
                 </div>
 
-                {isMobileNavOpen && (
-                    <div className="container w-full flex flex-col overflow-y-auto max-h-[calc(100vh-60px)]">
-                        {items.map((item, index) => (
-                            <MobileNavbarItem
-                                item={item}
-                                key={index}
-                                isOpen={openDropdown === index}
-                                onClick={() => handleClick(index)}
-                                handleLinkClick={handleLinkClick}
-                            />
-                        ))}
-                    </div>
-                )}
+                <div
+                    className={clsx(
+                        'container w-full flex flex-col backdrop-blur overflow-y-auto max-h-[calc(100vh-60px)]',
+                        'transition-[opacity,transform] duration-300 ease-out',
+                        isMobileNavOpen
+                            ? 'opacity-100 translate-y-0 pointer-events-auto'
+                            : 'opacity-0 -translate-y-2 pointer-events-none xs:hidden',
+                    )}
+                >
+                    {items.map((item, index) => (
+                        <MobileNavbarItem
+                            item={item}
+                            key={index}
+                            isOpen={openDropdown === index}
+                            onClick={() => handleClick(index)}
+                            handleLinkClick={handleLinkClick}
+                        />
+                    ))}
+                </div>
                 <IntersectionObserver onSectionChange={handleSectionChange} />
             </div>
         </>

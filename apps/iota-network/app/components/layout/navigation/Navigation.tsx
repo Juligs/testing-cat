@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation';
 import type { NavbarGroupItem } from '../layout.interfaces';
 import clsx from 'clsx';
 import { lockBodyScroll, unlockBodyScroll } from '@lib/utils/getViewportScrollbarWidth';
+import { useDelayedUnmount } from '@repo/shared/hooks';
 
 interface NavigationProps {
     items: NavbarGroupItem[];
@@ -32,6 +33,11 @@ export function Navigation({ items }: NavigationProps) {
     const navRef = useRef<HTMLDivElement>(null);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const currentPath = usePathname();
+
+    const { isMounted: isDropdownMounted, isClosing: isDropdownClosing } = useDelayedUnmount(
+        openDropdown !== null,
+        200,
+    );
 
     const handleClose = () => {
         setIsMobileNavOpen(false);
@@ -79,6 +85,10 @@ export function Navigation({ items }: NavigationProps) {
 
     const openedDropdownMenu = openDropdown !== null ? items[openDropdown] : undefined;
 
+    const lastDropdownRef = useRef<typeof openedDropdownMenu>(undefined);
+    if (openedDropdownMenu) lastDropdownRef.current = openedDropdownMenu;
+    const visibleDropdownMenu = isDropdownMounted ? lastDropdownRef.current : undefined;
+
     const itemsWithActive: NavbarGroupItem[] = items.map((item) => ({
         ...item,
         active: currentPath === item.path || currentPath.startsWith(item.path + '/'),
@@ -88,7 +98,7 @@ export function Navigation({ items }: NavigationProps) {
 
     return (
         <>
-            {(openedDropdownMenu || isMobileNavOpen) && (
+            {(isDropdownMounted || isMobileNavOpen) && (
                 <div id="overlay-close" className="fixed inset-0 z-10" onClick={handleClose} />
             )}
 
@@ -130,22 +140,29 @@ export function Navigation({ items }: NavigationProps) {
                         />
                     </Navbar>
 
-                    {openedDropdownMenu && (
+                    {isDropdownMounted && (
                         <div
                             className="max-sm:hidden absolute inset-x-0 container top-full"
                             onClick={handleClose}
                         >
                             <div
-                                className="mt-2 rounded-3xl bg-white/80 backdrop-blur-[32px] shadow-lg overflow-y-auto max-h-[calc(100vh-96px)]"
+                                className={clsx(
+                                    'mt-2 rounded-3xl bg-white/80 backdrop-blur-[32px] shadow-lg overflow-y-auto max-h-[calc(100vh-96px)]',
+                                    isDropdownClosing
+                                        ? 'animate-fade-out-up'
+                                        : 'animate-fade-in-down',
+                                )}
                                 onClick={(e) => {
                                     e.stopPropagation();
                                 }}
                             >
-                                <DropdownMenu
-                                    item={openedDropdownMenu}
-                                    isMobileNavOpen={isMobileNavOpen}
-                                    onClose={() => handleClose()}
-                                />
+                                {visibleDropdownMenu && (
+                                    <DropdownMenu
+                                        item={visibleDropdownMenu}
+                                        isMobileNavOpen={isMobileNavOpen}
+                                        onClose={() => handleClose()}
+                                    />
+                                )}
                             </div>
                         </div>
                     )}

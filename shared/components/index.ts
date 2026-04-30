@@ -15,3 +15,4 @@ export * from './layout';
 export * from './homepage-redirect';
 export * from './accordion';
 export * from './blog-post-section';
+export * from './scroll-reveal';

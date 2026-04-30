@@ -7,6 +7,7 @@ import { FontLinks } from '@repo/shared/components/font-links';
 import { Theme } from 'react-ui-kit';
 import './globals.css';
 import { items } from './lib/constants/navbarRoutes.constants';
+import { ScrollRevealProvider } from '@repo/shared/components';
 
 export const metadata: Metadata = getPageMetadata({});
 const APP_THEME = Theme.Network;
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     <Footer />
                     <CookieDisclaimer />
                 </ContextProviders>
+                <ScrollRevealProvider />
             </body>
         </html>
     );

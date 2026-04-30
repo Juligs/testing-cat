@@ -32,7 +32,9 @@ export function NavbarItems({
             <div
                 className={clsx(
                     'xs:hidden w-full transition-[max-height] overflow-y-hidden',
-                    isMobileNavOpen ? 'max-h-screen' : 'max-h-0',
+                    isMobileNavOpen
+                        ? 'max-h-screen pointer-events-auto'
+                        : 'max-h-0 pointer-events-none',
                 )}
             >
                 <ul className="flex flex-col py-6">{children}</ul>
