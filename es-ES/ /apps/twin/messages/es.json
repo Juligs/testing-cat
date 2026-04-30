@@ -1,6 +1,6 @@
 {
     "TwinPage": {
-        "eyebrow": "Crowdin + próximo intl + multiregión",
+        "eyebrow": "Crowdin + next-intl + multiregión",
         "title": "TWIN",
         "subtitle": "Una aplicación de prueba independiente donde el idioma y la región se seleccionan de forma independiente. El viaje predeterminado es el idioma inglés con contenido específico de Kenya.",
         "selectors": {
@@ -75,7 +75,7 @@
             "description": "La capa de traducción responde al idioma que ve el usuario. La capa de región responde a las señales del mercado, los pilotos y el contexto local deben ser resaltados.",
             "points": {
                 "englishUi": "La interfaz permanece en inglés para un usuario de Kenyan que prefiere el inglés.",
-                "kenyanWorkflows": "Ejemplos y puntos de prueba son seleccionados para coincidir con los flujos de trabajo de comercio y logística de Kenyan.",
+                "kenyanWorkflows": "Ejemplos y puntos de prueba son seleccionados para coincidir con los flujos de trabajo de comercio y logística de Kenia.",
                 "localPartnerships": "Las referencias de socios locales se encuentran sin cambiar el idioma de la aplicación.",
                 "languageFallbacks": "El mismo perfil regional puede presentarse en varios idiomas a medida que las traducciones estén disponibles.",
                 "regionalContentRules": "El contenido regional se selecciona por código de región en lugar de por local.",
