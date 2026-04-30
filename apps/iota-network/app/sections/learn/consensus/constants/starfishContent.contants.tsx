@@ -1,5 +1,4 @@
 import {
-    ArrowTopRight,
     IotaDnsResolver,
     SeamlessIntegrationWithWeb3,
     TradeSupplyChain,
@@ -26,14 +25,14 @@ export const STARFISH_BUTTONS: (React.ComponentProps<typeof Button> & { link: st
         text: 'Learn more',
         link: 'https://docs.iota.org/about-iota/iota-architecture/consensus#the-starfish-protocol',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: false,
     },
     {
         text: 'Read the paper',
         link: 'https://eprint.iacr.org/2025/567',
         variant: ButtonVariant.Secondary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: true,
     },
 ];

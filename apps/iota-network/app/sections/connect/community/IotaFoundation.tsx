@@ -3,7 +3,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, VerticalTitle } from 'react-ui-kit';
 import { IOTA_FOUNDATION_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function IotaFoundation({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -24,7 +23,7 @@ export function IotaFoundation({ id, navbarColorScheme }: BaseSectionProps) {
                                         rel="noopener noreferrer"
                                         aria-label="Go to the Iota Foundation page"
                                     >
-                                        <Button text="IOTA Foundation" icon={<ArrowTopRight />} />
+                                        <Button text="IOTA Foundation" icon />
                                     </Link>
                                 </Actions>
                             </div>

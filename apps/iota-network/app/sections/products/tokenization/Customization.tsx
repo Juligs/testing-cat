@@ -3,7 +3,6 @@ import { VerticalTitle, IconContent, Actions, Button } from 'react-ui-kit';
 import { CUSTOMIZATION_VERTICAL_TITLE, CUSTOMIZATION_ICON_CONTENT } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function Customization({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -16,9 +15,10 @@ export function Customization({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://docs.iota.org/developer/advanced/asset-tokenization"
                                     target="_blank"
-                                    arial-label="Go to the documentation"
+                                    rel="noopener noreferrer"
+                                    aria-label="Explore asset tokenization on IOTA"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} />
+                                    <Button text="Learn more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

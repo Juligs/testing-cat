@@ -3,7 +3,6 @@ import { VerticalTitle, IconContent, TextLink, Actions, Button } from 'react-ui-
 import { WHY_IOTA_VERTICAL_TITLE, WHY_IOTA_ICON_CONTENT } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function WhyIota({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -22,7 +21,7 @@ export function WhyIota({ id, navbarColorScheme }: BaseSectionProps) {
                                     target="_blank"
                                     aria-label="Go to the documentation"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} />
+                                    <Button text="Learn more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

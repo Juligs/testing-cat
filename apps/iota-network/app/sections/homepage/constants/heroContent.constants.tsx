@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant, HeroBackground, ScreenSize, TitleTextSize } from 'react-ui-kit';
 
@@ -15,14 +14,14 @@ export const HERO_HOMEPAGE_BUTTON = [
         text: 'Get started',
         link: '/build/get-started',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: true,
     },
     {
         text: 'What is IOTA?',
         link: '/learn/intro',
         variant: ButtonVariant.Secondary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: true,
     },
 ];

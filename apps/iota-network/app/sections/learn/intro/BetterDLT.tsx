@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
@@ -22,7 +21,7 @@ export function BetterDLT({ id, navbarColorScheme }: BaseSectionProps) {
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Learn more"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

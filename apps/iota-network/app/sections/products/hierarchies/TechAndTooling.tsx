@@ -2,7 +2,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { IconContent, TextLink, Actions, Button, HorizontalTitle } from 'react-ui-kit';
 import { TECH_AND_TOOLING_VERTICAL_TITLE, TECH_AND_TOOLING_ICON_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function TechAndTooling({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -15,7 +14,7 @@ export function TechAndTooling({ id, navbarColorScheme }: BaseSectionProps) {
                             target="_blank"
                             aria-label="Go to the documentation"
                         >
-                            <Button text="Learn more" icon={<ArrowTopRight />} />
+                            <Button text="Learn more" icon />
                         </Link>
                     </Actions>
                 </HorizontalTitle>

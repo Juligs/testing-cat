@@ -3,7 +3,6 @@ import { VerticalTitle, Actions, Button, ImageCard } from 'react-ui-kit';
 import { HOW_IT_WORKS_VERTICAL_TITLE, HOW_IT_WORKS_IMAGE_CARD_CONTENT } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 
 export function HowItWorksGas({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,7 +18,7 @@ export function HowItWorksGas({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the documentation"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} />
+                                    <Button text="Learn more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

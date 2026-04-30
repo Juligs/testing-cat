@@ -4,7 +4,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { BUILDING_A_BOLD_VISION_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function BuildingABoldVision({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -27,7 +26,7 @@ export function BuildingABoldVision({ id, navbarColorScheme }: BaseSectionProps)
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Our First Blog Post"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

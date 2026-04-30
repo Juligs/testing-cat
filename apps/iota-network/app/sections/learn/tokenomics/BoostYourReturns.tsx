@@ -1,5 +1,4 @@
 'use client';
-import { ArrowTopRight } from '@repo/icons';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
@@ -23,7 +22,7 @@ export function BoostYourReturns({ id, navbarColorScheme }: BaseSectionProps) {
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Learn more"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

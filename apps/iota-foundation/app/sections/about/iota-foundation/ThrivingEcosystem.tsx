@@ -4,7 +4,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { THRIVING_ECOSYSTEM_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function ThrivingEcosystem({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -24,11 +23,7 @@ export function ThrivingEcosystem({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="iotalabs"
                                 >
-                                    <Button
-                                        variant={ButtonVariant.Primary}
-                                        text="iotalabs"
-                                        icon={<ArrowTopRight />}
-                                    />
+                                    <Button variant={ButtonVariant.Primary} text="iotalabs" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

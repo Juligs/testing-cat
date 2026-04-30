@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant, HeroBackground } from 'react-ui-kit';
 
@@ -27,7 +26,7 @@ export const HERO_GRANTS_BUTTON = [
         text: 'Apply for a grant',
         link: 'https://airtable.com/appQqzg74YoTqK3Ht/pagOgN5kxDmUOrIW7/form',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: true,
         isExternal: true,
     },
@@ -63,7 +62,7 @@ export const HERO_PROJECTS_BUTTON = [
         text: 'Register your Project',
         link: 'https://airtable.com/appQqzg74YoTqK3Ht/pagAntotjuYq5XNlT/form',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: true,
         isExternal: true,
     },

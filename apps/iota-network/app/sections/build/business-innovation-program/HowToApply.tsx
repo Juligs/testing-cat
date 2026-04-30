@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
 import { Actions, Button, IconContent, VerticalTitle } from 'react-ui-kit';
@@ -17,7 +16,7 @@ export function HowToApply({ id, navbarColorScheme }: BaseSectionProps) {
                                 rel="noopener noreferrer"
                                 aria-label="Go to the form"
                             >
-                                <Button text="Apply now" icon={<ArrowTopRight />} />
+                                <Button text="Apply now" icon />
                             </Link>
                         </Actions>
                     </VerticalTitle>

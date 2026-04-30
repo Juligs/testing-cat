@@ -3,7 +3,6 @@ import { ENHANCED_DEV_EX_VERTICAL_TITLE_CONTENT } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, VerticalTitle } from 'react-ui-kit';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function EnhancedDevEX({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -18,7 +17,7 @@ export function EnhancedDevEX({ id, navbarColorScheme }: BaseSectionProps) {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} />
+                                    <Button text="Learn more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

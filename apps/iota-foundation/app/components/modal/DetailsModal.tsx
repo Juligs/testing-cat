@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from 'react-ui-kit';
-import { ArrowTopRight, Close } from '@repo/icons';
+import { Close } from '@repo/icons';
 
 interface DetailsModalProps {
     onClose: () => void;
@@ -77,7 +77,7 @@ export function DetailsModal({
                             rel="noopener noreferrer"
                             className="inline-flex items-center mt-10"
                         >
-                            <Button text="View Paper" icon={<ArrowTopRight />} />
+                            <Button text="View Paper" icon />
                         </Link>
                     ) : null}
                 </div>

@@ -4,7 +4,6 @@ import { Actions, Button, CtaCard, TextLink, VerticalTitle } from 'react-ui-kit'
 import { SUSTAINABILITY_TITLE_CONTENT, SUSTAINABILITY_CTA_CARD_CONTENT } from './constants';
 import { EnergyEfficiencyStats } from '@sections/sustainability/subsections/EnergyEfficiencyStats';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 import { Suspense } from 'react';
 import { ArrayDisplayStatsSkeleton } from '@repo/shared/sections';
 
@@ -17,7 +16,7 @@ export async function SustainabilityData({ id, navbarColorScheme }: BaseSectionP
                         <VerticalTitle {...SUSTAINABILITY_TITLE_CONTENT}>
                             <Actions>
                                 <Link href="/sustainability">
-                                    <Button text="View Details" icon={<ArrowTopRight />} />
+                                    <Button text="View Details" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

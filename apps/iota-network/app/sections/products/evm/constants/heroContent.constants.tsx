@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 
@@ -44,14 +43,14 @@ export const HERO_EVM_BUTTONS = [
         text: 'Connect',
         link: 'https://evm-bridge.iota.org',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         isExternal: true,
     },
     {
         text: 'View the docs',
         link: 'https://docs.iota.org/iota-evm',
         variant: ButtonVariant.Secondary,
-        icon: <ArrowTopRight />,
+        icon: true,
         isExternal: true,
     },
 ];

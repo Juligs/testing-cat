@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { TitleTextSize } from 'react-ui-kit';
 
 export const MAKE_YOUR_PROJECT_REAL_STATS_HORIZONTAL_TITLE = {
@@ -13,7 +12,7 @@ export const MAKE_YOUR_PROJECT_REAL_BUTTON_LINKS = [
     {
         link: 'https://iotalabs.io/grants',
         text: 'Learn more',
-        icon: <ArrowTopRight />,
+        icon: true,
     },
 ];
 

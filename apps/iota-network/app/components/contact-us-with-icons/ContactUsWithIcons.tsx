@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -82,7 +81,7 @@ export function ContactUsWithIcons({
                     >
                         <Button
                             text="partnerships@iota.org"
-                            icon={<ArrowTopRight />}
+                            icon
                             buttonBorderRadius={ButtonRadius.Rounded}
                         />
                     </Link>

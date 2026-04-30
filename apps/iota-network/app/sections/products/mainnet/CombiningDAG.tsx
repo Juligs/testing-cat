@@ -3,7 +3,6 @@ import { VerticalTitle, Actions, Button, IconContent } from 'react-ui-kit';
 import { COMBINING_DAG_VERTICAL_TITLE, COMBINING_DAG_ICON_CONTENT } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 
 export function CombiningDAG({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,7 +18,7 @@ export function CombiningDAG({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the documentation"
                                 >
-                                    <Button text="Get started" icon={<ArrowTopRight />} />
+                                    <Button text="Get started" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

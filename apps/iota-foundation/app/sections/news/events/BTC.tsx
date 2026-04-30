@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
@@ -20,7 +19,7 @@ export function BTC({ id, navbarColorScheme }: BaseSectionProps) {
                                 >
                                     <Button
                                         text="learn more"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                         ariaLabel="Learn more about the Beyond the Chain overview"
                                     />
                                 </Link>

@@ -3,7 +3,6 @@ import { VerticalTitle, Actions, Button } from 'react-ui-kit';
 import { SEEKING_BOLD_GRANTS_VERTICAL_TITLE } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 import { FetchGrantsSliderData, FetchGrantsStatsData } from '@repo/shared/sections';
 
 export function SeekingBold({ id, navbarColorScheme }: BaseSectionProps) {
@@ -20,7 +19,7 @@ export function SeekingBold({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the form"
                                 >
-                                    <Button text="Apply for a grant" icon={<ArrowTopRight />} />
+                                    <Button text="Apply for a grant" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

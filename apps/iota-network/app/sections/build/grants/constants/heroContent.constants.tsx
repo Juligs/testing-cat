@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 
 export const HERO_GRANTS_CONTENT = {
@@ -27,7 +26,7 @@ export const HERO_GRANTS_BUTTONS = [
         text: 'Learn more',
         link: 'https://iotalabs.io/grants',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         isExternal: true,
     },
 ];

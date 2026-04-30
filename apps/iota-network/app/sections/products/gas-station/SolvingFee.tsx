@@ -3,7 +3,6 @@ import { VerticalTitle, Actions, Button } from 'react-ui-kit';
 import { SOLVING_FEE_VERTICAL_TITLE } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function SolvingFee({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -16,9 +15,10 @@ export function SolvingFee({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href="https://docs.iota.org/operator/gas-station/"
                                     target="_blank"
-                                    arial-label="Go to the documentation"
+                                    rel="noopener noreferrer"
+                                    aria-label="Learn more about IOTA Gas Station"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} />
+                                    <Button text="Learn more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

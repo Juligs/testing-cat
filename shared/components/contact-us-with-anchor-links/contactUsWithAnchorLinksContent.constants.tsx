@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { ButtonVariant } from 'react-ui-kit';
 
 export const CONTACT_US_TITLE_CONTENT = {
@@ -10,5 +9,5 @@ export const CONTACT_US_BUTTON = {
     text: 'Email us',
     link: 'mailto:partnerships@iota.org',
     variant: ButtonVariant.Primary,
-    icon: <ArrowTopRight />,
+    icon: true,
 };

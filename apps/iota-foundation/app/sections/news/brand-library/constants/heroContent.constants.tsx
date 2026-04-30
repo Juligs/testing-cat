@@ -1,5 +1,4 @@
 import { HeroBackground, TitleTextSize, ButtonVariant } from 'react-ui-kit';
-import { ArrowTopRight } from '@repo/icons';
 
 export const HERO_BRAND_LIBRARY_CONTENT = {
     title: 'Brand Library',
@@ -19,7 +18,7 @@ export const HERO_BRAND_LIBRARY_BUTTON = [
         text: 'Show assets',
         link: 'https://assets.iota.org/',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         isExternal: true,
     },
 ];

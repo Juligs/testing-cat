@@ -3,7 +3,6 @@ import { VerticalTitle, ImageCard, Actions, Button } from 'react-ui-kit';
 import { SHAPE_THE_FUTURE_VERTICAL_TITLE, SHAPE_THE_FUTURE_IMAGE_CARD_CONTENT } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function ShapeTheFuture({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,7 +18,7 @@ export function ShapeTheFuture({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the IOTA governance forum"
                                 >
-                                    <Button text="Join the conversation" icon={<ArrowTopRight />} />
+                                    <Button text="Join the conversation" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

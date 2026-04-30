@@ -3,7 +3,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, VerticalTitle } from 'react-ui-kit';
 import { I_CIRCULAR3_TITLE_CONTENT, I_CIRCULAR3_BUTTONS } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function ICircular3({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -27,7 +26,7 @@ export function ICircular3({ id, navbarColorScheme }: BaseSectionProps) {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <Button {...button} icon={<ArrowTopRight />} />
+                                            <Button {...button} icon />
                                         </Link>
                                     </Actions>
                                 ))}

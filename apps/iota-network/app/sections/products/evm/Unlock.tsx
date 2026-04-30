@@ -10,7 +10,6 @@ import {
 import { UNLOCK_VERTICAL_TITLE, UNLOCK_IMAGE_CARD_CONTENT, UNLOCK_ICON_CONTENT } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 
 export function Unlock({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -26,7 +25,7 @@ export function Unlock({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the documentation"
                                 >
-                                    <Button text="View docs" icon={<ArrowTopRight />} />
+                                    <Button text="View docs" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

@@ -11,6 +11,7 @@ import {
 } from './button.constants';
 import { ButtonRadius, ButtonSize, ButtonVariant } from './button.enums';
 import { clsx } from 'clsx';
+import { ArrowTopRight } from '@repo/icons';
 
 type HTMLButtonProps = Omit<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -39,9 +40,9 @@ interface ButtonProps extends HTMLButtonProps {
      */
     text?: string;
     /**
-     * Icon displayed on the button
+     * Icon displayed on the button. Pass `true` to use the default ArrowTopRight icon.
      */
-    icon?: React.ReactNode;
+    icon?: boolean | React.ReactNode;
     /**
      * Aria label for the button
      */
@@ -64,7 +65,13 @@ export function Button({
     ...buttonProps
 }: ButtonProps) {
     const textColor = inverted ? TEXT_COLOR_INVERTED[variant] : TEXT_COLOR[variant];
-    const isOnlyIcon = Boolean(!text && icon);
+    const resolvedIcon =
+        icon === true ? (
+            <ArrowTopRight className="transition-transform ease-in duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        ) : icon ? (
+            icon
+        ) : null;
+    const isOnlyIcon = Boolean(!text && resolvedIcon);
     const isSmallButton = ButtonSize.Small === size;
     const bgColor = inverted ? BUTTON_BG_COLOR_INVERTED[variant] : BUTTON_BG_COLOR[variant];
 
@@ -95,7 +102,7 @@ export function Button({
                     )}
                 >
                     {text && <span>{text}</span>}
-                    {icon}
+                    {resolvedIcon}
                 </div>
             </div>
         </button>

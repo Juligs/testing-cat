@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import {
     LEARNING_RESOURCES_VERTICAL_TITLE_CONTENT,
     LEARNING_RESOURCES_IMAGE_CARD,
@@ -19,7 +18,7 @@ export function LearningResources({ id, navbarColorScheme }: BaseSectionProps) {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Button text="See all" icon={<ArrowTopRight />} />
+                                <Button text="See all" icon />
                             </Link>
                         </Actions>
                     </VerticalTitle>

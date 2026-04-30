@@ -7,7 +7,6 @@ import {
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, IconContent, VerticalTitle } from 'react-ui-kit';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function Extension({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -25,7 +24,7 @@ export function Extension({ id, navbarColorScheme }: BaseSectionProps) {
                                             rel="noopener noreferrer"
                                             aria-label="Go to the documentation"
                                         >
-                                            <Button text="Learn more" icon={<ArrowTopRight />} />
+                                            <Button text="Learn more" icon />
                                         </Link>
                                     </Actions>
                                 </div>

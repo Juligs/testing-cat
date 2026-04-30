@@ -3,7 +3,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import Link from 'next/link';
 import { PARTNER_PROJECTS_TITLE_CONTENT } from './constants';
-import { ArrowTopRight } from '@repo/icons';
 
 export function PartnerProjects({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,11 +18,7 @@ export function PartnerProjects({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="View IOTA's showcases"
                                 >
-                                    <Button
-                                        variant={ButtonVariant.Primary}
-                                        text="Showcases"
-                                        icon={<ArrowTopRight />}
-                                    />
+                                    <Button variant={ButtonVariant.Primary} text="Showcases" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

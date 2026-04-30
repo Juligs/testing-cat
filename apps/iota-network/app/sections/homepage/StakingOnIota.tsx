@@ -3,7 +3,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { STAKING_ON_IOTA_VERTICAL_TITLE, STAKING_ON_IOTA_BUTTONS } from './constants';
 import { Actions, Button, VerticalTitle } from 'react-ui-kit';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function StakingOnIota({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -22,7 +21,7 @@ export function StakingOnIota({ id, navbarColorScheme }: BaseSectionProps) {
                                         className="[&>div]:h-full"
                                         aria-label={`Link to ${data.ariaLabel}`}
                                     >
-                                        <Button {...data} icon={<ArrowTopRight />} />
+                                        <Button {...data} icon />
                                     </Link>
                                 ))}
                             </Actions>

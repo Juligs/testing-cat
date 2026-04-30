@@ -7,7 +7,6 @@ import {
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, IconContent, VerticalTitle } from 'react-ui-kit';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function Dashboard({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -29,11 +28,7 @@ export function Dashboard({ id, navbarColorScheme }: BaseSectionProps) {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
-                                                <Button
-                                                    {...button}
-                                                    icon={<ArrowTopRight />}
-                                                    inverted
-                                                />
+                                                <Button {...button} icon inverted />
                                             </Link>
                                         </Actions>
                                     ))}

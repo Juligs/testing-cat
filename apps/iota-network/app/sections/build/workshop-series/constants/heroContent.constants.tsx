@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 
 export const HERO_WORKSHOP_CONTENT = {
@@ -27,7 +26,7 @@ export const HERO_WORKSHOP_BUTTONS = [
         text: 'Get Started',
         link: 'https://docs.iota.org/developer/workshops/',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         isExternal: true,
     },
 ];

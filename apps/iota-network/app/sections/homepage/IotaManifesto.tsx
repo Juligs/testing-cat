@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { IOTA_MANIFESTO_CTA_CARD_CONTENT, IOTA_MANIFESTO_VERTICAL_TITLE } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 import { SmallCtaCard } from '@components/small-CTA-card/SmallCtaCard';
 
 export function IotaManifesto({ id, navbarColorScheme }: BaseSectionProps) {
@@ -23,7 +22,7 @@ export function IotaManifesto({ id, navbarColorScheme }: BaseSectionProps) {
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Read the manifesto"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

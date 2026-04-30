@@ -2,7 +2,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, HorizontalTitle, Image } from 'react-ui-kit';
 import { OUR_PURPOSE_HORIZONTAL_TITLE } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function OurPurpose({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -12,7 +11,7 @@ export function OurPurpose({ id, navbarColorScheme }: BaseSectionProps) {
                     <HorizontalTitle {...OUR_PURPOSE_HORIZONTAL_TITLE}>
                         <Actions>
                             <Link href="/purpose" aria-label={'Link to purpose'}>
-                                <Button text="Our Vision" icon={<ArrowTopRight />} />
+                                <Button text="Our Vision" icon />
                             </Link>
                         </Actions>
                     </HorizontalTitle>

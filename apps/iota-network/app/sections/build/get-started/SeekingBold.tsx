@@ -21,7 +21,6 @@ import {
 } from './constants';
 import { SmallCtaCard } from '@components/small-CTA-card/SmallCtaCard';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 import { FetchEventsDataCards } from '@repo/shared/sections/events/subsections';
 import clsx from 'clsx';
 import { FetchGrantsStatsDataGetStarted } from './subsections/FetchGrantsStatsDataGetStarted';
@@ -70,11 +69,7 @@ export function SeekingBold({ id, navbarColorScheme }: BaseSectionProps) {
                         <VerticalTitle {...CONNECT_VERTICAL_TITLE} inverted>
                             <Actions>
                                 <Link href="https://luma.com/user/iota" target="_blank">
-                                    <Button
-                                        text="Subscribe for future events"
-                                        icon={<ArrowTopRight />}
-                                        inverted
-                                    />
+                                    <Button text="Subscribe for future events" icon inverted />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

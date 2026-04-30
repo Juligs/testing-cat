@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant, HeroBackground } from 'react-ui-kit';
 
@@ -12,13 +11,13 @@ export const HERO_HOMEPAGE_BUTTON = [
         text: 'Purpose',
         link: '/purpose',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
     },
     {
         text: 'Our research',
         link: '/research/our-research',
         variant: ButtonVariant.Secondary,
-        icon: <ArrowTopRight />,
+        icon: true,
     },
 ];
 

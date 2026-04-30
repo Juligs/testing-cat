@@ -1,7 +1,6 @@
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BuildingCTA } from '@components';
 import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
-import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
@@ -27,11 +26,7 @@ export function BuildWith({ id, navbarColorScheme }: BaseSectionProps) {
                         >
                             <Actions>
                                 <Link href="/grants">
-                                    <Button
-                                        variant={ButtonVariant.Primary}
-                                        text="Read more"
-                                        icon={<ArrowTopRight />}
-                                    />
+                                    <Button variant={ButtonVariant.Primary} text="Read more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

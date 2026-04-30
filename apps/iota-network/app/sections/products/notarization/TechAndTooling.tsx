@@ -5,7 +5,6 @@ import {
 import { Actions, Button, HorizontalTitle, ImageCard } from 'react-ui-kit';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function TechAndTooling({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,7 +18,7 @@ export function TechAndTooling({ id, navbarColorScheme }: BaseSectionProps) {
                             aria-label="Go to the documentation"
                             rel="noopener noreferrer"
                         >
-                            <Button text="Learn more" icon={<ArrowTopRight />} />
+                            <Button text="Learn more" icon />
                         </Link>
                     </Actions>
                 </HorizontalTitle>

@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 
@@ -44,7 +43,7 @@ export const HERO_TOOLING_BUTTONS = [
         text: 'Visit the docs',
         link: 'https://docs.iota.org',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         isExternal: true,
     },
 ];

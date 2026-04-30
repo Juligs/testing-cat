@@ -18,7 +18,6 @@ import {
 } from './constants';
 import Link from 'next/link';
 import { SmallCtaCard } from '@components/small-CTA-card/SmallCtaCard';
-import { ArrowTopRight } from '@repo/icons';
 import { FetchExchangesLinks } from './subsections';
 
 export function ExploreStake({ id, navbarColorScheme }: BaseSectionProps) {
@@ -70,7 +69,7 @@ export function ExploreStake({ id, navbarColorScheme }: BaseSectionProps) {
                                     href="/learn/staking"
                                     aria-label="Link to Learn more about Staking"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} />
+                                    <Button text="Learn more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

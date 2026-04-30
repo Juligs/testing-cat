@@ -3,7 +3,6 @@ import { Actions, Button, VerticalTitle } from 'react-ui-kit';
 import { CAREERS_TITLE_CONTENT } from './constants';
 import { FetchCareersData } from './subsections';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function Careers({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -18,7 +17,7 @@ export function Careers({ id, navbarColorScheme }: BaseSectionProps) {
                                 rel="noopener noreferrer"
                                 aria-label="Link to open positions"
                             >
-                                <Button text="Open positions" icon={<ArrowTopRight />} />
+                                <Button text="Open positions" icon />
                             </Link>
                         </Actions>
                     </VerticalTitle>

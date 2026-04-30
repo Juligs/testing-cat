@@ -1,5 +1,4 @@
 'use client';
-import { ArrowTopRight } from '@repo/icons';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '../../components';
 import { BaseSectionProps } from '../../interfaces';
@@ -30,7 +29,7 @@ export function DecentralizedFinance({ id, navbarColorScheme }: BaseSectionProps
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="See showcases"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </a>
                             </Actions>
