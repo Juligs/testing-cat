@@ -28,7 +28,7 @@
         "regions": {
             "ke": {
                 "name": "Kenya",
-                "headline": "Contexto operativo específico de la kenia",
+                "headline": "Contexto operativo específico de Kenia",
                 "summary": "El contenido enfatiza los flujos comerciales de África Oriental, la relevancia piloto local y las instituciones que importan su despliegue en Kenya."
             },
             "global": {
@@ -74,7 +74,7 @@
             "title": "Cómo se adapta el contenido",
             "description": "La capa de traducción responde al idioma que ve el usuario. La capa de región responde a las señales del mercado, los pilotos y el contexto local deben ser resaltados.",
             "points": {
-                "englishUi": "La interfaz permanece en inglés para un usuario de Kenyan que prefiere el inglés.",
+                "englishUi": "La interfaz permanece en inglés para un usuario de Kenia que prefiere el inglés.",
                 "kenyanWorkflows": "Ejemplos y puntos de prueba son seleccionados para coincidir con los flujos de trabajo de comercio y logística de Kenia.",
                 "localPartnerships": "Las referencias de socios locales se encuentran sin cambiar el idioma de la aplicación.",
                 "languageFallbacks": "El mismo perfil regional puede presentarse en varios idiomas a medida que las traducciones estén disponibles.",
