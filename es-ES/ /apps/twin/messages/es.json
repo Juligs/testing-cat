@@ -1,0 +1,113 @@
+{
+    "TwinPage": {
+        "eyebrow": "Crowdin + next-intl + multiregión",
+        "title": "TWIN",
+        "subtitle": "Una aplicación de prueba independiente donde el idioma y la región se seleccionan de forma independiente. El viaje predeterminado es el idioma inglés con contenido específico de Kenya.",
+        "selectors": {
+            "language": "Idioma",
+            "region": "Región"
+        },
+        "languages": {
+            "en": "Inglés",
+            "es": "Spanish",
+            "fr": "French",
+            "sw": "Swahili"
+        },
+        "cards": {
+            "userContext": "Contexto del usuario",
+            "localSignals": "Señales locales",
+            "pilots": "Pilotes",
+            "whyThisMatters": "Por qué esto es importante",
+            "crowdin": "Estructura lista para Crowdin"
+        },
+        "spotlight": {
+            "title": "El idioma no es el mismo que la región",
+            "description": "Esta página utiliza el next-intl para traducciones, mientras que los detalles específicos de la región se eligen por separado. Un usuario puede navegar en inglés y recibir contenido adaptado a Kenya.",
+            "language": "Idioma",
+            "region": "Región",
+            "default": "Idioma por defecto"
+        },
+        "regions": {
+            "ke": {
+                "name": "Kenya",
+                "headline": "Contexto operativo específico de Kenia",
+                "summary": "El contenido enfatiza los flujos comerciales de África Oriental, la relevancia piloto local y las instituciones que importan su despliegue en Kenya."
+            },
+            "uk": {
+                "name": "United Kingdom",
+                "headline": "United Kingdom trade and compliance context",
+                "summary": "Content emphasizes digital trade workflows, trusted document exchange, and interoperability with public and private trade stakeholders in the UK."
+            },
+            "fr": {
+                "name": "France",
+                "headline": "France-specific trade and document assurance context",
+                "summary": "Content emphasizes trusted trade documentation, cross-border coordination, and regionally relevant compliance workflows for the French market."
+            },
+            "global": {
+                "name": "Global",
+                "headline": "Propuesta de valor central transversal",
+                "summary": "El contenido se enmarca en torno al intercambio de datos de comercio internacional, la autenticidad de documentos y la infraestructura digital reutilizable en todos los mercados."
+            }
+        },
+        "signals": {
+            "eastAfricanCorridor": "Concéntrese en el corredor comercial del África oriental y en los flujos vinculados a Kenia a través de puertos y controles aduaneros.",
+            "tradeDigitization": "Highlight digital trade modernization, interoperable document handling, and trusted exchange between institutions and operators.",
+            "publicPrivatePartners": "Destaca los patrones de colaboración con instituciones y organizaciones públicas como la África de las Marcas.",
+            "smeExporters": "Priorizar a los explicadores que ayudan a las PYME y a los exportadores a entender un procesamiento más rápido y una fricción más baja.",
+            "crossBorderData": "Explique cómo los datos comerciales estructurados pueden moverse de forma fiable a través de múltiples jurisdicciones.",
+            "documentAuthenticity": "Peso de estrés de la ciudad, trazabilidad y acceso controlado a documentos comerciales.",
+            "openNetworkDesign": "Marco TWIN como infraestructura digital reutilizable más que un despliegue de un solo país."
+        },
+        "pilots": {
+            "title": "Fotograma piloto localizado",
+            "items": {
+                "mombasaPort": {
+                    "title": "Visibilidad del puerto y del corredor",
+                    "description": "Describa un piloto de cara a la Kenya en torno a los hitos de envío, las entregas de documentos y el intercambio de datos de confianza conectado con Mombasa."
+                },
+                "tradeFinance": {
+                    "title": "Entrega de finanzas de SME",
+                    "description": "Posicionar TWIN como una forma de reducir la fricción para los exportadores compartiendo registros de comercio digital verificables con bancos y contrapartes."
+                },
+                "portCommunity": {
+                    "title": "Port community coordination",
+                    "description": "Frame TWIN around trusted shipment updates, document exchange, and coordination between logistics operators, customs, and port stakeholders."
+                },
+                "complianceExchange": {
+                    "title": "Compliance document exchange",
+                    "description": "Show how compliance-related trade documents can be shared, verified, and traced more efficiently across participating institutions."
+                },
+                "certificateFlow": {
+                    "title": "Certificar flujo de trabajo de validación",
+                    "description": "Demuestre cómo los certificados digitales pueden ser verificados más rápidamente, reduciendo los controles manuales y los retrasos en el proceso de comercio transfronterizo."
+                },
+                "documentTokenization": {
+                    "title": "Tokenización de documentos",
+                    "description": "Explique la importancia de la representación digital de los documentos comerciales, preservando al mismo tiempo el acceso controlado y la autenticidad."
+                },
+                "crossBorderVisibility": {
+                    "title": "Visibilidad transfronteriza de datos",
+                    "description": "Muestra el valor de una capa de datos compartida para actualizaciones de estado, procedencia y colaboración confiable en todos los países."
+                }
+            }
+        },
+        "adaptation": {
+            "title": "Cómo se adapta el contenido",
+            "description": "La capa de traducción responde al idioma que ve el usuario. La capa de región responde a las señales del mercado, los pilotos y el contexto local deben ser resaltados.",
+            "points": {
+                "englishUi": "La interfaz permanece en inglés para un usuario de Kenia que prefiere el inglés.",
+                "kenyanWorkflows": "Ejemplos y puntos de prueba son seleccionados para coincidir con los flujos de trabajo de comercio y logística de Kenia.",
+                "localPartnerships": "Las referencias de socios locales se encuentran sin cambiar el idioma de la aplicación.",
+                "languageFallbacks": "El mismo perfil regional puede presentarse en varios idiomas a medida que las traducciones estén disponibles.",
+                "regionalContentRules": "El contenido regional se selecciona por código de región en lugar de por local.",
+                "sharedCorePlatform": "La mensajería principal del producto permanece reutilizable mientras el contexto específico del mercado cambia."
+            }
+        },
+        "crowdin": {
+            "title": "Por qué esta estructura funciona bien con Crowdin",
+            "pointOne": "Toda la interfaz de usuario traducible y copia de mercado se almacena en archivos de mensajes JSON basados en locales.",
+            "pointTwo": "La lógica de la región vive en un modelo de datos independiente, por lo que los traductores no necesitan codificar las reglas del mercado.",
+            "pointThree": "Añadir un nuevo local significa principalmente proporcionar un nuevo archivo de mensajes sin cambiar el catálogo de región."
+        }
+    }
+}
