@@ -3,7 +3,6 @@ import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export const EVENT_KIT_CONTENT = {
     title: 'Level-Up Your Next Event',
@@ -31,7 +30,7 @@ export function EventKit({ id, navbarColorScheme }: BaseSectionProps) {
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Show assets"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

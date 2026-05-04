@@ -3,7 +3,6 @@ import { VerticalTitle, Actions, Button } from 'react-ui-kit';
 import { BRIDGING_IOTA_VERTICAL_TITLE } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 
 export function BridgingIota({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,7 +18,7 @@ export function BridgingIota({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the page"
                                 >
-                                    <Button text="Bridge" icon={<ArrowTopRight />} />
+                                    <Button text="Bridge" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

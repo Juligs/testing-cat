@@ -3,7 +3,6 @@ import { VerticalTitle, Actions, Button, ImageCard } from 'react-ui-kit';
 import { OUR_DECISION_VERTICAL_TITLE, OUR_DECISION_IMAGE_CARD_CONTENT } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 
 export function OurDecisionFramework({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,7 +18,7 @@ export function OurDecisionFramework({ id, navbarColorScheme }: BaseSectionProps
                                     rel="noopener noreferrer"
                                     aria-label="Go to the form"
                                 >
-                                    <Button text="Apply now" icon={<ArrowTopRight />} />
+                                    <Button text="Apply now" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

@@ -3,7 +3,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { STREAMLINING_INNOVATION_VERTICAL_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function StreamliningInnovation({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -22,7 +21,7 @@ export function StreamliningInnovation({ id, navbarColorScheme }: BaseSectionPro
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="IOTA Foundation"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

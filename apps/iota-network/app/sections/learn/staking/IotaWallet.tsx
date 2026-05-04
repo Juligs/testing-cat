@@ -1,5 +1,4 @@
 'use client';
-import { ArrowTopRight } from '@repo/icons';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
@@ -25,7 +24,7 @@ export function IotaWallet({ id, navbarColorScheme }: BaseSectionProps) {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <Button {...button} icon={<ArrowTopRight />} />
+                                            <Button {...button} icon />
                                         </Link>
                                     </Actions>
                                 ))}

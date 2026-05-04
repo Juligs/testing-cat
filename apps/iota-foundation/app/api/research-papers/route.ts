@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { fetchResearchPapers } from '@lib/utils';
+import { fetchResearchPapers } from '@lib/utils/fetchResearchPapers';
 
 export const revalidate = 14400;
 

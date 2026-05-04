@@ -6,7 +6,6 @@ import {
     WHAT_IS_SUPPORTED_ICON_CONTENT,
 } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function WhatIsSupported({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -20,7 +19,7 @@ export function WhatIsSupported({ id, navbarColorScheme }: BaseSectionProps) {
                             rel="noopener noreferrer"
                             aria-label="Go to the form"
                         >
-                            <Button text="Apply now" icon={<ArrowTopRight />} />
+                            <Button text="Apply now" icon />
                         </Link>
                     </Actions>
                 </HorizontalTitle>

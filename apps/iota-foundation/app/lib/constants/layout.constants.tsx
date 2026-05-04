@@ -1,5 +1,5 @@
 import { Route } from '@repo/shared/interfaces';
-import { BlogPost, Daos, DataInsights, GoogleScholar, LinkedIn } from '@repo/icons';
+import { BlogPost, Daos, DataInsights, GoogleScholar, IotaToken, LinkedIn } from '@repo/icons';
 
 export const FEATURED_CARDS: Route[] = [
     {
@@ -211,6 +211,46 @@ export const ROUTES: Route[] = [
                     },
                 ],
             },
+            {
+                children: FEATURED_CARDS,
+            },
+        ],
+    },
+    {
+        title: 'Beyond the Chain',
+        path: '/beyond-the-chain',
+        children: [
+            {
+                title: 'Overview',
+                path: '/beyond-the-chain/overview',
+            },
+            {
+                title: 'Workshop Highlights',
+                path: '/beyond-the-chain/workshop-highlights/2025',
+            },
+        ],
+        navbarSections: [
+            {
+                title: 'Beyond the Chain',
+                icon: <IotaToken />,
+                children: [
+                    {
+                        title: 'Overview',
+                        description: 'Workshop on next-generation distributed ledger technologies',
+                        path: '/beyond-the-chain/overview',
+                    },
+                ],
+            },
+            {
+                children: [
+                    {
+                        title: 'Workshop Highlights',
+                        description: 'The Workshop Archive and accepted papers',
+                        path: '/beyond-the-chain/workshop-highlights/2025',
+                    },
+                ],
+            },
+
             {
                 children: FEATURED_CARDS,
             },

@@ -8,7 +8,6 @@ import {
 } from './constants';
 import Link from 'next/link';
 import { SmallCtaCard } from '@components/small-CTA-card/SmallCtaCard';
-import { ArrowTopRight } from '@repo/icons';
 
 export function LearnBuildShipHomepage({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -29,7 +28,7 @@ export function LearnBuildShipHomepage({ id, navbarColorScheme }: BaseSectionPro
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <Button {...button} icon={<ArrowTopRight />} />
+                                            <Button {...button} icon />
                                         </Link>
                                     </Actions>
                                 ))}

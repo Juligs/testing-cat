@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { FetchEventsDataCards } from '@repo/shared/sections/events/subsections';
 import { SmallCtaCard } from '@components/small-CTA-card/SmallCtaCard';
 import { Separator } from '@components/separator';
-import { ArrowTopRight } from '@repo/icons';
 
 export function EventTeaser({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -16,10 +15,7 @@ export function EventTeaser({ id, navbarColorScheme }: BaseSectionProps) {
                         <VerticalTitle {...EVENT_TEASER_VERTICAL_TITLE}>
                             <Actions>
                                 <Link href="https://luma.com/user/iota" target="_blank">
-                                    <Button
-                                        text="Subscribe for future events"
-                                        icon={<ArrowTopRight />}
-                                    />
+                                    <Button text="Subscribe for future events" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

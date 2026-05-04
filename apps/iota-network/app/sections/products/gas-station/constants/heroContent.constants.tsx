@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 
@@ -43,7 +42,7 @@ export const GAS_STATION_BUTTONS = [
         text: 'Learn more',
         link: 'https://docs.iota.org/operator/gas-station/',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         isExternal: true,
     },
     {

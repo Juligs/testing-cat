@@ -1,7 +1,6 @@
 import { VerticalTitle, TitleTextSize, Actions, Button } from 'react-ui-kit';
 import { BaseSectionProps } from '../../interfaces';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 import Image from 'next/image';
 import { ComponentProps } from 'react';
 import { PROPOSAL_FORM_URL } from './constants';
@@ -42,7 +41,7 @@ export function RequestForProposalsTitle({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <Button text="Apply now" icon={<ArrowTopRight />} />
+                                    <Button text="Apply now" icon />
                                 </Link>
                             </Actions>
                         )}

@@ -3,7 +3,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, VerticalTitle } from 'react-ui-kit';
 import { UNIVERSITY_OF_BOLOGNA_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function UniversityOfBologna({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -26,7 +25,7 @@ export function UniversityOfBologna({ id, navbarColorScheme }: BaseSectionProps)
                                     rel="noopener noreferrer"
                                     aria-label="University of Bologna official website"
                                 >
-                                    <Button text="Learn More" icon={<ArrowTopRight />} />
+                                    <Button text="Learn More" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

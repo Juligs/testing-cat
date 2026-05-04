@@ -3,7 +3,6 @@ import { VerticalTitle, IconContent, Actions, Button } from 'react-ui-kit';
 import { WHY_TOKENIZED_VERTICAL_TITLE, WHY_TOKENIZED_ICON_CONTENT } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function WhyTokenizedWithIOTA({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -16,9 +15,10 @@ export function WhyTokenizedWithIOTA({ id, navbarColorScheme }: BaseSectionProps
                                 <Link
                                     href="https://docs.iota.org/developer/standards"
                                     target="_blank"
-                                    arial-label="Go to the documentation"
+                                    rel="noopener noreferrer"
+                                    aria-label="Explore IOTA developer standards"
                                 >
-                                    <Button text="Get started" icon={<ArrowTopRight />} />
+                                    <Button text="Get started" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

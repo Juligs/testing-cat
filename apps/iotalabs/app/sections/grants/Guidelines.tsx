@@ -1,6 +1,5 @@
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { DecoratedBox } from '@components';
-import { ArrowTopRight } from '@repo/icons';
 import {
     HorizontalTitle,
     IconContent,
@@ -39,7 +38,7 @@ export function Guidelines({ id, navbarColorScheme }: BaseSectionProps) {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <Button text="Apply for a Grant" icon={<ArrowTopRight />} />
+                                    <Button text="Apply for a Grant" icon />
                                 </Link>
                             </Actions>
                         </HorizontalTitle>

@@ -2,7 +2,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, HorizontalTitle, Image } from 'react-ui-kit';
 import { IOTA_ECONOMY_HORIZONTAL_TITLE } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function IotaEconomy({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -17,7 +16,7 @@ export function IotaEconomy({ id, navbarColorScheme }: BaseSectionProps) {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Button text="Docs" icon={<ArrowTopRight />} />
+                                <Button text="Docs" icon />
                             </Link>
                         </Actions>
                     </HorizontalTitle>

@@ -8,7 +8,6 @@ import {
 } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function ZeroKnowledge({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -31,7 +30,7 @@ export function ZeroKnowledge({ id, navbarColorScheme }: BaseSectionProps) {
                                         className="[&>div]:h-full"
                                         aria-label={`Link to ${data.ariaLabel}`}
                                     >
-                                        <Button {...data} icon={<ArrowTopRight />} />
+                                        <Button {...data} icon />
                                     </Link>
                                 ))}
                             </Actions>

@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 
@@ -13,7 +12,7 @@ export const HERO_TRUST_FRAMEWORK_BUTTON = [
         text: 'Learn more',
         link: 'https://docs.iota.org/developer/iota-trust-framework',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: true,
         isExternal: true,
     },
@@ -21,7 +20,7 @@ export const HERO_TRUST_FRAMEWORK_BUTTON = [
         text: 'Contact us',
         link: 'mailto:partnerships@iota.org',
         variant: ButtonVariant.Secondary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: true,
     },
 ];

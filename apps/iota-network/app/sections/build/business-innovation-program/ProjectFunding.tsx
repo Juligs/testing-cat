@@ -10,7 +10,6 @@ import {
 import { PROJECT_FUNDING_VERTICAL_TITLE, PROJECT_FUNDING_STATS_CONTENT } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 
 export function ProjectFunding({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -25,12 +24,12 @@ export function ProjectFunding({ id, navbarColorScheme }: BaseSectionProps) {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <Button text="Blog post" icon={<ArrowTopRight />} />
+                                    <Button text="Blog post" icon />
                                 </Link>
                                 <Link href="/learn/showcases#rwa">
                                     <Button
                                         text="Explore participant projects"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                         variant={ButtonVariant.Secondary}
                                     />
                                 </Link>

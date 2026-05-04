@@ -4,7 +4,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { DECENTRALIZATION_AND_EMPOWERMENT_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function DescentralizationAndEmpowerment({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -30,7 +29,7 @@ export function DescentralizationAndEmpowerment({ id, navbarColorScheme }: BaseS
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Governance Forum"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

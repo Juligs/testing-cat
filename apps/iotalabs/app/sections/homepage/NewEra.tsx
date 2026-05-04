@@ -1,5 +1,4 @@
 import { Actions, Button, ButtonVariant, VerticalTitle, TitleTextSize } from 'react-ui-kit';
-import { ArrowTopRight } from '@repo/icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BaseSectionProps } from '@repo/shared/interfaces';
@@ -33,11 +32,7 @@ export function NewEra({ id, navbarColorScheme }: BaseSectionProps) {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Button
-                                    variant={ButtonVariant.Primary}
-                                    text="Get Started"
-                                    icon={<ArrowTopRight />}
-                                />
+                                <Button variant={ButtonVariant.Primary} text="Get Started" icon />
                             </Link>
                         </Actions>
                     </VerticalTitle>

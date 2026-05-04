@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { scrollToSection } from '@repo/shared/utils';
 import { ButtonVariant, HeroBackground, ScreenSize } from 'react-ui-kit';
 
@@ -44,14 +43,14 @@ export const HERO_WALLET_BUTTONS = [
         text: 'Get the wallet',
         link: 'https://chromewebstore.google.com/detail/iota-wallet/iidjkmdceolghepehaaddojmnjnkkija',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         isExternal: true,
     },
     {
         text: 'Learn more',
         link: 'https://docs.iota.org/about-iota/iota-wallet/getting-started',
         variant: ButtonVariant.Secondary,
-        icon: <ArrowTopRight />,
+        icon: true,
         isExternal: true,
         inverted: true,
     },

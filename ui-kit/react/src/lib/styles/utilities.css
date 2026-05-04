@@ -1,3 +1,88 @@
+/* ─── Motion tokens ────────────────────────────────────────────────────── */
+:root {
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-standard: cubic-bezier(0.4, 0, 1, 1);
+    --ease-in-quart: cubic-bezier(0.5, 0, 0.75, 0);
+    --duration-fast: 150ms;
+    --duration-quick: 180ms;
+    --duration-base: 250ms;
+    --duration-medium: 300ms;
+    --duration-slow: 400ms;
+    --duration-enter: 500ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ─── Scroll-reveal base classes ───────────────────────────────────────── */
+/* Only sections marked .will-animate start invisible.
+   ScrollRevealProvider adds that class (skipping the hero) before observing,
+   then adds .is-visible when the section enters the viewport. */
+section.will-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity var(--duration-enter) var(--ease-out-expo),
+        transform var(--duration-enter) var(--ease-out-expo);
+    will-change: opacity, transform;
+}
+
+section.will-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Manual reveal classes (kept for finer-grained control if needed) */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+        opacity var(--duration-enter) var(--ease-out-expo),
+        transform var(--duration-enter) var(--ease-out-expo);
+    will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered children: set --i on each child */
+.reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        opacity var(--duration-slow) var(--ease-out-expo),
+        transform var(--duration-slow) var(--ease-out-expo);
+    transition-delay: calc(var(--i, 0) * 70ms);
+    will-change: opacity, transform;
+}
+
+.reveal-stagger.is-visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade-only variant (no translate) */
+.reveal-fade {
+    opacity: 0;
+    transition: opacity var(--duration-enter) var(--ease-out-expo);
+    will-change: opacity;
+}
+
+.reveal-fade.is-visible {
+    opacity: 1;
+}
+
 @layer utilities {
     .group-state-layer {
         border-radius: inherit;

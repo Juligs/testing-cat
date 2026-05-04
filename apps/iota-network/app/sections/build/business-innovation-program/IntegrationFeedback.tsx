@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import Link from 'next/link';
 import { Button, ButtonVariant, HorizontalTitle, TitleTextSize } from 'react-ui-kit';
 import { CONNECT_CTA_CONTENT, CONTRIBUTE_SMALL_CARD_CONTENT } from '../get-started/constants';
@@ -25,11 +24,7 @@ export function IntegrationFeedback({ id, navbarColorScheme }: IntegrationFeedba
                         rel="noopener noreferrer"
                         aria-label="Mail to partnerships"
                     >
-                        <Button
-                            text="Contact us"
-                            icon={<ArrowTopRight />}
-                            variant={ButtonVariant.Secondary}
-                        />
+                        <Button text="Contact us" icon variant={ButtonVariant.Secondary} />
                     </Link>
                 </HorizontalTitle>
                 <div className="grid grid-cols-1 sm:grid-cols-2  gap-6">

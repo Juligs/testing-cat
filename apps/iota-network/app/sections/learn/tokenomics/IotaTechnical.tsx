@@ -2,7 +2,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { VerticalTitle, Actions, Button } from 'react-ui-kit';
 import { IOTA_TECHNICAL_VERTICAL_TITLE } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 
 export function IotaTechnical({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -17,7 +16,7 @@ export function IotaTechnical({ id, navbarColorScheme }: BaseSectionProps) {
                                     aria-label="Download Whitepaper"
                                     download
                                 >
-                                    <Button text="Read the Paper" icon={<ArrowTopRight />} />
+                                    <Button text="Read the Paper" icon />
                                 </a>
                             </Actions>
                         </VerticalTitle>

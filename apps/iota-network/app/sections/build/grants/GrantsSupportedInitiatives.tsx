@@ -6,7 +6,6 @@ import {
 } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 
 export function GrantsSupportedInitiatives({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -22,7 +21,7 @@ export function GrantsSupportedInitiatives({ id, navbarColorScheme }: BaseSectio
                                     rel="noopener noreferrer"
                                     aria-label="Go to the Iota Grants page"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} />
+                                    <Button text="Learn more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

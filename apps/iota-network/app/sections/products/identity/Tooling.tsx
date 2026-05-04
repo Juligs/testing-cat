@@ -3,7 +3,6 @@ import { VerticalTitle, IconContent, TextLink, Actions, Button } from 'react-ui-
 import { TOOLING_VERTICAL_TITLE, TOOLING_ICON_CONTENT } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function Tooling({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,7 +18,7 @@ export function Tooling({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the documentation"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} />
+                                    <Button text="Learn more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

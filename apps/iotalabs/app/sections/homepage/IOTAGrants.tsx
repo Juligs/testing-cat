@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { TwoColumnsImageTemplate, GrantsCarouselSkeleton } from '@repo/shared/components';
 import { FetchGrantsStatsData, FetchGrantsSliderData } from '@repo/shared/sections';
 import Link from 'next/link';
@@ -26,7 +25,7 @@ export function IOTAGrants({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link href="/grants">
                                     <Button
                                         text="Learn more"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                         variant={ButtonVariant.Primary}
                                     />
                                 </Link>

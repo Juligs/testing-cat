@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
@@ -18,11 +17,7 @@ export function DLTInnovation({ id, navbarColorScheme }: BaseSectionProps) {
                         <VerticalTitle {...DLT_INNOVATION_TITLE_CONTENT}>
                             <Actions>
                                 <Link href="/research/our-research" aria-label="Research">
-                                    <Button
-                                        variant={ButtonVariant.Primary}
-                                        text="Research"
-                                        icon={<ArrowTopRight />}
-                                    />
+                                    <Button variant={ButtonVariant.Primary} text="Research" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

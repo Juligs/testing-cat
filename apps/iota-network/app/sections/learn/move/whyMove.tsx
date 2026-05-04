@@ -3,7 +3,6 @@ import { WHY_MOVE_VERTICAL_TITLE_CONTENT, WHY_MOVE_ICON_CONTENT } from './consta
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, IconContent, VerticalTitle } from 'react-ui-kit';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function WhyMove({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -18,7 +17,7 @@ export function WhyMove({ id, navbarColorScheme }: BaseSectionProps) {
                                 rel="noopener noreferrer"
                                 aria-label="Go to documentation"
                             >
-                                <Button text="Learn more" icon={<ArrowTopRight />} />
+                                <Button text="Learn more" icon />
                             </Link>
                         </Actions>
                     </VerticalTitle>

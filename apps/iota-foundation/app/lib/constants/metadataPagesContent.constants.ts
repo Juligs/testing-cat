@@ -269,6 +269,79 @@ export const BRAND_LIBRARY_KEYWORDS = [
 export const BRAND_LIBRARY_URL = `${BASE_URL}/news/brand-library`;
 export const BRAND_LIBRARY_IMAGE = '/metadata/meta_image_brand_library.png';
 
+export const OVERVIEW_METADATA_TITLE =
+    'NextGenDLT Workshop | Beyond The Chain by IOTA Foundation & Partners';
+export const OVERVIEW_METADATA_DESCRIPTION =
+    'Join Beyond The Chain, the NextGenDLT workshop by the IOTA Foundation, to explore DAG-based distributed ledger tech. Submit your paper and help shape the future of scalable, secure, and sustainable DLT.';
+export const OVERVIEW_METADATA_DESCRIPTION_X =
+    'Join Beyond The Chain, the NextGenDLT workshop by the IOTA Foundation, to explore DAG-based distributed ledger tech.';
+export const OVERVIEW_KEYWORDS = [
+    'IOTA Foundation',
+    'NextGenDLT',
+    'Beyond The Chain',
+    'DAG-based DLTs',
+    'distributed ledger technology',
+    'blockchain alternatives',
+    'zero-knowledge proofs',
+    'decentralized identity',
+    'DID',
+    'smart contract execution',
+    'parallel transaction processing',
+    'Maximum Extractable Value',
+    'MEV',
+    'DLT security analysis',
+    'performance evaluation',
+    'writing access models',
+    'DLT centralization',
+    'DLT interoperability',
+    'DLT standardization',
+    'DAG architecture',
+    'transaction fee mechanisms',
+    'real-world asset management',
+    'supply chain DLT',
+    'logistics DLT',
+    'scalable DLT',
+    'DLT innovation',
+];
+export const OVERVIEW_URL = `${BASE_URL}/beyond-the-chain/overview`;
+export const OVERVIEW_IMAGE = '/metadata/meta_image_overview.png';
+
+export const WORKSHOP_METADATA_TITLE =
+    'Workshop Highlights | Beyond The Chain Workshop Archive and Accepted Papers';
+export const WORKSHOP_METADATA_DESCRIPTION =
+    'Explore highlights, research papers, and impressions from previous Beyond The Chain workshops. Discover key moments and insights on decentralized DAG technology and DLT innovation.';
+export const WORKSHOP_METADATA_DESCRIPTION_X =
+    'Browse highlights, papers, and impressions from past Beyond The Chain workshops. Discover key insights on DAG technology and DLT innovation.';
+export const WORKSHOP_KEYWORDS = [
+    'Beyond The Chain',
+    'NextGenDLT',
+    'Beyond The Chain 2023',
+    'Beyond The Chain 2024',
+    'IEEE Blockchain and Cryptocurrency 2024',
+    'IEEE Blockchain Dublin',
+    'Trinity College Dublin',
+    'Blockchain Congress 2023',
+    'BLOCKCHAIN Congress Guimarães',
+    'past DLT workshops',
+    'DLT event recaps',
+    'DLT research papers',
+    'DAG-based DLTs',
+    'distributed ledger technology',
+    'DLT highlights',
+    'DLT photo gallery',
+    'workshop impressions',
+    'DLT innovation',
+    'scalable DLT',
+    'decentralized systems',
+    'DAG technology',
+    'DLT community',
+    'DLT research',
+    'previous workshop sessions',
+    'DLT speaker highlights',
+];
+export const WORKSHOP_URL = `${BASE_URL}/beyond-the-chain/workshop-highlights`;
+export const WORKSHOP_IMAGE = '/metadata/meta_image_workshop_highlights.png';
+
 export const SUSTAINABILITY_METADATA_TITLE =
     "Sustainability | Explore the IOTA Network's Sustainability";
 export const SUSTAINABILITY_METADATA_DESCRIPTION =

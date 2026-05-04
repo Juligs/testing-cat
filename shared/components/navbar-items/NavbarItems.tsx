@@ -45,7 +45,13 @@ export function MobileNavbarItem({
             )}
 
             {hasChildren && (
-                <div className={clsx(isOpen ? 'max-h-full' : 'max-h-0 overflow-hidden')}>
+                <div
+                    className={clsx(
+                        isOpen
+                            ? 'max-h-full pointer-events-auto'
+                            : 'max-h-0 overflow-hidden pointer-events-none',
+                    )}
+                >
                     {item.navbarSections?.map((section, index) => (
                         <div className="flex flex-col items-start" key={index}>
                             {(section.icon || section.title) && (

@@ -3,7 +3,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, VerticalTitle } from 'react-ui-kit';
 import { GOOGLE_SCHOLAR_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function GoogleScholar({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,10 +18,7 @@ export function GoogleScholar({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the Google Scholar Foundation page"
                                 >
-                                    <Button
-                                        text={GOOGLE_SCHOLAR_TITLE_CONTENT.text}
-                                        icon={<ArrowTopRight />}
-                                    />
+                                    <Button text={GOOGLE_SCHOLAR_TITLE_CONTENT.text} icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

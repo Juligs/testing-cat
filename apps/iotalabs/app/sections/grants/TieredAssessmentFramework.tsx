@@ -1,5 +1,4 @@
 import { TIERED_CARDS, TIERED_STATS } from '@lib/constants';
-import { ArrowTopRight } from '@repo/icons';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
 import {
@@ -33,7 +32,7 @@ export function TieredAssessmentFramework({ id, navbarColorScheme }: BaseSection
                                 >
                                     <Button
                                         text="Apply for your project"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                         variant={ButtonVariant.Secondary}
                                     />
                                 </Link>

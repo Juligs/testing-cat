@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import { Theme } from 'react-ui-kit';
 import { ContextProviders } from './providers';
 import './globals.css';
+import { ScrollRevealProvider } from '@repo/shared/components';
 
 export const metadata: Metadata = getPageMetadata({});
 const APP_THEME = Theme.Labs;
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     <Footer />
                     <CookieDisclaimer />
                 </ContextProviders>
+                <ScrollRevealProvider />
             </body>
         </html>
     );

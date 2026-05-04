@@ -21,30 +21,35 @@ export function NavbarItem({
         <li className={clsx('group cursor-pointer', { active })} {...rest}>
             {hasChildren ? (
                 <>
-                    <div className="py-4 px-3 xs:py-8 xs:px-4 text-label-md xs:text-center">
+                    <div
+                        className="relative py-4 px-3 xs:py-8 xs:px-4 text-label-md xs:text-center focus:outline-none"
+                        tabIndex={0}
+                    >
                         {children}
+                        <span
+                            className={clsx(
+                                'pointer-events-none absolute bottom-0 left-0 h-[1px] w-0 transition-[width] duration-300 ease-out group-hover:w-full group-[.active]:w-full',
+                                inverted
+                                    ? 'group-hover:bg-darkest-inverted group-focus-within:bg-medium-inverted group-focus-within:w-full'
+                                    : 'group-hover:bg-darkest group-focus-within:bg-medium group-focus-within:w-full',
+                            )}
+                        />
                     </div>
-                    <span
-                        className={clsx(
-                            'block h-[1px] opacity-0 transition-opacity group-hover:opacity-40 group-focus:opacity-40 group-active:opacity-100 group-[.active]:opacity-100',
-                            inverted ? 'bg-darkest-inverted' : 'bg-darkest',
-                        )}
-                    />
                 </>
             ) : (
                 <>
                     <Link
                         href={path ?? '#'}
-                        className="py-4 px-3 xs:py-8 xs:px-4 text-label-md xs:text-center block"
+                        className="relative py-4 px-3 xs:py-8 xs:px-4 text-label-md xs:text-center block"
                     >
                         {children}
+                        <span
+                            className={clsx(
+                                'pointer-events-none absolute bottom-0 left-0 h-[1px] w-0 transition-[width] duration-300 ease-out group-hover:w-full group-[.active]:w-full',
+                                inverted ? 'bg-darkest-inverted' : 'bg-darkest',
+                            )}
+                        />
                     </Link>
-                    <span
-                        className={clsx(
-                            'block h-[1px] opacity-0 transition-opacity group-hover:opacity-40 group-focus:opacity-40 group-active:opacity-100 group-[.active]:opacity-100',
-                            inverted ? 'bg-darkest-inverted' : 'bg-darkest',
-                        )}
-                    />
                 </>
             )}
         </li>

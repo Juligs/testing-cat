@@ -3,7 +3,6 @@ import { VerticalTitle, Actions, Button } from 'react-ui-kit';
 import { BEYOND_THE_CHAIN_VERTICAL_TITLE } from './constants';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function BeyondTheChain({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -19,7 +18,7 @@ export function BeyondTheChain({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the page"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} />
+                                    <Button text="Learn more" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

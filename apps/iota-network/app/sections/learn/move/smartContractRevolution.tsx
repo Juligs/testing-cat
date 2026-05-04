@@ -2,7 +2,6 @@ import { SMART_CONTRACT_HORIZONTAL_TITLE, SMART_CONTRACT_IMAGE_CARD_CONTENT } fr
 import { Actions, Button, HorizontalTitle, ImageCard } from 'react-ui-kit';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function SmartContractRevolution({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -16,7 +15,7 @@ export function SmartContractRevolution({ id, navbarColorScheme }: BaseSectionPr
                             rel="noopener noreferrer"
                             aria-label="Link to Move documentation"
                         >
-                            <Button text="Learn more" icon={<ArrowTopRight />} />
+                            <Button text="Learn more" icon />
                         </Link>
                     </Actions>
                 </HorizontalTitle>

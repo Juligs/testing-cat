@@ -3,7 +3,6 @@ import { VerticalTitle, Actions, Button } from 'react-ui-kit';
 import { IOTA_GRANTS_VERTICAL_TITLE } from './constants';
 import Link from 'next/link';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
-import { ArrowTopRight } from '@repo/icons';
 import { FetchGrantsStatsData } from '@repo/shared/sections';
 
 export function IotaGrants({ id, navbarColorScheme }: BaseSectionProps) {
@@ -24,7 +23,7 @@ export function IotaGrants({ id, navbarColorScheme }: BaseSectionProps) {
                                     rel="noopener noreferrer"
                                     aria-label="Go to the Iota Grants page"
                                 >
-                                    <Button text="Learn more" icon={<ArrowTopRight />} inverted />
+                                    <Button text="Learn more" icon inverted />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

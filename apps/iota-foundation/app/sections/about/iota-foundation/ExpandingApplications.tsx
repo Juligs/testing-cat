@@ -4,7 +4,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { EXPANDING_APPLICATIONS_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function ExpandingApplications({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -27,7 +26,7 @@ export function ExpandingApplications({ id, navbarColorScheme }: BaseSectionProp
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Product Adoption"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

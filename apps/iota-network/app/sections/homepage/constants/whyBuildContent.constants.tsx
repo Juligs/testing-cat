@@ -1,4 +1,3 @@
-import { ArrowTopRight } from '@repo/icons';
 import { ButtonVariant } from 'react-ui-kit';
 import { Animation } from 'react-ui-kit/client';
 
@@ -16,14 +15,14 @@ export const WHY_BUILD_BUTTONS = [
         text: 'Get Started',
         link: 'https://docs.iota.org/developer/getting-started',
         variant: ButtonVariant.Primary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: false,
     },
     {
         text: 'Tokenomics',
         link: 'https://docs.iota.org/about-iota/tokenomics/',
         variant: ButtonVariant.Secondary,
-        icon: <ArrowTopRight />,
+        icon: true,
         inverted: true,
     },
 ];

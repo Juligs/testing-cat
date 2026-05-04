@@ -3,7 +3,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, VerticalTitle } from 'react-ui-kit';
 import { EXPERIENCE_IOTA_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function ExperienceIota({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -17,9 +16,9 @@ export function ExperienceIota({ id, navbarColorScheme }: BaseSectionProps) {
                                     href="https://dpp.demo.iota.org/"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    aria-Label="Try the Digital Product Passport demo"
+                                    aria-label="Try the Digital Product Passport demo"
                                 >
-                                    <Button text="Launch demo" icon={<ArrowTopRight />} />
+                                    <Button text="Launch demo" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

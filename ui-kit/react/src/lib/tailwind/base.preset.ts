@@ -43,6 +43,20 @@ export const BASE_CONFIG: Partial<Config> = {
         },
         extend: {
             fontFamily: FONT_FAMILIES,
+            keyframes: {
+                'fade-in-down': {
+                    '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                'fade-out-up': {
+                    '0%': { opacity: '1', transform: 'translateY(0)' },
+                    '100%': { opacity: '0', transform: 'translateY(-10px)' },
+                },
+            },
+            animation: {
+                'fade-in-down': 'fade-in-down var(--duration-medium) var(--ease-out-expo) both',
+                'fade-out-up': 'fade-out-up var(--duration-quick) var(--ease-in-standard) both',
+            },
         },
     },
 };

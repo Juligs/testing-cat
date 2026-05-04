@@ -1,7 +1,6 @@
 import { VerticalTitle, Actions, Button, ButtonVariant } from 'react-ui-kit';
 import { TwoColumnsImageTemplate } from '@repo/shared/components';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 import { WHAT_IS_IOTA_VERTICAL_TITLE_CONTENT } from './constants';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 
@@ -26,7 +25,7 @@ export function WhatIsIOTA({ id, navbarColorScheme }: BaseSectionProps) {
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Learn more"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

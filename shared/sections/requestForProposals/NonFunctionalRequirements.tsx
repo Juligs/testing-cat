@@ -1,7 +1,6 @@
 import { VerticalTitle, TitleTextSize, IconContent, Button } from 'react-ui-kit';
 import { BaseProposalSectionProps } from '../../utils';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 import { PROPOSAL_FORM_URL } from './constants';
 
 type NonFunctionalRequirementsProps = BaseProposalSectionProps & {
@@ -34,7 +33,7 @@ export function NonFunctionalRequirements({
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <Button text="Apply now" icon={<ArrowTopRight />} />
+                                        <Button text="Apply now" icon />
                                     </Link>
                                 </div>
                             )}

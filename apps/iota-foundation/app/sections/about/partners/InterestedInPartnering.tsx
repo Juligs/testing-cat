@@ -3,7 +3,6 @@ import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, ButtonVariant, VerticalTitle } from 'react-ui-kit';
 import { INTERESTED_IN_PARTNERING_TITLE_CONTENT } from './constants';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function InterestedInPartnering({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -27,7 +26,7 @@ export function InterestedInPartnering({ id, navbarColorScheme }: BaseSectionPro
                                     <Button
                                         variant={ButtonVariant.Primary}
                                         text="Contact us"
-                                        icon={<ArrowTopRight />}
+                                        icon
                                     />
                                 </Link>
                             </Actions>

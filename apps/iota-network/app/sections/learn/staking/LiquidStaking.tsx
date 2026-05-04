@@ -3,7 +3,6 @@ import { LIQUID_STAKING_VERTICAL_TITLE_CONTENT, LIQUID_STAKING_ICON_CONTENT } fr
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import { Actions, Button, IconContent, VerticalTitle } from 'react-ui-kit';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function LiquidStaking({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -18,7 +17,7 @@ export function LiquidStaking({ id, navbarColorScheme }: BaseSectionProps) {
                                 rel="noopener noreferrer"
                                 aria-label="Go to the app"
                             >
-                                <Button text="Learn more" icon={<ArrowTopRight />} />
+                                <Button text="Learn more" icon />
                             </Link>
                         </Actions>
                     </VerticalTitle>

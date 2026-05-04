@@ -6,7 +6,6 @@ import {
 import { Actions, Button, ImageCard, VerticalTitle } from 'react-ui-kit';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 import { IOTA_WALLET_LINK } from '@repo/shared/constants';
 
 export function BoostYourRewards({ id, navbarColorScheme }: BaseSectionProps) {
@@ -20,10 +19,10 @@ export function BoostYourRewards({ id, navbarColorScheme }: BaseSectionProps) {
                                 <Link
                                     href={IOTA_WALLET_LINK}
                                     target="_blank"
-                                    rel="noopener noreferre"
+                                    rel="noopener noreferrer"
                                     aria-label="go to the wallet"
                                 >
-                                    <Button text="Start staking" icon={<ArrowTopRight />} />
+                                    <Button text="Start staking" icon />
                                 </Link>
                             </Actions>
                         </VerticalTitle>

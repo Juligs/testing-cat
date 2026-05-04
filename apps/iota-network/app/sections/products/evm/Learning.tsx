@@ -2,7 +2,6 @@ import { LEARNING_HORIZONTAL_TITLE, LEARNING_IMAGE_CARD_CONTENT } from './consta
 import { Actions, Button, HorizontalTitle, ImageCard } from 'react-ui-kit';
 import { BaseSectionProps } from '@repo/shared/interfaces';
 import Link from 'next/link';
-import { ArrowTopRight } from '@repo/icons';
 
 export function Learning({ id, navbarColorScheme }: BaseSectionProps) {
     return (
@@ -15,7 +14,7 @@ export function Learning({ id, navbarColorScheme }: BaseSectionProps) {
                             target="_blank"
                             aria-label="Go to the documentation"
                         >
-                            <Button text="Learn more" icon={<ArrowTopRight />} />
+                            <Button text="Learn more" icon />
                         </Link>
                     </Actions>
                 </HorizontalTitle>
