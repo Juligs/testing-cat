@@ -1,0 +1,94 @@
+{
+    "TwinPage": {
+        "eyebrow": "Crowdin + next-intl + multi-région",
+        "title": "TWIN",
+        "subtitle": "Une application de test autonome où la langue et la région sont sélectionnées indépendamment. Le voyage par défaut est la langue anglaise avec le contenu spécifique au Kenya.",
+        "selectors": {
+            "language": "Langue",
+            "region": "Région"
+        },
+        "languages": {
+            "en": "Anglais",
+            "es": "Espagnol",
+            "fr": "Français",
+            "sw": "Swahili"
+        },
+        "cards": {
+            "userContext": "Contexte de l'utilisateur",
+            "localSignals": "Signaux locaux",
+            "pilots": "Pilotes",
+            "whyThisMatters": "Pourquoi cela compte-t-il",
+            "crowdin": "Structure Crowdin-ready"
+        },
+        "spotlight": {
+            "title": "La langue n'est pas la même que la région",
+            "description": "Cette page utilise next-intl pour les traductions, tandis que les détails spécifiques à la région sont choisis séparément.",
+            "language": "Langue",
+            "region": "Région",
+            "default": "Langue par défaut"
+        },
+        "regions": {
+            "ke": {
+                "name": "Le Kenya",
+                "headline": "Contexte opérationnel spécifique au Kenya",
+                "summary": "Le contenu met l'accent sur les flux commerciaux d'Afrique de l'Est, la pertinence des pilotes locaux et les institutions qui sont importantes pour le déploiement au Kenya."
+            },
+            "global": {
+                "name": "Globale",
+                "headline": "Proposition de valeur de base transfrontalière",
+                "summary": "Le contenu est encadré autour de l'échange international de données, de l'authenticité des documents et de l'infrastructure numérique réutilisable à travers les marchés."
+            }
+        },
+        "signals": {
+            "eastAfricanCorridor": "Focus on the East African trade corridor and Kenya-linked flows through ports and customs checkpoints.",
+            "publicPrivatePartners": "Mettre en évidence les modèles de collaboration avec les institutions publiques et les organismes tels que la marque commerciale Afrique.",
+            "smeExporters": "Prioriser les expliqueurs qui aident les PME et les exportateurs à comprendre un traitement plus rapide et à réduire les frictions.",
+            "crossBorderData": "Expliquez comment les données structurées peuvent se déplacer de manière fiable dans plusieurs juridictions.",
+            "documentAuthenticity": "Soulignez l'authenticité, la traçabilité et l'accès contrôlé aux documents commerciaux.",
+            "openNetworkDesign": "Cadre TWIN en tant qu'infrastructure numérique réutilisable plutôt qu'un déploiement d'un seul pays."
+        },
+        "pilots": {
+            "title": "Cadrage pilote localisé",
+            "items": {
+                "mombasaPort": {
+                    "title": "Visibilité du port et du corridor",
+                    "description": "Décrivez un pilote orienté vers le Kenya autour des jalons de l'expédition, des transferts de documents et des échanges de données fiables reliés aux flux liés à Mombasa."
+                },
+                "tradeFinance": {
+                    "title": "Transfert de la finance commerciale des PME",
+                    "description": "Positionner TWIN comme moyen de réduire les frictions pour les exportateurs en partageant des registres de commerce numérique vérifiables avec les banques et les contreparties."
+                },
+                "certificateFlow": {
+                    "title": "Workflow de validation du certificat",
+                    "description": "Montrez comment les certificats numériques peuvent être vérifiés plus rapidement, en réduisant les contrôles manuels et les retards dans le traitement des échanges transfrontaliers."
+                },
+                "documentTokenization": {
+                    "title": "Tokenisation du document",
+                    "description": "Expliquez à quel point les documents commerciaux importants peuvent être représentés numériquement tout en préservant l'accès contrôlé et l'authenticité."
+                },
+                "crossBorderVisibility": {
+                    "title": "Visibilité des données transfrontalières",
+                    "description": "Présenter la valeur d'une couche de données partagée pour les mises à jour de statut, la provenance et la collaboration de confiance entre les pays."
+                }
+            }
+        },
+        "adaptation": {
+            "title": "Comment le contenu est adapté",
+            "description": "La couche de traduction répond à la langue que l'utilisateur voit. La couche région répond aux signaux du marché, aux pilotes et au contexte local à mettre en évidence.",
+            "points": {
+                "englishUi": "L'interface reste en anglais pour un utilisateur kenyan qui préfère l'anglais.",
+                "kenyanWorkflows": "Des exemples et des points de preuve sont sélectionnés pour correspondre aux flux de travail du commerce et de la logistique kényan.",
+                "localPartnerships": "Les références locales des partenaires sont affichées sans changer la langue de l'application.",
+                "languageFallbacks": "Le même profil régional peut être rendu en plusieurs langues au fur et à mesure que les traductions sont disponibles.",
+                "regionalContentRules": "Le contenu régional est sélectionné par code de région plutôt que par locale.",
+                "sharedCorePlatform": "La messagerie de produits de base reste réutilisable lorsque le contexte spécifique au marché change."
+            }
+        },
+        "crowdin": {
+            "title": "Pourquoi cette structure fonctionne bien avec Crowdin",
+            "pointOne": "Toutes les copies traduisibles de l'interface utilisateur et du marché sont stockées dans des fichiers de messages JSON locaux.",
+            "pointTwo": "La logique régionale vit dans un modèle de données séparé, donc les traducteurs n'ont pas besoin d'encoder les règles du marché.",
+            "pointThree": "Ajouter une nouvelle locale signifie surtout fournir un nouveau fichier de messages sans modifier le catalogue des régions."
+        }
+    }
+}
