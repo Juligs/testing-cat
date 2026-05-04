@@ -9,6 +9,8 @@
         },
         "languages": {
             "en": "English",
+            "es": "Spanish",
+            "fr": "French",
             "sw": "Swahili"
         },
         "cards": {
@@ -31,6 +33,16 @@
                 "headline": "Kenya-specific operating context",
                 "summary": "Content emphasizes East African trade flows, local pilot relevance, and institutions that matter for rollout in Kenya."
             },
+            "uk": {
+                "name": "United Kingdom",
+                "headline": "United Kingdom trade and compliance context",
+                "summary": "Content emphasizes digital trade workflows, trusted document exchange, and interoperability with public and private trade stakeholders in the UK."
+            },
+            "fr": {
+                "name": "France",
+                "headline": "France-specific trade and document assurance context",
+                "summary": "Content emphasizes trusted trade documentation, cross-border coordination, and regionally relevant compliance workflows for the French market."
+            },
             "global": {
                 "name": "Global",
                 "headline": "Cross-border core value proposition",
@@ -39,6 +51,7 @@
         },
         "signals": {
             "eastAfricanCorridor": "Focus on the East African trade corridor and Kenya-linked flows through ports and customs checkpoints.",
+            "tradeDigitization": "Highlight digital trade modernization, interoperable document handling, and trusted exchange between institutions and operators.",
             "publicPrivatePartners": "Highlight collaboration patterns with public institutions and organizations such as Trademark Africa.",
             "smeExporters": "Prioritize explainers that help SMEs and exporters understand faster processing and lower friction.",
             "crossBorderData": "Explain how structured trade data can move reliably across multiple jurisdictions.",
@@ -55,6 +68,14 @@
                 "tradeFinance": {
                     "title": "SME trade finance handoff",
                     "description": "Position TWIN as a way to reduce friction for exporters by sharing verifiable digital trade records with banks and counterparties."
+                },
+                "portCommunity": {
+                    "title": "Port community coordination",
+                    "description": "Frame TWIN around trusted shipment updates, document exchange, and coordination between logistics operators, customs, and port stakeholders."
+                },
+                "complianceExchange": {
+                    "title": "Compliance document exchange",
+                    "description": "Show how compliance-related trade documents can be shared, verified, and traced more efficiently across participating institutions."
                 },
                 "certificateFlow": {
                     "title": "Certificate validation workflow",

@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { TextLink, TitleTextSize, VerticalTitle } from 'react-ui-kit';
 import type { BaseSectionProps } from '@repo/shared/interfaces';
+import { regionCookieMaxAge, regionCookieName } from '@/lib/regions';
 
 interface TwinHeroProps extends BaseSectionProps {
     eyebrow: string;
@@ -23,6 +26,18 @@ export function TwinHero({
     languageLinks,
     regionLinks,
 }: TwinHeroProps) {
+    const persistRegion = (href: string) => {
+        const url = new URL(href, window.location.origin);
+        const region = url.searchParams.get('region');
+
+        if (!region) {
+            return;
+        }
+
+        document.cookie =
+            `${regionCookieName}=${region}; path=/; max-age=${regionCookieMaxAge}; samesite=lax`;
+    };
+
     return (
         <section id={id} data-navbar-color-scheme={navbarColorScheme}>
             <div className="container py-20 lg:py-30 flex flex-col gap-10">
@@ -54,7 +69,12 @@ export function TwinHero({
                         <p className="text-label-md text-medium">{regionLabel}</p>
                         <div className="flex flex-wrap gap-4">
                             {regionLinks.map((link) => (
-                                <Link key={link.href} href={link.href} aria-label={link.label}>
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    aria-label={link.label}
+                                    onClick={() => persistRegion(link.href)}
+                                >
                                     <TextLink
                                         text={link.label}
                                         underline={!link.active}

@@ -1,7 +1,10 @@
+import { cookies, headers } from 'next/headers';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { isValidLocale, locales } from '@/i18n/config';
-import { defaultRegion, getRegionProfile, isValidRegion, regionCodes } from '@/lib/regions';
+import enMessages from '@/messages/en.json';
+import { getLocales, isValidLocale } from '@/i18n/config';
+import { getLocaleLabel } from '@/i18n/getLocaleLabel';
+import { getRegionProfile, regionCodes, resolveRegion } from '@/lib/regions';
 import { TwinCrowdin, TwinHero, TwinPilots, TwinSignals } from '@sections';
 
 interface TwinPageProps {
@@ -10,6 +13,7 @@ interface TwinPageProps {
 }
 
 export function generateStaticParams() {
+    const locales = getLocales();
     return locales.map((locale) => ({ locale }));
 }
 
@@ -21,12 +25,24 @@ export default async function TwinPage({ params, searchParams }: TwinPageProps) 
     }
 
     const { region } = await searchParams;
-    const selectedRegion = region && isValidRegion(region) ? region : defaultRegion;
+    const cookieStore = await cookies();
+    const headerStore = await headers();
+    const detectedCountry =
+        headerStore.get('x-vercel-ip-country') ??
+        headerStore.get('cf-ipcountry') ??
+        headerStore.get('x-country-code');
+    const selectedRegion = resolveRegion(
+        region,
+        cookieStore.get('twin-region')?.value,
+        detectedCountry,
+    );
+    const locales = getLocales();
     const profile = getRegionProfile(selectedRegion);
     const t = await getTranslations({ locale, namespace: 'TwinPage' });
+    const englishLanguageLabels = enMessages.TwinPage.languages as Record<string, string>;
     const languageLinks = locales.map((option) => ({
         href: `/${option}?region=${selectedRegion}`,
-        label: t(`languages.${option}`),
+        label: getLocaleLabel(option, englishLanguageLabels),
         active: option === locale,
     }));
     const regionLinks = regionCodes.map((option) => ({
