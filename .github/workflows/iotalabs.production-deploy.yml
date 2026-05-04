@@ -4,20 +4,51 @@ on:
     push:
         branches:
             - main
-        paths:
-            - 'apps/iotalabs/**'
-            - 'ui-kit/react/**'
-            - 'shared/**'
-            - '.github/workflows/iotalabs.production-deploy.yml'
-            - '.github/actions/monorepo-app-vercel-deploy/**'
     workflow_dispatch:
 
 jobs:
-    deploy-production:
+    detect:
         runs-on: ubuntu-latest
         permissions:
             contents: read
-            pull-requests: write
+        outputs:
+            affected: ${{ steps.affected.outputs.result }}
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+              with:
+                  filter: blob:none
+                  fetch-depth: 0
+
+            - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
+
+            - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+              with:
+                  node-version: '20'
+                  cache: 'pnpm'
+
+            - name: Detect if app is affected
+              id: affected
+              env:
+                  EVENT_NAME: ${{ github.event_name }}
+                  BEFORE_SHA: ${{ github.event.before }}
+              run: |
+                  if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+                    echo "result=true" >> "$GITHUB_OUTPUT"
+                  else
+                    RESULT=$(pnpm dlx turbo@2.9.6 query affected \
+                      --base "$BEFORE_SHA" \
+                      --head "${{ github.sha }}" \
+                      --packages iotalabs \
+                    | jq '[.data.affectedPackages.items[].name] | length > 0')
+                    echo "result=$RESULT" >> "$GITHUB_OUTPUT"
+                  fi
+
+    deploy-production:
+        needs: detect
+        if: needs.detect.outputs.affected == 'true'
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
             deployments: write
         concurrency:
             group: ${{ github.workflow }}-IOTALABS-${{ github.ref }}

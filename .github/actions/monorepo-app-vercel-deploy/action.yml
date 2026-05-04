@@ -1,5 +1,5 @@
 name: Monorepo App Vercel Deploy
-description: Deploys a monorepo app to Vercel within the caller job.
+description: Deploys a monorepo app to Vercel.
 
 inputs:
   production:
@@ -35,6 +35,7 @@ runs:
       uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
       with:
         node-version: '20'
+        cache: 'pnpm'
 
     - name: Install Vercel CLI
       shell: bash
