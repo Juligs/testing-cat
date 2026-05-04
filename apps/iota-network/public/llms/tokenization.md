@@ -53,9 +53,9 @@ On IOTA, everything is an object and a unique, owned Non-Fungible Token. This el
 
 IOTA Tokenization supports both fungible and non-fungible assets:
 
--   **Fungible tokens**: created using the IOTA Coin Standard for seamless integration with wallets and exchanges
--   **Non-fungible tokens (NFTs)**: every on-chain object is an NFT by default through the Move object model
--   **Programmable assets**: custom logic encoded directly into token behavior
+- **Fungible tokens**: created using the IOTA Coin Standard for seamless integration with wallets and exchanges
+- **Non-fungible tokens (NFTs)**: every on-chain object is an NFT by default through the Move object model
+- **Programmable assets**: custom logic encoded directly into token behavior
 
 ## Position in Trust Framework
 
@@ -63,5 +63,5 @@ IOTA Tokenization is a core component of the IOTA Trust Framework. It provides t
 
 ## Docs and Contact
 
--   Documentation: https://docs.iota.org/developer/advanced/asset-tokenization
--   Partnership inquiries: partnerships@iota.org
+- Documentation: https://docs.iota.org/developer/advanced/asset-tokenization
+- Partnership inquiries: partnerships@iota.org

@@ -63,10 +63,10 @@ Transaction fees are a major barrier to Web3 adoption. Users must acquire crypto
 
 This enables:
 
--   Consumer applications with Web2-like user experience
--   Enterprise deployments where employees should not need crypto wallets
--   Ecosystem-wide fee abstraction for complex multi-step workflows
--   Sustainable monetization models where businesses absorb transaction costs
+- Consumer applications with Web2-like user experience
+- Enterprise deployments where employees should not need crypto wallets
+- Ecosystem-wide fee abstraction for complex multi-step workflows
+- Sustainable monetization models where businesses absorb transaction costs
 
 ## Position in Trust Framework
 
@@ -74,5 +74,5 @@ IOTA Gas Station is a core component of the IOTA Trust Framework. It provides th
 
 ## Docs and Contact
 
--   Documentation: https://docs.iota.org/operator/gas-station/
--   Partnership inquiries: partnerships@iota.org
+- Documentation: https://docs.iota.org/operator/gas-station/
+- Partnership inquiries: partnerships@iota.org

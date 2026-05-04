@@ -15,21 +15,21 @@ The framework is modular by design: each component can be deployed independently
 
 Across industries, organizations face the same trust-related challenges:
 
--   Verifying identities in open and cross-organizational environments
--   Proving that data has not been altered
--   Digitizing processes that still rely on manual verification
--   Trading and managing real-world assets digitally
--   Controlling who is allowed to act, approve, or issue information
--   Reducing reliance on intermediaries and operational friction
+- Verifying identities in open and cross-organizational environments
+- Proving that data has not been altered
+- Digitizing processes that still rely on manual verification
+- Trading and managing real-world assets digitally
+- Controlling who is allowed to act, approve, or issue information
+- Reducing reliance on intermediaries and operational friction
 
 Traditional systems handle these needs through centralized authorities, private databases, and fragmented integrations. This approach does not scale across organizational boundaries, introduces single points of failure, and makes verification slow, costly, and opaque.
 
 ## Business Trust Challenges Addressed
 
--   **Identity Gaps**: verifying people, organizations, and devices in open networks
--   **Data Risks**: proving information is authentic, untampered, and verifiable
--   **Access Barriers**: managing who can see or do what is complex and unreliable
--   **Process Friction**: reducing intermediaries and extra steps like fees that slow adoption
+- **Identity Gaps**: verifying people, organizations, and devices in open networks
+- **Data Risks**: proving information is authentic, untampered, and verifiable
+- **Access Barriers**: managing who can see or do what is complex and unreliable
+- **Process Friction**: reducing intermediaries and extra steps like fees that slow adoption
 
 ## Five Products, One Framework
 
@@ -59,33 +59,33 @@ Turns real-world and digital assets into programmable on-chain objects. Supports
 
 The framework maps real-world trust primitives to composable digital building blocks:
 
--   **Identity** defines who an entity is
--   **Hierarchies** define who is trusted to do what
--   **Notarization** defines what data can be trusted and when
--   **Tokenization** defines how value and ownership move
--   **Gas Station** defines how users interact without friction
+- **Identity** defines who an entity is
+- **Hierarchies** define who is trusted to do what
+- **Notarization** defines what data can be trusted and when
+- **Tokenization** defines how value and ownership move
+- **Gas Station** defines how users interact without friction
 
 Integration is incremental: start with one product and add more as requirements grow. No costly system overhauls required.
 
 ## Why IOTA
 
--   **Open Source**: built with transparency, reviewed by peers, improved by the community
--   **Free**: no licensing or usage fees; scale without rising infrastructure costs
--   **Neutral**: operated by a non-profit foundation, free from vendor lock-in or bias
--   **Compliant**: aligned with identity, data, and financial regulations
--   **Public Infrastructure**: anchored to the decentralized IOTA Mainnet for resilience and verifiability
+- **Open Source**: built with transparency, reviewed by peers, improved by the community
+- **Free**: no licensing or usage fees; scale without rising infrastructure costs
+- **Neutral**: operated by a non-profit foundation, free from vendor lock-in or bias
+- **Compliant**: aligned with identity, data, and financial regulations
+- **Public Infrastructure**: anchored to the decentralized IOTA Mainnet for resilience and verifiability
 
 ## Real-World Applications
 
 The Trust Framework is used across multiple sectors:
 
--   **Digital Identity**: organizational IDs, educational credentials, access management
--   **Trade and Supply Chain**: secure documentation, customs verification, accreditation (example: TWIN)
--   **Circular Economy**: Digital Product Passports, carbon tracking, sustainability audits
--   **Product Tracking and Provenance**: sensor data integrity, digital twins
--   **Real-World Asset Tokenization**: compliant asset tokens and lifecycle management
+- **Digital Identity**: organizational IDs, educational credentials, access management
+- **Trade and Supply Chain**: secure documentation, customs verification, accreditation (example: TWIN)
+- **Circular Economy**: Digital Product Passports, carbon tracking, sustainability audits
+- **Product Tracking and Provenance**: sensor data integrity, digital twins
+- **Real-World Asset Tokenization**: compliant asset tokens and lifecycle management
 
 ## Docs and Contact
 
--   Developer documentation: https://docs.iota.org/developer/iota-trust-framework
--   Partnership inquiries: partnerships@iota.org
+- Developer documentation: https://docs.iota.org/developer/iota-trust-framework
+- Partnership inquiries: partnerships@iota.org

@@ -13,35 +13,35 @@ IOTA is developed and maintained by the IOTA Foundation, a non-profit organizati
 
 ## Key Technology
 
--   **IOTA Mainnet**: Layer 1 network using MoveVM and a DAG data structure
--   **Move language**: Smart contract language with object-centric model, strong security guarantees
--   **Delegated Proof-of-Stake**: Consensus mechanism with up to 150 independent validators
--   **IOTA EVM**: Layer 2 Ethereum-compatible environment for EVM compatibility (not the primary network)
+- **IOTA Mainnet**: Layer 1 network using MoveVM and a DAG data structure
+- **Move language**: Smart contract language with object-centric model, strong security guarantees
+- **Delegated Proof-of-Stake**: Consensus mechanism with up to 150 independent validators
+- **IOTA EVM**: Layer 2 Ethereum-compatible environment for EVM compatibility (not the primary network)
 
 ## Why Build on IOTA
 
--   Unmatched decentralization and permissionless access
--   Energy efficiency through BFT consensus without proof-of-work
--   Rapid transaction processing with parallel execution
--   Equitable tokenomics with fee burning and staking rewards
--   Censorship resistance
+- Unmatched decentralization and permissionless access
+- Energy efficiency through BFT consensus without proof-of-work
+- Rapid transaction processing with parallel execution
+- Equitable tokenomics with fee burning and staking rewards
+- Censorship resistance
 
 ## Technology Stack
 
 The IOTA integration stack includes:
 
--   **IOTA Mainnet**: Move-based Layer 1 with object-centric architecture
--   **Consensus**: Mysticeti BFT protocol with low latency and fast finality
--   **Trust Framework**: Five open-source products for digital trust (Identity, Hierarchies, Notarization, Tokenization, Gas Station)
--   **IOTA EVM**: High-performance Layer 2 with EVM compatibility
+- **IOTA Mainnet**: Move-based Layer 1 with object-centric architecture
+- **Consensus**: Mysticeti BFT protocol with low latency and fast finality
+- **Trust Framework**: Five open-source products for digital trust (Identity, Hierarchies, Notarization, Tokenization, Gas Station)
+- **IOTA EVM**: High-performance Layer 2 with EVM compatibility
 
 ## Focus Areas
 
--   Trade and Supply Chains: seamless transfer of digital trade data across borders
--   Decentralized Finance: DeFi products building new economies
--   Product Lifecycle: trust and traceability across a product's entire journey
--   Digital Identity: a global trust layer for secure verification
--   Real World Asset Tokenization: merging traditional finance with Web3
+- Trade and Supply Chains: seamless transfer of digital trade data across borders
+- Decentralized Finance: DeFi products building new economies
+- Product Lifecycle: trust and traceability across a product's entire journey
+- Digital Identity: a global trust layer for secure verification
+- Real World Asset Tokenization: merging traditional finance with Web3
 
 ## Real-World Adoption
 

@@ -4,12 +4,6 @@ on:
     push:
         branches:
             - main
-        paths:
-            - 'apps/iota-foundation/**'
-            - 'ui-kit/react/**'
-            - 'shared/**'
-            - '.github/workflows/iota-foundation.production-deploy.yml'
-            - '.github/workflows/monorepo-app-vercel-deploy.yml'
     workflow_dispatch:
 
 jobs:
@@ -17,18 +11,5 @@ jobs:
         uses: ./.github/workflows/monorepo-app-vercel-deploy.yml
         with:
             PRODUCTION: true
-            APP_NAME: IOTA Foundation
-        secrets:
-            VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-            VERCEL_PROJECT_ID: ${{ secrets.IOTA_FOUNDATION_VERCEL_PROJECT_ID }}
-            VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
-
-    purge-iota-foundation-cloudflare-cache:
-        needs: [deploy-production]
-        uses: ./.github/workflows/purge-cloudfare-cache.yml
-        with:
-            IS_IOTA_FOUNDATION: true
-        secrets:
-            CLOUDFLARE_FOUNDATION_ZONE_ID: ${{ secrets.CLOUDFLARE_FOUNDATION_ZONE_ID }}
-            CLOUDFLARE_CACHE_API_TOKEN: ${{ secrets.CLOUDFLARE_CACHE_API_TOKEN }}
+            APP_NAME: iota-foundation
+        secrets: inherit

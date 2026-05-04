@@ -17,18 +17,18 @@ The IOTA Mainnet combines two technologies:
 
 ### Directed Acyclic Graph (DAG) Ledger
 
--   Immutable, linked data structure for future-proof record keeping
--   Enables parallel transaction processing
--   Higher throughput than linear block-based chains
--   Energy-efficient consensus without proof-of-work
+- Immutable, linked data structure for future-proof record keeping
+- Enables parallel transaction processing
+- Higher throughput than linear block-based chains
+- Energy-efficient consensus without proof-of-work
 
 ### Move Programming Language
 
 The IOTA Mainnet is powered by Move, providing:
 
--   **Inherently Secure**: security as a core design principle, preventing common vulnerabilities
--   **Naturally Intuitive**: accessible syntax and structure for developers
--   **Highly Flexible**: expressive framework for complex and sophisticated smart contracts
+- **Inherently Secure**: security as a core design principle, preventing common vulnerabilities
+- **Naturally Intuitive**: accessible syntax and structure for developers
+- **Highly Flexible**: expressive framework for complex and sophisticated smart contracts
 
 ## A Versatile Ledger
 
@@ -48,16 +48,16 @@ The object-centric ledger model offers increased security and composability by d
 
 ## Technical Specs
 
--   **Consensus**: Mysticeti BFT protocol (DAG-based)
--   **Smart Contracts**: Move language
--   **Layer 2**: IOTA EVM for Ethereum compatibility
--   **Validators**: up to 150 independent validators
--   **Finality**: three-round finality via Mysticeti
--   **Throughput**: high parallel transaction processing
+- **Consensus**: Mysticeti BFT protocol (DAG-based)
+- **Smart Contracts**: Move language
+- **Layer 2**: IOTA EVM for Ethereum compatibility
+- **Validators**: up to 150 independent validators
+- **Finality**: three-round finality via Mysticeti
+- **Throughput**: high parallel transaction processing
 
 ## Developer Resources
 
--   Documentation: https://docs.iota.org/developer/
--   Getting started: https://docs.iota.org/developer/getting-started
--   Move overview: https://docs.iota.org/developer/iota-101/move-overview/
--   IOTA architecture: https://docs.iota.org/about-iota/iota-architecture/
+- Documentation: https://docs.iota.org/developer/
+- Getting started: https://docs.iota.org/developer/getting-started
+- Move overview: https://docs.iota.org/developer/iota-101/move-overview/
+- IOTA architecture: https://docs.iota.org/about-iota/iota-architecture/

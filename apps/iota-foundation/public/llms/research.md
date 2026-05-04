@@ -45,7 +45,7 @@ Exploring off-chain solutions and sharding to boost efficiency at scale.
 
 The Foundation has published over 50 papers in international peer-reviewed journals and conferences.
 
--   Browse all papers: https://iota-foundation.org/research/research-papers
+- Browse all papers: https://iota-foundation.org/research/research-papers
 
 ### International IEEE Workshop
 
@@ -55,12 +55,12 @@ The IOTA Foundation is creator and co-host of **Beyond the Chain**, the Internat
 
 Strong collaborations have been established with leading European research institutions:
 
--   Imperial College London
--   University of Zurich
--   University of Oslo
--   University College Dublin
--   University of Bologna
--   CDL-BOT
+- Imperial College London
+- University of Zurich
+- University of Oslo
+- University College Dublin
+- University of Bologna
+- CDL-BOT
 
 More detail: https://iota-foundation.org/research/research-collaborations
 
@@ -68,12 +68,12 @@ More detail: https://iota-foundation.org/research/research-collaborations
 
 The Foundation continues to make groundbreaking protocol research, including:
 
--   DAG-based ledger architecture
--   Tokenomics design for sustainable validator incentives
--   Consensus protocols (Mysticeti, Starfish)
+- DAG-based ledger architecture
+- Tokenomics design for sustainable validator incentives
+- Consensus protocols (Mysticeti, Starfish)
 
 ## Docs
 
--   Research papers: https://iota-foundation.org/research/research-papers
--   Research collaborations: https://iota-foundation.org/research/research-collaborations
--   Google Scholar profile: https://scholar.google.com/
+- Research papers: https://iota-foundation.org/research/research-papers
+- Research collaborations: https://iota-foundation.org/research/research-collaborations
+- Google Scholar profile: https://scholar.google.com/

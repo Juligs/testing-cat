@@ -17,9 +17,9 @@ The Foundation develops distributed ledger technology that empowers businesses, 
 
 It collaborates with academia and public institutions to:
 
--   Drive blockchain innovation
--   Build a stronger crypto regulatory framework
--   Support real-world deployment across sectors
+- Drive blockchain innovation
+- Build a stronger crypto regulatory framework
+- Support real-world deployment across sectors
 
 ## What Guides Us
 
@@ -29,20 +29,20 @@ Guided by values of permissionless innovation, integrity, open-source collaborat
 
 ### Core Values
 
--   **Permissionless Innovation**: anyone can build on IOTA technology without gatekeeping or permission
--   **Integrity**: transparent operations, open governance, and honest communication
--   **Open-Source Collaboration**: all core technology is developed openly and available to everyone
--   **Sustainability**: energy-efficient protocols that minimize environmental impact
+- **Permissionless Innovation**: anyone can build on IOTA technology without gatekeeping or permission
+- **Integrity**: transparent operations, open governance, and honest communication
+- **Open-Source Collaboration**: all core technology is developed openly and available to everyone
+- **Sustainability**: energy-efficient protocols that minimize environmental impact
 
 ## Technology for Real-World Impact
 
 The Foundation's work focuses on practical outcomes, not speculative use cases. Technology developed by the Foundation serves:
 
--   Trade and supply chain digitization
--   Digital identity infrastructure
--   Circular economy and product lifecycle tracking
--   Decentralized financial systems
--   Cross-border data and asset flows
+- Trade and supply chain digitization
+- Digital identity infrastructure
+- Circular economy and product lifecycle tracking
+- Decentralized financial systems
+- Cross-border data and asset flows
 
 ## Ecosystem Approach
 
