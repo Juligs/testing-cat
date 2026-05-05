@@ -26,7 +26,7 @@ export const metadata: Metadata = getPageMetadata({
 export default function Home() {
     return (
         <>
-            <Hero id="hero" navbarColorScheme="inverted" />
+            <Hero id="heroos" navbarColorScheme="inverted" />
             <HomepageOverview id="overview" />
             <EngineBehind id="engine" />
             <Empowering id="empowering" navbarColorScheme="inverted" />
