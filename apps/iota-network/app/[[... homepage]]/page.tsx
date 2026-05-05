@@ -43,7 +43,7 @@ export default function Home() {
         <>
             <Hero id="hero" navbarColorScheme="inverted" />
             <NetworkStats id="network-stats" />
-            <IotaManifesto id="iota-manifesto" />
+            <IotaManifesto id="iota-manifestos" />
             <IntegrationStack id="integration-stack" />
             <StakingOnIota id="staking-on-iota" />
             <BuildingSolutions id="building-solutions" />
