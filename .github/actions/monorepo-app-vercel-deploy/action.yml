@@ -2,113 +2,113 @@ name: Monorepo App Vercel Deploy
 description: Deploys a monorepo app to Vercel.
 
 inputs:
-  production:
-    description: Whether to deploy to production.
-    required: true
-  app_name:
-    description: Application name shown in logs and PR comments.
-    required: true
-  vercel_token:
-    description: Vercel token.
-    required: false
-  vercel_org_id:
-    description: Vercel org ID.
-    required: false
-  vercel_project_id:
-    description: Vercel project ID.
-    required: false
-  vercel_scope:
-    description: Vercel scope.
-    required: false
+    production:
+        description: Whether to deploy to production.
+        required: true
+    app_name:
+        description: Application name shown in logs and PR comments.
+        required: true
+    vercel_token:
+        description: Vercel token.
+        required: false
+    vercel_org_id:
+        description: Vercel org ID.
+        required: false
+    vercel_project_id:
+        description: Vercel project ID.
+        required: false
+    vercel_scope:
+        description: Vercel scope.
+        required: false
 
 outputs:
-  preview_url:
-    description: Resulting Vercel deployment URL.
-    value: ${{ steps.vercel_deploy.outputs.PREVIEW_URL }}
+    preview_url:
+        description: Resulting Vercel deployment URL.
+        value: ${{ steps.vercel_deploy.outputs.PREVIEW_URL }}
 
 runs:
-  using: composite
-  steps:
-    - name: Skip deploy (no secrets configured)
-      if: ${{ inputs.vercel_token == '' }}
-      shell: bash
-      run: echo "No Vercel token configured — skipping deploy for ${{ inputs.app_name }}."
+    using: composite
+    steps:
+        - name: Skip deploy (no secrets configured)
+          if: ${{ inputs.vercel_token == '' }}
+          shell: bash
+          run: echo "No Vercel token configured — skipping deploy for ${{ inputs.app_name }}."
 
-    - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
-      if: ${{ inputs.vercel_token != '' }}
+        - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
+          if: ${{ inputs.vercel_token != '' }}
 
-    - name: Install Nodejs
-      if: ${{ inputs.vercel_token != '' }}
-      uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
-      with:
-        node-version: '20'
-        cache: 'pnpm'
+        - name: Install Nodejs
+          if: ${{ inputs.vercel_token != '' }}
+          uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+          with:
+              node-version: '20'
+              cache: 'pnpm'
 
-    - name: Install Vercel CLI
-      if: ${{ inputs.vercel_token != '' }}
-      shell: bash
-      run: pnpm add --global vercel@canary
+        - name: Install Vercel CLI
+          if: ${{ inputs.vercel_token != '' }}
+          shell: bash
+          run: pnpm add --global vercel@canary
 
-    - name: Setup Vercel Flags
-      id: setup_vercel_flags
-      if: ${{ inputs.vercel_token != '' }}
-      shell: bash
-      run: |
-        echo "VERCEL_PROJECT_ID=${{ inputs.vercel_project_id }}" >> "$GITHUB_ENV"
-        echo "VERCEL_ORG_ID=${{ inputs.vercel_org_id }}" >> "$GITHUB_ENV"
-        echo "VERCEL_TOKEN=${{ inputs.vercel_token }}" >> "$GITHUB_ENV"
-        echo "VERCEL_SCOPE=${{ inputs.vercel_scope }}" >> "$GITHUB_ENV"
-        if [[ "${{ inputs.production }}" == "true" ]]; then
-          echo "VERCEL_ENVIRONMENT=production" >> "$GITHUB_ENV"
-          echo "PROD_FLAG=--prod" >> "$GITHUB_OUTPUT"
-        else
-          echo "VERCEL_ENVIRONMENT=preview" >> "$GITHUB_ENV"
-          echo "PROD_FLAG=" >> "$GITHUB_OUTPUT"
-        fi
+        - name: Setup Vercel Flags
+          id: setup_vercel_flags
+          if: ${{ inputs.vercel_token != '' }}
+          shell: bash
+          run: |
+              echo "VERCEL_PROJECT_ID=${{ inputs.vercel_project_id }}" >> "$GITHUB_ENV"
+              echo "VERCEL_ORG_ID=${{ inputs.vercel_org_id }}" >> "$GITHUB_ENV"
+              echo "VERCEL_TOKEN=${{ inputs.vercel_token }}" >> "$GITHUB_ENV"
+              echo "VERCEL_SCOPE=${{ inputs.vercel_scope }}" >> "$GITHUB_ENV"
+              if [[ "${{ inputs.production }}" == "true" ]]; then
+                echo "VERCEL_ENVIRONMENT=production" >> "$GITHUB_ENV"
+                echo "PROD_FLAG=--prod" >> "$GITHUB_OUTPUT"
+              else
+                echo "VERCEL_ENVIRONMENT=preview" >> "$GITHUB_ENV"
+                echo "PROD_FLAG=" >> "$GITHUB_OUTPUT"
+              fi
 
-    - name: Install Project Dependencies
-      if: ${{ inputs.vercel_token != '' }}
-      shell: bash
-      run: pnpm install --frozen-lockfile
+        - name: Install Project Dependencies
+          if: ${{ inputs.vercel_token != '' }}
+          shell: bash
+          run: pnpm install --frozen-lockfile
 
-    - name: Pull Vercel Environment Information
-      if: ${{ inputs.vercel_token != '' }}
-      shell: bash
-      run: vercel pull --token="$VERCEL_TOKEN" --scope="$VERCEL_SCOPE" --yes --environment="$VERCEL_ENVIRONMENT"
+        - name: Pull Vercel Environment Information
+          if: ${{ inputs.vercel_token != '' }}
+          shell: bash
+          run: vercel pull --token="$VERCEL_TOKEN" --scope="$VERCEL_SCOPE" --yes --environment="$VERCEL_ENVIRONMENT"
 
-    - name: Build Project
-      if: ${{ inputs.vercel_token != '' }}
-      shell: bash
-      run: vercel build --token="$VERCEL_TOKEN" --scope="$VERCEL_SCOPE" ${{ steps.setup_vercel_flags.outputs.PROD_FLAG }}
+        - name: Build Project
+          if: ${{ inputs.vercel_token != '' }}
+          shell: bash
+          run: vercel build --token="$VERCEL_TOKEN" --scope="$VERCEL_SCOPE" ${{ steps.setup_vercel_flags.outputs.PROD_FLAG }}
 
-    - name: Deploy to Vercel
-      id: vercel_deploy
-      if: ${{ inputs.vercel_token != '' }}
-      shell: bash
-      run: |
-        vercel deploy --prebuilt --archive=tgz --token="$VERCEL_TOKEN" --scope="$VERCEL_SCOPE" ${{ steps.setup_vercel_flags.outputs.PROD_FLAG }} > deployment_output.txt
-        echo "PREVIEW_URL=$(cat deployment_output.txt)" >> "$GITHUB_OUTPUT"
+        - name: Deploy to Vercel
+          id: vercel_deploy
+          if: ${{ inputs.vercel_token != '' }}
+          shell: bash
+          run: |
+              vercel deploy --prebuilt --archive=tgz --token="$VERCEL_TOKEN" --scope="$VERCEL_SCOPE" ${{ steps.setup_vercel_flags.outputs.PROD_FLAG }} > deployment_output.txt
+              echo "PREVIEW_URL=$(cat deployment_output.txt)" >> "$GITHUB_OUTPUT"
 
-    - name: Comment on PR
-      uses: phulsechinmay/rewritable-pr-comment@a1b041997fa84ec3e524ee9dee5ba0b5f4e73604 # pin@v0.3.0
-      if: ${{ inputs.production != 'true' && inputs.vercel_token != '' }}
-      with:
-        GITHUB_TOKEN: ${{ github.token }}
-        COMMENT_IDENTIFIER: ${{ inputs.app_name }} vercel deploy
-        message: |
-          This pull request has been deployed to Vercel.
+        - name: Comment on PR
+          uses: phulsechinmay/rewritable-pr-comment@a1b041997fa84ec3e524ee9dee5ba0b5f4e73604 # pin@v0.3.0
+          if: ${{ inputs.production != 'true' && inputs.vercel_token != '' }}
+          with:
+              GITHUB_TOKEN: ${{ github.token }}
+              COMMENT_IDENTIFIER: ${{ inputs.app_name }} vercel deploy
+              message: |
+                  This pull request has been deployed to Vercel.
 
-          <table>
-           <tr>
-              <td><strong>🌐 APP NAME:</strong></td>
-              <td>${{ inputs.app_name }}</td>
-          </tr>
-          <tr>
-              <td><strong>✅ Preview:</strong></td>
-              <td><a href='${{ steps.vercel_deploy.outputs.PREVIEW_URL }}'>${{ steps.vercel_deploy.outputs.PREVIEW_URL }}</a></td>
-          </tr>
-           <tr>
-              <td><strong>⚫️ Latest commit:</strong></td>
-              <td>${{ github.sha }}</td>
-          </tr>
-          </table>
+                  <table>
+                   <tr>
+                      <td><strong>🌐 APP NAME:</strong></td>
+                      <td>${{ inputs.app_name }}</td>
+                  </tr>
+                  <tr>
+                      <td><strong>✅ Preview:</strong></td>
+                      <td><a href='${{ steps.vercel_deploy.outputs.PREVIEW_URL }}'>${{ steps.vercel_deploy.outputs.PREVIEW_URL }}</a></td>
+                  </tr>
+                   <tr>
+                      <td><strong>⚫️ Latest commit:</strong></td>
+                      <td>${{ github.sha }}</td>
+                  </tr>
+                  </table>

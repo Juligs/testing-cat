@@ -1,0 +1,186 @@
+name: Production Deploy
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+        inputs:
+            app:
+                description: 'App to deploy'
+                required: true
+                default: all
+                type: choice
+                options:
+                    - all
+                    - iotalabs
+                    - iota-network
+                    - iota-foundation
+                    - react-ui-kit
+
+jobs:
+    detect:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+        outputs:
+            affected: ${{ steps.affected.outputs.apps }}
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+              with:
+                  filter: blob:none
+                  fetch-depth: 0
+
+            - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
+
+            - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+              with:
+                  node-version: '20'
+                  cache: 'pnpm'
+
+            - name: Detect affected apps
+              id: affected
+              env:
+                  EVENT_NAME: ${{ github.event_name }}
+                  BEFORE_SHA: ${{ github.event.before }}
+                  DISPATCH_APP: ${{ inputs.app }}
+              run: |
+                  APPS_JSON='["iotalabs","iota-network","iota-foundation","react-ui-kit"]'
+                  APPS_LIST=$(jq -r '.[]' <<< "$APPS_JSON")
+
+                  get_affected_apps() {
+                    pnpm dlx turbo@2.9.6 query affected \
+                      --base "$BEFORE_SHA" \
+                      --head "${{ github.sha }}" \
+                      --packages $APPS_LIST \
+                    | jq -c '[.data.affectedPackages.items[].name]'
+                  }
+
+                  get_dispatched_apps() {
+                    local dispatch_app="$1"
+                    [ "$dispatch_app" = "all" ] && echo "$APPS_JSON" && return
+                    jq -c --arg app "$dispatch_app" '[.[] | select(. == $app)]' <<< "$APPS_JSON"
+                  }
+
+                  if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+                    apps=$(get_dispatched_apps "$DISPATCH_APP")
+                  else
+                    apps=$(get_affected_apps)
+                  fi
+
+                  echo "Affected apps: $apps"
+                  echo "apps=$apps" >> "$GITHUB_OUTPUT"
+
+    deploy-iotalabs:
+        needs: detect
+        if: contains(fromJSON(needs.detect.outputs.affected), 'iotalabs')
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-iotalabs-${{ github.ref }}
+            cancel-in-progress: false
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'true'
+                  app_name: IOTALABS
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.IOTALABS_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
+
+    deploy-iota-network:
+        needs: detect
+        if: contains(fromJSON(needs.detect.outputs.affected), 'iota-network')
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-iota-network-${{ github.ref }}
+            cancel-in-progress: false
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'true'
+                  app_name: IOTA Network
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.IOTA_NETWORK_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
+
+    deploy-iota-foundation:
+        needs: detect
+        if: contains(fromJSON(needs.detect.outputs.affected), 'iota-foundation')
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-iota-foundation-${{ github.ref }}
+            cancel-in-progress: false
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'true'
+                  app_name: IOTA Foundation
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.IOTA_FOUNDATION_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
+
+    deploy-react-ui-kit:
+        needs: detect
+        if: contains(fromJSON(needs.detect.outputs.affected), 'react-ui-kit')
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            deployments: write
+        concurrency:
+            group: ${{ github.workflow }}-react-ui-kit-${{ github.ref }}
+            cancel-in-progress: false
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+            - uses: ./.github/actions/monorepo-app-vercel-deploy
+              with:
+                  production: 'true'
+                  app_name: React UI-Kit Storybook
+                  vercel_token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel_project_id: ${{ secrets.REACT_UI_KIT_VERCEL_PROJECT_ID }}
+                  vercel_scope: ${{ secrets.VERCEL_SCOPE }}
+
+    purge-iotalabs-cloudflare-cache:
+        needs: deploy-iotalabs
+        if: needs.deploy-iotalabs.result == 'success'
+        uses: ./.github/workflows/purge-cloudfare-cache.yml
+        with:
+            IS_IOTALABS: true
+        secrets:
+            CLOUDFLARE_IOTALABS_ZONE_ID: ${{ secrets.CLOUDFLARE_IOTALABS_ZONE_ID }}
+            CLOUDFLARE_CACHE_API_TOKEN: ${{ secrets.CLOUDFLARE_CACHE_API_TOKEN }}
+
+    purge-iota-network-cloudflare-cache:
+        needs: deploy-iota-network
+        if: needs.deploy-iota-network.result == 'success'
+        uses: ./.github/workflows/purge-cloudfare-cache.yml
+        with:
+            IS_IOTA_NETWORK: true
+        secrets:
+            CLOUDFLARE_NETWORK_ZONE_ID: ${{ secrets.CLOUDFLARE_NETWORK_ZONE_ID }}
+            CLOUDFLARE_CACHE_API_TOKEN: ${{ secrets.CLOUDFLARE_CACHE_API_TOKEN }}
+
+    purge-iota-foundation-cloudflare-cache:
+        needs: deploy-iota-foundation
+        if: needs.deploy-iota-foundation.result == 'success'
+        uses: ./.github/workflows/purge-cloudfare-cache.yml
+        with:
+            IS_IOTA_FOUNDATION: true
+        secrets:
+            CLOUDFLARE_FOUNDATION_ZONE_ID: ${{ secrets.CLOUDFLARE_FOUNDATION_ZONE_ID }}
+            CLOUDFLARE_CACHE_API_TOKEN: ${{ secrets.CLOUDFLARE_CACHE_API_TOKEN }}
