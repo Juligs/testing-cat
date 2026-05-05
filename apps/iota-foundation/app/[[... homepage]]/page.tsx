@@ -37,7 +37,7 @@ export default function Home() {
         <>
             <Hero id="hero" />
             <FoundationStats id="foundation-stats" />
-            <OurPurpose id="our-purpose" />
+            <OurPurpose id="our-purposess" />
             <OurFocusAreas id="our-focus-areas" />
             <OurPartners id="our-partners" />
             <ExploreIota id="explore-iota" />
