@@ -20,56 +20,10 @@ on:
 
 jobs:
     detect:
-        runs-on: ubuntu-latest
-        permissions:
-            contents: read
-        outputs:
-            affected: ${{ steps.affected.outputs.apps }}
-        steps:
-            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
-              with:
-                  filter: blob:none
-                  fetch-depth: 0
-
-            - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
-
-            - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
-              with:
-                  node-version: '20'
-                  cache: 'pnpm'
-
-            - name: Detect affected apps
-              id: affected
-              env:
-                  EVENT_NAME: ${{ github.event_name }}
-                  BEFORE_SHA: ${{ github.event.before }}
-                  DISPATCH_APP: ${{ inputs.app }}
-              run: |
-                  APPS_JSON='["iotalabs","iota-network","iota-foundation","react-ui-kit"]'
-                  APPS_LIST=$(jq -r '.[]' <<< "$APPS_JSON")
-
-                  get_affected_apps() {
-                    pnpm dlx turbo@2.9.6 query affected \
-                      --base "$BEFORE_SHA" \
-                      --head "${{ github.sha }}" \
-                      --packages $APPS_LIST \
-                    | jq -c '[.data.affectedPackages.items[].name]'
-                  }
-
-                  get_dispatched_apps() {
-                    local dispatch_app="$1"
-                    [ "$dispatch_app" = "all" ] && echo "$APPS_JSON" && return
-                    jq -c --arg app "$dispatch_app" '[.[] | select(. == $app)]' <<< "$APPS_JSON"
-                  }
-
-                  if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-                    apps=$(get_dispatched_apps "$DISPATCH_APP")
-                  else
-                    apps=$(get_affected_apps)
-                  fi
-
-                  echo "Affected apps: $apps"
-                  echo "apps=$apps" >> "$GITHUB_OUTPUT"
+        uses: ./.github/workflows/detect-affected-apps.yml
+        with:
+            base: ${{ github.event_name == 'push' && github.event.before || '' }}
+            dispatch_app: ${{ inputs.app || '' }}
 
     deploy-iotalabs:
         needs: detect

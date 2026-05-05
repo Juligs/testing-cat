@@ -1,0 +1,80 @@
+name: Detect Affected Apps
+
+on:
+    workflow_call:
+        inputs:
+            base:
+                description: 'Base SHA or ref for turbo affected detection'
+                type: string
+                required: false
+                default: ''
+            fetch_ref:
+                description: 'Git ref to fetch before detection (needed when base is a remote ref)'
+                type: string
+                required: false
+                default: ''
+            dispatch_app:
+                description: 'App selected via workflow_dispatch ("all", app name, or empty for auto-detect)'
+                type: string
+                required: false
+                default: ''
+        outputs:
+            affected:
+                description: 'JSON array of affected app names'
+                value: ${{ jobs.detect.outputs.apps }}
+
+jobs:
+    detect:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+        outputs:
+            apps: ${{ steps.affected.outputs.apps }}
+        steps:
+            - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # pin@v4.3.1
+              with:
+                  filter: blob:none
+                  fetch-depth: 0
+
+            - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # pin@v4.0.0
+
+            - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # pin@v4.0.2
+              with:
+                  node-version: '20'
+                  cache: 'pnpm'
+
+            - name: Fetch base ref
+              if: inputs.fetch_ref != ''
+              run: git fetch origin ${{ inputs.fetch_ref }}:refs/remotes/origin/${{ inputs.fetch_ref }}
+
+            - name: Detect affected apps
+              id: affected
+              env:
+                  BASE: ${{ inputs.base }}
+                  DISPATCH_APP: ${{ inputs.dispatch_app }}
+              run: |
+                  APPS_JSON='["iotalabs","iota-network","iota-foundation","react-ui-kit"]'
+                  APPS_LIST=$(jq -r '.[]' <<< "$APPS_JSON")
+
+                  get_affected_apps() {
+                    pnpm dlx turbo@2.9.6 query affected \
+                      --base "$BASE" \
+                      --head "${{ github.sha }}" \
+                      --packages $APPS_LIST \
+                    | jq -c '[.data.affectedPackages.items[].name]'
+                  }
+
+                  get_dispatched_apps() {
+                    local dispatch_app="$1"
+                    [ "$dispatch_app" = "all" ] && echo "$APPS_JSON" && return
+                    jq -c --arg app "$dispatch_app" '[.[] | select(. == $app)]' <<< "$APPS_JSON"
+                  }
+
+                  if [ -n "$DISPATCH_APP" ]; then
+                    apps=$(get_dispatched_apps "$DISPATCH_APP")
+                  else
+                    apps=$(get_affected_apps)
+                  fi
+
+                  echo "Affected apps: $apps"
+                  echo "apps=$apps" >> "$GITHUB_OUTPUT"
