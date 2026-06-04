@@ -1,0 +1,3 @@
+files:
+  - source: /apps/twin/messages/en.json
+    translation: ' /apps/twin/messages/%two_letters_code%.json'
